@@ -15,11 +15,9 @@ sections:
 - type: document
   path: exampleSite/content/english/home-2.md
   label: Homepage 2 (en)
-  match: "**/*"
 - type: document
   path: exampleSite/content/french/home-2.md
   label: Homepage 2 (fr)
-  match: "**/*"
 - type: heading
   label: Author
 - type: directory
@@ -107,19 +105,15 @@ sections:
 - type: document
   path: exampleSite/content/english/features.md
   label: Features (en)
-  match: "**/*"
 - type: document
   path: exampleSite/content/french/features.md
   label: Features (fr)
-  match: "**/*"
 - type: document
   path: exampleSite/content/english/team.md
   label: Team (en)
-  match: "**/*"
 - type: document
   path: exampleSite/content/french/team.md
   label: Team (fr)
-  match: "**/*"
 - type: document
   path: exampleSite/content/english/contact.md
   label: Contact (en)
