@@ -1,0 +1,26 @@
+---
+label: new-author
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: file
+  name: image
+  label: image
+- type: text
+  name: email
+  label: email
+- type: field_group_list
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: icon
+    label: icon
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: link
+    label: link

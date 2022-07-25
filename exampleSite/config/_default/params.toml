@@ -1,0 +1,89 @@
+#################### default parameters ################################
+# favicon
+favicon = "images/favicon.png"
+# logo
+logo = "images/logo.png"
+# logo_light
+logo_light = "images/logo-light.png"
+# use `x` with logo_width, example: "100x"
+logo_width = "147x"
+# logo text will only show when logo is missing.
+logo_text = "delta"
+# OpenGraph / Twitter Card metadata
+description = "This is meta description"
+author = "Themefisher"
+image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
+# contact info
+address = "9567 Turner Trace Apt. BC C3G8A4"
+mobile = "+211234565523"
+email = "info@email.com"
+# contact form action
+contact_form_action = "#!" # contact form works with https://formspree.io or any formspree-alternatives
+
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>" 
+custom_script= "" 
+
+# Main Sections
+mainSections= ["blog"]
+
+# career form action
+career_form_action = "#!" # career form works with https://formspree.io or any formspree-alternatives
+
+# Preloader
+[preloader]
+enable = true
+preloader = "images/logo.png" # use jpg, png, svg or gif format.
+
+# Navigation buttons
+[navigation_button]
+enable = true
+label = "Log In"
+link = "#!"
+icon = "far fa-user"
+
+[navigation_button_two]
+enable = true
+label = "Sign Up Now"
+link = "#!"
+
+# Call to action
+[call_to_action]
+enable = true
+title = "Delta help us to organize our <br> remote design sprint."
+subtitle = "Pellentesque in ipsum id orci porta dapibus.porttitor lectus nibh. <br> Praesent sapien massa, convallis a pellentesque nec nisi."
+button_label = "Contact Us"
+button_link = "contact/"
+image = "images/cta.png"
+
+# cookies
+[cookies]
+enable = false
+expire_days = 2
+content = "This site uses cookies. By continuing to use this website, you agree to their use."
+button = "I Accept"
+
+############################# social site ########################
+[[social]]
+title = "facebook"
+icon = "fab fa-facebook" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#!"
+
+[[social]]
+title = "twitter"
+icon = "fab fa-twitter" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#!"
+
+[[social]]
+title = "instagram"
+icon = "fab fa-instagram" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#!"
+
+[[social]]
+title = "github"
+icon = "fab fa-github" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#!"
+
+[[social]]
+title = "linkedin"
+icon = "fab fa-linkedin" # fontawesome icon pack : https://fontawesome.com/icons/
+link = "#!"

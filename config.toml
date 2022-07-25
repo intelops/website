@@ -1,0 +1,71 @@
+# This file is for render site varibles and plugins
+# don't remove this file.
+# The presence of this file is for compatibility with Blogdown and Forestry.
+#
+# The actual configuration files are stored in the `config/_default/` folder.
+
+
+######################### site variables ##############################
+# customize your color and font from here.
+[params.variables]
+color_primary = "#4262FF"
+color_secondary = "#FFD02F"
+color_tertiary = "#ED6F78"
+color_quaternary = "#6E9240"
+body_color = "#fff"
+text_color = "#555"
+text_dark = "#222222"
+text_light = "#959595"
+border_color = "#ACB9C4"
+dark = "#050038"
+black = "#000"
+white = "#fff"
+light = "#fdfdfd"
+
+# font variables
+# base font size for full website, 
+font_size = "16px" # default is 16px
+
+# Font Scale Sizes
+# "minorSecond": 1.067,
+# "majorSecond": 1.125,
+# "minorThird": 1.2,
+# "majorThird": 1.25,
+# "perfectFourth": 1.333,
+# "augmentedFourth": 1.414,
+# "perfectFifth": 1.5,
+# "goldenRatio": 1.618
+font_scale = "1.2" # default is "majorThird": 1.25
+
+# go to https://fonts.google.com/ to find the font you want to use. select your font and copy only the bold part from the URL. and paste it here.
+# example: "Work+Sans:wght@400;500;600"
+font_primary = "Catamaran:wght@700;900"
+font_primary_type = "sans-serif" # [serif/sans-serif]
+font_secondary = "Rubik:wght@400;500;600"
+font_secondary_type = "sans-serif" # [serif/sans-serif]
+icon_font = "Font Awesome 5 Free"
+
+
+############################# Plugins ##############################
+
+# CSS Plugins
+[[params.plugins.css]]
+link = "plugins/font-awesome/fontawesome.min.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/brands.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/solid.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/regular.css"
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.min.css"
+
+# JS Plugins
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"
