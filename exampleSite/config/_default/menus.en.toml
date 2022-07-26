@@ -116,7 +116,7 @@ hasChildren = ""
 name = "Services"
 weight = "7"
 [[main]]
-hasChildren = ""
+hasChildren = true
 name = "Resources"
 weight = "8"
 [[main]]
@@ -128,6 +128,7 @@ name = "Contact"
 url = "contact/"
 weight = 8
 [[main]]
+hasChildren = false
 name = "Team"
 parent = "Pages"
 url = "team/"
