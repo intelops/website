@@ -87,57 +87,48 @@ hasChildren = false
 name = "Home"
 weight = 1
 [[main]]
-name = "Home 2"
-parent = "Home"
-url = "home-2/"
-weight = 2
-[[main]]
-name = "About"
-url = "about/"
-weight = 2
-[[main]]
-name = "How It Works"
+hasChildren = true
+name = "Products"
 url = "how-it-works/"
 weight = 4
+[[main]]
+hasChildren = ""
+name = "Commercial"
+weight = "4"
+[[main]]
+hasChildren = ""
+name = "Our Open Source"
+weight = "4"
+[[main]]
+hasChildren = ""
+name = "Contributed Open Source"
+weight = "4"
 [[main]]
 name = "Blog"
 url = "blog/"
 weight = 5
 [[main]]
-hasChildren = true
-name = "Pages"
-weight = 7
+hasChildren = ""
+name = "Docs"
+weight = "6"
 [[main]]
-name = "Pricing"
-parent = "Pages"
-url = "pricing/"
-weight = 7
+hasChildren = ""
+name = "Services"
+weight = "7"
 [[main]]
-name = "Team"
-parent = "Pages"
-url = "team/"
-weight = 11
+hasChildren = ""
+name = "Resources"
+weight = "8"
 [[main]]
-name = "Career"
-parent = "Pages"
-url = "career/"
-weight = 13
-[[main]]
-name = "Career Single"
-parent = "Pages"
-url = "career/digital-marketing-paid-media-manager/"
-weight = 15
-[[main]]
-name = "Blog Details"
-parent = "Pages"
-url = "blog/post-5/"
-weight = 17
-[[main]]
-name = "Author Single"
-parent = "Pages"
-url = "author/awab-husameldin/"
-weight = 18
+name = "About"
+url = "about/"
+weight = "8"
 [[main]]
 name = "Contact"
 url = "contact/"
 weight = 8
+[[main]]
+name = "Team"
+parent = "Pages"
+url = "team/"
+weight = "8"
