@@ -1,5 +1,5 @@
 baseURL = "http://demo.gethugothemes.com/delta/"
-disableLanguages = ["\"en\""]
+disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
