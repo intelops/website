@@ -14,6 +14,13 @@ $black: {{.black | default "#000"}};
 $white: {{.white | default "#fff"}};
 $light: {{.light | default "#EDF6F5"}};
 
+//custom
+$banner-primary: {{.banner_primary | default "#1B1B1B"}};
+$banner-secondary: {{.banner_secondary | default "FF5100"}};
+$nav-menu-text: {{.nav_menu_text | default "#fff"}};
+$banner-title: {{.banner_title | default "#000"}};
+$banner-desc: {{.banner_desc | default "#acacac"}};
+$banner-subtitle: {{.banner_subtitle | default "#f7bf2c"}};
 
 // Font Variables
 $font-size: {{.font_size | default "16px"}};

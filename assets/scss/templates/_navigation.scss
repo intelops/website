@@ -65,7 +65,7 @@
     .nav-link {
       font-weight: 500;
       line-height: 1.4;
-      color: $text-dark !important;
+      color: $nav-menu-text !important;
       padding: 15px 18px !important;
 
       @include desktop-xl {

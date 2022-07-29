@@ -1,19 +1,19 @@
 // main content
 main {
   overflow: hidden;
-  padding: 75px;
-  @include desktop-xl {
-    padding: 60px;
-  }
-  @include desktop {
-    padding: 40px;
-  }
-  @include tablet {
-    padding: 25px;
-  }
-  @include mobile {
-    padding: 10px;
-  }
+  //padding: 0px;
+  // @include desktop-xl {
+  //   padding: 60px;
+  // }
+  // @include desktop {
+  //   padding: 40px;
+  // }
+  // @include tablet {
+  //   padding: 25px;
+  // }
+  // @include mobile {
+  //   padding: 10px;
+  // }
   padding-bottom: 0 !important;
 }
 main:empty {
@@ -126,15 +126,15 @@ main:empty {
       left: 0;
       bottom: 0;
       z-index: -2;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
       @include tablet {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
       }
       @include mobile {
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
       }
     }
     &::before {
@@ -617,7 +617,7 @@ main:empty {
   font-size: 30px;
   font-family: Times; // make sure ★ appears correctly
   line-height: 1;
-  
+
   &::before {
     content: '★★★★★';
     background: linear-gradient(90deg, #fc0 var(--percent), #EAEAEA var(--percent));

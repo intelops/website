@@ -37,3 +37,11 @@ text_color = "#555"
 text_dark = "#222222"
 text_light = "#959595"
 white = "#fff"
+
+# custom
+banner_primary = "#1B1B1B"
+banner_secondary = "#FF5100"
+nav_menu_text = "#fff"
+banner_title = "#fff"
+banner_desc = "#acacac"
+banner_subtitle = "#FF5100"

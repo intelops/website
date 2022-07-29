@@ -23,7 +23,7 @@ body {
   .has-fade-animation {
     -webkit-animation: fadeinout 1s forwards infinite;
     animation: fadeinout 1s forwards infinite;
-  
+
     @-webkit-keyframes fadeinout {
       50% { opacity: .4; transform: scale(.95); }
     }
@@ -135,7 +135,7 @@ a:hover {
   @extend .font-secondary;
   @extend .fw-700;
   @extend .text-capitalize;
-  @extend .text-quaternary;
+  color: $banner-subtitle;
 }
 .title {
   @extend .text-capitalize;
@@ -266,11 +266,11 @@ a:hover {
 .fw-900 {font-weight: 900}
 
 .bg-primary {background: $color-primary !important}
-.bg-primary-soft {background: lighten(desaturate(adjust-hue($color-primary, -19), 13.79), 31.37) !important}
+.bg-primary-soft {background: lighten(desaturate(adjust-hue($banner-primary, -19), 13.79), 31.37) !important}
 .text-primary {color: $color-primary !important}
 
 .bg-secondary {background: $color-secondary !important}
-.bg-secondary-soft {background: lighten($color-secondary, 31.18) !important}
+.bg-secondary-soft {background: lighten($banner-secondary, 31.18) !important}
 .text-secondary {color: $color-secondary !important}
 
 .bg-tertiary {background: $color-tertiary !important}
