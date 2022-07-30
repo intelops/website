@@ -1,0 +1,123 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="section pb-0">
+  <div class="container container-delta">
+    {{with .Params.services}}
+    <div class="row mb-5">
+      <div class="col-xl-6 col-lg-8 mx-auto text-start text-lg-center">
+        <div class="section-title mb-0">
+          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
+          <h1 class="title text-xl mb-3">{{.title | markdownify}}</h1>
+          {{with .description}}<p>{{. | markdownify}}</p>{{end}}
+        </div>
+      </div>
+    </div>
+    {{end}}
+
+
+    <div class="row mb-5 justify-content-center">
+      <div class="col-xl-6 order-1 order-lg-0">
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingOne">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                New service
+              </button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+                  <label class="form-check-label" for="exampleRadios1">
+                    related service 1
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+                  <label class="form-check-label" for="exampleRadios2">
+                    related service 2
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Service example
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios1" id="exampleRadios3" value="option1">
+                  <label class="form-check-label" for="exampleRadios3">
+                    related service 3
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios1" id="exampleRadios4" value="option2">
+                  <label class="form-check-label" for="exampleRadios4">
+                    related service 4
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+               Another service
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios2" id="exampleRadios5" value="option1">
+                  <label class="form-check-label" for="exampleRadios5">
+                    related service 5
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" name="exampleRadios2" id="exampleRadios6" value="option2">
+                  <label class="form-check-label" for="exampleRadios6">
+                    related service 6
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-6 order-1 order-lg-0" id="selected-items">
+        <div class="row">
+        <div class="card">
+          <div class="card-body space-around" >
+            <div>related service 1</div>
+            <div><i class="fas fa-trash"></i></div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body space-around" >
+            <div>related service 2</div>
+            <div><i class="fas fa-trash"></i></div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5 justify-content-center">
+        <div class="col-xl-4">
+        <button class="btn btn-primary w-100" type="button">Next</button>
+        </div>
+    </div>
+    </div>
+
+  </div>
+</section>
+
+{{ partial "call-to-action-2.html" . }}
+
+{{ end }}

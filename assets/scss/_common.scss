@@ -663,3 +663,13 @@ form label {
     margin-bottom: 0;
   }
 }
+// custom
+.space-around{
+  display: flex;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+.align-right{
+  float: right;
+}

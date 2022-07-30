@@ -21,6 +21,7 @@ $nav-menu-text: {{.nav_menu_text | default "#fff"}};
 $banner-title: {{.banner_title | default "#000"}};
 $banner-desc: {{.banner_desc | default "#acacac"}};
 $banner-subtitle: {{.banner_subtitle | default "#f7bf2c"}};
+$navbar-mobile-bg: {{.navbar_mobile_bg | default "#4b4b4b"}};
 
 // Font Variables
 $font-size: {{.font_size | default "16px"}};

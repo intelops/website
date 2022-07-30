@@ -210,7 +210,7 @@
 
   @include desktop-lg {
     .navbar-collapse {
-      background-color: $white;
+      background-color: $navbar-mobile-bg;
       border-radius: 10px;
       transform: translateY(15px);
     }
