@@ -9,31 +9,6 @@ sections:
 - type: document
   path: exampleSite/content/english/_index.md
   label: Homepage (en)
-- type: document
-  path: exampleSite/content/french/_index.md
-  label: Homepage (fr)
-- type: document
-  path: exampleSite/content/english/home-2.md
-  label: Homepage 2 (en)
-- type: document
-  path: exampleSite/content/french/home-2.md
-  label: Homepage 2 (fr)
-- type: heading
-  label: Author
-- type: directory
-  path: exampleSite/content/english/author
-  label: Author (en)
-  create: all
-  match: "*"
-  templates:
-  - new-author
-- type: directory
-  path: exampleSite/content/french/author
-  label: Author (fr)
-  create: all
-  match: "*"
-  templates:
-  - new-author
 - type: heading
   label: Blog
 - type: document
@@ -42,17 +17,6 @@ sections:
 - type: directory
   path: exampleSite/content/english/blog
   label: Blog Posts (en)
-  create: documents
-  match: "**/*"
-  exclude: _index.md
-  templates:
-  - blog-post
-- type: document
-  path: exampleSite/content/french/blog/_index.md
-  label: Blog (fr)
-- type: directory
-  path: exampleSite/content/french/blog
-  label: Blog Posts (fr)
   create: documents
   match: "**/*"
   exclude: _index.md
@@ -72,67 +36,28 @@ sections:
   templates:
   - career-page
 - type: document
-  path: exampleSite/content/french/career/_index.md
-  label: Career (fr)
-- type: directory
-  path: exampleSite/content/french/career
-  label: Career Posts (fr)
-  create: all
+  path: exampleSite/content/english/services.md
+  label: Services
   match: "**/*"
-  exclude: _index.md
-  templates:
-  - career-page
 - type: heading
   label: Others Page
 - type: document
   path: exampleSite/content/english/about.md
   label: About (en)
 - type: document
-  path: exampleSite/content/french/about.md
-  label: About (fr)
-- type: document
   path: exampleSite/content/english/pricing.md
   label: Pricing (en)
-- type: document
-  path: exampleSite/content/french/pricing.md
-  label: Pricing (fr)
-- type: document
-  path: exampleSite/content/english/how-it-works.md
-  label: How It Works (en)
-- type: document
-  path: exampleSite/content/french/how-it-works.md
-  label: How It Works (fr)
-- type: document
-  path: exampleSite/content/english/features.md
-  label: Features (en)
-- type: document
-  path: exampleSite/content/french/features.md
-  label: Features (fr)
 - type: document
   path: exampleSite/content/english/team.md
   label: Team (en)
 - type: document
-  path: exampleSite/content/french/team.md
-  label: Team (fr)
-- type: document
   path: exampleSite/content/english/contact.md
   label: Contact (en)
-- type: document
-  path: exampleSite/content/french/contact.md
-  label: Contact (fr)
 - type: heading
   label: All Pages
 - type: directory
   path: exampleSite/content/english
   label: All Pages (en)
-  create: all
-  match: "**/*"
-  exclude: _index.md
-  templates:
-  - new-page
-- type: directory
-  path: exampleSite/content/french
-  label: All Pages (fr)
   create: all
   match: "**/*"
   exclude: _index.md
@@ -155,9 +80,6 @@ sections:
 - type: document
   path: exampleSite/config/_default/menus.en.toml
   label: Menu (en)
-- type: document
-  path: exampleSite/config/_default/menus.fr.toml
-  label: Menu (fr)
 - type: directory
   path: exampleSite/i18n
   label: i18n Translations
