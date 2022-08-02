@@ -266,7 +266,7 @@ a:hover {
 .fw-900 {font-weight: 900}
 
 .bg-primary {background: $color-primary !important}
-.bg-primary-soft {background: lighten(desaturate(adjust-hue($banner-primary, -19), 13.79), 31.37) !important}
+.bg-primary-soft {background: $banner-primary !important}
 .text-primary {color: $color-primary !important}
 
 .bg-secondary {background: $color-secondary !important}

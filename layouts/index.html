@@ -1,7 +1,6 @@
 {{ define "main" }}
-
+{{ partial "header.html" . }}
 <section class="banner banner-1 bg-primary-soft wave-block"> <!-- removed class: rounded-lg-->
-  {{ partial "header.html" . }}
 
   {{with .Params.banner}}
   <div class="container container-delta">

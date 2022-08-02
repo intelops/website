@@ -1,10 +1,10 @@
 // start header style
 .navigation {
-  background-color: transparent;
-  padding: 30px 0;
+  background-color: $header-bar-bg;
   transition: .15s ease-out;
-  position: relative;
+  position: sticky;
   z-index: 9999;
+  top: 0;
 
   @include tablet {
     padding: 20px 0;
