@@ -38,7 +38,6 @@ sections:
 - type: document
   path: exampleSite/content/english/services.md
   label: Services
-  match: "**/*"
 - type: heading
   label: Others Page
 - type: document
