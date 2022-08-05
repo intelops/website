@@ -1,202 +1,114 @@
-############# English navigation ##############
-
-# main menu
-[[main]]
-name = "Home"
-url = "/"
-weight = 1
-
-[[main]]
-name = "Products"
-url = "products/"
-weight = 2
-hasChildren = true
-
-  [[main]]
-  parent = "Products"
-  name = "Commercial"
-  url = "/commercial"
-  weight = 1
-
-   [[main]]
-  parent = "Products"
-  name = "Our open source"
-  url = "/our-open-source"
-  weight = 1
-
-   [[main]]
-  parent = "Products"
-  name = "Contributed open source"
-  url = "/contributed-open-source"
-  weight = 1
-
-[[main]]
-name = "Blog"
-url = "blog/"
-weight = 5
-
-[[main]]
-name = "Docs"
-url = "docs/"
-weight = 5
-
-[[main]]
-name = "Services"
-url = "services/"
-weight = 5
-
-[[main]]
-name = "Resources"
-url = "resources/"
-weight = 7
-hasChildren = true
-
-  [[main]]
-  parent = "Resources"
-  name = "About"
-  url = "about/"
-  weight = 2
-
-   [[main]]
-  parent = "Resources"
-  name = "Team"
-  url = "team/"
-  weight = 2
-
-   [[main]]
-  parent = "Resources"
-  name = "Contact"
-  url = "contact/"
-  weight = 2
-
-   [[main]]
-  parent = "Resources"
-  name = "Certified"
-  url = "certified/"
-  weight = 2
-
-   [[main]]
-  parent = "Resources"
-  name = "Partner Program"
-  url = "partner-program/"
-  weight = 2
-
-### footer menus
-# footer_menu_1
 [[footer_menu_1]]
 name = "Commercial"
 url = "#!"
 weight = 1
-
 [[footer_menu_1]]
 name = "Our open source"
 url = "#!"
 weight = 2
-
 [[footer_menu_1]]
 name = "Contributed open source"
 url = "#!"
 weight = 3
-
-# [[footer_menu_1]]
-# name = "Example Product 04"
-# url = "#!"
-# weight = 4
-
-
-# footer_menu_2
-# [[footer_menu_2]]
-# name = "Logo & Branding"
-# url = "#!"
-# weight = 1
-
-# [[footer_menu_2]]
-# name = "Pay-Per-Click"
-# url = "#!"
-# weight = 2
-
-# [[footer_menu_2]]
-# name = "Website Design"
-# url = "#!"
-# weight = 3
-
-# [[footer_menu_2]]
-# name = "App Design"
-# url = "#!"
-# weight = 4
-
-# [[footer_menu_2]]
-# name = "SEO Optimization"
-# url = "#!"
-# weight = 5
-
-
-# footer_menu_3
 [[footer_menu_3]]
 name = "About"
 url = "about/"
 weight = 1
-
 [[footer_menu_3]]
 name = "Contact"
 url = "contact/"
 weight = 1
-
 [[footer_menu_3]]
 name = "Privacy Policy"
 url = "#!"
 weight = 2
-
 [[footer_menu_3]]
 name = "Terms & Conditions"
 url = "#!"
 weight = 3
-
-
-# footer_menu_4
 [[footer_menu_4]]
 name = "Certified"
 url = "#!"
 weight = 1
-
 [[footer_menu_4]]
 name = "Partner Program"
 url = "#!"
 weight = 2
-
 [[footer_menu_4]]
 name = "Team"
 url = "team/"
 weight = 3
-
-# [[footer_menu_4]]
-# name = "Pricing 2"
-# url = "#!"
-# weight = 4
-
-
-# footer_menu_5
 [[footer_menu_5]]
 name = "Docs"
 url = "docs/"
 weight = 1
-
 [[footer_menu_5]]
 name = "Blog"
 url = "blog/"
 weight = 2
-
 [[footer_menu_5]]
 name = "Home"
 url = "/"
 weight = 3
-
-# [[footer_menu_5]]
-# name = "Career"
-# url = "career/"
-# weight = 4
-
-# [[footer_menu_5]]
-# name = "Career Single"
-# url = "career/digital-marketing-paid-media-manager/"
-# weight = 5
+[[main]]
+hasChildren = true
+name = "Products"
+url = "products/"
+weight = 2
+[[main]]
+name = "Commercial"
+parent = "Products"
+url = "/commercial"
+weight = 1
+[[main]]
+name = "Our open source"
+parent = "Products"
+url = "/our-open-source"
+weight = 1
+[[main]]
+name = "Contributed open source"
+parent = "Products"
+url = "/contributed-open-source"
+weight = 1
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 5
+[[main]]
+name = "Docs"
+url = "docs/"
+weight = 5
+[[main]]
+name = "Services"
+url = "services/"
+weight = 5
+[[main]]
+hasChildren = true
+name = "Resources"
+url = "resources/"
+weight = 7
+[[main]]
+name = "About"
+parent = "Resources"
+url = "about/"
+weight = 2
+[[main]]
+name = "Team"
+parent = "Resources"
+url = "team/"
+weight = 2
+[[main]]
+name = "Contact"
+parent = "Resources"
+url = "contact/"
+weight = 2
+[[main]]
+name = "Certified"
+parent = "Resources"
+url = "certified/"
+weight = 2
+[[main]]
+name = "Partner Program"
+parent = "Resources"
+url = "partner-program/"
+weight = 2
