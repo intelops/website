@@ -1,5 +1,4 @@
-#update base url to http://intelpos.com in prod
-baseURL = "file:///D:/Web/SSG/intelops-forestry/delta-hugo/exampleSite/public"
+baseURL = ""
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
