@@ -1,11 +1,11 @@
-baseURL = ""
-disableLanguages = ["fr"]
+baseURL = "http://demo.gethugothemes.com/delta/"
+disableLanguages = ["\"en\""]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
 theme = "delta-hugo"
-title = "Intelpos"
+title = "Intelops"
 [caches.assets]
 dir = ":resourceDir/_gen"
 maxAge = "720h"
