@@ -1,4 +1,4 @@
-baseURL = "https://resplendent-seahorse-fa6e80.netlify.app"
+baseURL = "exampleSite/public/"
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
