@@ -48,7 +48,7 @@ url = "blog/"
 weight = 2
 [[footer_menu_5]]
 name = "Home"
-url = "/home"
+url = "/"
 weight = 3
 [[main]]
 name = "Home"
