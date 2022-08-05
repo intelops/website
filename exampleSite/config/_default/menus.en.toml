@@ -51,10 +51,6 @@ name = "Home"
 url = "/"
 weight = 3
 [[main]]
-name = "Home"
-url = "/"
-weight = "1"
-[[main]]
 hasChildren = true
 name = "Products"
 url = "products/"
