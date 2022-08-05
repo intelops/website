@@ -1,5 +1,5 @@
 baseURL = ""
-disableLanguages = ["fr"]
+disableLanguages = ["\"fr\""]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
