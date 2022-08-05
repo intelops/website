@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "http://demo.gethugothemes.com/delta/"
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
