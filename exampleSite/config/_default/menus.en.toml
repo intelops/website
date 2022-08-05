@@ -52,7 +52,7 @@ url = "/"
 weight = 3
 [[main]]
 name = "Home"
-url = "/en"
+url = "/"
 weight = 1
 [[main]]
 hasChildren = true
