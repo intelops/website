@@ -5,7 +5,7 @@ googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
 theme = "delta-hugo"
-title = "Delta - Software and SAAS landing Hugo Theme"
+title = "Intelpos"
 [caches.assets]
 dir = ":resourceDir/_gen"
 maxAge = "720h"
