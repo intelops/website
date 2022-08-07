@@ -4,7 +4,7 @@ description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis co
   praesentium quis.
 layout: services
 bannertext: banner heading
-bannerimage: "images/bg-banner-page.jpg"
+bannerimage: images/banner-bg-1.jpg
 services:
   subtitle: Our services
   title: Select your preference
