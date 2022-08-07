@@ -69,7 +69,7 @@ $(document).ready(function () {
 			$('#showVideo').attr('src', $videoSrc);
 		});
 	}
-	
+
 	// counterUp
 	if($('.counter').length !== 0) {
 		var a = 0;
@@ -168,7 +168,7 @@ $(document).ready(function () {
 		$(this).parent().find('.fas fa-minus').removeClass('fas fa-minus').addClass('fas fa-plus');
 	});
 
-	
+
 	//post carousel
 	new Swiper('.post-carousel.swiper-container', {
 		speed: 400,
@@ -197,4 +197,25 @@ $(document).ready(function () {
 		},
 	});
 
+});
+
+//custom
+
+$(window).on("scroll", function() {
+  var list;
+  list = document.querySelectorAll("#nav-menu");
+  if($(window).scrollTop() > 50) {
+    $("header").removeClass("dark-bar");
+    $("header").addClass("light-bar");
+      for (var i = 0; i < list.length; ++i) {
+        list[i].classList.remove('nav-menu-text');
+      }
+  } else {
+      //remove the background property so it comes transparent again (defined in your css)
+    $("header").removeClass("light-bar");
+    $("header").addClass("dark-bar");
+    for (var i = 0; i < list.length; ++i) {
+      list[i].classList.add('nav-menu-text');
+    }
+  }
 });

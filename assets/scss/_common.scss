@@ -673,3 +673,16 @@ form label {
 .align-right{
   float: right;
 }
+
+.dark-bar{
+  background-color: $banner-primary;
+}
+
+.light-bar{
+  background-color: $header-bar-bg;
+
+}
+
+.nav-menu-text{
+  color: $white !important;
+}
