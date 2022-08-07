@@ -11,3 +11,13 @@ fields:
 - type: textarea
   name: description
   label: description
+- name: bannertext
+  type: text
+  config:
+    required: false
+  label: Banner Text
+- name: bannerimage
+  type: text
+  config:
+    required: false
+  label: Banner Image
