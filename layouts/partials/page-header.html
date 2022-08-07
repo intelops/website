@@ -1,5 +1,5 @@
 {{ partial "header.html" . }}
-{{with .Params.banner.image}}
+{{with .Params.bannerimage}}
 {{$img:= resources.Get . }}
 <section class="page-header wave-block" style="background-image: url({{$img.RelPermalink}}); background-repeat: no-repeat; width:{{$img.Width}}; height:{{$img.Height}};">
 {{end}}
@@ -7,7 +7,7 @@
   <div class="container container-delta">
     <div class="row">
       <div class="block col-12 text-center">
-        <h1 class="title banner-title">{{ .Params.banner.text  }}</h1>
+        <h1 class="title banner-title">{{ .Params.bannertext  }}</h1>
         {{/*
         <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
           <ol class="breadcrumb justify-content-center bg-transparent p-0 mb-0">

@@ -3,9 +3,8 @@ title: "Our Team"
 description: "Some of our Team members"
 draft: false
 layout: "team"
-banner:
-  text: "banner heading"
-  image: "images/bg-banner-page.jpg"
+bannertext: "banner heading"
+bannerimage: "images/bg-banner-page.jpg"
 
 # team members
 team_members:
