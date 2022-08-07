@@ -1,4 +1,4 @@
-baseURL = ""
+baseURL = "file:///D:/Web/SSG/intelops-forestry/delta-hugo/exampleSite/public/"
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""

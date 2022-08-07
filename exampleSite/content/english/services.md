@@ -3,6 +3,8 @@ title: "Services"
 description: "Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti praesentium quis."
 draft: false
 layout: "services"
+bannertext: "banner heading"
+bannerimage: "images/bg-banner-page.jpg"
 
 # title
 services:

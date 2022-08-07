@@ -1,11 +1,12 @@
 {{ partial "header.html" . }}
-<section class="page-header bg-primary-soft wave-block">
+<section class="page-header wave-block" style="background-image: url({{ .Params.bannerimage }}); background-repeat: no-repeat;">
 
 
   <div class="container container-delta">
     <div class="row">
       <div class="block col-12 text-center">
-        {{/*  <h1 class="title banner-title">{{ .Title }}</h1>
+        <h1 class="title banner-title">{{ .Params.bannertext  }}</h1>
+        {{/*
         <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
           <ol class="breadcrumb justify-content-center bg-transparent p-0 mb-0">
             <li class="breadcrumb-item"><a class="banner-desc" href="{{ site.BaseURL | relLangURL }}/">Home</a></li>

@@ -3,6 +3,8 @@ title: "Contact"
 description: "Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti praesentium quis."
 draft: false
 layout: "contact"
+bannertext: "banner heading"
+bannerimage: "images/bg-banner-page.jpg"
 
 # contact
 contact:
