@@ -60,6 +60,10 @@ name = "Platform"
 url = "platform/"
 weight = 2
 [[main]]
+name = "Open Source"
+url = "/opensource"
+weight = "3"
+[[main]]
 name = "Commercial"
 parent = "Products"
 url = "/commercial"
