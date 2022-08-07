@@ -1,15 +1,14 @@
 ---
-title: "Services"
-description: "Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti praesentium quis."
-draft: false
-layout: "services"
-bannertext: "banner heading"
-bannerimage: "images/bg-banner-page.jpg"
-
-# title
+title: Services
+description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti
+  praesentium quis.
+layout: services
+bannertext: banner heading
+bannerimage: "/images/bg-banner-page.jpg"
 services:
-  subtitle: "Our services"
-  title: "Select your preference"
-  description: "Pick the services you like and click next to inquire related to your choice."
+  subtitle: Our services
+  title: Select your preference
+  description: Pick the services you like and click next to inquire related to your
+    choice.
 
 ---
