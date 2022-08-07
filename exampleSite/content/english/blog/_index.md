@@ -3,7 +3,7 @@ title: Blog
 description: meta description
 test: testing
 layout: list
-bannertext: banner test
+bannertext: sample text
 bannerimage: images/bg-banner-page.jpg
 
 ---
