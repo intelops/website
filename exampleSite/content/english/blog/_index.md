@@ -2,7 +2,8 @@
 title: "Blog"
 description: "meta description"
 draft: false
-bannertext: "banner heading"
-bannerimage: "images/bg-banner-page.jpg"
+banner:
+  text: "banner heading"
+  image: "images/bg-banner-page.jpg"
 ---
 
