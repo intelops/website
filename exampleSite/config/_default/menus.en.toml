@@ -56,8 +56,8 @@ url = "/"
 weight = 1
 [[main]]
 hasChildren = true
-name = "Products"
-url = "products/"
+name = "Platform"
+url = "platform/"
 weight = 2
 [[main]]
 name = "Commercial"
@@ -116,4 +116,3 @@ name = "Partner Program"
 parent = "Resources"
 url = "partner-program/"
 weight = 2
-
