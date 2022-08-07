@@ -50,6 +50,7 @@ weight = 2
 name = "Home"
 url = "/"
 weight = 3
+#
 [[main]]
 name = "Home"
 url = "/"
@@ -65,17 +66,17 @@ url = "/opensource"
 weight = "3"
 [[main]]
 name = "Commercial"
-parent = "Products"
+parent = "Open Source"
 url = "/commercial"
 weight = 1
 [[main]]
 name = "Our open source"
-parent = "Products"
+parent = "Open Source"
 url = "/our-open-source"
 weight = 1
 [[main]]
 name = "Contributed open source"
-parent = "Products"
+parent = "Open Source"
 url = "/contributed-open-source"
 weight = 1
 [[main]]
