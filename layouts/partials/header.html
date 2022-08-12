@@ -46,7 +46,7 @@
         {{ end }}
 
         <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}} id="logo-img"
-          width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{.Scratch.Get `logo`}}"
+          width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{.Scratch.Get `logoLight`}}"
           alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
         {{ else }}
         <strong class="text-danger">`{{$logoPath}}` doesn't exist</strong>
