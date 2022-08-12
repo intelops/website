@@ -202,20 +202,27 @@ $(document).ready(function () {
 //custom
 
 $(window).on("scroll", function() {
-  var list;
+  var list, darkLogo, lightLogo;
   list = document.querySelectorAll("#nav-menu");
+  darkLogo = document.querySelector("#logo-img-dark").getAttribute("src");
+  lightLogo = document.querySelector("#logo-img-light").getAttribute("src");
   if($(window).scrollTop() > 50) {
+     //Add light section on down
     $("header").removeClass("dark-bar");
     $("header").addClass("light-bar");
       for (var i = 0; i < list.length; ++i) {
         list[i].classList.remove('nav-menu-text');
       }
+      //add dark logo on down
+      document.getElementById("logo-img").src =darkLogo;
   } else {
-      //remove the background property so it comes transparent again (defined in your css)
+      //Add dark section on up
     $("header").removeClass("light-bar");
     $("header").addClass("dark-bar");
     for (var i = 0; i < list.length; ++i) {
       list[i].classList.add('nav-menu-text');
     }
+      //add light logo on up
+      document.getElementById("logo-img").src =lightLogo;
   }
 });

@@ -31,8 +31,21 @@
         <!-- logo fallback -->
         {{ .Scratch.Set "logo_fallback" ($logo.Resize $logoWidth).RelPermalink }}
         {{ end }}
+        <span id="logo-img-dark" src="{{.Scratch.Get `logo`}}"></span>
+        {{ $logoLight:= site.Params.logo_light }}
+        {{ if $logoLight }}
+        {{ if fileExists (add `assets/` $logoLight) }}
+        {{ $logoLight:= resources.Get $logoLight }}
+        <!-- logo processing to webp -->
+        {{ $logoLightDefaultWidth:= add (string $logoLight.Width) "x"}}
+        {{ $logoWidth:= $logoWidth | default $logoLightDefaultWidth }}
+        {{ $optionsLight := add (string $logoWidth) " webp" }}
+        {{ .Scratch.Set "logoLight" ($logoLight.Resize $optionsLight).RelPermalink }}
+        <span id="logo-img-light" src="{{.Scratch.Get `logoLight`}}"></span>
+        {{ end }}
+        {{ end }}
 
-        <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}}
+        <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}} id="logo-img"
           width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{.Scratch.Get `logo`}}"
           alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
         {{ else }}
