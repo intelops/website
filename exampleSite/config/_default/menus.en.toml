@@ -85,7 +85,7 @@ url = "blog/"
 weight = 5
 [[main]]
 name = "Docs"
-url = "docs/"
+url = "https://dreamy-torte-db1a25.netlify.app/"
 weight = 5
 [[main]]
 name = "Services"
