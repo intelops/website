@@ -72,3 +72,26 @@ fields:
     max: 
     labelField: 
   label: Contact Info
+- name: serivces
+  type: field_group_list
+  fields:
+  - name: enable
+    type: boolean
+    label: Enable
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: service_list
+    type: blocks
+    label: Service List
+    template_types: []
+    config:
+      min: 
+      max: 
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Serivces
