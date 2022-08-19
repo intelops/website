@@ -84,12 +84,12 @@ fields:
       required: false
     label: Title
   - name: service_list
-    type: blocks
-    label: Service List
-    template_types: []
+    type: list
     config:
+      use_select: false
       min: 
       max: 
+    label: Service List
   config:
     min: 
     max: 
