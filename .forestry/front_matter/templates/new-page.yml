@@ -65,5 +65,4 @@ fields:
     label: Lists
   label: Team Members
 pages:
-- exampleSite/content/english/services.md
 - exampleSite/content/english/team.md

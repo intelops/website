@@ -12,7 +12,7 @@ services:
   description: Pick the services you like and click next to inquire related to your
     choice.
   enable: true
-date: 
+date: ''
 team_members:
   subtitle: ''
   title: ''

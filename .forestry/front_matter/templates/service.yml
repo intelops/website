@@ -36,3 +36,5 @@ fields:
   - type: boolean
     name: enable
     label: enable
+pages:
+- exampleSite/content/english/services.md
