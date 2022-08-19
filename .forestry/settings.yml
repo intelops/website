@@ -39,7 +39,6 @@ sections:
 - type: document
   path: exampleSite/content/english/mind-map.md
   label: Mind Map
-  match: "**/*"
 - type: heading
   label: All Pages
 - type: directory

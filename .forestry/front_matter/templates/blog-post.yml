@@ -14,3 +14,8 @@ fields:
 - type: text
   name: author
   label: author
+- name: enable
+  type: boolean
+  label: 'Enable Banner '
+  description: Enable or disable banner and banner heading
+  default: true
