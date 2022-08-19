@@ -17,9 +17,9 @@ fields:
     required: false
   label: Banner Text
 - name: bannerimage
-  type: text
+  type: file
   config:
-    required: false
+    maxSize: 64
   label: Banner Image
 - name: enable
   type: boolean
