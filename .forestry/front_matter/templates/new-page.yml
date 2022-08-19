@@ -21,3 +21,8 @@ fields:
   config:
     required: false
   label: Banner Image
+- name: enable
+  type: boolean
+  label: Enable Banner
+  description: enable or disable banner and banner heading text
+  default: true
