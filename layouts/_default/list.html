@@ -2,16 +2,29 @@
 
 {{ partial "page-header.html" . }}
 
+{{ partial "categories.html" .}}
+
 <section class="section pb-0" data-aos="fade-in">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
       {{ $paginator := .Paginate (where site.RegularPages "Section" "in" site.Params.mainSections) }}
-      {{ range $paginator.Pages }}
-      <div class="col-lg-4 col-md-6 blog-card has-border">
-        {{ .Render "article" }}
-      </div>
-      {{ end }}
-      
+     <!-- Blog page -->
+      {{if (isset .Params "bannertext")}}
+        {{ range $paginator.Pages }}
+        <div class="col-lg-4 col-md-6 blog-card has-border">
+          {{ .Render "article" }}
+        </div>
+        {{ end }}
+        {{end}}
+      <!-- taxonomy pages -->
+      {{$term:= replace .Params.title " " "-" | lower }}
+      {{ $taxonomy := index .Site.Taxonomies.categories $term }}
+      {{ range $taxonomy.Pages}}
+        <div class="col-lg-4 col-md-6 blog-card has-border">
+          {{ .Render "article" }}
+        </div>
+        {{ end }}
+
       <!-- pagination -->
       <div class="col-12 pt-5">
         {{"<!-- pagination -->" | safeHTML }}

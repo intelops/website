@@ -29,3 +29,5 @@ mediaType = "application/manifest+json"
 rel = "manifest"
 [outputs]
 home = ["HTML", "RSS", "WebAppManifest"]
+[taxonomies]
+category = "categories"

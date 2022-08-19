@@ -5,6 +5,7 @@ draft: false
 layout: "team"
 bannertext: "banner heading"
 bannerimage: "images/bg-banner-page.jpg"
+enable: false
 
 # team members
 team_members:

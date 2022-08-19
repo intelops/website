@@ -5,6 +5,7 @@ draft: false
 layout: "contact"
 bannertext: "banner heading"
 bannerimage: "images/bg-banner-page.jpg"
+enable: true
 
 # contact
 contact:
