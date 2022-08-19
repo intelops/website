@@ -36,19 +36,3 @@ fields:
   - type: boolean
     name: enable
     label: enable
-- type: text
-  name: date
-  label: date
-- type: field_group
-  name: team_members
-  label: team_members
-  fields:
-  - type: text
-    name: subtitle
-    label: subtitle
-  - type: text
-    name: title
-    label: title
-  - type: list
-    name: lists
-    label: lists
