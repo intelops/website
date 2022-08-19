@@ -4,7 +4,7 @@ description: Some of our Team members
 layout: team
 bannertext: banner heading
 bannerimage: images/bg-banner-page.jpg
-enable: false
+enable: true
 team_members:
   subtitle: We Are Delta
   title: Some of our Team members
