@@ -22,7 +22,7 @@ fields:
   label: enable
 - type: field_group
   name: team_members
-  label: team_members
+  label: Team members
   fields:
   - type: text
     name: subtitle
