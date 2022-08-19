@@ -8,33 +8,20 @@ sections:
   label: Homepage
 - type: document
   path: exampleSite/content/english/_index.md
-  label: Homepage (en)
+  label: Homepage
 - type: heading
   label: Blog
 - type: document
   path: exampleSite/content/english/blog/_index.md
-  label: Blog (en)
+  label: 'Blog '
 - type: directory
   path: exampleSite/content/english/blog
-  label: Blog Posts (en)
+  label: Blog Posts
   create: documents
   match: "**/*"
   exclude: _index.md
   templates:
   - blog-post
-- type: heading
-  label: Career
-- type: document
-  path: exampleSite/content/english/career/_index.md
-  label: Career (en)
-- type: directory
-  path: exampleSite/content/english/career
-  label: Career Posts (en)
-  create: all
-  match: "**/*"
-  exclude: _index.md
-  templates:
-  - career-page
 - type: document
   path: exampleSite/content/english/services.md
   label: Services
@@ -42,21 +29,18 @@ sections:
   label: Others Page
 - type: document
   path: exampleSite/content/english/about.md
-  label: About (en)
-- type: document
-  path: exampleSite/content/english/pricing.md
-  label: Pricing (en)
+  label: About
 - type: document
   path: exampleSite/content/english/team.md
-  label: Team (en)
+  label: Team
 - type: document
   path: exampleSite/content/english/contact.md
-  label: Contact (en)
+  label: Contact
 - type: heading
   label: All Pages
 - type: directory
   path: exampleSite/content/english
-  label: All Pages (en)
+  label: All Pages
   create: all
   match: "**/*"
   exclude: _index.md
@@ -78,7 +62,7 @@ sections:
   label: Languages
 - type: document
   path: exampleSite/config/_default/menus.en.toml
-  label: Menu (en)
+  label: Menu
 - type: directory
   path: exampleSite/i18n
   label: i18n Translations
