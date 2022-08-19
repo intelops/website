@@ -26,3 +26,5 @@ fields:
   label: Enable Banner
   description: enable or disable banner and banner heading text
   default: true
+pages:
+- exampleSite/content/english/team.md
