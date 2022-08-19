@@ -1,0 +1,54 @@
+---
+label: service
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: bannertext
+  label: bannertext
+- type: file
+  name: bannerimage
+  label: bannerimage
+- type: boolean
+  name: enable
+  label: enable
+- type: field_group
+  name: services
+  label: services
+  fields:
+  - type: text
+    name: subtitle
+    label: subtitle
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: description
+    label: description
+  - type: boolean
+    name: enable
+    label: enable
+- type: text
+  name: date
+  label: date
+- type: field_group
+  name: team_members
+  label: team_members
+  fields:
+  - type: text
+    name: subtitle
+    label: subtitle
+  - type: text
+    name: title
+    label: title
+  - type: list
+    name: lists
+    label: lists
