@@ -1,0 +1,45 @@
+---
+label: team
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: description
+  label: description
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: bannertext
+  label: bannertext
+- type: file
+  name: bannerimage
+  label: bannerimage
+- type: boolean
+  name: enable
+  label: enable
+- type: field_group
+  name: team_members
+  label: team_members
+  fields:
+  - type: text
+    name: subtitle
+    label: subtitle
+  - type: text
+    name: title
+    label: title
+  - type: field_group_list
+    name: lists
+    label: lists
+    fields:
+    - type: file
+      name: image
+      label: image
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: designation
+      label: designation
