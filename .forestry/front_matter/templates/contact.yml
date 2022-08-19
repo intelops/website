@@ -21,8 +21,8 @@ fields:
   name: enable
   label: enable
 - type: field_group
-  name: services
-  label: services
+  name: contact
+  label: Contact
   fields:
   - type: text
     name: subtitle
@@ -33,22 +33,45 @@ fields:
   - type: text
     name: description
     label: description
-  - type: boolean
-    name: enable
-    label: enable
-- type: text
-  name: date
-  label: date
-- type: field_group
-  name: team_members
-  label: team_members
+- name: contact_info
+  type: field_group_list
   fields:
-  - type: text
-    name: subtitle
-    label: subtitle
-  - type: text
-    name: title
-    label: title
-  - type: list
-    name: lists
-    label: lists
+  - name: enable
+    type: boolean
+    label: Enable
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: address_list
+    type: text
+    config:
+      required: false
+    label: Address List
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Contact Info
+- name: services
+  type: field_group_list
+  fields:
+  - name: enable
+    type: boolean
+    label: Enable
+  - name: title
+    type: text
+    config:
+      required: false
+    label: Title
+  - name: service_list
+    type: text
+    config:
+      required: false
+    label: service List
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: Services
