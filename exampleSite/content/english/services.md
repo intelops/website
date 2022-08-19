@@ -5,11 +5,12 @@ description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis co
 layout: services
 bannertext: banner heading
 bannerimage: images/banner-bg-1.jpg
-enable: true
 services:
   subtitle: Our services
   title: Select your preference
   description: Pick the services you like and click next to inquire related to your
     choice.
+  service_list: []
+enable: true
 
 ---
