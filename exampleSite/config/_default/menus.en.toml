@@ -60,6 +60,11 @@ name = "Platform"
 url = "platform/"
 weight = 2
 [[main]]
+name = "Optimizor"
+parent = "Platform"
+url = "/optimizor"
+weight = 2
+[[main]]
 name = "Open Source"
 url = "/opensource"
 weight = "3"
