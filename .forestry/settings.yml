@@ -25,17 +25,17 @@ sections:
 - type: document
   path: exampleSite/content/english/services.md
   label: Services
+- type: document
+  path: exampleSite/content/english/contact.md
+  label: Contact
+- type: document
+  path: exampleSite/content/english/team.md
+  label: Team
 - type: heading
   label: Others Page
 - type: document
   path: exampleSite/content/english/about.md
   label: About
-- type: document
-  path: exampleSite/content/english/team.md
-  label: Team
-- type: document
-  path: exampleSite/content/english/contact.md
-  label: Contact
 - type: document
   path: exampleSite/content/english/mind-map.md
   label: Mind Map
