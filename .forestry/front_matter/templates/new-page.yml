@@ -65,11 +65,8 @@ fields:
       required: false
     label: Title
   - name: address_list
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
+    type: tag_list
+    default: []
     label: Address List
   config:
     min: 
@@ -88,11 +85,8 @@ fields:
       required: false
     label: Title
   - name: service_list
-    type: list
-    config:
-      use_select: false
-      min: 
-      max: 
+    type: tag_list
+    default: []
     label: Service List
   config:
     min: 
