@@ -1,7 +1,7 @@
 ---
 banner:
   subtitle: Intelops AI
-  title: Comming Soon
+  title: Coming Soon
   description: Under development
   button:
     enable: true
