@@ -1,9 +1,8 @@
 ---
 banner:
-  subtitle: We Are Delta
-  title: get fastest loan with <br> smart way A seating home
-  description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    <br> eirmod tempor invidunt ut labore et dolore magna aliquyam erat
+  subtitle: Intelops AI
+  title: Comming Soon
+  description: Under development
   button:
     enable: true
     label: Get started now
