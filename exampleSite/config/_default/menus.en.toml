@@ -50,7 +50,6 @@ weight = 2
 name = "Home"
 url = "/"
 weight = 3
-#
 [[main]]
 name = "Home"
 url = "/"
@@ -121,7 +120,3 @@ name = "Partner Program"
 parent = "Resources"
 url = "partner-program/"
 weight = 2
-[[main]]
-name = "Mind Map"
-url = "mind-map/"
-weight = 5
