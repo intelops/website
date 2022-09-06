@@ -1,0 +1,86 @@
+<!-- navigation -->
+<header class="navigation dark-bar"  id="secondary-header">
+  <div class="container container-delta d-flex justify-content-center">
+    <nav class="navbar navbar-expand-xl navbar-light ">
+      <a class="navbar-nav mx-auto" href="{{ .Permalink }}" title="{{site.Title}}">
+        {{ $logoLight:= site.Params.logo_light }}
+        {{ $logoWidth:= replace site.Params.logo_width "px" "x" }}
+        {{ if $logoLight }}
+        {{ if fileExists (add `assets/` $logoLight) }}
+        {{ $logoLight:= resources.Get $logoLight }}
+        <!-- logo processing to webp -->
+        {{ $logoLightDefaultWidth:= add (string $logoLight.Width) "x"}}
+        {{ $logoWidth:= $logoWidth | default $logoLightDefaultWidth }}
+        {{ $optionsLight := add (string $logoWidth) " webp" }}
+        {{ .Scratch.Set "logoLight" ($logoLight.Resize $optionsLight).RelPermalink }}
+        <span id="logo-img-light" src="{{.Scratch.Get `logoLight`}}"></span>
+
+
+        <img loading="prelaod" decoding="async" class="img-fluid"  id="logo-img"
+          width="{{$logoWidth | default $logoLight.Width}}" height="{{$logoLight.Height}}"  src="{{.Scratch.Get `logoLight`}}"
+          alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
+          {{ end }}
+          {{ end }}
+      </a>
+      <div class="collapse navbar-collapse text-center" id="navigation">
+        <ul class="navbar-nav mx-auto">
+
+          {{ $currentPage := . }}
+          {{ range site.Menus.product_optimizor }}
+          {{ $menuURL := .URL | absLangURL }}
+          {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+          {{ $active := eq $menuURL $pageURL }}
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown
+            {{ range .Children }}
+            {{ $childURL := .URL | absLangURL }}
+            {{ $active := eq $childURL $pageURL }}
+            {{ if $active }}active{{ end }}
+            {{ end }}">
+            <a class="nav-link nav-menu-text dropdown-toggle" id="nav-menu2" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              {{ .Name }}
+            </a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+              {{ $childURL := .URL | absLangURL }}
+              {{ $active := eq $childURL $pageURL }}
+              <li>
+                <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+          {{ else }}
+          <li class="nav-item {{if $active}}active{{end}}">
+            <a class="nav-link nav-menu-text" id="nav-menu2" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+              href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+
+        <div class="navbar-right check-button">
+          {{ with site.Params.navigation_button }}
+          {{ if .enable }}
+          <!-- login btn -->
+          <a href="{{ .link | relLangURL }}" class="btn btn-link">
+            {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
+          </a>
+          {{ end }}
+          {{ end }}
+
+          {{ with site.Params.navigation_button_two }}
+          {{ if .enable }}
+          <!-- signup btn -->
+          <a href="{{ .link | relLangURL }}" class="btn btn-primary">
+            {{ .label }} {{with .icon}}<i class="icon {{.}}"></i>{{end}}
+          </a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>

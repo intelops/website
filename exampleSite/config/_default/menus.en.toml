@@ -125,3 +125,13 @@ name = "Partner Program"
 parent = "Resources"
 url = "partner-program/"
 weight = 2
+[[product_optimizor]]
+hasChildren = true
+name = "Test"
+url = "test/"
+weight = 2
+[[product_optimizor]]
+name = "Sample"
+parent = "Test"
+url = "/sample"
+weight = 2
