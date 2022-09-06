@@ -11,6 +11,10 @@ sections:
   label: Homepage
 - type: heading
   label: Platform
+- type: document
+  path: exampleSite/content/english/optimizor.md
+  label: optimizor
+  match: "**/*"
 - type: heading
   label: Blog
 - type: document
