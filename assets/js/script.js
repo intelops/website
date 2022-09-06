@@ -200,7 +200,22 @@ $(document).ready(function () {
 });
 
 //custom
+//remove login and sign up button for platform
+$(window).on("load", function() {
+if ($('div.navbar-right').hasClass('check-button')) {
+  $('#main-button').hide();
+} else {
+  $('#main-button').show();
+}
+});
 
+$("#main-header").hover(function(){
+  $("#secondary-header").addClass("header-sec");
+},function(){
+  $("#secondary-header").removeClass("header-sec");
+});
+
+//header on scroll changes
 $(window).on("scroll", function() {
   var list, darkLogo, lightLogo;
   list = document.querySelectorAll("#nav-menu");
@@ -208,8 +223,8 @@ $(window).on("scroll", function() {
   lightLogo = document.querySelector("#logo-img-light").getAttribute("src");
   if($(window).scrollTop() > 50) {
      //Add light section on down
-    $("header").removeClass("dark-bar");
-    $("header").addClass("light-bar");
+    $("#main-header").removeClass("dark-bar");
+    $("#main-header").addClass("light-bar");
       for (var i = 0; i < list.length; ++i) {
         list[i].classList.remove('nav-menu-text');
       }
@@ -217,8 +232,8 @@ $(window).on("scroll", function() {
       document.getElementById("logo-img").src =darkLogo;
   } else {
       //Add dark section on up
-    $("header").removeClass("light-bar");
-    $("header").addClass("dark-bar");
+    $("#main-header").removeClass("light-bar");
+    $("#main-header").addClass("dark-bar");
     for (var i = 0; i < list.length; ++i) {
       list[i].classList.add('nav-menu-text');
     }
