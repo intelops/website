@@ -10,6 +10,11 @@ sections:
   path: exampleSite/content/english/_index.md
   label: Homepage
 - type: heading
+  label: Platform
+- type: document
+  path: exampleSite/content/english/optimizor.md
+  label: optimizor
+- type: heading
   label: Blog
 - type: document
   path: exampleSite/content/english/blog/_index.md
