@@ -130,8 +130,3 @@ hasChildren = true
 name = "Test"
 url = "test/"
 weight = 2
-[[product_optimizor]]
-name = "Sample"
-parent = "Test"
-url = "/sample"
-weight = 2
