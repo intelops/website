@@ -1,3 +1,4 @@
+product_optimizor = []
 [[footer_menu_1]]
 name = "Commercial"
 url = "#!"
@@ -124,9 +125,4 @@ weight = 2
 name = "Partner Program"
 parent = "Resources"
 url = "partner-program/"
-weight = 2
-[[product_optimizor]]
-hasChildren = true
-name = "Test"
-url = "test/"
 weight = 2
