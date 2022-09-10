@@ -86,7 +86,7 @@ url = "/contributed-open-source"
 weight = 1
 [[main]]
 name = "Blogs"
-url = "blogs/"
+url = "blog/"
 weight = 5
 [[main]]
 name = "Docs"
