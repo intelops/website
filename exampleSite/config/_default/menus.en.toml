@@ -90,7 +90,7 @@ url = "blog/"
 weight = 5
 [[main]]
 name = "Docs"
-url = "https://dreamy-torte-db1a25.netlify.app/"
+url = "https://docs.intelops.ai/"
 weight = 5
 [[main]]
 name = "Services"
