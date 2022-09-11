@@ -13,7 +13,7 @@ sections:
   label: Platform
 - type: document
   path: exampleSite/content/english/optimizor.md
-  label: optimizor
+  label: Optimizor
 - type: heading
   label: Blog
 - type: document
