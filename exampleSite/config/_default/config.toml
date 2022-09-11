@@ -4,7 +4,7 @@ disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
-theme = "delta-hugo"
+theme = ""
 title = "Intelops"
 [caches.assets]
 dir = ":resourceDir/_gen"
