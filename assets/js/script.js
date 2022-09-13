@@ -202,10 +202,8 @@ $(document).ready(function () {
 //custom
 //remove login and sign up button for platform
 $(window).on("load", function() {
-if ($('div.navbar-right').hasClass('check-button')) {
-  $('#main-button').hide();
-} else {
-  $('#main-button').show();
+if ($('div.navbar-right').hasClass('platform-button')) {
+  $('#secondary-button').hide();
 }
 });
 
@@ -221,7 +219,7 @@ $(window).on("scroll", function() {
   list = document.querySelectorAll("#nav-menu");
   darkLogo = document.querySelector("#logo-img-dark").getAttribute("src");
   lightLogo = document.querySelector("#logo-img-light").getAttribute("src");
-  if($(window).scrollTop() > 50) {
+  if($(window).scrollTop() > 70) {
      //Add light section on down
     $("#main-header").removeClass("dark-bar");
     $("#main-header").addClass("light-bar");
@@ -230,6 +228,10 @@ $(window).on("scroll", function() {
       }
       //add dark logo on down
       document.getElementById("logo-img").src =darkLogo;
+      //show second header button and hide main
+      $('#secondary-button').show();
+      $('#main-button').hide();
+      $('#main-navbar').addClass("no-bottom");
   } else {
       //Add dark section on up
     $("#main-header").removeClass("light-bar");
@@ -239,5 +241,9 @@ $(window).on("scroll", function() {
     }
       //add light logo on up
       document.getElementById("logo-img").src =lightLogo;
+       //show main header button and hide second
+      $('#secondary-button').hide();
+      $('#main-button').show();
+      $('#main-navbar').removeClass("no-bottom");
   }
 });
