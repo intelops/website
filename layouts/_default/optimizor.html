@@ -4,7 +4,7 @@
 
 {{ partial "platform-header.html" . }}
 
-<section class="banner bg-quaternary-soft rounded-lg wave-block overflow-hidden">
+<section class="banner bg-primary-soft wave-block overflow-hidden">
 
   {{with .Params.banner}}
   <div class="container container-delta block">
@@ -12,7 +12,7 @@
       <div class="col-lg-6">
         <div class="pe-0 pe-lg-5">
           <p class="subtitle">{{.subtitle | markdownify}}</p>
-          <h1 class="title text-xl mb-3">{{.title | markdownify}}</h1>
+          <h1 class="title text-xl mb-3 banner-title">{{.title | markdownify}}</h1>
           <p class="mb-4">{{.description | markdownify}}</p>
 
           {{with .button}}

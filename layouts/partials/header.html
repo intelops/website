@@ -2,7 +2,7 @@
 <header class="navigation dark-bar" id="main-header">
   <div class="container container-delta">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-xl navbar-light">
+    <nav class="navbar navbar-expand-xl navbar-light" id="main-navbar">
       <!-- navbar brand/logo -->
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
         {{ $logoPath:= site.Params.logo }}
@@ -152,7 +152,7 @@
           </li>
         </ul>
 
-        <div class="navbar-right" id="main-button">
+        <div class="navbar-right header-button" id="main-button">
           {{ with site.Params.navigation_button }}
           {{ if .enable }}
           <!-- login btn -->
