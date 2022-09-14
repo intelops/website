@@ -1,10 +1,10 @@
-baseURL = "file:///D:/Web/SSG/intelops-forestry/delta-hugo/exampleSite/public/"
+baseURL = ""
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
-theme = "delta-hugo"
+theme = ""
 title = "Intelops"
 [caches.assets]
 dir = ":resourceDir/_gen"

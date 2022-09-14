@@ -1,9 +1,9 @@
 <!-- navigation -->
 <header class="navigation dark-bar"  id="secondary-header">
   <div class="container container-delta d-flex justify-content-center">
-    <nav class="navbar navbar-expand-xl navbar-light ">
+    <nav class="navbar navbar-expand-xl navbar-light no-bottom">
       <a class="navbar-nav mx-auto" href="{{ .Permalink }}" title="{{site.Title}}">
-        {{ $logoLight:= site.Params.logo_light }}
+        {{ $logoLight:= .Params.headerLogo }}
         {{ $logoWidth:= replace site.Params.logo_width "px" "x" }}
         {{ if $logoLight }}
         {{ if fileExists (add `assets/` $logoLight) }}
@@ -61,7 +61,7 @@
           {{ end }}
         </ul>
 
-        <div class="navbar-right check-button">
+        <div class="navbar-right platform-button" id="secondary-button">
           {{ with site.Params.navigation_button }}
           {{ if .enable }}
           <!-- login btn -->

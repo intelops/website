@@ -85,7 +85,7 @@ parent = "Open Source"
 url = "/contributed-open-source"
 weight = 1
 [[main]]
-name = "Blog"
+name = "Blogs"
 url = "blog/"
 weight = 5
 [[main]]

@@ -1,7 +1,8 @@
 # production
 /exampleSite/public
 /exampleSite/resources/_gen
-/resources/_gen
+resources/_gen/
+/public
 
 #misc
 /exampleSite/.hugo_build.lock
