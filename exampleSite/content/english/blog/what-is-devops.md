@@ -7,7 +7,7 @@ categories:
 
 What is DevOps?
 This article was originally posted on: http://intelops.ai/blog
-DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that its a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
+DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
 ________________
 
 
@@ -41,4 +41,30 @@ The way the current process is set up, development and deployment (a.k.a. operat
 ________________
 
 
-By removing one hindrance at a time, DevOps aims to combine all of these different areas (development, testing, security, and operations). This creates an automated and streamlined development/deployment process. Given that the definition of this term is so broad, companies who have adopted this philosophy have catered it to their own needs.
+By removing one hindrance at a time, DevOps aims to combine all of these different areas (development, testing, security, and operations). This creates an automated and streamlined development/deployment process. In tackling each hindrance, a series of best practices have manifested to help organizations to adopt DevOps culture.
+________________
+
+
+Best DevOps Practices
+In order for organizations to fully embrace DevOps philosophies, there are some key practices that need to be implemented. Starting with:
+   * Continuous Integration/Continuous Delivery pipeline - this application development and delivery pipeline can help organizations manage any operational challenges that might arise from transitioning to a DevOps culture. This pipeline also provides systematic and streamlined delivery of features/bug fixes.
+   * Microservices architecture - This type of application design allows for flexible application use, and easier innovation within each component of the application.
+   * Frequent updates - smaller, more frequent updates are key to the DevOps philosophy. These updates would usually be cumbersome, however, with all other practices embraced, can be easy to implement.
+   * Infrastructure As Code - this best practice helps organizations to maintain their development, testing, and production infrastructure through the use of code and development techniques. There are many other “X as Code” practices that have sprung up since this, such as Policy As Code.
+   * Collaboration - using tools associated with each DevOps practice, the responsibilities of the development and operations teams get merged. This increases collaboration between the teams resulting in knowledge sharing, and increased communication.
+   * Monitoring - by observing key metrics in real-time, organizations can maintain the stability of their applications. Organizations would also be monitoring the infrastructure that is serving the applications.
+________________
+
+
+Benefits Of Implementing DevOps
+Upon implementing the practices, hindrances in the old development process are eliminated. The organization who has now adopted the DevOps culture can reap the benefits, which include:
+   * Reliability - systematic workflows help to ensure both the quality and integrity of the application.
+   * Delivery speed - the application can now have more frequent release, as well as there being less response time needed for bug-fixes.
+   * Improved collaboration between teams.
+   * Security - certain DevOps practices can include automated compliance policies which increase the security of your application.
+   * Scaling - through the use of certain practices, such as Infrastructure As Code, organizations can easily manage their development, testing, and production environments.
+________________
+
+
+Conclusion
+DevOps is broad terminology referring to the set of practices which help release software with speed and quality. These practices were created to overcome hindrances in the old development process. By using a DevOps mindset, organizations can implement these practices, and ultimately the DevOps philosophy. Once embraced, this philosophy offers numerous benefits to the organization such as reliability, scaling, and reduced delivery speed.
