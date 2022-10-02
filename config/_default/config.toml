@@ -1,10 +1,10 @@
-baseURL = ""
+baseURL = "https://intelops.ai/"
 disableLanguages = ["fr"]
 disqusShortname = "themefisher-template"
 googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
-theme = ""
+theme = "delta"
 title = "Intelops"
 [caches.assets]
 dir = ":resourceDir/_gen"

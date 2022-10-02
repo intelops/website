@@ -12,7 +12,7 @@ banner:
     enable: false
     label: Watch demo
     video_url: https://www.youtube.com/embed/dyZcRRWiuuw
-  image: images/banner-home.png
+  image: ""
 brands:
   enable: false
   title: 150M+ users trusted Delta worldwide

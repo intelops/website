@@ -1,15 +1,11 @@
 // start header style
 .navigation {
-  transition: .15s ease-out;
+  transition: 0.15s ease-out;
   position: sticky;
   z-index: 9999;
   top: 0;
-
-  @include tablet {
-    padding: 20px 0;
-  }
   @include mobile {
-    padding: 0;
+    padding: 5px 0;
   }
 
   .container-delta {
@@ -47,9 +43,9 @@
     padding: 0;
     font-size: 29px;
     width: 26px;
-    color: lighten($black, 13.33);
+    color: lighten($color-primary, 13.33);
     border: 0;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
     &:focus {
       box-shadow: none;
@@ -92,11 +88,11 @@
 
     .nav-link:hover,
     &.active .nav-link {
-      color: $color-primary !important
+      color: $color-primary !important;
     }
     &.dropdown .nav-link::after {
       display: inline-block;
-      vertical-align: .2em;
+      vertical-align: 0.2em;
       content: "";
       height: 9px;
       width: 9px;
@@ -150,7 +146,7 @@
     }
   }
 
-  @media (min-width:1200px) {
+  @media (min-width: 1200px) {
     .dropdown-menu {
       display: block;
       visibility: hidden;
@@ -177,7 +173,7 @@
       li {
         transform: translateX(20px) translateY(0px);
         opacity: 0;
-        transition: .1s;
+        transition: 0.1s;
       }
     }
     .dropdown-menu[data-bs-popper] {
@@ -195,13 +191,13 @@
       li {
         opacity: 1;
         transform: translate(0);
-        transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
       }
       $base-time: 0.05;
       $max-menu-item: 10;
       @for $i from 1 through $max-menu-item {
         li:nth-child(#{$i}) {
-          transition-delay: $i*$base-time+s;
+          transition-delay: $i * $base-time + s;
         }
       }
     }
@@ -222,7 +218,7 @@
     .dropdown-menu {
       padding: 1px 10px;
       text-align: center;
-      background-color: lighten($color-primary, 35);
+      background-color: lighten($color-primary, 39);
     }
     .navbar-right {
       padding: 15px;
