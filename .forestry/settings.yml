@@ -7,20 +7,20 @@ sections:
 - type: heading
   label: Homepage
 - type: document
-  path: exampleSite/content/english/_index.md
+  path: content/english/_index.md
   label: Homepage
 - type: heading
   label: Platform
 - type: document
-  path: exampleSite/content/english/optimizor.md
+  path: content/english/optimizor.md
   label: Optimizor
 - type: heading
   label: Blog
 - type: document
-  path: exampleSite/content/english/blog/_index.md
+  path: content/english/blog/_index.md
   label: 'Blog '
 - type: directory
-  path: exampleSite/content/english/blog
+  path: content/english/blog
   label: Blog Posts
   create: documents
   match: "**/*"
@@ -28,26 +28,26 @@ sections:
   templates:
   - blog-post
 - type: document
-  path: exampleSite/content/english/services.md
+  path: content/english/services.md
   label: Services
 - type: document
-  path: exampleSite/content/english/contact.md
+  path: content/english/contact.md
   label: Contact
 - type: document
-  path: exampleSite/content/english/team.md
+  path: content/english/team.md
   label: Team
 - type: heading
   label: Others Page
 - type: document
-  path: exampleSite/content/english/about.md
+  path: content/english/about.md
   label: About
 - type: document
-  path: exampleSite/content/english/mind-map.md
+  path: content/english/mind-map.md
   label: Mind Map
 - type: heading
   label: All Pages
 - type: directory
-  path: exampleSite/content/english
+  path: content/english
   label: All Pages
   create: all
   match: "**/*"
@@ -57,26 +57,26 @@ sections:
 - type: heading
   label: Configuration
 - type: document
-  path: exampleSite/config/_default/config.toml
+  path: config/_default/config.toml
   label: Configuration
 - type: document
-  path: exampleSite/config/_default/params.toml
+  path: config/_default/params.toml
   label: Parameters
 - type: document
   path: config.toml
   label: Variables & Plugins
 - type: document
-  path: exampleSite/config/_default/languages.toml
+  path: config/_default/languages.toml
   label: Languages
 - type: document
-  path: exampleSite/config/_default/menus.en.toml
+  path: config/_default/menus.en.toml
   label: Menu
 - type: directory
-  path: exampleSite/i18n
+  path: i18n
   label: i18n Translations
   create: all
   match: "**/*"
-upload_dir: exampleSite/assets/images
+upload_dir: assets/images
 public_path: "/images"
 front_matter_path: ''
 use_front_matter_path: false
@@ -86,7 +86,7 @@ build:
   - HUGO_ENV=staging
   - HUGO_VERSION=0.81.0
   preview_output_directory: public
-  install_dependencies_command: hugo --minify --gc --themesDir ../
+  install_dependencies_command: hugo --minify --gc
   preview_docker_image: forestryio/hugo:node16
   mount_path: "/srv"
   working_dir: "/srv/exampleSite"

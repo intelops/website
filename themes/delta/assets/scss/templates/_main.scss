@@ -65,8 +65,8 @@ main:empty {
 // page-header
 .page-header {
   .block {
-    padding-top: 40px;
-    padding-bottom: 190px;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
   a.text-muted:hover {
     color: $color-primary !important;
@@ -87,7 +87,9 @@ main:empty {
     padding-top: 40px;
     padding-bottom: 90px;
     @include tablet {
-      br {display: none;}
+      br {
+        display: none;
+      }
     }
     @include mobile {
       padding-bottom: 50px;
@@ -153,7 +155,6 @@ main:empty {
   }
 }
 
-
 // features-section
 .features-section {
   &.features-creative {
@@ -216,7 +217,7 @@ main:empty {
       border-radius: 15px;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       border: 2px solid transparent;
-      transition: .1s;
+      transition: 0.1s;
       padding: 45px 35px;
       @include mobile {
         padding: 30px 25px;
@@ -235,55 +236,79 @@ main:empty {
     &:nth-child(1) .block,
     &:nth-child(11) .block,
     &:nth-child(5) .block {
-      .icon {color: $color-primary}
+      .icon {
+        color: $color-primary;
+      }
       &:hover {
         border-color: $color-primary;
-        .title {color:$color-primary}
+        .title {
+          color: $color-primary;
+        }
       }
     }
     &:nth-child(6) .block,
     &:nth-child(12) .block,
     &:nth-child(2) .block:nth-child(1) {
-      .icon {color: $color-secondary}
+      .icon {
+        color: $color-secondary;
+      }
       &:hover {
         border-color: $color-secondary;
-        .title {color:$color-secondary}
+        .title {
+          color: $color-secondary;
+        }
       }
     }
     &:nth-child(4) .block,
     &:nth-child(7) .block,
     &:nth-child(13) .block,
     &:nth-child(2) .block:nth-child(2) {
-      .icon {color: $color-tertiary}
+      .icon {
+        color: $color-tertiary;
+      }
       &:hover {
         border-color: $color-tertiary;
-        .title {color:$color-tertiary}
+        .title {
+          color: $color-tertiary;
+        }
       }
     }
     &:nth-child(8) .block,
     &:nth-child(14) .block,
     &:nth-child(3) .block:nth-child(1) {
-      .icon {color: $color-quaternary}
+      .icon {
+        color: $color-quaternary;
+      }
       &:hover {
         border-color: $color-quaternary;
-        .title {color:$color-quaternary}
+        .title {
+          color: $color-quaternary;
+        }
       }
     }
     &:nth-child(9) .block,
     &:nth-child(15) .block,
     &:nth-child(3) .block:nth-child(2) {
-      .icon {color: $color-primary}
+      .icon {
+        color: $color-primary;
+      }
       &:hover {
         border-color: $color-primary;
-        .title {color:$color-primary}
+        .title {
+          color: $color-primary;
+        }
       }
     }
     &:nth-child(10) .block,
     &:nth-child(3) .block:nth-child(3) {
-      .icon {color: $color-secondary}
+      .icon {
+        color: $color-secondary;
+      }
       &:hover {
         border-color: $color-secondary;
-        .title {color:$color-secondary}
+        .title {
+          color: $color-secondary;
+        }
       }
     }
     &.features-block-2 {
@@ -307,37 +332,48 @@ main:empty {
       &:nth-child(1) .block,
       &:nth-child(11) .block,
       &:nth-child(5) .block {
-        .icon {background-color: rgba($color-primary, .2)}
+        .icon {
+          background-color: rgba($color-primary, 0.2);
+        }
       }
       &:nth-child(6) .block,
       &:nth-child(12) .block,
       &:nth-child(2) .block:nth-child(1) {
-        .icon {background-color: rgba($color-secondary, .2)}
+        .icon {
+          background-color: rgba($color-secondary, 0.2);
+        }
       }
       &:nth-child(4) .block,
       &:nth-child(7) .block,
       &:nth-child(13) .block,
       &:nth-child(2) .block:nth-child(2) {
-        .icon {background-color: rgba($color-tertiary, .2)}
+        .icon {
+          background-color: rgba($color-tertiary, 0.2);
+        }
       }
       &:nth-child(8) .block,
       &:nth-child(14) .block,
       &:nth-child(3) .block:nth-child(1) {
-        .icon {background-color: rgba($color-quaternary, .2)}
+        .icon {
+          background-color: rgba($color-quaternary, 0.2);
+        }
       }
       &:nth-child(9) .block,
       &:nth-child(15) .block,
       &:nth-child(3) .block:nth-child(2) {
-        .icon {background-color: rgba($color-primary, .2)}
+        .icon {
+          background-color: rgba($color-primary, 0.2);
+        }
       }
       &:nth-child(10) .block,
       &:nth-child(3) .block:nth-child(3) {
-        .icon {background-color: rgba($color-secondary, .2)}
+        .icon {
+          background-color: rgba($color-secondary, 0.2);
+        }
       }
     }
   }
 }
-
 
 // fun facts
 .fact-item {
@@ -347,11 +383,11 @@ main:empty {
       position: absolute;
       content: "";
       height: calc(100% - 20px);
-      border-left: 2px dashed #EAEAEA;
+      border-left: 2px dashed #eaeaea;
       right: 0;
       top: 10px;
       @include mobile {
-        border-left: 1px dashed #EAEAEA;
+        border-left: 1px dashed #eaeaea;
       }
     }
     @include desktop {
@@ -416,28 +452,36 @@ main:empty {
   &:nth-child(1) .block,
   &:nth-child(5) .block {
     .icon {
-      &::after {@extend .bg-primary-soft;}
+      &::after {
+        @extend .bg-primary-soft;
+      }
       color: $color-primary;
     }
   }
   &:nth-child(2) .block,
   &:nth-child(6) .block {
     .icon {
-      &::after {@extend .bg-secondary-soft;}
+      &::after {
+        @extend .bg-secondary-soft;
+      }
       color: $color-secondary;
     }
   }
   &:nth-child(3) .block,
   &:nth-child(7) .block {
     .icon {
-      &::after {@extend .bg-tertiary-soft;}
+      &::after {
+        @extend .bg-tertiary-soft;
+      }
       color: $color-tertiary;
     }
   }
   &:nth-child(4) .block,
   &:nth-child(8) .block {
     .icon {
-      &::after {@extend .bg-quaternary-soft;}
+      &::after {
+        @extend .bg-quaternary-soft;
+      }
       color: $color-quaternary;
     }
   }
@@ -469,23 +513,39 @@ main:empty {
     }
     &:nth-child(1) .block,
     &:nth-child(5) .block {
-      &::after {@extend .bg-primary-soft;}
-      .title {color: $color-primary}
+      &::after {
+        @extend .bg-primary-soft;
+      }
+      .title {
+        color: $color-primary;
+      }
     }
     &:nth-child(2) .block,
     &:nth-child(6) .block {
-      &::after {@extend .bg-secondary-soft;}
-      .title {color: $color-secondary}
+      &::after {
+        @extend .bg-secondary-soft;
+      }
+      .title {
+        color: $color-secondary;
+      }
     }
     &:nth-child(3) .block,
     &:nth-child(7) .block {
-      &::after {@extend .bg-tertiary-soft;}
-      .title {color: $color-tertiary}
+      &::after {
+        @extend .bg-tertiary-soft;
+      }
+      .title {
+        color: $color-tertiary;
+      }
     }
     &:nth-child(4) .block,
     &:nth-child(8) .block {
-      &::after {@extend .bg-quaternary-soft;}
-      .title {color: $color-quaternary}
+      &::after {
+        @extend .bg-quaternary-soft;
+      }
+      .title {
+        color: $color-quaternary;
+      }
     }
   }
 }
@@ -504,22 +564,29 @@ main:empty {
   }
   .fact-item:nth-child(1),
   .fact-item:nth-child(5) {
-    .title {color: $color-primary}
+    .title {
+      color: $color-primary;
+    }
   }
   .fact-item:nth-child(2),
   .fact-item:nth-child(6) {
-    .title {color: $color-secondary}
+    .title {
+      color: $color-secondary;
+    }
   }
   .fact-item:nth-child(3),
   .fact-item:nth-child(7) {
-    .title {color: $color-tertiary}
+    .title {
+      color: $color-tertiary;
+    }
   }
   .fact-item:nth-child(4),
   .fact-item:nth-child(8) {
-    .title {color: $color-quaternary}
+    .title {
+      color: $color-quaternary;
+    }
   }
 }
-
 
 // process-item
 .process-item {
@@ -591,7 +658,6 @@ main:empty {
   }
 }
 
-
 // testiminials style
 .testimonials-carousel.has-border {
   &::after {
@@ -601,8 +667,8 @@ main:empty {
     left: 0;
     height: calc(100% - 30px);
     width: 100%;
-    border: 2px solid rgba($black, .1) !important;
-    transition: .3s;
+    border: 2px solid rgba($black, 0.1) !important;
+    transition: 0.3s;
     z-index: 33;
     pointer-events: none;
     @extend .rounded-lg;
@@ -619,8 +685,12 @@ main:empty {
   line-height: 1;
 
   &::before {
-    content: '★★★★★';
-    background: linear-gradient(90deg, #fc0 var(--percent), #EAEAEA var(--percent));
+    content: "★★★★★";
+    background: linear-gradient(
+      90deg,
+      #fc0 var(--percent),
+      #eaeaea var(--percent)
+    );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -693,7 +763,7 @@ main:empty {
       @include desktop {
         height: 100%;
         top: 0;
-        opacity: .1;
+        opacity: 0.1;
       }
       img {
         max-height: 100%;
@@ -723,7 +793,6 @@ main:empty {
     }
   }
 }
-
 
 // blog style
 .blog-card {
@@ -756,7 +825,7 @@ main:empty {
   }
   .card-author {
     padding-top: 20px;
-    border-top: 1px solid #DEDDDD;
+    border-top: 1px solid #dedddd;
   }
   .user-info {
     font-size: 16px;
@@ -874,8 +943,12 @@ main:empty {
       padding: 50px 30px 30px 30px;
     }
     @include mobile {
-      h3, h4, h5 {
-        br {display: none}
+      h3,
+      h4,
+      h5 {
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -1042,7 +1115,7 @@ main:empty {
 }
 a.share-icon {
   color: $color-primary;
-  background-color: rgba($color-primary,.1);
+  background-color: rgba($color-primary, 0.1);
   display: block;
   height: 30px;
   width: 30px;
@@ -1052,7 +1125,7 @@ a.share-icon {
   font-size: 15px;
   border-radius: 6px;
   &:hover {
-    border: 1px solid rgba($color-primary,.3);
+    border: 1px solid rgba($color-primary, 0.3);
   }
 }
 
@@ -1083,7 +1156,7 @@ a.share-icon {
       padding: 0;
       margin: 0;
       li {
-        border-top: 1px solid #DCDCDC;
+        border-top: 1px solid #dcdcdc;
         padding: 10px 0;
         strong {
           font-weight: 500;
@@ -1177,8 +1250,8 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
-    border-top: 1px solid rgba($white, .2);
-    border-bottom: 1px solid rgba($white, .2);
+    border-top: 1px solid rgba($white, 0.2);
+    border-bottom: 1px solid rgba($white, 0.2);
     &-title {
       font-size: 18px;
       margin-bottom: 20px;
@@ -1188,9 +1261,9 @@ footer {
         margin-bottom: 10px;
       }
       a {
-        color: #C4C4C4;
+        color: #c4c4c4;
         font-weight: 400;
-        @media screen and (min-width:1400px) {
+        @media screen and (min-width: 1400px) {
           font-size: 96%;
         }
         &:hover {
