@@ -1,7 +1,7 @@
 ---
 date: 2022-10-04
 title: What Is DevOps?
-image: images/blog/02.jpg
+image: images/blog/01.jpg
 author: hannan-khan
 categories:
 - Technology
@@ -19,7 +19,7 @@ The application development process includes:
 3. Coding/Testing
 4. Building/Packaging
 5. Deploying
-6. Operations & Monitoring
+6. Operations & Monitoring  
 Each time an update happens to the application (i.e. a feature is added), you will need to run through the entire process. This would be fine, however, the process is riddled with hindrances which delay the release/deployment of new features. DevOps aims to improve on this process by making it faster, and delivering the same new features with minimal bugs.
 ________________
 
