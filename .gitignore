@@ -3,6 +3,6 @@
 /exampleSite/resources/_gen
 resources/_gen/
 /public
-
+.vscode
 #misc
 /exampleSite/.hugo_build.lock
