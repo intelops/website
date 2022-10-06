@@ -1,10 +1,12 @@
 ---
 date: 2022-10-04
-title: What Is DevOps?
+title: DevOps - What and Why?
+description: Learn DevOps
 image: images/blog/01.jpg
 author: hannan-khan
 categories:
 - Technology
+- DevOps
 ---
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
