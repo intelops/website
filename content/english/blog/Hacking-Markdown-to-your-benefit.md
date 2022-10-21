@@ -1,6 +1,6 @@
 ---
 date: 2022-10-19
-title: Think of a Good Title
+title: <Think of a Good Title>
 image: images/blog/03.jpg
 author: vishwas-prasanna
 categories:
