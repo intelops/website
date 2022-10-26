@@ -15,6 +15,22 @@ and how to fix this error.
 ________________
 
 # Deploying Pixie On Civo Kubernetes
+In this section, in order to replicate the error shown above, we are going to be using `helm` to install Pixie onto our cluster.
+We do this by:
+1. Creating a `sandbox` cluster on Civo. 
+   * This cluster can have node pools of any size. However, Pixie [recommends](https://docs.pixielabs.ai/installing-pixie/requirements/#memory) that each node have at least 1GB memory.
+2. Create a deployment key on Pixie, under your profile's `Admin` settings.
+3. Now that you have created your Civo cluster, you can [deploy Pixie using `helm`](https://docs.pixielabs.ai/installing-pixie/install-schemes/helm/#3.-deploy-pixie).
+   * Run the following commands to install Pixie via `helm` into the correct `kubectl` context:
+```
+# Add the Pixie operator chart.
+helm repo add pixie-operator https://pixie-operator-charts.storage.googleapis.com
+# Get latest information about Pixie chart.
+helm repo update
+# Install the Pixie chart (No OLM present on cluster).
+helm install pixie pixie-operator/pixie-operator-chart --set deployKey=<deploy-key-goes-here> --set clusterName=<cluster-name> --namespace pl --create-namespace
+```
+At this point, you will have deployed Pixie, only to see an error on the Pixie Live UI:
 
 # Fixing The Failed Deployment
 Here are a few things you can check for to make sure that Pixie can run on your Civo Kubernetes cluster:  
@@ -25,3 +41,5 @@ Pixie can only be deployed on nodes that run [specific kernel versions](https://
     * Follow the path below on Lens to see what your nodes are running:
 `Homepage>Catalog>Clusters>{your_cluster_name}>Nodes`
     * From there, you can click on any node, and see which OS, OS Image, and Kernel version your node is running.
+* Check the Kubernetes version installed on your Civo cluster.
+  * Civo installs a lightweight Kubernetes called k3s. 
