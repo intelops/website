@@ -4,6 +4,7 @@ This is the repo to manage all the website work, which is being developed using 
 ## Contents of our Website:
 - Home page
 - Platform
+- Learning-Center
 - Blogs
 - Services
 - Open-Source
