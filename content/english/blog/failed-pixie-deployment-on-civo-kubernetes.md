@@ -22,7 +22,7 @@ We do this by:
 2. Create a deployment key on Pixie, under your profile's `Admin` settings.
 3. Now that you have created your Civo cluster, you can [deploy Pixie using `helm`](https://docs.pixielabs.ai/installing-pixie/install-schemes/helm/#3.-deploy-pixie).
    * Run the following commands to install Pixie via `helm` into the correct `kubectl` context:
-```
+```shell
 # Add the Pixie operator chart.
 helm repo add pixie-operator https://pixie-operator-charts.storage.googleapis.com
 # Get latest information about Pixie chart.
@@ -49,6 +49,16 @@ Pixie can only be deployed on nodes that run [specific kernel versions](https://
     * K3s version `v1.23.6-k3s1` uses Alpine Linux, which is not supported by Pixie at the moment.
   * We can bypass this by using the previous k3s version on our cluster, version `v1.22.11+k3s1`.
     * This older version of k3s uses Ubuntu, which is a distro [supported by Pixie](https://docs.pixielabs.ai/installing-pixie/requirements/#operating-system-linux-distribution).
+    * This can be done by editing the config file used to create your cluster to reflect the older version of k3s:
+```yaml
+kind: CivoKubernetes
+apiVersion: cluster.civo.crossplane.io/v1alpha1
+metadata: 
+  name: sandbox
+spec:
+  name: sandbox
+  version: "1.22.11-k3s1"
+```
 
 # Conclusion
 In this blog, we covered how to deploy Pixie on a Civo Kubernetes cluster. We also covered how to fix the `Table 'http_events' not found` error,
