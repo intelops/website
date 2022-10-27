@@ -1,0 +1,69 @@
+{{- $currentNode := . }}
+{{- $language := .Language }}
+{{- $larningCenter := where site.Pages "Params.type" "!=" nil }}
+
+<!-- .ByWeight -->
+{{- range $larningCenter.ByWeight }}
+
+{{ $currentSection := "" }}
+{{ $sliceSectionURL := split (string .RelPermalink) "/" }}
+{{ range $i, $e:= $sliceSectionURL }}
+<!-- check language -->
+{{ if eq (string $language) "en" }}
+  {{ if eq $i 2 }} {{ $currentSection = . }} {{ end }}
+{{ else }}
+  {{ if eq $i 3 }} {{ $currentSection = . }} {{ end }}
+{{ end }}
+<!-- end check language -->
+{{ end }}
+
+{{ $currentPageSection := "" }}
+{{ $sliceCurrentPage := split (string $currentNode.RelPermalink) "/" }}
+{{ range $i, $e:= $sliceCurrentPage }}
+<!-- check language -->
+{{ if eq (string $language) "en" }}
+  {{ if eq $i 2 }} {{ $currentPageSection = . }} {{ end }}
+{{ else }}
+  {{ if eq $i 3 }} {{ $currentPageSection = . }} {{ end }}
+{{ end }}
+<!-- end check language -->
+{{ end }}
+
+{{- if eq $currentSection $currentPageSection }}
+<ul class="menu py-4 pe-4 ps-0 pl-xl-4 mb-0">
+{{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+</ul>
+{{- end }}
+{{- end}}
+
+<!-- templates -->
+{{- define "section-tree-nav" }}
+ {{- with .sect}}
+  {{- if .IsSection }}
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    <li data-nav-id="{{.Permalink}}" class="sidenav-item {{- if ne $numberOfPages 0 }} haschildren{{end}}">
+
+      <div>
+        <a href="{{ .RelPermalink}}">{{.Title}}</a>
+        {{- if ne $numberOfPages 0 }}
+        <div class="category-icon px-2"><i class="fa fa-angle-right fa-lg"></i></div>
+        {{- end}}
+      </div>
+
+      {{- if ne $numberOfPages 0 }}
+      <ul>
+        {{- $pages := .Pages }}
+        {{- if .Sections}}
+        {{- $pages = (.Pages | union .Sections) }}
+        {{- end}}
+
+        {{- range $pages.ByWeight }}
+        {{- template "section-tree-nav" dict "sect" . }}
+        {{- end}}
+      </ul>
+      {{- end}}
+
+    </li>
+  {{- end}}
+ {{- end}}
+{{- end}}
