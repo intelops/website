@@ -1,7 +1,7 @@
 ---
 date: 2022-10-26
 title: Failed Pixie Deployment On Civo Kubernetes? Here's How To Fix It
-image: images/blog/failed-pixie-deployment-unsplash.jpg
+image: images/blog/failed-pixie-deployment/failed-pixie-deployment-unsplash.jpg
 author: hannan-khan
 categories:
 - Technology
@@ -34,7 +34,7 @@ At this point, you will have deployed Pixie, only to see an error on the Pixie L
 `Table 'http_events' not found`
 
 # Fixing The Failed Deployment
-Here are a few things you can check for to make sure that Pixie can run on your Civo Kubernetes cluster:  
+Here are a couple of things you can check for to make sure that Pixie can run on your Civo Kubernetes cluster:  
 * Check the kernel versions your nodes are running.
   * According to the [official Pixie documentation](https://docs.pixielabs.ai/about-pixie/troubleshooting/#troubleshooting-operation-why-can't-i-see-data),
 Pixie can only be deployed on nodes that run [specific kernel versions](https://docs.pixielabs.ai/installing-pixie/requirements/#operating-system-linux-distribution).
@@ -47,7 +47,7 @@ Pixie can only be deployed on nodes that run [specific kernel versions](https://
   * The error we have created is present on k3s version `v1.23.6-k3s1`.
     * This actually ties into the previous kernel version error.
     * K3s version `v1.23.6-k3s1` uses Alpine Linux, which is not supported by Pixie at the moment.
-  * We can bypass this by using the previous k3s version on our cluster, version `v1.22.11+k3s1`.
+  * We can bypass this by using the previous k3s version on our cluster, version `v1.22.11-k3s1`.
     * This older version of k3s uses Ubuntu, which is a distro [supported by Pixie](https://docs.pixielabs.ai/installing-pixie/requirements/#operating-system-linux-distribution).
     * This can be done by editing the config file used to create your cluster to reflect the older version of k3s:
 ```yaml
@@ -59,6 +59,8 @@ spec:
   name: sandbox
   version: "1.22.11-k3s1"
 ```
+
+![alt](/assets/images/blog/failed-pixie-deployment/failed-pixie-deployment-unsplash.jpg)
 
 # Conclusion
 In this blog, we covered how to deploy Pixie on a Civo Kubernetes cluster. We also covered how to fix the `Table 'http_events' not found` error,
