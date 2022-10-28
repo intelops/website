@@ -25,8 +25,9 @@ contact_info:
 # Services
 services:
   enable : true
-  title : "Why Delta?"
+  title : "Why IntelOps?"
   service_list:
+  - "Solution Driven Innovation"
   - "Focus critical developer resources on your core business"
   - "Launch new products faster with less payments code"
   - "Improve conversion from your customers"
