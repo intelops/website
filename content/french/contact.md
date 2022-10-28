@@ -15,9 +15,10 @@ contact_info:
   enable : true
   title : "Nos coordonnées"
   address_list:
-  - "thedelta@gmail.com"
-  - "(207) 555-0119"
-  - "3891 Ranchview Dr. Richardson Main Road Near Amazon, California 62639"
+  #- "thedelta@gmail.com"
+  #- "(207) 555-0119"
+  - IntelOps, Inc
+  - "5055 Keller Springs Rd #200, Addison, TX USA 75001"
 
 # Services
 services:
@@ -26,6 +27,8 @@ services:
   service_list:
   - "Focus critical developer resources on your core business"
   - "Launch new products faster with less payments code"
-  - "Improve conversion from international customers"
+  - "Improve conversion from your customers"
+  - "Reduce Technical Debt"
+  - "Enjoy the new Tech with ease"
 
 ---
