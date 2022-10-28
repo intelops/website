@@ -1279,3 +1279,151 @@ footer {
     }
   }
 }
+
+.lc-card {
+  box-shadow: 0 0.9rem 50px 0.625rem rgba(62, 62, 62, 0.05);
+  transition: 0.2s ease;
+  border: 0;
+  padding: 15px;
+
+  &-text {
+    margin-bottom: 0;
+  }
+
+  &-title {
+    font-weight: 700;
+  }
+
+  &-body {
+    padding: 25px;
+  }
+
+  &:hover {
+    box-shadow: 0px 15px 60px rgba(62, 62, 62, 0.15) !important;
+  }
+}
+
+.list-styled {
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    padding: 3px 0 3px 20px;
+    position: relative;
+    a {
+      color: #777;
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 8px;
+      width: 8px;
+      border-radius: 50%;
+      background: $color-primary;
+      left: 3px;
+      top: 13px;
+      padding: 2px;
+      border: 2px solid $body-color;
+      box-shadow: 0 0 0 2px $color-primary;
+    }
+  }
+}
+
+// table of content
+#TableOfContents {
+  position: sticky;
+  top: 77px;
+  padding-top: 20px;
+  padding-left: 0;
+  padding-bottom: 30px;
+  border-left: 1px solid #e6ebef;
+  height: 80vh;
+  overflow-y: auto;
+  * {
+    list-style: none;
+  }
+
+  a {
+    font-size: 0.8rem;
+    display: block;
+    padding: 5px 0;
+    color: rgba($text-dark, 0.8);
+    font-weight: 500;
+    transition: 0.2s ease;
+    padding-left: 10px;
+
+    &.active {
+      position: relative;
+      color: $color-primary;
+      background-color: rgba($color-primary, 0.08);
+      border-radius: 6px;
+
+      &::before {
+        position: absolute;
+        content: "";
+        left: -10px;
+        top: 25%;
+        height: 50%;
+        width: 1px;
+        background: $color-primary;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 10px;
+    padding-left: 5px;
+  }
+
+  & > ul {
+    & > li:not(:last-child) {
+      border-bottom: 1px solid $border-color;
+    }
+  }
+}
+.toc-mobile {
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  svg {
+    transition: 0.25s;
+  }
+  [aria-expanded="true"] {
+    .toc-icon {
+      svg {
+        transform: rotate(90deg);
+      }
+    }
+  }
+  #TableOfContents {
+    height: auto;
+    max-height: 50vh;
+    padding-bottom: 0;
+    border-left: 0;
+    ul {
+      margin-bottom: 0;
+    }
+    a {
+      font-size: 1rem;
+    }
+  }
+}
+
+.pagination {
+  margin-top: 50px;
+  justify-content: space-between;
+
+  a {
+    color: $color-primary;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  svg {
+    height: 28px;
+    font-size: 15px;
+  }
+}

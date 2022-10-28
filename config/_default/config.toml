@@ -31,3 +31,9 @@ rel = "manifest"
 home = ["HTML", "RSS", "WebAppManifest"]
 [taxonomies]
 category = "categories"
+
+# table of content
+[markup.tableOfContents]
+startLevel = 0
+endLevel = 6
+ordered = false

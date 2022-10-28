@@ -3,22 +3,23 @@
   font-size: $font-size;
   font-family: $font-secondary;
   text-transform: capitalize;
-  padding: .95em 1.9em;
+  padding: 0.95em 1.9em;
   font-weight: 500;
   border-radius: 50px;
   border: 1px solid;
   position: relative;
   z-index: 1;
-  transition: .2s ease;
+  transition: 0.2s ease;
 
   &-sm {
-    padding: .70em 1.65em;
+    padding: 0.7em 1.5em;
+    font-size: $font-size * 0.9;
   }
 
   .arrow-right {
     font-size: 13px;
     margin-left: 5px;
-    transition: .2s ease;
+    transition: 0.2s ease;
   }
 
   &:hover,
@@ -35,7 +36,11 @@
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, lighten($color-primary, 10) 0%, darken($color-primary, 5) 100%);
+  background: linear-gradient(
+    135deg,
+    lighten($color-primary, 10) 0%,
+    darken($color-primary, 5) 100%
+  );
   color: $white;
   border: 0;
 
@@ -44,8 +49,12 @@
   &.active,
   &:focus,
   &.focus {
-    box-shadow: 0 10px 30px -6px rgba($color-primary, .5) !important;
-    background: linear-gradient(135deg, lighten($color-primary, 10) 0%, darken($color-primary, 5) 100%);
+    box-shadow: 0 10px 30px -6px rgba($color-primary, 0.5) !important;
+    background: linear-gradient(
+      135deg,
+      lighten($color-primary, 10) 0%,
+      darken($color-primary, 5) 100%
+    );
   }
 }
 
@@ -59,15 +68,23 @@
   &.active,
   &:focus,
   &.focus {
-    box-shadow: 0 10px 30px -6px rgba($color-primary, .5) !important;
-    background: linear-gradient(135deg, lighten($color-primary, 10) 0%, darken($color-primary, 5) 100%);
+    box-shadow: 0 10px 30px -6px rgba($color-primary, 0.5) !important;
+    background: linear-gradient(
+      135deg,
+      lighten($color-primary, 10) 0%,
+      darken($color-primary, 5) 100%
+    );
     border-color: transparent !important;
     color: $white;
   }
 }
 
 .btn-secondary {
-  background: linear-gradient(160deg, lighten($white, 10) 0%, darken($white, 5) 100%);
+  background: linear-gradient(
+    160deg,
+    lighten($white, 10) 0%,
+    darken($white, 5) 100%
+  );
   color: $dark;
   border: 0;
 
@@ -77,21 +94,25 @@
   &:focus,
   &.focus {
     color: $dark;
-    box-shadow: 0 10px 30px -6px rgba(#C2C2C2, .5);
+    box-shadow: 0 10px 30px -6px rgba(#c2c2c2, 0.5);
   }
 }
 
 .btn-outline-secondary {
   color: $dark;
-  border-color: #C2C2C2;
+  border-color: #c2c2c2;
 
   &:hover,
   &:active,
   &.active,
   &:focus,
   &.focus {
-    box-shadow: 0 10px 30px -6px rgba(#C2C2C2, .5);
-    background: linear-gradient(135deg, lighten($white, 10) 0%, darken($white, 5) 100%);
+    box-shadow: 0 10px 30px -6px rgba(#c2c2c2, 0.5);
+    background: linear-gradient(
+      135deg,
+      lighten($white, 10) 0%,
+      darken($white, 5) 100%
+    );
     border-color: transparent !important;
     color: $dark;
   }
@@ -100,7 +121,7 @@
 .btn-play {
   padding: 6px 25px 6px 7px;
   i {
-    border: 1px solid #C2C2C2;
+    border: 1px solid #c2c2c2;
     border-radius: 50px;
     height: 40px;
     width: 40px;
@@ -134,7 +155,7 @@
     background: transparent !important;
     border-color: transparent !important;
     color: $color-primary;
-    opacity: .75;
+    opacity: 0.75;
     box-shadow: none;
   }
 }
@@ -146,7 +167,7 @@
   background-color: $white;
   color: $dark;
   border-radius: 50%;
-  transition: .3s;
+  transition: 0.3s;
   padding: 0;
   &:hover {
     transform: scale(1.1);
