@@ -1,7 +1,7 @@
 ---
 title: Learning Center
-description: Learn DevOps, DevSecOps, MLOps, AIOps
-bannertext: Learning Center
-bannerimage: images/bg-banner-page.jpg
+description: Learn Cloud Native, Kubernetes, DevSecOps, SRE, GitOps, Software Supply Chain Security, Open-Source, MLOps, AIOps, Data Science, AI/ML, etc.
+bannertext: Your Learning Center for Cloud Native, Kubernetes, DevSecOps, SRE, GitOps, Software Supply Chain Security, Open-Source, MLOps, AIOps, Data Science, AI/ML, etc.
+bannerimage: images/learning_center1.jpg
 enable: true
 ---
