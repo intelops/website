@@ -3,11 +3,13 @@ banner:
   subtitle: Intelops.Ai
   title: Coming Soon
   description: |
-       Under Active Development
-       
-       Next Gen Tech For Cloud-Native
+       Website is under active development
 
-       An Ai-based framework to democratize Cloud Native Technology
+       Our products are in Stealth mode development
+       
+       Building the Next Gen Tech For Cloud-Native
+
+       Ai-based framework to democratize Cloud Native Technology
   button:
     enable: true
     label: Get started now
