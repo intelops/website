@@ -4,6 +4,7 @@ description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis co
   praesentium quis.
 layout: contact
 bannertext: banner heading
+bannertext_color: ""
 bannerimage: images/bg-banner-page.jpg
 enable: true
 # contact
