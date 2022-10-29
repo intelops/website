@@ -55,6 +55,26 @@ $(document).ready(function () {
     return false;
   });
 
+  $('[data-toggle="sidebar"]').on("click", function () {
+    $(".sidenav").toggleClass("show");
+  });
+
+  $(".sidenav").on("click", ".sidenav-toggler", function () {
+    $(".sidenav").toggleClass("sidenav-hidden");
+    $("body").toggleClass("sidenav-invisible");
+    $(".content-block").toggleClass("mx-auto");
+    localStorage.setItem("sidenav", "hidden");
+    return false;
+  });
+  if (localStorage.getItem("sidenav") == "hidden") {
+    $(".sidenav").addClass("sidenav-hidden");
+    $("body").addClass("sidenav-invisible");
+    $(".content-block").addClass("mx-auto");
+    $(".sidenav").on("click", ".sidenav-toggler", function () {
+      localStorage.removeItem("sidenav");
+    });
+  }
+
   // table of content
   if ($("#TableOfContents li").length > 0) {
     new ScrollMenu("#TableOfContents a", {
