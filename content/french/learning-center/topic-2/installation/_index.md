@@ -5,11 +5,14 @@ weight: 2
 draft: false
 ---
 
-Les étapes suivantes sont là pour vous aider à initialiser votre nouveau site Web. Si vous ne connaissez pas du tout Hugo, nous vous suggérons fortement d'en savoir plus en suivant ce [excellente documentation pour les débutants](https://gohugo.io/overview/quickstart/).
+The following steps are here to help you initialize your new website. If you don't know Hugo at all, we strongly suggest you learn more about it by following this [great documentation for beginners](https://gohugo.io/overview/quickstart/).
+
+Cypress, Jest, Selenium, Appium
 
 ### Create your project
 
-Hugo provides a `new` command to create a new website.
+Hugo provides a `new` command to create a new website.738
+
 
 ```
 hugo new site <new_project>

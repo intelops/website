@@ -29,6 +29,7 @@ Strikethrough uses two tildes. ~~Scratch this.~~
 <hr>
 
 #### Link
+
 [I'm an inline-style link](https://www.google.com)
 
 [I'm an inline-style link with title](https://www.google.com "Google's Homepage")
@@ -92,42 +93,6 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam nihil enim maxime 
 {{< notice "info" >}}
   This is a simple info.
 {{< /notice >}}
-
-<hr>
-
-#### Tab
-
-{{< tabs >}}
-
-  {{< tab "first" >}}
-   This is first tab
-  {{< /tab >}}
-
-  {{< tab "second" >}}
-  this is second tab
-  {{< /tab >}}
-
-  {{< tab "third" >}}
-  this is third tab
-  {{< /tab >}}
-
-{{</ tabs >}}
-
-<hr>
-
-#### Collapse
-
-{{< collapse "collapse 1" >}}
-  This is a simple collapse
-{{< /collapse >}}
-
-{{< collapse "collapse 2" >}}
-  This is a simple collapse
-{{< /collapse >}}
-
-{{< collapse "collapse 3" >}}
-  This is a simple collapse
-{{< /collapse >}}
 
 <hr>
 

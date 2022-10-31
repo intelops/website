@@ -2,8 +2,9 @@
 title: Contact
 description: Contact us to schedule a demo about our products and services.
 layout: contact
-bannertext: Let's Connect!
-bannerimage: images/contact-image1.jpg
+bannertext: banner heading
+bannertext_color: ""
+bannerimage: images/bg-banner-page.jpg
 enable: true
 # contact
 contact:
