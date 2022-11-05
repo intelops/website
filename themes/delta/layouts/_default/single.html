@@ -6,22 +6,48 @@
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
 
 <!-- strat of blog-details -->
-<section class="section-sm pt-5">
+<section class="section-sm">
   <div class="container container-delta">
     <div class="row justify-content-center">
-      <div class="col-lg-12 mb-5 pb-3">
-        {{ with .Params.image }}
-        {{ if fileExists (add `assets/` .) }}
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "1250x "}}
-        {{$imgWebp:= $img.Resize "1250x webp"}}
-        <img loading="lazy" decoding="async" class="w-100 rounded-lg" src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-        {{end}}
-        {{end}}
+      <div class="col-lg-4 blog-sidebar">
+        <div class="block pe-0 pe-lg-2">
+          {{ $series := .Params.series }}
+          <p class="h4 fw-light text-dark ps-3">{{$series}}</p>
+
+          {{ .TableOfContents }}
+
+          {{ $seriesPosts := (where (where site.Pages "Section" "blog") "Params.series" $series) }}
+          {{ $permalink := .RelPermalink }}
+          <div class="mt-4 ps-3">
+            <p style="letter-spacing:1px;opacity: 0.6;">{{if eq 0 (len $seriesPosts)}}NO {{end}}MORE IN THIS SERIES</p>
+            <div class="content">
+              <ul>
+                {{ range first 5 $seriesPosts }}
+                {{ if eq $permalink .RelPermalink }}
+                <li style="filter:grayscale(1);">{{.Title}}</li>
+                {{ else }}
+                <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-8">
+        {{ with .Params.image }}
         <div class="mb-5">
-          <h2 class="mb-3">{{.Title | markdownify}}</h2>
+          {{ if fileExists (add `assets/` .) }}
+          {{$img:= resources.Get . }}
+          {{$img:= $img.Resize "1250x "}}
+          {{$imgWebp:= $img.Resize "1250x webp"}}
+          <img loading="lazy" decoding="async" class="w-100 rounded-sm" src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{end}}
+        </div>
+        {{end}}
+
+        <div class="mb-5">
+          <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
           <span class="text-muted">{{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
         </div>
 
@@ -57,21 +83,24 @@
         {{ end }}
         {{ end }}
 
-      </div>
 
-
-      {{ if .Site.DisqusShortname }}
-      <div class="col-lg-8" data-aos="fade-in">
-        <!-- comments -->
-        <div class="disqus-block border rounded-lg mt-5">
-          {{ template "_internal/disqus.html" . }}
+        {{ if .Site.DisqusShortname }}
+        <div class="mt-5">
+          <!-- comments -->
+          <div class="disqus-block border rounded-lg">
+            {{ template "_internal/disqus.html" . }}
+          </div>
         </div>
+        {{ end }}
+
       </div>
-      {{ end }}
     </div>
   </div>
 </section>
 
+      
+{{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+{{ if $related }}
 <section class="section pt-5">
   <div class="container">
     <div class="row justify-content-center" data-aos="fade-in">
@@ -80,8 +109,6 @@
           <h2 class="title">{{i18n `related_posts`}}</h2>
         </div>
       </div>
-      
-      {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
       {{ range shuffle (first 3 $related) }}
       <div class="col-lg-4 col-md-6 blog-card has-border">
         {{ .Render "article" }}
@@ -90,6 +117,7 @@
     </div>
   </div>
 </section>
+{{ end }}
 <!-- end of blog-section -->
 
 <!-- regular page -->

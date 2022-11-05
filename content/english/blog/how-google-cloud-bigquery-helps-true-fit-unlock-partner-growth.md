@@ -1,8 +1,8 @@
 ---
-date: 2022-10-04
-title: DevOps - What and Why?
+date: 2022-11-01
+title: How True Fit's data journey unlocks partner growth
 description: Learn DevOps
-image: images/blog/01.jpg
+image: images/blog/03.jpg
 author: hannan-khan
 series: DevOps
 categories:
