@@ -7074,10 +7074,10 @@ a:hover {
 .outline-0 {
   outline: 0 !important; }
 
-.rounded-sm {
+.rounded-sm, .blog-sidebar #TableOfContents {
   border-radius: 12px; }
   @media (max-width: 575px) {
-    .rounded-sm {
+    .rounded-sm, .blog-sidebar #TableOfContents {
       border-radius: 6px; } }
 .rounded-md, .fact-item-alt .block {
   border-radius: 20px; }
@@ -8750,6 +8750,34 @@ footer {
       margin-bottom: 0; }
     .toc-mobile #TableOfContents a {
       font-size: 1rem; }
+
+.blog-sidebar .block {
+  position: sticky;
+  top: 85px;
+  overflow-y: auto;
+  max-height: 85vh; }
+  .blog-sidebar .block::-webkit-scrollbar {
+    opacity: 0; }
+
+.blog-sidebar #TableOfContents {
+  border-left: 0;
+  padding-bottom: 20px;
+  position: static;
+  height: auto;
+  background-color: rgba(241, 111, 51, 0.03);
+  padding-right: 10px; }
+  .blog-sidebar #TableOfContents ul {
+    padding-top: 2px;
+    margin-bottom: 0; }
+    .blog-sidebar #TableOfContents ul a {
+      font-size: 0.9rem; }
+      .blog-sidebar #TableOfContents ul a:hover {
+        opacity: 0.7; }
+  .blog-sidebar #TableOfContents::before {
+    content: "IN THIS SECTION";
+    letter-spacing: 1px;
+    opacity: 0.6;
+    padding-left: 25px; }
 
 .pagination {
   margin-top: 50px;

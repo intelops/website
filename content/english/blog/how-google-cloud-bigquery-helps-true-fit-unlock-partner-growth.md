@@ -1,17 +1,13 @@
 ---
-date: 2022-10-04
-title: DevOps - What and Why?
+date: 2022-11-01
+title: How True Fit's data journey unlocks partner growth
 description: Learn DevOps
-image: images/blog/blog1.png
+image: images/blog/03.jpg
 author: hannan-khan
 series: DevOps
 categories:
+- Technology
 - DevOps
-- Concepts
-
-# image color code in undraw.co #FB7E44 
-feedback: false
-draft: false
 ---
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.

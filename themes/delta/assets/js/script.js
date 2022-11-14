@@ -76,11 +76,20 @@ $(document).ready(function () {
   }
 
   // table of content
-  if ($("#TableOfContents li").length > 0) {
-    new ScrollMenu("#TableOfContents a", {
+  if ($(".larning-center #TableOfContents li").length > 0) {
+    new ScrollMenu(".larning-center #TableOfContents a", {
       duration: 400,
       activeOffset: 40,
       scrollOffset: 10,
+    });
+  }
+
+  // table of content
+  if ($(".blog-sidebar #TableOfContents li").length > 0) {
+    new ScrollMenu(".blog-sidebar #TableOfContents a", {
+      duration: 400,
+      activeOffset: 200,
+      scrollOffset: 80,
     });
   }
 
