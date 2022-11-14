@@ -8,6 +8,9 @@ categories:
 - DevSecOps
 - DevOps
 - Concepts
+
+feedback: false
+draft: false
 ---
 
 # Introduction to DevSecOps

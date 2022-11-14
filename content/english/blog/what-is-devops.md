@@ -9,6 +9,9 @@ categories:
 - Concepts
 
 # image color code in undraw.co #FB7E44 
+
+feedback: false
+draft: false
 ---
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
