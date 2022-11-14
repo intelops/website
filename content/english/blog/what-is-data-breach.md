@@ -1,7 +1,7 @@
 ---
 date: 2022-11-13
 title: What is data breach? 5 facts you need to know about data breach
-description: Learn DevOps
+description: Brief introduction on data breach.
 image: images/blog/blog3.png
 author: devika-das
 categories:
