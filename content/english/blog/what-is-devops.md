@@ -9,7 +9,6 @@ categories:
 - Concepts
 
 # image color code in undraw.co #FB7E44 
-
 feedback: false
 draft: false
 ---
