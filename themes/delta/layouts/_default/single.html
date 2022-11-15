@@ -22,11 +22,15 @@
             <p style="letter-spacing:1px;opacity: 0.6;">{{if eq 0 (len $seriesPosts)}}NO {{end}}MORE IN THIS SERIES</p>
             <div class="content">
               <ul>
-                {{ range first 5 $seriesPosts }}
+                {{ range $seriesPosts }}
                 {{ if eq $permalink .RelPermalink }}
-                <li style="filter:grayscale(1);">{{.Title}}</li>
-                {{ else }}
-                <li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+                <li class="text-primary">{{.Title}}</li>
+                {{ end }}
+                {{ end }}
+
+                {{ range $i, $e := $seriesPosts }}
+                {{ if and (ne $permalink .RelPermalink) (lt $i 5) }}
+                <li style="filter:grayscale(1);"><a href="{{.RelPermalink}}" class="d-inline-block">{{.Title}}</a></li>
                 {{ end }}
                 {{ end }}
               </ul>
@@ -35,13 +39,15 @@
         </div>
       </div>
       <div class="col-lg-8">
+        {{$image_height := .Params.image_height}}
+        {{$image_width := .Params.image_width}}
         {{ with .Params.image }}
         <div class="mb-5">
           {{ if fileExists (add `assets/` .) }}
           {{$img:= resources.Get . }}
           {{$img:= $img.Resize "1250x "}}
           {{$imgWebp:= $img.Resize "1250x webp"}}
-          <img loading="lazy" decoding="async" class="w-100 rounded-sm" src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          <img loading="lazy" decoding="async" class="rounded-sm {{if not (or $image_height $image_width)}}w-100{{end}}" src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'" style="height:{{$image_height}} !important;width:{{$image_width}} !important;">
           {{end}}
         </div>
         {{end}}
@@ -84,7 +90,7 @@
         {{ end }}
 
 
-        {{ if .Site.DisqusShortname }}
+        {{ if and .Site.DisqusShortname .Params.feedback }}
         <div class="mt-5">
           <!-- comments -->
           <div class="disqus-block border rounded-lg">

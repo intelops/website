@@ -3,7 +3,10 @@ date: 2022-11-13
 title: What is data breach? 5 facts you need to know about data breach
 description: Brief introduction on data breach.
 image: images/blog/blog3.png
+image_height: ""
+image_width: ""
 author: devika-das
+series: Data Analytics
 categories:
 - Concepts
 - Security
