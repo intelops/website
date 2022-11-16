@@ -1,0 +1,97 @@
+{{ "<!-- details page -->" | safeHTML }}
+<section>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 col-md-4 sidenav">
+        <button class="sidenav-toggler border-0">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        {{ partial "menu.html" . }}
+      </div>
+      <div class="col-lg-8 col-md-8 lc-content-block">
+        
+        <div class="py-5 mt-3">
+
+          <button type="button" class="mb-1 rounded w-100 text-start border-0 p-1 mr-2 d-inline-block d-md-none" data-toggle="sidebar">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+              <line x1="4" y1="6" x2="20" y2="6"></line>
+              <line x1="4" y1="12" x2="20" y2="12"></line>
+              <line x1="4" y1="18" x2="20" y2="18"></line>
+            </svg>
+           <span class="d-inline-block" style="transform:translateY(2px)">Navigate Larning Center</span>
+          </button>
+
+          {{ if gt .WordCount 100 }}
+          <div class="toc-mobile d-block d-lg-none mb-3">
+            <button class="w-100 border-0 rounded px-2 py-1 d-flex align-items-center justify-content-between" type="button" data-bs-toggle="collapse" data-bs-target="#toc" aria-expanded="false" aria-controls="collapseExample">
+              <span>On this Page</span>
+              <span class="toc-icon"><i class="fa fa-angle-right fa-lg mr-1"></i></span>
+            </button>
+            <div class="collapse" id="toc">
+              <div class="pb-2 ">
+                {{ .TableOfContents }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+
+          <h2 class="mb-4 font-weight-medium">{{ .Title }}</h2>
+          {{ if .Content }}
+          <div class="content" data-spy="scroll" data-target="#TableOfContents" data-offset="20">{{.Content}}</div>
+          {{ else }}
+          <ul class="list-styled text-left mb-4">
+            {{ range .Data.Pages }}
+            <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+            {{end}}
+          </ul>
+          {{ end }}
+          <nav class="pagination">
+            <!-- Next prev page -->
+            {{ $currentNode := . }}
+            {{ template "menu-nextprev" dict "menu" .Site.Home "currentnode" $currentNode }}
+            {{ define "menu-nextprev" }}
+            {{$currentNode := .currentnode }}
+            {{ if ne .menu.Params.hidden true}}
+            {{if hasPrefix $currentNode.Permalink .menu.Permalink }}
+            {{ $currentNode.Scratch.Set "NextPageOK" "OK" }}
+            {{ $currentNode.Scratch.Set "prevPage" ($currentNode.Scratch.Get "prevPageTmp") }}
+            {{else}}
+            {{if eq ($currentNode.Scratch.Get "NextPageOK") "OK"}}
+            {{ $currentNode.Scratch.Set "NextPageOK" nil }}
+            {{ $currentNode.Scratch.Set "nextPage" .menu }}
+            {{end}}
+            {{end}}
+            {{ $currentNode.Scratch.Set "prevPageTmp" .menu }}
+
+            {{ $currentNode.Scratch.Set "pages" .menu.Pages }}
+            {{ $pages := ($currentNode.Scratch.Get "pages") }}
+
+            {{ range $pages.ByWeight  }}
+            {{ template "menu-nextprev" dict "menu" . "currentnode" $currentNode }}
+            {{end}}
+            {{ end }}
+            {{ end }}
+
+            {{with ($.Scratch.Get "prevPage")}}
+            <a class="nav nav-prev align-items-center" href="{{.Permalink }}"><i class="fas fa-chevron-left me-2 lh-1"></i>
+              <span class="d-none d-md-block">{{.Title}}</span></a>
+            {{end}}
+            {{with ($.Scratch.Get "nextPage")}}
+            <a class="nav nav-next align-items-center" href="{{.Permalink }}"> <span class="d-none d-md-block">{{.Title}}</span><i
+                class="fas fa-chevron-right ms-2 lh-1"></i></a>
+            {{end}}
+          </nav>
+        </div>
+      </div>
+      
+      <div class="col-lg-2 d-none d-lg-block ms-auto larning-center">
+        {{ if gt .WordCount 100 }}
+          {{ .TableOfContents }}
+        {{ end }}
+      </div>
+      
+    </div>
+  </div>
+</section>
+{{ "<!-- /details page -->" | safeHTML }}

@@ -91,7 +91,7 @@
       </div>
 
       <div class="collapse navbar-collapse text-center" id="navigation">
-        <ul class="navbar-nav mx-auto">
+        <ul class="navbar-nav mx-auto align-items-center">
 
           {{ $currentPage := . }}
           {{ range site.Menus.main }}
@@ -156,7 +156,7 @@
           {{ with site.Params.navigation_button }}
           {{ if .enable }}
           <!-- login btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-link">
+          <a href="{{ .link | relLangURL }}" class="btn btn-link px-0 me-2">
             {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
           </a>
           {{ end }}

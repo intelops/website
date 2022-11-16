@@ -14,7 +14,7 @@ style="background-image: url({{$img.RelPermalink}});
     <div class="row">
       <div class="block col-12 text-center">
 
-        <h1 class="title banner-title">{{ .Params.bannertext }}</h1>
+        <h1 class="title banner-title" {{with .Params.bannertext_color}}style="color:{{.}}"{{end}}>{{ .Params.bannertext }}</h1>
         {{/*
         <nav aria-label="breadcrumb" data-aos="fade-up" data-aos-delay="200">
           <ol class="breadcrumb justify-content-center bg-transparent p-0 mb-0">

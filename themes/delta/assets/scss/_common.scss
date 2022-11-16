@@ -8,6 +8,10 @@ body {
   color: $white;
 }
 
+.container-fluid {
+  max-width: 2160px;
+}
+
 /* preloader */
 .preloader {
   position: fixed;
@@ -25,10 +29,16 @@ body {
     animation: fadeinout 1s forwards infinite;
 
     @-webkit-keyframes fadeinout {
-      50% { opacity: .4; transform: scale(.95); }
+      50% {
+        opacity: 0.4;
+        transform: scale(0.95);
+      }
     }
     @keyframes fadeinout {
-      50% { opacity: .4; transform: scale(.95); }
+      50% {
+        opacity: 0.4;
+        transform: scale(0.95);
+      }
     }
   }
 }
@@ -50,7 +60,7 @@ a,
 button,
 select {
   cursor: pointer;
-  transition: .2s ease;
+  transition: 0.2s ease;
 
   &:focus {
     outline: 0;
@@ -87,7 +97,9 @@ a:hover {
     }
   }
 }
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0 8px;
 }
 .swiper-container-vertical {
@@ -178,10 +190,18 @@ a:hover {
       }
     }
     &:nth-child(even) {
-      a:hover,a:focus {background-color: $color-primary;border-color: $color-primary}
+      a:hover,
+      a:focus {
+        background-color: $color-primary;
+        border-color: $color-primary;
+      }
     }
     &:nth-child(odd) {
-      a:hover,a:focus {background-color: $color-tertiary;border-color: $color-tertiary}
+      a:hover,
+      a:focus {
+        background-color: $color-tertiary;
+        border-color: $color-tertiary;
+      }
     }
   }
 }
@@ -191,7 +211,8 @@ a:hover {
     display: block;
     background-color: $white;
     border: 1px solid #dee2e6;
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
 }
 
@@ -200,12 +221,12 @@ a:hover {
   background-position: center center;
   background-repeat: no-repeat;
 }
-.border-default{
+.border-default {
   border-color: $border-color !important;
 }
 
 .shadow-md {
-  box-shadow: 0px 15px 50px 10px rgba($black, .05) !important;
+  box-shadow: 0px 15px 50px 10px rgba($black, 0.05) !important;
 }
 
 .line-height-sm {
@@ -217,13 +238,13 @@ a:hover {
   position: relative;
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
     background: $black;
-    opacity: .5;
+    opacity: 0.5;
   }
 }
 
@@ -256,34 +277,80 @@ a:hover {
   }
 }
 
-.font-primary {font-family: $font-primary}
-.font-secondary {font-family: $font-secondary}
+.font-primary {
+  font-family: $font-primary;
+}
+.font-secondary {
+  font-family: $font-secondary;
+}
 
-.fw-400 {font-weight: 400}
-.fw-500 {font-weight: 500}
-.fw-600 {font-weight: 600}
-.fw-700 {font-weight: 700}
-.fw-900 {font-weight: 900}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-600 {
+  font-weight: 600;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-900 {
+  font-weight: 900;
+}
 
-.bg-primary {background: $color-primary !important}
-.bg-primary-soft {background: $banner-primary !important}
-.text-primary {color: $color-primary !important}
+.bg-primary {
+  background: $color-primary !important;
+}
+.bg-primary-soft {
+  background: $banner-primary !important;
+}
+.text-primary {
+  color: $color-primary !important;
+}
 
-.bg-secondary {background: $color-secondary !important}
-.bg-secondary-soft {background: lighten($banner-secondary, 31.18) !important}
-.text-secondary {color: $color-secondary !important}
+.bg-secondary {
+  background: $color-secondary !important;
+}
+.bg-secondary-soft {
+  background: lighten($banner-secondary, 31.18) !important;
+}
+.text-secondary {
+  color: $color-secondary !important;
+}
 
-.bg-tertiary {background: $color-tertiary !important}
-.bg-tertiary-soft {background: lighten(saturate($color-tertiary, 22.22), 26.27) !important}
-.text-tertiary {color: $color-tertiary !important}
+.bg-tertiary {
+  background: $color-tertiary !important;
+}
+.bg-tertiary-soft {
+  background: lighten(saturate($color-tertiary, 22.22), 26.27) !important;
+}
+.text-tertiary {
+  color: $color-tertiary !important;
+}
 
-.bg-quaternary {background: $color-quaternary !important}
-.bg-quaternary-soft {background: lighten(saturate(adjust-hue($color-quaternary, -1), 19.78), 45.49) !important}
-.text-quaternary {color: $color-quaternary !important}
+.bg-quaternary {
+  background: $color-quaternary !important;
+}
+.bg-quaternary-soft {
+  background: lighten(
+    saturate(adjust-hue($color-quaternary, -1), 19.78),
+    45.49
+  ) !important;
+}
+.text-quaternary {
+  color: $color-quaternary !important;
+}
 
-.text-muted,.text-default {color: $text-color !important}
+.text-muted,
+.text-default {
+  color: $text-color !important;
+}
 
-.border {border-color: #dee2e6 !important}
+.border {
+  border-color: #dee2e6 !important;
+}
 
 // form-control
 
@@ -291,7 +358,7 @@ a:hover {
   padding: 20px;
   border: 1px solid rgba($black, 0.1);
   height: 56px;
-  transition: .3s ease;
+  transition: 0.3s ease;
   &:focus {
     border-color: rgba($color-primary, 0.5);
   }
@@ -321,21 +388,21 @@ form label {
     border-radius: 0;
   }
 
-  .custom-control-input:checked~.custom-control-label::before,
-  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     background-color: $color-primary;
     border-color: $color-primary;
     box-shadow: none;
   }
 
-  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     box-shadow: none;
     border-color: $color-primary;
   }
 
-  .custom-control-input:disabled:checked~.custom-control-label::before {
-    background-color: rgba($color-primary, .5);
-    border-color: rgba($color-primary, .2);
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+    background-color: rgba($color-primary, 0.5);
+    border-color: rgba($color-primary, 0.2);
   }
 }
 
@@ -369,61 +436,70 @@ form label {
   p {
     color: #777;
   }
+  a {
+    color: $color-primary !important;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
   img {
     max-width: 100%;
     height: auto;
     display: inline-block;
     margin-bottom: 20px;
-    &.img-center{
+    &.img-center {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
-    &.img-left{
+    &.img-left {
       display: block;
       margin-left: 0;
       margin-right: auto;
     }
-    &.img-right{
+    &.img-right {
       display: block;
       margin-left: auto;
       margin-right: 0;
     }
-    &.img-float-left{
+    &.img-float-left {
       float: left;
       margin-right: 20px;
     }
-    &.img-float-right{
+    &.img-float-right {
       float: right;
       margin-left: 20px;
     }
   }
-  figure{
+  figure {
     display: inline-block;
     margin-bottom: 20px;
-    img{
+    img {
       margin-bottom: 10px;
     }
-    &.img-center{
+    &.img-center {
       display: block;
       text-align: center;
     }
-    &.img-left{
+    &.img-left {
       display: block;
       text-align: left;
     }
-    &.img-right{
+    &.img-right {
       display: block;
       text-align: right;
     }
-    &.img-float-left{
+    &.img-float-left {
       float: left;
       margin-right: 20px;
     }
-    &.img-float-right{
+    &.img-float-right {
       float: right;
       margin-left: 20px;
     }
+  }
+  figcaption {
+    text-align: center;
   }
 
   a {
@@ -466,7 +542,7 @@ form label {
 
       &::before {
         position: absolute;
-        content: '';
+        content: "";
         height: 8px;
         width: 8px;
         border-radius: 50%;
@@ -509,7 +585,7 @@ form label {
 
   table td,
   table th {
-    padding: .75rem;
+    padding: 0.75rem;
     vertical-align: top;
     margin-bottom: 0;
   }
@@ -563,21 +639,20 @@ form label {
   }
 
   .notices.note p::after {
-    content: 'Note';
+    content: "Note";
     position: absolute;
     top: 2px;
     color: $white;
     left: 2rem;
   }
 
-
   .notices.tip p {
-    border-top: 30px solid #78C578;
+    border-top: 30px solid #78c578;
     background: #e2ffe2;
   }
 
   .notices.tip p::after {
-    content: 'Tip';
+    content: "Tip";
     position: absolute;
     top: 2px;
     color: $white;
@@ -585,32 +660,30 @@ form label {
   }
 
   .notices.info p {
-    border-top: 30px solid #F0B37E;
+    border-top: 30px solid #f0b37e;
     background: #ffedde;
   }
 
   .notices.info p::after {
-    content: 'Info';
+    content: "Info";
     position: absolute;
     top: 2px;
     color: $white;
     left: 2rem;
   }
 
-
   .notices.warning p {
-    border-top: 30px solid #E06F6C;
+    border-top: 30px solid #e06f6c;
     background: #ffdad8;
   }
 
   .notices.warning p::after {
-    content: 'Warning';
+    content: "Warning";
     position: absolute;
     top: 2px;
     color: #fff;
     left: 2rem;
   }
-
 
   blockquote {
     font-size: 20px !important;
@@ -637,7 +710,7 @@ form label {
       font-style: normal;
       font-size: 80%;
       letter-spacing: 1px;
-      opacity: .7;
+      opacity: 0.7;
     }
   }
 
@@ -656,7 +729,11 @@ form label {
   *:not(li) {
     margin-bottom: 28px;
   }
-  h2,h3,h4,h5,h6 {
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     margin-bottom: 12px !important;
   }
   *:last-child {
@@ -664,33 +741,32 @@ form label {
   }
 }
 // custom
-.space-around{
+.space-around {
   display: flex;
   justify-content: space-around;
   cursor: pointer;
 }
 
-.align-right{
+.align-right {
   float: right;
 }
 
-.dark-bar{
+.dark-bar {
   background-color: $banner-primary;
 }
 
-.light-bar{
+.light-bar {
   background-color: $header-bar-bg;
-
 }
 
-.nav-menu-text{
+.nav-menu-text {
   color: $white !important;
 }
 
-.header-sec{
+.header-sec {
   z-index: -1 !important;
 }
 
-.no-bottom{
+.no-bottom {
   padding-bottom: 0 !important;
 }

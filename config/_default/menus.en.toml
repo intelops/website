@@ -51,10 +51,12 @@ weight = 2
 name = "Home"
 url = "/"
 weight = 3
+
 [[main]]
 name = "Home"
 url = "/"
 weight = 1
+
 [[main]]
 hasChildren = true
 name = "Platform"
@@ -64,11 +66,17 @@ weight = 2
 name = "Optimizor"
 parent = "Platform"
 url = "/optimizor"
-weight = 2
+weight = 1
+
+[[main]]
+name = "Learning Center"
+url = "learning-center/"
+weight = 3
+
 [[main]]
 name = "Open Source"
 url = "/opensource"
-weight = "3"
+weight = 10
 [[main]]
 name = "Commercial"
 parent = "Open Source"
@@ -87,20 +95,20 @@ weight = 1
 [[main]]
 name = "Blogs"
 url = "blog/"
-weight = 5
+weight = 20
 [[main]]
 name = "Docs"
 url = "https://docs.intelops.ai/"
-weight = 5
+weight = 30
 [[main]]
 name = "Services"
 url = "services/"
-weight = 5
+weight = 40
 [[main]]
 hasChildren = true
 name = "Resources"
 url = "resources/"
-weight = 7
+weight = 50
 [[main]]
 name = "About"
 parent = "Resources"

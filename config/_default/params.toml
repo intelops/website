@@ -18,8 +18,8 @@ button_label = "Contact Us"
 button_link = "contact/"
 enable = true
 image = "images/cta.png"
-subtitle = "Pellentesque in ipsum id orci porta dapibus.porttitor lectus nibh. <br> Praesent sapien massa, convallis a pellentesque nec nisi."
-title = "Delta help us to organize our <br> remote design sprint."
+subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
+title = "Looking for Cloud-Native Talent? <br> Let us make your life easy!"
 [cookies]
 button = "I Accept"
 content = "This site uses cookies. By continuing to use this website, you agree to their use."

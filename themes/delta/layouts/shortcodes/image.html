@@ -1,91 +1,122 @@
-<!-- get image path -->
-{{ $imagePath:= (.Get "src") }}
+<!-- get value from params -->
+{{ $imagePath:= .Get "src" }}
+{{ $caption:= .Get "caption" }}
+{{ $position:= .Get "position" }}
+{{ $class:= .Get "class" }}
+{{ $height:= replace (replace (.Get "height") "px" "") "x" "" }}
+{{ $width:= replace (replace (.Get "width") "px" "") "x" "" }}
+{{ $alt:= .Get "alt" }}
+{{ $title:= .Get "title" }}
+{{ $resize:= .Get "resize" | humanize }}
+{{ $command:= .Get "command" | humanize }}
+{{ $option:= .Get "option" }}
+{{ $webp:= .Get "webp" | default true }}
 
 <!-- image position -->
-{{ if eq (.Get `p`) `center` }}
-{{ .Scratch.Set "image-position" "img-center" }}
-{{ else if eq (.Get `p`) `left` }}
-{{ .Scratch.Set "image-position" "img-left" }}
-{{ else if eq (.Get `p`) `right` }}
-{{ .Scratch.Set "image-position" "img-right" }}
-{{ else if eq (.Get `p`) `float-left` }}
-{{ .Scratch.Set "image-position" "img-float-left" }}
-{{ else if eq (.Get `p`) `float-right` }}
-{{ .Scratch.Set "image-position" "img-float-right" }}
+{{ if eq $position `center` }}
+{{ .Scratch.Set "position" "img-center" }}
+{{ else if eq $position `left` }}
+{{ .Scratch.Set "position" "img-left" }}
+{{ else if eq $position `right` }}
+{{ .Scratch.Set "position" "img-right" }}
+{{ else if eq $position `float-left` }}
+{{ .Scratch.Set "position" "img-float-left" }}
+{{ else if eq $position `float-right` }}
+{{ .Scratch.Set "position" "img-float-right" }}
 {{ end }}
 
 <!-- check cdn image -->
-{{ if hasPrefix $imagePath "http" }}
-
-<!-- cdn image -->
-
-<!-- image figure -->
-{{ if .Get `title` }}
-<figure class="{{.Scratch.Get `image-position`}}">
-  <img loading="lazy" decoding="async" src="{{ $imagePath | safeURL }}" alt="{{ .Get `alt` }}" class="{{.Get `c`}}" width="{{.Get `w`}}" height="{{.Get `h`}}">
-  <figcaption>{{.Get `title` | markdownify}}</figcaption>
+{{ if or (hasPrefix $imagePath "http") (fileExists (add `static/` $imagePath)) }}
+<!-- cdn image figure -->
+{{ if $caption }}
+<figure class="{{.Scratch.Get `position`}}" role="group" aria-describedby="caption-{{ $caption | markdownify }}">
+  <img title="{{$title}}" loading="lazy" decoding="async" src="{{ $imagePath | absURL }}" alt="{{ $alt }}" class="{{$class}}" width="{{$width}}" height="{{$height}}">
+  <figcaption id="caption-{{ $caption | markdownify }}">{{$caption | markdownify}}</figcaption>
 </figure>
 {{ else }}
-<!-- image tag -->
-<img loading="lazy" decoding="async" src="{{ $imagePath | safeURL }}" alt="{{ .Get `alt` }}" class="{{.Get `c`}} {{.Scratch.Get `image-position`}}" width="{{.Get `w`}}" height="{{.Get `h`}}">
+<!-- cdn image tag -->
+<img title="{{$title}}" loading="lazy" decoding="async" src="{{ $imagePath | absURL }}" alt="{{ $alt }}" class="{{$class}} {{.Scratch.Get `position`}}" width="{{$width}}" height="{{$height}}">
 {{ end }}
+<!-- /cdn image -->
 
 {{ else }}
-<!-- /image cdn -->
+
+<!-- content and assets image path variable -->
+{{ $contentImage:= .Page.Resources.GetMatch (printf "*%s*" $imagePath) }}
+{{ $assetImage:= fileExists (add `assets/` $imagePath) }}
 
 <!-- check image existence -->
-{{ if fileExists (add `assets/` $imagePath) }}
-{{ $image:= resources.Get $imagePath }}
+{{ if or $contentImage $assetImage }}
 
-<!-- image height, width, extension -->
+<!-- content or assets folder detection -->
+{{ if $contentImage }}
+{{ .Scratch.Set "image-exists" $contentImage }}
+{{ else if $assetImage }}
+{{ .Scratch.Set "image-exists" (resources.Get $imagePath) }}
+{{ end }}
+
+{{ $image:= .Scratch.Get "image-exists" }}
+
+<!-- image extension -->
 {{ $imageExt := path.Ext $image }}
-{{ $imageWidth := $image.Width }}
-{{ $imageHeight := $image.Height }}
 
-<!-- gif image -->
-{{ if eq $imageExt `.gif` }}
+<!-- image height, width (if not svg) -->
+{{ if eq $imageExt `.svg` }}
+{{ .Scratch.Set "image-height" "" }}
+{{ .Scratch.Set "image-width" "" }}
+{{ else }}
+{{ .Scratch.Set "image-height" $image.Height }}
+{{ .Scratch.Set "image-width" $image.Width }}
+{{ end }}
+{{ $imageHeight:= .Scratch.Get "image-height" }}
+{{ $imageWidth:= .Scratch.Get "image-width" }}
+
+
+<!-- checking gif/svg image -->
+{{ if or (eq $imageExt `.gif`) (eq $imageExt `.svg`) }}
 {{ .Scratch.Set `image` $image.RelPermalink }}
 {{ else }}
 
 <!-- image processing -->
-{{ $options:= add (add (string (.Get "w" | default $imageWidth)) "x ") (.Get "o") }}
+{{ $options:= add (add (add (add (string ($width)) "x") (string ($height))) " webp ") (string $option) }}
+
+{{ if eq $webp "false" }} <!-- if webp false -->
+{{ $options = add (add (add (add (string ($width)) "x") (string ($height))) " ") (string $option) }}
+{{ end }} <!-- end -->
+
+<!-- image Fit -->
+{{ if eq $command `Fit` }}
+{{ .Scratch.Set `image` ($image.Fit $options).RelPermalink }}
+{{ .Scratch.Set `fallback` ($image.Fit (replace $options `webp` ``)).RelPermalink }}
+<!-- image Fill -->
+{{ else if eq $command `Fill` }}
+{{ .Scratch.Set `image` ($image.Fill $options).RelPermalink }}
+{{ .Scratch.Set `fallback` ($image.Fill (replace $options `webp` ``)).RelPermalink }}
+<!-- image Resize -->
+{{ else }}
 {{ .Scratch.Set `image` ($image.Resize $options).RelPermalink }}
-
-<!-- fallback image -->
-{{ $option:= add (string $imageWidth) "x" }}
-{{ .Scratch.Set "image_fallback" ($image.Resize $option).RelPermalink }}
+{{ .Scratch.Set `fallback` ($image.Resize (replace $options `webp` ``)).RelPermalink }}
 {{ end }}
 
+{{ end }}
+<!-- /checking gif/svg image -->
+
 <!-- image figure -->
-{{ if .Get `title` }}
-<figure class="{{.Scratch.Get `image-position`}}">
-  <img loading="lazy" decoding="async" class="{{.Get `c`}}" width="{{.Get `w` | default $imageWidth }}" height="{{.Get `h` | default $imageHeight}}" src="{{.Scratch.Get `image`}}" alt="{{.Get `alt`}}" onerror="this.onerror='null';this.src='{{.Scratch.Get `image_fallback`}}'">
-  <figcaption>{{.Get `title` | markdownify}}</figcaption>
+{{ if $caption }}
+<figure class="{{.Scratch.Get `position`}}" role="group" aria-describedby="caption-{{ $caption | markdownify }}">
+  <img title="{{$title}}" loading="lazy" decoding="async" class="{{$class}}" width="{{$width}}" height="{{$height}}" src="{{.Scratch.Get `image`}}" alt="{{$alt}}" onerror="this.onerror='null';this.src='{{.Scratch.Get `fallback`}}'">
+  <figcaption id="caption-{{ $caption | markdownify }}">{{$caption | markdownify}}</figcaption>
 </figure>
 {{ else }}
 <!-- image tag -->
-<img loading="lazy" decoding="async" class="{{.Get `c`}} {{.Scratch.Get `image-position`}}" width="{{.Get `w` | default $imageWidth }}" height="{{.Get `h` | default $imageHeight}}" src="{{.Scratch.Get `image`}}" alt="{{.Get `alt`}}" onerror="this.onerror='null';this.src='{{.Scratch.Get `image_fallback`}}'">
+<img title="{{$title}}" loading="lazy" decoding="async" class="{{$class}} {{.Scratch.Get `position`}}" width="{{$width}}" height="{{$height}}" src="{{.Scratch.Get `image`}}" alt="{{$alt}}" onerror="this.onerror='null';this.src='{{.Scratch.Get `fallback`}}'">
 {{ end }}
-
-<!-- image from content folder -->
-{{ else if fileExists $imagePath }}
-
-<!-- image figure -->
-{{ if .Get `title` }}
-<figure class="{{.Scratch.Get `image-position`}}">
-  <img loading="lazy" decoding="async" class="{{.Get `c`}}" width="{{.Get `w`}}" height="{{.Get `h`}}" src="{{$imagePath | relURL}}" alt="{{.Get `alt`}}">
-  <figcaption>{{.Get `title` | markdownify}}</figcaption>
-</figure>
-{{ else }}
-<!-- image tag -->
-<img loading="lazy" decoding="async" class="{{.Get `c`}} {{.Scratch.Get `image-position`}}" width="{{.Get `w`}}" height="{{.Get `h`}}" src="{{$imagePath | relURL}}" alt="{{.Get `alt`}}">
-{{ end }}
-<!-- /image from content folder -->
 
 {{ else }}
-<strong class="text-danger mb-3 d-inline-block">{{.Page.Permalink}}{{$imagePath}} does not exist</strong>
+<!-- image not found -->
+<strong class="text-danger mb-3 d-inline-block">{{site.BaseURL}}{{$imagePath}} does not exist</strong>
 {{ end }}
-<!-- /check image existence -->
+<!-- /check image existance -->
 
 {{ end }}
 <!-- /check cdn image -->

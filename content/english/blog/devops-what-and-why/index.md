@@ -2,18 +2,26 @@
 date: 2022-10-04
 title: DevOps - What and Why?
 description: Learn DevOps
-image: images/blog/01.jpg
+image: images/blog/blog1.png
+image_height: ""
+image_width: "400px"
 author: hannan-khan
+series: DevOps Series
 categories:
-- Technology
 - DevOps
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: false
 ---
+
+{{< image src="images/blog/blog2.png" alt="alter-text" height="" width="400px" class="img-fluid" caption="image caption" webp="false" position="float-left" >}}
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
 ________________
 
 
-# Why Use DevOps?
+### Why Use DevOps?
 In order to recognize the benefits that DevOps brings to organizations, we must understand what DevOps is. The simplest way to understand DevOps is to consider it in the aspect of application development. Each time an application is created or updated, it follows a development process which ends with the app being deployed to the cloud or servers. The application is deployed in order to ensure delivery to its end-users.
 The application development process includes:
 1. Idea
@@ -27,7 +35,7 @@ Each time an update happens to the application (i.e. a feature is added), you wi
 ________________
 
 
-# Hindrances in the Current Development Process
+### Hindrances in the Current Development Process
 The way the current process is set up, development and deployment (a.k.a. operations) are handled by two separate teams. This leads to obstacles which inhibit the process’s ability to implement new features, and introduces release delays. Some of which I have outlined below:
 * Conflict of interests
   - Since development and operations are split into separate teams, this presents a conflict of interest between the two. The developers want to release as many new features as possible. The operations team wants to maintain the stability of their system. When new features are introduced, the stability of the system is risked, creating a conflict of interest. Ultimately, this will present itself as a release delay.
@@ -48,7 +56,7 @@ By removing one hindrance at a time, DevOps aims to combine all of these differe
 ________________
 
 
-# Best DevOps Practices
+### Best DevOps Practices
 In order for organizations to fully embrace DevOps philosophies, there are some key practices that need to be implemented. Starting with:
    * Continuous Integration/Continuous Delivery pipeline - this application development and delivery pipeline can help organizations manage any operational challenges that might arise from transitioning to a DevOps culture. This pipeline also provides systematic and streamlined delivery of features/bug fixes.
    * Microservices architecture - This type of application design allows for flexible application use, and easier innovation within each component of the application.
@@ -60,7 +68,7 @@ ________________
 
 
 
-# Benefits Of Implementing DevOps
+### Benefits Of Implementing DevOps
 Upon implementing the practices, hindrances in the old development process are eliminated. The organization who has now adopted the DevOps culture can reap the benefits, which include:
    * Reliability - systematic workflows help to ensure both the quality and integrity of the application.
    * Delivery speed - the application can now have more frequent release, as well as there being less response time needed for bug-fixes.
@@ -70,5 +78,5 @@ Upon implementing the practices, hindrances in the old development process are e
 ________________
 
 
-# Conclusion
+### Conclusion
 DevOps is broad terminology referring to the set of practices which help release software with speed and quality. These practices were created to overcome hindrances in the old development process. By using a DevOps mindset, organizations can implement these practices, and ultimately the DevOps philosophy. Once embraced, this philosophy offers numerous benefits to the organization such as reliability, scaling, and reduced delivery speed.

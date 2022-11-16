@@ -8,6 +8,8 @@ link = "plugins/font-awesome/solid.css"
 link = "plugins/font-awesome/regular.css"
 [[params.plugins.css]]
 link = "plugins/swiper/swiper-bundle.min.css"
+[[params.plugins.css]]
+link = "plugins/search/auto-complete.css"
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]
@@ -16,6 +18,20 @@ link = "plugins/bootstrap/bootstrap.min.js"
 link = "plugins/swiper/swiper-bundle.min.js"
 [[params.plugins.js]]
 link = "plugins/webfont-loader/webfont-loader-2.min.js"
+[[params.plugins.js]]
+link = "plugins/scrollmenu/scrollmenu.min.js"
+[[params.plugins.js]]
+link = "plugins/search/auto-complete.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/search/lunr.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/search/search-page.js"
 [params.variables]
 banner_desc = "#acacac"
 banner_primary = "#121826"
