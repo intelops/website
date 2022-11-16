@@ -6,7 +6,7 @@ image: images/blog/blog3.png
 image_height: ""
 image_width: ""
 author: devika-das
-series: Data Analytics
+series: Security Series
 categories:
 - Concepts
 - Security

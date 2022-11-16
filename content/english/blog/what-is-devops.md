@@ -6,7 +6,7 @@ image: images/blog/blog1.png
 image_height: ""
 image_width: "400px"
 author: hannan-khan
-series: DevOps
+series: DevOps Series
 categories:
 - DevOps
 - Concepts

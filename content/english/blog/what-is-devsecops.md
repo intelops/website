@@ -6,7 +6,7 @@ image: images/blog/blog2.png
 image_height: ""
 image_width: ""
 author: devika-das
-series: DevSecOps
+series: DevSecOps Series
 categories:
 - DevSecOps
 - DevOps
