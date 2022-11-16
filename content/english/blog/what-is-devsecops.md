@@ -6,7 +6,7 @@ image: images/blog/blog2.png
 image_height: ""
 image_width: ""
 author: devika-das
-series: Data Analytics
+series: DevSecOps
 categories:
 - DevSecOps
 - DevOps
