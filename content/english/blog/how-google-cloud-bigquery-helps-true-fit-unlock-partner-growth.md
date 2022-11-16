@@ -3,11 +3,16 @@ date: 2022-11-01
 title: How True Fit's data journey unlocks partner growth
 description: Learn DevOps
 image: images/blog/03.jpg
+image_height: "200px"
+image_width: "200px"
 author: hannan-khan
 series: DevOps
 categories:
 - Technology
 - DevOps
+
+feedback: false
+draft: false
 ---
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.

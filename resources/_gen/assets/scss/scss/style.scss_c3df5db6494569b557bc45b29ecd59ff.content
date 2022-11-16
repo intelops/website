@@ -7264,6 +7264,8 @@ form label {
     .content figure.img-float-right {
       float: right;
       margin-left: 20px; }
+  .content figcaption {
+    text-align: center; }
   .content a {
     color: #777; }
     .content a:hover {
