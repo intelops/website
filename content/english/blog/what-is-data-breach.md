@@ -8,7 +8,6 @@ image_width: ""
 author: devika-das
 series: Security Series
 categories:
-- Concepts
 - Security
 
 # image color code in undraw.co #FB7E44 

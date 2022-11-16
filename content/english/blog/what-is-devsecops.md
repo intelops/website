@@ -10,7 +10,6 @@ series: DevSecOps Series
 categories:
 - DevSecOps
 - DevOps
-- Concepts
 
 # image color code in undraw.co #FB7E44 
 feedback: false

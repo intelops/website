@@ -9,7 +9,6 @@ author: hannan-khan
 series: DevOps Series
 categories:
 - DevOps
-- Concepts
 
 # image color code in undraw.co #FB7E44 
 feedback: false
