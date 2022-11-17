@@ -1,6 +1,6 @@
 baseURL = "https://intelops.ai/"
 disableLanguages = ["fr"]
-disqusShortname = "themefisher-template"
+disqusShortname = ""
 googleAnalytics = ""
 paginate = "6"
 summaryLength = "10"
