@@ -12,4 +12,4 @@ This is the repo to manage all the website work, which is being developed using 
 - About Us
 - Resources
 
-> How to add discussion using disqus.com within the website - steps are here https://github.com/intelops/website/issues/17 
+> How to add discussion using [disqus.com](https://disqus.com/) within the website - steps are here https://github.com/intelops/website/issues/17 
