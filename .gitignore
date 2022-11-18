@@ -6,3 +6,6 @@ resources/_gen/
 .vscode
 #misc
 /exampleSite/.hugo_build.lock
+
+# jetbrains files
+.idea/
