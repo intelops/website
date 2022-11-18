@@ -1,9 +1,5 @@
 product_optimizor = []
 [[footer_menu_1]]
-name = "Commercial"
-url = "#!"
-weight = 1
-[[footer_menu_1]]
 name = "Our open source"
 url = "#!"
 weight = 2
