@@ -1,11 +1,22 @@
 ---
-date: 2022-10-14
+date: 2022-11-15
 title: Hacking YAML to your Benefit
-image: images/blog/06.jpg
+description: Learn to use YAML.
+image: images/blog/hacking-yaml-to-your-benefit/learn.png
+image_height: ""
+image_width: "400px"
 author: vishwas-prasanna
 categories:
-- Technology
+- Dev Tools
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: false
 ---
+
+{{< image src="images/blog/hacking-yaml-to-your-benefit/learn.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+
+
 YAML(yam-ul) is a Data Serialization language used to capture your data in a key-value pair format, making it easy to read and understand. In this article, I will cover the basic concepts of YAML. It's Benefits and drawbacks over other markup languages like JSON and XML. YAML in DevOps and best practices to use while writing a YAML file.
 >If you want to learn more about What is DevOps? Check [<span style="text-decoration: underline;">this</span>](https://intelops.ai/blog/what-is-devops/) out.
 

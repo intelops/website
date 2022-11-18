@@ -1,8 +1,8 @@
 ---
 date: 2022-10-04
 title: DevOps - What and Why?
-description: Learn DevOps
-image: images/blog/blog1.png
+description: Brief concept intro on DevOps.
+image: images/blog/devops-what-and-why/blog1.png
 image_height: ""
 image_width: "400px"
 author: hannan-khan
@@ -15,7 +15,7 @@ feedback: false
 draft: false
 ---
 
-{{< image src="images/blog/blog2.png" alt="alter-text" height="" width="400px" class="img-fluid" caption="image caption" webp="false" position="float-left" >}}
+{{< image src="images/blog/devops-what-and-why/blog1.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries. The best definition for it is that it's a combination of cultural philosophies, practices, and tools to release software fast and with high quality. This is accomplished by combining development, testing, security, and operations into a continuous and streamlined development/deployment process.
 ________________

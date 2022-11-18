@@ -1,11 +1,22 @@
 ---
-date: 2022-10-19
+date: 2022-11-16
 title: Markdown to Make Life Easy
-image: images/blog/03.jpg
+description: How to use Markdown?
+image: images/blog/markdown-to-make-life-easy/docs.png
+image_height: ""
+image_width: "400px"
 author: vishwas-prasanna
 categories:
-- Technology
+- Dev Tools
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: false
 ---
+
+{{< image src="images/blog/markdown-to-make-life-easy/docs.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+
+
 Markdown is an open-source markup language designed to convert plain text to HTML. Web writers widely use it to style and format their content in text editors for blogs and social media. Markdown's popularity has recently risen due to its simple syntax and readable format. I'll cover the fundamentals you'll need to start writing your first Markdown file in this blog.
 
 

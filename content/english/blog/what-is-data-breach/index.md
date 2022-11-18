@@ -2,9 +2,9 @@
 date: 2022-11-13
 title: What is data breach? 5 facts you need to know about data breach
 description: Brief introduction on data breach.
-image: images/blog/blog3.png
+image: images/blog/what-is-data-breach/breach.png
 image_height: ""
-image_width: ""
+image_width: "500px"
 author: devika-das
 series: Security Series
 categories:
@@ -15,7 +15,8 @@ feedback: false
 draft: false
 ---
 
- 
+{{< image src="images/blog/what-is-data-breach/breach.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+
  ## Introduction
 As per Wikipedia, the term data breach refers to compromise of security involving unauthorized access to sensitive and confidential user information. 
 ![Major Known Data Breaches in Tech 2022](https://venngage-wordpress.s3.amazonaws.com/uploads/2022/09/data-breach-2022-template-preview-1024x663.png)

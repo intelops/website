@@ -1,16 +1,25 @@
 ---
 date: 2022-11-17
 title: Connecting The OpenTelemetry Collector To Vector
-image: images/blog/blog1.png
+description: Series on how to transfer OpenTelemetry data to your desired Target using Vector.
+image: images/blog/connecting-the-opentelemetry-collector-to-vecor/collecting.png
+image_height: ""
+image_width: "600px"
 author: hannan-khan
-series: DevOps Series
+series: DevSecOps Series
 categories:
-- DevOps
+- DevSecOps
+- Cloud Native
+- Kubernetes
+- Observability
+- Monitoring
 
 # image color code in undraw.co #FB7E44 
 feedback: false
-draft: true
+draft: false
 ---
+
+{{< image src="images/blog/connecting-the-opentelemetry-collector-to-vecor/collecting.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 OpenTelmetry provides amazing, standardized tools for collecting observability information about your cluster, one of which is a
 Collector which can receive/process/export data. Vector, on the other hand, is also a very powerful tool for collecting, transforming,

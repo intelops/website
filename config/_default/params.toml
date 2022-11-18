@@ -17,7 +17,7 @@ mobile = "+211234565523"
 button_label = "Contact Us"
 button_link = "contact/"
 enable = true
-image = "images/cta.png"
+image = "images/develop.png"
 subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
 title = "Looking for Cloud-Native Talent? <br> Let us make your life easy!"
 [cookies]
