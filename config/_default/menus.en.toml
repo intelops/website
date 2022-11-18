@@ -1,9 +1,5 @@
 product_optimizor = []
 [[footer_menu_1]]
-name = "Commercial"
-url = "#!"
-weight = 1
-[[footer_menu_1]]
 name = "Our open source"
 url = "#!"
 weight = 2
@@ -78,11 +74,6 @@ name = "Open Source"
 url = "/opensource"
 weight = 10
 [[main]]
-name = "Commercial"
-parent = "Open Source"
-url = "/commercial"
-weight = 1
-[[main]]
 name = "Our open source"
 parent = "Open Source"
 url = "/our-open-source"
@@ -91,7 +82,7 @@ weight = 1
 name = "Contributed open source"
 parent = "Open Source"
 url = "/contributed-open-source"
-weight = 1
+weight = 2
 [[main]]
 name = "Blogs"
 url = "blog/"
