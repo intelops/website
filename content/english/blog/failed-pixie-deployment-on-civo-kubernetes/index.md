@@ -3,8 +3,12 @@ date: 2022-11-18
 title: Failed Pixie Deployment On Civo Kubernetes cloud? Here's How To Fix It
 description: Pixie Observability tool's deployment failure on CIVO cloud.
 image: images/blog/failed-pixie-deployment-on-civo-kubernetes/failed.png
-image_height: ""
-image_width: "500px"
+
+cover_image: true
+cover_image_src: images/k3s-running-alpine.jpg
+cover_image_height: ""
+cover_image_width: ""
+
 author: hannan-khan
 series: DevSecOps Series
 categories:

@@ -39,18 +39,14 @@
         </div>
       </div>
       <div class="col-lg-8">
-        {{$image_height := .Params.image_height}}
-        {{$image_width := .Params.image_width}}
-        {{ with .Params.image }}
-        <div class="mb-5">
-          {{ if fileExists (add `assets/` .) }}
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "1250x "}}
-          {{$imgWebp:= $img.Resize "1250x webp"}}
-          <img loading="lazy" decoding="async" class="rounded-sm {{if not (or $image_height $image_width)}}w-100{{end}}" src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'" style="height:{{$image_height}} !important;width:{{$image_width}} !important;">
-          {{end}}
+        {{ if .Params.cover_image }}
+        {{ $image_height := replace .Params.cover_image_height "px" "" }}
+        {{ $image_width := replace .Params.cover_image_width "px" "" }}
+        {{ $size := add (add $image_width "x") $image_height }}
+        <div class="mb-4">
+          {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
         </div>
-        {{end}}
+        {{ end }}
 
         <div class="mb-5">
           <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
