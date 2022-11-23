@@ -1,0 +1,121 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="section pb-0" data-aos="fade-in">
+  <div class="container container-delta">
+    <div class="row gy-3 justify-content-center">
+      {{ $paginator := .Paginate .RegularPages 5 }}
+
+      {{ $signup_block_title := .Params.signup_block.title }}
+      {{ $signup_block_subtitle := .Params.signup_block.subtitle }}
+      {{ $signup_block_bg_color := .Params.signup_block.background_color }}
+      {{ $signup_block_logo := .Params.signup_block.logo }}
+      {{ $signup_block_button_level := .Params.signup_block.button.level }}
+      {{ $signup_block_button_link := .Params.signup_block.button.link }}
+      
+      {{ range $i, $e := $paginator.Pages }}
+      <div class="col-lg-4 col-md-6 blog-card case-studies-card has-border">
+        {{ .Render "case-studies" }}
+      </div>
+      
+      {{ if eq $i 0 }}
+      <div class="col-lg-4 col-md-6 blog-card case-studies-card case-studies-signup-card has-border">
+        <article class="card border-0 rounded-md overflow-hidden h-100">
+          <div class="card-body position-relative d-flex flex-column" style="background-color:{{$signup_block_bg_color}}">
+            <h3 class="text-white">{{$signup_block_title}}</h3>
+            <p class="text-white mt-2 mb-4">{{$signup_block_subtitle}}</p>
+
+            <span class="mb-4">
+              <a class="btn bg-white text-dark border-0 w-auto" href="{{$signup_block_button_link | absLangURL}}">{{$signup_block_button_level}}</a>
+            </span>
+
+            {{ if $signup_block_logo }}
+            <div class="mt-auto mb-2">{{ partial "footer-logo.html" . }}</div>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+      {{ end }}
+
+      {{ end }}
+
+      <!-- pagination -->
+      <div class="col-12 pt-5">
+        {{"<!-- pagination -->" | safeHTML }}
+        {{ $paginator := .Paginator }}
+        <!-- Number of links either side of the current page. -->
+        {{ $adjacent_links := 2 }}
+        <!-- $max_links = ($adjacent_links * 2) + 1 -->
+        {{ $max_links := (add (mul $adjacent_links 2) 1) }}
+        <!-- $lower_limit = $adjacent_links + 1 -->
+        {{ $lower_limit := (add $adjacent_links 1) }}
+        <!-- $upper_limit = $paginator.TotalPages - $adjacent_links -->
+        {{ $upper_limit := (sub $paginator.TotalPages $adjacent_links) }}
+        <!-- If there's more than one page. -->
+        {{ if gt $paginator.TotalPages 1 }}
+        <nav>
+          <ul class="pagination justify-content-center flex-wrap mb-0">
+            <!-- Previous page. -->
+            {{ if $paginator.HasPrev }}
+            <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Prev.URL }}" aria-label="Pagination Arrow">
+              <i class="fas fa-angle-left"></i>
+            </a></li>
+            {{ end }}
+            <!-- Page numbers. -->
+            {{ range $paginator.Pagers }}
+            {{ $.Scratch.Set "page_number_flag" false }}
+            <!-- Advanced page numbers. -->
+            {{ if gt $paginator.TotalPages $max_links }}
+            <!-- Lower limit pages. -->
+            <!-- If the user is on a page which is in the lower limit.  -->
+            {{ if le $paginator.PageNumber $lower_limit }}
+            <!-- If the current loop page is less than max_links. -->
+            {{ if le .PageNumber $max_links }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+            <!-- Upper limit pages. -->
+            <!-- If the user is on a page which is in the upper limit. -->
+            {{ else if ge $paginator.PageNumber $upper_limit }}
+            <!-- If the current loop page is greater than total pages minus $max_links -->
+            {{ if gt .PageNumber (sub $paginator.TotalPages $max_links) }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+            <!-- Middle pages. -->
+            {{ else }}
+            {{ if and ( ge .PageNumber (sub $paginator.PageNumber $adjacent_links) ) ( le .PageNumber (add $paginator.PageNumber $adjacent_links) ) }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+            {{ end }}
+            <!-- Simple page numbers. -->
+            {{ else }}
+            {{ $.Scratch.Set "page_number_flag" true }}
+            {{ end }}
+            <!-- Output page numbers. -->
+            {{ if eq ($.Scratch.Get "page_number_flag") true }}
+            <li class="page-item">
+              <a href="{{ .URL }}" class="page-link{{ if eq . $paginator }} active {{ end }}">
+                {{ .PageNumber }}
+              </a>
+            </li>
+            {{ end }}
+            {{ end }}
+            <!-- Next page. -->
+            {{ if $paginator.HasNext }}
+            <li class="page-item"><a class="page-link arrow" href="{{ $paginator.Next.URL }}" aria-label="Pagination Arrow">
+              <i class="fas fa-angle-right"></i>
+            </a></li>
+            {{ end }}
+          </ul>
+        </nav>
+        {{ end }}
+      </div>
+      <!-- pagination -->
+
+    </div>
+  </div>
+</section>
+
+{{ partial "call-to-action-2.html" . }}
+
+{{ end }}
