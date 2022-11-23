@@ -13,6 +13,9 @@
 - id: related_posts
   translation: Articles Similaires
 
+- id: related_case_studies
+  translation: Related Case Studies
+
 - id: min_read
   translation: Lecture minimale
 

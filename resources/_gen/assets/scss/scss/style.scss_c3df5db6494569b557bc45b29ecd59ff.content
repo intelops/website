@@ -8417,6 +8417,18 @@ main:empty {
   @media (max-width: 575px) {
     .post-author .author-image {
       margin-bottom: 20px; } }
+.case-studies-card.has-border .card-body {
+  border-left: 1px solid #e8e8e8;
+  border-right: 1px solid #e8e8e8;
+  border: 1px solid #e8e8e8;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding-bottom: 25px; }
+
+.case-studies-signup-card .card-body {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px; }
+
 .call-to-action-2 {
   position: relative;
   z-index: 1;
