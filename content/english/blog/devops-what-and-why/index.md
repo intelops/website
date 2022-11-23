@@ -3,8 +3,12 @@ date: 2022-10-04
 title: DevOps - What and Why?
 description: Brief concept intro on DevOps.
 image: images/blog/devops-what-and-why/blog1.png
-image_height: ""
-image_width: "400px"
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: hannan-khan
 series: DevOps Series
 categories:

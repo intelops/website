@@ -3,8 +3,12 @@ date: 2022-11-17
 title: Connecting The OpenTelemetry Collector To Vector
 description: Series on how to transfer OpenTelemetry data to your desired Target using Vector.
 image: images/blog/connecting-the-opentelemetry-collector-to-vecor/collecting.png
-image_height: ""
-image_width: "600px"
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: hannan-khan
 series: DevSecOps Series
 categories:

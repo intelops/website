@@ -3,11 +3,15 @@ date: 2022-11-16
 title: Markdown to Make Life Easy
 description: How to use Markdown?
 image: images/blog/markdown-to-make-life-easy/docs.png
-image_height: ""
-image_width: "400px"
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: vishwas-prasanna
 categories:
-- Dev Tools
+- Dev-Tools
 
 # image color code in undraw.co #FB7E44 
 feedback: false

@@ -28,10 +28,13 @@ services:
   enable : true
   title : "Why IntelOps?"
   service_list:
-  - "Solution Driven Innovation"
+  - "Empower Engineers"
+  - "Solutions Driven Innovation"
   - "Focus critical developer resources on your core business"
   - "Launch new products faster with less payments code"
-  - "Improve conversion from your customers"
+#  - "Improve conversion from your customers"
   - "Reduce Technical Debt"
+  - "Easy adoption of cloud native technology"
   - "Enjoy the new Tech with ease"
+  - "Engineering Enablement"
 ---

@@ -3,8 +3,12 @@ date: 2022-11-14
 title: Adopting DevSecOps for development and testing - What and Why?
 description: DevSecOps concept in development and testing.
 image: images/blog/what-is-devsecops/devsecops.png
-image_height: ""
-image_width: "500px"
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: devika-das
 series: DevSecOps Series
 categories:
