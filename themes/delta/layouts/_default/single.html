@@ -50,7 +50,7 @@
 
         <div class="mb-5">
           <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
-          <span class="text-muted">{{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+          <span class="text-muted small d-inline-block" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
         </div>
 
         <div class="content">
