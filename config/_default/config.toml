@@ -6,6 +6,7 @@ paginate = "6"
 summaryLength = "10"
 theme = "delta"
 title = "Intelops"
+enableGitInfo = true
 [caches.assets]
 dir = ":resourceDir/_gen"
 maxAge = "720h"
