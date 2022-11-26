@@ -32,6 +32,7 @@ rel = "manifest"
 home = ["HTML", "RSS", "WebAppManifest","JSON"]
 [taxonomies]
 category = "categories"
+tag = "tags"
 series = "series"
 
 # table of content
