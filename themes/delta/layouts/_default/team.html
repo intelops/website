@@ -16,8 +16,8 @@
           <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="testimonials image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
         </div>
         {{end}}
-        <h3 class="h5 mb-0">{{.name | markdownify}}</h3>
-        <p class="mb-0">{{.designation | markdownify}}</p>
+        <h3 class="h5 mb-0" {{with .name_color}}style="color:{{.}} !important"{{end}}>{{.name | markdownify}}</h3>
+        <p class="mb-0" {{with .designation_color}}style="color:{{.}} !important"{{end}}>{{.designation | markdownify}}</p>
       </div>
       {{end}}
     </div>

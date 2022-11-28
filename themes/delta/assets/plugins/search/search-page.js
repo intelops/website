@@ -14,6 +14,10 @@ var fuseOptions = {
       weight: 0.8,
     },
     {
+      name: "searchKeyword",
+      weight: 0.9,
+    },
+    {
       name: "content",
       weight: 0.5,
     },
@@ -38,7 +42,9 @@ function executeSearch(searchQuery) {
 
     if (result.length > 0) {
       result.forEach(function (el) {
-        populateResults(el);
+        if ("Learning center" == el.item.section) {
+          populateResults(el);
+        }
       });
     } else {
       $("#search-results").append(

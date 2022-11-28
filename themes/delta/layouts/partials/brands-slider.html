@@ -4,7 +4,7 @@
     <div class="row">
       <div class="col-12 text-center">
         <div class="section-title">
-          <h2 class="title">{{.title | markdownify}}</h2>
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
         
         {{ with .images }}

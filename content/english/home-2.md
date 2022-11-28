@@ -1,6 +1,6 @@
 ---
 title: "Delta - Software and SAAS landing Hugo Theme"
-draft: false
+draft: true
 layout: "home-2"
 
 # banner

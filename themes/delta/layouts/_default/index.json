@@ -1,11 +1,36 @@
-[{{ range $index, $page := (where site.Pages "Section" "learning-center")}}
-{{- if ne $page.Type "json" -}}
-{{- if and $index (gt $index 0) -}},{{- end }}
+{{- $len := sub (len (.Pages.GroupBy "Section")) 1 -}}
+[{{- range $item, $el := .Pages.GroupBy "Section" -}}
+{{- range $i, $e := .Pages -}}
+{{- if and (not .Params.ignoreSearch) (ne $e.Type "json") -}}
   {
-    "url": "{{ $page.Permalink }}",
-    "title": "{{ htmlEscape $page.Title}}",
+    "section": "",
+    "url": "{{ $e.Permalink }}",
+    "title": "{{ with $e.Params.bannertext }}{{htmlEscape .}}{{else}}{{htmlEscape $e.Title}}{{end}}",
     "description": "{{ htmlEscape .Description}}",
+    "searchKeyword": "{{ htmlEscape .Params.searchKeyword}}",
+    "content": {{$e.Plain | jsonify}}
+  },
+{{- end -}}
+
+{{- if .Section -}}
+{{- $section := (where site.Pages "Section" .Section) | intersect (where site.Pages ".Title" "!=" .Title) -}}
+{{- $sectionLen := len (where site.Pages "Section" .Section) -}}
+{{- $sectionLenTotal := sub $sectionLen 2 -}}
+
+{{- range $index, $page := $section -}}
+{{- if and (not .Params.ignoreSearch) (ne $page.Type "json") -}}
+  {
+    "section": "{{ if eq $index 0 }}{{$page.Section | humanize}}{{end}}",
+    "url": "{{ $page.Permalink }}",
+    "title": "{{ with $page.Params.bannertext }}{{htmlEscape .}}{{else}}{{htmlEscape $page.Title}}{{end}}",
+    "description": "{{ htmlEscape .Description}}",
+    "searchKeyword": "{{ htmlEscape .Params.searchKeyword}}",
     "content": {{$page.Plain | jsonify}}
-  }
+  }{{- if eq $item $len -}}{{- if ne $index $sectionLenTotal -}},{{- end -}}{{- else -}},{{- end -}}
+{{- end -}}
+{{- end -}}
+
+{{- end -}}
+
 {{- end -}}
 {{- end -}}]

@@ -13,6 +13,7 @@ logo_text = "Intelops"
 logo_width = "147x"
 mainSections = ["blog"]
 mobile = "+211234565523"
+fullSiteSearch = false
 [call_to_action]
 button_label = "Contact Us"
 button_link = "contact/"

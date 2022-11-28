@@ -9,11 +9,11 @@ url = "#!"
 weight = 3
 [[footer_menu_3]]
 name = "About"
-url = "about/"
+url = "/about/"
 weight = 1
 [[footer_menu_3]]
 name = "Contact"
-url = "contact/"
+url = "/contact/"
 weight = 1
 [[footer_menu_3]]
 name = "Privacy Policy"
@@ -33,15 +33,15 @@ url = "#!"
 weight = 2
 [[footer_menu_4]]
 name = "Team"
-url = "team/"
+url = "/team/"
 weight = 3
 [[footer_menu_5]]
 name = "Docs"
-url = "docs/"
+url = "https://docs.intelops.ai/"
 weight = 1
 [[footer_menu_5]]
 name = "Blog"
-url = "blog/"
+url = "/blog/"
 weight = 2
 [[footer_menu_5]]
 name = "Home"

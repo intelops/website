@@ -8,9 +8,9 @@
     <div class="row mb-5">
       <div class="col-xl-6 col-lg-8 mx-auto text-start text-lg-center">
         <div class="section-title mb-0">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h1 class="title text-xl mb-3">{{.title | markdownify}}</h1>
-          {{with .description}}<p>{{. | markdownify}}</p>{{end}}
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h1 class="title text-xl mb-3" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h1>
+          <p {{with .description_color}}style="color:{{.}} !important"{{end}}>{{.description | markdownify}}</p>
         </div>
       </div>
     </div>
@@ -42,12 +42,14 @@
           {{ if .Params.contact_info.enable }}
           {{ with .Params.contact_info }}
           <div class="mb-4">
-            <h5 class="font-secondary"><i class="fas fa-info-circle text-primary"></i>&nbsp; {{ .title | markdownify }}</h5>
+            <h5 class="font-secondary" {{with .title_color}}style="color:{{.}} !important"{{end}}><i class="fas fa-info-circle text-primary"></i>&nbsp; {{ .title | markdownify }}</h5>
 
             <ul class="list-unstyled check-list mb-0">
+              {{$address_list_color := .address_list_color }}
+              {{$address_list_icon_color := .icon_color }}
               {{ range .address_list }}
-              <li class="position-relative">
-                <i class="fas fa-check"></i>{{ . | markdownify }}
+              <li class="position-relative" {{with $address_list_color}}style="color:{{.}} !important"{{end}}>
+                <i class="fas fa-check" {{with $address_list_icon_color}}style="color:{{.}} !important"{{end}}></i>{{ . | markdownify }}
               </li>
               {{ end }}
             </ul>
@@ -61,9 +63,11 @@
             <h5 class="font-secondary"><i class="fas fa-info-circle text-primary"></i>&nbsp; {{ .title | markdownify }}</h5>
 
             <ul class="list-unstyled check-list mb-0">
+              {{$service_list_color := .service_list_color }}
+              {{$service_list_icon_color := .icon_color }}
               {{ range .service_list }}
-              <li class="position-relative">
-                <i class="fas fa-check-circle"></i>{{ . | markdownify }}
+              <li class="position-relative" {{with $service_list_color}}style="color:{{.}} !important"{{end}}>
+                <i class="fas fa-check-circle" {{with $service_list_icon_color}}style="color:{{.}} !important"{{end}}></i>{{ . | markdownify }}
               </li>
               {{ end }}
             </ul>

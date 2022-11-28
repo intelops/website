@@ -434,7 +434,7 @@ form label {
 .content {
   color: #777;
   p {
-    color: #777;
+    color: inherit;
   }
   a {
     color: $color-primary !important;
@@ -503,7 +503,7 @@ form label {
   }
 
   a {
-    color: #777;
+    color: inherit;
 
     &:hover {
       color: $color-primary;
@@ -527,7 +527,7 @@ form label {
 
     li {
       margin-bottom: 10px;
-      color: #777;
+      color: inherit;
     }
   }
 
