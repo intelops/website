@@ -2,7 +2,7 @@
 title: Optimizor
 description: optimizor desc.
 layout: optimizor
-headerLogo: "images/logo-light.png"
+headerLogo: "images/optimizorLogo.png"
 
 # banner
 banner:
