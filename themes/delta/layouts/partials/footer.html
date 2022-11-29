@@ -1,13 +1,21 @@
 <footer class="bg-dark px-1 wave-block">
   <div class="container container-delta">
-    <div class="row">
-      <div class="col-lg-6 mx-auto text-center text-lg-start mb-5 mb-lg-0">
+    <div class="row align-items-center gy-3">
+      <div class="col-lg-4 mx-auto text-center text-lg-start">
         <a class="footer-brand" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
           {{ partial "footer-logo.html" . }}
         </a>
       </div>
+      <div class="col-lg-4 text-center">
+        {{ if site.Params.fullSiteSearch }}
+        <button class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <i class="fas fa-search me-1"></i>
+          <span>Search Intelops ..</span>
+        </button>
+        {{ end }}
+      </div>
       {{with site.Params.social}}
-      <div class="col-lg-6">
+      <div class="col-lg-4">
         <ul class="list-inline social-links d-flex flex-wrap justify-content-center justify-content-lg-end mb-0">
           {{range .}}
           <li class="list-inline-item"><a href="{{.link}}" title="{{.name | humanize}}"><i class="{{.icon}}"></i></a></li>
@@ -59,7 +67,7 @@
         </div>
         {{end}}
         {{with site.Menus.footer_menu_5}}
-        <div class="block">
+        <div class="col block">
           <h4 class="footer-menu-title text-white">{{i18n `footer_menu_5_title`}}</h4>
           <ul class="list-unstyled mb-0">
             {{range .}}

@@ -7039,10 +7039,10 @@ a:hover {
   .pagination li a {
     font-weight: 500;
     border-radius: 12px !important;
-    height: 45px;
-    width: 45px;
+    height: 38px;
+    width: 38px;
     padding: 0;
-    line-height: 45px;
+    line-height: 38px;
     text-align: center;
     color: #222222; }
     .social-links li a:hover, .social-links li a:focus,
@@ -8791,6 +8791,11 @@ footer {
   @media (max-width: 767px) {
     footer {
       padding: 60px 0 0; } }
+  footer .btn-search-footer {
+    cursor: text;
+    border: 2px solid rgba(255, 255, 255, 0.4) !important; }
+    footer .btn-search-footer:hover {
+      border: 2px solid white !important; }
   footer .footer-menu {
     margin-top: 60px;
     padding: 60px 0;

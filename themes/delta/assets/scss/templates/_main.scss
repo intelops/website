@@ -1340,6 +1340,13 @@ footer {
   @include tablet {
     padding: 60px 0 0;
   }
+  .btn-search-footer {
+    cursor: text;
+    border: 2px solid rgba($white, 0.4) !important;
+    &:hover {
+      border: 2px solid rgba($white, 1) !important;
+    }
+  }
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
