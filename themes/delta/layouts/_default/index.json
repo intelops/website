@@ -20,7 +20,7 @@
 {{- range $index, $page := $section -}}
 {{- if and (not .Params.ignoreSearch) (ne $page.Type "json") -}}
   {
-    "section": "{{ if eq $index 0 }}{{$page.Section | humanize}}{{end}}",
+    "section": "{{$page.Section | humanize}}",
     "url": "{{ $page.Permalink }}",
     "title": "{{ with $page.Params.bannertext }}{{htmlEscape .}}{{else}}{{htmlEscape $page.Title}}{{end}}",
     "description": "{{ htmlEscape .Description}}",

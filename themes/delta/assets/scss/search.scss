@@ -22,23 +22,36 @@
     box-shadow: inset 0px 2px 18px #ddd;
     border-bottom-left-radius: calc(0.3rem - 1px);
     border-bottom-right-radius: calc(0.3rem - 1px);
+
+    &::-webkit-scrollbar {
+      width: 5px;
+      &-track {
+        background: $white;
+      }
+      &-thumb {
+        background: #c7c7c7;
+      }
+    }
   }
 }
 .search-result-item {
-  &:not(:last-child) {
+  &:first-child {
+    .section:not(:empty) {
+      margin-top: -15px;
+    }
+  }
+  &:not(:last-child) a {
     margin-bottom: -1px;
   }
-  > .small {
+  > .section {
     padding: 0 0.75rem;
     display: inline-block;
     margin-bottom: 5px;
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 20px;
     &:empty {
       display: none;
     }
-  }
-  &:first-child > .small {
-    margin-top: 0;
   }
   .block {
     display: block;

@@ -15,10 +15,6 @@
           {{ $taxonomyCurrent := add (add (`categories/` | relLangURL) ($name | urlize | lower)) `/` }}
           <li class="list-inline-item"><a {{if eq $current $taxonomyCurrent}}class="active"{{end}} href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a></li>
           {{ end }}
-          {{ range $name, $items := site.Taxonomies.tags }}
-          {{ $taxonomyCurrent := add (add (`tags/` | relLangURL) ($name | urlize | lower)) `/` }}
-          <li class="list-inline-item"><a {{if eq $current $taxonomyCurrent}}class="active"{{end}} href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a></li>
-          {{ end }}
         </ul>
       </div>
     </div>

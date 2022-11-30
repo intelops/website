@@ -221,16 +221,26 @@
   };
   searchInput.addEventListener("keyup", (e) => {
     const searchString = e.target.value.toLowerCase();
-    const filteredResults = jsonData.filter((item) => {
+
+    let filteredJSON = jsonData.reduce((prev, item) => [...new Set([...prev, item.section])], []).map((item) => {
+        let filteredItems = jsonData.filter((i) => i.section === item);
+        return {
+          section: item,
+          data: filteredItems,
+        };
+      });
+
+
+    const filteredResults = filteredJSON.filter((item) => {
       if (searchString === "" ) {
         return "";
       } else {
         return (
           item.section.toLowerCase().includes(searchString) || 
-          item.title.toLowerCase().includes(searchString) || 
-          item.description.toLowerCase().includes(searchString) || 
-          item.searchKeyword.toLowerCase().includes(searchString) || 
-          item.content.toLowerCase().includes(searchString)
+          item.data.find((el) => el.title.toLowerCase().includes(searchString)) || 
+          item.data.find((el) => el.description.toLowerCase().includes(searchString)) || 
+          item.data.find((el) => el.searchKeyword.toLowerCase().includes(searchString)) || 
+          item.data.find((el) => el.content.toLowerCase().includes(searchString))
         );
       }
     });
@@ -238,11 +248,13 @@
   });
 
   const displayResult = (searchItems) => {
-    const htmlString = searchItems.map((item, key) => {
+    const htmlString = searchItems.map((item) => {
       return`
       <div class="search-result-item">
-        <p class="mb-0 small">${item.section}</p>
-       <a class="block" href="${item.url}"><p class="text-dark mb-0 lh-base">${item.title}</p></a>
+        <p class="section">${item.section}</p>
+        ${item.data.map((innerItem)=>
+          `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p></a>`
+        ).join("")}
      </div>`
     }).join("");
     searchResult.innerHTML = htmlString;
