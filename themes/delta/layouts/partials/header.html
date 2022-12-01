@@ -219,6 +219,7 @@
       console.error(err);
     }
   };
+
   searchInput.addEventListener("keyup", (e) => {
     const searchString = e.target.value.toLowerCase();
 
@@ -230,32 +231,48 @@
         };
       });
 
-
-    const filteredResults = filteredJSON.filter((item) => {
+    let searchItem = filteredJSON.filter((item) => {
       if (searchString === "" ) {
         return "";
-      } else {
-        return (
-          item.section.toLowerCase().includes(searchString) || 
-          item.data.find((el) => el.title.toLowerCase().includes(searchString)) || 
-          item.data.find((el) => el.description.toLowerCase().includes(searchString)) || 
-          item.data.find((el) => el.searchKeyword.toLowerCase().includes(searchString)) || 
-          item.data.find((el) => el.content.toLowerCase().includes(searchString))
-        );
+      }
+      else if (item.data.find((el) => (el.title.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.description.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.searchKeyword.toLowerCase().includes(searchString)))) {
+        return item
+      }
+      else if (item.data.find((el) => (el.content.toLowerCase().includes(searchString)))) {
+        return item
       }
     });
-    displayResult(filteredResults);
+
+    displayResult(searchItem, searchString);
   });
 
-  const displayResult = (searchItems) => {
+  const displayResult = (searchItems, searchString) => {
     const htmlString = searchItems.map((item) => {
+      const contentValue = item.data.filter((d) => d.content.toLowerCase().includes(searchString)).map((innerItem) =>  {
+        const position = innerItem.content.toLowerCase().indexOf(searchString.toLowerCase());
+        let matches = innerItem.content.substring(position, searchString.length + position);
+        let matchesAfter = innerItem.content.substring(searchString.length + position, searchString.length + position + 100);
+        const highlighted = innerItem.content.replace(innerItem.content, '<mark>' + matches + '</mark>' + matchesAfter);
+        return highlighted;
+      });
+      
       return`
       <div class="search-result-item">
         <p class="section">${item.section}</p>
-        ${item.data.map((innerItem)=>
-          `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p></a>`
-        ).join("")}
-     </div>`
+        ${item.data.filter((d) => 
+          d.title.toLowerCase().includes(searchString) || 
+          d.description.toLowerCase().includes(searchString) || 
+          d.searchKeyword.toLowerCase().includes(searchString) || 
+          d.content.toLowerCase().includes(searchString)).map((innerItem) => 
+            `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`
+          ).join("")}
+      </div>`
     }).join("");
     searchResult.innerHTML = htmlString;
   };

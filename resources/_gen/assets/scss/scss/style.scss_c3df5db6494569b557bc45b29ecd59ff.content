@@ -7872,13 +7872,13 @@ form label {
   display: inline-block;
   margin-bottom: 5px;
   margin-top: 15px;
-  font-size: 20px; }
+  font-size: 18px; }
   .search-result-item > .section:empty {
     display: none; }
 
 .search-result-item .block {
   display: block;
-  padding: 0.75rem 1rem;
+  padding: 0.65rem 1rem;
   border-radius: 4px;
   border: 1px solid #eee;
   background-color: #fff;
@@ -7888,10 +7888,18 @@ form label {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1; }
+    .search-result-item .block p mark:not(:first-child), .search-result-item .block p .mark:not(:first-child) {
+      background-color: transparent; }
+    .search-result-item .block p mark, .search-result-item .block p .mark {
+      color: #F16F33; }
+    .search-result-item .block p:empty {
+      display: none; }
   .search-result-item .block:focus, .search-result-item .block:hover {
     background-color: #F16F33; }
     .search-result-item .block:focus *, .search-result-item .block:hover * {
       color: white !important; }
+    .search-result-item .block:focus mark, .search-result-item .block:focus .mark, .search-result-item .block:hover mark, .search-result-item .block:hover .mark {
+      color: #050038 !important; }
 
 #search-result-body:empty::after {
   content: "No result to show!";

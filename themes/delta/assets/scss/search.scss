@@ -48,14 +48,14 @@
     display: inline-block;
     margin-bottom: 5px;
     margin-top: 15px;
-    font-size: 20px;
+    font-size: 18px;
     &:empty {
       display: none;
     }
   }
   .block {
     display: block;
-    padding: 0.75rem 1rem;
+    padding: 0.65rem 1rem;
     border-radius: 4px;
     border: 1px solid #eee;
     background-color: #fff;
@@ -65,12 +65,24 @@
       display: -webkit-box;
       -webkit-box-orient: vertical;
       -webkit-line-clamp: 1;
+      mark:not(:first-child) {
+        background-color: transparent;
+      }
+      mark {
+        color: $color-primary;
+      }
+      &:empty {
+        display: none;
+      }
     }
     &:focus,
     &:hover {
       background-color: $color-primary;
       * {
         color: white !important;
+      }
+      mark {
+        color: $dark !important;
       }
     }
   }
