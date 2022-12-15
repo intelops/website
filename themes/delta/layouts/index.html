@@ -7,9 +7,9 @@
     <div class="row justify-content-center">
       <div class="col-lg-12 text-center">
         <div class="block">
-          <p class="subtitle">{{.subtitle | markdownify}}</p>
-          <h1 class="title text-xl mb-3 banner-title">{{.title | markdownify}}</h1>
-          <p class="mb-4">{{.description | markdownify}}</p>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h1 class="title text-xl mb-3 banner-title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h1>
+          <p class="mb-4" {{with .description_color}}style="color:{{.}} !important"{{end}}>{{.description | markdownify}}</p>
 
           {{with .button}}
           {{if .enable}}
@@ -64,8 +64,8 @@
     <div class="row">
       <div class="col-lg-8 text-center text-lg-start">
         <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="h1 title">{{.title | markdownify}}</h2>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="h1 title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
 
           {{with .button}}
           {{if .enable}}
@@ -84,9 +84,9 @@
       <div class="col-lg-4 features-block">
         {{range first 1 $features_blocks}}
         <div class="block">
-          <i class="icon {{.icon}}"></i>
-          <h3 class="title h4">{{.title | markdownify}}</h3>
-          <p class="mb-0">{{.content | truncate 96}}</p>
+          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+          <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
         </div>
         {{end}}
       </div>
@@ -94,9 +94,9 @@
       <div class="col-lg-4 features-block">
         {{range first 2 (after 1 $features_blocks)}}
         <div class="block">
-          <i class="icon {{.icon}}"></i>
-          <h3 class="title h4">{{.title | markdownify}}</h3>
-          <p class="mb-0">{{.content | truncate 96}}</p>
+          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+          <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
         </div>
         {{end}}
       </div>
@@ -104,9 +104,9 @@
       <div class="col-lg-4 features-block">
         {{range first 3 (after 3 $features_blocks)}}
         <div class="block">
-          <i class="icon {{.icon}}"></i>
-          <h3 class="title h4">{{.title | markdownify}}</h3>
-          <p class="mb-0">{{.content | truncate 96}}</p>
+          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+          <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
         </div>
         {{end}}
       </div>
@@ -133,7 +133,7 @@
       <div class="col-lg-10">
         <div class="section-title">
           {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
       </div>
       <div class="col-lg-12">
@@ -142,8 +142,8 @@
           <div class="col-lg-3 col-6 fact-item">
             <div class="block">
               <i class="icon {{.icon}}"></i>
-              <h4 class="text-xl"><span class="counter" data-count="{{.counter}}">0</span>{{.counter_suffix}}</h4>
-              <p class="mb-0">{{.content | markdownify}}</p>
+              <h4 class="text-xl" {{with .counter_color}}style="color:{{.}} !important"{{end}}><span class="counter" data-count="{{.counter}}">0</span>{{.counter_suffix}}</h4>
+              <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | markdownify}}</p>
             </div>
           </div>
           {{end}}
@@ -170,10 +170,10 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-1 {{with .content_position}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
         <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
-        {{with .content}}<div class="content">{{. | markdownify}}</div>{{end}}
+        <div class="content" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | markdownify}}</div>
       </div>
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         {{with .image}}
@@ -196,10 +196,10 @@
     <div class="row align-items-center">
       <div class="col-lg-6 order-1 {{with .content_position}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
         <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
-        {{with .content}}<div class="content">{{. | markdownify}}</div>{{end}}
+        <div class="content" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | markdownify}}</div>
       </div>
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         <div class="post-carousel swiper-container text-center pb-6">
@@ -238,8 +238,8 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
       </div>
     </div>
@@ -259,10 +259,10 @@
             {{range .}}
             <div class="swiper-slide">
               <div class="testiminials-block rounded-lg">
-                <h5 class="mb-1">{{.name | markdownify}}</h5>
-                <p class="mb-1">{{.designation | markdownify}}</p>
+                <h5 class="mb-1" {{with .name_color}}style="color:{{.}} !important"{{end}}>{{.name | markdownify}}</h5>
+                <p class="mb-1" {{with .designation_color}}style="color:{{.}} !important"{{end}}>{{.designation | markdownify}}</p>
                 <div class="testimonials-rating mb-2" style="--testimonials_rating:{{.rating}}" title="Rating of this product is {{.rating}} out of 5.0"></div>
-                <div class="testimonials-review">{{.content | markdownify}}</div>
+                <div class="testimonials-review" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | markdownify}}</div>
               </div>
             </div>
             {{end}}
@@ -284,9 +284,9 @@
     <div class="row">
       <div class="col-lg-12 text-center">
         <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title mb-3 banner-title">{{.title | markdownify}}</h2>
-          {{with .description}} <p>{{. | markdownify}}</p> {{end}}
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="title mb-3 banner-title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
+          <p {{with .description_color}}style="color:{{.}} !important"{{end}}>{{.description | markdownify}}</p>
         </div>
       </div>
     </div>

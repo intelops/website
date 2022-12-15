@@ -20,13 +20,13 @@ function initLunr() {
       lunrIndex = lunr(function () {
         this.ref("url");
         this.field("title", {
-          boost: 15,
+          boost: 50,
         });
-        this.field("tags", {
-          boost: 10,
+        this.field("searchKeyword", {
+          boost: 100,
         });
         this.field("content", {
-          boost: 5,
+          boost: 20,
         });
 
         this.pipeline.remove(lunr.stemmer);
@@ -34,7 +34,9 @@ function initLunr() {
 
         // Feed lunr with each file and let lunr actually index them
         pagesIndex.forEach(function (page) {
-          this.add(page);
+          if ("Learning center" == page.section) {
+            this.add(page);
+          }
         }, this);
       });
     })

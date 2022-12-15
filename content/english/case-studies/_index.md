@@ -14,5 +14,5 @@ signup_block:
   button:
     level: "Sign Up Now"
     link: "/sign-up"
-
+ignoreSearch: true
 ---

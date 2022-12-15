@@ -2,8 +2,13 @@
 date: "2021-07-14"
 draft: false
 title: "Digital Marketing / Paid Media Manager"
+title_color: ""
 job_nature: "Full Time"
+job_nature_color: ""
+job_nature_icon_color: ""
 category: "Digital Marketing"
+category_color: ""
+category_icon_color: ""
 ---
 
 #### What Is the role?

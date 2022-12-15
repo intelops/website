@@ -3,7 +3,7 @@ title: Services
 description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti
   praesentium quis.
 layout: services
-bannertext: banner heading
+bannertext: Service
 bannerimage: images/banner-bg-1.jpg
 enable: true
 services:

@@ -795,6 +795,71 @@ main:empty {
 }
 
 // blog style
+.blog-banner {
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 5rem 0 8rem;
+
+  .container {
+    position: relative;
+    z-index: 1;
+  }
+
+  &-shape-1,
+  &-shape-2,
+  &-shape-3 {
+    .path {
+      fill: $color-primary;
+    }
+  }
+
+  &-shape-1 {
+    position: absolute;
+    left: 20%;
+    top: 25%;
+  }
+  &-shape-2 {
+    position: absolute;
+    right: 20%;
+    top: 25%;
+  }
+  &-shape-3 {
+    position: absolute;
+    right: 25%;
+    bottom: 15%;
+  }
+  &-border {
+    position: absolute;
+    bottom: -3.75rem;
+    left: 0;
+    width: 100%;
+    stroke: $color-primary;
+  }
+
+  .category-list {
+    li {
+      margin-bottom: 0.725rem;
+      a {
+        font-size: 1rem;
+        padding: 3px 1rem;
+        border: 1px solid rgba($color-primary, 0.2);
+        border-radius: 1.875rem;
+        display: block;
+        color: $text-color;
+
+        &.active,
+        &:hover {
+          border-color: $color-primary;
+          background: $color-primary;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
 .blog-card {
   .card-body {
     padding: 0 30px;
@@ -887,6 +952,15 @@ main:empty {
     margin-right: 25px;
     @include mobile {
       margin-bottom: 20px;
+    }
+  }
+}
+.post-meta {
+  a {
+    color: $text-dark;
+    &:hover {
+      color: $color-primary;
+      text-decoration: underline;
     }
   }
 }
@@ -1266,6 +1340,13 @@ footer {
   @include tablet {
     padding: 60px 0 0;
   }
+  .btn-search-footer {
+    cursor: text;
+    border: 2px solid rgba($white, 0.4) !important;
+    &:hover {
+      border: 2px solid rgba($white, 1) !important;
+    }
+  }
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
@@ -1451,8 +1532,12 @@ footer {
     ul {
       padding-top: 2px;
       margin-bottom: 0;
+      li:not(:last-child) {
+        border-bottom: 0;
+      }
       a {
         font-size: 0.9rem;
+        padding-left: 18px;
         &:hover {
           opacity: 0.7;
         }

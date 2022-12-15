@@ -11,6 +11,8 @@ social:
   - icon : "fab fa-twitter"
     name: "twitter"
     link : "#!"
+    
+ignoreSearch: true
 ---
 
 Facilis architecto quis maxime nam at, optio harum a velit nulla repellat ad culpa dolorem ab ducimus, porro enim fugit incidunt expedita. Caut repudiandae a assumenda tempora!

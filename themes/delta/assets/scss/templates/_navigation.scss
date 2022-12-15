@@ -2,7 +2,7 @@
 .navigation {
   transition: 0.15s ease-out;
   position: sticky;
-  z-index: 9999;
+  z-index: 333;
   top: 0;
   @include mobile {
     padding: 5px 0;
@@ -241,6 +241,15 @@
         display: block;
       }
     }
+  }
+}
+
+// search
+.btn-search {
+  width: 44px;
+  zoom: 0.9;
+  @include desktop-lg {
+    zoom: 0.8;
   }
 }
 

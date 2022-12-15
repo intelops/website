@@ -8,7 +8,7 @@
 <!-- strat of blog-details -->
 <section class="section-sm">
   <div class="container container-delta">
-    <div class="row justify-content-center">
+    <div class="row gy-3 justify-content-center">
       <div class="col-lg-4 blog-sidebar">
         <div class="block pe-0 pe-lg-2">
           {{ $series := .Params.series }}
@@ -18,7 +18,7 @@
 
           {{ $seriesPosts := (where (where site.RegularPages "Section" "blog") "Params.series" $series) }}
           {{ $permalink := .RelPermalink }}
-          <div class="mt-4 ps-3">
+          <div class="mt-4 ps-3 d-none d-lg-block">
             <p style="letter-spacing:1px;opacity: 0.6;">{{if eq 0 (len $seriesPosts)}}NO {{end}}MORE IN THIS SERIES</p>
             <div class="content">
               <ul>
@@ -48,9 +48,20 @@
         </div>
         {{ end }}
 
-        <div class="mb-5">
+        <div class="mb-1">
           <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
           <span class="text-muted small d-inline-block" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+        </div>
+
+        {{ $categories := .Params.categories }}
+        <div class="mb-5 post-meta">
+          <span class="text-muted small d-inline-block" style="opacity:.75">
+            <strong class="text-dark">Categories :</strong> {{ range $i, $e := .Params.categories }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/categories/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
+            {{ with .Params.tags }}
+            <span class="mx-1 text-dark-50">|</span>
+            <strong class="text-dark">Tags :</strong>  {{ range $i, $e := . }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/tags/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
+            {{ end }}
+          </span>
         </div>
 
         <div class="content">

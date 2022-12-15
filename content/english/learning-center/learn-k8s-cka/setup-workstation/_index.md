@@ -2,6 +2,7 @@
 title: "Setup workstation"
 date: 2022-11-12T11:02:05+06:00
 description: "How to prepare your local workstation to learn K8s"
+searchKeyword: "workstation"
 weight: 1
 draft: false
 ---

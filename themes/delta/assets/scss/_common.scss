@@ -177,10 +177,10 @@ a:hover {
     a {
       font-weight: 500;
       border-radius: 12px !important;
-      height: 45px;
-      width: 45px;
+      height: 38px;
+      width: 38px;
       padding: 0;
-      line-height: 45px;
+      line-height: 38px;
       text-align: center;
       color: $text-dark;
       &:hover,
@@ -434,7 +434,7 @@ form label {
 .content {
   color: #777;
   p {
-    color: #777;
+    color: inherit;
   }
   a {
     color: $color-primary !important;
@@ -503,7 +503,7 @@ form label {
   }
 
   a {
-    color: #777;
+    color: inherit;
 
     &:hover {
       color: $color-primary;
@@ -527,7 +527,7 @@ form label {
 
     li {
       margin-bottom: 10px;
-      color: #777;
+      color: inherit;
     }
   }
 

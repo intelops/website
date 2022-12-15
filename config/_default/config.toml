@@ -17,6 +17,8 @@ maxAge = "720h"
 quality = 100
 [markup.goldmark.renderer]
 unsafe = true
+[markup.goldmark.parser.attribute]
+block = true
 [mediaTypes."application/manifest+json"]
 suffixes = ["webmanifest"]
 [mediaTypes."text/netlify"]
@@ -32,6 +34,7 @@ rel = "manifest"
 home = ["HTML", "RSS", "WebAppManifest","JSON"]
 [taxonomies]
 category = "categories"
+tag = "tags"
 series = "series"
 
 # table of content
