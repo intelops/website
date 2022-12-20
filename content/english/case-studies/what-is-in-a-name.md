@@ -3,6 +3,10 @@ date: 2022-08-10T04:00:00Z
 title: "What's in a name?"
 description: "Read about why we called our company 'Cinderblock'."
 image: "/images/my-name-is-cinderblock.jpg"
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: true
 ---
 
 Why are we called Cinderblock?
