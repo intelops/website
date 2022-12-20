@@ -3,6 +3,10 @@ date: 2022-06-13T04:00:00Z
 title: "I was a lousy dictator"
 description: "Stop dictating how others should work"
 image: "/images/wrong-way.jpg"
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: true
 ---
 Dictatorship sucks!
 
