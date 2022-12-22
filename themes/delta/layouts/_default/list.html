@@ -9,11 +9,18 @@
       <div class="col-lg-9 mx-auto">
         <h1 class="mb-5" {{with .Params.bannertext_color}}style="color: {{.}}"{{end}}>{{ with .Params.bannertext}}{{. | markdownify}}{{else}}{{.Title}}{{end}}</h1>
         <ul class="list-inline category-list">
-          <li class="list-inline-item"><a href="/blog/">All</a></li>
           {{ $current := .RelPermalink }}
-          {{ range $name, $items := site.Taxonomies.categories }}
-          {{ $taxonomyCurrent := add (add (`categories/` | relLangURL) ($name | urlize | lower)) `/` }}
-          <li class="list-inline-item"><a {{if eq $current $taxonomyCurrent}}class="active"{{end}} href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a></li>
+          <li class="list-inline-item"><a {{if eq $current (`blog/` | relLangURL) }}class="active"{{end}} href="/blog/">All</a></li>
+          {{ if ne .Section "tags" }}
+            {{ range $name, $items := site.Taxonomies.categories }}
+            {{ $taxonomyCurrent := add (add (`categories/` | relLangURL) ($name | urlize | lower)) `/` }}
+            <li class="list-inline-item"><a {{if eq $current $taxonomyCurrent}}class="active"{{end}} href="{{ `categories/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a></li>
+            {{ end }}
+          {{ else }}
+            {{ range $name, $items := site.Taxonomies.tags }}
+            {{ $taxonomyCurrent := add (add (`tags/` | relLangURL) ($name | urlize | lower)) `/` }}
+            <li class="list-inline-item"><a {{if eq $current $taxonomyCurrent}}class="active"{{end}} href="{{ `tags/` | relLangURL }}{{ $name | urlize | lower }}/">{{ $name | humanize }}</a></li>
+            {{ end }}
           {{ end }}
         </ul>
       </div>
@@ -69,7 +76,7 @@
   </svg>
 </div>
 
-<section class="section pb-0" data-aos="fade-in">
+<section class="section pb-0">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
       {{ $paginator := .Paginate (where .Data.Pages "Section" "in" site.Params.mainSections) }}
