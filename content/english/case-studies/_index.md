@@ -1,6 +1,6 @@
 ---
 title: Case Studies
-description: Learn DevOps, DevSecOps, MLOps, AIOps
+description: Democratizing Managed Services for modern tech. DevOps, DevSecOps, MLOps, AIOps, Datascience, etc.
 bannertext: Case Studies
 bannertext_color: "#000"
 bannerimage: images/blog-banner1.jpg
