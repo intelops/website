@@ -50,36 +50,37 @@
 {{with .Params.work_process}}
 <section class="section pb-0">
   <div class="container container-delta">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center mb-5">
         <div class="section-title">
-          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
-          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}}"{{end}}>{{.subtitle | markdownify}}</p>
+          <h2 class="title banner-title" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h2>
         </div>
       </div>
-      <div class="col-lg-12">
-        <div class="row gy-4">
-          {{ $.Scratch.Set "counter" 0 }}
-          {{range .process_item}}
-          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-          <div class="col-lg-3 col-sm-6 process-item">
-            {{$n := $.Scratch.Get "counter"}}
-            <div class="block pt-4" data-count="{{if (le $n 9)}}0{{$n}}{{ else }}{{$n}}{{ end }}">
-              {{with .image}}
-              <div class="process-image">
+      {{range $i, $e := .process_item}}
+      <div class="process-item">
+        <div class="row gy-4 gy-lg-0 gx-4 gx-lg-5 justify-content-between">
+          <div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-1 is-right{{else}} is-left{{end}}">
+            {{with .image}}
+            <div class="image-block pt-5">
+              <div class="process-image px-4 rounded-lg">
                 {{$img:= resources.Get . }}
                 {{$img:= $img.Resize "350x"}}
                 {{$imgWebp:= $img.Resize "350x webp"}}
-                <img loading="lazy" decoding="async" class="w-100" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                <img class="w-100 rounded-lg" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
               </div>
-              {{end}}
-              <h3 class="title h4" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h3>
+            </div>
+            {{end}}
+          </div>
+          <div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-0{{end}}">
+            <div class="content-block" data-count="{{add $i 1}}">
+              <h3 class="title banner-title h4 text-dark" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h3>
               <p class="mb-0" {{with .content_color}}style="color:{{.}}"{{end}}>{{.content | markdownify}}</p>
             </div>
           </div>
-          {{end}}
         </div>
       </div>
+      {{end}}
     </div>
   </div>
 </section>

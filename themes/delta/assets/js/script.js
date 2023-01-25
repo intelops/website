@@ -278,6 +278,24 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  var $processItem = $(".process-item");
+  $processItem.each(function () {
+    var $this = $(this);
+    $(window).on("scroll", function () {
+      if (
+        $this.offset().top - $(window).scrollTop() <
+        $(window).outerHeight() - 250
+      ) {
+        $this.find(".image-block").addClass("active");
+      }
+    });
+  });
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() === 0) {
+      $processItem.find(".image-block").removeClass("active");
+    }
+  });
 });
 
 //custom

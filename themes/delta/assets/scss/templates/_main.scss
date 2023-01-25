@@ -590,22 +590,18 @@ main:empty {
 
 // process-item
 .process-item {
-  .process-image {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    padding: 30px;
-    padding-bottom: 0;
-    margin-bottom: 30px;
-    img {
-      border-top-left-radius: 6px;
-      border-top-right-radius: 6px;
-    }
+  position: relative;
+  margin-bottom: 120px;
+  @include tablet {
+    margin-bottom: 0;
   }
-
-  .block {
+  .content-block {
     position: relative;
+    padding: 100px 30px;
     &::before {
-      position: absolute;
+      display: inline-block;
+      margin-bottom: 30px;
+      text-align: center;
       content: attr(data-count);
       height: 50px;
       width: 50px;
@@ -613,19 +609,68 @@ main:empty {
       font-size: 25px;
       font-family: $font-primary;
       font-weight: 900;
-      top: 0;
-      left: calc(50% - 25px);
       background-color: $white;
       border-radius: 100%;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
+    }
+  }
+  .image-block {
+    perspective: 1800px;
+    opacity: 0;
+    .process-image {
+      opacity: 0;
+      will-change: transform;
+      transform-origin: center top;
+      img {
+        transform: translateY(100px);
+      }
+    }
+    &.active {
+      opacity: 1;
+      .process-image {
+        opacity: 1;
+        transition: 0.45s;
+        img {
+          transform: translateY(40px);
+          transition: 0.6s cubic-bezier(0.17, 0.84, 0.44, 1);
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+  .is-left {
+    .process-image {
+      transform: translate(0, 70px) rotate(-4e-5deg) rotateY(15deg)
+        rotateX(15deg);
+    }
+    .active {
+      .process-image {
+        transform: translate(0, 0) rotate(-4e-5deg) rotateY(15deg)
+          rotateX(9.99994deg);
+      }
+    }
+  }
+  .is-right {
+    .process-image {
+      transform: translate(0, 70px) rotate(-4e-5deg) rotateY(-20deg)
+        rotateX(15deg);
+    }
+    .active {
+      .process-image {
+        transform: translate(0, 0) rotate(-4e-5deg) rotateY(-20deg)
+          rotateX(9.99994deg);
+      }
     }
   }
   &:nth-child(1),
   &:nth-child(5) {
     .process-image {
       background-color: $color-secondary;
+      img {
+        box-shadow: 0 0 60px darken($color-secondary, 25%);
+      }
     }
-    .block::before {
+    .content-block::before {
       color: $color-secondary;
     }
   }
@@ -633,8 +678,11 @@ main:empty {
   &:nth-child(6) {
     .process-image {
       background-color: $color-tertiary;
+      img {
+        box-shadow: 0 0 60px darken($color-tertiary, 25%);
+      }
     }
-    .block::before {
+    .content-block::before {
       color: $color-tertiary;
     }
   }
@@ -642,8 +690,11 @@ main:empty {
   &:nth-child(7) {
     .process-image {
       background-color: $color-quaternary;
+      img {
+        box-shadow: 0 0 60px darken($color-quaternary, 25%);
+      }
     }
-    .block::before {
+    .content-block::before {
       color: $color-quaternary;
     }
   }
@@ -651,8 +702,11 @@ main:empty {
   &:nth-child(8) {
     .process-image {
       background-color: $color-primary;
+      img {
+        box-shadow: 0 0 60px darken($color-primary, 25%);
+      }
     }
-    .block::before {
+    .content-block::before {
       color: $color-primary;
     }
   }

@@ -63,7 +63,7 @@ fun_facts:
     content: Make hires 40% <br> faster
     content_color: ""
 work_process:
-  enable: false
+  enable: true
   section: how-it-works
 image_and_content_block:
   enable: false
