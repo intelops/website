@@ -17,3 +17,5 @@ This is the repo to manage all the website work, which is being developed using 
 > In the future, if I want to add a link to case-studies to make it publicly visible inside Resources or in the main menu , how to do that?
 > https://github.com/intelops/website/issues/22 
 
+> Modifying Footer:
+> https://github.com/intelops/website/issues/42 
