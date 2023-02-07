@@ -712,6 +712,76 @@ main:empty {
   }
 }
 
+// work-process-item
+.work-process-item {
+  .work-process-image {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 30px;
+    padding-bottom: 0;
+    margin-bottom: 30px;
+    img {
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+    }
+  }
+
+  .block {
+    position: relative;
+    &::before {
+      position: absolute;
+      content: attr(data-count);
+      height: 50px;
+      width: 50px;
+      line-height: 50px;
+      font-size: 25px;
+      font-family: $font-primary;
+      font-weight: 900;
+      top: 0;
+      left: calc(50% - 25px);
+      background-color: $white;
+      border-radius: 100%;
+      box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
+    }
+  }
+  &:nth-child(1),
+  &:nth-child(5) {
+    .work-process-image {
+      background-color: $color-secondary;
+    }
+    .block::before {
+      color: $color-secondary;
+    }
+  }
+  &:nth-child(2),
+  &:nth-child(6) {
+    .work-process-image {
+      background-color: $color-tertiary;
+    }
+    .block::before {
+      color: $color-tertiary;
+    }
+  }
+  &:nth-child(3),
+  &:nth-child(7) {
+    .work-process-image {
+      background-color: $color-quaternary;
+    }
+    .block::before {
+      color: $color-quaternary;
+    }
+  }
+  &:nth-child(4),
+  &:nth-child(8) {
+    .work-process-image {
+      background-color: $color-primary;
+    }
+    .block::before {
+      color: $color-primary;
+    }
+  }
+}
+
 // testiminials style
 .testimonials-carousel.has-border {
   &::after {

@@ -47,44 +47,7 @@
   </div>
 </section>
 
-{{with .Params.work_process}}
-<section class="section pb-0">
-  <div class="container container-delta">
-    <div class="row justify-content-center">
-      <div class="col-lg-8 text-center mb-5">
-        <div class="section-title">
-          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}}"{{end}}>{{.subtitle | markdownify}}</p>
-          <h2 class="title banner-title" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h2>
-        </div>
-      </div>
-      {{range $i, $e := .process_item}}
-      <div class="process-item">
-        <div class="row gy-4 gy-lg-0 gx-4 gx-lg-5 justify-content-between">
-          <div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-1 is-right{{else}} is-left{{end}}">
-            {{with .image}}
-            <div class="image-block pt-5">
-              <div class="process-image px-4 rounded-lg">
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "350x"}}
-                {{$imgWebp:= $img.Resize "350x webp"}}
-                <img class="w-100 rounded-lg" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-              </div>
-            </div>
-            {{end}}
-          </div>
-          <div class="col-lg-6 {{if not (modBool $i 2)}}order-lg-0{{end}}">
-            <div class="content-block" data-count="{{add $i 1}}">
-              <h3 class="title banner-title h4 text-dark" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h3>
-              <p class="mb-0" {{with .content_color}}style="color:{{.}}"{{end}}>{{.content | markdownify}}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      {{end}}
-    </div>
-  </div>
-</section>
-{{end}}
+{{ partial "work-process.html" . }}
 
 {{with site.GetPage "home-2" }}
 {{with .Params.image_and_content_block}}

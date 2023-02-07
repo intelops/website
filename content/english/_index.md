@@ -62,8 +62,8 @@ fun_facts:
     counter_suffix: "%"
     content: Make hires 40% <br> faster
     content_color: ""
-work_process:
-  enable: true
+how_it_works:
+  enable: false
   section: how-it-works
 image_and_content_block:
   enable: false

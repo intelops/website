@@ -155,10 +155,10 @@
 {{end}}
 {{end}}
 
-{{with .Params.work_process}}
+{{with .Params.how_it_works}}
 {{if .enable}}
 {{with site.GetPage (string .section)}}
-{{ partial "work-process.html" . }}
+{{ partial "how-it-works.html" . }}
 {{end}}
 {{end}}
 {{end}}

@@ -279,8 +279,8 @@ $(document).ready(function () {
     },
   });
 
-  var $processItem = $(".process-item");
-  $processItem.each(function () {
+  var processItem = $(".process-item");
+  processItem.each(function () {
     var $this = $(this);
     $(window).on("scroll", function () {
       if (
@@ -293,7 +293,7 @@ $(document).ready(function () {
   });
   $(window).on("scroll", function () {
     if ($(window).scrollTop() === 0) {
-      $processItem.find(".image-block").removeClass("active");
+      processItem.find(".image-block").removeClass("active");
     }
   });
 });
