@@ -1113,7 +1113,7 @@ main:empty {
     position: relative;
     z-index: 1;
     overflow-x: hidden;
-    &::after {
+    .bottom-bg {
       position: absolute;
       content: "";
       height: calc(50% - 55px);
@@ -1457,6 +1457,8 @@ a.share-icon {
 
 // footer
 footer {
+  position: relative;
+  z-index: 1;
   padding: 100px 0 0;
   @include desktop {
     padding: 90px 0 0;
@@ -1470,6 +1472,15 @@ footer {
     &:hover {
       border: 2px solid rgba($white, 1) !important;
     }
+  }
+  .footer-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
   }
   .footer-menu {
     margin-top: 60px;
@@ -1492,6 +1503,27 @@ footer {
         }
         &:hover {
           color: $white;
+        }
+      }
+    }
+  }
+  &.bg-light {
+    .btn-search-footer {
+      cursor: text;
+      border: 2px solid rgba($dark, 0.4) !important;
+      &:hover {
+        border: 2px solid rgba($dark, 1) !important;
+      }
+    }
+    .footer-menu {
+      border-top: 1px solid rgba($dark, 0.2);
+      border-bottom: 1px solid rgba($dark, 0.2);
+      ul li {
+        a {
+          color: #555;
+          &:hover {
+            color: $dark;
+          }
         }
       }
     }
