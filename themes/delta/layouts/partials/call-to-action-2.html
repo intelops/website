@@ -1,5 +1,5 @@
-{{ $bg_color := .Params.footer.bg_color | default false }}
-{{ $bg_image := resources.Get .Params.footer.bg_image | default false }}
+{{ $bg_color := .Params.footer.bg_color | default .Params.footer.bg_color }}
+{{ $bg_image := resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
 
 {{if site.Params.call_to_action.enable}}
 <section class="section pb-0 call-to-action call-to-action-2">
