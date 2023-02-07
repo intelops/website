@@ -53,4 +53,9 @@ work_process:
     content_color: ""
 
 
+footer:
+  footer_light: false
+  bg_color: "#1e384c"
+  # bg_image: "images/bg-banner-page.jpg"
+  # bg_image_overlay_color: "rgba(0,0,0,.65)"
 ---

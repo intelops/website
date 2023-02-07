@@ -47,43 +47,7 @@
   </div>
 </section>
 
-{{with .Params.work_process}}
-<section class="section pb-0">
-  <div class="container container-delta">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
-        <div class="section-title">
-          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
-          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="row gy-4">
-          {{ $.Scratch.Set "counter" 0 }}
-          {{range .process_item}}
-          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-          <div class="col-lg-3 col-sm-6 process-item">
-            {{$n := $.Scratch.Get "counter"}}
-            <div class="block pt-4" data-count="{{if (le $n 9)}}0{{$n}}{{ else }}{{$n}}{{ end }}">
-              {{with .image}}
-              <div class="process-image">
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "350x"}}
-                {{$imgWebp:= $img.Resize "350x webp"}}
-                <img loading="lazy" decoding="async" class="w-100" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-              </div>
-              {{end}}
-              <h3 class="title h4" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h3>
-              <p class="mb-0" {{with .content_color}}style="color:{{.}}"{{end}}>{{.content | markdownify}}</p>
-            </div>
-          </div>
-          {{end}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{end}}
+{{ partial "work-process.html" . }}
 
 {{with site.GetPage "home-2" }}
 {{with .Params.image_and_content_block}}

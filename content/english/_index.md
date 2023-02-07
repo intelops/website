@@ -62,7 +62,7 @@ fun_facts:
     counter_suffix: "%"
     content: Make hires 40% <br> faster
     content_color: ""
-work_process:
+how_it_works:
   enable: false
   section: how-it-works
 image_and_content_block:
@@ -151,4 +151,9 @@ blog:
 call_to_action:
   enable: false
 
+footer:
+  footer_light: false
+  # bg_color: "#1e384c"
+  # bg_image: "images/bg-banner-page.jpg"
+  # bg_image_overlay_color: "rgba(0,0,0,.65)"
 ---
