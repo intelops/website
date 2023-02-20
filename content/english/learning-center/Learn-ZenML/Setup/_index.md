@@ -33,4 +33,4 @@ I use Anaconda to create and manage my Python envionments but you can also use `
 	import zenml
 	print(zenml.__version__)
 	```  
-If you see a ZenML version displayed on your command prompt then you are all set to explore ZenML Steps and Pipelines.
+	If you see a ZenML version displayed on your command prompt then you are all set to explore ZenML Steps and Pipelines.
