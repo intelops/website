@@ -10,7 +10,7 @@ description: "How to setup your local machine to use ZenML"
 ### How to make your system ZenML Ready
 ZenML comes as a Python library so it is necessary to have a ***python>=3.7,<= 3.10*** installed on your local machine.  
 Virtual environments let's you have a stable, reproducible, and portable environment. You are in control of which package versions are installed and when they are upgraded.  
-I use Anaconda to create and manage my Python envionments but you can also use ```pyenv-virtualenv``` or ```python -m env```.
+I use Anaconda to create and manage my Python envionments but you can also use ```pyenv-virtualenv``` or ```python -m venv```.
 
 1. Let's create a new environment called *zenml_playground*.
 	```cmd
