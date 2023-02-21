@@ -2,6 +2,7 @@
 title: "Run ZenML Pipeline"
 date: 2023-02-20T15:58:23-06:00
 draft: true
+weight: 3
 # description
 description: "How to create and run your ZenML Pipeline"
 ---

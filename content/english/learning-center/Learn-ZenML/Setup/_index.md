@@ -2,6 +2,7 @@
 title: "Setup"
 date: 2023-02-20T14:06:36-06:00
 draft: true
+weight: 1
 # description
 description: "How to setup your local machine to use ZenML"
 ---
