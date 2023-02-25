@@ -21,6 +21,8 @@ link = "plugins/webfont-loader/webfont-loader-2.min.js"
 [[params.plugins.js]]
 link = "plugins/scrollmenu/scrollmenu.min.js"
 [[params.plugins.js]]
+link = "plugins/infinite-scroll/infinite-scroll.pkgd.js"
+[[params.plugins.js]]
 link = "plugins/search/auto-complete.js"
 [[params.plugins.js]]
 link = "plugins/search/search.js"
