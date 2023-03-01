@@ -296,14 +296,6 @@ $(document).ready(function () {
       processItem.find(".image-block").removeClass("active");
     }
   });
-
-  $(".infinite-scroll").infiniteScroll({
-    // options
-    path: ".nextpage",
-    append: ".blog-card",
-    history: false,
-    status: ".page-load-status",
-  });
 });
 
 //custom

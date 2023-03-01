@@ -1,6 +1,6 @@
 ---
 title: "Vishwas Prasanna"
-image: "images/avatar/vishwas-prasanna.jpg"
+image: "images/avatar/02.jpg"
 social:
   - icon : "fab fa-linkedin-in"
     name: "linkedin"
