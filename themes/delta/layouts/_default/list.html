@@ -1,5 +1,3 @@
-list
-
 {{ define "main" }}
 
 {{ partial "header.html" . }}
@@ -114,7 +112,6 @@ list
         <li class="{{ if eq $currentPageNumber .PageNumber }}active{{ end }}">
           <a href="{{ $baseUrl }}{{ .URL }}">{{ .PageNumber }}</a>
         </li>
-        {{ .URL }}
         {{ end }}
         <li>
           <a href="{{ if .HasNext }}{{ .Next.URL }}{{ else }}#!{{ end }}" class="{{ if .HasNext }}nextpage{{ end }}">
