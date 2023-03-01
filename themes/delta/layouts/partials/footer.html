@@ -1,7 +1,23 @@
+{{ $footer_light := "" }}
+{{ $bg_color := "" }}
+{{ $bg_image := "" }}
+{{ $overlay := "" }}
+
+{{ if or .Params.footer.footer_light site.Params.footer.footer_light }}
 {{ $footer_light := .Params.footer.footer_light | default site.Params.footer.footer_light }}
-{{ $bg_color := .Params.footer.bg_color | default .Params.footer.bg_color }}
+{{ end }}
+
+{{ if or .Params.footer.bg_color site.Params.footer.bg_color }}
+{{ $bg_color := .Params.footer.bg_color | default site.Params.footer.bg_color }}
+{{ end }}
+
+{{ if or .Params.footer.bg_image site.Params.footer.bg_image }}
 {{ $bg_image := resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
+{{ end }}
+
+{{ if or .Params.footer.bg_image_overlay_color site.Params.footer.bg_image_overlay_color }}
 {{ $overlay := .Params.footer.bg_image_overlay_color | default site.Params.footer.bg_image_overlay_color }}
+{{ end }}
 
 <footer class="{{if $footer_light}}bg-light{{else}}bg-dark{{end}} px-1 wave-block" 
  style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}{{- if $bg_image -}}background-image: url({{$bg_image | absURL}}); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;{{- end -}}">
