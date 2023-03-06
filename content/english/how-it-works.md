@@ -28,25 +28,25 @@ work_process:
   - title: "Ultimate Guide"
     title_color: ""
     image: "images/process/01.jpg"
-    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
+    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     content_color: ""
 
   - title: "How to webinar"
     title_color: ""
     image: "images/process/02.jpg"
-    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
+    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     content_color: ""
     
   - title: "workshop & FAQ"
     title_color: ""
     image: "images/process/03.jpg"
-    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
+    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     content_color: ""
     
   - title: "Collaboration"
     title_color: ""
     image: "images/process/04.jpg"
-    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
+    content: "Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat. Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat."
     content_color: ""
 
 

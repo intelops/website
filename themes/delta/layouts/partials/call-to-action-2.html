@@ -1,6 +1,20 @@
+{{ $bg_color := "" }}
+{{ $bg_image := "" }}
+
+{{ if or .Params.footer.bg_color site.Params.footer.bg_color }}
+{{ $bg_color = .Params.footer.bg_color | default site.Params.footer.bg_color }}
+{{ end }}
+
+{{ if or .Params.footer.bg_image site.Params.footer.bg_image }}
+{{ $bg_image = resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
+{{ end }}
+
 {{if site.Params.call_to_action.enable}}
 <section class="section pb-0 call-to-action call-to-action-2">
-  <div class="container container-delta">
+  {{ if not $bg_image }}
+  <div class="bottom-bg" style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}"></div>
+  {{ end }}
+  <div class="container container-delta" {{- if $bg_image -}}style="margin-bottom:100px"{{- end -}}>
     <div class="row">
       <div class="col-lg-12">
         <div class="block bg-white rounded-lg shadow">
