@@ -1,6 +1,11 @@
 backend:
   name: git-gateway
+  repo: intelops/website
   branch: chandu # Branch to update (optional; defaults to master)
+  base_url: https://intelops.ai
+  auth_endpoint: api/auth
+
+local_backend: true
 
 publish_mode: editorial_workflow
 media_folder: "assets/images" # Media files will be stored in the repo under static/images/uploads
