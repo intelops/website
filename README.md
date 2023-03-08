@@ -19,3 +19,6 @@ This is the repo to manage all the website work, which is being developed using 
 
 > Modifying Footer:
 > https://github.com/intelops/website/issues/42 
+
+>how to disable and enable pages and/or content from public view?
+> https://github.com/intelops/website/issues/51
