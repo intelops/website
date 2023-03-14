@@ -115,13 +115,25 @@
               aria-expanded="false">
               {{ .Name }}
             </a>
-            <ul class="dropdown-menu">
+            <ul class="dropdown-menu {{if .Params.isMenuLarge}}dropdown-lg {{end}}">
               {{ range .Children }}
               {{ $childURL := .URL | absLangURL }}
               {{ $active := eq $childURL $pageURL }}
               <li>
                 <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-                href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+                href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">
+                  {{ if .Pre }}
+                  {{ $icon := .Pre }}
+                  {{ if fileExists (add `assets/` $icon) }}
+                  {{ $preIcon:= resources.Get $icon }}
+                  <img src="{{$preIcon.RelPermalink}}" alt="icon" height="22px" width="22px">
+                  {{ end }}
+                  {{ end }}
+                  <span>{{ .Name }}</span>
+                  {{ if .Post }}
+                  {{.Post}}
+                  {{ end }}
+                </a>
               </li>
               {{ end }}
             </ul>
