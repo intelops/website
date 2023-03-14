@@ -121,10 +121,10 @@ weight = 20
 name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 30
-[[main]]
-name = "Services"
-url = "services/"
-weight = 40
+#[[main]]
+#name = "Services"
+#url = "services/"
+#weight = 40
 [[main]]
 hasChildren = true
 name = "Resources"
