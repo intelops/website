@@ -122,6 +122,7 @@
               <li>
                 <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
                 href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">
+                <span class="d-flex align-items-start">
                   {{ if .Pre }}
                   {{ $icon := .Pre }}
                   {{ if fileExists (add `assets/` $icon) }}
@@ -129,10 +130,11 @@
                   <img src="{{$preIcon.RelPermalink}}" alt="icon" height="22px" width="22px">
                   {{ end }}
                   {{ end }}
-                  <span>{{ .Name }}</span>
-                  {{ if .Post }}
-                  {{.Post}}
-                  {{ end }}
+                  <span class="ms-1">
+                    <span>{{ .Name }}</span>
+                    {{ if .Post }}{{.Post}}{{ end }}
+                  </span>
+                </span>
                 </a>
               </li>
               {{ end }}
