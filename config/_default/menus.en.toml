@@ -65,7 +65,7 @@ isMenuLarge = true
 name = "Capten"
 parent = "Platform"
 url = "/capten"
-weight = 1
+weight = 3
 pre = "images/icons/capten.png"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
@@ -81,7 +81,7 @@ post = "<small>Convert leads and close sales deals faster.</small>"
 name = "Opty"
 parent = "Platform"
 url = "/opty"
-weight = 2
+weight = 1
 pre = "images/icons/optimizor.png"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
