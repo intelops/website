@@ -751,7 +751,7 @@ form label {
   float: right;
 }
 
-.dark-bar {
+.dark-bar:not(.navigation-alt) {
   background-color: $banner-primary;
 }
 

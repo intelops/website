@@ -110,6 +110,16 @@
       transition: 0s;
     }
   }
+  &.navigation-alt {
+    .nav-item {
+      .nav-link {
+        color: $nav-menu-text !important;
+        &:hover {
+          color: $color-primary !important;
+        }
+      }
+    }
+  }
 
   .dropdown-menu {
     border: 0;
