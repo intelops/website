@@ -1,6 +1,6 @@
 <!-- navigation -->
 {{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") }}
-<header class="navigation dark-bar {{ if $headerWhite }} navigation-alt {{ end }}" id="main-header">
+<header class="navigation dark-bar d-none {{ if $headerWhite }} navigation-alt {{ end }} navigation-bottom">
   <div class="container container-delta">
     <!-- navbar -->
     <nav class="navbar navbar-expand-xl navbar-light" id="main-navbar">
@@ -42,12 +42,12 @@
         {{ $logoWidth:= $logoWidth | default $logoLightDefaultWidth }}
         {{ $optionsLight := add (string $logoWidth) " webp" }}
         {{ .Scratch.Set "logoLight" ($logoLight.Resize $optionsLight).RelPermalink }}
-        <span id="logo-img-light" src="{{ if $headerWhite }}{{.Scratch.Get `logo`}}{{else}}{{.Scratch.Get `logoLight`}}{{end}}"></span>
+        <span id="logo-img-light" src="{{.Scratch.Get `logo`}}"></span>
         {{ end }}
         {{ end }}
 
         <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}} id="logo-img"
-          width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{ if $headerWhite }}{{.Scratch.Get `logo`}}{{else}}{{.Scratch.Get `logoLight`}}{{end}}"
+          width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{.Scratch.Get `logo`}}"
           alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
         {{ else }}
         <strong class="text-danger">`{{$logoPath}}` doesn't exist</strong>
@@ -89,13 +89,8 @@
           <i class="d-inline fas fa-bars"></i>
           <i class="d-none far fa-times-circle"></i>
         </button>
-
-        {{ if site.Params.fullSiteSearch }}
-        <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
-          <i class="fas fa-search"></i>
-        </button>
-        {{ end }}
       </div>
+      {{ $section := .Section | urlize}}
 
       <div class="collapse navbar-collapse text-center" id="navigation">
         <ul class="navbar-nav mx-auto align-items-center">
@@ -110,13 +105,15 @@
             {{ range .Children }}
             {{ $childURL := .URL | absLangURL }}
             {{ $active := eq $childURL $pageURL }}
-            {{ if $active }}active{{ end }}
-            {{ end }}">
+            {{ if $active }} active {{end }}
+            {{ end }} {{ if ne $section (.Name | urlize) }} d-none {{end }}">
             <a class="nav-link nav-menu-text dropdown-toggle" id="nav-menu" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
-              {{ .Name }}
+              {{ range .Children }}
+              {{ if strings.Contains $pageURL (.Name | urlize) }}{{.Name}}{{end}}
+              {{ end }}
             </a>
-            <ul class="dropdown-menu {{if .Params.isMenuLarge}}dropdown-lg {{end}}">
+            <ul class="dropdown-menu h-auto {{if .Params.isMenuLarge}}dropdown-lg {{end}}">
               {{ range .Children }}
               {{ $childURL := .URL | absLangURL }}
               {{ $active := eq $childURL $pageURL }}
@@ -141,8 +138,10 @@
               {{ end }}
             </ul>
           </li>
+          {{ end }}
           {{ else }}
-          <li class="nav-item {{if $active}}active{{end}}">
+          {{if $active}}
+          <li class="nav-item">
             <a class="nav-link nav-menu-text" id="nav-menu" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
               href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
           </li>
@@ -191,107 +190,9 @@
           </a>
           {{ end }}
           {{ end }}
-
-          {{ if site.Params.fullSiteSearch }}
-          <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
-            <i class="fas fa-search"></i>
-          </button>
-          {{ end }}
         </div>
       </div>
     </nav>
   </div>
 </header>
 <!-- /navigation -->
-
-{{ if site.Params.fullSiteSearch }}
-<div class="modal search-modal" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog search-modal-dialog">
-    <div class="modal-content border-0"><div class="modal-header border-0" style="padding:1rem"><div class="input-group border-0">
-      <span class="input-group-text bg-transparent text-dark border-end-0" id="Search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
-      </span>
-      <input type="text" id="searchInput" class="form-control search-form-control shadow-none text-dark border-start-0 ps-0 ms-0" placeholder="Search Intelops .." aria-label="Search" aria-describedby="Search">
-    </div></div>
-    <div class="modal-body">
-      <div id="search-result-body"></div>
-    </div></div>
-  </div>
-</div>
-
-<script>
-  const searchModal = document.getElementById('searchModal');
-  const searchInput = document.getElementById('searchInput');
-  const searchResult = document.getElementById("search-result-body");
-  searchModal.addEventListener('shown.bs.modal', () => {searchInput.focus()});
-  let jsonData = [];
-
-  const loadJsonData = async () => {
-    try {
-      const res = await fetch("/index.json");
-      jsonData = await res.json();
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  searchInput.addEventListener("keyup", (e) => {
-    const searchString = e.target.value.toLowerCase();
-
-    let filteredJSON = jsonData.reduce((prev, item) => [...new Set([...prev, item.section])], []).map((item) => {
-        let filteredItems = jsonData.filter((i) => i.section === item);
-        return {
-          section: item,
-          data: filteredItems,
-        };
-      });
-
-    let searchItem = filteredJSON.filter((item) => {
-      if (searchString === "" ) {
-        return "";
-      }
-      else if (item.data.find((el) => (el.title.toLowerCase().includes(searchString)))) {
-        return item
-      }
-      else if (item.data.find((el) => (el.description.toLowerCase().includes(searchString)))) {
-        return item
-      }
-      else if (item.data.find((el) => (el.searchKeyword.toLowerCase().includes(searchString)))) {
-        return item
-      }
-      else if (item.data.find((el) => (el.content.toLowerCase().includes(searchString)))) {
-        return item
-      }
-    });
-
-    displayResult(searchItem, searchString);
-  });
-
-  const displayResult = (searchItems, searchString) => {
-    const htmlString = searchItems.map((item) => {
-      const contentValue = item.data.filter((d) => d.content.toLowerCase().includes(searchString)).map((innerItem) =>  {
-        const position = innerItem.content.toLowerCase().indexOf(searchString.toLowerCase());
-        let matches = innerItem.content.substring(position, searchString.length + position);
-        let matchesAfter = innerItem.content.substring(searchString.length + position, searchString.length + position + 100);
-        const highlighted = innerItem.content.replace(innerItem.content, '<mark>' + matches + '</mark>' + matchesAfter);
-        return highlighted;
-      });
-      
-      return`
-      <div class="search-result-item">
-        <p class="section">${item.section}</p>
-        ${item.data.filter((d) => 
-          d.title.toLowerCase().includes(searchString) || 
-          d.description.toLowerCase().includes(searchString) || 
-          d.searchKeyword.toLowerCase().includes(searchString) || 
-          d.content.toLowerCase().includes(searchString)).map((innerItem) => 
-            `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`
-          ).join("")}
-      </div>`
-    }).join("");
-    searchResult.innerHTML = htmlString;
-  };
-  loadJsonData();
-
-</script>
-{{ end }}

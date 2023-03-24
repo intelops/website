@@ -110,6 +110,16 @@
       transition: 0s;
     }
   }
+  &.navigation-alt {
+    .nav-item {
+      .nav-link {
+        color: $nav-menu-text !important;
+        &:hover {
+          color: $color-primary !important;
+        }
+      }
+    }
+  }
 
   .dropdown-menu {
     border: 0;
@@ -165,6 +175,9 @@
         margin-bottom: 2px;
         line-height: 1.3;
       }
+      .dropdown-item {
+        padding: 12px 15px;
+      }
     }
   }
 
@@ -203,6 +216,7 @@
         flex-wrap: wrap;
         padding: 10px 5px;
         li {
+          transform: translateX(0) translateY(20px);
           width: 50%;
           &:first-child {
             margin-top: 0;

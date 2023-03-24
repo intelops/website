@@ -314,14 +314,29 @@ $(window).on("load", function () {
   }
 });
 
-$("#main-header").hover(
-  function () {
-    $("#secondary-header").addClass("header-sec");
-  },
-  function () {
-    $("#secondary-header").removeClass("header-sec");
-  }
-);
+// $("#main-header").hover(
+//   function () {
+//     $("#secondary-header").addClass("header-sec");
+//   },
+//   function () {
+//     $("#secondary-header").removeClass("header-sec");
+//   }
+// );
+
+var navigationBottom = $(".navigation-bottom");
+if (navigationBottom) {
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 70) {
+      navigationBottom.removeClass("d-none");
+      navigationBottom.css("background", "rgba(234, 234, 234, .95)");
+      $("#main-header").addClass("d-none");
+    } else {
+      navigationBottom.addClass("d-none");
+      navigationBottom.css("background", "rgba(234, 234, 234, .95)");
+      $("#main-header").removeClass("d-none");
+    }
+  });
+}
 
 //header on scroll changes
 $(window).on("scroll", function () {
