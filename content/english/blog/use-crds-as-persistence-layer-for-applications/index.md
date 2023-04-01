@@ -1,7 +1,7 @@
 ---
 date: 2023-03-31
-title: Using Custom Resource Definitions (CRDs) as Persistence Layer for applications in Kubernetes
-description: Data persistence on Kubernetes for cloud native applications using Kubernetes CRDs
+title: Using Custom Resources (CRs) as Persistence Layer for applications in Kubernetes
+description: Data persistence on Kubernetes for cloud native applications using Kubernetes CRs
 image: images/blog/use-crds-as-persistence-layer-for-applications/undraw_Advanced_customization.png
 
 cover_image: false
