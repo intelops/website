@@ -18,10 +18,7 @@
             <div class="block pt-4" data-count="{{if (le $n 9)}}0{{$n}}{{ else }}{{$n}}{{ end }}">
               {{with .image}}
               <div class="work-process-image">
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "350x"}}
-                {{$imgWebp:= $img.Resize "350x webp"}}
-                <img loading="lazy" decoding="async" class="w-100" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                {{ partial "image.html" (dict "Src" . "Size" "350x" "Webp" false "Class" "w-100" ) }}
               </div>
               {{end}}
               <h3 class="title h4">{{.title | markdownify}}</h3>

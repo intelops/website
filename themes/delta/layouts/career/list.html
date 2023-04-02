@@ -15,10 +15,7 @@
       </div>
       <div class="col-lg-6 mt-5 mt-lg-0 text-center">
         {{with .image}}
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "498x"}}
-        {{$imgWebp:= $img.Resize "498x webp"}}
-        <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "498x" "Webp" false ) }}
         {{end}}
       </div>
     </div>
@@ -88,10 +85,7 @@
       <div class="col-lg-5 mt-5 mt-lg-0">
         {{with .image}}
         <div class="text-center">
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "500x"}}
-          {{$imgWebp:= $img.Resize "500x webp"}}
-          <img loading="lazy" decoding="async" class="w-100 rounded-md" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{ partial "image.html" (dict "Src" . "Size" "500x" "Webp" false "Class" "w-100 rounded-md" ) }}
         </div>
         {{end}}
       </div>

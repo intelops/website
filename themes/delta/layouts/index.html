@@ -33,10 +33,7 @@
 
   {{with .image}}
   <div class="banner-image text-center">
-    {{$img:= resources.Get . }}
-    {{$img:= $img.Resize "1000x"}}
-    {{$imgWebp:= $img.Resize "1000x webp"}}
-    <img loading="lazy" decoding="async" class="img-fluid px-2" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+    {{ partial "image.html" (dict "Src" . "Size" "1000x" "Webp" false ) }}
   </div>
   {{end}}
   {{end}}
@@ -177,10 +174,7 @@
       </div>
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         {{with .image}}
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "570x"}}
-        {{$imgWebp:= $img.Resize "570x webp"}}
-        <img loading="lazy" decoding="async" class="img-fluid px-2" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-2" ) }}
         {{end}}
       </div>
     </div>
@@ -206,10 +200,7 @@
           {{with .slider}}
           <div class="swiper-wrapper">
             {{range .}}
-            {{$img:= resources.Get . }}
-            {{$img:= $img.Resize "600x"}}
-            {{$imgWebp:= $img.Resize "600x webp"}}
-            <img loading="lazy" decoding="async" class="swiper-slide img-fluid px-2" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{ partial "image.html" (dict "Src" . "Size" "600x" "Webp" false "Class" "swiper-slide img-fluid px-2" ) }}
             {{end}}
           </div>
           <div class="swiper-pagination"></div>
@@ -246,10 +237,7 @@
     <div class="row align-items-center">
       {{with .image}}
       <div class="col-lg-5 d-none d-lg-block">
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "520x"}}
-        {{$imgWebp:= $img.Resize "520x webp"}}
-        <img loading="lazy" decoding="async" class="img-fluid px-5" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="testimonials image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "520x" "Webp" false "Class" "img-fluid px-5" ) }}
       </div>
       {{end}}
       <div class="col-lg-7">

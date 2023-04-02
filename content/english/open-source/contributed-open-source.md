@@ -5,6 +5,28 @@ description: "It’s been a bloody long ride, but Cinderblock has officially lau
 url: contributed-open-source
 draft: false
 
+navigation:
+  logo: "images/dummy-logo.png"
+  logo_text: "Capten"
+  
+  menu:
+  - name: "Test 1"
+    url: "/"
+  - name: "Another 2"
+    url: "/"
+  - name: "Test 3"
+    url: "/"
+
+  navigation_button:
+    enable: true
+    icon: "far fa-user"
+    label: "Log In"
+    link: "#!"
+  navigation_button_two:
+    enable: true
+    label: "Book Demo"
+    link: "#!"
+
 banner:
   bg_color: "#77cda2"
   subtitle: "We Are Delta"
@@ -63,10 +85,4 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-
-footer:
-  footer_light: true
-  bg_color: "#1e384c"
-  bg_image: "images/bg-banner-page.jpg"
-  bg_image_overlay_color: "rgba(0,0,0,.65)"
 ---
