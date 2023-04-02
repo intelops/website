@@ -5,6 +5,28 @@ description: "It’s been a bloody long ride, but Cinderblock has officially lau
 url: capten
 draft: false
 
+navigation:
+  logo: "images/dummy-logo.png"
+  logo_text: "Capten"
+  
+  menu:
+  - name: "Test 1"
+    url: "/"
+  - name: "Another 2"
+    url: "/"
+  - name: "Test 3"
+    url: "/"
+
+  navigation_button:
+    enable: true
+    icon: "far fa-user"
+    label: "Log In"
+    link: "#!"
+  navigation_button_two:
+    enable: true
+    label: "Book Demo"
+    link: "#!"
+
 banner:
   bg_color: "#fa9e26"
   subtitle: "We Are Delta"
