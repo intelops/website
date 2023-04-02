@@ -7,10 +7,13 @@ description = "This is meta description"
 email = "info@email.com"
 favicon = "images/favicon/favicon-32x32.png"
 image = "images/logo.png"
-logo = "images/logos/logo-dark.png"
-logo_light = "images/logos/logo-light.png"
+
+logo = "images/logos/logo-light.svg"
+logo_dark = "images/logos/logo-dark.svg"
+logo_webp = false
+
 logo_text = "Intelops"
-logo_width = "147x"
+logo_width = "147px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true

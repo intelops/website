@@ -6,59 +6,7 @@
     <nav class="navbar navbar-expand-xl navbar-light" id="main-navbar">
       <!-- navbar brand/logo -->
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
-        {{ $logoPath:= site.Params.logo }}
-        {{ $logoWidth:= replace site.Params.logo_width "px" "x" }}
-
-        <!-- checking logo existance -->
-        {{ if $logoPath }}
-        {{ if fileExists (add `assets/` $logoPath) }}
-        {{ $logo:= resources.Get $logoPath }}
-
-        <!-- checking gif -->
-        {{ $logoExt := path.Ext $logo }}
-        {{ if eq $logoExt ".gif" }}
-        {{ .Scratch.Set "logo" ($logo.Resize $logoWidth).RelPermalink }}
-        <!-- checking svg -->
-        {{ else if eq $logoExt ".svg"}}
-        {{ .Scratch.Set "logo" $logo.RelPermalink }}
-        <!-- logo fallback for svg -->
-        {{ .Scratch.Set "logo_fallback" $logo.RelPermalink }}
-        {{ else }}
-        <!-- logo processing to webp -->
-        {{ $logoDefaultWidth:= add (string $logo.Width) "x"}}
-        {{ $logoWidth:= $logoWidth | default $logoDefaultWidth }}
-        {{ $options := add (string $logoWidth) " webp" }}
-        {{ .Scratch.Set "logo" ($logo.Resize $options).RelPermalink }}
-        <!-- logo fallback -->
-        {{ .Scratch.Set "logo_fallback" ($logo.Resize $logoWidth).RelPermalink }}
-        {{ end }}
-        <span id="logo-img-dark" src="{{.Scratch.Get `logo`}}"></span>
-        {{ $logoLight:= site.Params.logo_light }}
-        {{ if $logoLight }}
-        {{ if fileExists (add `assets/` $logoLight) }}
-        {{ $logoLight:= resources.Get $logoLight }}
-        <!-- logo processing to webp -->
-        {{ $logoLightDefaultWidth:= add (string $logoLight.Width) "x"}}
-        {{ $logoWidth:= $logoWidth | default $logoLightDefaultWidth }}
-        {{ $optionsLight := add (string $logoWidth) " webp" }}
-        {{ .Scratch.Set "logoLight" ($logoLight.Resize $optionsLight).RelPermalink }}
-        <span id="logo-img-light" src="{{ if $headerWhite }}{{.Scratch.Get `logo`}}{{else}}{{.Scratch.Get `logoLight`}}{{end}}"></span>
-        {{ end }}
-        {{ end }}
-
-        <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}} id="logo-img"
-          width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{ if $headerWhite }}{{.Scratch.Get `logo`}}{{else}}{{.Scratch.Get `logoLight`}}{{end}}"
-          alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
-        {{ else }}
-        <strong class="text-danger">`{{$logoPath}}` doesn't exist</strong>
-        {{ end }} <!-- / checking logo existance -->
-        <!-- logo text -->
-        {{ else if site.Params.logo_text }}
-        {{ site.Params.logo_text | markdownify }}
-        <!-- logo title -->
-        {{ else }}
-        {{ site.Title | markdownify }}
-        {{ end }}
+        {{ partial "logo.html" }}
       </a>
 
       <div class="navbar-actions d-inline-flex align-items-center">
