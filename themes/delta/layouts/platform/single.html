@@ -32,10 +32,7 @@
       </div>
       <div class="col-lg-6 mt-5 mt-lg-0 text-center">
         {{with .image}}
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "500x"}}
-        {{$imgWebp:= $img.Resize "1000x webp"}}
-        <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "1000x" "Webp" false ) }}
         {{end}}
       </div>
     </div>
@@ -69,10 +66,7 @@
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         <div class="bg-secondary-soft py-3 py-md-6 px-2 px-md-4 rounded-md text-center">
           {{with .image}}
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "570x"}}
-          {{$imgWebp:= $img.Resize "570x webp"}}
-          <img loading="lazy" decoding="async" class="img-fluid px-0 px-md-3 py-6 mx-auto" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 py-6 mx-auto" ) }}
           {{end}}
         </div>
       </div>

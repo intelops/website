@@ -15,10 +15,7 @@
             {{with .image}}
             <div class="image-block pt-5">
               <div class="process-image px-4 rounded-lg">
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "350x"}}
-                {{$imgWebp:= $img.Resize "350x webp"}}
-                <img class="w-100 rounded-lg" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                {{ partial "image.html" (dict "Src" . "Size" "350x" "Webp" false "Class" "w-100 rounded-lg" ) }}
               </div>
             </div>
             {{end}}

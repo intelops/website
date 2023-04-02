@@ -126,6 +126,10 @@
     .navbar-brand {
       img {
         max-height: 30px;
+        width: auto !important;
+      }
+      .ghtm-logo-dark {
+        display: none;
       }
     }
     .navbar-brand.d-none {
@@ -146,6 +150,12 @@
           color: $color-primary !important;
         }
       }
+    }
+  }
+
+  &.dark-bar {
+    .ghtm-logo-dark {
+      display: none;
     }
   }
 

@@ -13,9 +13,7 @@
             {{ range . }}
             <div class="block swiper-slide">
               {{$img:= resources.Get . }}
-              {{$img:= $img.Resize "200x"}}
-              {{$imgWebp:= $img.Resize "200x webp"}}
-              <img loading="lazy" decoding="async" class="img-fluid mx-auto" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Brand Logo" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+              {{ partial "image.html" (dict "Src" . "Size" "200x" "Webp" false "Class" "img-fluid mx-auto" ) }}
             </div>
             {{ end }}
           </div>
