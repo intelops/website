@@ -72,11 +72,8 @@
         {{if .Title}}
         <div class="post-author d-flex border rounded-lg mt-5">
           <div class="author-image">
-            {{ if .Params.image }}
-            {{ $img:= resources.Get (.Params.image) }}
-            {{ $img:= $img.Fill "80x80" }}
-            {{ $imgWebp:= $img.Fill "80x80 webp" }}
-            <img loading="lazy" decoding="async" class="rounded-circle mb-2" src="{{ $imgWebp.RelPermalink }}" alt="author image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{ with .Params.image }}
+            {{ partial "image.html" (dict "Src" . "Size" "80x80" "Webp" false "Class" "rounded-circle mb-3" "Command" "Fill" ) }}
             {{ else }}
             <i class="far fa-user-circle mb-1" style="font-size:82px"></i>
             {{ end }}

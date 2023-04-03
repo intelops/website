@@ -125,7 +125,7 @@
   &.navigation-bottom {
     .navbar-brand {
       img {
-        max-height: 30px;
+        max-height: 26px;
         width: auto !important;
       }
       .ghtm-logo-dark {
@@ -143,14 +143,9 @@
   &.navigation-bottom,
   &.navigation-alt {
     position: relative;
-    .nav-item {
-      .nav-link {
-        color: $nav-menu-text !important;
-        &:hover {
-          color: $color-primary !important;
-        }
-      }
-    }
+  }
+  &.navigation-bottom .navbar {
+    border-top: 1px solid lighten($banner-primary, 12);
   }
 
   &.dark-bar {

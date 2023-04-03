@@ -12,7 +12,6 @@
           <div class="swiper-wrapper">
             {{ range . }}
             <div class="block swiper-slide">
-              {{$img:= resources.Get . }}
               {{ partial "image.html" (dict "Src" . "Size" "200x" "Webp" false "Class" "img-fluid mx-auto" ) }}
             </div>
             {{ end }}
