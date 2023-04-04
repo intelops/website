@@ -26,7 +26,7 @@ bg_image_overlay_color = "rgba(0,0,0,.65)"
 button_label = "Contact Us"
 button_link = "contact/"
 enable = true
-image = "images/develop.png"
+image = "images/footer/compage/compage.svg"
 subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
 title = "Looking for Cloud-Native Talent? <br> Let us make your life easy!"
 [cookies]
