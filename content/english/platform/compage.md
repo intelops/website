@@ -6,7 +6,7 @@ url: compage
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
+  logo: "images/logos/compage/compage-icon.svg"
   logo_text: "Compage"
   
   menu:
@@ -28,11 +28,11 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#77cda2"
+  bg_color: "#005DFF"
   subtitle: "We Are Delta"
   title: "get fastest loan with smart way A seating home"
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
-  image: images/banner-about.png
+  image: images/banner/compage/compage-banner-image.svg
   button:
     enable: true
     label: "Get started now"
@@ -47,9 +47,9 @@ banner:
 image_and_content_block:
   enable: true
   blocks:
-  - subtitle: "We Are Delta"
+  - subtitle: "What is Compage?"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/what-is-compage.svg"
     content_position: "right" # Value will be - "left/right"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
@@ -59,9 +59,9 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "We Are Delta"
+  - subtitle: "How it works?"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
@@ -71,9 +71,9 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "We Are Delta"
+  - subtitle: "Integrations & Features"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/integrations-features.svg"
     content_position: "right" # Value will be - "left/right"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
