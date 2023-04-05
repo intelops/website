@@ -133,9 +133,9 @@
       }
     }
     .navbar-brand.d-none {
-      margin-right: 13px;
+      margin-right: 16px;
       img {
-        padding-right: 10px;
+        padding-right: 13px;
         border-right: 1px solid #ddd;
       }
     }
@@ -143,6 +143,9 @@
   &.navigation-bottom,
   &.navigation-alt {
     position: relative;
+    .navbar {
+      padding: 3px 0 !important;
+    }
   }
   &.navigation-bottom .navbar {
     border-top: 1px solid lighten($banner-primary, 12);

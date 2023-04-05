@@ -8,7 +8,7 @@
         {{ partial "logo.html" }}
       </a>
 
-      <span class="navbar-brand me-auto" title="{{.Params.navigation.logo_text}}">
+      <span class="navbar-brand me-auto" style="line-height:0;" title="{{.Params.navigation.logo_text}}">
         {{ $logoPath:= .Params.navigation.logo }}
         {{ $logoWebp:= false }}
         {{ $logoDarkPath:= .Params.navigation.logo_dark }}
@@ -215,7 +215,7 @@
       {{ $section := .Section | urlize}}
 
       <div class="collapse navbar-collapse text-center" id="navigation-alt">
-        <ul class="navbar-nav mx-auto align-items-center">
+        <ul class="navbar-nav mx-auto align-items-center pt-0">
 
           {{ range .Params.navigation.menu }}
           <li class="nav-item">
