@@ -13,7 +13,7 @@ logo_dark = "images/logos/logo-dark.svg"
 logo_webp = false
 
 logo_text = "Intelops"
-logo_width = "147px"
+logo_width = "130px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true

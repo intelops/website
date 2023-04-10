@@ -337,7 +337,7 @@ if ($(".navigation-alt").length !== 0) {
         (navigationAltHeight + navigationBottomHeight) * 2
       ) {
         navigationBottom.addClass("sticky");
-        navigationBottom.css("top", 0 - navigationAltHeight + "px");
+        navigationBottom.css("top", 0 - navigationBottomHeight + "px");
       } else {
         navigationBottom.removeClass("sticky");
         navigationBottom.css("top", "unset");

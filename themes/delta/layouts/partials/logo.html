@@ -26,14 +26,6 @@
     class="ghtm-img ghtm-logo-light"
     height="{{ $logoDefaultHeight }}"
     width="{{ $logoDefaultWidth }}" />
-  <img
-    loading="lazy"
-    decoding="async"
-    src="{{ $logoDarkPath | absURL }}"
-    alt="{{ $logoText }}"
-    class="ghtm-img ghtm-logo-dark"
-    height="{{ $logoDefaultHeight }}"
-    width="{{ $logoDefaultWidth }}" />
 {{ else }}
   <!-- /image cdn -->
 
@@ -140,16 +132,6 @@
       src="{{ $scratch.Get `logo` }}"
       alt="{{ $logoText }}"
       onerror="this.onerror=null;this.src='{{ $scratch.Get `logo_fallback` }}'" />
-
-    <img
-      loading="preload"
-      decoding="async"
-      class="ghtm-img ghtm-logo-dark"
-      width="{{ replace $logoWidth `x` `` | default $logoDefaultWidth }}"
-      height="{{ $logoDefaultHeight }}"
-      src="{{ $scratch.Get `logo_dark` }}"
-      alt="{{ $logoText }}"
-      onerror="this.onerror=null;this.src='{{ $scratch.Get `logo_dark_fallback` }}'" />
   {{ else if $logoPath }}
     <img
       loading="preload"
