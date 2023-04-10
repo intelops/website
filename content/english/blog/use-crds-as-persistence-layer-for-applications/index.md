@@ -2,7 +2,7 @@
 date: 2023-03-31
 title: Using Custom Resources (CRs) as Persistence Layer for applications in Kubernetes
 description: Data persistence on Kubernetes for cloud native applications using Kubernetes CRs
-image: images/blog/use-crds-as-persistence-layer-for-applications/undraw_Advanced_customization.png
+image: images/blog/use-crds-as-persistence-layer-for-applications/undraw_advanced_customization.svg
 
 cover_image: false
 cover_image_src: 
@@ -29,7 +29,7 @@ draft: false
 
 ---
 
-{{< image src="images/undraw_Advanced_customization.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+{{< image src="images/blog/use-crds-as-persistence-layer-for-applications/undraw_advanced_customization.svg" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 
 We have been working on an open source project which runs on K8s cluster. We had a need to persist some data, we had two
