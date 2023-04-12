@@ -9,7 +9,7 @@ cover_image_src:
 cover_image_height: ""
 cover_image_width: ""
 
-author: azar-intelops
+author: azar
 series: Cloud Native Applications
 categories:
 - Cloud Native
