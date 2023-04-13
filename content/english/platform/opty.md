@@ -8,6 +8,7 @@ draft: false
 navigation:
   logo: "images/dummy-logo.png"
   logo_text: "Capten"
+  logo_text_color: "white"
   
   menu:
   - name: "Test 1"

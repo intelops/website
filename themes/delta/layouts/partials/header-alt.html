@@ -182,7 +182,7 @@
           <!-- / checking logo path -->
         {{ end }}
       </span>
-      <span class="text-white ms-1 fw-bold">{{$logoText}}</span>
+      <span class="{{if not .Params.navigation.logo_text_color}}text-white{{end}} ms-1 fw-bold" {{with .Params.navigation.logo_text_color}}style="color:{{.}}"{{end}}>{{$logoText}}</span>
 
       <div class="navbar-actions d-inline-flex align-items-center">
         <!-- Language List -->

@@ -26,7 +26,7 @@
     <div class="row align-items-center gy-3">
       <div class="col-lg-4 mx-auto text-center text-lg-start">
         <a class="footer-brand" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
-          {{if $footer_light}}
+          {{if or $footer_light (eq site.Params.footer_logo_dark true)}}
           {{ partial "footer-logo-dark.html" . }}
           {{else}}
           {{ partial "footer-logo.html" . }}
