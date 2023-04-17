@@ -1,10 +1,10 @@
 ---
-title: "Guidelines"
-date: 2023-02-20T14:06:36-06:00
+title: "SysFlow Plugin for ebpf data transfer"
+date: 2023-04-17
 draft: false
 weight: 1
 # description
-description: "How to build a plugin for a sysflow transfer eBPF data to your custom endpoint"
+description: "How to build a plugin for a sysflow to transfer eBPF data to your custom endpoint"
 ---
 
 ### How to build a plugin for a sysflow transfer eBPF data to your custom endpoint
