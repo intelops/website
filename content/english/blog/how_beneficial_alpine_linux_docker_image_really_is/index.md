@@ -4,6 +4,8 @@ date: 2023-04-14
 
 # description
 description: "Alpine is widely used to package projects into lightweight applications. It is one of the most used Docker official images based on Alpine Linux distribution."
+image: images/blog/how_beneficial_alpine_linux_docker_image_really_is/technology.png
+
 cover_image: false
 cover_image_src: 
 cover_image_height: ""
