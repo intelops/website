@@ -8,7 +8,7 @@ email = "info@email.com"
 favicon = "images/favicon/favicon-32x32.png"
 image = "images/logo.png"
 
-logo = "images/logos/logo-light.svg"
+logo = "images/logos/logo-dark.svg"
 logo_light = "images/logos/logo-light.svg"
 logo_dark = "images/logos/logo-dark.svg"
 footer_logo_dark = false
