@@ -168,6 +168,19 @@ a:hover {
     padding: 0 10px;
   }
 }
+.container-delta-lg {
+  max-width: 1600px;
+  padding: 0 55px;
+  @media (min-width: 575px) {
+    padding: 0 40px;
+  }
+  @include mobile {
+    padding: 0 17px;
+  }
+  @include mobile-xs {
+    padding: 0 10px;
+  }
+}
 
 // default-pagination and social-links
 .social-links,
@@ -760,7 +773,7 @@ form label {
 }
 
 .nav-menu-text {
-  color: $white !important;
+  color: $black !important;
 }
 
 .header-sec {
@@ -769,4 +782,13 @@ form label {
 
 .no-bottom {
   padding-bottom: 0 !important;
+}
+
+.highlight {
+  pre {
+    padding: 15px 20px;
+    * {
+      margin-bottom: 0 !important;
+    }
+  }
 }

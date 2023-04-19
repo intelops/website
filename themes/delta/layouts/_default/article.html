@@ -1,15 +1,9 @@
 <article class="card border-0 rounded-md overflow-hidden h-100">
   <a href="{{ .RelPermalink }}" title="{{ .Title }}">
     {{ with .Params.image }}
-    {{ if fileExists (add `assets/` .) }}
-    {{$img:= resources.Get . }}
-    {{$img:= $img.Resize "570x "}}
-    {{$imgWebp:= $img.Resize "570x webp"}}
-    <img loading="lazy" decoding="async" class="card-img-top h-auto" width="{{$img.Width}}" height="{{$img.Height}}"
-      src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+    {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "card-img-top h-auto" ) }}
     {{else}}
     <img class="img-fluid" src="https://via.placeholder.com/570x321.png/eee/eee" alt="image-fallback">
-    {{end}}
     {{end}}
   </a>
   <div class="card-body position-relative">

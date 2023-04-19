@@ -32,10 +32,7 @@
       <div class="col-lg-9 mt-5 mt-lg-0">
         {{with .image}}
         <div class="banner-image-2">
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "1000x"}}
-          {{$imgWebp:= $img.Resize "1000x webp"}}
-          <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{ partial "image.html" (dict "Src" . "Size" "1000x" "Webp" false ) }}
         </div>
         {{end}}
       </div>
@@ -165,10 +162,7 @@
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         <div class="bg-secondary-soft py-3 py-md-6 px-2 px-md-4 rounded-md">
           {{with .image}}
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "570x"}}
-          {{$imgWebp:= $img.Resize "570x webp"}}
-          <img loading="lazy" decoding="async" class="img-fluid px-0 px-md-3 py-6" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 py-6" ) }}
           {{end}}
         </div>
       </div>
@@ -197,10 +191,7 @@
               {{with .slider}}
               <div class="swiper-wrapper">
                 {{range .}}
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "600x"}}
-                {{$imgWebp:= $img.Resize "600x webp"}}
-                <img loading="lazy" decoding="async" class="swiper-slide img-fluid px-2" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                {{ partial "image.html" (dict "Src" . "Size" "600x" "Webp" false "Class" "swiper-slide img-fluid px-2" ) }}
                 {{end}}
               </div>
               <div class="swiper-pagination"></div>
@@ -237,10 +228,7 @@
               <div class="text-center">
                 {{with .image}}
                 <div class="avatar mb-4">
-                  {{$img:= resources.Get . }}
-                  {{$img:= $img.Resize "120x"}}
-                  {{$imgWebp:= $img.Resize "120x webp"}}
-                  <img loading="lazy" decoding="async" class="img-fluid rounded-circle" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="testimonials image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                  {{ partial "image.html" (dict "Src" . "Size" "120x" "Webp" false "Class" "img-fluid rounded-circle" ) }}
                 </div>
                 {{end}}
                 <div class="testimonials-review mb-4 h5 font-secondary text-muted fw-light"><i class="quote fas fa-quote-left"></i>{{.content | markdownify}}<i class="quote fas fa-quote-right"></i></div>
@@ -257,18 +245,12 @@
           
       {{with .image_1}}
       <div class="image-left">
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "360x"}}
-        {{$imgWebp:= $img.Resize "360x webp"}}
-        <img loading="lazy" decoding="async" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="testimonials image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "360x" "Webp" false ) }}
       </div>
       {{end}}
       {{with .image_2}}
       <div class="image-right">
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "360x"}}
-        {{$imgWebp:= $img.Resize "360x webp"}}
-        <img loading="lazy" decoding="async" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="testimonials image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "360x" "Webp" false ) }}
       </div>
       {{end}}
     </div>

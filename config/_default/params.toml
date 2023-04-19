@@ -5,12 +5,17 @@ contact_form_action = "#!"
 custom_script = ""
 description = "This is meta description"
 email = "info@email.com"
-favicon = "images/favicon-intelops.png"
+favicon = "images/favicon/favicon-32x32.png"
 image = "images/logo.png"
-logo = "images/logo-dark.png"
-logo_light = "images/logo-light.png"
+
+logo = "images/logos/logo-dark.svg"
+logo_light = "images/logos/logo-light.svg"
+logo_dark = "images/logos/logo-dark.svg"
+footer_logo_dark = false
+logo_webp = false
+
 logo_text = "Intelops"
-logo_width = "147x"
+logo_width = "130px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true
@@ -23,7 +28,7 @@ bg_image_overlay_color = "rgba(0,0,0,.65)"
 button_label = "Contact Us"
 button_link = "contact/"
 enable = true
-image = "images/develop.png"
+image = "images/footer/compage/compage.svg"
 subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
 title = "Looking for Cloud-Native Talent? <br> Let us make your life easy!"
 [cookies]

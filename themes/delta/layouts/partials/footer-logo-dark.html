@@ -1,4 +1,4 @@
-{{ $logoPath:= site.Params.logo }}
+{{ $logoPath:= site.Params.logo_dark }}
 {{ $logoWidth:= replace site.Params.logo_width "px" "x" }}
 
 <!-- checking logo existance -->
@@ -27,7 +27,7 @@
 
 <img loading="prelaod" decoding="async" class="img-fluid" {{if ne $logoExt `.svg`}}
   width="{{$logoWidth | default $logo.Width}}" height="{{$logo.Height}}" {{end}} src="{{.Scratch.Get `logo`}}"
-  alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
+  alt="{{ site.Title }}" style="width:130px" onerror="this.onerror=null;this.src='{{.Scratch.Get `logo_fallback`}}'">
 {{ end }}
 <!-- logo text -->
 {{ else if site.Params.logo_text }}
