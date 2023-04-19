@@ -8,6 +8,7 @@ draft: false
 navigation:
   logo: "images/logos/compage/compage-icon.svg"
   logo_text: "Compage"
+  logo_text_color: "secblack"
   
   menu:
   - name: "Test 1"
