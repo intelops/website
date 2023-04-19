@@ -188,7 +188,7 @@ await client.deleteNamespacedCustomObject(group, version, namespace, plural, nam
 
 With above client code added, it can now be invoked from http handlers. You can check them here.
 
-Run the code cloned using below command. You can now use curl commands to create/update/read/delete custom resources.
+Run the code cloned by following instructions given [`here`](https://github.com/intelops/k8s-custom-resource-demo#run-code-on-local). You can now use curl commands to create/update/read/delete custom resources.
 
 ### Create an employee
 
