@@ -37,6 +37,9 @@
           {{ end }}
 
           <h2 class="mb-4 font-weight-medium">{{ .Title }}</h2>
+
+          <span class="text-muted small d-inline-block mb-4" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+          
           {{ if .Content }}
           <div class="content" data-spy="scroll" data-target="#TableOfContents" data-offset="20">{{.Content}}</div>
           {{ else }}
