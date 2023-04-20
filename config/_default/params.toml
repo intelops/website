@@ -46,7 +46,7 @@ enable = true
 label = "Sign Up Now"
 link = "#!"
 [preloader]
-enable = true
+enable = false
 preloader = "images/loader.png"
 [[social]]
 icon = "fab fa-facebook"

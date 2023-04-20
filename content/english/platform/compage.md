@@ -89,9 +89,10 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: ""
-  subtitle: ""
-  image: ""
-  button_label: ""
-  button_link: ""
+  title: "Start using <br/> Compage <br/> platform today..."
+  title_color: "#fff"
+  image: "images/call-to-actions/compage/robo-image.svg"
+  button_label: "Get Started"
+  button_link: "contact/"
+  bg_color: "#005DFF"
 ---
