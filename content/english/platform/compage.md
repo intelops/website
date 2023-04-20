@@ -89,4 +89,9 @@ image_and_content_block:
   
 call_to_action:
   enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 ---
