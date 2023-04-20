@@ -42,6 +42,14 @@
           
           {{ if .Content }}
           <div class="content" data-spy="scroll" data-target="#TableOfContents" data-offset="20">{{.Content}}</div>
+          
+          {{ if .Page.Store.Get "hasMermaid" }}
+            <script type="module">
+              import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+              mermaid.initialize({ startOnLoad: true });
+            </script>
+          {{ end }}
+
           {{ else }}
           <ul class="list-styled text-left mb-4">
             {{ range .Data.Pages }}
