@@ -16,12 +16,20 @@ banner:
     icon: fas fa-arrow-right
     link: contact/
   video_button:
-    enable: false
+    enable: true
     label: Watch demo
     video_url: https://www.youtube.com/embed/dyZcRRWiuuw
-  image: ""
+
+  lottie: 
+    json: "lottie/lottie.json"
+    background: "#eee"
+    speed: "1"
+    loop: "true"
+    autoplay: "false"
+
+
 brands:
-  enable: false
+  enable: true
   title: 150M+ users trusted Delta worldwide
   title_color: ""
   images:
@@ -30,43 +38,28 @@ brands:
   - images/clients/03.png
   - images/clients/04.png
   - images/clients/05.png
+
 features:
-  enable: false
+  enable: true
   section: features
-fun_facts:
-  enable: false
-  title: fun facts about okta Millions <br> trusted use worldwide
+
+platforms:
+  enable: true
+  title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
-  fact_item:
-  - icon: fas fa-fighter-jet
-    counter: "80"
-    counter_color: ""
-    counter_suffix: "%"
-    content: Spend 80% less time <br> on admin
-    content_color: ""
-  - icon: far fa-dot-circle
-    counter: "40"
-    counter_color: ""
-    counter_suffix: x
-    content: Attract 40x more <br> the candidate
-    content_color: ""
-  - icon: fas fa-dice
-    counter: "83"
-    counter_color: ""
-    counter_suffix: "%"
-    content: uce recruitment <br> agency spend
-    content_color: ""
-  - icon: fas fa-dice-d6
-    counter: "40"
-    counter_color: ""
-    counter_suffix: "%"
-    content: Make hires 40% <br> faster
-    content_color: ""
+  image: "images/footer/compage/compage.svg"
+  button:
+    enable: true
+    label: "Platform"
+    icon: "fas fa-arrow-right"
+    link: "/capten"
+
+    
 how_it_works:
-  enable: false
+  enable: true
   section: how-it-works
 image_and_content_block:
-  enable: false
+  enable: true
   subtitle: We Are Delta
   subtitle_color: ""
   title: Lots of people love us, <br> and we're also.
@@ -80,7 +73,7 @@ image_and_content_block:
     ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
 slider_and_content_block:
-  enable: false
+  enable: true
   subtitle: We Are Delta
   subtitle_color: ""
   title: Let your lead reach <br> out to sales people
@@ -95,8 +88,10 @@ slider_and_content_block:
     Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
     amet dui. Nulla quis lorem ut libero malesuada feugiat. "
   content_color: ""
+
+
 testimonials:
-  enable: false
+  enable: true
   subtitle: People Say's
   subtitle_color: ""
   title: about Three million users <br> Testimonial Together
@@ -133,12 +128,14 @@ testimonials:
       qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium
       corporis doloremque qui, voluptate minus?
     content_color: ""
+
+
 blog:
-  enable: false
+  enable: true
   subtitle: Recent Articles
   subtitle_color: ""
   title: Recent Posts to serve better
-  title_color: ""
+  title_color: "black"
   description: Vestibulum ante ipsum primis in faucibus  luctus et ultrices posuere
     <br> cubilia Curae; Donec velit neque, auctor sit amet aliquamvel, ullamsw rfgws
     ercor
@@ -148,8 +145,20 @@ blog:
     link: blog/
     label: Read All Blogs
     icon: fas fa-arrow-right
+
+
 call_to_action:
-  enable: false
+  enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 
 footer:
   footer_light: false
