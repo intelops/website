@@ -1,5 +1,5 @@
 ---
-date: 2023-04-20
+date: 2023-04-21
 title: Advanced PXL Script Functions
 description: Combining all that we have learned into one script.
 image: images/blog/advanced-pxl-script-functions/online_test.svg
@@ -99,7 +99,7 @@ added
 to the table. This also means that the `time_` column in the `network_stats` table will not always align with
 the `time_`
 column in the `conn_stats` table. In fact, in order to align the two, we will need to manipulate the data in the `time_`
-column to match both tables.  
+column to match both tables, which we will do later on.  
 Let's start our script by setting up the base structure. We will get both of the tables, and display one for now.
 
 ```python
@@ -119,12 +119,14 @@ contextual columns to the `conn_stats_df` dataframe:
 
 ```python
 ...
+
 conn_stats_df.pod = conn_stats_df.ctx['pod']
 conn_stats_df.pod_id = px.upid_to_pod_id(conn_stats_df.upid)
 conn_stats_df.container_name = px.upid_to_container_name(conn_stats_df.upid)
 conn_stats_df.container_id = px.upid_to_container_id(conn_stats_df.upid)
 conn_stats_df.namespace = px.pod_id_to_namespace(conn_stats_df.pod_id)
 conn_stats_df.node = px.pod_id_to_node_name(conn_stats_df.pod_id)
+
 ...
 ```
 
@@ -132,21 +134,26 @@ We will also add a column that will help us merge with the `network_stats` table
 
 ```python
 ...
+
 conn_stats_df.time_aligned = px.bin(conn_stats_df.time_, 1000000000)
+
 ...
 ```
 
 Note that the above function is advanced. Here is what is does:
 
 * Creates a new column called `time_aligned`
-* Bins the original `time_` column. You can think of this as rounding in a way.
+* Bins the original `time_` column.
   * The binning is done in one second increments (equivalent to 1000000000 nanoseconds)
+  * You can think of this as 'rounding' in a way.
 
 We will create a similar binned time value in the `net_stats_df` by using the following:
 
 ```python
 ...
+
 net_stats_df.time_aligned = px.bin(net_stats_df.time_, 1000000000)
+
 ...
 ```
 
@@ -161,8 +168,9 @@ Let's add this snippet to the code, right before the `px.display()` call:
 
 ```python
 ...
-df = conn_stats_df.merge(net_stats_df, how='left', left_on=['time_aligned', 'pod_id'],
-                         right_on=['time_aligned', 'pod_id'], suffixes=['', '_x'])
+
+df = conn_stats_df.merge(net_stats_df, how='left', left_on=['time_aligned', 'pod_id'], right_on=['time_aligned', 'pod_id'], suffixes=['', '_x'])
+
 ...
 ```
 
@@ -178,7 +186,9 @@ Let's drop the columns that are duplicated:
 
 ```python
 ...
+
 df = df.drop(['time__x', 'time_aligned_x', 'pod_id_x'])
+
 ...
 ```
 
@@ -186,6 +196,7 @@ Now let's rename some columns that used to be in `network_stats` for more clarit
 
 ```python
 ...
+
 df['received_bytes'] = df['rx_bytes']
 df['received_packets'] = df['rx_packets']
 df['received_errors'] = df['rx_errors']
@@ -194,6 +205,7 @@ df['transmitted_bytes'] = df['tx_bytes']
 df['transmitted_packets'] = df['tx_packets']
 df['transmitted_errors'] = df['tx_errors']
 df['transmitted_drops'] = df['tx_drops']
+
 ...
 ```
 
@@ -201,7 +213,9 @@ Of course, since we renamed the columns, we will have to drop the old columns:
 
 ```python
 ...
+
 df = df.drop(['rx_bytes', 'rx_packets', 'rx_errors', 'rx_drops', 'tx_bytes', 'tx_packets', 'tx_errors', 'tx_drops'])
+
 ...
 ```
 
@@ -229,8 +243,8 @@ conn_stats_df.time_aligned = px.bin(conn_stats_df.time_, 1000000000)
 net_stats_df = px.DataFrame('network_stats', start_time='-5m')
 # we convert the time value from nanoseconds and bin it to the nearest second (since there are 1000000000 ns in 1 s)
 net_stats_df.time_aligned = px.bin(net_stats_df.time_, 1000000000)
-df = conn_stats_df.merge(net_stats_df, how='left', left_on=['time_aligned', 'pod_id'],
-                         right_on=['time_aligned', 'pod_id'], suffixes=['', '_x'])
+# merging the two dataframes based on the time_aligned and pod_id attributes.
+df = conn_stats_df.merge(net_stats_df, how='left', left_on=['time_aligned', 'pod_id'], right_on=['time_aligned', 'pod_id'], suffixes=['', '_x'])
 # drop the duplicate time_ column
 df = df.drop(['time__x', 'time_aligned_x', 'pod_id_x'])
 # rename some columns
