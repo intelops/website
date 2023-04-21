@@ -1129,6 +1129,37 @@ main:empty {
       z-index: -1;
     }
   }
+  &-3 {
+    padding-top: 60px;
+    .content-block {
+      padding-left: 100px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      @include tablet {
+        padding-bottom: 70px;
+        padding-left: 30px;
+        padding-right: 30px;
+        text-align: center;
+      }
+    }
+    .title {
+      position: relative;
+      z-index: 1;
+      .bg-layer {
+        position: absolute;
+        content: "";
+        height: 150%;
+        width: 80%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        @include tablet {
+          width: 100%;
+          top: -70%;
+        }
+      }
+    }
+  }
   .block {
     .content-block {
       padding: 65px 55px;
