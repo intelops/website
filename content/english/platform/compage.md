@@ -1,6 +1,6 @@
 ---
 title: "Compage"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "It’s been a bloody long ride, but we made it possible. Discover the low-code platform for multiple programming languages."
 
 url: compage
 draft: false
