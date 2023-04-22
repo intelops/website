@@ -25,19 +25,19 @@ banner:
     background: "#eee"
     speed: "1"
     loop: "true"
-    autoplay: "false"
+    autoplay: "true"
 
 
 brands:
   enable: true
-  title: 150M+ users trusted Delta worldwide
+  title: Trusted by fast growing brands and enterprises. <br> Be the Captain.
   title_color: ""
   images:
-  - images/clients/01.png
-  - images/clients/02.png
-  - images/clients/03.png
-  - images/clients/04.png
-  - images/clients/05.png
+  # - images/clients/01.png
+  # - images/clients/02.png
+  # - images/clients/03.png
+  # - images/clients/04.png
+  # - images/clients/05.png
 
 features:
   enable: true
@@ -60,7 +60,7 @@ how_it_works:
   section: how-it-works
 image_and_content_block:
   enable: true
-  subtitle: We Are Delta
+  subtitle: We Are IntelOps
   subtitle_color: ""
   title: Lots of people love us, <br> and we're also.
   title_color: ""
@@ -122,7 +122,7 @@ testimonials:
     name_color: ""
     designation: Developer, Ammarait
     designation_color: ""
-    rating: "4.2"
+    #rating: "4.2"
     content: Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis
       explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident
       qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium
@@ -134,11 +134,9 @@ blog:
   enable: true
   subtitle: Recent Articles
   subtitle_color: ""
-  title: Recent Posts to serve better
+  title: Check out what we are cooking
   title_color: "black"
-  description: Vestibulum ante ipsum primis in faucibus  luctus et ultrices posuere
-    <br> cubilia Curae; Donec velit neque, auctor sit amet aliquamvel, ullamsw rfgws
-    ercor
+  description: We love solving problems. <br> Check out and let us know what you want us to build for you.
   description_color: ""
   button:
     enable: true
