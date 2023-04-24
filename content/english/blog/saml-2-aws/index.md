@@ -18,7 +18,7 @@ categories:
 
 # image color code in undraw.co #FB7E44 
 feedback: false
-draft: true
+draft: false
 ---
 `SAML` (Security Assertion Markup Language) is a popular standard for exchanging authentication and authorization data between parties, particularly in web applications. `SAML Identity Providers` (IdPs) are the entities that provide user authentication and authorization information to Service Providers (SPs) over SAML.  
 
