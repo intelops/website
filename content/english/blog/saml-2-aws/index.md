@@ -1,6 +1,6 @@
 ---
 title: "Never store your AWS secrets again"
-date: 2023-04-20T15:19:21-05:00
+date: 2023-04-20
 draft: true
 # description
 description: "CLI tool to login and retrieve AWS temporary credentials using Azure AD."
@@ -12,9 +12,9 @@ cover_image_height: ""
 cover_image_width: ""
 
 author: vishwas-prasanna
-series: Authentication 
 categories:
-- Cloud Native
+- CLI
+- Applications
 
 # image color code in undraw.co #FB7E44 
 feedback: false
@@ -22,7 +22,7 @@ draft: true
 ---
 `SAML` (Security Assertion Markup Language) is a popular standard for exchanging authentication and authorization data between parties, particularly in web applications. `SAML Identity Providers` (IdPs) are the entities that provide user authentication and authorization information to Service Providers (SPs) over SAML.  
 
-`Saml2aws` is a command-line tool for logging in to an AWS environment using a IdPs. Today we will see how to use Azure AD.  
+`saml2aws` is a command-line tool for logging in to an AWS environment using a IdPs. Today we will see how to use Azure AD.  
 
 #### Why temporary credential?
 - `Enhanced security`: Temporary credentials provide an additional layer of security by limiting the amount of time that a user or application has access to a resource. This reduces the risk of unauthorized access and helps prevent potential security breaches.
