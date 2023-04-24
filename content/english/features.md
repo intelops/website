@@ -7,7 +7,7 @@ layout: "features"
 features:
   subtitle: "Capten stack"
   subtitle_color: ""
-  title: "Universal platform to stay with you always."
+  title: "Agnostic platform that always stays with you to Empower Engineers"
   title_color: ""
   button:
     enable: true
@@ -28,7 +28,7 @@ features:
     title_color: ""
     icon: "far fa-lightbulb"
     icon_color: ""
-    content: "Auto generate code base in your favorite programming language. Diagram to Code."
+    content: "Diagram to Code. Generate code in your favorite programming language for backend applications."
     content_color: ""
     
   - title: "Quality-Trace"
