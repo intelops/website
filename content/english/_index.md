@@ -52,7 +52,8 @@ platforms:
     enable: true
     label: "Platform"
     icon: "fas fa-arrow-right"
-    link: "/capten"
+    #link: "/capten"
+    link: ""
 
     
 how_it_works:
@@ -62,71 +63,63 @@ image_and_content_block:
   enable: true
   subtitle: We Are IntelOps
   subtitle_color: ""
-  title: Lots of people love us, <br> and we're also.
+  #title: Lots of people love us, <br> and we're also.
+  title: This section is coming soon
   title_color: ""
-  image: images/block-image-01.png
+  image: images/content/compage/what-is-compage.svg
   content_position: left
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-    amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
-    Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
-    ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
+  #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+   # amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
+   # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
+   # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
 slider_and_content_block:
   enable: true
-  subtitle: We Are Delta
+  subtitle: We Are Intelops
   subtitle_color: ""
-  title: Let your lead reach <br> out to sales people
+  title: This section is coming soon
   title_color: ""
   slider:
-  - images/block-image-02.png
-  - images/block-image-02.png
+  - images/content/compage/what-is-compage.svg
+  - images/content/compage/what-is-compage.svg
   content_position: right
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-    amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
-    Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
-    amet dui. Nulla quis lorem ut libero malesuada feugiat. "
+  #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+   # amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
+   # Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
+   # amet dui. Nulla quis lorem ut libero malesuada feugiat. "
   content_color: ""
 
 
 testimonials:
   enable: true
-  subtitle: People Say's
+  subtitle: People Love Us
   subtitle_color: ""
-  title: about Three million users <br> Testimonial Together
+  #title: about Three million users <br> Testimonial Together
   title_color: ""
-  image: images/testimonials-group.png
+  image: images/content/compage/what-is-compage.svg
   reviews:
-  - name: Erica Carlina
+  - name: Name1
     name_color: ""
-    designation: CEO & Founder, Ammarait
+    designation: CEO & Founder, XYZ
     designation_color: ""
     rating: "5.0"
-    content: Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti
-      cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium
-      distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati
-      molestias laudantium corporis doloremque qui, voluptate minus?
+    content: Text area
     content_color: ""
-  - name: Justin Rubela
+  - name: Name2
     name_color: ""
-    designation: Founder, Justin Inc.
+    designation: Founder, XYZ Inc.
     designation_color: ""
     rating: "4.5"
-    content: Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio
-      quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum
-      suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias
-      laudantium corporis doloremque qui, voluptate minus?
+    content: TEXT AREA
     content_color: ""
-  - name: William Broke
+  - name: Name3
     name_color: ""
-    designation: Developer, Ammarait
+    designation: Developer, XYZ
     designation_color: ""
     #rating: "4.2"
-    content: Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis
-      explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident
-      qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium
-      corporis doloremque qui, voluptate minus?
+    content: Text Area
     content_color: ""
 
 
