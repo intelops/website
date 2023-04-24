@@ -18,19 +18,43 @@
     <div class="row">
       <div class="col-lg-12">
         <div class="block bg-white rounded-lg shadow">
-          <div class="row g-0 align-items-center">
-            <div class="col-lg-8">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
               <div class="content-block">
-                <h3 class="text-capitalize mb-2">{{site.Params.call_to_action.title | markdownify}}</h3>
+                
+                {{ with .Params.call_to_action.title }}
+                <h3 class="text-capitalize mb-2">
+                  {{. | markdownify}}
+                </h3>
+                {{ else }}
+                <h3 class="text-capitalize mb-2">
+                  {{site.Params.call_to_action.title | markdownify}}
+                </h3>
+                {{ end }}
+                
+                {{ with .Params.call_to_action.subtitle }}
+                <p class="mb-4">{{. | markdownify}}</p>
+                {{ else }}
                 <p class="mb-4">{{site.Params.call_to_action.subtitle | markdownify}}</p>
-                {{if site.Params.call_to_action.button_label}}
+                {{ end }}
+                
+                {{ if .Params.call_to_action.button_label }}
+                <a href="{{.Params.call_to_action.button_link | relLangURL}}" class="btn btn-primary">{{.Params.call_to_action.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
+                {{ else }}
                 <a href="{{site.Params.call_to_action.button_link | relLangURL}}" class="btn btn-primary">{{site.Params.call_to_action.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
-                {{end}}
+                {{ end }}
+                
               </div>
             </div>
-            {{with site.Params.call_to_action.image}}
+            {{with .Params.call_to_action.image}}
             <div class="col-lg-4">
               {{ partial "image.html" (dict "Src" . "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
+            </div>
+            {{else}}
+            <div class="col-lg-5">
+              <div class="pe-lg-5 pb-5 pb-lg-0">
+                {{ partial "image.html" (dict "Src" site.Params.call_to_action.image "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
+              </div>
             </div>
             {{end}}
           </div>
