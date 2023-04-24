@@ -34,6 +34,8 @@ link = "plugins/search/fuse.min.js"
 link = "plugins/search/mark.js"
 [[params.plugins.js]]
 link = "plugins/search/search-page.js"
+[[params.plugins.js]]
+link = "plugins/lottie-player/lottie-player.js"
 [params.variables]
 banner_desc = "#acacac"
 banner_primary = "#121826"

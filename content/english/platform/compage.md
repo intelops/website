@@ -1,6 +1,6 @@
 ---
 title: "Compage"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "It’s been a bloody long ride, but we made it possible. Discover the low-code platform for multiple programming languages."
 
 url: compage
 draft: false
@@ -49,7 +49,9 @@ image_and_content_block:
   enable: true
   blocks:
   - subtitle: "What is Compage?"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/content/compage/what-is-compage.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: false
@@ -62,7 +64,9 @@ image_and_content_block:
       * Donec verglit neque, auctor congue leo  malesuada.
 
   - subtitle: "How it works?"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: true
@@ -75,7 +79,9 @@ image_and_content_block:
       * Donec verglit neque, auctor congue leo  malesuada.
 
   - subtitle: "Integrations & Features"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/content/compage/integrations-features.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: false
@@ -89,4 +95,10 @@ image_and_content_block:
   
 call_to_action:
   enable: true
+  title: "Start using <br/> Compage <br/> platform today..."
+  title_color: "#fff"
+  image: "images/call-to-actions/compage/robo-image.svg"
+  button_label: "Get Started"
+  button_link: "contact/"
+  bg_color: "#005DFF"
 ---
