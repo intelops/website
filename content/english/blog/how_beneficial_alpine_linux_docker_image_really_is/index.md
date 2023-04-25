@@ -3,7 +3,7 @@ title: "Is Alpine Linux Docker Image for you?"
 date: 2023-04-14
 
 # description
-description: "Alpine is widely used to package projects into lightweight applications. It is one of the most used Docker official images based on Alpine Linux distribution."
+description: "Alpine is widely used to package projects into lightweight applications. It is one of the most used Docker official images based on Alpine Linux distribution. Let's learn how to use it."
 image: images/blog/how_beneficial_alpine_linux_docker_image_really_is/technology.png
 
 cover_image: false
@@ -12,17 +12,15 @@ cover_image_height: ""
 cover_image_width: ""
 
 author: vishwas-prasanna
-series: DevSecOps Series
+series: Containers
 categories:
-- DevSecOps
+- Containers
 - Cloud Native
-- Kubernetes
-- Observability
-- Monitoring
+
 
 # image color code in undraw.co #FB7E44 
 feedback: false
-draft: true
+draft: false
 ---
 
 Alpine is a minimal Docker image based on Alpine linux distribution and is only 5 MB in size. The image is built around [musl libc](https://musl.libc.org/) and [BusyBox](https://www.busybox.net/) and has access to a lot of [package repositories](https://pkgs.alpinelinux.org/packages). If you are hearing about it for the first time and want to learn how to use it, check [this](https://www.docker.com/blog/how-to-use-the-alpine-docker-official-image/) out.

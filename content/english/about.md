@@ -180,5 +180,10 @@ career:
 # call_to_action
 call_to_action:
   enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 
 ---
