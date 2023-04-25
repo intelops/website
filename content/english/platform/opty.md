@@ -49,7 +49,9 @@ image_and_content_block:
   enable: true
   blocks:
   - subtitle: "We Are Delta"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/block-image-01.png"
     content_position: "right" # Value will be - "left/right"
     bg_color: false
@@ -62,7 +64,9 @@ image_and_content_block:
       * Donec verglit neque, auctor congue leo  malesuada.
 
   - subtitle: "We Are Delta"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/block-image-01.png"
     content_position: "left" # Value will be - "left/right"
     bg_color: true
@@ -75,7 +79,9 @@ image_and_content_block:
       * Donec verglit neque, auctor congue leo  malesuada.
 
   - subtitle: "We Are Delta"
+    subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
+    title_color: ""
     image: "images/block-image-01.png"
     content_position: "right" # Value will be - "left/right"
     bg_color: false
@@ -89,4 +95,9 @@ image_and_content_block:
   
 call_to_action:
   enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 ---

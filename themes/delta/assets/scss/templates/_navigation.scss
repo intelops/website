@@ -4,9 +4,6 @@
   position: sticky;
   z-index: 333;
   top: 0;
-  @include mobile {
-    padding: 5px 0;
-  }
 
   .container-delta {
     @media (min-width: 1600px) {
@@ -305,6 +302,8 @@
       text-align: center;
       padding: 15px;
       padding-bottom: 0;
+      max-height: 70vh;
+      overflow-y: auto;
     }
     .dropdown-menu {
       padding: 1px 10px;

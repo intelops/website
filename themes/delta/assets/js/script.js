@@ -29,6 +29,14 @@ $(window).on("load", function () {
 $(document).ready(function () {
   "use strict";
 
+  $('[data-bs-toggle="collapse"]').on("click", function () {
+    if ($(this).attr("aria-expanded") == "true") {
+      $("body").addClass("overflow-hidden");
+    } else {
+      $("body").removeClass("overflow-hidden");
+    }
+  });
+
   // sidenav js
   const matches = document.querySelectorAll(
     `li[data-nav-id$="${window.location.pathname}"]`
