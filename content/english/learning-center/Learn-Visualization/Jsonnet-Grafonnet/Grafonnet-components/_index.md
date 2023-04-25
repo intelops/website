@@ -1,11 +1,10 @@
 ---
 title: "Grafonnet-Components"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-04-24
 draft: false
 # description
 description: "Learn Grafonnet and implementation of dashboards using Jsonnet"
-type : "learning-center"
-weight: 1
+weight: 2
 ---
 
 
@@ -18,7 +17,7 @@ Using Grafonnet, users can define dashboards, panels, queries, alerts, and annot
 
 
 
-##### components of Grafonnet :
+##### components of Grafonnet:
 
 
 Grafonnet provides a number of pre-built components and libraries that can be used to create custom Grafana dashboards quickly and easily. Some of the key components of Grafonnet include:

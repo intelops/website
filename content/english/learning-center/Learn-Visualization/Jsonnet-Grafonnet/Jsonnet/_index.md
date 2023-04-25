@@ -1,11 +1,10 @@
 ---
-title: "Learn-Jsonnet"
-date: 2023-02-20T12:26:02-06:00
+title: "Learn Jsonnet"
+date: 2023-04-24
 draft: false
+weight: 1
 # description
 description: "Learn Grafonnet and implementation of dashboards using Jsonnet"
-type : "learning-center"
-weight: 2
 ---
 
 Before taking of our journey with Jsonnet,let's first learn about JSON format.

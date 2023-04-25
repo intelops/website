@@ -1,10 +1,9 @@
 ---
 title: "Create-Dashboards-With-Jsonnet"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-04-24
 draft: false
 # description
 description: "Learn Grafonnet and implementation of dashboards using Jsonnet"
-type : "learning-center"
 weight: 3
 ---
 
