@@ -1,6 +1,6 @@
 ---
 title: "Features"
-description: "Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti praesentium quis."
+description: "Capten Stack Features Summary"
 draft: false
 layout: "features"
 
@@ -42,21 +42,21 @@ features:
     title_color: ""
     icon: "far fa-gem"
     icon_color: ""
-    content: "Proactive solution to reduce carbon emmission, and optimize Performance and Cost of workloads in Kubernetes."
+    content: "Proactive solution to reduce carbon emission, and optimize Performance and Cost of workloads in Kubernetes."
     content_color: ""
     
   - title: "KubViz"
     title_color: ""
     icon: "fas fa-globe"
     icon_color: ""
-    content: "Trace what is happening in your git repos, container registry and kubernetes with ease."
+    content: "Observability for your git repos, container registry and kubernetes with ease."
     content_color: ""
     
   - title: "Tarian"
     title_color: ""
     icon: "fas fa-hourglass-start"
     icon_color: ""
-    content: "Run-time security for Kubernetes for threat elimination using eBPF."
+    content: "Observability & Run-time security for threat elimination using eBPF cloud native ecosystem."
     content_color: ""
     
   # - title: "Tarian"
