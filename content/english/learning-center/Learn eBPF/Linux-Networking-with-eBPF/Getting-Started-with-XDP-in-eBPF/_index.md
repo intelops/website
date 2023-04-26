@@ -4,6 +4,5 @@ date: 2023-04-17
 draft: false
 # description
 description: "A Beginner's Guide to High-Speed Packet Processing"
-type : "learning-center"
-weight: 3
+weight: 1
 ---
