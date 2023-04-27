@@ -6,7 +6,7 @@ url: opty
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
+  logo: "images/icons/opty.svg"
   logo_text: "Opty"
   logo_text_color: "secblack"
   

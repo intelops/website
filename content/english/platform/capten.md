@@ -6,7 +6,7 @@ url: capten
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
+  logo: "images/icons/capten.svg"
   logo_text: "Capten"
   logo_text_color: "secblack"
   

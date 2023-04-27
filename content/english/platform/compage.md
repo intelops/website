@@ -6,7 +6,7 @@ url: compage
 draft: false
 
 navigation:
-  logo: "images/logos/compage/compage-icon.svg"
+  logo: "images/icons/compage.svg"
   logo_text: "Compage"
   logo_text_color: "secblack"
   
