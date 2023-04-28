@@ -31,7 +31,7 @@ min = "0.84.0"
 mediaType = "application/manifest+json"
 rel = "manifest"
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest","JSON"]
+home = ["HTML", "RSS", "WebAppManifest", "JSON"]
 [taxonomies]
 category = "categories"
 tag = "tags"

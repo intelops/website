@@ -149,26 +149,7 @@
 
 {{with .Params.image_and_content_block}}
 {{if .enable}}
-<section class="section">
-  <div class="container container-delta">
-    <div class="row gx-4 gx-xl-5 align-items-center">
-      <div class="col-lg-6 order-1 {{with .content_position}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
-        <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
-        </div>
-        {{with .content}}<div class="content">{{. | markdownify}}</div>{{end}}
-      </div>
-      <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
-        <div class="bg-secondary-soft py-3 py-md-6 px-2 px-md-4 rounded-md">
-          {{with .image}}
-          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 py-6" ) }}
-          {{end}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image )}}
 {{end}}
 {{end}}
 
