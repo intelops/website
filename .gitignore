@@ -6,6 +6,7 @@ resources/_gen/
 .vscode
 #misc
 /exampleSite/.hugo_build.lock
+/node_modules
 
 # jetbrains files
 .idea/
@@ -14,3 +15,5 @@ resources/_gen/
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
+yarn-error.log
+yarn.lock
