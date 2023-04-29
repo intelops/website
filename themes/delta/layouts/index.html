@@ -61,8 +61,8 @@
 <section class="section features-section features-creative rounded-lg wave-block">
   <div class="container container-delta">
     <div class="row">
-      <div class="col-lg-8 text-center text-lg-start">
-        <div class="section-title">
+      <div class="col-lg-8 text-center text-lg-start mb-lg-5 pb-lg-5">
+        <div class="section-title pb-lg-1">
           <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
           <h2 class="h1 title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
 
@@ -82,30 +82,51 @@
       {{ $features_blocks := . }}
       <div class="col-lg-4 features-block">
         {{range first 1 $features_blocks}}
-        <div class="block">
-          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+        <div class="block pb-3" {{with .features_color}}style="color:{{.}}"{{end}}>
+          {{ $icon := .icon }}
+          {{ if fileExists (add `assets/` $icon) }}
+          {{ $iconSrc := resources.Get $icon }}
+          <img src="{{$iconSrc.RelPermalink}}" alt="icon" height="42px" width="42px" loading="lazy" class="mb-3">
+          {{ end }}
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
-          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
+          <div class="text-end mt-2">
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+          </div>
         </div>
         {{end}}
       </div>
 
       <div class="col-lg-4 features-block">
         {{range first 2 (after 1 $features_blocks)}}
-        <div class="block">
-          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+        <div class="block pb-3" {{with .features_color}}style="color:{{.}}"{{end}}>
+          {{ $icon := .icon }}
+          {{ if fileExists (add `assets/` $icon) }}
+          {{ $iconSrc := resources.Get $icon }}
+          <img src="{{$iconSrc.RelPermalink}}" alt="icon" height="42px" width="42px" loading="lazy" class="mb-3">
+          {{ end }}
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
-          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
+          <div class="text-end mt-2">
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+          </div>
         </div>
         {{end}}
       </div>
 
       <div class="col-lg-4 features-block">
         {{range first 3 (after 3 $features_blocks)}}
-        <div class="block">
-          <i class="icon {{.icon}}" {{with .icon_color}}style="color:{{.}} !important"{{end}}></i>
+        <div class="block pb-3" {{with .features_color}}style="color:{{.}}"{{end}}>
+          {{ $icon := .icon }}
+          {{ if fileExists (add `assets/` $icon) }}
+          {{ $iconSrc := resources.Get $icon }}
+          <img src="{{$iconSrc.RelPermalink}}" alt="icon" height="42px" width="42px" loading="lazy" class="mb-3">
+          {{ end }}
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
-          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content | truncate 96}}</p>
+          <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
+          <div class="text-end mt-2">
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+          </div>
         </div>
         {{end}}
       </div>
