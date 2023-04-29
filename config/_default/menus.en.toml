@@ -66,7 +66,7 @@ name = "Capten"
 parent = "Platform"
 url = "/capten"
 weight = 3
-pre = "images/icons/capten.png"
+pre = "images/icons/capten.svg"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
@@ -74,7 +74,7 @@ name = "Compage"
 parent = "Platform"
 url = "/compage"
 weight = 2
-pre = "images/icons/optimizor.png"
+pre = "images/icons/compage.svg"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
@@ -82,7 +82,7 @@ name = "Opty"
 parent = "Platform"
 url = "/opty"
 weight = 1
-pre = "images/icons/optimizor.png"
+pre = "images/icons/opty.svg"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
@@ -102,7 +102,7 @@ name = "Our open source"
 parent = "Open Source"
 url = "/our-open-source"
 weight = 1
-pre = "images/icons/capten.png"
+pre = "images/icons/opensource.png"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
@@ -110,7 +110,7 @@ name = "Contributed open source"
 parent = "Open Source"
 url = "/contributed-open-source"
 weight = 2
-pre = "images/icons/optimizor.png"
+pre = "images/icons/opensource.png"
 post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
