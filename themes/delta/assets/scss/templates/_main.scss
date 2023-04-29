@@ -1796,3 +1796,47 @@ footer {
     z-index: 55;
   }
 }
+
+.scrolledPopup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  max-height: 100vh;
+  overflow-y: auto;
+  &.show {
+    display: block;
+  }
+  .scrolledPopupOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+    cursor: pointer;
+  }
+  .btn-close {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 12px;
+  }
+  .popup-content {
+    margin: 30px auto;
+    width: 97%;
+    max-width: 550px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    z-index: 22;
+  }
+}

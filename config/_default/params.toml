@@ -54,6 +54,14 @@ enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7520/VCGTBDZHNQ41SR6Y97"
 button_label = "Subscribe for Newsletter"
 
+[blog_popup]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5CQC8LRFXTUBND"
+
+[learning_center_popup]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5CQC8LRFXTUBND"
+
 [[social]]
 icon = "fab fa-facebook"
 link = "#!"

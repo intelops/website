@@ -1,5 +1,5 @@
 {{ "<!-- details page -->" | safeHTML }}
-<section>
+<section class="get-content-block-height">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 col-md-4 sidenav">
@@ -103,6 +103,10 @@
       </div>
       
     </div>
+
+    {{ if site.Params.learning_center_popup.enable }}
+    {{ partial "popup-form" (dict "Class" "learning-center-popup" "Src" site.Params.learning_center_popup.clickup_iframe_url) }}
+    {{ end }}
   </div>
 </section>
 {{ "<!-- /details page -->" | safeHTML }}
