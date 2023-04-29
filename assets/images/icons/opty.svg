@@ -1,0 +1,26 @@
+<svg id="Optimizor-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="34" height="34" viewBox="0 0 34 34">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Path_64" data-name="Path 64" d="M177.809,85.343a1.517,1.517,0,1,1,1.517,1.5,1.507,1.507,0,0,1-1.517-1.5m3.911-3.027L180.6,83.484a2.3,2.3,0,0,0-2.566.008l-1.1-1.156a.323.323,0,0,0-.456-.01l-.033.032a.323.323,0,0,0-.01.456l1.1,1.149a2.218,2.218,0,0,0,.009,2.772l-1.107,1.159a.323.323,0,0,0,.01.456l.033.032a.323.323,0,0,0,.456-.01L178.05,87.2a2.3,2.3,0,0,0,2.541.009l1.07,1.12a.323.323,0,0,0,.456.01l.033-.032a.323.323,0,0,0,.01-.456L181.1,86.747a2.221,2.221,0,0,0,.01-2.8l1.107-1.158a.323.323,0,0,0-.01-.456l-.033-.032a.323.323,0,0,0-.456.01" transform="translate(-176.345 -82.217)" fill="#7fdca4"/>
+    </clipPath>
+  </defs>
+  <path id="Path_17289" data-name="Path 17289" d="M21.3,0a6.611,6.611,0,0,1,4.675,1.936l6.086,6.086A6.611,6.611,0,0,1,34,12.7V21.3a6.611,6.611,0,0,1-1.936,4.675l-6.086,6.086A6.611,6.611,0,0,1,21.3,34H12.7a6.611,6.611,0,0,1-4.675-1.936L1.936,25.978A6.611,6.611,0,0,1,0,21.3V12.7A6.611,6.611,0,0,1,1.936,8.022L8.022,1.936A6.611,6.611,0,0,1,12.7,0Z" transform="translate(0 0)" fill="#4b4b4c"/>
+  <g id="Group_1507" data-name="Group 1507" transform="translate(-470 -440.067)">
+    <g id="Group_399" data-name="Group 399" transform="translate(479.251 446.067)">
+      <g id="Group_398" data-name="Group 398" clip-path="url(#clip-path)">
+        <rect id="Rectangle_73" data-name="Rectangle 73" width="6.03" height="6.3" transform="translate(-0.034 -0.014)" fill="#7fdca4"/>
+      </g>
+    </g>
+    <g id="Group_401" data-name="Group 401" transform="translate(478 452.918)">
+      <path id="Shape_1" data-name="Shape 1" d="M584.608,451.778V437.416s.059-.416-.347-.416h-2.845a.406.406,0,0,0-.416.416v14.362Z" transform="translate(-567.027 -437)" fill="#7fdca4"/>
+      <path id="Shape_1_copy" data-name="Shape 1 copy" d="M519.608,511.338v-9.922s.059-.416-.347-.416h-2.845a.406.406,0,0,0-.416.416v9.922Z" transform="translate(-506.684 -496.56)" fill="#7fdca4"/>
+      <path id="Shape_1_copy_2" data-name="Shape 1 copy 2" d="M449.608,584.857v-4.44s.059-.416-.347-.416h-2.845a.406.406,0,0,0-.416.416v4.44Z" transform="translate(-441.342 -570.078)" fill="#7fdca4"/>
+      <path id="Shape_1_copy_3" data-name="Shape 1 copy 3" d="M382.608,614.636v-2.22s.059-.416-.347-.416h-2.845a.406.406,0,0,0-.416.416v2.22Z" transform="translate(-379 -599.858)" fill="#7fdca4"/>
+    </g>
+    <g id="Group_483" data-name="Group 483" transform="matrix(0.996, 0.087, -0.087, 0.996, 480.234, 452.241)">
+      <path id="Path_65" data-name="Path 65" d="M3.247,0H.464a.464.464,0,1,0,0,.928H2.783V3.247a.464.464,0,0,0,.928,0V.464A.464.464,0,0,0,3.247,0Z" transform="matrix(0.788, -0.616, 0.616, 0.788, 2.955, 2.284)" fill="#7fdca4"/>
+      <path id="Path_66" data-name="Path 66" d="M.4,7.621a.395.395,0,0,1-.2-.737A7.5,7.5,0,0,0,3.825.414.395.395,0,1,1,4.613.376,8.188,8.188,0,0,1,.591,7.568.393.393,0,0,1,.4,7.621Z" transform="translate(1.452 0.732)" fill="#7fdca4"/>
+      <path id="Line_16" data-name="Line 16" d="M.4.981A.395.395,0,0,1,.217.234L.6.042a.395.395,0,0,1,.356.7L.573.939A.393.393,0,0,1,.4.981Z" transform="translate(0 8.272)" fill="#7fdca4"/>
+    </g>
+  </g>
+</svg>

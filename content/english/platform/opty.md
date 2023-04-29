@@ -6,7 +6,7 @@ url: opty
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
+  logo: "images/icons/opty.svg"
   logo_text: "Opty"
   logo_text_color: "secblack"
   
@@ -69,7 +69,7 @@ image_and_content_block:
     title_color: ""
     image: "images/block-image-01.png"
     content_position: "left" # Value will be - "left/right"
-    bg_color: true
+    bg_color: "#e9f1ff"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
 

@@ -6,7 +6,7 @@ url: compage
 draft: false
 
 navigation:
-  logo: "images/logos/compage/compage-icon.svg"
+  logo: "images/icons/compage.svg"
   logo_text: "Compage"
   logo_text_color: "secblack"
   
@@ -69,7 +69,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: true
+    bg_color: "#e9f1ff"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
 
