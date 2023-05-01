@@ -1,7 +1,6 @@
 ---
 title: Services
-description: Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti
-  praesentium quis.
+description: Cloud Native development services at ease with industry's best practices and secure software supply chain standards.
 draft: true
 layout: services
 bannertext: Service
