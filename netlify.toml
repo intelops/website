@@ -15,4 +15,3 @@
   X-XSS-Protection = "1; mode=block"
   Referrer-Policy = "same-origin"
   Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-  Content-Security-Policy = "script-src 'self' 'unsafe-inline' 'nonce-2726c7f26c'"
