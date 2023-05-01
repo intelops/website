@@ -27,4 +27,7 @@ This is the repo to manage all the website work, which is being developed using 
 > https://github.com/intelops/website/issues/99#issuecomment-1529354004 
 > https://github.com/intelops/website/pull/139 
 
+> How to change content areas Text, Colors, BG color, etc.
+> https://github.com/intelops/website/issues/107 
 
+ 
