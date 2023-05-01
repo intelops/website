@@ -54,7 +54,7 @@ image_and_content_block:
   - enable: true
     subtitle: "We Are Delta"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/what-is-compage.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -69,7 +69,7 @@ image_and_content_block:
   - enable: true
     subtitle: "We Are Delta"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
@@ -84,7 +84,7 @@ image_and_content_block:
   - enable: true
     subtitle: "We Are Delta"
     title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+    image: "images/content/compage/integrations-features.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""

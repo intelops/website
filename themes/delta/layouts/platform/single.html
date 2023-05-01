@@ -54,13 +54,69 @@
 
 {{with .Params.image_and_content_block}}
 {{if .enable}}
+<div class="position-relative">
+<div class="anim-block d-none d-lg-block">
+  <div class="anim-block-inner">
+    <div class="assets">
+      {{ partial "image.html" (dict "Src" "images/hp-primary-desktop.svg" "Class" "img-fluid asset-bg-image" ) }}
+
+      {{ range $i, $e := .blocks }}
+      {{ if .enable }}
+      <div data-image>
+        {{with .image}}
+        {{ partial "image.html" (dict "Src" . "Class" "img-fluid" ) }}
+        {{end}}
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>
+
 {{ range .blocks }}
 {{ if .enable }}
-{{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image )}}
+{{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image "Largegap" true )}}
 {{end}}
 {{end}}
+</div>
 {{end}}
 {{end}}
+
+<script>
+  // Get the elements
+  const mainSection = document.querySelector('.the-main-section');
+  const assets = document.querySelector('.assets');
+  const assetImages = document.querySelectorAll('[data-image]');
+  const sections = document.querySelectorAll('[data-section]');
+  assetImages[0].classList.add('show');
+  
+  window.addEventListener('scroll', function() {
+    // Loop through the sections and get the position of each one
+    for (let i = 0; i < sections.length; i++) {
+      const sectionPos = sections[i].getBoundingClientRect().top;
+  
+      if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
+        if (i === 0) {
+          assets.classList.add('assets-left');
+          assets.classList.remove('assets-right');
+        } else if (i % 2 === 1) {
+          assets.classList.remove('assets-left');
+          assets.classList.add('assets-right');
+        } else {
+          assets.classList.add('assets-left');
+          assets.classList.remove('assets-right');
+        }
+      }
+  
+      if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
+        assetImages[i].classList.add('show');
+      } else {
+        assetImages[i].classList.remove('show');
+      }
+  
+    }
+  });
+</script>
 
 {{if .Params.call_to_action.enable}}
 {{ partial "call-to-action-3.html" . }}
