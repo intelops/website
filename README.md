@@ -30,4 +30,7 @@ This is the repo to manage all the website work, which is being developed using 
 > How to change content areas Text, Colors, BG color, etc.
 > https://github.com/intelops/website/issues/107 
 
+> How To change bg color for full row for a content area block/row?
+> https://github.com/tfsomrat/intelops/commit/8338aa4b47257da3038df9356f21fe78a2655e85 
+
  
