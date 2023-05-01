@@ -95,9 +95,14 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: ""
-  subtitle: ""
-  image: ""
-  button_label: ""
-  button_link: ""
+  title: "Start using <br/> Compage <br/> platform today..."
+  title_color: "#fff"
+  image: "images/footer/compage/compage.svg"
+  button_label: "Get Started"
+  button_link: "contact/"
+  bg_color: "#fa9e26"
+  bottom_bg_color: "#080338"
+
+footer:
+  footer_light: false
 ---

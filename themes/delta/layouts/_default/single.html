@@ -6,7 +6,7 @@
 {{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
 
 <!-- strat of blog-details -->
-<section class="section-sm">
+<section class="section-sm get-content-block-height">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
       <div class="col-lg-4 blog-sidebar">
@@ -115,6 +115,9 @@
   </div>
 </section>
 
+{{ if site.Params.blog_popup.enable }}
+{{ partial "popup-form" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}
+{{ end }}
       
 {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
 {{ if $related }}

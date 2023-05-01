@@ -4,19 +4,19 @@
 {{ $overlay := "" }}
 
 {{ if or .Params.footer.footer_light site.Params.footer.footer_light }}
-{{ $footer_light := .Params.footer.footer_light | default site.Params.footer.footer_light }}
+{{ $footer_light = .Params.footer.footer_light | default site.Params.footer.footer_light }}
 {{ end }}
 
 {{ if or .Params.footer.bg_color site.Params.footer.bg_color }}
-{{ $bg_color := .Params.footer.bg_color | default site.Params.footer.bg_color }}
+{{ $bg_color = .Params.footer.bg_color | default site.Params.footer.bg_color }}
 {{ end }}
 
 {{ if or .Params.footer.bg_image site.Params.footer.bg_image }}
-{{ $bg_image := resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
+{{ $bg_image = resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
 {{ end }}
 
 {{ if or .Params.footer.bg_image_overlay_color site.Params.footer.bg_image_overlay_color }}
-{{ $overlay := .Params.footer.bg_image_overlay_color | default site.Params.footer.bg_image_overlay_color }}
+{{ $overlay = .Params.footer.bg_image_overlay_color | default site.Params.footer.bg_image_overlay_color }}
 {{ end }}
 
 <footer class="{{if $footer_light}}bg-light{{else}}bg-dark{{end}} px-1 wave-block" 
