@@ -14,6 +14,10 @@
                   {{.title | markdownify}}
                   {{ partial "image.html" (dict "Src" "images/call-to-actions/compage/bg-layer.svg" "Class" "bg-layer img-fluid" ) }}
                 </h3>
+                
+                {{ if .subtitle }}
+                <p class="mb-4" style="color:{{.subtitle_color}} !important">{{.subtitle | markdownify}}</p>
+                {{ end }}
           
                 {{ if .button_label }}
                 <a href="{{.button_link | relLangURL}}" class="btn btn-dark border-0">{{.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
