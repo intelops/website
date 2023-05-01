@@ -48,7 +48,8 @@ banner:
 image_and_content_block:
   enable: true
   blocks:
-  - subtitle: "We Are Delta"
+  - enable: true
+    subtitle: "We Are Delta"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
@@ -63,7 +64,8 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "We Are Delta"
+  - enable: true
+    subtitle: "We Are Delta"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
@@ -78,7 +80,8 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "We Are Delta"
+  - enable: true
+    subtitle: "We Are Delta"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""

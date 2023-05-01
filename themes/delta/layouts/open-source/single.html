@@ -54,7 +54,9 @@
 {{with .Params.image_and_content_block}}
 {{if .enable}}
 {{ range .blocks }}
+{{ if .enable }}
 {{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image )}}
+{{end}}
 {{end}}
 {{end}}
 {{end}}

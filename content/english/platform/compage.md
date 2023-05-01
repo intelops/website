@@ -48,7 +48,8 @@ banner:
 image_and_content_block:
   enable: true
   blocks:
-  - subtitle: "What is Compage?"
+  - enable: true
+    subtitle: "What is Compage?"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
@@ -63,7 +64,8 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "How it works?"
+  - enable: true
+    subtitle: "How it works?"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
@@ -78,7 +80,8 @@ image_and_content_block:
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
 
-  - subtitle: "Integrations & Features"
+  - enable: true
+    subtitle: "Integrations & Features"
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
