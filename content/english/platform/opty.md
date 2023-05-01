@@ -31,8 +31,11 @@ navigation:
 banner:
   bg_color: "#fa9e26"
   subtitle: "We Are Delta"
+  subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
+  title_color: ""
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
+  description_color: ""
   image: images/banner-about.png
   button:
     enable: true

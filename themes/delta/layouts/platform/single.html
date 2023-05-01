@@ -11,9 +11,9 @@
     <div class="row align-items-center text-center text-lg-start">
       <div class="col-lg-6">
         <div class="pe-0 pe-lg-5">
-          <p class="subtitle text-white">{{.subtitle | markdownify}}</p>
-          <h1 class="title text-xl mb-3 text-white">{{.title | markdownify}}</h1>
-          <p class="mb-4 text-light">{{.description | markdownify}}</p>
+          <p class="subtitle {{if not .subtitle_color}}text-white{{end}}" {{with .subtitle_color}}style="color:{{.}}"{{end}}>{{.subtitle | markdownify}}</p>
+          <h1 class="title text-xl mb-3 {{if not .title_color}}text-white{{end}}" {{with .title_color}}style="color:{{.}}"{{end}}>{{.title | markdownify}}</h1>
+          <p class="mb-4 {{if not .description_color}}text-light{{end}}" {{with .description_color}}style="color:{{.}}"{{end}}>{{.description | markdownify}}</p>
 
           {{with .button}}
           {{if .enable}}
