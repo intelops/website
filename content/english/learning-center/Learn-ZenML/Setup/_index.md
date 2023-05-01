@@ -1,6 +1,6 @@
 ---
 title: "Setup"
-date: 2023-02-20T14:06:36-06:00
+date: 2023-02-20
 draft: false
 weight: 1
 # description

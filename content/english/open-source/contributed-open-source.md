@@ -6,9 +6,9 @@ url: contributed-open-source
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
-  logo_text: "Capten"
-  logo_text_color: "white"
+  logo: "images/icons/opensource.png"
+  logo_text: "Our Contributions"
+  logo_text_color: "secblack"
   
   menu:
   - name: "Test 1"
@@ -65,7 +65,7 @@ image_and_content_block:
     title: "Lots of people love us, <br> and we're also."
     image: "images/block-image-01.png"
     content_position: "left" # Value will be - "left/right"
-    bg_color: true
+    bg_color: "#e9f1ff"
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
 
@@ -89,4 +89,9 @@ image_and_content_block:
   
 call_to_action:
   enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 ---

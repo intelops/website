@@ -1,6 +1,6 @@
 ---
 title: "How to add content to website and docs sites"
-date: 2023-02-20T15:58:23-06:00
+date: 2023-02-20
 draft: false
 weight: 1
 # description

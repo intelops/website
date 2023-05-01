@@ -67,6 +67,7 @@ features_box:
 # image_and_content_block
 image_and_content_block:
   enable: true
+  bg_color: "#fcbe9f"
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "Lots of people love us, <br> and we're also."
@@ -180,5 +181,10 @@ career:
 # call_to_action
 call_to_action:
   enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
 
 ---
