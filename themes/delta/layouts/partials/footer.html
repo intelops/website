@@ -20,7 +20,7 @@
 {{ end }}
 
 <footer class="{{if $footer_light}}bg-light{{else}}bg-dark{{end}} px-1 wave-block" 
- style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}{{- if $bg_image -}}background-image: url({{$bg_image | absURL}}); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;{{- end -}}">
+ style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}{{- if $bg_image -}}background-image: url({{$bg_image.RelPermalink}}); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;{{- end -}}">
   {{- if and $overlay $bg_image -}}<div class="footer-overlay" style="background-color:{{$overlay | safeCSS}}"></div>{{- end -}}
   <div class="container container-delta">
     <div class="row align-items-center gy-3">

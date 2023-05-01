@@ -121,7 +121,7 @@
       
 {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
 {{ if $related }}
-<section class="section pt-5">
+<section class="pt-5">
   <div class="container">
     <div class="row justify-content-center" data-aos="fade-in">
       <div class="col-12">
@@ -155,5 +155,7 @@
 </section>
 {{ end }}
 <!-- /regular page -->
+
+{{ partial "call-to-action-2.html" . }}
 
 {{ end }}

@@ -97,12 +97,17 @@ call_to_action:
   enable: true
   title: "Start using <br/> Compage <br/> platform today..."
   title_color: "#fff"
+  # subtitle: ""
+  # subtitle_color: ""
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
   bg_color: "#005DFF"
   bottom_bg_color: "#080338"
 
-footer:
-  footer_light: false
+# footer:
+#   footer_light: false
+#   bg_color: "red"
+#   bg_image: "images/contact-image1.jpg"
+#   bg_image_overlay_color: "rgba(0,0,0,.85)"
 ---
