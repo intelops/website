@@ -1,11 +1,11 @@
 ---
 title: "gRPC-Web-Streaming"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-04-29
 draft: false
 # description
 description: "Get-to-know-about grpc"
 type : "learning-center"
-weight: 5
+weight: 3
 ---
 
 gRPC Web Streaming is a way of using gRPC communication over HTTP/1.1 or HTTP/2, rather than using gRPC over a binary protocol like TCP. This enables gRPC to be used in web browsers, which do not support binary protocols. However, since HTTP/1.1 and HTTP/2 do not support bidirectional streaming, gRPC Web Streaming does not support bidirectional streaming, which is a feature of gRPC. As a result, gRPC Web Streaming only supports Server-Side Streaming and Client Streaming, but not Bidirectional Streaming.
