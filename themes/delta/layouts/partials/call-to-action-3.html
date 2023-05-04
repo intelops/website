@@ -1,27 +1,38 @@
 {{with .Params.call_to_action}}
 {{if .enable}}
-<section class="call-to-action-3 overflow-hidden position-relative" style="background-color: {{.bg_color}};">
-  <div class="container-">
-    <div class="row align-items-end align-items-lg-center g-0">
-      <div class="col-md-7">
-        <div class="content-block">
+<section class="section pb-0 call-to-action call-to-action-3">
+  <div class="bottom-bg" style="background-color: {{.bottom_bg_color}};"></div>
+  <div class="container container-delta">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="block rounded-lg shadow overflow-hidden" style="background-color: {{.bg_color}};">
+          <div class="row align-items-end align-items-lg-center g-0">
+            <div class="col-lg-7">
+              <div class="content-block">
+                
+                <h3 class="title h2 text-capitalize mb-2" style="color:{{.title_color}} !important">
+                  {{.title | markdownify}}
+                  {{ partial "image.html" (dict "Src" "images/call-to-actions/compage/bg-layer.svg" "Class" "bg-layer img-fluid" ) }}
+                </h3>
+                
+                {{ if .subtitle }}
+                <p class="mb-4" style="color:{{.subtitle_color}} !important">{{.subtitle | markdownify}}</p>
+                {{ end }}
           
-          <h3 class="title h2 text-capitalize mb-2" style="color:{{.title_color}} !important">
-            {{.title | markdownify}}
-            {{ partial "image.html" (dict "Src" "images/call-to-actions/compage/bg-layer.svg" "Class" "bg-layer img-fluid" ) }}
-          </h3>
-          
-          {{ if .button_label }}
-          <a href="{{.button_link | relLangURL}}" class="btn btn-dark border-0">{{.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
-          {{ end }}
-          
+                {{ if .button_label }}
+                <a href="{{.button_link | relLangURL}}" class="btn btn-dark border-0">{{.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
+                {{ end }}
+                
+              </div>
+            </div>
+            {{with .image}}
+            <div class="col-lg-5 d-none d-lg-block mt-5 pt-5">
+              {{ partial "image.html" (dict "Src" . "Class" "img-fluid" ) }}
+            </div>
+            {{end}}
+          </div>
         </div>
       </div>
-      {{with .image}}
-      <div class="col-md-5 d-none d-md-block">
-        {{ partial "image.html" (dict "Src" . "Class" "img-fluid" ) }}
-      </div>
-      {{end}}
     </div>
   </div>
 </section>

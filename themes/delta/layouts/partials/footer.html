@@ -4,23 +4,23 @@
 {{ $overlay := "" }}
 
 {{ if or .Params.footer.footer_light site.Params.footer.footer_light }}
-{{ $footer_light := .Params.footer.footer_light | default site.Params.footer.footer_light }}
+{{ $footer_light = .Params.footer.footer_light | default site.Params.footer.footer_light }}
 {{ end }}
 
 {{ if or .Params.footer.bg_color site.Params.footer.bg_color }}
-{{ $bg_color := .Params.footer.bg_color | default site.Params.footer.bg_color }}
+{{ $bg_color = .Params.footer.bg_color | default site.Params.footer.bg_color }}
 {{ end }}
 
 {{ if or .Params.footer.bg_image site.Params.footer.bg_image }}
-{{ $bg_image := resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
+{{ $bg_image = resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
 {{ end }}
 
 {{ if or .Params.footer.bg_image_overlay_color site.Params.footer.bg_image_overlay_color }}
-{{ $overlay := .Params.footer.bg_image_overlay_color | default site.Params.footer.bg_image_overlay_color }}
+{{ $overlay = .Params.footer.bg_image_overlay_color | default site.Params.footer.bg_image_overlay_color }}
 {{ end }}
 
 <footer class="{{if $footer_light}}bg-light{{else}}bg-dark{{end}} px-1 wave-block" 
- style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}{{- if $bg_image -}}background-image: url({{$bg_image | absURL}}); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;{{- end -}}">
+ style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}{{- if $bg_image -}}background-image: url({{$bg_image.RelPermalink}}); background-repeat: no-repeat; background-position: center center; background-attachment: fixed; background-size: cover;{{- end -}}">
   {{- if and $overlay $bg_image -}}<div class="footer-overlay" style="background-color:{{$overlay | safeCSS}}"></div>{{- end -}}
   <div class="container container-delta">
     <div class="row align-items-center gy-3">
@@ -155,7 +155,7 @@
     <div class="modal-content border-0 bg-transparent">
       <div class="text-center p-3"><button type="button" class="border-0 modal-close-btn" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg></button></div>
       <div class="modal-body bg-dark p-0 rounded" style="min-height:500px;">
-        <iframe class="clickup-embed clickup-dynamic-height" src="{{.clickup_iframe_url}}" onwheel="" width="100%" height="100%" style="background: transparent;"></iframe><script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
+        <iframe class="clickup-embed clickup-dynamic-height" src="{{.clickup_iframe_url}}" onwheel="" width="100%" height="100%" style="background: transparent;"></iframe><script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script></script>
       </div>
     </div>
   </div>

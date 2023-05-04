@@ -11,8 +11,9 @@
 {{$content:= .Content }}
 {{$contentColor:= .ContentColor }}
 {{$image:= .Image }}
+{{$large_gap:= .Largegap }}
 
-<section class="section {{$sectionClass}} {{if $hasWave}}wave-block{{end}}" style="background-color: {{$bgColor}};">
+<section class="section {{$sectionClass}} {{if $hasWave}}wave-block{{end}}" style="background-color: {{$bgColor}};" data-section>
   <div class="container {{$containerClass}}">
     <div class="row align-items-center {{$rowClass}}">
       <div class="col-lg-6 order-1 {{with $contentPosition}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
@@ -25,7 +26,7 @@
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .contentPosition}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         <div class="px-2 px-md-4 text-center">
           {{with $image}}
-          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 mx-auto" ) }}
+          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 mx-auto d-block d-lg-none" ) }}
           {{end}}
         </div>
       </div>
