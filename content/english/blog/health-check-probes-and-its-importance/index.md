@@ -1,9 +1,9 @@
 ---
-title: "Health Check Probes and Its Importance"
+title: "Health Check Probes and it's importance in Kubernetes"
 date: 2023-04-28
 draft: false
 # description
-description: "A way to check if a container in a pod is running and ready to serve traffic."
+description: "A way to check if a container in a pod is running and ready to serve traffic using liveness probe, readiness probe and startup probe in Kubernetes."
 image: images/blog/health-check-probes-and-its-importance/healthcheck.svg
 
 categories:

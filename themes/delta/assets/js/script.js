@@ -29,6 +29,35 @@ $(window).on("load", function () {
 $(document).ready(function () {
   "use strict";
 
+  const scrolledPopup = document.querySelector('.scrolledPopup');
+  if (scrolledPopup) {
+
+    let contentBlock = document.querySelector('.get-content-block-height');
+    let contentBlockHeight = contentBlock.scrollHeight;
+    
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= (contentBlockHeight/2.5)) {
+        if (sessionStorage.getItem('blogScrolledPopupHide') != 'true') {
+          $('.blog-popup').addClass('show');
+        }
+        if (sessionStorage.getItem('learningScrolledPopupHide') != 'true') {
+          $('.learning-center-popup').addClass('show');
+        }
+      }
+    });
+    
+    $('[data-hide="scrolledPopup"').click(function () {
+      scrolledPopup.remove();
+    });
+    
+    $('.blog-popup [data-hide="scrolledPopup"]').click(function () {
+      sessionStorage.setItem('blogScrolledPopupHide', 'true');
+    });
+    $('.learning-center-popup [data-hide="scrolledPopup"]').click(function () {
+      sessionStorage.setItem('learningScrolledPopupHide', 'true');
+    });
+  }
+
   $('[data-bs-toggle="collapse"]').on("click", function () {
     if ($(this).attr("aria-expanded") == "true") {
       $("body").addClass("overflow-hidden");
