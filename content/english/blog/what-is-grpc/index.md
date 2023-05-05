@@ -112,12 +112,10 @@ message Car {
 ```
 
 You can then use a compiler to make a code file filled with getters/setters for each field in every message of your
-proto
-file. The compiler, `protoc`, can be used to compile proto files into the language of your choice. The compiler will
-also
-create methods to both serialize and recreate the object from the gRPC messages. Lastly, the code generated from the
-proto file will include both client and server code. This includes services. Below is another example of the service we
-can use with our car example.
+proto file. The compiler, `protoc`, can be used to compile proto files into the language of your choice. The compiler
+will also create methods to both serialize and recreate the object from the gRPC messages. Lastly, the code generated
+from the proto file will include both client and server code. This includes services. Below is another example of the
+service we can use with our car example.
 
 ```protobuf
 service CalculateTotalMilesOnFullTank {
@@ -157,3 +155,7 @@ by the compiler `protoc`. Lastly, once we had understood a bit more about gRPC, 
 to gRPC.  
 You can read more about gRPC [here](https://grpc.io/docs/what-is-grpc/introduction/), and even get started with some
 sample code in the langauge of your choosing [here](https://grpc.io/docs/languages/).
+
+> # Want to learn more?
+> Check out our <a href="https://intelops.ai/learning-center/learn-grpc/" target="_blank">learning center</a> section on
+> gRPC, with more details and code.
