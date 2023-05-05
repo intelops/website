@@ -1,11 +1,10 @@
 ---
 title: "Protocol-Buffers"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-04-20T12:26:02-06:00
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 2
+weight: 3
 ---
 
 **Protocol Buffers** are a core part of gRPC and are used to define the service interfaces and the messages that are exchanged between the client and server.

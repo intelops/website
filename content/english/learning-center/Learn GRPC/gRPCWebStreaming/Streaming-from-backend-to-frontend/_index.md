@@ -1,11 +1,10 @@
 ---
 title: "Streaming-between-frontend-backend"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-05-01
 draft: false
 # description
-description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 2
+description: "Streaming-between-frontend-backend"
+weight: 1
 ---
 
 In this section, we'll discuss how you can use gRPC Streaming for your backend and front end.

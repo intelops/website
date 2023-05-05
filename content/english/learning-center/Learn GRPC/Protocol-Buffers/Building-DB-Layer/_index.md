@@ -1,10 +1,9 @@
 ---
 title: "Building-DB-Layer"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-04-20T12:26:02-06:00
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
 weight: 3
 ---
 **Let’s start by building database layer**

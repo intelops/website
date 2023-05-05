@@ -1,11 +1,10 @@
 ---
 title: "Error-Handling"
-date: 2023-02-20T12:26:02-06:00
+date: 2023-05-01
 draft: false
 # description
-description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 5
+description: "Error-Handling"
+weight: 2
 ---
 
 In this blog we are going to talk about error handling while streaming between frontend and backend.
@@ -34,7 +33,6 @@ On the client-side, you can handle the error using the stream.on('error',...) ev
 Here's an example:
 
 ```go
-
 stream.on('error', err => {
   console.error('Error:', err);
 });
