@@ -1,0 +1,188 @@
+{{ define "main" }}
+
+<div class="the-main-section">
+  <div class="anim-block">
+    <div class="anim-block-inner">
+      <div class="assets">
+        {{ partial "image.html" (dict "Src" "images/square.svg" "Class" "img-fluid asset-bg-image" ) }}
+
+        <div class="image-1">
+          {{ partial "image.html" (dict "Src" "images/block-image-01.png" "Class" "img-fluid" ) }}
+        </div>
+        <div class="image-2">
+          {{ partial "image.html" (dict "Src" "images/block-image-02.png" "Class" "img-fluid" ) }}
+        </div>
+        <div class="image-3">
+          {{ partial "image.html" (dict "Src" "images/block-image-03.png" "Class" "img-fluid" ) }}
+        </div>
+        <div class="image-4">
+          {{ partial "image.html" (dict "Src" "images/block-image-01.png" "Class" "img-fluid" ) }}
+        </div>
+      </div>
+    </div>
+  </div>
+  <section class="section-1" data-section>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-lg-6">
+          <h1 class="text-white">Section 1</h1>
+          <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente ipsa vitae numquam architecto ex velit eos, doloremque natus eligendi distinctio dignissimos harum pariatur impedit expedita dolor totam libero ratione enim incidunt quos. Fugit autem sit doloremque error quis nisi, accusamus ipsam aut eum amet, optio cumque, provident delectus! Sed pariatur numquam asperiores, doloribus natus eius eaque eligendi blanditiis enim quidem commodi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-2" data-section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1>Section 2</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente ipsa vitae numquam architecto ex velit eos, doloremque natus eligendi distinctio dignissimos harum pariatur impedit expedita dolor totam libero ratione enim incidunt quos. Fugit autem sit doloremque error quis nisi, accusamus ipsam aut eum amet, optio cumque, provident delectus! Sed pariatur numquam asperiores, doloribus natus eius eaque eligendi blanditiis enim quidem commodi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-3" data-section>
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-lg-6">
+          <h1 class="text-white">Section 3</h1>
+          <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente ipsa vitae numquam architecto ex velit eos, doloremque natus eligendi distinctio dignissimos harum pariatur impedit expedita dolor totam libero ratione enim incidunt quos. Fugit autem sit doloremque error quis nisi, accusamus ipsam aut eum amet, optio cumque, provident delectus! Sed pariatur numquam asperiores, doloribus natus eius eaque eligendi blanditiis enim quidem commodi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section-4" data-section>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="text-white">Section 4</h1>
+          <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae sapiente ipsa vitae numquam architecto ex velit eos, doloremque natus eligendi distinctio dignissimos harum pariatur impedit expedita dolor totam libero ratione enim incidunt quos. Fugit autem sit doloremque error quis nisi, accusamus ipsam aut eum amet, optio cumque, provident delectus! Sed pariatur numquam asperiores, doloribus natus eius eaque eligendi blanditiis enim quidem commodi?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<style>
+  .the-main-section {
+    position: relative;
+  }
+  .anim-block {
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+  }
+  .anim-block-inner {
+    perspective: 1800px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+  }
+  .assets {
+    position: relative;
+    transition: .13s;
+    width: 40%;
+    perspective: 1800px;
+    transform: translateX(5%);
+  }
+  .assets .asset-bg-image {
+    width: 100%;
+    display: block;
+    will-change: transform;
+    transform-origin: center top;
+    transition: .13s;
+    transform: rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+  }
+  .assets.assets-right .asset-bg-image {
+    transform: rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+  }
+  .assets div[class^="image-"] {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0.8) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+    width: 70%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .13s;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.3));
+  }
+  .assets.assets-right div[class^="image-"] {
+    transform: translateX(-50%) scaleX(1) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+  }
+  .assets div[class^="image-"].show {
+    transition: .3s;
+    transition-delay: .1s;
+    top: 30%;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) scaleX(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+  }
+  
+  [data-section] {
+    padding: 400px 0;
+  }
+  
+  .section-1 {
+    background-color: #f06d32;
+  }
+  .section-2 {
+    background-color: #fff;
+  }
+  .section-3 {
+    background-color: green;
+  }
+  .section-4 {
+    background-color: rgb(0, 98, 128);
+  }
+</style>
+
+<script>
+// Get the elements
+const mainSection = document.querySelector('.the-main-section');
+const assets = document.querySelector('.assets');
+const assetImages = document.querySelectorAll('div[class^="image-"]');
+const sections = document.querySelectorAll('[data-section]');
+assetImages[0].classList.add('show');
+
+window.addEventListener('scroll', function() {
+
+  // Loop through the sections and get the position of each one
+  for (let i = 0; i < sections.length; i++) {
+    const sectionPos = sections[i].getBoundingClientRect().top;
+
+    if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
+      if (i === 0) {
+        assets.classList.add('assets-left');
+        assets.classList.remove('assets-right');
+        assets.style.transform = "translateX(5%)";
+      } else if (i % 2 === 1) {
+        assets.classList.remove('assets-left');
+        assets.classList.add('assets-right');
+        assets.style.transform = "translateX(135%)";
+      } else {
+        assets.classList.add('assets-left');
+        assets.classList.remove('assets-right');
+        assets.style.transform = "translateX(5%)";
+      }
+    }
+
+    if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
+      assetImages[i].classList.add('show');
+    } else {
+      assetImages[i].classList.remove('show');
+    }
+
+  }
+});
+</script>
+
+{{ end }}

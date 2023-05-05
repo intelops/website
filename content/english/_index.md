@@ -145,11 +145,6 @@ call_to_action:
   image: ""
   button_label: ""
   button_link: ""
-  title: ""
-  subtitle: ""
-  image: ""
-  button_label: ""
-  button_link: ""
 
 footer:
   footer_light: false

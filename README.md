@@ -20,5 +20,17 @@ This is the repo to manage all the website work, which is being developed using 
 > Modifying Footer:
 > https://github.com/intelops/website/issues/42 
 
->how to disable and enable pages and/or content from public view?
+> How to disable and enable pages and/or content from public view?
 > https://github.com/intelops/website/issues/51
+
+> How to change bg color, text, etc for call-to-action and footer area
+> https://github.com/intelops/website/issues/99#issuecomment-1529354004 
+> https://github.com/intelops/website/pull/139 
+
+> How to change content areas Text, Colors, BG color, etc.
+> https://github.com/intelops/website/issues/107 
+
+> How To change bg color for full row for a content area block/row?
+> https://github.com/tfsomrat/intelops/commit/8338aa4b47257da3038df9356f21fe78a2655e85 
+
+ 
