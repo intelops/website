@@ -15,12 +15,14 @@ categories:
 - Cloud Native
 - Kubernetes
 - Low-Code
+- gRPC
 - gRPC Interceptors
 - Applications
 
 tags:
 - Application Development
 - Low-Code
+- gRPC
 - gRPC Interceptors
 - Kubernetes Applications Development
 - Cloud Native Applications

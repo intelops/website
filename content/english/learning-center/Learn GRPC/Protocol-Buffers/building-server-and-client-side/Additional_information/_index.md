@@ -4,8 +4,7 @@ date: 2023-04-29
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 5
+weight: 2
 ---
 ***grpcurl is a command-line tool that can be used to interact with gRPC servers. Here are some examples of how to use grpcurl to make gRPC requests by hand:***
 

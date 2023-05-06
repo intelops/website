@@ -4,7 +4,6 @@ date: 2023-04-20
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
 weight: 1
 ---
 
