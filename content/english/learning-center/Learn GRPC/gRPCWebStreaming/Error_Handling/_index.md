@@ -4,8 +4,7 @@ date: 2023-04-27
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 5
+weight: 2
 ---
 
 In this blog we are going to talk about error handling while streaming between frontend and backend.
