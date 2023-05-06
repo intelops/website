@@ -10,14 +10,15 @@ cover_image_height: ""
 cover_image_width: ""
 
 author: hannan-khan
-#series: DevSecOps Series
+
+series: Secure Software Supply Chain
+
 categories:
-  - Software Supply Chain
-  - Security
+  - Software Supply Chain Security
 
 tags:
-  - Software Supply Chain
-  - Security
+  - Software Supply Chain Security
+  - Secure Software Supply Chain
 
 # image color code in undraw.co #FB7E44
 feedback: false

@@ -1,7 +1,6 @@
 ---
 title: "Transfer Learning: A new approach"
 date: 2023-05-04
-draft: true
 # description
 description: "Transfer Learning a Machine Learning technique that involves using a pre-trained model of one task to bootstrap the learning process of a new task."
 image: images/blog/transfer-learning/transfer.svg
@@ -16,6 +15,10 @@ author: vishwas-prasanna
 series: Machine Learning
 categories:
 - Neural Networks
+
+tags:
+  - Machine Learning
+  - Transfer Learning
 
 # image color code in undraw.co #FB7E44 
 feedback: false
