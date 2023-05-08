@@ -4,7 +4,6 @@ date: 2023-05-05
 draft: false
 # description
 description: "Different kind of hooks."
-type : "learning-center"
 weight: 2
 ---
 
