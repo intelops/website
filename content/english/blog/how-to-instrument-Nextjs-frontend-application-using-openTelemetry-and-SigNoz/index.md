@@ -1,6 +1,6 @@
 ---
 date: 2023-05-05
-title: Next.js Instrumentation - Tracing and Monitoring with OpenTelemetry and Signoz
+title: Next.js web application instrumentation for distributed tracing with OpenTelemetry
 description: How to Monitor a Next.js application using OpenTelemetry and Signoz
 image: images/blog/instrument-nextjs-openTelemetry/instrumenting.png
 
@@ -30,7 +30,7 @@ draft: false
 
 {{< image src="images/blog/instrument-nextjs-openTelemetry/instrumenting.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-Though Next.js has its own monitoring feature, it does not have end-to-end monitoring and no tracing of database calls this is when OpenTelemetry comes into the picture. Okay so we have the telemetry data but how and where do you analyze it? which is why you need Signoz.
+Though Next.js has its own monitoring feature, it does not have end-to-end monitoring and no tracing of calls; this is when OpenTelemetry comes into the picture. Okay so we have the telemetry data but how and where do you analyze it? Will show you how you can leverage Signoz, which is an automated platform to use opentelemetry. 
 ________________
 
 # OpenTelemetry and Signoz and how to install them?
