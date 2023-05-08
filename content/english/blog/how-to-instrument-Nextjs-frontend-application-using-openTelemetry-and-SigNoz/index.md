@@ -1,5 +1,5 @@
 ---
-date: 2023-04-22
+date: 2023-05-05
 title: Next.js Instrumentation - Tracing and Monitoring with OpenTelemetry and Signoz
 description: How to Monitor a Next.js application using OpenTelemetry and Signoz
 image: images/blog/instrument-nextjs-openTelemetry/instrumenting.png
@@ -14,13 +14,14 @@ series: Next.js
 categories:
 - Next.js
 - OpenTelemetry
-- Signoz
-- Instrumentation
+- Distributed Tracing
 - Monitoring
+- Observability
+
 tags:
-- Next.js application
-- Web application instrumentation
-- Telelmetry data analysis
+- Next.js
+- OpenTelemetry
+- SigNoz
 
 # image color code in undraw.co #FB7E44 
 feedback: false
