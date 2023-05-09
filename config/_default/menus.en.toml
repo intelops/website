@@ -117,14 +117,28 @@ post = "<small>Convert leads and close sales deals faster.</small>"
 name = "Blogs"
 url = "blog/"
 weight = 20
+
 [[main]]
 name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 30
-#[[main]]
-#name = "Services"
-#url = "services/"
-#weight = 40
+
+[[main]]
+name = "Services"
+url = "/services-form"
+weight = 40
+[main.params]
+isMenuLarge = true
+parent= "Services"
+[[main]]
+name = "Custom Services"
+parent = "Services"
+url = "/services-form"
+weight = 1
+pre = "images/icons/opensource.png"
+post = "<small>Cloud Native Development Services, and SRE, DevSecOps & Platform Engineering Services</small>"
+
+
 [[main]]
 hasChildren = true
 name = "Resources"
