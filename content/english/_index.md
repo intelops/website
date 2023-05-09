@@ -1,8 +1,8 @@
 ---
 banner:
-  subtitle: Intelops.Ai
+  subtitle: 
   subtitle_color: ""
-  title: Coming Soon
+  title: IntelOps Ai <br/> Coming Soon
   title_color: ""
   description:
     Website is under active development.<br><br>
@@ -16,9 +16,9 @@ banner:
     icon: fas fa-arrow-right
     link: contact/
   video_button:
-    enable: true
+    enable: false
     label: Watch demo
-    video_url: https://www.youtube.com/embed/dyZcRRWiuuw
+    video_url: 
 
   lottie: 
     json: "lottie/lottie.json"
