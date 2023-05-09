@@ -3,7 +3,7 @@ title: "Interacting With Maps"
 date: 2023-04-17
 draft: false
 # description
-description: "This is meta description"
+description: "Explaining the interaction with eBPF Maps."
 type : "learning-center"
 weight: 10
 

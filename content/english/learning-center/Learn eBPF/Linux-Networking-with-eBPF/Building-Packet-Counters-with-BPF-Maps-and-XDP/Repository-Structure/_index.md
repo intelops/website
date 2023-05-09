@@ -3,7 +3,7 @@ title: "Repository Structure"
 date: 2023-04-21T16:14:50-04:00
 draft: false
 # description
-description: "This is meta description"
+description: "Explaining the xdp function(s) and repo structure."
 weight: 12
 ---
 
