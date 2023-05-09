@@ -3,7 +3,7 @@ title: "BPF Helper Functions for Maps"
 date: 2023-04-17
 draft: false
 # description
-description: "This is meta description"
+description: "Explaining BPF Helper Functions for Maps with examples."
 weight: 11
 ---
 

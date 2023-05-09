@@ -3,7 +3,7 @@ title: "BPF Maps"
 date: 2023-04-21
 draft: false
 # description
-description: "This is meta description"
+description: "Explaining BPF Maps."
 type : "learning-center"
 weight: 9
 ---
