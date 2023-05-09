@@ -29,12 +29,22 @@ This is the repo to manage all the website work, which is being developed using 
 
 > How to change content areas Text, Colors, BG color, etc.
 > https://github.com/intelops/website/issues/107 
+> https://github.com/intelops/website/issues/140 
 
 > How To change bg color for full row for a content area block/row?
 > https://github.com/tfsomrat/intelops/commit/8338aa4b47257da3038df9356f21fe78a2655e85 
 
 > How to adjust the sizes of images and backgroud in product pages for the content area?
 > https://github.com/intelops/website/issues/40#issuecomment-1539771579 
+
+> option to change texts color in banner areas within markdown
+> If I want to change Texts color in the Banner areas, how can I do it?
+> if you have to change this from markdown then I have to set the option for that.
+> I set this option for the title and subtitles whare you asked for. please check the markdown content.
+> if there are no option create an issue, I will do that. 
+> https://github.com/intelops/website/issues/140 
+> https://github.com/intelops/website/issues/140#issuecomment-1529515689 
+
 
 
 
