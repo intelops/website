@@ -220,8 +220,14 @@
 
           {{ range .Params.navigation.menu }}
           <li class="nav-item">
+            {{ if eq .type "modal" }}
+            <button class="nav-link nav-menu-text small p-0 border-0 bg-transparent" type="button" data-bs-toggle="modal" data-bs-target="{{.url}}">
+              {{.name}}
+            </button>
+            {{ else }}
             <a class="nav-link nav-menu-text small" id="nav-menu" {{if findRE `^http` .url}}target="_blank" rel="noopener" {{end}}
               href="{{if findRE `^#` .url}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.url}}{{else if eq .url (`/` | relURL) }}{{.url}}{{else}}{{.url | relLangURL}}{{end}}">{{ .name }}</a>
+            {{ end }}
           </li>
           {{ end }}
 
