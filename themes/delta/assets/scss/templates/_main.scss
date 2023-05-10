@@ -1818,18 +1818,21 @@ footer {
   }
   [data-image] {
     position: absolute;
-    top: 30%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) scale(.6) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
-    width: 60%;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: .23s;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    img {
+      width: 100%;
+    }
     &.show {
       transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition-delay: .1s;
-      top: 20%;
+      top: 0%;
       opacity: 1;
       visibility: visible;
       transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
