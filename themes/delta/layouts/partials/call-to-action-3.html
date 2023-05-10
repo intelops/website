@@ -20,7 +20,13 @@
                 {{ end }}
           
                 {{ if .button_label }}
-                <a href="{{.button_link | relLangURL}}" class="btn btn-dark border-0">{{.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
+                  {{ if eq .button_type "modal" }}
+                    <button class="btn btn-dark border-0" type="button" data-bs-toggle="modal" data-bs-target="{{.button_link}}">
+                      {{.button_label}} <i class="arrow-right fas fa-arrow-right"></i>
+                    </button>
+                  {{ else }}
+                    <a href="{{.button_link | relLangURL}}" class="btn btn-dark border-0">{{.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
+                  {{ end }}
                 {{ end }}
                 
               </div>

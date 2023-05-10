@@ -5,6 +5,8 @@ description: "Cloud Native Development Services."
 url: services-form
 draft: false
 
+clickup_service_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-7807/H0TPFWOAK9IO6LTFAZ"
+
 navigation:
   logo: "images/icons/opensource.png"
   logo_text: "Cloud Native Services"
@@ -12,7 +14,8 @@ navigation:
   
   menu:
   - name: "Submit Service Requirements Form"
-    url: "/"
+    type: modal
+    url: "#service-form"
   # - name: "Another 2"
   #   url: "/"
   # - name: "Test 3"
@@ -102,7 +105,8 @@ call_to_action:
   title_color: "#fff"
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Get Started"
-  button_link: "contact/"
+  button_type: "modal"
+  button_link: "#service-form"
   bg_color: "#005DFF"
   bottom_bg_color: "#080338"
 
