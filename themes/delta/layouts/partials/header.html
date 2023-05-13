@@ -125,7 +125,7 @@
           {{ with site.Params.navigation_button }}
           {{ if .enable }}
           <!-- login btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-link px-0 me-2">
+          <a href="{{ .link | relLangURL }}" class="btn btn-link px-0 me-1">
             {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
           </a>
           {{ end }}
