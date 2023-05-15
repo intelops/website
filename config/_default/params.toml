@@ -19,6 +19,14 @@ logo_width = "130px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+keywords = ["Intelops", "Cloud-Native", "Ai", "DevOps", "SRE", "Kubernetes", "Talent", "Democratize", "Next-Gen"]
+description = "DevSecOps concept in development and testing"
+author = "Intelops"
+image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
+
 [footer]
 footer_light = false
 # bg_color = "#1e384c"
