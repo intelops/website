@@ -33,9 +33,23 @@
   {{end}}
 
   {{with .lottie}}
+  {{ if .enable}}
   <div class="banner-image text-center">
     <lottie-player src="{{.json | relURL}}" background="{{.background}}" speed="{{.speed}}" {{if eq .loop `true`}}loop{{end}} {{if eq .autoplay `true`}}autoplay{{end}}></lottie-player>
   </div>
+  {{end}}
+  {{end}}
+
+  {{ if eq .lottie.enable false }}
+  {{ with .image }}
+  {{ if .enable }}
+  <div class="banner-image text-center">
+    <div class="image" style="background-color: {{.background}}; {{if .background}}padding: {{.padding}}{{end}}">
+      {{ partial "image.html" (dict "Src" .src "Class" "rounded-lg img-fluid" ) }}
+    </div>
+  </div>
+  {{end}}
+  {{end}}
   {{end}}
 
   {{end}}

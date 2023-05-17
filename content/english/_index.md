@@ -20,7 +20,16 @@ banner:
     label: Watch demo
     video_url: 
 
+  # If lottie is enable image will not show.
+  image:
+    enable: true
+    src: "images/footer/compage/compage.svg"
+    background: "#eee"
+    padding: "60px 0"
+
+  # If lottie is disable image will show on that place.
   lottie: 
+    enable: false
     json: "lottie/lottie.json"
     background: "#eee"
     speed: "1"
