@@ -4,8 +4,7 @@ date: 2023-04-27
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 4
+weight: 1
 ---
 Now we have created DB layer,let's create a grpc.Server and start it up.
 

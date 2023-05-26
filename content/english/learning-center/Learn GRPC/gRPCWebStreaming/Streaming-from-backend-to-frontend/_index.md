@@ -4,8 +4,7 @@ date: 2023-04-29
 draft: false
 # description
 description: "Get-to-know-about grpc"
-type : "learning-center"
-weight: 2
+weight: 1
 ---
 
 In this section, we'll discuss how you can use gRPC Streaming for your backend and front end.
