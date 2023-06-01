@@ -1,5 +1,5 @@
 ---
-date: 2023-04-11
+date: 2023-06-01
 title: Evans CLI - A Go gRPC Client
 description: Implementation of Evans-CLI in go-gRPC client
 image: images/blog/Evans-CLI-A-Go-gRPC-Client/undraw_client.svg
