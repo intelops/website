@@ -9,7 +9,7 @@ weight: 2
 
 The BPF ring buffer (ringbuf) introduces a new and powerful mechanism for efficient data exchange between the Linux kernel and user-space. As a part of the BPF subsystem, the ring buffer provides a flexible and performant solution for transferring data collected by BPF programs. In this blog post, we will explore the semantics and APIs of the BPF ring buffer and understand why it is a significant improvement over other alternatives.
 
-# Semantics of the BPF Ring Buffer
+## Semantics of the BPF Ring Buffer
 
 The BPF ring buffer is presented to BPF programs as an instance of the BPF map of type BPF_MAP_TYPE_RINGBUF. This design choice offers several advantages over alternative approaches. Initially, the idea of representing an array of ring buffers, similar to BPF_MAP_TYPE_PERF_EVENT_ARRAY, was considered. However, this approach would limit the flexibility of looking up ring buffers using arbitrary keys. To address this concern, the BPF_MAP_TYPE_HASH_OF_MAPS was introduced. This alternative provides the ability to implement various topologies, from a single shared ring buffer for all CPUs to complex applications with hashed or sharded ring buffers.
 
@@ -17,8 +17,8 @@ Another alternative considered was introducing a new concept of a generic "conta
 
 Key and value sizes in the BPF ring buffer are enforced to be zero, while the max_entries parameter specifies the size of the ring buffer, which must be a power of 2.
 
-**APIs for BPF Ring Buffer**
-___
+## APIs for BPF Ring Buffer
+
 
 The BPF ring buffer provides two sets of APIs to BPF programs for efficient data transfer.
 
@@ -35,8 +35,8 @@ The reservation and commit APIs split the data transfer process into two steps, 
 Once the BPF program has prepared the data within the reserved memory, it can either `bpf_ringbuf_commit()` the record or `bpf_ringbuf_discard()` it. The commit operation marks the record as ready for consumption by the user-space consumer, while the discard operation indicates that the record should be ignored. Discard is useful for advanced use cases, such as ensuring atomic multi-record submissions or emulating temporary memory allocation within a single BPF program invocation.
 
 
-**Querying Ring Buffer Properties and Fine-Grained Control**
-___
+## Querying Ring Buffer Properties and Fine-Grained Control
+
 In addition to the reservation and commit APIs, the BPF ring buffer provides a helper function called bpf_ringbuf_query() that allows querying various properties of the ring buffer. Currently, four properties are supported:
 
 **1. BPF_RB_AVAIL_DATA**
