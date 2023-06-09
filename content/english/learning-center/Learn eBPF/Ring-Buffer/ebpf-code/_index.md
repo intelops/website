@@ -11,16 +11,16 @@ weight: 4
 
 In this blog post, we will explore how to write an eBPF (extended Berkeley Packet Filter) program that utilizes a ringbuf map to transfer data. We will also learn how to process the data stored in the ringbuf map using libbpfgo, a Go library for interacting with eBPF programs.
 
-**Introduction to Ringbuf Map**
-___
+## Introduction to Ringbuf Map
+
 A ringbuf map is a type of map provided by eBPF that allows efficient transfer of data between eBPF programs and user space. It is particularly useful for scenarios where you need to push data, such as packet samples, from an eBPF program to a daemon running in user space.
 
-**Writing the eBPF Code**
-___
+## Writing the eBPF Code
+
 To use the ringbuf map in an eBPF program, we follow these main steps:
 
-**Define a BPF_MAP_TYPE_RINGBUF map**
-____
+## Define a BPF_MAP_TYPE_RINGBUF map
+
 We declare a ringbuf map with a specified maximum number of entries.
 
 ```C
@@ -31,8 +31,8 @@ struct {
 } events SEC(".maps");
 ```
 
-**Reserve memory space and write data**
-___
+## Reserve memory space and write data
+
  Before writing data, we need to apply for memory space using the bpf_ringbuf_reserve function. It is important to ensure the application for memory space is successful before writing data; otherwise, the program execution may fail with an error.
 
 ```C
@@ -56,12 +56,12 @@ int kprobe__do_sys_openat2(struct pt_regs *ctx)
 
 In the above example, we reserve memory space for an event structure, set the pid field of the event, and submit it to the ringbuf map using the `bpf_ringbuf_submit` function.
 
-**Using libbpfgo to Process Data from the Ringbuf Map**
-___
+## Using libbpfgo to Process Data from the Ringbuf Map
+
 To process the data stored in the ringbuf map using libbpfgo, we can follow these steps:
 
-**Initialize the ringbuf map data receiver**
-___
+## Initialize the ringbuf map data receiver
+
 We use the `InitRingBuf` method provided by libbpfgo to initialize a ringbuf map data receiving instance. This method takes the name of the map and a channel where the data will be sent.
 
 ```Go
@@ -83,8 +83,8 @@ defer func() {
 }()
 
 ```
-**Receive and decode data**
-___
+## Receive and decode data
+
  We continuously receive data from the channel and decode it according to the expected format.
 
 ```Go
