@@ -3,7 +3,7 @@ author = "Intelops"
 career_form_action = "#!"
 contact_form_action = "#!"
 custom_script = ""
-description = "Next-Gen Ai based solution to democratize cloud native."
+description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
 email = "info@email.com"
 favicon = "images/favicon/favicon-32x32.png"
 image = "images/logo.png"
@@ -19,6 +19,14 @@ logo_width = "130px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+keywords = ["Intelops", "Cloud-Native", "Ai", "DevOps", "SRE", "Kubernetes", "Talent", "Democratize", "Next-Gen"]
+description = "DevSecOps concept in development and testing"
+author = "Intelops"
+image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
+
 [footer]
 footer_light = false
 # bg_color = "#1e384c"
