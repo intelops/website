@@ -3,8 +3,7 @@ date: 2023-04-19
 title: Next.js 101 - Introduction and Tutorial
 card_title_color: ""
 description: Get the basic idea of what Next.js is and create a simple webpage.
-card_description_color: ""
-image: images/blog/website-builder-nextjs/website.png
+image: images/blog/website-builder-nextjs/nextjs.png
 
 cover_image: false
 cover_image_src: 
@@ -29,9 +28,9 @@ feedback: false
 draft: false
 ---
 
-{{< image src="images/blog/website-builder-nextjs/website.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+{{< image src="images/blog/website-builder-nextjs/nextjs.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-Next.js is a React framework maninly used to create web applications and by framework I mean it takes care of the tooling and the configurations that are required for React. It uses Server-Side Rendering(SSR). *Okay now what is this SSR?* it does exactly what its name suggests "renders on the server" which means you are basically creating a HTML file with the all the website's content and then sending it to the user. SSR enables you to load pages faster even when you internet is slow, improves search engine optimization(SEO) and so on since we are not here to learn about server-side rendering. Now back to Next.js and why to use it.
+Next.js is a React framework are mainly used to create web applications and by framework I mean it takes care of the tooling and the configurations that are required for React. It uses Server-Side Rendering(SSR). *Okay now what is this SSR?* it does exactly what its name suggests "renders on the server" which means you are basically creating a HTML file with the all the website's content and then sending it to the user. SSR enables you to load pages faster even when you internet is slow, improves search engine optimization(SEO) and so on since we are not here to learn about server-side rendering. Now back to Next.js and why to use it.
 ________________
 
 # Why Next.js?
@@ -45,7 +44,7 @@ Next.js is not the only framework that React has, one of their other popular fra
 
   # To create a website you need...
 
-  * NodeJs installed on your local
+  * NodeJs installed on your local system
 
   To install Node.js you can follow instructions from [node.js installation](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
   
@@ -58,7 +57,7 @@ Next.js is not the only framework that React has, one of their other popular fra
    ```cmd
    yarn create next-app
    #or with npm:
-   npx create
+   npx create-next-app@latest
   ```
  Once that is done you'll be able to access your project by running the commands below:
 
@@ -214,7 +213,6 @@ As we are on it already lets create one last styling files to styles text in our
 Create a CSS file called <mark>styles/utils.module.css</mark>
 
 ```css
-/* reference https://nextjs.org/learn/basics/assets-metadata-css/polishing-layout */
 
 /* reference https://nextjs.org/learn/basics/assets-metadata-css/polishing-layout */
 
@@ -273,6 +271,7 @@ Create a CSS file called <mark>styles/utils.module.css</mark>
 ```
 Finally update <mark>components/layout.js</mark> and index.js
 ```js
+
 import Head from "next/head";
 import Image from "next/image";
 import styles from "./layout.module.css";
@@ -342,10 +341,12 @@ export default function Home() {
         <title>{siteTitle}</title>
       </Head>
       <section className={utilStyles.headingMd}>
-        <p>[Your Self Introduction]</p>
+        <p>Your Description</p>
         <p>
-          (This is a sample website - you’ll be building a site like this on{' '}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
+          This is just a sample you can build more websites like this refer to {' '}
+          <a href="https://nextjs.org/learn"> 
+          Next.js tutorial {''}
+          </a>for more clear and detailed explanation on why you have to add certain things.
         </p>
       </section>
     </Layout>
@@ -353,7 +354,8 @@ export default function Home() {
 }
 ```
 You should be able to see something like this at the end of it all:
-![finalpage](images/Webpage.png)
+
+![finalpage](images/webpage.png)
 
 
 # Conclusion
