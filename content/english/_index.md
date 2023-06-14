@@ -29,8 +29,8 @@ banner:
 
   # If lottie is disable image will show on that place.
   lottie: 
-    enable: false
-    json: "lottie/lottie.json"
+    enable: true
+    json: "lottie/homepage_concept_v4.json"
     background: "#eee"
     speed: "1"
     loop: "true"
