@@ -1,11 +1,11 @@
 ---
-title: "Keyless-Signing-an-Image-using-CoSign"
+title: "Keyless Signing an Image using CoSign"
 date: 2023-06-13
 draft: false
 # description
 description: "Keyless image signing"
 type : "learning-center"
-weight: 1
+weight: 2
 ---
 
 ### Getting started with CoSign

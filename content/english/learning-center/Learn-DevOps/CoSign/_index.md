@@ -5,5 +5,5 @@ draft: false
 # description
 description: "Keyless Image signing"
 type : "learning-center"
-weight: 3
+weight: 2
 ---

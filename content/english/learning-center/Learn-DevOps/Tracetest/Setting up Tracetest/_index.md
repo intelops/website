@@ -5,7 +5,7 @@ draft: false
 # description
 description: "Learn Tracebased testing and Funtional testing using assertions"
 type : "learning-center"
-weight: 1
+weight: 3
 ---
 
 # Getting started with tracetest
