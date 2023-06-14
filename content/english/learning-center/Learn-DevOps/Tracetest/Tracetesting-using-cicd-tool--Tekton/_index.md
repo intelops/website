@@ -4,8 +4,7 @@ date: 2023-05-25
 draft: false
 # description
 description: "Learn Tracebased testing and Funtional testing using assertions"
-type : "learning-center"
-weight: 4
+weight: 2
 ---
 
 ## Setting up tekton pipelines on k8s

@@ -4,7 +4,6 @@ date: 2023-06-13
 draft: false
 # description
 description: "Creating distroless images using Melange and Apko"
-type : "learning-center"
 weight: 1
 ---
 

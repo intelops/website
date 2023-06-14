@@ -4,8 +4,7 @@ date: 2023-06-13
 draft: false
 # description
 description: "Keyless image signing"
-type : "learning-center"
-weight: 2
+weight: 1
 ---
 
 ### Getting started with CoSign
