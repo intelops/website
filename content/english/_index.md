@@ -24,7 +24,7 @@ banner:
   image:
     enable: true
     src: "images/banner/homepage/homepage-banner.svg"
-    background: "#eee"
+    background: "#4B4B4C"
     padding: "60px 0"
 
   # If lottie is disable image will show on that place.
