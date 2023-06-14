@@ -23,13 +23,13 @@ banner:
   # If lottie is enable image will not show.
   image:
     enable: true
-    src: "images/footer/compage/compage.svg"
+    src: "images/banner/homepage/homepage-banner.svg"
     background: "#eee"
     padding: "60px 0"
 
   # If lottie is disable image will show on that place.
   lottie: 
-    enable: true
+    enable: false
     json: "lottie/homepage_concept_v4.json"
     background: "#eee"
     speed: "1"
