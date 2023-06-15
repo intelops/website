@@ -1,6 +1,6 @@
 ---
 title: "Compage"
-description: "It’s been a long ride, but we made it possible. Discover the low-code platform for multiple programming languages to empower developers for cloud native development."
+description: "It’s been a long ride, but we made it possible. Discover the Universal Development platform for multiple programming languages to empower developers for cloud native development."
 
 url: compage
 draft: false
