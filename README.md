@@ -45,6 +45,6 @@ This is the repo to manage all the website work, which is being developed using 
 > https://github.com/intelops/website/issues/140 
 > https://github.com/intelops/website/issues/140#issuecomment-1529515689 
 
-
+> To update Platform's menu items edit menus.en.toml file inside config/_default
 
 
