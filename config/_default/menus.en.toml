@@ -147,20 +147,20 @@ name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 30
 
-[[main]]
-name = "Services"
-url = "/services-form"
-weight = 40
-[main.params]
-isMenuLarge = true
-parent= "Services"
-[[main]]
-name = "Custom Services"
-parent = "Services"
-url = "/services-form"
-weight = 1
-pre = "images/icons/opensource.png"
-post = "<small>Cloud Native Development Services, and SRE, DevSecOps & Platform Engineering Services</small>"
+# [[main]]
+# name = "Services"
+# url = "/services-form"
+# weight = 40
+# [main.params]
+# isMenuLarge = true
+# parent= "Services"
+# [[main]]
+# name = "Custom Services"
+# parent = "Services"
+# url = "/services-form"
+# weight = 1
+# pre = "images/icons/opensource.png"
+# post = "<small>Cloud Native Development Services, and SRE, DevSecOps & Platform Engineering Services</small>"
 
 
 [[main]]
