@@ -7,7 +7,7 @@ layout: "features"
 features:
   subtitle: "Capten stack"
   subtitle_color: ""
-  title: "Agnostic platform that always stays with you, to Empower Engineers"
+  title: "Agnostic platform that always stays with you. Empower Engineers"
   title_color: ""
   button:
     enable: false
