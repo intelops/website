@@ -53,12 +53,12 @@ features:
   section: features
 
 platforms:
-  enable: false
-  title: "How capten stack works? <br/> Check our Platform pages."
+  enable: true
+  #title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
-  image: "images/footer/compage/compage.svg"
+  #image: "images/footer/compage/compage.svg"
   button:
-    enable: true
+    enable: false
     label: "Platform"
     icon: "fas fa-arrow-right"
     #link: "/capten"
