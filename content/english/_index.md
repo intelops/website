@@ -54,11 +54,11 @@ features:
 
 platforms:
   enable: true
-  title: "How capten stack works? <br/> Check our Platform pages."
+  #title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
-  image: "images/footer/compage/compage.svg"
+  #image: "images/footer/compage/compage.svg"
   button:
-    enable: true
+    enable: false
     label: "Platform"
     icon: "fas fa-arrow-right"
     #link: "/capten"
@@ -66,10 +66,10 @@ platforms:
 
     
 how_it_works:
-  enable: true
+  enable: false
   section: how-it-works
 image_and_content_block:
-  enable: true
+  enable: false
   subtitle: We Are IntelOps
   subtitle_color: ""
   #title: Lots of people love us, <br> and we're also.
@@ -84,7 +84,7 @@ image_and_content_block:
    # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
 slider_and_content_block:
-  enable: true
+  enable: false
   subtitle: We Are Intelops
   subtitle_color: ""
   title: This section is coming soon
@@ -102,7 +102,7 @@ slider_and_content_block:
 
 
 testimonials:
-  enable: true
+  enable: false
   subtitle: People Love Us
   subtitle_color: ""
   #title: about Three million users <br> Testimonial Together

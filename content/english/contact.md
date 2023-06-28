@@ -5,7 +5,7 @@ searchKeyword: "contact, contact us"
 layout: contact
 bannertext: Contact
 bannertext_color: ""
-bannerimage: images/bg-banner-page.jpg
+bannerimage: images/banner/contactpage/contactpage-banner-image.svg
 enable: true
 # contact
 contact:

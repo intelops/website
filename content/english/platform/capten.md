@@ -29,21 +29,21 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#fa9e26"
+  bg_color: "#FF9E2C"
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
   title_color: ""
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
   description_color: ""
-  image: images/banner-about.png
+  image: images/banner/capten/capten-banner-image.svg
   button:
     enable: true
     label: "Get started now"
     icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
-    enable: true
+    enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
 
@@ -56,7 +56,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/what-is-compage.svg"
+    image: "images/content/capten/capten-row1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -73,7 +73,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/how-it-works.svg"
+    image: "images/content/capten/capten-row2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
@@ -90,7 +90,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/integrations-features.svg"
+    image: "images/content/capten/capten-row3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -101,17 +101,36 @@ image_and_content_block:
       * Neque auctor congue leo eget malesuada Vivamus
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
-  
+
+
+  - enable: true
+    subtitle: "We Are Delta"
+    subtitle_color: ""
+    title: "Lots of people love us, <br> and we're also."
+    title_color: ""
+    image: "images/content/capten/capten-row4.svg"
+    content_position: "left" # Value will be - "left/right"
+    bg_color: ""
+    content_color: ""
+    content: |
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+
+      * luctus et ultrices uere cubia Curae Donec verglit
+      * Neque auctor congue leo eget malesuada Vivamus
+      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
+      * Donec verglit neque, auctor congue leo  malesuada.
+
+
 call_to_action:
   enable: true
-  title: "Start using <br/> Compage <br/> platform today..."
+  title: "Start using <br/> Capten <br/> platform today..."
   title_color: "#fff"
   # subtitle: ""
   # subtitle_color: ""
-  image: "images/call-to-actions/compage/robo-image.svg"
+  image: "images/call-to-actions/capten/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
-  bg_color: "#005DFF"
+  bg_color: "#FF9E2C"
   bottom_bg_color: "#080338"
 
 # footer:

@@ -29,21 +29,21 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#fa9e26"
+  bg_color: "#7FDCA4"
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
   title_color: ""
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
   description_color: ""
-  image: images/banner-about.png
+  image: images/banner/opty/opty-banner-image.svg
   button:
     enable: true
     label: "Get started now"
     icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
-    enable: true
+    enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
 
@@ -56,7 +56,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/what-is-compage.svg"
+    image: "images/content/opty/opty-row1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -73,7 +73,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/how-it-works.svg"
+    image: "images/content/opty/opty-row2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
@@ -90,7 +90,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/compage/integrations-features.svg"
+    image: "images/content/opty/opty-row3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -104,12 +104,12 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: "Start using <br/> Compage <br/> platform today..."
+  title: "Start using <br/> Opty <br/> today..."
   title_color: "#fff"
-  image: "images/footer/compage/compage.svg"
+  image: "images/call-to-actions/opty/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
-  bg_color: "#fa9e26"
+  bg_color: "#7FDCA4"
   bottom_bg_color: "#080338"
 
 footer:

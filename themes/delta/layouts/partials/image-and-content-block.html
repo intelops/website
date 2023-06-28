@@ -26,7 +26,7 @@
       <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .contentPosition}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
         <div class="px-2 px-md-4 text-center">
           {{with $image}}
-          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 mx-auto d-block d-lg-none" ) }}
+          {{ partial "image.html" (dict "Src" . "Size" "570x" "Webp" false "Class" "img-fluid px-0 px-md-3 mx-auto" ) }}
           {{end}}
         </div>
       </div>

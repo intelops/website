@@ -17,7 +17,7 @@ It is a cloud and tool-agnostic open-source MLOPS framework that can be used to 
 ## What is a ZenML Step?
 Step is an atomic components of a ZenML Pipeline. Each Step is well defined to take some input, apply some logic on it and give an output. An example of a simple step could be as follows:
 
-```{python}
+```python
 from zenml.steps import step, Output
 
 @step
@@ -28,7 +28,7 @@ def step_one() -> Output(output_a=int, output_b=int):
 
 Let's define another step that takes two values as input and returns a sum as output.
 
-```{python}
+```python
 from zenml.steps import step, Output
 
 @step
@@ -39,14 +39,14 @@ def step_two(input_a: int, input_b: int) -> Output(output_sum=int):
 
 
 >Note:<br>You can run a step function by itself by calling .entrypoint() method with the same input parameters. For example: <br> 
->```{python} 
+>```python}
 >step_two.entrypoint(input_a = 6, input_b = 10)
 >```
 
 ## What is a ZenML Pipeline?
 A Pipeline consists of a series of Steps, organized in any order as per your usecase. It is used to simply route the outputs through the steps. For example:
 
-```{python}
+```python
 from zenml.pipelines import pipeline
 
 @pipeline
@@ -56,12 +56,12 @@ def pipeline_one(step_1,
     output_sum = step_two(output_a, output_b)
 ```
 After you define your pipeline you can instantiate and run your pipeline by calling:
-```{python}
+```python
 pipeline_one(step_1 = step_one(), step_2 = step_two()).run()
 ```
 
 You should see an output similar to this in your command line:
-```{bash}
+```bash
 Creating run for pipeline: `pipeline_one`
 Cache disabled for pipeline `pipeline_one`
 Using stack `default` to run pipeline `pipeline_one`

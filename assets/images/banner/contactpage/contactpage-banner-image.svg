@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="Group_344"
+   data-name="Group 344"
+   width="1840"
+   height="900"
+   viewBox="0 0 1840 900"
+   version="1.1"
+   sodipodi:docname="contactpage-banner-image.svg"
+   inkscape:version="1.2.2 (732a01da63, 2022-12-09)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.6576087"
+     inkscape:cx="920.76033"
+     inkscape:cy="450.87603"
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="-6"
+     inkscape:window-y="-6"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="Group_344" />
+  <defs
+     id="defs4">
+    <clipPath
+       id="clip-path">
+      <path
+         id="Path_27050"
+         data-name="Path 27050"
+         d="M40,0H1800c22.091,0,40,17.673,40,39.474V860.526c0,21.8-17.909,39.474-40,39.474H40c-22.091,0-40-17.673-40-39.474V39.474C0,17.673,17.909,0,40,0Z"
+         fill="#d6ffe0" />
+    </clipPath>
+  </defs>
+  <path
+     id="Path_186"
+     data-name="Path 186"
+     d="M40,0H1800c22.091,0,40,17.673,40,39.474V860.526c0,21.8-17.909,39.474-40,39.474H40c-22.091,0-40-17.673-40-39.474V39.474C0,17.673,17.909,0,40,0Z"
+     fill="#ff9e2c"
+     style="fill:#020f1e;fill-opacity:1" />
+  <g
+     id="Mask_Group_12"
+     data-name="Mask Group 12"
+     opacity="0.5"
+     clip-path="url(#clip-path)">
+    <g
+       id="Group_281"
+       data-name="Group 281"
+       transform="translate(-6.162 -13.207)">
+      <path
+         id="Path_183"
+         data-name="Path 183"
+         d="M.006,0S-2.27,77.4,60.745,87.51s82.426-50.6,72.912-59.077-46.71-22.5-65.151,35.362,37.9,64.217,73.311,53.625S239.5,73.375,242.552,35.476s-57.318-2.56-61.258,21.136-4.178,72,89.522,60.176c27.194-3.432,52.628,3.355,73.922,13.027a203.688,203.688,0,0,1,24.444,13.31"
+         transform="matrix(0.914, 0.407, -0.407, 0.914, 1579.709, 0)"
+         fill="none"
+         stroke="#fff"
+         stroke-width="20"
+         opacity="0.6" />
+      <path
+         id="Path_184"
+         data-name="Path 184"
+         d="M2057.4,853.734c3.376,2,16.861,6.023,29.258,9.11,15.786,3.931,40.559,6.922,76.954,3.906,63.964-5.3,105.735,27.835,109,94.109s-82.892,74.89-109,60.309-10.444-57,30.023-60.309c38.08-3.118,121.238,39.693,133.133,120.374a133.541,133.541,0,0,1,1.321,15.617"
+         transform="translate(-2057.4 -156.624)"
+         fill="none"
+         stroke="#fff"
+         stroke-width="20"
+         opacity="0.6" />
+    </g>
+  </g>
+</svg>
