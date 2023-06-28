@@ -173,23 +173,23 @@ name = "About"
 parent = "Resources"
 url = "about/"
 weight = 2
-[[main]]
-name = "Team"
-parent = "Resources"
-url = "team/"
-weight = 2
+# [[main]]
+# name = "Team"
+# parent = "Resources"
+# url = "team/"
+# weight = 2
 [[main]]
 name = "Contact"
 parent = "Resources"
 url = "contact/"
 weight = 2
-[[main]]
-name = "Certified"
-parent = "Resources"
-url = "certified/"
-weight = 2
-[[main]]
-name = "Partner Program"
-parent = "Resources"
-url = "partner-program/"
-weight = 2
+# [[main]]
+# name = "Certified"
+# parent = "Resources"
+# url = "certified/"
+# weight = 2
+# [[main]]
+# name = "Partner Program"
+# parent = "Resources"
+# url = "partner-program/"
+# weight = 2
