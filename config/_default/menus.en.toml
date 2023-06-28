@@ -114,28 +114,28 @@ name = "Learning Center"
 url = "learning-center/"
 weight = 3
 
-[[main]]
-name = "Open Source"
-url = "/opensource"
-weight = 10
-[main.params]
-isMenuLarge = true
+# [[main]]
+# name = "Open Source"
+# url = "/opensource"
+# weight = 10
+# [main.params]
+# isMenuLarge = true
 
-[[main]]
-name = "Our open source"
-parent = "Open Source"
-url = "/our-open-source"
-weight = 1
-pre = "images/icons/opensource.png"
-post = "<small>Convert leads and close sales deals faster.</small>"
+# [[main]]
+# name = "Our open source"
+# parent = "Open Source"
+# url = "/our-open-source"
+# weight = 1
+# pre = "images/icons/opensource.png"
+# post = "<small>Convert leads and close sales deals faster.</small>"
 
-[[main]]
-name = "Contributed open source"
-parent = "Open Source"
-url = "/contributed-open-source"
-weight = 2
-pre = "images/icons/opensource.png"
-post = "<small>Convert leads and close sales deals faster.</small>"
+# [[main]]
+# name = "Contributed open source"
+# parent = "Open Source"
+# url = "/contributed-open-source"
+# weight = 2
+# pre = "images/icons/opensource.png"
+# post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
 name = "Blogs"
