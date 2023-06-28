@@ -104,7 +104,7 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: "Start using <br/> Compage <br/> platform today. <br/> Or need help with cloud-native applications development?"
+  title: "Start using <br/> Compage <br/> today. <br/> Or need help with cloud-native applications development?"
   title_color: "#fff"
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Talk2Us"

@@ -1,13 +1,13 @@
 ---
-title: "Opty"
+title: "QualityTrace"
 description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
 
-url: opty
+url: quality-trace
 draft: false
 
 navigation:
-  logo: "images/icons/opty.svg"
-  logo_text: "Opty"
+  logo: "images/icons/quality-trace.svg"
+  logo_text: "QualityTrace"
   logo_text_color: "secblack"
   
   menu:
@@ -29,14 +29,14 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#7FDCA4"
+  bg_color: "#7FDBE9"
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
   title_color: ""
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
   description_color: ""
-  image: images/banner/opty/opty-banner-image.svg
+  image: images/banner/qt/qt-banner-image.svg
   button:
     enable: true
     label: "Get started now"
@@ -56,8 +56,8 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row1.svg"
-    content_position: "right" # Value will be - "left/right"
+    image: "images/content/qt/qt-row1.svg"
+    content_position: "left" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
@@ -73,8 +73,8 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row2.svg"
-    content_position: "left" # Value will be - "left/right"
+    image: "images/content/qt/qt-row2.svg"
+    content_position: "right" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
     content: |
@@ -90,7 +90,25 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row3.svg"
+    image: "images/content/qt/qt-row3.svg"
+    content_position: "left" # Value will be - "left/right"
+    bg_color: ""
+    content_color: ""
+    content: |
+      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+
+      * luctus et ultrices uere cubia Curae Donec verglit
+      * Neque auctor congue leo eget malesuada Vivamus
+      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
+      * Donec verglit neque, auctor congue leo  malesuada.
+
+
+  - enable: true
+    subtitle: "We Are Delta"
+    subtitle_color: ""
+    title: "Lots of people love us, <br> and we're also."
+    title_color: ""
+    image: "images/content/qt/qt-row4.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -101,17 +119,23 @@ image_and_content_block:
       * Neque auctor congue leo eget malesuada Vivamus
       * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
       * Donec verglit neque, auctor congue leo  malesuada.
-  
+
+
 call_to_action:
   enable: true
-  title: "Start using <br/> Opty <br/> today..."
+  title: "Start using <br/> QualityTrace <br/> today..."
   title_color: "#fff"
-  image: "images/call-to-actions/opty/robo-image.svg"
+  # subtitle: ""
+  # subtitle_color: ""
+  image: "images/call-to-actions/qt/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
-  bg_color: "#7FDCA4"
+  bg_color: "#00B8D4"
   bottom_bg_color: "#080338"
 
-footer:
-  footer_light: false
+# footer:
+#   footer_light: false
+#   bg_color: "red"
+#   bg_image: "images/contact-image1.jpg"
+#   bg_image_overlay_color: "rgba(0,0,0,.85)"
 ---

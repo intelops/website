@@ -1,13 +1,13 @@
 ---
-title: "Opty"
+title: "KubViz"
 description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
 
-url: opty
+url: kubviz
 draft: false
 
 navigation:
-  logo: "images/icons/opty.svg"
-  logo_text: "Opty"
+  logo: "images/icons/kubviz.svg"
+  logo_text: "KubViz"
   logo_text_color: "secblack"
   
   menu:
@@ -29,14 +29,14 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#7FDCA4"
+  bg_color: "#FFD93D"
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
   title_color: ""
   description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
   description_color: ""
-  image: images/banner/opty/opty-banner-image.svg
+  image: images/banner/kubviz/kubviz-banner-image.svg
   button:
     enable: true
     label: "Get started now"
@@ -56,7 +56,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row1.svg"
+    image: "images/content/kubviz/kubviz-row1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -73,7 +73,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row2.svg"
+    image: "images/content/kubviz/kubviz-row2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
@@ -90,7 +90,7 @@ image_and_content_block:
     subtitle_color: ""
     title: "Lots of people love us, <br> and we're also."
     title_color: ""
-    image: "images/content/opty/opty-row3.svg"
+    image: "images/content/kubviz/kubviz-row3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -104,12 +104,12 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: "Start using <br/> Opty <br/> today..."
+  title: "Start using <br/> KubViz <br/> today..."
   title_color: "#fff"
-  image: "images/call-to-actions/opty/robo-image.svg"
+  image: "images/call-to-actions/kubviz/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
-  bg_color: "#7FDCA4"
+  bg_color: "#FFD93D"
   bottom_bg_color: "#080338"
 
 footer:
