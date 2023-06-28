@@ -12,7 +12,7 @@ navigation:
   
   menu:
   - name: "Compage Docs"
-    url: "https://docs.intelops.ai/1.0.0/compage/"
+    url: "https://docs.intelops.ai/latest/compage/"
   # - name: "Another 2"
   #   url: "/"
   # - name: "Test 3"
