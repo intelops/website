@@ -62,28 +62,52 @@ weight = 2
 isMenuLarge = true
 
 [[main]]
-name = "Capten"
-parent = "Platform"
-url = "/capten"
-weight = 3
-pre = "images/icons/capten.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
-
-[[main]]
 name = "Compage"
 parent = "Platform"
 url = "/compage"
-weight = 2
+weight = 1
 pre = "images/icons/compage.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
+post = "<small>Developers' Delight</small>"
+
+[[main]]
+name = "Capten"
+parent = "Platform"
+url = "/capten"
+weight = 2
+pre = "images/icons/capten.svg"
+post = "<small>Universal Orchestrator</small>"
+
+[[main]]
+name = "QualityTrace"
+parent = "Platform"
+url = "/quality-trace"
+weight = 3
+pre = "images/icons/quality-trace.svg"
+post = "<small>Tracing Based Testing</small>"
 
 [[main]]
 name = "Opty"
 parent = "Platform"
 url = "/opty"
-weight = 1
+weight = 4
 pre = "images/icons/opty.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
+post = "<small>Optimize What You Want</small>"
+
+[[main]]
+name = "KubViz"
+parent = "Platform"
+url = "/kubviz"
+weight = 5
+pre = "images/icons/kubviz.svg"
+post = "<small>Observability for Ops & SREs</small>"
+
+[[main]]
+name = "Tarian"
+parent = "Platform"
+url = "/tarian"
+weight = 6
+pre = "images/icons/tarian.svg"
+post = "<small>Run Time Protection for K8s</small>"
 
 [[main]]
 name = "Learning Center"
