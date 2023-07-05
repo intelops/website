@@ -54,23 +54,6 @@
 {{with .Params.image_and_content_block}}
 {{if .enable}}
 <div class="position-relative">
-<div class="anim-block d-none d-lg-block">
-  <div class="anim-block-inner">
-    <div class="assets">
-      {{ partial "image.html" (dict "Src" "images/square.svg" "Class" "img-fluid asset-bg-image" ) }}
-
-      {{ range $i, $e := .blocks }}
-      {{ if .enable }}
-      <div data-image>
-        {{with .image}}
-        {{ partial "image.html" (dict "Src" . "Class" "img-fluid" ) }}
-        {{end}}
-      </div>
-      {{ end }}
-      {{ end }}
-    </div>
-  </div>
-</div>
 
 {{ range .blocks }}
 {{ if .enable }}
@@ -81,42 +64,6 @@
 </div>
 {{end}}
 {{end}}
-
-<script>
-  // Get the elements
-  const mainSection = document.querySelector('.the-main-section');
-  const assets = document.querySelector('.assets');
-  const assetImages = document.querySelectorAll('[data-image]');
-  const sections = document.querySelectorAll('[data-section]');
-  assetImages[0].classList.add('show');
-  
-  window.addEventListener('scroll', function() {
-    // Loop through the sections and get the position of each one
-    for (let i = 0; i < sections.length; i++) {
-      const sectionPos = sections[i].getBoundingClientRect().top;
-  
-      if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
-        if (i === 0) {
-          assets.classList.add('assets-left');
-          assets.classList.remove('assets-right');
-        } else if (i % 2 === 1) {
-          assets.classList.remove('assets-left');
-          assets.classList.add('assets-right');
-        } else {
-          assets.classList.add('assets-left');
-          assets.classList.remove('assets-right');
-        }
-      }
-  
-      if (sectionPos < (window.innerHeight / 2) && sectionPos > (-window.innerHeight / 2)) {
-        assetImages[i].classList.add('show');
-      } else {
-        assetImages[i].classList.remove('show');
-      }
-  
-    }
-  });
-</script>
 
 {{if .Params.call_to_action.enable}}
 {{ partial "call-to-action-3.html" . }}
