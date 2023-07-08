@@ -3,7 +3,7 @@ title: "Contributed Open Source"
 description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
 
 url: contributed-open-source
-draft: true
+draft: false
 
 navigation:
   logo: "images/icons/opensource.png"
