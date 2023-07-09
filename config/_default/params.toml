@@ -21,7 +21,7 @@ mobile = "+211234565523"
 fullSiteSearch = true
 
 # google tag manager, see https://developers.google.com/tag-manager/
-google_tag_manager = "GTM-PVRN5BQ" # example: G-XXXXXXXXXX
+google_tag_manager = "GTM-PVRN5BQ"
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
