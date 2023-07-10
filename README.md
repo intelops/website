@@ -48,3 +48,5 @@ This is the repo to manage all the website work, which is being developed using 
 > To update Platform's menu items edit menus.en.toml file inside config/_default
 
 
+> To add/update Google Tag Manager (GTM) code - https://github.com/intelops/website/issues/201 
+
