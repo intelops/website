@@ -1,0 +1,40 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  
+
+media_folder: assets/images
+public_folder: /images
+collections:
+  - name: 'author'
+    label: 'Author'
+    folder: 'content/english/author'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'string' }
+      - label: Social Media
+        name: social
+        widget: list
+        fields:
+        - { label: "Platform", name: "name", widget: "select", options: ["facebook", "twitter", "linkedin"] }
+        - { label: "Icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name' }
+        - { label: "URL", name: "link", widget: "string" }
+
+  - name: 'blog'
+    label: 'Blog'
+    folder: 'content/english/blog/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
