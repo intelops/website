@@ -29,12 +29,130 @@ collections:
   - name: 'blog'
     label: 'Blog'
     folder: 'content/english/blog/'
+    create: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    nested:
+      depth: 100
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Image', name: 'image', widget: 'string' }
+
+      - { label: 'cover image', name: 'cover_image', widget: 'boolean' }
+      - { label: 'cover image src', name: 'cover_image_src', widget: 'string', required: false }
+      - { label: 'cover image height', name: 'cover_image_height', widget: 'string', required: false }
+      - { label: 'cover image width', name: 'cover_image_width', widget: 'string', required: false }
+
+      - { label: 'author', name: 'author', widget: 'string' }
+      - { label: 'series', name: 'series', widget: 'string' }
+      - { label: "categories", name: "categories", widget: "list", 
+          add_to_top: true, 
+          allow_add: true, 
+          collapsed: true, 
+          field: {label: Category, name: category, widget: string} 
+        }
+
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'career'
+    label: 'Career'
+    folder: 'content/english/career/'
     create: true
     slug: '{{slug}}'
     editor:
       preview: false
     fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'job_nature', name: 'job_nature', widget: 'string' }
+      - { label: 'category', name: 'category', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'case-studies'
+    label: 'Case Studies'
+    folder: 'content/english/case-studies/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'Image', name: 'image', widget: 'string', required: false }
+      - { label: 'Feedback', name: 'feedback', widget: 'boolean', default: false }
+
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'learning-center'
+    label: 'Learning Center'
+    folder: 'content/english/learning-center/'
+    create: false
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    nested:
+      depth: 100
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Type', name: 'type', widget: 'string' }
+      - { label: 'Weight', name: 'weight', widget: 'number' }
+
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+
+  - name: 'open-source'
+    label: 'Open Source'
+    folder: 'content/english/open-source/'
+    create: true
+    slug: '{{slug}}'
+    editor:
+      preview: false
+    fields:
+      - { label: 'Draft', name: 'draft', widget: 'boolean', default: false }
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text', required: false }
+      - { label: 'url', name: 'url', widget: 'string' }
+
+      - label: Navigation
+        name: navigation
+        widget: object
+        fields:
+        - { label: "logo", name: "logo", widget: "string" }
+        - { label: "logo text", name: "logo_text", widget: "string" }
+        - { label: "logo text color", name: "logo_text_color", widget: "string" }
+        - label: Menu
+          name: menu
+          widget: list
+          fields:
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+
+        - label: navigation button
+          name: navigation_button
+          widget: object
+          collapsed: true
+          fields:
+          - { label: "enable", name: "enable", widget: "boolean" }
+          - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name' }
+          - { label: "label", name: "label", widget: "string" }
+          - { label: "link", name: "link", widget: "string" }
+
+        - label: navigation button two
+          name: navigation_button_two
+          widget: object
+          collapsed: true
+          fields:
+          - { label: "enable", name: "enable", widget: "boolean" }
+          - { label: "label", name: "label", widget: "string" }
+          - { label: "link", name: "link", widget: "string" }
