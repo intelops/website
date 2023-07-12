@@ -1,6 +1,6 @@
 ---
 title: "QualityTrace"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "Trace-Based testing with openTelemetry for cloud-native workloads."
 
 url: quality-trace
 draft: false
@@ -30,17 +30,17 @@ navigation:
 
 banner:
   bg_color: "#7FDBE9"
-  subtitle: "We Are Delta"
+  subtitle: "de facto"
   subtitle_color: ""
-  title: "get fastest loan with smart way A seating home"
+  title: "Boost Reliability with Trace-based Testing"
   title_color: ""
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
+  description: "Quality-Trace is an open-source, universal functional testing framework that leverages OpenTelemetry for tracing, providing increased visibility across the entire system. It generates comprehensive insights to enhance test reliability, ensuring application stability, and detecting issues early in the development cycle, continuously."
   description_color: ""
   image: images/banner/qt/qt-banner-image.svg
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
     enable: false
@@ -52,73 +52,80 @@ image_and_content_block:
   enable: true
   blocks:
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Lagging Behind?"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "It's Time to Rethink Testing."
     title_color: ""
     image: "images/content/qt/qt-row1.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
-
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      
+      * **Complex Architecture**: Troubleshooting microservice architecture is challenging due to complex flows, making it nearly impossible to create tests for proper system operation.
+      * **Poor Quality Software Delivery**: Negating rigorous testing and validation heightens the risk of deploying software with hidden bugs and performance issues, impacting user experience and overall quality.
+      * **Integration Gaps**: Lack of seamless integration with CICD workflows disconnects testing from the development process, hindering automation, continuous testing, and timely feedback.
+      * **Manual Testing**: Manual testing is tedious and slow and imposes a cognitive burden on developers, hindering code quality and efficiency.
+      * **Collaboration Constraints**: Collaboration challenges hinder effective testing, making it difficult to manage and track changes to test scripts, thereby hampering coordination.
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Build, Iterate & Release"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Trace-Based Testing in Minutes & Always!"
     title_color: ""
     image: "images/content/qt/qt-row2.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      openTelemetry's Trace-Based testing for modern applications enhances test coverage and enables QA, Dev and Ops teams to gain insights for a holistic understanding of application behavior, resulting in faster iterations and delivery with context.
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * **Fast Test Setup**: Utilize your existing observability data to build tests in minutes using assertions. It's that simple!
+      * **Seamless CICD Integration**: Automate tests with smooth integration with CI/CD pipelines for consistent and reliable testing. 
+      * **Enhanced Software Quality**: Leverage result validation capabilities to conduct thorough analysis for effective issue identification and decision-making.
+      * **Environment-Agnostic**: Minimize mocking through targeted tests across different environments.
+      * **Improved Collaboration**: Collaborate effectively with Git integration, streamlining version control, test script sharing, and change tracking.
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Features"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Redefine Testing: Effortless Quality Engineering"
     title_color: ""
     image: "images/content/qt/qt-row3.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
-
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      Trace based functional testing for modern applications.
+      
+      * Seamless collaboration and management of test scripts with Git version control integration
+      *	Performance monitoring and troubleshooting with OpenTelemetry
+      *	Assertions creation and selection for behavior and outcome validation
+      *	CICD support for automated testing and faster feedback
+      *	Comprehensive validation mechanisms for accurate and reliable test results
+      * Support for testing different protocols like REST API, gRPC, GraphQL, and more
 
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Support"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Fall in love with your favorite tools."
     title_color: ""
     image: "images/content/qt/qt-row4.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Continuous Testing using Tracing and cloud-native technology.
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * openTelemetry
+      * SigNoz, Tempo
+      * ClickHouse, Cassandra (K8ssandra) 
+      * Grafana, Prometheus, Loki, Promtail
+      * Supply Chain tools
+      * TraceTest, Microcks, Cypress, K6, etc. 
+      * Multiple programming languages and protocols
+      * and more... 
 
 
 call_to_action:

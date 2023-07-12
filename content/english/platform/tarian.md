@@ -1,6 +1,6 @@
 ---
 title: "Tarian"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "It’s been a bloody long ride, but Tarian is here to stay to protect Kubernetes ecosystem."
 
 url: tarian
 draft: false
@@ -30,17 +30,17 @@ navigation:
 
 banner:
   bg_color: "#7D42FB"
-  subtitle: "We Are Delta"
+  subtitle: "Power of eBPF & Kernel"
   subtitle_color: ""
-  title: "get fastest loan with smart way A seating home"
+  title: "Runtime protection for Kubernetes and workloads for cloud-native ecosystem."
   title_color: ""
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
+  description: "Evolving threats call for Innovative solutions. Using the power of eBPF, XDP and LSM to provide runtime protection for cloud-native workloads on Kubernetes environment with anomaly detection and auto threat elimination."
   description_color: ""
   image: images/banner/tarian/tarian-banner-image.svg
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
     enable: false
@@ -52,73 +52,88 @@ image_and_content_block:
   enable: true
   blocks:
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Threats!!!"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Getting into the chaos of threat landscape?"
     title_color: ""
     image: "images/content/tarian/tarian-row1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Traditional security tools don't cut! 
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * Sophisticated threats are evolving at Gen-AI pace.
+      * External and internal threat actors are added disadvantage.
+      * Chaos of tools and platform to deal with risk management. 
+      * No proper unified and standardized solutions.
+      * Lack of automation.
+      * Too long to fix, update or remediate, and even recover. 
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Evolve"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Innovation with Old-School!"
     title_color: ""
     image: "images/content/tarian/tarian-row2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Fundamentals are the core of the innovation. That's what Tarian cooks on!
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * Context based detection
+      * Runtime detection
+      * Lightweight
+      * Modern Kernel technology
+      * Continuous enhancement with proprietary AI and secured Gen-AI 
+      * Enhance governance, risk and compliance 
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Features"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Continuous Evolution!"
     title_color: ""
     image: "images/content/tarian/tarian-row3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
-
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      Stay ahead of evolving threats with a proactive and adaptive mindset.
+      * eBPF kernel programming
+      * Linux Security Modules (LSM) with eBPF, XDP, etc.
+      * AppArmor, SELinux
+      * Monitoring, Observability, Profiling and Alerts
+      * Multi Dimensional Context building 
+      * Auto Policies generation
+      * Auto threat elimination with AI/ML 
+      * Context-based anomaly detection
+      * Zero Instrumentation
+      * Quick Adoption 
 
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Integrations"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Extended plug-ins and Integrations"
     title_color: ""
     image: "images/content/tarian/tarian-row4.png"
     content_position: "left" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Data-Driven contexts with cloud-native favorites! Security Enablement! 
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * Git, Containers, GitOps, KubViz, etc.
+      * openTelemetry
+      * Prometheus
+      * Profiling
+      * Kernel level detection with hooks
+      * Tested compatibility with CO-RE (compile once and run everywhere)
+      * Secure Software Supply Chain tool kits
+      * Intelligence with our own AI/ML
+      * Detection Engineering
+      * Security Chaos Engineering
 
 
 call_to_action:

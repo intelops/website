@@ -40,7 +40,7 @@ banner:
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
     enable: false
