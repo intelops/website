@@ -40,8 +40,8 @@ button_label = "Contact Us"
 button_link = "contact/"
 enable = true
 image = "images/footer/homepage/contact-image.svg"
-subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
-title = "Looking for efficient and optimized Cloud-Native implementation? <br> Let us make your life easy!"
+subtitle = "Finding the right talent is pain. More so, keeping up with concepts, culture, technology and tools. We all have been there. Our AI-based automated solutions helps eliminate these issues, making your teams lives easy."
+title = "Looking for Cloud-Native Implementation?"
 [cookies]
 button = "I Accept"
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
