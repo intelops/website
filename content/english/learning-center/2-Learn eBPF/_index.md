@@ -5,5 +5,5 @@ draft: false
 # description
 description: "Gain knowledge about the fundamentals of eBPF programming and understand its various use cases."
 type : "learning-center"
-weight: 1
+weight: 2
 ---
