@@ -5,6 +5,6 @@ draft: false
 # description
 description: "Learn Grafonnet and implementation of dashboards using Jsonnet"
 type : "learning-center"
-weight: 4
+weight: 6
 ---
 

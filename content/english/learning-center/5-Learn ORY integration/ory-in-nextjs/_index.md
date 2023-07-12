@@ -4,7 +4,6 @@ date: 2023-05-25
 draft: false
 # description
 description: "Learn integration of ORY authentication in Next.js"
-type : "learning-center"
 weight: 1
 ---
 
