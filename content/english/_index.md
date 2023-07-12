@@ -20,21 +20,21 @@ banner:
     label: Watch demo
     video_url: 
 
-  # If lottie is enable image will not show.
+  # If Lottie Animation is enable image will not show.
   image:
     enable: true
     src: "images/banner/homepage/homepage-banner.svg"
     background: "#4B4B4C"
     padding: "60px 0"
 
-  # If lottie is disable image will show on that place.
+  # If Lottie Animation is disable image will show on that place.
   lottie: 
     enable: false
     json: "lottie/homepage_concept_v4.json"
     background: "#eee"
-    speed: "1"
-    loop: "true"
-    autoplay: "true"
+    speed: 1
+    loop: true
+    autoplay: true
 
 
 brands:
@@ -68,6 +68,7 @@ platforms:
 how_it_works:
   enable: false
   section: how-it-works
+
 image_and_content_block:
   enable: false
   subtitle: We Are IntelOps
@@ -83,6 +84,7 @@ image_and_content_block:
    # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
    # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
+  
 slider_and_content_block:
   enable: false
   subtitle: We Are Intelops
