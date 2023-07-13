@@ -246,6 +246,43 @@ collections:
 
 
   # Top Level
+  - name: 'pages'
+    label: 'Pages'
+    files:
+    # Level 1
+    - label: "About"
+      name: "about"
+      widget: object
+      file: "content/english/about.md"
+      fields:
+        # Level 2
+        - { label: "draft", name: "draft", widget: "boolean", required: false }
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "string", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        - label: Banner
+          name: banner
+          widget: object
+          collapsed: true
+          fields:
+          - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+          - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+          - { label: "title", name: "title", widget: "string", required: false }
+          - { label: "title color", name: "title_color", widget: "color", required: false }
+          - { label: "description", name: "description", widget: "text", required: false }
+          - { label: "description color", name: "description_color", widget: "color", required: false }          
+          - { label: "image url", name: "image", widget: "string", required: false }
+          - label: button
+            name: button
+            widget: object
+            collapsed: true
+            fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: false }
+            - { label: "label", name: "label", widget: "string", required: false }
+            - { label: "link", name: "link", widget: "string", required: false }
+
+  # Top Level
   - name: 'author'
     label: 'Author'
     folder: 'content/english/author'
