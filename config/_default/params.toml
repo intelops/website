@@ -60,6 +60,9 @@ link = "#!"
 enable = false
 preloader = "images/loader.png"
 
+[clickup_form]
+enable = true
+
 [newsletter]
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7520/VCGTBDZHNQ41SR6Y97"

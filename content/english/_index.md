@@ -13,14 +13,19 @@ banner:
           
   description_color: ""
   button:
-    enable: true
+    enable: false
     label: Join Waitlist
     #icon: fas fa-arrow-right
-    link: contact/
+    link: "contact/"
   video_button:
     enable: false
     label: Watch demo
     video_url: 
+
+  join_waitlist:
+    enable: true
+    button_label: "Join Waitlist"
+    clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
   # If Lottie Animation is enable image will not show.
   image:
