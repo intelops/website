@@ -255,11 +255,11 @@ collections:
       widget: object
       file: "content/english/about.md"
       fields:
-        # Level 2
         - { label: "draft", name: "draft", widget: "boolean", required: false }
         - { label: "title", name: "title", widget: "string", required: false }
         - { label: "description", name: "description", widget: "string", required: false }
         - { label: "layout", name: "layout", widget: "string", required: false }
+        # Level 2
         - label: Banner
           name: banner
           widget: object
@@ -281,6 +281,436 @@ collections:
             - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: false }
             - { label: "label", name: "label", widget: "string", required: false }
             - { label: "link", name: "link", widget: "string", required: false }
+
+        # Level 2
+        - label: Brands
+          name: brands
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+
+        # Level 2
+        - label: Featured Testimonial
+          name: featured_testimonial
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "author_image", name: "author_image", widget: "string", required: false }
+            - { label: "review", name: "review", widget: "text", required: false }
+            - { label: "review_color", name: "review_color", widget: "color", required: false }
+            - { label: "author_info", name: "author_info", widget: "string", required: false }
+            - { label: "author_info_color", name: "author_info_color", widget: "color", required: false }
+
+        # Level 2
+        - label: About Info
+          name: about_info
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "image", name: "image", widget: "string", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+
+        # Level 2
+        - label: Features Box
+          name: features_box
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - label: "Features Item"
+              name: "features_box_item"
+              widget: list
+              required: false
+              fields:
+                - { label: "title", name: "title", widget: "string", required: true }
+                - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: true }
+                - { label: "title color", name: "title_color", widget: "color", required: false }
+                - { label: "content", name: "content", widget: "text", required: true }
+                - { label: "content color", name: "content_color", widget: "color", required: false }
+                
+        # Level 2
+        - label: Image and Content Block
+          name: image_and_content_block
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "bg_color", name: "bg_color", widget: "color", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - { label: "image", name: "image", widget: "string", required: false }
+            - { label: "content_position", name: "content_position", widget: "select", options: ["left", "right"], required: false }
+            - { label: "content", name: "content", widget: "text", required: false }
+            - { label: "content color", name: "content_color", widget: "color", required: false }
+
+        # Level 2
+        - label: Customer Info
+          name: customer_info
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - label: "block"
+              name: "block"
+              widget: list
+              required: false
+              fields:
+                - { label: "title", name: "title", widget: "string", required: true }
+                - { label: "title color", name: "title_color", widget: "color", required: false }
+                - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: true }
+                - { label: "icon color", name: "icon_color", widget: "color", required: false }
+                - { label: "content", name: "content", widget: "text", required: true }
+                - { label: "content color", name: "content_color", widget: "color", required: false }
+
+
+        # Level 2
+        - label: Our Peoples
+          name: our_peoples
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - label: "lists"
+              name: "lists"
+              widget: list
+              required: false
+              fields:
+                - { label: "name", name: "name", widget: "string", required: false }
+                - { label: "image", name: "image", widget: "string", required: false }
+                - { label: "name color", name: "name_color", widget: "color", required: false }
+                - { label: "designation", name: "designation", widget: "string", required: false }
+                - { label: "designation color", name: "designation_color", widget: "color", required: false }
+
+        # Level 2
+        - label: Career
+          name: career
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - { label: "content", name: "content", widget: "text", required: false }
+            - { label: "content color", name: "content_color", widget: "color", required: false }
+            - { label: "section", name: "section", widget: "string", hint: "career data comming form `SECTION_VALUE.md` page", required: false }
+
+        # Level 2
+        - label: Call to Action
+          name: call_to_action
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "image", name: "image", widget: "string", required: false }
+            - { label: "button_label", name: "button_label", widget: "string", required: false }
+            - { label: "button_link", name: "button_link", widget: "string", required: false }
+
+
+    # Level 1
+    - label: "Features"
+      name: "features"
+      widget: object
+      file: "content/english/features.md"
+      fields:
+        - { label: "draft", name: "draft", widget: "boolean", required: false }
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "string", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        # Level 2
+        - label: Features
+          name: features
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - label: "button"
+              name: "button"
+              widget: object
+              collapsed: true
+              fields:
+                - { label: "enable", name: "enable", widget: "boolean", required: false }
+                - { label: "label", name: "label", widget: "string", required: false }
+                - { label: "link", name: "link", widget: "string", required: false }
+            - label: "Features block"
+              name: "features_blocks"
+              widget: list
+              required: false
+              fields:
+                - { label: "title", name: "title", widget: "string", required: true }
+                - { label: "features_color", name: "features_color", widget: "color", required: false }
+                - { label: "title_color", name: "title_color", widget: "color", required: false }
+                - { label: "icon", name: "icon", widget: "string", required: true }
+                - { label: "content", name: "content", widget: "text", required: true }
+                - { label: "content_color", name: "content_color", widget: "color", required: false }
+                - { label: "link", name: "link", widget: "string", required: true }
+                - { label: "link_label", name: "link_label", widget: "string", required: true }
+
+
+    # Level 1
+    - label: "How It Works"
+      name: "how-it-works"
+      widget: object
+      file: "content/english/how-it-works.md"
+      fields:
+        - { label: "draft", name: "draft", widget: "boolean", required: false }
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "string", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        # Level 2
+        - label: Banner
+          name: banner
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "description", name: "description", widget: "text", required: false }
+            - { label: "image", name: "image", widget: "string", required: false }
+            - label: "button"
+              name: "button"
+              widget: object
+              collapsed: true
+              fields:
+                - { label: "enable", name: "enable", widget: "boolean", required: false }
+                - { label: "label", name: "label", widget: "string", required: false }
+                - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: false }
+                - { label: "link", name: "link", widget: "string", required: false }
+
+        # Level 2
+        - label: Work Process
+          name: work_process
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - label: "Process Item"
+              name: "process_item"
+              widget: list
+              required: false
+              fields:
+                - { label: "title", name: "title", widget: "string", required: true }
+                - { label: "title color", name: "title_color", widget: "color", required: false }
+                - { label: "image", name: "image", widget: "string", required: false }
+                - { label: "content", name: "content", widget: "text", required: true }
+                - { label: "content color", name: "content_color", widget: "color", required: false }
+
+
+    # Level 1
+    - label: "Optimizor"
+      name: "optimizor"
+      widget: object
+      file: "content/english/optimizor.md"
+      fields:
+        - { label: "draft", name: "draft", widget: "boolean", required: false }
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "string", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        - { label: "Header Logo", name: "headerLogo", widget: "string", required: false }
+
+        # Level 2
+        - label: Banner
+          name: banner
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "description", name: "description", widget: "text", required: false }
+            - { label: "image", name: "image", widget: "string", required: false }
+            - label: "button"
+              name: "button"
+              widget: object
+              collapsed: true
+              fields:
+                - { label: "enable", name: "enable", widget: "boolean", required: false }
+                - { label: "label", name: "label", widget: "string", required: false }
+                - { label: "icon", name: "icon", widget: "string", hint: 'FontAwesome Icon Class Name', required: false }
+                - { label: "link", name: "link", widget: "string", required: false }
+
+        # Level 2
+        - label: Work Process
+          name: work_process
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title color", name: "title_color", widget: "color", required: false }
+            - label: "Process Item"
+              name: "process_item"
+              widget: list
+              required: false
+              fields:
+                - { label: "title", name: "title", widget: "string", required: true }
+                - { label: "title color", name: "title_color", widget: "color", required: false }
+                - { label: "image", name: "image", widget: "string", required: false }
+                - { label: "content", name: "content", widget: "text", required: true }
+                - { label: "content color", name: "content_color", widget: "color", required: false }
+
+        # Level 2
+        - label: Footer
+          name: footer
+          widget: object
+          collapsed: true
+          fields:
+            - { label: "footer_light", name: "footer_light", widget: "boolean", required: false }
+            - { label: "bg_color", name: "bg_color", widget: "color", required: false }
+            - { label: "bg_image", name: "bg_image", widget: "string", required: false }
+            - { label: "bg_image_overlay_color", name: "bg_image_overlay_color", widget: "color", required: false }
+
+
+    # Level 1
+    - label: "Our Team"
+      name: "our_team"
+      widget: object
+      file: "content/english/team.md"
+      fields:
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "text", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        - { label: "bannertext", name: "bannertext", widget: "string", required: false }
+        - { label: "bannerimage", name: "bannerimage", widget: "string", required: false }
+        - { label: "enable", name: "enable", widget: "boolean", required: false }
+        
+        # Level 2
+        - label: "team_members"
+          name: "team_members"
+          widget: object
+          required: false
+          fields:
+            - label: "Team Item"
+              name: "lists"
+              widget: list
+              required: false
+              fields:
+                - { label: "name", name: "name", widget: "string", required: false }
+                - { label: "image", name: "image", widget: "string", required: false }
+                - { label: "name_color", name: "name_color", widget: "color", required: false }
+                - { label: "designation", name: "designation", widget: "string", required: false }
+                - { label: "designation_color", name: "designation_color", widget: "color", required: false }
+
+        - { label: 'Body', name: 'body', widget: 'markdown', editor_components: ['code-block'] }
+
+
+    # Level 1
+    - label: Mind-Map
+      name: mind-map
+      widget: object
+      file: "content/english/mind-map.md"
+      collapsed: true
+      fields:
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "text", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        - { label: "bannertext", name: "bannertext", widget: "string", required: false }
+        - { label: "bannerimage", name: "bannerimage", widget: "string", required: false }
+        - { label: "enable", name: "enable", widget: "boolean", required: false }
+
+
+    # Level 1
+    - label: Contact
+      name: contact
+      widget: object
+      file: "content/english/contact.md"
+      collapsed: true
+      fields:
+        - { label: "title", name: "title", widget: "string", required: false }
+        - { label: "description", name: "description", widget: "text", required: false }
+        - { label: "searchKeyword", name: "searchKeyword", widget: "string", required: false }
+        - { label: "layout", name: "layout", widget: "string", required: false }
+        - { label: "bannertext", name: "bannertext", widget: "string", required: false }
+        - { label: "bannertext_color", name: "bannertext_color", widget: "color", required: false }
+        - { label: "bannerimage", name: "bannerimage", widget: "string", required: false }
+        - { label: "enable", name: "enable", widget: "boolean", required: false }
+        
+        # Level 2
+        - label: "contact"
+          name: "contact"
+          widget: object
+          required: false
+          collapsed: true
+          fields:
+            - { label: "subtitle", name: "subtitle", widget: "string", required: false }
+            - { label: "subtitle_color", name: "subtitle_color", widget: "color", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title_color", name: "title_color", widget: "color", required: false }
+            - { label: "description", name: "description", widget: "text", required: false }
+            - { label: "description_color", name: "description_color", widget: "color", required: false }
+        
+        # Level 2
+        - label: "contact info"
+          name: "contact_info"
+          widget: object
+          required: false
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title_color", name: "title_color", widget: "color", required: false }
+            - { label: "icon_color", name: "icon_color", widget: "color", required: false }
+        
+            # Level 3
+            - label: "address item"
+              name: "address_list"
+              widget: list
+              required: false
+              field:
+                { label: "Address", name: "address", widget: "string", required: true }
+            - { label: "address_list_color", name: "address_list_color", widget: "color", required: false }
+        
+        # Level 2
+        - label: "services"
+          name: "services"
+          widget: object
+          required: false
+          collapsed: true
+          fields:
+            - { label: "enable", name: "enable", widget: "boolean", required: false }
+            - { label: "title", name: "title", widget: "string", required: false }
+            - { label: "title_color", name: "title_color", widget: "color", required: false }
+            - { label: "icon_color", name: "icon_color", widget: "color", required: false }
+        
+            # Level 3
+            - label: "service item"
+              name: "service_list"
+              widget: list
+              required: false
+              field:
+                { label: "Service", name: "service", widget: "string", required: true }
+            - { label: "service_list_color", name: "service_list_color", widget: "color", required: false }
+
+
+
+
 
   # Top Level
   - name: 'author'
