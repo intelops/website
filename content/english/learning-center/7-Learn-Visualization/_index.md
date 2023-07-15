@@ -5,5 +5,5 @@ draft: false
 # description
 description: "Learning the implementation of dashboards using different tools like Jsonnet, Grafonnet, AirByte etc. for Data Engineering."
 type : "learning-center"
-weight: 3
+weight: 7
 ---

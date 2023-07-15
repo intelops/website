@@ -2,18 +2,20 @@
 banner:
   subtitle: 
   subtitle_color: ""
-  title: IntelOps Ai <br/> Coming Soon
+  title: Be Future-Ready With our SaaS 2.0
   title_color: ""
   description:
-    Website is under active development.<br><br>
-    Our products are currently in Stealth mode development.<br><br>
-    Building the Next-Gen Tech For Cloud-Native.<br><br>
-    Ai-based framework to democratize Cloud Native Technology.
+    Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
+    Ai-based / Self-Service platform to democratize Cloud Native. <br><br>
+    Website is under active development. Still, checkout the content we have!<br>
+    Our products are currently in Stealth mode.
+    
+          
   description_color: ""
   button:
     enable: true
-    label: Get started now
-    icon: fas fa-arrow-right
+    label: Join Waitlist
+    #icon: fas fa-arrow-right
     link: contact/
   video_button:
     enable: false
@@ -39,7 +41,7 @@ banner:
 
 brands:
   enable: true
-  title: Trusted by fast growing brands and enterprises. <br> Be the Captain.
+  title: Next-Gen Cloud-Native Tech <br> for Fast Growing Brands & Enterprises. <br> Be the Captain.
   title_color: ""
   images:
   # - images/clients/01.png
@@ -138,9 +140,9 @@ blog:
   enable: true
   subtitle: Recent Articles
   subtitle_color: ""
-  title: Check out what we are cooking
+  title: "Inside the Lab: Innovation in the Making"
   title_color: "black"
-  description: We love solving problems. <br> Check out and let us know what you want us to build for you.
+  description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
   description_color: ""
   button:
     enable: true
