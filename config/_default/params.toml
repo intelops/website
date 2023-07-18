@@ -5,12 +5,12 @@ contact_form_action = "#!"
 custom_script = ""
 description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
 email = "info@email.com"
-favicon = "images/favicon/favicon-32x32.png"
+favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
 
-logo = "images/logos/logo-dark.svg"
-logo_light = "images/logos/logo-light.svg"
-logo_dark = "images/logos/logo-dark.svg"
+logo = "images/logos/new-logo-dark.svg" #This is the main logo displayed on the header bar
+logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
+logo_dark = "images/logos/new-logo-dark.svg"
 footer_logo_dark = false
 logo_webp = false
 
@@ -26,7 +26,7 @@ google_tag_manager = "GTM-PVRN5BQ"
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
 keywords = ["Intelops", "Cloud-Native", "Ai", "DevOps", "SRE", "Kubernetes", "Talent", "Democratize", "Next-Gen"]
-description = "DevSecOps concept in development and testing"
+description = "Democratizing Cloud Native. Making Imagination a Reality."
 author = "Intelops"
 image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
 
