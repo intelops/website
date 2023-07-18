@@ -22,17 +22,17 @@ banner:
     label: Watch demo
     video_url: 
 
-  # If lottie is enable image will not show.
+  # If lottie is enable image will not show as static image. Automatically lottie animation will load.
   image:
     enable: true
     src: "images/banner/homepage/homepage-banner.svg"
     background: "#4B4B4C"
     padding: "60px 0"
 
-  # If lottie is disable image will show on that place.
+  # If lottie is disabled then static image will show in that place automatically. 
   lottie: 
-    enable: false
-    json: "lottie/homepage_concept_v4.json"
+    enable: true
+    json: "lottie/homepage_concept.json"
     background: "#eee"
     speed: "1"
     loop: "true"
