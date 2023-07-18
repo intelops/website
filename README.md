@@ -52,3 +52,6 @@ This is the repo to manage all the website work, which is being developed using 
 
 > To add/update Google Tag Manager (GTM) code - https://github.com/intelops/website/issues/201 
 
+> To add/modify opengraph metadata information and verify using ograph previewer browser extension - https://github.com/intelops/website/issues/176 
+>
+> 
