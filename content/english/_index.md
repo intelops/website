@@ -26,14 +26,14 @@ banner:
   image:
     enable: true
     src: "images/banner/homepage/homepage-banner.svg"
-    background: "#4B4B4C"
+    background: "#4B4B4C" # original used color code - 4B4B4C or use 121826 or 454545 or 4f4b49
     padding: "60px 0"
 
   # If lottie is disabled then static image will show in that place automatically. 
   lottie: 
     enable: true
     json: "lottie/homepage_concept.json"
-    background: "#eee"
+    background: "#4B4B4C"
     speed: "1"
     loop: "true"
     autoplay: "true"
