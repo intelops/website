@@ -13,10 +13,10 @@ banner:
           
   description_color: ""
   button:
-    enable: false
+    enable: true
     label: Join Waitlist
     #icon: fas fa-arrow-right
-    link: "contact/"
+    link: contact/
   video_button:
     enable: false
     label: Watch demo
@@ -27,21 +27,21 @@ banner:
     button_label: "Join Waitlist"
     clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
-  # If Lottie Animation is enable image will not show.
+  # If lottie is enable image will not show as static image. Automatically lottie animation will load.
   image:
     enable: true
     src: "images/banner/homepage/homepage-banner.svg"
-    background: "#4B4B4C"
+    background: "#4B4B4C" # original used color code - 4B4B4C or use 121826 or 454545 or 4f4b49
     padding: "60px 0"
 
-  # If Lottie Animation is disable image will show on that place.
+  # If lottie is disabled then static image will show in that place automatically. 
   lottie: 
-    enable: false
-    json: "lottie/homepage_concept_v4.json"
-    background: "#eee"
-    speed: 1
-    loop: true
-    autoplay: true
+    enable: true
+    json: "lottie/homepage_concept.json"
+    background: "#4B4B4C"
+    speed: "1"
+    loop: "true"
+    autoplay: "true"
 
 
 brands:

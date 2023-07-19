@@ -12,6 +12,8 @@ This is the repo to manage all the website work, which is being developed using 
 - About Us
 - Resources
 
+> image color code in undraw.co to use - #FB7E44
+
 > How to add discussion using [disqus.com](https://disqus.com/) within the website - steps are here https://github.com/intelops/website/issues/17 
 
 > In the future, if I want to add a link to case-studies to make it publicly visible inside Resources or in the main menu , how to do that?
@@ -50,3 +52,6 @@ This is the repo to manage all the website work, which is being developed using 
 
 > To add/update Google Tag Manager (GTM) code - https://github.com/intelops/website/issues/201 
 
+> To add/modify opengraph metadata information and verify using ograph previewer browser extension - https://github.com/intelops/website/issues/176 
+>
+> 
