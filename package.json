@@ -9,7 +9,7 @@
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --verbose --verboseLog --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
     "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
   },
-  "dependencies": {
+  "devDependencies": {
     "concurrently": "^8.2.0",
     "netlify-cms": "^2.10.192"
   }
