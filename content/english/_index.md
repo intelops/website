@@ -14,8 +14,8 @@ banner:
   description_color: ""
   button:
     enable: true
-    label: Join Waitlist
-    #icon: fas fa-arrow-right
+    label: Contact Us
+    icon: fas fa-arrow-right
     link: contact/
   video_button:
     enable: false
