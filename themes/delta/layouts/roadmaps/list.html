@@ -1,0 +1,65 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        {{if not .Content}}
+          {{ range .Data.Pages }}
+          <a href="{{.RelPermalink}}">{{.Title}}</a>
+          {{ end }}
+        {{ else }}
+
+          <h2 class="mb-4 font-weight-medium">{{ .Title }}</h2>
+
+          <span class="text-muted small d-inline-block mb-4" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+
+          {{.Content}}
+
+          {{ if .Page.Store.Get "hasMermaid" }}
+          <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({
+              startOnLoad: true,
+              securityLevel: 'loose',
+            });
+
+            function urlize(str) {
+              str = str.trim();
+              str = str.replace(/\s+/g, '-');
+              str = str.replace(/[^\w-]/g, '');
+              str = str.replace(/-{2,}/g, '-');
+              str = str.toLowerCase();
+              return str;
+            }
+
+            window.addEventListener('load', (event) => {
+              setTimeout(function() {
+                let node = document.querySelectorAll('.mindmap-node:not(.section-root):not(.node)');
+                node.forEach(function(el) {
+                  let innerText = el.querySelectorAll('.text-inner-tspan');
+                  const textArray = [];
+                  innerText.forEach((text) => {
+                    textArray.push(text.textContent);
+                  });
+                  const textID = textArray.join(' ');
+
+                  el.setAttribute('data-group-id', urlize(textID));
+                });
+              }, 1000);
+            });
+
+          </script>
+          {{ end }}
+
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "call-to-action-2.html" . }}
+
+{{ end }}
