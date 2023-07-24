@@ -110,11 +110,6 @@ pre = "images/icons/tarian.svg"
 post = "<small>Run Time Protection for K8s</small>"
 
 [[main]]
-name = "Roadmaps"
-url = "roadmaps/"
-weight = 3
-
-[[main]]
 name = "Learning Center"
 url = "learning-center/"
 weight = 4
@@ -184,10 +179,15 @@ weight = 2
 # url = "team/"
 # weight = 2
 [[main]]
+name = "Roadmaps"
+parent = "Resources"
+url = "roadmaps/"
+weight = 2
+[[main]]
 name = "Contact"
 parent = "Resources"
 url = "contact/"
-weight = 2
+weight = 10
 # [[main]]
 # name = "Certified"
 # parent = "Resources"

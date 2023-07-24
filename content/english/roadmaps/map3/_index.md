@@ -5,16 +5,30 @@ date: 2023-07-10
 weight: 3
 # description
 description: "Step by step guide on how to sign Git commits with a valid OpenID Connect identity"
+category: "Skill based Roadmaps"
 ---
 
 This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. 
 
 ```mermaid
-flowchart LR
-    A[Hard edge] -->|Link text| B(Round edge)
-    B --> C{Decision}
-    C -->|One| D[Result one]
-    C -->|Two| E[Result two]
+mindmap
+  root((mindmap))
+    Origins
+    :::node
+      Long history
+      ::icon(fa fa-book)
+      Popularisation
+        British popular psychology author Tony Buzan
+    Research
+      On effectiveness<br/>and features
+      On Automatic creation
+        Uses
+          Creative techniques
+          Strategic planning
+          Argument mapping
+    Tools
+      Pen and paper
+      Mermaid
 ```
 
 This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. 

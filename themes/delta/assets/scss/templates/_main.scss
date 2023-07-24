@@ -1841,19 +1841,47 @@ footer {
   }
 }
 
-[data-group-id] {
+.mindmap-node {
+  user-select: none;
+  &.node {
+    pointer-events: none;
+  }
+}
+[data-roadmap] {
   cursor: pointer;
   user-select: none;
-  transition: .3s;
+  [class^="node-line"],
+  .node-bkg {
+    transition: .3s;
+  }
   &:hover {
     .node-bkg {
-      fill: $color-primary !important;
+      // fill: $color-primary !important;
+      filter: brightness(.9);
     }
     [class^="node-line"] {
       stroke: $color-primary !important;
     }
-    text {
-      fill: $white !important;
-    }
+    // text {
+    //   fill: $white !important;
+    // }
   }
+}
+.roadmap-list-item {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: .3s;
+  border-color: #eeeeee !important;
+  &:hover {
+    opacity: .9;
+    transform: scale(0.995);
+    background-color: #eee;
+  }
+}
+.content-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: -200%;
+  top: -200%;
 }
