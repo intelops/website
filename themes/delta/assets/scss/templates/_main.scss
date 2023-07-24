@@ -1843,7 +1843,7 @@ footer {
 
 .mindmap-node {
   user-select: none;
-  &.node {
+  &.disable {
     pointer-events: none;
   }
 }

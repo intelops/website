@@ -14,7 +14,7 @@ This is the start of dummy description text. You can change it whenever you want
 mindmap
   root((mindmap))
     Origins
-    :::node
+    :::disable
       Long history
       ::icon(fa fa-book)
       Popularisation

@@ -16,7 +16,7 @@ mindmap
     Python
     Ruby
     Go
-    :::node
+    :::disable
     Operating System
       VCS Hosting
       Version Control System
