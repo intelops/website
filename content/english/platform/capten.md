@@ -11,12 +11,8 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Test 1"
-    url: "/"
-  - name: "Another 2"
-    url: "/"
-  - name: "Test 3"
-    url: "/"
+  - name: "Capten Doc"
+    url: "https://docs.intelops.ai/latest/capten/"
 
   navigation_button:
     enable: true
