@@ -13,7 +13,7 @@ banner:
           
   description_color: ""
   button:
-    enable: true
+    enable: false
     label: Contact Us
     icon: fas fa-arrow-right
     link: contact/
