@@ -74,17 +74,17 @@ image_and_content_block:
   title_color: ""
   image: "images/block-image-03.png"
   content_position: "left" # Value will be - "left/right"
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum 
-
+  content: |
+    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum 
   
-  * luctus et ultrices uere cubia Curae Donec verglit
+    * luctus et ultrices uere cubia Curae Donec verglit
 
-  * Neque auctor congue leo eget malesuada Vivamus
+    * Neque auctor congue leo eget malesuada Vivamus
 
-  * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
+    * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
 
-  * Donec verglit neque, auctor congue leo  malesuada.
-  "
+    * Donec verglit neque, auctor congue leo  malesuada.
+  
   content_color: ""
 
 # customer_info

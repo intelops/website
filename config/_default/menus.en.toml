@@ -112,7 +112,7 @@ post = "<small>Run Time Protection for K8s</small>"
 [[main]]
 name = "Learning Center"
 url = "learning-center/"
-weight = 3
+weight = 4
 
 # [[main]]
 # name = "Open Source"
@@ -179,10 +179,15 @@ weight = 2
 # url = "team/"
 # weight = 2
 [[main]]
+name = "Roadmaps"
+parent = "Resources"
+url = "roadmaps/"
+weight = 2
+[[main]]
 name = "Contact"
 parent = "Resources"
 url = "contact/"
-weight = 2
+weight = 10
 # [[main]]
 # name = "Certified"
 # parent = "Resources"

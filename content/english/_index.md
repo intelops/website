@@ -14,13 +14,18 @@ banner:
   description_color: ""
   button:
     enable: true
-    label: Join Waitlist
-    #icon: fas fa-arrow-right
+    label: Contact Us
+    icon: fas fa-arrow-right
     link: contact/
   video_button:
     enable: false
     label: Watch demo
     video_url: 
+
+  join_waitlist:
+    enable: true
+    button_label: "Join Waitlist"
+    clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
   # If lottie is enable image will not show as static image. Automatically lottie animation will load.
   image:
@@ -70,6 +75,7 @@ platforms:
 how_it_works:
   enable: false
   section: how-it-works
+
 image_and_content_block:
   enable: false
   subtitle: We Are IntelOps
@@ -85,6 +91,7 @@ image_and_content_block:
    # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
    # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
+  
 slider_and_content_block:
   enable: false
   subtitle: We Are Intelops
