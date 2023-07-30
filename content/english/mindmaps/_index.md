@@ -7,9 +7,9 @@ bannertext: "Mindmaps: For Quick Capture"
 bannertext_color: "#000"
 bannerimage: images/banner/mindmaps-page/undraw_mindmap_banner2.png
 
-all_roadmaps_button:
+all_mindmaps_button:
   label: "All Mindmaps"
-  link: "/roadmaps"
+  link: "/mindmaps"
 
 ignoreSearch: true
 ---

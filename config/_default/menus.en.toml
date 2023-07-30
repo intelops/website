@@ -181,7 +181,7 @@ weight = 2
 [[main]]
 name = "Mindmaps"
 parent = "Resources"
-url = "roadmaps/"
+url = "mindmaps/"
 weight = 3
 [[main]]
 name = "Contact"
