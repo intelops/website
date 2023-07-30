@@ -62,8 +62,8 @@ style="background-image: url({{$img.RelPermalink}});
           <p class="content-loader text-center">loading..</p>
 
           <div class="content content-hidden">
-            {{ with site.GetPage "Roadmaps" }}
-            {{ with .Params.all_roadmaps_button }}
+            {{ with site.GetPage "Mindmaps" }}
+            {{ with .Params.all_mindmaps_button }}
             <a href="{{.link | relLangURL}}" class="border rounded py-1 pe-2 ps-1 d-inline-flex align-item-center line-height-0">
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="transform:translateY(3px);margin-right:3px">
                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
