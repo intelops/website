@@ -76,6 +76,10 @@ clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5C
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5CQC8LRFXTUBND"
 
+[opensource_security_reporting]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12190/UD4AJPCTSDU2IS70Q0"
+
 [[social]]
 icon = "fab fa-facebook"
 link = "#!"
