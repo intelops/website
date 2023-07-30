@@ -11,12 +11,8 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Test 1"
-    url: "/"
-  - name: "Another 2"
-    url: "/"
-  - name: "Test 3"
-    url: "/"
+  - name: "Opty (Optimizor) Doc"
+    url: "https://docs.intelops.ai/latest/opty/"
 
   navigation_button:
     enable: true

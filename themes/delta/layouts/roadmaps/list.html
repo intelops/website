@@ -1,0 +1,158 @@
+{{ define "main" }}
+
+{{ partial "header.html" . }}
+{{if .Params.enable}}
+{{with .Params.bannerimage }}
+{{$img:= resources.Get . }}
+<section class="page-header wave-block"
+style="background-image: url({{$img.RelPermalink}});
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;">
+{{end}}
+
+  <div class="container container-delta">
+    <div class="row">
+      <div class="block col-12 text-center">
+
+        <h1 class="title banner-title" {{with .Params.bannertext_color}}style="color:{{.}}"{{end}}>{{ .Params.bannertext }}</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="has-wave">
+    <svg class="wave-left" width="219" height="179" viewBox="0 0 219 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path opacity="0.9" d="M217.475 246.59C223.343 227.579 211.468 208.848 195.681 199.063C178.917 188.578 156.424 188.299 141.615 174.879C136.167 169.987 132.115 163.557 133.932 156.148C135.329 150.556 139.52 145.943 143.431 142.029C153.49 131.685 165.924 122.879 171.792 109.179C186.181 76.0499 147.623 46.4151 116.608 57.598C107.108 61.0927 99.4244 67.1036 91.3215 72.9746C84.4759 78.007 77.351 83.0393 68.6893 83.4586C60.4467 83.878 56.3952 78.2866 57.5128 70.3187C58.9099 61.0928 65.8952 53.8238 71.7628 46.9743C78.8877 38.4473 87.5494 28.5224 85.4539 16.5007C83.3583 4.33926 71.4833 -0.972674 60.1672 0.145629C48.432 1.26393 38.7924 7.69409 29.4321 14.2641C22.0278 19.4362 10.7117 27.9632 1.63082 22.5116C-9.9647 15.662 -20.5823 33.6945 -8.98674 40.6839C10.0132 51.8668 28.8733 39.9849 44.66 29.2213C48.2923 26.8449 51.9246 24.189 55.9761 22.6513C57.7922 21.9524 59.7481 21.3932 61.5643 21.1137C62.4025 20.9739 63.6599 21.3932 64.4981 21.1137C66.8731 20.4147 64.3584 22.0922 64.9172 19.9954C62.6819 28.103 54.579 34.8128 49.5497 41.243C38.0938 55.7808 30.1307 77.308 43.2629 93.6631C55.1379 108.341 76.6524 106.244 91.7406 97.9965C105.152 90.7276 117.726 73.9532 134.63 76.6091C145.527 78.2866 157.542 87.5125 153.211 99.674C149.02 111.416 136.446 119.244 128.064 127.771C117.726 138.535 110.321 151.675 113.255 167.051C117.307 188.439 138.402 199.901 157.262 206.331C171.512 211.224 203.924 219.471 197.218 241.278C193.306 253.999 213.563 259.59 217.475 246.59Z" fill="currentColor"/>
+    </svg>
+  </div>
+</section>
+{{end}}
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        {{if not .Content}}
+
+          {{ range .Pages.GroupByParam "category" }}
+          <h2 class="h4 text-center mb-4 text-muted">{{ .Key }}</h2>
+          
+          <div class="row justify-content-center mb-5 pb-4">
+          {{ range .Pages }}
+          <div class="col-lg-4 col-md-6">
+            <a class="text-dark border d-flex justify-content-between align-items-center rounded px-3 roadmap-list-item" href="{{ .Permalink }}">
+              <span>{{ .Title }}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M5 12l14 0"></path>
+                <path d="M15 16l4 -4"></path>
+                <path d="M15 8l4 4"></path>
+              </svg>
+            </a>
+          </div>
+          {{ end }}
+          </div>
+          
+          {{ end }}
+
+        {{ else }}
+
+          <p class="content-loader text-center">loading..</p>
+
+          <div class="content content-hidden">
+            {{ with site.GetPage "Roadmaps" }}
+            {{ with .Params.all_roadmaps_button }}
+            <a href="{{.link | relLangURL}}" class="border rounded py-1 pe-2 ps-1 d-inline-flex align-item-center line-height-0">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="transform:translateY(3px);margin-right:3px">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M15 6l-6 6l6 6"></path>
+              </svg>
+              {{.label | markdownify}}
+            </a>
+            {{ end }}
+            {{ end }}
+
+            <h2 class="mb-4 font-weight-medium mt-5">{{ .Title }}</h2>
+
+            <span class="text-muted small d-inline-block mb-4" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }}</span>
+
+            {{.Content}}
+          </div>
+
+          {{ range .Data.Pages }}
+          <div 
+            class="offcanvas offcanvas-end fade" 
+            tabindex="-1" 
+            id="{{.Title | urlize}}" 
+            aria-labelledby="{{.Title | urlize}}" 
+            style="width:500px; transform:none"
+          >
+            <div class="offcanvas-header">
+              <h4 class="offcanvas-title" id="offcanvasExampleLabel">{{.Title}}</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <div class="content">
+                {{.Content}}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+
+          {{ if .Page.Store.Get "hasMermaid" }}
+          <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({
+              startOnLoad: true,
+              securityLevel: 'loose',
+            });
+
+            function urlize(str) {
+              str = str.trim();
+              str = str.replace(/\s+/g, '-');
+              str = str.replace(/[^\w-]/g, '');
+              str = str.replace(/-{2,}/g, '-');
+              str = str.toLowerCase();
+              return str;
+            }
+
+            window.addEventListener('load', (event) => {
+              const contentLoader = document.querySelector('.content-loader');
+              const content = document.querySelector('.content');
+              contentLoader.remove();
+              content.classList.remove('content-hidden');
+
+              setTimeout(function() {
+                let node = document.querySelectorAll('.mindmap-node:not(.section-root):not(.node)');
+                node.forEach(function(el) {
+                  let innerText = el.querySelectorAll('.text-inner-tspan');
+                  const textArray = [];
+                  innerText.forEach((text) => {
+                    textArray.push(text.textContent);
+                  });
+                  const textID = textArray.join(' ');
+                  
+                  el.setAttribute('type', 'button');
+                  el.setAttribute('data-roadmap', '');
+                  el.setAttribute('data-bs-toggle', 'offcanvas');
+                  el.setAttribute('data-bs-target', '#'+urlize(textID));
+                  el.setAttribute('aria-controls', urlize(textID));
+                  
+                });
+              }, 1000);
+            });
+
+          </script>
+          {{ end }}
+
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "call-to-action-2.html" . }}
+
+{{ end }}

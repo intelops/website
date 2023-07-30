@@ -11,12 +11,8 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Test 1"
-    url: "/"
-  - name: "Another 2"
-    url: "/"
-  - name: "Test 3"
-    url: "/"
+  - name: "KubViz Doc"
+    url: "https://docs.intelops.ai/latest/kubviz/"
 
   navigation_button:
     enable: true

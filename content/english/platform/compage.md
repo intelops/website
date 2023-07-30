@@ -11,7 +11,7 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Compage Docs"
+  - name: "Compage Doc"
     url: "https://docs.intelops.ai/latest/compage/"
   # - name: "Another 2"
   #   url: "/"
