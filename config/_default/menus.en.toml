@@ -179,15 +179,15 @@ weight = 2
 # url = "team/"
 # weight = 2
 [[main]]
-name = "Roadmaps"
+name = "Mindmaps"
 parent = "Resources"
 url = "roadmaps/"
-weight = 2
+weight = 3
 [[main]]
 name = "Contact"
 parent = "Resources"
 url = "contact/"
-weight = 10
+weight = 1
 # [[main]]
 # name = "Certified"
 # parent = "Resources"
