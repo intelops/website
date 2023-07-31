@@ -1,0 +1,54 @@
+{
+  "name": "Intelops",
+  "short_name": "Intelops",
+  "lang": "en-us",
+  "theme_color": "#F16F33",
+  "background_color": "#fff",
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  "icons": [
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_48x0_resize_box_3.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_72x0_resize_box_3.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_96x0_resize_box_3.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_144x0_resize_box_3.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_192x0_resize_box_3.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/images/favicon/favicon-32x32_hu76baef350c5c8c60b74da108cbcc884f_1958_512x0_resize_box_3.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  
+  
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

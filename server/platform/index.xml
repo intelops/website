@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Platforms on Intelops</title>
+    <link>https://intelops.ai/platform/</link>
+    <description>Recent content in Platforms on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright><atom:link href="https://intelops.ai/platform/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Capten</title>
+      <link>https://intelops.ai/capten/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/capten/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Compage</title>
+      <link>https://intelops.ai/compage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/compage/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Opty</title>
+      <link>https://intelops.ai/opty/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/opty/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

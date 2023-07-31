@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps Series on Intelops</title>
+    <link>https://intelops.ai/series/devops-series/</link>
+    <description>Recent content in DevOps Series on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Tue, 04 Oct 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/series/devops-series/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DevOps - What and Why?</title>
+      <link>https://intelops.ai/blog/devops-what-and-why/</link>
+      <pubDate>Tue, 04 Oct 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/devops-what-and-why/</guid>
+      <description>DevOps, literally, is the intersection of development and operations. It is an extremely broad term, used differently by different industries.</description>
+    </item>
+    
+  </channel>
+</rss>

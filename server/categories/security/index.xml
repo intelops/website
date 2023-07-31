@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Security on Intelops</title>
+    <link>https://intelops.ai/categories/security/</link>
+    <description>Recent content in Security on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/categories/security/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What is data breach? 5 facts you need to know about data breach</title>
+      <link>https://intelops.ai/blog/what-is-data-breach/</link>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/what-is-data-breach/</guid>
+      <description>Introduction As per Wikipedia, the term data breach refers to compromise of security involving unauthorized access to sensitive and confidential user information.</description>
+    </item>
+    
+  </channel>
+</rss>

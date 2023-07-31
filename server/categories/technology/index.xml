@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Technology on Intelops</title>
+    <link>https://intelops.ai/categories/technology/</link>
+    <description>Recent content in Technology on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Wed, 19 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Next.js 101 - Introduction and Tutorial</title>
+      <link>https://intelops.ai/blog/how-to-create-a-frontend-website-using-nextjs/</link>
+      <pubDate>Wed, 19 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/how-to-create-a-frontend-website-using-nextjs/</guid>
+      <description>Next.js is a React framework maninly used to create web applications and by framework I mean it takes care of the tooling and the configurations that are required for React.</description>
+    </item>
+    
+    <item>
+      <title>Failed Pixie Deployment On Civo Kubernetes cloud? Here&#39;s How To Fix It</title>
+      <link>https://intelops.ai/blog/failed-pixie-deployment-on-civo-kubernetes/</link>
+      <pubDate>Fri, 18 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/failed-pixie-deployment-on-civo-kubernetes/</guid>
+      <description>Pixie is a great platform for monitoring telemetry data from your Kubernetes cluster.</description>
+    </item>
+    
+  </channel>
+</rss>

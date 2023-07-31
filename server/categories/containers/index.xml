@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Containers on Intelops</title>
+    <link>https://intelops.ai/categories/containers/</link>
+    <description>Recent content in Containers on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Fri, 14 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/categories/containers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Is Alpine Linux Docker Image for you?</title>
+      <link>https://intelops.ai/blog/how_beneficial_alpine_linux_docker_image_really_is/</link>
+      <pubDate>Fri, 14 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/how_beneficial_alpine_linux_docker_image_really_is/</guid>
+      <description>Alpine is a minimal Docker image based on Alpine linux distribution and is only 5 MB in size.</description>
+    </item>
+    
+  </channel>
+</rss>

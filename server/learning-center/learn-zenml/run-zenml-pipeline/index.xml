@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Run ZenML Pipeline on Intelops</title>
+    <link>https://intelops.ai/learning-center/learn-zenml/run-zenml-pipeline/</link>
+    <description>Recent content in Run ZenML Pipeline on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Mon, 20 Feb 2023 15:58:23 -0600</lastBuildDate><atom:link href="https://intelops.ai/learning-center/learn-zenml/run-zenml-pipeline/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

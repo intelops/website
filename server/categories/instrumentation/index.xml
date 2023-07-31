@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instrumentation on Intelops</title>
+    <link>https://intelops.ai/categories/instrumentation/</link>
+    <description>Recent content in Instrumentation on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Sat, 22 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/categories/instrumentation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Opentelemetry and Signoz</title>
+      <link>https://intelops.ai/blog/how-to-instrument-nextjs-frontend-application-using-opentelemetry-and-signoz/</link>
+      <pubDate>Sat, 22 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/how-to-instrument-nextjs-frontend-application-using-opentelemetry-and-signoz/</guid>
+      <description>openTelemetry is a open-source project which was hosted by CNCF.</description>
+    </item>
+    
+  </channel>
+</rss>

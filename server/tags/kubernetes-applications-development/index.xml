@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kubernetes Applications Development on Intelops</title>
+    <link>https://intelops.ai/tags/kubernetes-applications-development/</link>
+    <description>Recent content in Kubernetes Applications Development on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Tue, 11 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/tags/kubernetes-applications-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>gRPC Interceptors using go</title>
+      <link>https://intelops.ai/blog/grpc-interceptors-using-go/</link>
+      <pubDate>Tue, 11 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/grpc-interceptors-using-go/</guid>
+      <description>gRPC is an open-source, high-performance framework for developing remote procedure call (RPC) applications.</description>
+    </item>
+    
+    <item>
+      <title>Using Custom Resources (CRs) as Persistence Layer for applications in Kubernetes</title>
+      <link>https://intelops.ai/blog/use-crds-as-persistence-layer-for-applications/</link>
+      <pubDate>Fri, 31 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/use-crds-as-persistence-layer-for-applications/</guid>
+      <description>We have been working on an open source project which runs on K8s cluster.</description>
+    </item>
+    
+  </channel>
+</rss>

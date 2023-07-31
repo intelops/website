@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dev-Tools on Intelops</title>
+    <link>https://intelops.ai/categories/dev-tools/</link>
+    <description>Recent content in Dev-Tools on Intelops</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright @ IntelOps, Inc.</copyright>
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://intelops.ai/categories/dev-tools/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Markdown to Make Life Easy</title>
+      <link>https://intelops.ai/blog/markdown-to-make-life-easy/</link>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/markdown-to-make-life-easy/</guid>
+      <description>Markdown is an open-source markup language designed to convert plain text to HTML.</description>
+    </item>
+    
+    <item>
+      <title>Hacking YAML to your Benefit</title>
+      <link>https://intelops.ai/blog/hacking-yaml-to-your-benefit/</link>
+      <pubDate>Tue, 15 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://intelops.ai/blog/hacking-yaml-to-your-benefit/</guid>
+      <description>YAML(yam-ul) is a Data Serialization language used to capture your data in a key-value pair format, making it easy to read and understand.</description>
+    </item>
+    
+  </channel>
+</rss>
