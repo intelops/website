@@ -742,6 +742,11 @@ form label {
   *:not(li) {
     margin-bottom: 28px;
   }
+  .zenuml {
+    *:not(li) {
+      margin-bottom: initial;
+    }
+  }
   h2,
   h3,
   h4,

@@ -40,7 +40,7 @@
     135deg,
     lighten($color-primary, 10) 0%,
     darken($color-primary, 5) 100%
-  );
+  ) !important;
   color: $white;
   border: 0;
 
@@ -84,7 +84,7 @@
     160deg,
     lighten($white, 10) 0%,
     darken($white, 5) 100%
-  );
+  ) !important;
   color: $dark;
   border: 0;
 
