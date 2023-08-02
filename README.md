@@ -28,6 +28,10 @@ This is the repo to manage all the website work, which is being developed using 
 > How to change bg color, text, etc for call-to-action and footer area
 > https://github.com/intelops/website/issues/99#issuecomment-1529354004 
 > https://github.com/intelops/website/pull/139 
+> 
+> 
+> change texts color in banner areas from markdown itself - https://github.com/intelops/website/issues/140 
+> 
 
 > How to change content areas Text, Colors, BG color, etc.
 > https://github.com/intelops/website/issues/107 
