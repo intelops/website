@@ -4,7 +4,7 @@ title: "DevOps"
 date: 2023-07-10
 weight: 1
 # description
-description: "Step by step guide on how to sign Git commits with a valid OpenID Connect identity"
+description: "Step GOy step guide on how to sign Git commits with a valid OpenID Connect identity"
 category: "Role based Mindmaps"
 ---
 
@@ -96,15 +96,33 @@ C4Deployment
 ```mermaid
 zenuml
   title Reply message
-  Client->A.method() {
-    B.method() {
+  Python->A.method() {
+    GO.method() {
       if(condition) {
-        return x1
+        return Python
         // return early
         @return
-        A->Client: x11
+        A->Python: x11
       }
     }
-    return x2
+    return go
+  }
+```
+
+```mermaid
+zenuml
+  BookLibService.Borrow(id) {
+    User = Python.GetUser()
+    if(User.isActive) {
+      try {
+        BookRepository.Update(id, onLoan, User)
+        receipt = new Receipt(id, dueDate)
+      } catch (BookNotFoundException) {
+        ErrorService.onException(BookNotFoundException)
+      } finally {
+        Connection.close()
+      }
+    }
+    return receipt
   }
 ```
