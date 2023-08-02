@@ -1847,9 +1847,15 @@ footer {
     pointer-events: none;
   }
 }
-[data-roadmap] {
+.clickable {
   cursor: pointer;
   user-select: none;
+}
+[data-mindmap] {
+  * {
+    @extend .clickable;
+  }
+  @extend .clickable;
   [class^="node-line"],
   .node-bkg {
     transition: .3s;
