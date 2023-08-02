@@ -59,9 +59,9 @@ style="background-image: url({{$img.RelPermalink}});
 
         {{ else }}
 
-          <p class="content-loader text-center">loading..</p>
+          {{ if .Page.Store.Get "hasMermaid" }}<p class="content-loader text-center">loading..</p>{{end}}
 
-          <div class="content content-hidden">
+          <div class="content {{ if .Page.Store.Get `hasMermaid` }}content-hidden{{end}}">
             {{ with site.GetPage "mindmaps" }}
             {{ with .Params.all_mindmaps_button }}
             <a href="{{.link | relLangURL}}" class="border rounded py-1 pe-2 ps-1 d-inline-flex align-item-center line-height-0">
