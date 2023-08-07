@@ -78,10 +78,15 @@
 {{ else }}
 
 <!-- image processing -->
-{{ $options:= add (add (add (add (string ($width)) "x") (string ($height))) " webp ") (string $option) }}
+{{ $options := "" }}
+{{ if or $height $width }}
+{{ $options = add (add (add (add (string ($width)) "x") (string ($height))) " webp ") (string $option) }}
+{{ else }}
+{{ $options = add (add (add (add (string ($width)) "x") (string ($height))) " webp ") (string $option) }}
+{{ end }}
 
 {{ if eq $webp "false" }} <!-- if webp false -->
-{{ $options = add (add (add (add (string ($width)) "x") (string ($height))) " ") (string $option) }}
+{{ $options = add (add (add (add (string ($imageWidth)) "x") (string ($imageHeight))) " ") (string $option) }}
 {{ end }} <!-- end -->
 
 <!-- image Fit -->

@@ -1,124 +1,172 @@
 ---
 banner:
-  subtitle: Intelops.Ai
-  title: Coming Soon
-  description: |
-       Website is under active development
-
-       Our products are in Stealth mode development
-       
-       Building the Next Gen Tech For Cloud-Native
-
-       Ai-based framework to democratize Cloud Native Technology
+  subtitle: 
+  subtitle_color: ""
+  title: Be Future-Ready With our SaaS 2.0
+  title_color: ""
+  description:
+    Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
+    Ai-based / Self-Service platform to democratize Cloud Native. <br><br>
+    Website is under active development. Still, checkout the content we have!<br>
+    Our products are currently in Stealth mode.
+    
+          
+  description_color: ""
   button:
-    enable: true
-    label: Get started now
+    enable: false
+    label: Contact Us
     icon: fas fa-arrow-right
     link: contact/
   video_button:
     enable: false
     label: Watch demo
-    video_url: https://www.youtube.com/embed/dyZcRRWiuuw
-  image: ""
+    video_url: 
+
+  join_waitlist:
+    enable: true
+    button_label: "Join Waitlist"
+    clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
+
+  # If lottie is enable image will not show as static image. Automatically lottie animation will load.
+  image:
+    enable: true
+    src: "images/banner/homepage/homepage-banner.svg"
+    background: "#4B4B4C" # original used color code - 4B4B4C or use 121826 or 454545 or 4f4b49
+    padding: "60px 0"
+
+  # If lottie is disabled then static image will show in that place automatically. 
+  lottie: 
+    enable: true
+    json: "lottie/homepage_concept.json"
+    background: "#4B4B4C"
+    speed: "1"
+    loop: "true"
+    autoplay: "true"
+
+
 brands:
-  enable: false
-  title: 150M+ users trusted Delta worldwide
+  enable: true
+  title: Next-Gen Cloud-Native Tech <br> for Fast Growing Brands & Enterprises. <br> Be the Captain.
+  title_color: ""
   images:
-  - images/clients/01.png
-  - images/clients/02.png
-  - images/clients/03.png
-  - images/clients/04.png
-  - images/clients/05.png
+  # - images/clients/01.png
+  # - images/clients/02.png
+  # - images/clients/03.png
+  # - images/clients/04.png
+  # - images/clients/05.png
+
 features:
-  enable: false
+  enable: true
   section: features
-fun_facts:
-  enable: false
-  title: fun facts about okta Millions <br> trusted use worldwide
-  fact_item:
-  - icon: fas fa-fighter-jet
-    counter: "80"
-    counter_suffix: "%"
-    content: Spend 80% less time <br> on admin
-  - icon: far fa-dot-circle
-    counter: "40"
-    counter_suffix: x
-    content: Attract 40x more <br> the candidate
-  - icon: fas fa-dice
-    counter: "83"
-    counter_suffix: "%"
-    content: Reduce recruitment <br> agency spend
-  - icon: fas fa-dice-d6
-    counter: "40"
-    counter_suffix: "%"
-    content: Make hires 40% <br> faster
-work_process:
+
+platforms:
+  enable: true
+  #title: "How capten stack works? <br/> Check our Platform pages."
+  title_color: ""
+  #image: "images/footer/compage/compage.svg"
+  button:
+    enable: false
+    label: "Platform"
+    icon: "fas fa-arrow-right"
+    #link: "/capten"
+    link: ""
+
+    
+how_it_works:
   enable: false
   section: how-it-works
+
 image_and_content_block:
   enable: false
-  subtitle: We Are Delta
-  title: Lots of people love us, <br> and we're also.
-  image: images/block-image-01.png
+  subtitle: We Are IntelOps
+  subtitle_color: ""
+  #title: Lots of people love us, <br> and we're also.
+  title: This section is coming soon
+  title_color: ""
+  image: images/content/compage/what-is-compage.svg
   content_position: left
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-    amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
-    Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
-    ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
+  #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+   # amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
+   # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
+   # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
+  content_color: ""
+  
 slider_and_content_block:
   enable: false
-  subtitle: We Are Delta
-  title: Let your lead reach <br> out to sales people
+  subtitle: We Are Intelops
+  subtitle_color: ""
+  title: This section is coming soon
+  title_color: ""
   slider:
-  - images/block-image-02.png
-  - images/block-image-02.png
+  - images/content/compage/what-is-compage.svg
+  - images/content/compage/what-is-compage.svg
   content_position: right
-  content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-    cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-    amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
-    Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
-    amet dui. Nulla quis lorem ut libero malesuada feugiat. "
+  #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
+   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+   # amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
+   # Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
+   # amet dui. Nulla quis lorem ut libero malesuada feugiat. "
+  content_color: ""
+
+
 testimonials:
   enable: false
-  subtitle: People Say's
-  title: about Three million users <br> Testimonial Together
-  image: images/testimonials-group.png
+  subtitle: People Love Us
+  subtitle_color: ""
+  #title: about Three million users <br> Testimonial Together
+  title_color: ""
+  image: images/content/compage/what-is-compage.svg
   reviews:
-  - name: Erica Carlina
-    designation: CEO & Founder, Ammarait
+  - name: Name1
+    name_color: ""
+    designation: CEO & Founder, XYZ
+    designation_color: ""
     rating: "5.0"
-    content: Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti
-      cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium
-      distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati
-      molestias laudantium corporis doloremque qui, voluptate minus?
-  - name: Justin Rubela
-    designation: Founder, Justin Inc.
+    content: Text area
+    content_color: ""
+  - name: Name2
+    name_color: ""
+    designation: Founder, XYZ Inc.
+    designation_color: ""
     rating: "4.5"
-    content: Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio
-      quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum
-      suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias
-      laudantium corporis doloremque qui, voluptate minus?
-  - name: William Broke
-    designation: Developer, Ammarait
-    rating: "4.2"
-    content: Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis
-      explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident
-      qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium
-      corporis doloremque qui, voluptate minus?
+    content: TEXT AREA
+    content_color: ""
+  - name: Name3
+    name_color: ""
+    designation: Developer, XYZ
+    designation_color: ""
+    #rating: "4.2"
+    content: Text Area
+    content_color: ""
+
+
 blog:
-  enable: false
+  enable: true
   subtitle: Recent Articles
-  title: Recent Posts to serve better
-  description: Vestibulum ante ipsum primis in faucibus  luctus et ultrices posuere
-    <br> cubilia Curae; Donec velit neque, auctor sit amet aliquamvel, ullamsw rfgws
-    ercor
+  subtitle_color: ""
+  title: "Inside the Lab: Innovation in the Making"
+  title_color: "black"
+  description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
+  description_color: ""
   button:
     enable: true
     link: blog/
     label: Read All Blogs
     icon: fas fa-arrow-right
-call_to_action:
-  enable: false
 
+
+call_to_action:
+  enable: true
+  title: ""
+  subtitle: ""
+  image: ""
+  button_label: ""
+  button_link: ""
+
+footer:
+  footer_light: false
+  # bg_color: "#1e384c"
+  # bg_image: "images/bg-banner-page.jpg"
+  # bg_image_overlay_color: "rgba(0,0,0,.65)"
 ---

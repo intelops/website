@@ -1,9 +1,10 @@
 [build]
   publish = "public"
-  command = "hugo --minify --gc"
+  command = "hugo --gc"
   
 [build.environment]
-  HUGO_VERSION = "0.85.0"
+  HUGO_VERSION = "0.115.1"
+  GO_VERSION = "1.20"
   HUGO_BASEURL = "/"
 
 [[headers]]

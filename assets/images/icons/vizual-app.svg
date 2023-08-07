@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="400" height="400" viewBox="0 0 400 400">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.337" y1="0.302" x2="0.821" y2="0.785" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fdb52a"/>
+      <stop offset="1" stop-color="#f88136"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.231" y1="0.612" x2="0.977" y2="0.372" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.297" y1="0.639" x2="1" y2="0.341" xlink:href="#linear-gradient"/>
+    <clipPath id="clip-path">
+      <path id="Path_176" data-name="Path 176" d="M114.851,0A55.642,55.642,0,0,1,59.407,55.348a55.226,55.226,0,0,1-27.631-7.414L0,103.2a55.4,55.4,0,0,1,27.989,48.166A55.415,55.415,0,0,1,0,199.539l16.35,28.448Q35.192,208.8,55.819,191.469A99.17,99.17,0,0,1,226.135,92.24q25.187-9.388,51.165-16.391l-16.033-27.9a55.255,55.255,0,0,1-27.519,7.4A55.642,55.642,0,0,1,178.3,0Z" fill="url(#linear-gradient)"/>
+    </clipPath>
+  </defs>
+  <g id="Group_493" data-name="Group 493" transform="translate(-91 -374)">
+    <path id="Polygon_14" data-name="Polygon 14" d="M252.826,0a72.46,72.46,0,0,1,51.227,21.218l74.724,74.724A72.464,72.464,0,0,1,400,147.174V252.826a72.464,72.464,0,0,1-21.225,51.242l-74.717,74.709A72.464,72.464,0,0,1,252.826,400H147.174a72.459,72.459,0,0,1-51.227-21.218L21.223,304.058A72.464,72.464,0,0,1,0,252.826V147.174A72.46,72.46,0,0,1,21.218,95.947L95.942,21.223A72.464,72.464,0,0,1,147.174,0Z" transform="translate(91 374)" fill="#4b4b4c"/>
+    <g id="Group_491" data-name="Group 491" transform="translate(34.65 33.667)">
+      <circle id="Ellipse_30" data-name="Ellipse 30" cx="87.6" cy="87.6" r="87.6" transform="translate(176.901 481.775)" fill="url(#linear-gradient-2)"/>
+      <path id="Path_87" data-name="Path 87" d="M353.894,239.249c0,34.928-20.583,63.242-45.974,63.242s-45.974-28.314-45.974-63.242,20.583-63.242,45.974-63.242,45.974,28.314,45.974,63.242" transform="translate(-14.856 333.399)" fill="#fff"/>
+      <ellipse id="Ellipse_29" data-name="Ellipse 29" cx="15.104" cy="21.145" rx="15.104" ry="21.145" transform="translate(291.688 564.628)" fill="url(#linear-gradient-3)"/>
+      <g id="Group_490" data-name="Group 490" transform="translate(117.35 417.333)">
+        <g id="Group_490-2" data-name="Group 490" transform="translate(0 0)" clip-path="url(#clip-path)">
+          <rect id="Rectangle_282" data-name="Rectangle 282" width="336.093" height="354.143" transform="matrix(0.5, -0.866, 0.866, 0.5, -98.722, 170.991)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

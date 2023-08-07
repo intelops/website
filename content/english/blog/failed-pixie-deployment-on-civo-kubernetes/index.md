@@ -1,11 +1,38 @@
 ---
-date: 2022-10-27
-title: Failed Pixie Deployment On Civo Kubernetes? Here's How To Fix It
-image: images/blog/failed-pixie-deployment-on-civo-kubernetes/failed-pixie-deployment-unsplash.jpg
+date: 2022-11-18
+title: Failed Pixie Deployment On Civo Kubernetes cloud? Here's How To Fix It
+card_title_color: ""
+description: Pixie Observability tool's deployment failure on CIVO cloud.
+card_description_color: ""
+image: images/blog/failed-pixie-deployment-on-civo-kubernetes/failed.png
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: hannan-khan
+author_color: ""
+series: DevSecOps Series
 categories:
 - Technology
+- Cloud Native
+- Kubernetes
+- Observability
+- Monitoring
+
+tags:
+- Observability
+- Monitoring
+- DevSecOps
+
+# image color code in undraw.co #FB7E44 
+feedback: false
+draft: false
 ---
+
+{{< image src="images/blog/failed-pixie-deployment-on-civo-kubernetes/failed.png" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+
 
 Pixie is a great platform for monitoring telemetry data from your Kubernetes cluster.
 It provides both UI dashboards and a command-line interface. However, when trying to deploy Pixie on your Civo Kubernetes cluster,

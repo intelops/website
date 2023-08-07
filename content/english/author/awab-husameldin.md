@@ -11,6 +11,8 @@ social:
   - icon : "fab fa-twitter"
     name: "twitter"
     link : "#!"
+    
+ignoreSearch: true
 ---
 
 Hic dolor cumque quod quas pariatur modi rerum qui consequatur, iusto inventore necessitatibus. Facilis quisquam magni, autem deleniti nobis repellat excepturi id.

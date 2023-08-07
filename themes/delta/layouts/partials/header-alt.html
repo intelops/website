@@ -1,0 +1,282 @@
+<!-- navigation -->
+<header class="navigation light-bar navigation-bottom">
+  <div class="container container-delta">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-md navbar-light" id="main-navbar">
+      <!-- navbar brand/logo -->
+      <a class="navbar-brand d-none py-0" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
+        {{ partial "logo.html" }}
+      </a>
+
+      <span class="navbar-brand" style="line-height:0;" title="{{.Params.navigation.logo_text}}">
+        {{ $logoPath:= .Params.navigation.logo }}
+        {{ $logoWebp:= false }}
+        {{ $logoDarkPath:= .Params.navigation.logo_dark }}
+        {{ $logoText:= .Params.navigation.logo_text }}
+        {{ $logoWidth:= add (replace site.Params.logo_width "px" "") "x" }}
+        {{ $logoDefaultWidth:= site.Params.logo_width }}
+        {{ $logoDefaultHeight:= "" }}
+        {{ $context:= . }}
+        {{ $assetImage:= false }}
+        {{ $scratch := newScratch }}
+
+
+        <!-- check asset image -->
+        {{ if fileExists (add `assets/` (string $logoPath)) }}
+          {{ $assetImage = true }}
+        {{ end }}
+        <!-- /check asset image -->
+
+        <!-- image static/CDN -->
+        {{ if or (hasPrefix $logoPath "http") (fileExists (add `static/` (string $logoPath))) }}
+          <img
+            loading="lazy"
+            decoding="async"
+            src="{{ $logoPath | absURL }}"
+            alt="{{ $logoText }}"
+            class="ghtm-img ghtm-logo-light"
+            height="{{ $logoDefaultHeight }}"
+            width="{{ $logoDefaultWidth }}" />
+          <img
+            loading="lazy"
+            decoding="async"
+            src="{{ $logoDarkPath | absURL }}"
+            alt="{{ $logoText }}"
+            class="ghtm-img ghtm-logo-dark"
+            height="{{ $logoDefaultHeight }}"
+            width="{{ $logoDefaultWidth }}" />
+        {{ else }}
+          <!-- /image cdn -->
+
+          <!-- checking logo path -->
+          {{ if $assetImage }}
+            {{ $logoPath = resources.Get $logoPath }}
+
+
+            <!-- checking logo existance -->
+            {{ if fileExists (add `assets/` (string $logoPath)) }}
+              {{ $logo:= resources.Get $logoPath }}
+
+
+              <!-- logo extention -->
+              {{ $logoExt := path.Ext $logo }}
+
+
+              <!-- logo height, width (if not svg) -->
+              {{ if ne $logoExt `.svg` }}
+                {{ $logoDefaultWidth = $logo.Width }}
+                {{ $logoDefaultHeight = $logo.Height }}
+              {{ end }}
+
+
+              <!-- checking gif/svg -->
+              {{ if or (eq $logoExt ".gif") (eq $logoExt ".svg") }}
+                {{ $scratch.Set "logo" $logo.RelPermalink }}
+                <!-- logo processing to webp -->
+              {{ else }}
+                {{ $logoDefaultWidth:= add (string $logoDefaultWidth) "x" }}
+                {{ $logoWidth:= $logoWidth | default $logoDefaultWidth }}
+                {{ $logoWidth2x:= replace $logoWidth `x` `` }}
+                {{ $logoWidth2x = add (string (mul (int $logoWidth2x) 2)) `x` }}
+                {{ $options := add (string $logoWidth2x) " webp" }}
+                {{ if not $logoWebp }}
+                  <!-- if webp false -->
+                  {{ $options = add (string $logoWidth2x) " " }}
+                {{ end }}
+                <!-- end -->
+                {{ $scratch.Set "logo" ($logo.Resize $options).RelPermalink }}
+                <!-- logo fallback -->
+                {{ $scratch.Set "logo_fallback" ($logo.Resize $logoWidth).RelPermalink }}
+              {{ end }}
+              <!-- /checking gif/svg -->
+            {{ else }}
+              {{ warnf "%q not found" $logoPath }}
+              {{ $logoPath = false }}
+            {{ end }}
+            <!-- / checking logo existance -->
+          {{ end }}
+
+
+          <!-- / checking logo path -->
+
+          <!-- ########### Dark logo code ################ -->
+          {{ if $logoDarkPath }}
+            <!-- checking logo existance -->
+            {{ if fileExists (add `assets/` (string $logoDarkPath)) }}
+              {{ $logoDark:= resources.Get $logoDarkPath }}
+
+
+              <!-- logo extention -->
+              {{ $logoDarkExt := path.Ext $logoDark }}
+
+
+              <!-- checking gif/svg -->
+              {{ if or (eq $logoDarkExt ".gif") (eq $logoDarkExt ".svg") }}
+                {{ $scratch.Set "logo_dark" $logoDark.RelPermalink }}
+                <!-- logo processing to webp -->
+              {{ else }}
+                {{ $logoDefaultWidth:= add (string $logoDefaultWidth) "x" }}
+                {{ $logoDarkWidth:= $logoWidth | default $logoDefaultWidth }}
+                {{ $options := add (string $logoDarkWidth) " webp" }}
+                {{ if not $logoWebp }}
+                  <!-- if webp false -->
+                  {{ $options = add (string $logoDarkWidth) " " }}
+                {{ end }}
+                <!-- end -->
+
+                {{ $scratch.Set "logo_dark" ($logoDark.Resize $options).RelPermalink }}
+                <!-- logo fallback -->
+                {{ $scratch.Set "logo_dark_fallback" ($logoDark.Resize $logoDarkWidth).RelPermalink }}
+              {{ end }}
+              <!-- /checking gif/svg -->
+            {{ else }}
+              {{ warnf "%q not found" $logoDarkPath }}
+              {{ $logoDarkPath = false }}
+            {{ end }}
+            <!-- / checking logo existance -->
+          {{ end }}
+
+
+          <!-- / checking logo path -->
+
+          <!-- ########### /Dark logo code ################ -->
+
+          {{ if $logoDarkPath }}
+            <img
+              loading="preload"
+              decoding="async"
+              class="ghtm-img ghtm-logo-light"
+              width="{{ replace $logoWidth `x` `` | default $logoDefaultWidth }}"
+              height="{{ $logoDefaultHeight }}"
+              src="{{ $scratch.Get `logo` }}"
+              alt="{{ $logoText }}"
+              onerror="this.onerror=null;this.src='{{ $scratch.Get `logo_fallback` }}'" />
+
+            <img
+              loading="preload"
+              decoding="async"
+              class="ghtm-img ghtm-logo-dark"
+              width="{{ replace $logoWidth `x` `` | default $logoDefaultWidth }}"
+              height="{{ $logoDefaultHeight }}"
+              src="{{ $scratch.Get `logo_dark` }}"
+              alt="{{ $logoText }}"
+              onerror="this.onerror=null;this.src='{{ $scratch.Get `logo_dark_fallback` }}'" />
+          {{ else if $logoPath }}
+            <img
+              loading="preload"
+              decoding="async"
+              class="ghtm-logo"
+              width="{{ replace $logoWidth `x` `` | default $logoDefaultWidth }}"
+              height="{{ $logoDefaultHeight }}"
+              src="{{ $scratch.Get `logo` }}"
+              alt="{{ $logoText }}"
+              onerror="this.onerror=null;this.src='{{ $scratch.Get `logo_fallback` }}'" />
+
+            <!-- logo text -->
+          {{ else if .Params.navigation.logo_text }}
+            {{ .Params.navigation.logo_text | markdownify }}
+            <!-- logo title -->
+          {{ else }}
+            <strong>`{{ $logoPath }}` doesn't exist</strong>
+          {{ end }}
+          <!-- / checking logo path -->
+        {{ end }}
+      </span>
+      <span class="{{if not .Params.navigation.logo_text_color}}text-white{{end}}me-auto fw-bold" {{with .Params.navigation.logo_text_color}}style="color:{{.}}"{{end}}>{{$logoText}}</span>
+
+      <div class="navbar-actions d-inline-flex align-items-center">
+        <!-- Language List -->
+        {{ if .IsTranslated }}
+        <select class="border-0 d-inline d-xl-none" onchange="location = this.value;">
+          {{ $siteLanguages := site.Languages}}
+          {{ $pageLang := .Page.Lang}}
+          {{ range .Page.AllTranslations }}
+          {{ $translation := .}}
+          {{ range $siteLanguages }}
+          {{ if eq $translation.Lang .Lang }}
+          {{ $selected := false }}
+          {{ if eq $pageLang .Lang}}
+          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
+          </option>
+          {{ else }}
+          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
+          {{ end }}
+          {{ end }}
+          {{ end }}
+          {{ end }}
+        </select>
+        {{ end }}
+
+        <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navigation-alt">
+          <i class="d-inline fas fa-bars"></i>
+          <i class="d-none far fa-times-circle"></i>
+        </button>
+      </div>
+      {{ $section := .Section | urlize}}
+
+      <div class="collapse navbar-collapse text-center" id="navigation-alt">
+        <ul class="navbar-nav mx-auto align-items-center pt-0">
+
+          {{ range .Params.navigation.menu }}
+          <li class="nav-item">
+            {{ if eq .type "modal" }}
+            <button class="nav-link nav-menu-text small p-0 border-0 bg-transparent" type="button" data-bs-toggle="modal" data-bs-target="{{.url}}">
+              {{.name}}
+            </button>
+            {{ else }}
+            <a class="nav-link nav-menu-text small" id="nav-menu" {{if findRE `^http` .url}}target="_blank" rel="noopener" {{end}}
+              href="{{if findRE `^#` .url}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.url}}{{else if eq .url (`/` | relURL) }}{{.url}}{{else}}{{.url | relLangURL}}{{end}}">{{ .name }}</a>
+            {{ end }}
+          </li>
+          {{ end }}
+
+          <li class="nav-item d-none d-xl-block">
+            <!-- Language List -->
+            {{ if .IsTranslated }}
+            <select class="border-0" id="select-language" onchange="location = this.value;">
+              {{ $siteLanguages := site.Languages}}
+              {{ $pageLang := .Page.Lang}}
+              {{ range .Page.AllTranslations }}
+              {{ $translation := .}}
+              {{ range $siteLanguages }}
+              {{ if eq $translation.Lang .Lang }}
+              {{ $selected := false }}
+              {{ if eq $pageLang .Lang}}
+              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
+              </option>
+              {{ else }}
+              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
+              {{ end }}
+              {{ end }}
+              {{ end }}
+              {{ end }}
+            </select>
+            {{ end }}
+          </li>
+        </ul>
+
+        <div class="navbar-right header-button" id="main-button">
+          {{ with .Params.navigation.navigation_button }}
+          {{ if .enable }}
+          <!-- login btn -->
+          <a href="{{ .link | relLangURL }}" class="btn btn-sm btn-link px-0 me-2">
+            {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
+          </a>
+          {{ end }}
+          {{ end }}
+
+          {{ with .Params.navigation.navigation_button_two }}
+          {{ if .enable }}
+          <!-- signup btn -->
+          <a href="{{ .link | relLangURL }}" class="btn btn-sm btn-primary">
+            {{ .label }} {{with .icon}}<i class="icon {{.}}"></i>{{end}}
+          </a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->

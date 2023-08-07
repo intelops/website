@@ -13,6 +13,9 @@
 - id: related_posts
   translation: Related posts
 
+- id: related_case_studies
+  translation: Related Case Studies
+
 - id: min_read
   translation: Min Read
 

@@ -16,10 +16,7 @@
             </div>
             {{with site.Params.call_to_action.image}}
             <div class="col-lg-4">
-              {{$img:= resources.Get . }}
-              {{$img:= $img.Resize "425x"}}
-              {{$imgWebp:= $img.Resize "425x webp"}}
-              <img loading="lazy" decoding="async" class="rounded-lg img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="cta Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+              {{ partial "image.html" (dict "Src" . "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
             </div>
             {{end}}
           </div>

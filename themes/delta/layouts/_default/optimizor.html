@@ -2,7 +2,7 @@
 
 {{ partial "page-header.html" . }}
 
-{{ partial "platform-header.html" . }}
+{{ partial "header.html" . }}
 
 <section class="banner bg-primary-soft wave-block overflow-hidden">
 
@@ -11,9 +11,9 @@
     <div class="row align-items-center text-center text-lg-start">
       <div class="col-lg-6">
         <div class="pe-0 pe-lg-5">
-          <p class="subtitle">{{.subtitle | markdownify}}</p>
-          <h1 class="title text-xl mb-3 banner-title">{{.title | markdownify}}</h1>
-          <p class="mb-4">{{.description | markdownify}}</p>
+          <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
+          <h1 class="title text-xl mb-3 banner-title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h1>
+          <p class="mb-4" {{with .description_color}}style="color:{{.}} !important"{{end}}>{{.description | markdownify}}</p>
 
           {{with .button}}
           {{if .enable}}
@@ -26,10 +26,7 @@
       </div>
       <div class="col-lg-6 mt-5 mt-lg-0 text-center">
         {{with .image}}
-        {{$img:= resources.Get . }}
-        {{$img:= $img.Resize "640x"}}
-        {{$imgWebp:= $img.Resize "640x webp"}}
-        <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+        {{ partial "image.html" (dict "Src" . "Size" "640x" "Webp" false ) }}
         {{end}}
       </div>
     </div>
@@ -47,70 +44,12 @@
   </div>
 </section>
 
-{{with .Params.work_process}}
-<section class="section pb-0">
-  <div class="container container-delta">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
-        <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
-        </div>
-      </div>
-      <div class="col-lg-12">
-        <div class="row gy-4">
-          {{ $.Scratch.Set "counter" 0 }}
-          {{range .process_item}}
-          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-          <div class="col-lg-3 col-sm-6 process-item">
-            {{$n := $.Scratch.Get "counter"}}
-            <div class="block pt-4" data-count="{{if (le $n 9)}}0{{$n}}{{ else }}{{$n}}{{ end }}">
-              {{with .image}}
-              <div class="process-image">
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "350x"}}
-                {{$imgWebp:= $img.Resize "350x webp"}}
-                <img loading="lazy" decoding="async" class="w-100" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Banner Image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-              </div>
-              {{end}}
-              <h3 class="title h4">{{.title | markdownify}}</h3>
-              <p class="mb-0">{{.content | markdownify}}</p>
-            </div>
-          </div>
-          {{end}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{{end}}
+{{ partial "work-process.html" . }}
 
 {{with site.GetPage "home-2" }}
 {{with .Params.image_and_content_block}}
 {{if .enable}}
-<section class="section pb-0">
-  <div class="container container-delta">
-    <div class="row gx-4 gx-xl-5 align-items-center">
-      <div class="col-lg-6 order-1 {{with .content_position}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
-        <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
-        </div>
-        {{with .content}}<div class="content">{{. | markdownify}}</div>{{end}}
-      </div>
-      <div class="col-lg-6 order-0 mb-5 mb-lg-0 {{with .content_position}}{{if eq . `right`}}order-lg-0{{else if eq . `left`}}order-lg-1{{else}}order-lg-1{{end}}{{end}}">
-        <div class="bg-secondary-soft py-3 py-md-6 px-2 px-md-4 rounded-md">
-          {{with .image}}
-          {{$img:= resources.Get . }}
-          {{$img:= $img.Resize "570x"}}
-          {{$imgWebp:= $img.Resize "570x webp"}}
-          <img loading="lazy" decoding="async" class="img-fluid px-0 px-md-3 py-6" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-          {{end}}
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "pb-0" "ContainerClass" "container-delta" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image )}}
 {{end}}
 {{end}}
 
@@ -133,10 +72,7 @@
               {{with .slider}}
               <div class="swiper-wrapper">
                 {{range .}}
-                {{$img:= resources.Get . }}
-                {{$img:= $img.Resize "600x"}}
-                {{$imgWebp:= $img.Resize "600x webp"}}
-                <img loading="lazy" decoding="async" class="swiper-slide img-fluid px-2" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+                {{ partial "image.html" (dict "Src" . "Size" "600x" "Webp" false "Class" "swiper-slide img-fluid px-2" ) }}
                 {{end}}
               </div>
               <div class="swiper-pagination"></div>

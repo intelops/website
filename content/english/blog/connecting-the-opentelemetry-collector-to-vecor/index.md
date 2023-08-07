@@ -1,16 +1,29 @@
 ---
 date: 2022-11-17
 title: Connecting The OpenTelemetry Collector To Vector
-image: images/blog/blog1.png
+description: Series on how to transfer OpenTelemetry data to your desired Target using Vector.
+image: images/blog/connecting-the-opentelemetry-collector-to-vecor/collecting.png
+
+cover_image: false
+cover_image_src: 
+cover_image_height: ""
+cover_image_width: ""
+
 author: hannan-khan
-series: DevOps Series
+series: DevSecOps Series
 categories:
-- DevOps
+- DevSecOps
+- Cloud Native
+- Kubernetes
+- Observability
+- Monitoring
 
 # image color code in undraw.co #FB7E44 
 feedback: false
-draft: true
+draft: false
 ---
+
+{{< image src="images/blog/connecting-the-opentelemetry-collector-to-vecor/collecting.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 OpenTelmetry provides amazing, standardized tools for collecting observability information about your cluster, one of which is a
 Collector which can receive/process/export data. Vector, on the other hand, is also a very powerful tool for collecting, transforming,
@@ -23,7 +36,7 @@ We will be using `helm`	to deploy our services to our cluster. This will allow f
 allow for being able to configure our services via one single YAML file each.
 > Need to refresh your knowledge on YAML? Take a look at our blog [Hacking YAML to your Benefit](http://intelops.ai/blog/hacking-yaml-to-your-benefit/)
 
-#[open-telemetry collector](https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Otel_Collector.svg "The Collector's receivers and exporters")
+# [open-telemetry collector](https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Otel_Collector.svg "The Collector's receivers and exporters")
 
 The OpenTelemetry Collector (OTel Collector) allows multiple sources including OTLP formatted data, Jaeger, and Prometheus. The data we will be passing into
 our OTel Collector will be Pixie data. If you would like a tutorial on how to deploy Pixie on your cluster, take a look at [this blog](http://intelops.ai/blog/failed-pixie-deployment-on-civo-kubernetes/).  

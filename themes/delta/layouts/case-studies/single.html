@@ -1,0 +1,101 @@
+{{ define "main-sm" }}
+
+{{ partial "header.html" . }}
+
+<!-- strat of case-studies-details -->
+<section class="section-sm">
+  <div class="container container-delta">
+    <div class="row justify-content-center">
+      <div class="col-lg-4 blog-sidebar">
+        <div class="block pe-0 pe-lg-2">
+          {{ $series := .Params.series }}
+          <p class="h4 fw-light text-dark ps-3">{{$series}}</p>
+          {{ .TableOfContents }}
+
+          {{ $seriesPosts := (where (where site.RegularPages "Section" "case-studies") "Params.series" $series) }}
+          {{ $permalink := .RelPermalink }}
+          <div class="mt-4 ps-3">
+            <p style="letter-spacing:1px;opacity: 0.6;">{{if eq 0 (len $seriesPosts)}}NO {{end}}MORE IN THIS SERIES</p>
+            <div class="content">
+              <ul>
+                {{ range $seriesPosts }}
+                {{ if eq $permalink .RelPermalink }}
+                <li class="text-primary">{{.Title}}</li>
+                {{ end }}
+                {{ end }}
+  
+                {{ range $i, $e := $seriesPosts }}
+                {{ if and (ne $permalink .RelPermalink) (lt $i 5) }}
+                <li style="filter:grayscale(1);"><a href="{{.RelPermalink}}" class="d-inline-block">{{.Title}}</a></li>
+                {{ end }}
+                {{ end }}
+              </ul>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-8">
+        {{ if .Params.cover_image }}
+        {{ $image_height := replace .Params.cover_image_height "px" "" }}
+        {{ $image_width := replace .Params.cover_image_width "px" "" }}
+        {{ $size := add (add $image_width "x") $image_height }}
+        <div class="mb-4">
+          {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+        </div>
+        {{ end }}
+
+        <div class="mb-5">
+          <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
+          <span class="text-muted">{{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+        </div>
+
+        <div class="content">
+          {{.Content}}
+        </div>
+
+        {{ if .Page.Store.Get "hasMermaid" }}
+          <script type="module">
+            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+            mermaid.initialize({ startOnLoad: true });
+          </script>
+        {{ end }}
+
+
+        {{ if and .Site.DisqusShortname .Params.feedback }}
+        <div class="mt-5">
+          <!-- comments -->
+          <div class="disqus-block border rounded-lg">
+            {{ template "_internal/disqus.html" . }}
+          </div>
+        </div>
+        {{ end }}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+{{ $related := (where site.RegularPages "Section" "in" "case-studies") | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
+{{ if $related }}
+<section class="section pt-5">
+  <div class="container">
+    <div class="row justify-content-center" data-aos="fade-in">
+      <div class="col-12">
+        <div class="section-title text-center">
+          <h2 class="title">{{i18n `related_case_studies`}}</h2>
+        </div>
+      </div>
+      {{ range shuffle (first 3 $related) }}
+      <div class="col-lg-4 col-md-6 blog-card case-studies-card has-border">
+        {{ .Render "case-studies" }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+<!-- end of case-studies-section -->
+
+{{ end }}

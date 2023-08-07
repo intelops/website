@@ -29,6 +29,43 @@ $(window).on("load", function () {
 $(document).ready(function () {
   "use strict";
 
+  const scrolledPopup = document.querySelector('.scrolledPopup');
+  if (scrolledPopup) {
+
+    let contentBlock = document.querySelector('.get-content-block-height');
+    let contentBlockHeight = contentBlock.scrollHeight;
+    
+    $(window).scroll(function () {
+      if ($(window).scrollTop() >= (contentBlockHeight/2.5)) {
+        if (sessionStorage.getItem('blogScrolledPopupHide') != 'true') {
+          $('.blog-popup').addClass('show');
+        }
+        if (sessionStorage.getItem('learningScrolledPopupHide') != 'true') {
+          $('.learning-center-popup').addClass('show');
+        }
+      }
+    });
+    
+    $('[data-hide="scrolledPopup"').click(function () {
+      scrolledPopup.remove();
+    });
+    
+    $('.blog-popup [data-hide="scrolledPopup"]').click(function () {
+      sessionStorage.setItem('blogScrolledPopupHide', 'true');
+    });
+    $('.learning-center-popup [data-hide="scrolledPopup"]').click(function () {
+      sessionStorage.setItem('learningScrolledPopupHide', 'true');
+    });
+  }
+
+  $('[data-bs-toggle="collapse"]').on("click", function () {
+    if ($(this).attr("aria-expanded") == "true") {
+      $("body").addClass("overflow-hidden");
+    } else {
+      $("body").removeClass("overflow-hidden");
+    }
+  });
+
   // sidenav js
   const matches = document.querySelectorAll(
     `li[data-nav-id$="${window.location.pathname}"]`
@@ -278,6 +315,32 @@ $(document).ready(function () {
       clickable: true,
     },
   });
+
+  var processItem = $(".process-item");
+  processItem.each(function () {
+    var $this = $(this);
+    $(window).on("scroll", function () {
+      if (
+        $this.offset().top - $(window).scrollTop() <
+        $(window).outerHeight() - 250
+      ) {
+        $this.find(".image-block").addClass("active");
+      }
+    });
+  });
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() === 0) {
+      processItem.find(".image-block").removeClass("active");
+    }
+  });
+
+  $(".infinite-scroll").infiniteScroll({
+    // options
+    path: ".nextpage",
+    append: ".blog-card",
+    history: false,
+    status: ".page-load-status",
+  });
 });
 
 //custom
@@ -288,46 +351,69 @@ $(window).on("load", function () {
   }
 });
 
-$("#main-header").hover(
-  function () {
-    $("#secondary-header").addClass("header-sec");
-  },
-  function () {
-    $("#secondary-header").removeClass("header-sec");
-  }
-);
+// $(".navigation-alt").hover(
+//   function () {
+//     $("#secondary-header").addClass("header-sec");
+//   },
+//   function () {
+//     $("#secondary-header").removeClass("header-sec");
+//   }
+// );
 
-//header on scroll changes
-$(window).on("scroll", function () {
-  var list, darkLogo, lightLogo;
-  list = document.querySelectorAll("#nav-menu");
-  darkLogo = document.querySelector("#logo-img-dark").getAttribute("src");
-  lightLogo = document.querySelector("#logo-img-light").getAttribute("src");
-  if ($(window).scrollTop() > 70) {
-    //Add light section on down
-    $("#main-header").removeClass("dark-bar");
-    $("#main-header").addClass("light-bar");
-    for (var i = 0; i < list.length; ++i) {
-      list[i].classList.remove("nav-menu-text");
-    }
-    //add dark logo on down
-    document.getElementById("logo-img").src = darkLogo;
-    //show second header button and hide main
-    $("#secondary-button").show();
-    $("#main-button").hide();
-    $("#main-navbar").addClass("no-bottom");
-  } else {
-    //Add dark section on up
-    $("#main-header").removeClass("light-bar");
-    $("#main-header").addClass("dark-bar");
-    for (var i = 0; i < list.length; ++i) {
-      list[i].classList.add("nav-menu-text");
-    }
-    //add light logo on up
-    document.getElementById("logo-img").src = lightLogo;
-    //show main header button and hide second
-    $("#secondary-button").hide();
-    $("#main-button").show();
-    $("#main-navbar").removeClass("no-bottom");
+if ($(".navigation-alt").length !== 0) {
+  let navigationAlt = $(".navigation-alt");
+  let navigationBottom = $(".navigation-bottom");
+
+  let navigationAltHeight = navigationAlt.outerHeight();
+  let navigationBottomHeight = navigationBottom.outerHeight();
+
+  if (navigationBottom) {
+    $(window).on("scroll", function () {
+      if (
+        $(window).scrollTop() >
+        (navigationAltHeight + navigationBottomHeight) * 2
+      ) {
+        navigationBottom.addClass("sticky");
+        navigationBottom.css("top", 0 - navigationBottomHeight + "px");
+      } else {
+        navigationBottom.removeClass("sticky");
+        navigationBottom.css("top", "unset");
+      }
+    });
   }
-});
+
+  //header on scroll changes
+  // $(window).on("scroll", function () {
+  //   var list, darkLogo, lightLogo;
+  //   list = document.querySelectorAll("#nav-menu");
+  //   darkLogo = document.querySelector("#logo-img-dark").getAttribute("src");
+  //   lightLogo = document.querySelector("#logo-img-light").getAttribute("src");
+  //   if ($(window).scrollTop() > 70) {
+  //     //Add light section on down
+  //     $(".navigation-alt").removeClass("dark-bar");
+  //     $(".navigation-alt").addClass("light-bar");
+  //     for (var i = 0; i < list.length; ++i) {
+  //       list[i].classList.remove("nav-menu-text");
+  //     }
+  //     //add dark logo on down
+  //     document.getElementById("logo-img").src = darkLogo;
+  //     //show second header button and hide main
+  //     $("#secondary-button").show();
+  //     $("#main-button").hide();
+  //     $("#main-navbar").addClass("no-bottom");
+  //   } else {
+  //     //Add dark section on up
+  //     $(".navigation-alt").removeClass("light-bar");
+  //     $(".navigation-alt").addClass("dark-bar");
+  //     for (var i = 0; i < list.length; ++i) {
+  //       list[i].classList.add("nav-menu-text");
+  //     }
+  //     //add light logo on up
+  //     document.getElementById("logo-img").src = lightLogo;
+  //     //show main header button and hide second
+  //     $("#secondary-button").hide();
+  //     $("#main-button").show();
+  //     $("#main-navbar").removeClass("no-bottom");
+  //   }
+  // });
+}

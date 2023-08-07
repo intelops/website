@@ -6,6 +6,7 @@ paginate = "6"
 summaryLength = "10"
 theme = "delta"
 title = "Intelops"
+enableGitInfo = true
 [caches.assets]
 dir = ":resourceDir/_gen"
 maxAge = "720h"
@@ -16,6 +17,8 @@ maxAge = "720h"
 quality = 100
 [markup.goldmark.renderer]
 unsafe = true
+[markup.goldmark.parser.attribute]
+block = true
 [mediaTypes."application/manifest+json"]
 suffixes = ["webmanifest"]
 [mediaTypes."text/netlify"]
@@ -28,9 +31,10 @@ min = "0.84.0"
 mediaType = "application/manifest+json"
 rel = "manifest"
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest","JSON"]
+home = ["HTML", "RSS", "WebAppManifest", "JSON"]
 [taxonomies]
 category = "categories"
+tag = "tags"
 series = "series"
 
 # table of content
