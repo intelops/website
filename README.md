@@ -58,4 +58,7 @@ This is the repo to manage all the website work, which is being developed using 
 
 > To add/modify opengraph metadata information and verify using ograph previewer browser extension - https://github.com/intelops/website/issues/176 
 >
+> How to add mindmaps to blogs, learning-center articles, or separate Mindmaps to the site? - https://github.com/intelops/website/issues/105 
+> This issue has the samples for reference. Add interactive diagrams using mermaid in Markdown. 
+>
 > 
