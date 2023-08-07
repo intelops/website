@@ -97,6 +97,8 @@ main:empty {
   }
 }
 .banner-1 {
+  max-width: 95%;
+  margin: 30px auto 0 auto;
   .has-wave {
     @media (min-width: 1600px) {
       z-index: initial;
@@ -113,6 +115,12 @@ main:empty {
       @include tablet {
         display: none;
       }
+    }
+  }
+  .btn-play {
+    color: $white;
+    &:hover {
+      color: $dark;
     }
   }
   .banner-image {
@@ -144,6 +152,18 @@ main:empty {
       height: 50px;
       bottom: 50%;
       z-index: -1;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
+    .image,
+    lottie-player {
+      max-width: 85%;
+      @include tablet {
+        max-width: 95%;
+      }
+      margin: auto;
+      border-radius: 25px;
+      overflow: hidden;
     }
   }
 }
@@ -162,44 +182,23 @@ main:empty {
   padding: 150px 0;
 }
 
+.wrap-block {
+  max-width: 95%;
+  margin: auto;
+}
+
+.bg-soft {
+  background-color: #F7F7F7;
+}
+
 // features-section
 .features-section {
+  max-width: 95%;
+  margin: auto;
   &.features-creative {
     position: relative;
     z-index: 1;
-    &::after,
-    &::before {
-      background-color: $white;
-      position: absolute;
-      content: "";
-      height: calc(50% + 15px);
-      @include desktop {
-        height: calc(12% + 30px);
-      }
-      width: 100%;
-      left: 0;
-      bottom: 0;
-      z-index: -2;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
-      @include tablet {
-        border-bottom-left-radius: 15px;
-        border-bottom-right-radius: 15px;
-      }
-      @include mobile {
-        border-bottom-left-radius: 6px;
-        border-bottom-right-radius: 6px;
-      }
-    }
-    &::before {
-      @extend .bg-secondary-soft;
-      height: 50px;
-      bottom: calc(50% - 28px);
-      @include desktop {
-        bottom: calc(12% - 20px);
-      }
-      z-index: -1;
-    }
+    background-color: #F7F7F7;
 
     // features rows
     .features-row {
@@ -240,84 +239,18 @@ main:empty {
         margin-bottom: 30px;
       }
     }
-    &:nth-child(1) .block,
-    &:nth-child(11) .block,
-    &:nth-child(5) .block {
-      .icon {
-        color: $color-primary;
-      }
+    .title {
+      transition: 0.15s;
+    }
+    .block {
       &:hover {
-        border-color: $color-primary;
+        border-color: inherit;
         .title {
-          color: $color-primary;
+          color: inherit;
         }
       }
     }
-    &:nth-child(6) .block,
-    &:nth-child(12) .block,
-    &:nth-child(2) .block:nth-child(1) {
-      .icon {
-        color: $color-secondary;
-      }
-      &:hover {
-        border-color: $color-secondary;
-        .title {
-          color: $color-secondary;
-        }
-      }
-    }
-    &:nth-child(4) .block,
-    &:nth-child(7) .block,
-    &:nth-child(13) .block,
-    &:nth-child(2) .block:nth-child(2) {
-      .icon {
-        color: $color-tertiary;
-      }
-      &:hover {
-        border-color: $color-tertiary;
-        .title {
-          color: $color-tertiary;
-        }
-      }
-    }
-    &:nth-child(8) .block,
-    &:nth-child(14) .block,
-    &:nth-child(3) .block:nth-child(1) {
-      .icon {
-        color: $color-quaternary;
-      }
-      &:hover {
-        border-color: $color-quaternary;
-        .title {
-          color: $color-quaternary;
-        }
-      }
-    }
-    &:nth-child(9) .block,
-    &:nth-child(15) .block,
-    &:nth-child(3) .block:nth-child(2) {
-      .icon {
-        color: $color-primary;
-      }
-      &:hover {
-        border-color: $color-primary;
-        .title {
-          color: $color-primary;
-        }
-      }
-    }
-    &:nth-child(10) .block,
-    &:nth-child(3) .block:nth-child(3) {
-      .icon {
-        color: $color-secondary;
-      }
-      &:hover {
-        border-color: $color-secondary;
-        .title {
-          color: $color-secondary;
-        }
-      }
-    }
+    
     &.features-block-2 {
       .block {
         padding: 40px 25px;
@@ -1116,24 +1049,47 @@ main:empty {
 
 // call-to-action
 .call-to-action {
+  .bottom-bg {
+    position: absolute;
+    content: "";
+    height: calc(50% - 55px);
+    width: calc(100% + 50%);
+    left: -25%;
+    bottom: 0;
+    background-color: $dark;
+    z-index: -1;
+  }
   &-2 {
     position: relative;
     z-index: 1;
     overflow-x: hidden;
-    .bottom-bg {
-      position: absolute;
-      content: "";
-      height: calc(50% - 55px);
-      width: calc(100% + 50%);
-      left: -25%;
-      bottom: 0;
-      background-color: $dark;
-      z-index: -1;
+  }
+  &-3 {
+    position: relative;
+    z-index: 1;
+    overflow-x: hidden;
+    .title {
+      position: relative;
+      z-index: 1;
+      .bg-layer {
+        position: absolute;
+        content: "";
+        height: 150%;
+        width: 80%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        pointer-events: none;
+        @include desktop {
+          width: 100%;
+          top: -70%;
+        }
+      }
     }
   }
   .block {
     .content-block {
-      padding: 65px 75px;
+      padding: 55px;
       padding-right: 30px;
       @include desktop-lg {
         br {
@@ -1766,4 +1722,166 @@ footer {
     bottom: 6px;
     z-index: 55;
   }
+}
+
+.scrolledPopup {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  display: none;
+  max-height: 100vh;
+  overflow-y: auto;
+  &.show {
+    display: block;
+  }
+  .scrolledPopupOverlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+    cursor: pointer;
+  }
+  .btn-close {
+    position: fixed;
+    right: 30px;
+    top: 20px;
+    background-color: #fff;
+    border-radius: 4px;
+    opacity: 1;
+    padding: 12px;
+  }
+  .popup-content {
+    margin: 30px auto;
+    width: 97%;
+    max-width: 550px;
+    background-color: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    z-index: 22;
+  }
+}
+
+// animated section block
+[data-section] {
+  padding: 100px 0;
+  @include desktop {
+    padding: 90px 0;
+  }
+}
+.anim-block {
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  &-inner {
+    perspective: 1800px;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    overflow: hidden;
+    top: 0;
+    margin: 0;
+    height: 100vh;
+  }
+}
+.assets {
+  position: relative;
+  transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  width: 35%;
+  perspective: 1800px;
+  transform: translateX(20%);
+  .asset-bg-image {
+    width: 100%;
+    display: block;
+    will-change: transform;
+    transform-origin: center top;
+    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+  }
+  &-right {
+    transform: translateX(160%);
+    .asset-bg-image {
+      transform: rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+    }
+    [data-image] {
+      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+    }
+  }
+  [data-image] {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) scale(.6) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: .23s;
+    filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    img {
+      width: 100%;
+    }
+    &.show {
+      transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition-delay: .1s;
+      top: 0%;
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+    }
+  }
+}
+
+.mindmap-node {
+  user-select: none;
+  &.disable {
+    pointer-events: none;
+  }
+}
+[data-roadmap] {
+  cursor: pointer;
+  user-select: none;
+  [class^="node-line"],
+  .node-bkg {
+    transition: .3s;
+  }
+  &:hover {
+    .node-bkg {
+      // fill: $color-primary !important;
+      filter: brightness(.9);
+    }
+    [class^="node-line"] {
+      stroke: $color-primary !important;
+    }
+    // text {
+    //   fill: $white !important;
+    // }
+  }
+}
+.roadmap-list-item {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: .3s;
+  border-color: #eeeeee !important;
+  &:hover {
+    opacity: .9;
+    transform: scale(0.995);
+    background-color: #eee;
+  }
+}
+.content-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: -200%;
+  top: -200%;
 }

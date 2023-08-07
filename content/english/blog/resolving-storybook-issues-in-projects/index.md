@@ -110,15 +110,6 @@ export NODE_OPTIONS=--openssl-legacy-provider
 //In windows - just replace the export with “set” 
 set NODE_OPTIONS=--openssl-legacy-provider
 ```
-If you are lucky this might be the end of the issues, but then I wasn't so a new issue popped up - now I had a conflict with the webpack versions. And the error looked something like this:
-![error5](images/storybook-error3.png)
 
-Check your `package.json` file you probably must be using the latest version of webpack and a older version of storybook, if that is the case - then all you have to do is upgrade your storybook version.
-
-```js
-npx storybook upgrade
-```
-Finally now if you try to do npm start storybook or npm run storybook - you will be able to see storybook up and running.
- 
 ### Conclusion
 I tried to cover all the issue that I faced, and since you reached till here, I am guessing that your issues also got solved, hopefully. That being said storybook.js is a great way to test your components so don't let the errors stop you from using it. 

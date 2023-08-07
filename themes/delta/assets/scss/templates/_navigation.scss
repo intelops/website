@@ -4,9 +4,6 @@
   position: sticky;
   z-index: 333;
   top: 0;
-  @include mobile {
-    padding: 5px 0;
-  }
 
   .container-delta {
     @media (min-width: 1600px) {
@@ -65,10 +62,10 @@
       font-weight: 500;
       line-height: 1.4;
       color: $nav-menu-text;
-      padding: 15px 15px !important;
+      padding: 15px 13px !important;
 
       @include desktop-xl {
-        padding: 15px 10px !important;
+        padding: 15px 9px !important;
         font-size: 90%;
       }
 
@@ -293,27 +290,39 @@
       }
     }
   }
-
+  
   @include desktop-lg {
-    .navbar-collapse {
-      background-color: $navbar-mobile-bg;
-      border-radius: 10px;
-      transform: translateY(15px);
+    &:not(.navigation-bottom) {
+      .navbar-nav {
+        max-width: 300px;
+        text-align: center;
+        padding: 0 15px;
+        max-height: 70vh;
+        overflow-y: auto;
+      }
+      .navbar-collapse {
+        background-color: $navbar-mobile-bg;
+        border-radius: 10px;
+      }
+      .dropdown-menu {
+        padding: 1px 10px;
+        text-align: center;
+        background-color: lighten($color-primary, 39);
+      }
+      .navbar-right {
+        padding: 10px;
+        padding-bottom: 20px;
+      }
     }
-    .navbar-nav {
-      max-width: 300px;
-      text-align: center;
-      padding: 15px;
-      padding-bottom: 0;
-    }
-    .dropdown-menu {
-      padding: 1px 10px;
-      text-align: center;
-      background-color: lighten($color-primary, 39);
-    }
-    .navbar-right {
-      padding: 15px;
-      padding-bottom: 20px;
+  }
+  @include tablet {
+    &.navigation-bottom {
+      .navbar-nav {
+        margin-top: 10px;
+      }
+      .navbar-right {
+        padding-bottom: 20px;
+      }
     }
   }
 

@@ -1,22 +1,18 @@
 ---
 title: "Opty"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "Proactive optimization for Kubernetes workloads. Reduce carbon emission."
 
 url: opty
 draft: false
 
 navigation:
-  logo: "images/dummy-logo.png"
+  logo: "images/icons/opty.svg"
   logo_text: "Opty"
   logo_text_color: "secblack"
   
   menu:
-  - name: "Test 1"
-    url: "/"
-  - name: "Another 2"
-    url: "/"
-  - name: "Test 3"
-    url: "/"
+  - name: "Opty (Optimizor) Doc"
+    url: "https://docs.intelops.ai/latest/opty/"
 
   navigation_button:
     enable: true
@@ -29,18 +25,21 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#fa9e26"
-  subtitle: "We Are Delta"
-  title: "get fastest loan with smart way A seating home"
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
-  image: images/banner-about.png
+  bg_color: "#7FDCA4"
+  subtitle: "Optimizor (Opty)"
+  subtitle_color: ""
+  title: "Pro-Active Intelligent Solution for Dynamic Optimization"
+  title_color: ""
+  description: "Achieve performance and cost-effectiveness with Opty, the dynamic solution that learns your workloads complexities in Kubernetes. By analyzing diverse metrics, Opty determines the optimal resource allocation for your applications, helping developers to build a cloud-native ecosystem right from the development stage."
+  description_color: ""
+  image: images/banner/opty/opty-banner-image.svg
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
-    enable: true
+    enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
 
@@ -48,45 +47,71 @@ banner:
 image_and_content_block:
   enable: true
   blocks:
-  - subtitle: "We Are Delta"
-    title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+  - enable: true
+    subtitle: "Complex"
+    subtitle_color: ""
+    title: "Navigating Complex Workloads "
+    title_color: ""
+    image: "images/content/opty/opty-row1.svg"
     content_position: "right" # Value will be - "left/right"
-    bg_color: false
+    bg_color: ""
+    content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      * **Workload Complexity**: Managing the behavior of workloads on Kubernetes, including stateless and stateful workloads, is increasingly challenging due to the complexity driven by continuous innovation 
+      * **Impact of DevSecOps and TestOps**: The adoption of DevSecOps and TestOps cultures introduces additional complexity to engineers' lives, affecting the runtime performance, efficiency, and cost-effectiveness of the cloud-native ecosystem. 
+      * **Alignment with Business Goals**: Engineers struggle to align workloads with business objectives, making it difficult to achieve the desired outcomes and meet organizational goals effectively. 
+      * **Optimal Resource Allocation**: Determining the optimal allocation of resources for running applications with the best performance and cost-effectiveness requires dynamic analysis of diverse metrics, which is a complex task. 
+      * **Lack of Proactive Optimization**: Without a proactive solution, engineers face challenges in optimizing workloads during the development stage, resulting in inefficiencies and suboptimal performance. 
+      * **Limited Control in Development**: Engineers need greater control in the development environment to build a cloud-native ecosystem with optimal runtime values, which is currently lacking. 
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
-
-  - subtitle: "We Are Delta"
-    title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+  - enable: true
+    subtitle: "The Intelligence"
+    subtitle_color: ""
+    title: "Pro-Active Cloud-Native Optimization"
+    title_color: ""
+    image: "images/content/opty/opty-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: true
+    bg_color: "#e9f1ff"
+    content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      * **Kubernetes Cluster Management**: Simplifies the management of Kubernetes clusters by providing tools and services that enable developers to gain comprehensive insights and effectively oversee their clusters. 
+      * **Resource Allocation Optimization**: Assist developers in determining the optimal allocation of computing power and resources for their applications. 
+      * **Computing Power and Cost-Effective Resources**: Helps developers accurately assess the computing power and resource needs of their applications. 
+      * **Development Stage Resource Identification**: Supports developers in identifying the required resources and configurations during the development stage.  
+      * **High-Performance Cloud-Native Optimization**: Facilitates the development of well-optimized cloud-native systems that deliver excellent performance. 
+      * **Aligning Workloads and Business Goals**: Enables businesses to align workloads with their strategic objectives by providing insights and optimization capabilities, ensuring effective achievement of desired outcomes and organizational goals. 
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
-
-  - subtitle: "We Are Delta"
-    title: "Lots of people love us, <br> and we're also."
-    image: "images/block-image-01.png"
+  - enable: true
+    subtitle: ""
+    subtitle_color: ""
+    title: "Features"
+    title_color: ""
+    image: "images/content/opty/opty-row3.svg"
     content_position: "right" # Value will be - "left/right"
-    bg_color: false
+    bg_color: ""
+    content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
-
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * Zero Carbon Emission and Low Carbon Footprint
+      * Simplified Kubernetes Cluster Management 
+      * Intelligent Resource Allocation for Optimal Performance 
+      * Accurate Computing Power and Cost-Effective Resource Determination 
+      * Development Stage Resource Identification and Configuration Support 
+      * Proactive Optimization for Cloud-Native Workloads 
+      * Enhanced Control and Customization in the Development Environment 
+      * Performance-driven Insights and Recommendations 
+      * Dynamic Learning Algorithms for Workload Complexity Analysis 
+      * Alignment with Business Goals for Effective Outcomes 
   
 call_to_action:
   enable: true
+  title: "Start using <br/> Opty <br/> today..."
+  title_color: "#fff"
+  image: "images/call-to-actions/opty/robo-image.svg"
+  button_label: "Get Started"
+  button_link: "contact/"
+  bg_color: "#7FDCA4"
+  bottom_bg_color: "#080338"
+
+footer:
+  footer_light: false
 ---

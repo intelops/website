@@ -14,11 +14,9 @@ author: tanuja-pyneni
 author_color: ""
 series: Next.js
 categories:
-- Technology
 - React Framework
 - Next.js
 - Frontend Webpage
-- Designing
 
 tags:
 - Webpage Design
