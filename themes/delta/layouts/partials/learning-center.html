@@ -1,5 +1,5 @@
 {{ "<!-- details page -->" | safeHTML }}
-<section>
+<section class="get-content-block-height">
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 col-md-4 sidenav">
@@ -37,8 +37,19 @@
           {{ end }}
 
           <h2 class="mb-4 font-weight-medium">{{ .Title }}</h2>
+
+          <span class="text-muted small d-inline-block mb-4" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+          
           {{ if .Content }}
           <div class="content" data-spy="scroll" data-target="#TableOfContents" data-offset="20">{{.Content}}</div>
+          
+          {{ if .Page.Store.Get "hasMermaid" }}
+            <script type="module">
+              import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+              mermaid.initialize({ startOnLoad: true });
+            </script>
+          {{ end }}
+
           {{ else }}
           <ul class="list-styled text-left mb-4">
             {{ range .Data.Pages }}
@@ -92,6 +103,10 @@
       </div>
       
     </div>
+
+    {{ if site.Params.learning_center_popup.enable }}
+    {{ partial "popup-form" (dict "Class" "learning-center-popup" "Src" site.Params.learning_center_popup.clickup_iframe_url) }}
+    {{ end }}
   </div>
 </section>
 {{ "<!-- /details page -->" | safeHTML }}

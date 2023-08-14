@@ -5,7 +5,7 @@ searchKeyword: "contact, contact us"
 layout: contact
 bannertext: Contact
 bannertext_color: ""
-bannerimage: images/bg-banner-page.jpg
+bannerimage: images/banner/contactpage/contactpage-banner-image.svg
 enable: true
 # contact
 contact:
@@ -13,7 +13,7 @@ contact:
   subtitle_color: ""
   title: "Schedule a Demo"
   title_color: ""
-  description: "We are in Stealth mode now. Contact us for Demo of our Product(s) and services."
+  description: "We are in Stealth mode now. Contact us for Demo of our Product(s) and Services."
   description_color: ""
 
 # contact info
