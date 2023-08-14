@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Avatar to your website"
-
-weight: 4
+weight: 2
 ---
 
 Avatar - can be used to display people or objects, its basically like a profile photo. Usually we see avatars in:

@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Buttons to your website"
-
-weight: 5
+weight: 3
 ---
 
 Buttons - To allow users to make choices, take actions with a single click. Buttons are usually used in:

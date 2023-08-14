@@ -1,5 +1,5 @@
 ---
-title: "Securing your packages - Package Management in Git Platform"
+title: "Package Management in Git Platform"
 date: 2023-07-24
 draft: false
 weight: 2
@@ -8,11 +8,12 @@ description: "Steps to follow to run our SaaS front-end application in your loca
 ---
 
 Package Registry Authentication is basically the process of verifying the users identity or any applications that are trying to access packages in the registry. `What are these package registries?` Package registries are centralized repositories - they store and distribute software packages, libraries and dependencies. If you want to add certain controls or security over who can perform what actions in the registry then authentication is the best way to do it. 
-________________
+
+_________
 
 ## GitHub package registry authentication
 
-For github's package registry authentication - Personal Access Tokens(PAT) can be used. In github PATs are mainly used to access its features and services. Usually PATs are alternatives to directly using passwords as they offer more control over wah actions can be performed by the token holder.
+For github's package registry authentication - Personal Access Tokens(PAT) can be used. In github PATs are mainly used to access its features and services. Usually PATs are alternatives to directly using passwords as they offer more control over what actions can be performed by the token holder.
 
 ## Why so we need GitHub PATs?
 
@@ -35,7 +36,7 @@ To authenticate yourself using Gitub PAT in VScode:
 
 It may look something like this:
 
-![merger](images/PAT-generation.png)
+![merger](PAT-generation.png)
 
 2. **Store the Personal Access Token**
 

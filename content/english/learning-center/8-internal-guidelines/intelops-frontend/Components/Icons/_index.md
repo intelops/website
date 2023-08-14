@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Icons to your website"
-
-weight: 11
+weight: 10
 ---
 
 Icons - 

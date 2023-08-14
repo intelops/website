@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Cards to your website"
-
-weight: 6
+weight: 4
 ---
 
 Cards - Are mainly used to display details about a single topic - can be actions or just content. Cards should be relevant actionable information. For example if you want to show you companies sales in numbers you can use a card to highlight it in a better way. Mainly used on:

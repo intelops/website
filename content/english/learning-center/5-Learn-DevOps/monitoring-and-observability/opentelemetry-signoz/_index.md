@@ -1,5 +1,5 @@
 ---
-title: "Monitoring and Observability"
+title: "OTEL and Signoz"
 date: 2023-04-22
 draft: false
 # description
@@ -15,7 +15,7 @@ ________________
 ### OpenTelemetry
 OpenTelemetry is a open-source project which was hosted by CNCF. It provides a standard way to generate telemetry data - data like logs, metrics, events and also traces which are all created by your applications.
 
-![merger](images/opentelemetry.png)
+![merger](opentelemetry.png)
 
 It might not look all that useful when you started your application as a set of microservices, but as the usage of your application increases and time comes for you to scale up, keeping track of all the microservices, their bugs and other metrics becomes difficult. For all that you need OpenTelemetry, be it logs, metrics, or just traces OpenTelemetry provides a single standard for observability, you can store, visualize and query data with the help of SDKs, APIs and othertools.
 
@@ -159,15 +159,15 @@ Run <mark>npm run start:server</mark>, by default your application will be avail
 
 Now hit your URL a few times for dummy data and wait for your application name to be visible - you should already be seeing 
 
-![signoz](images/Signoz-Nextjs.png)
+![signoz](Signoz-Nextjs.png)
 
 Click on your applications name, here it will be <mark>Nextjs-Signoz-Sample</mark> to view the dashboard and monitor your applications metrics like latency, number of requests per second(rpc), percentage of error.
 
-![dashboard](images/dashboard-results.png)
+![dashboard](dashboard-results.png)
 
 To visualize how user requests perform across services in a multi-service application you need tracing data captured by OpenTelemetry - Go to <mark>Traces</mark> tab in Signoz
 
-![traces](images/traces.png)
+![traces](traces.png)
 
 # Conclusion
 We can see how OpenTelemetry can be used to instrument your Nextjs applications for end-to-end tracing and how you can use Signoz to keep track of the metrics collected by OpenTelemetry for the smooth performance of your application. For more detailed information you can look at the blog on [Monitoring your Nextjs application using OpenTelemetry](https://signoz.io/blog/opentelemetry-nextjs/). They have a very detailed information on Signoz and OpenTelementry and multiple installation methods.

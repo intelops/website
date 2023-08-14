@@ -322,4 +322,8 @@ export default function IntelopsUI() {
 
 ```
 
-**Step 3:** 
+**Step 3:** Now run the application
+
+```js
+npm run dev
+```

@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Table to your website"
-
-weight: 17
+weight: 16
 ---
 
 Tables - used to organize data in rows and columns and when you need to organize data. Tables also allow users to look up a specific information.

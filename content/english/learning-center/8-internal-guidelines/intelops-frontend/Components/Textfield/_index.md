@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Textfield to your website"
-
-weight: 19
+weight: 18
 ---
 Textfield - how is it different from textarea? textfield is a single line, while textarea is usually multiple lines.
  

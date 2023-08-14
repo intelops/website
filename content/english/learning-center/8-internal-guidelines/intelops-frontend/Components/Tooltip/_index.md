@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Tooltip to your website"
-
-weight: 20
+weight: 19
 ---
 Tooltip - used for information on icons, buttons and so on. Tooltips are important in webdesign, they give us information just by hovering over a component.
 

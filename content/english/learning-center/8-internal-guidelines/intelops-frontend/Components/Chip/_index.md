@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Chip to your website"
-
-weight: 8
+weight: 7
 ---
 
 Chips - allows users to show information, make selections, to filter content or to trigger actions. How are they different from buttons? Buttons usually appear consistently along with a action attached to them, while chips usually appear dynamically as interactive elements.

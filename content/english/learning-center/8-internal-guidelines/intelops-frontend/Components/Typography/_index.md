@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Typography to your website"
-
-weight: 21
+weight: 20
 ---
 
 Typography - used to choose your headings(titles or subtitles) on your webpage. 

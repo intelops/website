@@ -4,7 +4,7 @@ date: 2023-04-19
 draft: false
 # description
 description: "Learn integration of ORY authentication in Next.js"
-weight: 2
+weight: 1
 ---
 
 Next.js is a React framework are mainly used to create web applications and by framework I mean it takes care of the tooling and the configurations that are required for React. It uses Server-Side Rendering(SSR). *Okay now what is this SSR?* it does exactly what its name suggests "renders on the server" which means you are basically creating a HTML file with the all the website's content and then sending it to the user. SSR enables you to load pages faster even when you internet is slow, improves search engine optimization(SEO) and so on since we are not here to learn about server-side rendering. Now back to Next.js and why to use it.
@@ -46,7 +46,7 @@ Next.js is not the only framework that React has, one of their other popular fra
  ```
 Now when you open the url http://localhost:3000 which will be visible on your terminal. Youl will be able to see a screen that might look something like this:
 
-![firstscreen](images/firstscreen.png)
+![firstscreen](firstscreen.png)
 
 2. The second way is to manually create the project. Create a directory and then install the required dependencies using npm(Node Package Manager)
 
@@ -332,7 +332,7 @@ export default function Home() {
 ```
 You should be able to see something like this at the end of it all:
 
-![finalpage](images/webpage.png)
+![finalpage](webpage.png)
 
 
 # Conclusion

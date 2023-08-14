@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Tab to your website"
-
-weight: 16
+weight: 15
 ---
 Tab - can be used to create secondary navigation for your page. Tabs can also be used to navigate withing the same page taht is to render and display subsections for your website. 
 

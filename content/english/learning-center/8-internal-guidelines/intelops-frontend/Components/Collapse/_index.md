@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Collapse to your website"
-
-weight: 9
+weight: 8
 ---
 
 Collapse - is a accordion component allows users to show and hide sections of content on a page. Usually used to display:

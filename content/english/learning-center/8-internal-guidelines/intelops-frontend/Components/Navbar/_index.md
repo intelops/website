@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Navbar to your website"
-
-weight: 13
+weight: 12
 ---
 
 Navbar - can be used to navigate your website. Links, icons, search bars and all can be added. Usually at the top of you page.

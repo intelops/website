@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Dropdown to your website"
-
-weight: 10
+weight: 9
 ---
 Dropdown - 
 

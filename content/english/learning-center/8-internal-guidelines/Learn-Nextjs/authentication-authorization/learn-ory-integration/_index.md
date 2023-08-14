@@ -1,10 +1,10 @@
 ---
-title: "Learn Ory integration in Next.js"
+title: "Ory integration in Next.js"
 date: 2023-05-25
 draft: false
 # description
 description: "Learn integration of ORY authentication in Next.js"
-weight: 3
+weight: 2
 ---
 
 To secure your Next.js application with Ory authentication - basically adding a login page so that only authorized users can view your page or to atleast know who your users are. To get started all you need is a `Next.js application`. So, lets jump right in:

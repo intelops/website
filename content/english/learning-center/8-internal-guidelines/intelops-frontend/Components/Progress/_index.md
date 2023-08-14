@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Progress to your website"
-
-weight: 14
+weight: 13
 ---
 
 Progress - used to show progress. Progress can be determinate or indeterminate. Progress bar used to show ongoing process that takes time to finish. Usually used in:

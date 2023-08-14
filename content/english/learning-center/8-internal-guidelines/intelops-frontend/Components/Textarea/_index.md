@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Textarea to your website"
-
-weight: 18
+weight: 17
 ---
 Textarea -  allows users to enter sizeable amount of free-form text. Usually used in:
 - Forms

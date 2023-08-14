@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Switch to your website"
-
-weight: 15
+weight: 14
 ---
 
 Switch - used to adjust settings on/off. Switch can also be used as controls, as well as the state it's in. Usually seen in:

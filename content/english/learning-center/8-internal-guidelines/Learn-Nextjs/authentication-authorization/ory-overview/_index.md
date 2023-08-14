@@ -1,10 +1,10 @@
 ---
-title: "Unlocking Secure Access: Exploring ORY Authenticators and their Role in Modern Authentication"
+title: "Exploring ORY Auth"
 date: 2023-05-23
 draft: false
 # description
 description: Learn Authentication
-weight: 3
+weight: 1
 ---
 
 Recent studies show that cyber attacks have been rated fifth from the top as a risk in the recent years. Did you know that there is a hacker attack every 38 seconds? Strong authentication measures can significantly reduce the risk of cyber attacks which can enhance the overall cybersecurity.
@@ -40,7 +40,8 @@ ORY is basically an [open-source](https://www.ory.sh/open-source/) project which
 3. ORY Oathkeeper - identity and Access proxy
 4. ORY Keto - access contol server
 
->>"Image ory.png"
+![ory-types](ory.png)
+
 
 For installation you can follow: [Learn Ory integration in Next.js blog](https://intelops.ai/learning-center/learn-ory-integration/) in our learning center.
 

@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Checkbox to your website"
-
-weight: 7
+weight: 6
 ---
 
 Checkboxes - are used for input control, which allows us to select items from a group. Checkboxes are usually used in:

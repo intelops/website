@@ -4,8 +4,7 @@ date: 2023-07-01
 draft: false
 # description
 description: "Adding Modal to your website"
-
-weight: 12
+weight: 11
 
 ---
 
