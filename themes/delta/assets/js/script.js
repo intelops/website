@@ -78,6 +78,7 @@ $(document).ready(function () {
     let nextAncestor = menu.closest("li[data-nav-id]");
     while (maxDepth-- >= 0 && nextAncestor !== null) {
       nextAncestor.classList.add("parent");
+      nextAncestor.parentNode.style.display = "block";
       let icon = nextAncestor.querySelector(".category-icon");
       if (icon !== null) {
         icon.classList.remove("icon-right");

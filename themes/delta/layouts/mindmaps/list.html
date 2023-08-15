@@ -59,9 +59,9 @@ style="background-image: url({{$img.RelPermalink}});
 
         {{ else }}
 
-          <p class="content-loader text-center">loading..</p>
+          {{ if .Page.Store.Get "hasMermaid" }}<p class="content-loader text-center">loading..</p>{{end}}
 
-          <div class="content content-hidden">
+          <div class="content {{ if .Page.Store.Get `hasMermaid` }}content-hidden{{end}}">
             {{ with site.GetPage "mindmaps" }}
             {{ with .Params.all_mindmaps_button }}
             <a href="{{.link | relLangURL}}" class="border rounded py-1 pe-2 ps-1 d-inline-flex align-item-center line-height-0">
@@ -81,71 +81,7 @@ style="background-image: url({{$img.RelPermalink}});
             {{.Content}}
           </div>
 
-          {{ range .Data.Pages }}
-          <div 
-            class="offcanvas offcanvas-end fade" 
-            tabindex="-1" 
-            id="{{.Title | urlize}}" 
-            aria-labelledby="{{.Title | urlize}}" 
-            style="width:500px; transform:none"
-          >
-            <div class="offcanvas-header">
-              <h4 class="offcanvas-title" id="offcanvasExampleLabel">{{.Title}}</h4>
-              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-            </div>
-            <div class="offcanvas-body">
-              <div class="content">
-                {{.Content}}
-              </div>
-            </div>
-          </div>
-          {{ end }}
-
-          {{ if .Page.Store.Get "hasMermaid" }}
-          <script type="module">
-            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-            mermaid.initialize({
-              startOnLoad: true,
-              securityLevel: 'loose',
-            });
-
-            function urlize(str) {
-              str = str.trim();
-              str = str.replace(/\s+/g, '-');
-              str = str.replace(/[^\w-]/g, '');
-              str = str.replace(/-{2,}/g, '-');
-              str = str.toLowerCase();
-              return str;
-            }
-
-            window.addEventListener('load', (event) => {
-              const contentLoader = document.querySelector('.content-loader');
-              const content = document.querySelector('.content');
-              contentLoader.remove();
-              content.classList.remove('content-hidden');
-
-              setTimeout(function() {
-                let node = document.querySelectorAll('.mindmap-node:not(.section-root):not(.node)');
-                node.forEach(function(el) {
-                  let innerText = el.querySelectorAll('.text-inner-tspan');
-                  const textArray = [];
-                  innerText.forEach((text) => {
-                    textArray.push(text.textContent);
-                  });
-                  const textID = textArray.join(' ');
-                  
-                  el.setAttribute('type', 'button');
-                  el.setAttribute('data-roadmap', '');
-                  el.setAttribute('data-bs-toggle', 'offcanvas');
-                  el.setAttribute('data-bs-target', '#'+urlize(textID));
-                  el.setAttribute('aria-controls', urlize(textID));
-                  
-                });
-              }, 1000);
-            });
-
-          </script>
-          {{ end }}
+          {{ partial "mermaid-script" . }}
 
         {{ end }}
       </div>

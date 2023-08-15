@@ -28,6 +28,10 @@ This is the repo to manage all the website work, which is being developed using 
 > How to change bg color, text, etc for call-to-action and footer area
 > https://github.com/intelops/website/issues/99#issuecomment-1529354004 
 > https://github.com/intelops/website/pull/139 
+> 
+> 
+> change texts color in banner areas from markdown itself - https://github.com/intelops/website/issues/140 
+> 
 
 > How to change content areas Text, Colors, BG color, etc.
 > https://github.com/intelops/website/issues/107 
@@ -53,5 +57,8 @@ This is the repo to manage all the website work, which is being developed using 
 > To add/update Google Tag Manager (GTM) code - https://github.com/intelops/website/issues/201 
 
 > To add/modify opengraph metadata information and verify using ograph previewer browser extension - https://github.com/intelops/website/issues/176 
+>
+> How to add mindmaps to blogs, learning-center articles, or separate Mindmaps to the site? - https://github.com/intelops/website/issues/105 
+> This issue has the samples for reference. Add interactive diagrams using mermaid in Markdown. 
 >
 > 
