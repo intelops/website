@@ -60,5 +60,5 @@ auth_token= (PAT created using the private github account)
 3. Close and re-launch VSCode for the changes to take effect.
 
 # Conclusion
-In this blog, we looked at why we need Personal Access Tokens and how you can add them into your VSCode. If you would like to see an example for this on further steps to access a private repository you can look at [Install Intelops-UI package to your Code blog](https://intelops.ai/learning-center/learn-intelops-ui/getting-started/installation/).
+In this blog, we looked at why we need Personal Access Tokens and how you can add them into your VSCode. If you would like to see an example for this on further steps to access a private repository you can look at [Install Intelops-UI package to your Code blog](https://intelops.ai/learning-center/8-internal-guidelines/intelops-frontend/getting-started/installation/).
 

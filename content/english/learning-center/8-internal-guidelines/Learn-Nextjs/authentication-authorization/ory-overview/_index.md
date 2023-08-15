@@ -43,7 +43,7 @@ ORY is basically an [open-source](https://www.ory.sh/open-source/) project which
 ![ory-types](ory.png)
 
 
-For installation you can follow: [Learn Ory integration in Next.js blog](https://intelops.ai/learning-center/learn-ory-integration/) in our learning center.
+For installation you can follow: [Learn Ory integration in Next.js blog](https://intelops.ai/learning-center/8-internal-guidelines/learn-nextjs/authentication-authorization/learn-ory-integration/) in our learning center.
 
  
 ## Conclusion
