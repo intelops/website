@@ -22,6 +22,9 @@ AUTHOR WEBSITE: https://gethugothemes.com
 </head>
 
 <body>
+	<!-- google tag manager noscript -->
+	{{ partial "gtm-noscript.html" . }}
+
 	<!-- cache partial only in production -->
 	{{ if hugo.IsProduction }}
 	{{ partialCached "preloader.html" . }}

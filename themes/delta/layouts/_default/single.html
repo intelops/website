@@ -64,16 +64,10 @@
           </span>
         </div>
 
-        <div class="content">
+        {{ if .Page.Store.Get "hasMermaid" }}<p class="content-loader text-center">loading..</p>{{end}}
+        <div class="content {{ if .Page.Store.Get `hasMermaid` }}content-hidden{{end}}">
           {{.Content}}
         </div>
-
-        {{ if .Page.Store.Get "hasMermaid" }}
-          <script type="module">
-            import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
-            mermaid.initialize({ startOnLoad: true });
-          </script>
-        {{ end }}
 
         {{ with site.GetPage (string .Params.Author | urlize | lower) }}
         {{if .Title}}
@@ -114,6 +108,8 @@
     </div>
   </div>
 </section>
+
+{{ partial "mermaid-script" . }}
 
 {{ if site.Params.blog_popup.enable }}
 {{ partial "popup-form" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}

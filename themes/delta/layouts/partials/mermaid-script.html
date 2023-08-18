@@ -1,0 +1,147 @@
+{{ if .Page.Store.Get "hasMermaid" }}
+
+{{ range where site.Pages "Section" .Section }}
+<div 
+  class="offcanvas offcanvas-end fade"
+  tabindex="-1" 
+  id="{{.Title | urlize}}" 
+  aria-labelledby="{{.Title | urlize}}" 
+  style="width:500px; transform:none"
+>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvasExampleLabel">{{.Title}}</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="content">
+      {{.Content}}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+{{ range .Data.Pages }}
+<div 
+  class="offcanvas offcanvas-end fade"
+  tabindex="-1" 
+  id="{{.Title | urlize}}" 
+  aria-labelledby="{{.Title | urlize}}" 
+  style="width:500px; transform:none"
+>
+  <div class="offcanvas-header">
+    <h4 class="offcanvas-title" id="offcanvasExampleLabel">{{.Title}}</h4>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div class="content">
+      {{.Content}}
+    </div>
+  </div>
+</div>
+{{ end }}
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({
+    startOnLoad: true,
+    securityLevel: 'loose',
+    theme: 'forest',
+  });
+
+  import zenuml from 'https://cdn.jsdelivr.net/npm/@mermaid-js/mermaid-zenuml/dist/mermaid-zenuml.esm.min.mjs';
+  await mermaid.registerExternalDiagrams([zenuml]);
+
+  function urlize(str) {
+    str = str.trim();
+    str = str.replace(/\s+/g, '-');
+    str = str.replace(/[^\w-]/g, '');
+    str = str.replace(/-{2,}/g, '-');
+    str = str.toLowerCase();
+    return str;
+  }
+
+  window.addEventListener('load', (event) => {
+    const body = document.querySelector('body');
+    const contentLoader = document.querySelector('.content-loader');
+    const content = document.querySelectorAll('.content');
+    contentLoader.remove();
+    content.forEach(function(el) {
+      el.classList.remove('content-hidden');
+    });
+
+    let addDataAttribute = (el, textID) => {
+      el.setAttribute('type', 'button');
+      el.setAttribute('data-mindmap', '');
+      el.setAttribute('data-bs-toggle', 'offcanvas');
+      el.setAttribute('data-bs-target', '#'+urlize(textID));
+      el.setAttribute('aria-controls', urlize(textID));
+    }
+
+    setTimeout(function() {
+      // maindmap
+      let mindmapNode = document.querySelectorAll('.mindmap-node:not(.section-root):not(.node)');
+      mindmapNode.forEach(function(el) {
+        let innerText = el.querySelectorAll('.text-inner-tspan');
+        const textArray = [];
+        innerText.forEach((text) => {
+          textArray.push(text.textContent);
+        });
+        const textID = textArray.join(' ');
+        let id = document.getElementById(urlize(textID));
+        if (id) { addDataAttribute(el, textID) }
+      });
+
+      // flowchart
+      let flowchartLabel = document.querySelectorAll('.flowchart-label');
+      let flowchartEdgeLabel = document.querySelectorAll('g.edgeLabel');
+      let flowchartLabels = [...flowchartLabel, ...flowchartEdgeLabel];
+      flowchartLabels.forEach(function(el) {
+        let nodeLabel = el.querySelectorAll('.nodeLabel');
+        let edgeLabel = el.querySelectorAll('.edgeLabel');
+        let allLabel = [...nodeLabel, ...edgeLabel];
+        const textArray = [];
+        allLabel.forEach((text) => {
+          textArray.push(text.textContent);
+        });
+        const textID = textArray.join(' ');
+        let id = document.getElementById(urlize(textID));
+        if (id) { addDataAttribute(el, textID) }
+      });
+
+      // C4Context
+      let personMan = document.querySelectorAll('.person-man');
+      let personManLabel = document.querySelectorAll('g.edgeLabel');
+      
+      personMan.forEach(function(el) {
+        const textArray = [];
+        let allLabel = el.querySelectorAll('text');
+        allLabel.forEach((text) => {
+          let fontSize = window.getComputedStyle(text).fontSize;
+          if (fontSize == '16px') {
+            textArray.push(text.textContent);
+          }
+        });
+        
+        const textID = textArray.join(' ');
+        let id = document.querySelector(`[aria-labelledby="${urlize(textID)}"]`);
+        if (id) { addDataAttribute(el, textID) }
+      });
+
+      // zenuml
+      let zenumlParticipant = document.querySelectorAll('.zenuml .participant');
+      let zenumlMessageName = document.querySelectorAll('.message .name');
+      let allZenuml = [...zenumlParticipant, ...zenumlMessageName];
+      
+      allZenuml.forEach(function(el) {
+        let label = el.querySelector('.name');
+        const textID = el.textContent;
+        let id = document.getElementById(urlize(el.innerText));
+        if (id) { addDataAttribute(el, textID) }
+      });
+
+
+    }, 1000);
+  });
+
+</script>
+{{ end }}

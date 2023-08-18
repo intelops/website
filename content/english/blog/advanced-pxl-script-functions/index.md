@@ -5,7 +5,7 @@ description: Combining all that we have learned into one script.
 image: images/blog/advanced-pxl-script-functions/online_test.svg
 
 cover_image: false
-cover_image_src:
+cover_image_src: ""
 cover_image_height: ""
 cover_image_width: ""
 

@@ -7,7 +7,7 @@ layout: "features"
 features:
   subtitle: "Capten stack"
   subtitle_color: ""
-  title: "Agnostic platform that always stays with you, to Empower Engineers"
+  title: "Agnostic platform that always stays with you"
   title_color: ""
   button:
     enable: false
@@ -57,7 +57,7 @@ features:
     features_color: "#FFD93D"
     title_color: ""
     icon: "images/icons/kubviz.svg"
-    content: "Observability for your git repos, container registry and kubernetes with ease."
+    content: "Unified Observability for git, containers, kubernetes and software supply chain security with ease."
     content_color: ""
     link: "/kubviz/"
     link_label: "Details"
@@ -66,7 +66,7 @@ features:
     features_color: "#7D42FB"
     title_color: ""
     icon: "images/icons/tarian.svg"
-    content: "Observability & Run-time security for threat elimination using eBPF cloud native ecosystem."
+    content: "Unified Run-time security for threat elimination using eBPF, for cloud native ecosystem."
     content_color: ""
     link: "/tarian/"
     link_label: "Details"

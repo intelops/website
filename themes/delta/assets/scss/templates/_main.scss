@@ -155,6 +155,7 @@ main:empty {
         border-bottom-left-radius: 25px;
         border-bottom-right-radius: 25px;
     }
+    .image,
     lottie-player {
       max-width: 85%;
       @include tablet {
@@ -1769,9 +1770,9 @@ footer {
 
 // animated section block
 [data-section] {
-  padding: 200px 0;
+  padding: 100px 0;
   @include desktop {
-    padding: 110px 0;
+    padding: 90px 0;
   }
 }
 .anim-block {
@@ -1818,21 +1819,75 @@ footer {
   }
   [data-image] {
     position: absolute;
-    top: 30%;
+    top: 100%;
     left: 50%;
     transform: translateX(-50%) scale(.6) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
-    width: 60%;
+    width: 100%;
     opacity: 0;
     visibility: hidden;
     transition: .23s;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
+    img {
+      width: 100%;
+    }
     &.show {
       transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
       transition-delay: .1s;
-      top: 20%;
+      top: 0%;
       opacity: 1;
       visibility: visible;
       transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
     }
   }
+}
+
+.mindmap-node {
+  user-select: none;
+  &.disable {
+    pointer-events: none;
+  }
+}
+.clickable {
+  cursor: pointer;
+  user-select: none;
+}
+[data-mindmap] {
+  * {
+    @extend .clickable;
+  }
+  @extend .clickable;
+  [class^="node-line"],
+  .node-bkg {
+    transition: .3s;
+  }
+  &:hover {
+    .node-bkg {
+      // fill: $color-primary !important;
+      filter: brightness(.9);
+    }
+    [class^="node-line"] {
+      stroke: $color-primary !important;
+    }
+    // text {
+    //   fill: $white !important;
+    // }
+  }
+}
+.roadmap-list-item {
+  padding-top: 14px;
+  padding-bottom: 14px;
+  transition: .3s;
+  border-color: #eeeeee !important;
+  &:hover {
+    opacity: .9;
+    transform: scale(0.995);
+    background-color: #eee;
+  }
+}
+.content-hidden {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  right: -200%;
+  top: -200%;
 }

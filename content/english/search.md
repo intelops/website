@@ -1,6 +1,6 @@
 ---
 title: "Search Result"
-description: "this is meta description"
+description: "Search Results"
 layout: "search"
 draft: false
 

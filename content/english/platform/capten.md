@@ -1,6 +1,6 @@
 ---
 title: "Capten"
-description: "It’s been a bloody long ride, but Cinderblock has officially launched!"
+description: "Universal and Agnostic Orchestrator!"
 
 url: capten
 draft: false
@@ -11,12 +11,8 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Test 1"
-    url: "/"
-  - name: "Another 2"
-    url: "/"
-  - name: "Test 3"
-    url: "/"
+  - name: "Capten Doc"
+    url: "https://docs.intelops.ai/latest/capten/"
 
   navigation_button:
     enable: true
@@ -29,21 +25,21 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#fa9e26"
-  subtitle: "We Are Delta"
+  bg_color: "#FF9E2C"
+  subtitle: "Be the Captain"
   subtitle_color: ""
-  title: "get fastest loan with smart way A seating home"
+  title: "Build Secure Cloud-Native Ecosystem!"
   title_color: ""
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
+  description: "Say goodbye to the trade-off between speed and security with Capten. The all-in-one DevSecOps platform facilitates close collaboration to build and manage cloud-native ecosystems for application and infrastructure modernization, automation, and security."
   description_color: ""
-  image: images/banner-about.png
+  image: images/banner/capten/capten-banner-image.svg
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
-    enable: true
+    enable: false
     label: "Watch demo"
     video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
 
@@ -52,66 +48,93 @@ image_and_content_block:
   enable: true
   blocks:
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Chaos at Work?"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "The Disconnect Between Dev, Sec, Ops & SRE"
     title_color: ""
-    image: "images/content/compage/what-is-compage.svg"
+    image: "images/content/capten/capten-row1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
-
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * **Toolchain Fatigue**: Disparate DevOps tools lead to fragmented development process and lack of visibility into the overall state of software.
+      * **No Self-Service**: Lack of self-service capabilities increases reliance on manual interventions, prolonging development cycles and impacting organizational profitability and sustainability.
+      * **Deprioritizing Security**: Treating security as an afterthought exposes software to security breaches and increase the risk of non-compliance with industry regulations and data protection laws.
+      * **Pressure to Ship**: Sacrificing security for speed leaves software vulnerable, compounded by imbalanced team sizes between development and security.
+      * **Proprietary Frameworks**: Tools with vendor lock-ins and proprietary frameworks make scalability and adapting to changing business needs a huge challenge.
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Empower"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Set Sail for Engineering Enablement With Capten"
     title_color: ""
-    image: "images/content/compage/how-it-works.svg"
+    image: "images/content/capten/capten-row2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#e9f1ff"
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Capten stack is an orchestration platform for engineering enablement and seamless collaboration while eliminating complexities of self-service implementation for agile DevSecOps, Developers Portal and Platform Engineering. All-in-One! 
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
+      * **Ecosystem**: Build and Manage your cloud-native ecosystem easily with GitOps, Chaos Engineering, Platform Engineering, Self-Service, Internal Developers Platform and Software Supply Chain Security. 
+
+      * **Boost Collaboration**: Collaborate effortlessly with distributed tracing, CICD integration, Testing and software supply chain security automation.
+
+      * **Drive Innovation**: Empower engineering teams with a universal orchestration framework, fostering collaboration and fueling digital transformation.
+
+      * **Standardize Security**: Run tools from a single platform, reduce duplicate results and false positives, and enable faster issue remediation and consistent application security automation processes.
+
+      * **Accelerate Release Velocity**: Deliver new builds quickly and effortlessly, streamline development pipelines, and increase automation for faster software progression.
+
 
   - enable: true
-    subtitle: "We Are Delta"
+    subtitle: "Features"
     subtitle_color: ""
-    title: "Lots of people love us, <br> and we're also."
+    title: "Self-Serve Orchestration Platform for Continuous Modernization"
     title_color: ""
-    image: "images/content/compage/integrations-features.svg"
+    image: "images/content/capten/capten-row3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
     content: |
-      Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.
+      Capten sails the isolated, full managed, certified and security hardened built-in Kubernetes ship. 
+      * Real-time insights for modern applications and cloud-native infrastructure for easier Ops and SRE.
+      * Automated Vulnerability Risk Management for Software Supply Chain Security.
+      * Distributed Tracing for efficient debugging and performance using openTelemetry (OTL).
+      * GitOps principles for consistent and secure Continuous Delivery & Continous Deployments.
+      * Backup and recovery capabilities to safeguard your control cluster(s) data and applications.
+      * Industry-best open-source tools to enhance your cloud-native ecosystem to always keep you up-to-date.
+      * Kubernetes native tool kits streamlined CI pipelines, enabling automated and efficient software delivery.
+      * Protect your cloud-native applications and infrastructure from threats and vulnerabilities.
+      * Automated secure software supply chain measures.
 
-      * luctus et ultrices uere cubia Curae Donec verglit
-      * Neque auctor congue leo eget malesuada Vivamus
-      * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
-      * Donec verglit neque, auctor congue leo  malesuada.
-  
+
+  - enable: true
+    subtitle: "Integrations"
+    subtitle_color: ""
+    title: "What Can be Integrated? No Limit!"
+    title_color: ""
+    image: "images/content/capten/capten-row4.svg"
+    content_position: "left" # Value will be - "left/right"
+    bg_color: ""
+    content_color: ""
+    content: |
+      * Your favorite tools and platforms in one place. 
+      * We heavly validate and support open-source. 
+      * Hand picked.
+      * We create and contribute to open-source projects. 
+      * Unified Orchestration.
+
+
 call_to_action:
   enable: true
-  title: "Start using <br/> Compage <br/> platform today..."
+  title: "Start using <br/> Capten <br/> platform today..."
   title_color: "#fff"
   # subtitle: ""
   # subtitle_color: ""
-  image: "images/call-to-actions/compage/robo-image.svg"
+  image: "images/call-to-actions/capten/robo-image.svg"
   button_label: "Get Started"
   button_link: "contact/"
-  bg_color: "#005DFF"
+  bg_color: "#FF9E2C"
   bottom_bg_color: "#080338"
 
 # footer:

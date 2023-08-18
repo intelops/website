@@ -4,6 +4,8 @@ languageName = "En"
 languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
+
+[en.params]
 # copyright
 copyright = "Copyright @ IntelOps, Inc."
 
@@ -15,6 +17,8 @@ languageName = "Fr"
 languageCode = "fr-fr"
 contentDir = "content/french"
 weight = 2
+
+[fr.params]
 home = "Accueil"
 # copyright
 copyright = "Copyright @ IntelOps, Inc."

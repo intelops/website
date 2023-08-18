@@ -3,14 +3,14 @@ author = "Intelops"
 career_form_action = "#!"
 contact_form_action = "#!"
 custom_script = ""
-description = "This is meta description"
+description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
 email = "info@email.com"
-favicon = "images/favicon/favicon-32x32.png"
+favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
 
-logo = "images/logos/logo-dark.svg"
-logo_light = "images/logos/logo-light.svg"
-logo_dark = "images/logos/logo-dark.svg"
+logo = "images/logos/new-logo-dark.svg" #This is the main logo displayed on the header bar
+logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
+logo_dark = "images/logos/new-logo-dark.svg"
 footer_logo_dark = false
 logo_webp = false
 
@@ -19,6 +19,17 @@ logo_width = "130px"
 mainSections = ["blog"]
 mobile = "+211234565523"
 fullSiteSearch = true
+
+# google tag manager, see https://developers.google.com/tag-manager/
+google_tag_manager = "GTM-PVRN5BQ"
+
+# seo meta data for OpenGraph / Twitter Card
+[metadata]
+keywords = ["Intelops", "Cloud-Native", "Ai", "DevOps", "SRE", "Kubernetes", "Talent", "Democratize", "Next-Gen"]
+description = "Democratizing Cloud Native. Making Imagination a Reality."
+author = "Intelops"
+image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
+
 [footer]
 footer_light = false
 # bg_color = "#1e384c"
@@ -28,9 +39,9 @@ bg_image_overlay_color = "rgba(0,0,0,.65)"
 button_label = "Contact Us"
 button_link = "contact/"
 enable = true
-image = "images/footer/compage/compage.svg"
-subtitle = "We heard the pain of building the Talent, keeping up with Concepts, Culture, Technology and Tools. We have been there! Hence, we built the new Ai-based automated solution to solve the problems for everyone."
-title = "Looking for Cloud-Native Talent? <br> Let us make your life easy!"
+image = "images/footer/homepage/contact-image.svg"
+subtitle = "Finding the right talent is pain. More so, keeping up with concepts, culture, technology and tools. We all have been there. Our AI-based automated solutions helps eliminate these issues, making your teams lives easy."
+title = "Looking for Cloud-Native Implementation?"
 [cookies]
 button = "I Accept"
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
@@ -49,6 +60,9 @@ link = "#!"
 enable = false
 preloader = "images/loader.png"
 
+[clickup_form]
+enable = true
+
 [newsletter]
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7520/VCGTBDZHNQ41SR6Y97"
@@ -61,6 +75,10 @@ clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5C
 [learning_center_popup]
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5CQC8LRFXTUBND"
+
+[opensource_security_reporting]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12190/UD4AJPCTSDU2IS70Q0"
 
 [[social]]
 icon = "fab fa-facebook"
