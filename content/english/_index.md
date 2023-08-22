@@ -2,17 +2,19 @@
 banner:
   subtitle: 
   subtitle_color: ""
-  title: IntelOps Ai <br/> Coming Soon
+  title: Be Future-Ready With our SaaS 2.0
   title_color: ""
   description:
-    Website is under active development.<br><br>
-    Our products are currently in Stealth mode development.<br><br>
-    Building the Next-Gen Tech For Cloud-Native.<br><br>
-    Ai-based framework to democratize Cloud Native Technology.
+    Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
+    Ai-based / Self-Service platform to democratize Cloud Native. <br><br>
+    Website is under active development. Still, checkout the content we have!<br>
+    Our products are currently in Stealth mode.
+    
+          
   description_color: ""
   button:
-    enable: true
-    label: Get started now
+    enable: false
+    label: Contact Us
     icon: fas fa-arrow-right
     link: contact/
   video_button:
@@ -20,9 +22,23 @@ banner:
     label: Watch demo
     video_url: 
 
+  join_waitlist:
+    enable: true
+    button_label: "Join Waitlist"
+    clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
+
+  # If lottie is enable image will not show as static image. Automatically lottie animation will load.
+  image:
+    enable: true
+    src: "images/banner/homepage/homepage-banner.svg"
+    background: "#4B4B4C" # original used color code - 4B4B4C or use 121826 or 454545 or 4f4b49
+    padding: "60px 0"
+
+  # If lottie is disabled then static image will show in that place automatically. 
   lottie: 
-    json: "lottie/lottie.json"
-    background: "#eee"
+    enable: true
+    json: "lottie/homepage_concept.json"
+    background: "#4B4B4C"
     speed: "1"
     loop: "true"
     autoplay: "true"
@@ -30,7 +46,7 @@ banner:
 
 brands:
   enable: true
-  title: Trusted by fast growing brands and enterprises. <br> Be the Captain.
+  title: Next-Gen Cloud-Native Tech <br> for Fast Growing Brands & Enterprises. <br> Be the Captain.
   title_color: ""
   images:
   # - images/clients/01.png
@@ -45,11 +61,11 @@ features:
 
 platforms:
   enable: true
-  title: "How capten stack works? <br/> Check our Platform pages."
+  #title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
-  image: "images/footer/compage/compage.svg"
+  #image: "images/footer/compage/compage.svg"
   button:
-    enable: true
+    enable: false
     label: "Platform"
     icon: "fas fa-arrow-right"
     #link: "/capten"
@@ -57,10 +73,11 @@ platforms:
 
     
 how_it_works:
-  enable: true
+  enable: false
   section: how-it-works
+
 image_and_content_block:
-  enable: true
+  enable: false
   subtitle: We Are IntelOps
   subtitle_color: ""
   #title: Lots of people love us, <br> and we're also.
@@ -74,8 +91,9 @@ image_and_content_block:
    # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
    # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
+  
 slider_and_content_block:
-  enable: true
+  enable: false
   subtitle: We Are Intelops
   subtitle_color: ""
   title: This section is coming soon
@@ -93,7 +111,7 @@ slider_and_content_block:
 
 
 testimonials:
-  enable: true
+  enable: false
   subtitle: People Love Us
   subtitle_color: ""
   #title: about Three million users <br> Testimonial Together
@@ -127,9 +145,9 @@ blog:
   enable: true
   subtitle: Recent Articles
   subtitle_color: ""
-  title: Check out what we are cooking
+  title: "Inside the Lab: Innovation in the Making"
   title_color: "black"
-  description: We love solving problems. <br> Check out and let us know what you want us to build for you.
+  description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
   description_color: ""
   button:
     enable: true

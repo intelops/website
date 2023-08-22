@@ -1,6 +1,6 @@
 ---
 title: "Compage"
-description: "It’s been a long ride, but we made it possible. Discover the low-code platform for multiple programming languages to empower developers for cloud native development."
+description: "It’s been a long ride, but we made it possible. Discover the Universal Development platform for multiple programming languages to empower developers for cloud native development."
 
 url: compage
 draft: false
@@ -11,8 +11,8 @@ navigation:
   logo_text_color: "secblack"
   
   menu:
-  - name: "Compage Docs"
-    url: "https://docs.intelops.ai/1.0.0/compage/"
+  - name: "Compage Doc"
+    url: "https://docs.intelops.ai/latest/compage/"
   # - name: "Another 2"
   #   url: "/"
   # - name: "Test 3"
@@ -40,7 +40,7 @@ banner:
   button:
     enable: true
     label: "Get started now"
-    icon: "fas fa-arrow-right"
+    #icon: "fas fa-arrow-right"
     link: "contact/"
   video_button:
     enable: false
@@ -104,7 +104,7 @@ image_and_content_block:
   
 call_to_action:
   enable: true
-  title: "Start using <br/> Compage <br/> platform today. <br/> Or need help with cloud-native applications development?"
+  title: "Start using <br/> Compage <br/> today. <br/> Or need help with cloud-native applications development?"
   title_color: "#fff"
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Talk2Us"

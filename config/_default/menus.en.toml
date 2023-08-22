@@ -62,69 +62,107 @@ weight = 2
 isMenuLarge = true
 
 [[main]]
-name = "Capten"
-parent = "Platform"
-url = "/capten"
-weight = 3
-pre = "images/icons/capten.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
-
-[[main]]
 name = "Compage"
 parent = "Platform"
 url = "/compage"
-weight = 2
+weight = 1
 pre = "images/icons/compage.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
+post = "<small>Developers' Delight</small>"
+
+[[main]]
+name = "Capten"
+parent = "Platform"
+url = "/capten"
+weight = 2
+pre = "images/icons/capten.svg"
+post = "<small>Universal Orchestrator</small>"
+
+[[main]]
+name = "QualityTrace"
+parent = "Platform"
+url = "/quality-trace"
+weight = 3
+pre = "images/icons/quality-trace.svg"
+post = "<small>Tracing Based Testing</small>"
 
 [[main]]
 name = "Opty"
 parent = "Platform"
 url = "/opty"
-weight = 1
+weight = 4
 pre = "images/icons/opty.svg"
-post = "<small>Convert leads and close sales deals faster.</small>"
+post = "<small>Optimize What You Want</small>"
+
+[[main]]
+name = "KubViz"
+parent = "Platform"
+url = "/kubviz"
+weight = 5
+pre = "images/icons/kubviz.svg"
+post = "<small>Observability for Ops & SREs</small>"
+
+[[main]]
+name = "Tarian"
+parent = "Platform"
+url = "/tarian"
+weight = 6
+pre = "images/icons/tarian.svg"
+post = "<small>Run Time Protection for K8s</small>"
 
 [[main]]
 name = "Learning Center"
 url = "learning-center/"
-weight = 3
+weight = 4
 
-[[main]]
-name = "Open Source"
-url = "/opensource"
-weight = 10
-[main.params]
-isMenuLarge = true
+# [[main]]
+# name = "Open Source"
+# url = "/opensource"
+# weight = 10
+# [main.params]
+# isMenuLarge = true
 
-[[main]]
-name = "Our open source"
-parent = "Open Source"
-url = "/our-open-source"
-weight = 1
-pre = "images/icons/opensource.png"
-post = "<small>Convert leads and close sales deals faster.</small>"
+# [[main]]
+# name = "Our open source"
+# parent = "Open Source"
+# url = "/our-open-source"
+# weight = 1
+# pre = "images/icons/opensource.png"
+# post = "<small>Convert leads and close sales deals faster.</small>"
 
-[[main]]
-name = "Contributed open source"
-parent = "Open Source"
-url = "/contributed-open-source"
-weight = 2
-pre = "images/icons/opensource.png"
-post = "<small>Convert leads and close sales deals faster.</small>"
+# [[main]]
+# name = "Contributed open source"
+# parent = "Open Source"
+# url = "/contributed-open-source"
+# weight = 2
+# pre = "images/icons/opensource.png"
+# post = "<small>Convert leads and close sales deals faster.</small>"
 
 [[main]]
 name = "Blogs"
 url = "blog/"
 weight = 20
+
 [[main]]
 name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 30
-#[[main]]
-#name = "Services"
-#url = "services/"
-#weight = 40
+
+# [[main]]
+# name = "Services"
+# url = "/services-form"
+# weight = 40
+# [main.params]
+# isMenuLarge = true
+# parent= "Services"
+# [[main]]
+# name = "Custom Services"
+# parent = "Services"
+# url = "/services-form"
+# weight = 1
+# pre = "images/icons/opensource.png"
+# post = "<small>Cloud Native Development Services, and SRE, DevSecOps & Platform Engineering Services</small>"
+
+
 [[main]]
 hasChildren = true
 name = "Resources"
@@ -135,23 +173,28 @@ name = "About"
 parent = "Resources"
 url = "about/"
 weight = 2
+# [[main]]
+# name = "Team"
+# parent = "Resources"
+# url = "team/"
+# weight = 2
 [[main]]
-name = "Team"
+name = "Mindmaps"
 parent = "Resources"
-url = "team/"
-weight = 2
+url = "mindmaps/"
+weight = 3
 [[main]]
 name = "Contact"
 parent = "Resources"
 url = "contact/"
-weight = 2
-[[main]]
-name = "Certified"
-parent = "Resources"
-url = "certified/"
-weight = 2
-[[main]]
-name = "Partner Program"
-parent = "Resources"
-url = "partner-program/"
-weight = 2
+weight = 1
+# [[main]]
+# name = "Certified"
+# parent = "Resources"
+# url = "certified/"
+# weight = 2
+# [[main]]
+# name = "Partner Program"
+# parent = "Resources"
+# url = "partner-program/"
+# weight = 2
