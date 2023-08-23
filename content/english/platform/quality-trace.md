@@ -131,8 +131,8 @@ call_to_action:
   # subtitle: ""
   # subtitle_color: ""
   image: "images/call-to-actions/qt/robo-image.svg"
-  button_label: "Get Started"
-  button_link: "contact/"
+  button_label: "Talk2Us"
+  button_link: "/product-demo-request-form/"
   bg_color: "#00B8D4"
   bottom_bg_color: "#080338"
 

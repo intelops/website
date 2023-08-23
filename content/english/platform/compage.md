@@ -108,7 +108,7 @@ call_to_action:
   title_color: "#fff"
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Talk2Us"
-  button_link: "contact/"
+  button_link: "/product-demo-request-form/"
   bg_color: "#005DFF"
   bottom_bg_color: "#080338"
 
