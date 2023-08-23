@@ -107,8 +107,8 @@ call_to_action:
   title: "Start using <br/> Opty <br/> today..."
   title_color: "#fff"
   image: "images/call-to-actions/opty/robo-image.svg"
-  button_label: "Get Started"
-  button_link: "contact/"
+  button_label: "Talk2Us"
+  button_link: "/product-demo-request-form/"
   bg_color: "#7FDCA4"
   bottom_bg_color: "#080338"
 

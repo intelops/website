@@ -1,9 +1,9 @@
 ---
-title: Contact
+title: Contact Us
 description: Contact us to schedule a demo about our products and services.
 searchKeyword: "contact, contact us"
 layout: contact
-bannertext: Contact
+bannertext: Talk2Us
 bannertext_color: ""
 bannerimage: images/banner/contactpage/contactpage-banner-image.svg
 enable: true
@@ -23,8 +23,6 @@ contact_info:
   title_color : ""
   icon_color : ""
   address_list:
-  #- "thedelta@gmail.com"
-  #- "(207) 555-0119"
   - IntelOps, Inc
   - "5055 Keller Springs Rd #200, Addison, TX USA 75001"
   - "My Home Twitza,TSIIC Hyderabad Knowledge City, Raidurg, Panmaktha, Rangareddy, Telangana, India 500081"

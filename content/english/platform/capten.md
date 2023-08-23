@@ -132,8 +132,8 @@ call_to_action:
   # subtitle: ""
   # subtitle_color: ""
   image: "images/call-to-actions/capten/robo-image.svg"
-  button_label: "Get Started"
-  button_link: "contact/"
+  button_label: "Talk2Us"
+  button_link: "/product-demo-request-form/"
   bg_color: "#FF9E2C"
   bottom_bg_color: "#080338"
 
