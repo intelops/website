@@ -62,16 +62,16 @@
   translation: Upload CV
 
 - id: footer_menu_1_title
-  translation: Products
+  translation: Platform
 
 - id: footer_menu_2_title
-  translation: Services
+  translation: Resources
 
 - id: footer_menu_3_title
   translation: Support
 
 - id: footer_menu_4_title
-  translation: Resources
+  translation: Quick Links
 
 - id: footer_menu_5_title
   translation: Other Pages
