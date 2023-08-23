@@ -1,6 +1,6 @@
 ---
 date: 2023-08-22
-title: Developing a Procurement Solution With Compage - A Step-by-Step Use Case
+title: Developing a Procurement Solution With Compage - A Step-by-Step Example Use Case
 description: Compage Use Case
 image: images/blog/developing-a-procurement-solution-with-compage-a-step-by-step-use-case/procurement-use-case-blog-image-02.png
 cover_image: false
