@@ -6,9 +6,9 @@ banner:
   title_color: ""
   description:
     Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
-    Ai-based / Self-Service platform to democratize Cloud Native. <br><br>
-    Website is under active development. Still, checkout the content we have!<br>
-    Our products are currently in Stealth mode.
+    Engineering Enablement with Self-Service based Platform-Engineering Stack. <br><br>
+    Our Products are currently in Stealth mode.<br>
+    Join the waitlist & be the first to know about the launch.
     
           
   description_color: ""

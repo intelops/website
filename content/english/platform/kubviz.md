@@ -13,6 +13,8 @@ navigation:
   menu:
   - name: "KubViz Doc"
     url: "https://docs.intelops.ai/latest/kubviz/"
+  - name: "GitHub"
+    url: "https://github.com/intelops/kubviz"
 
   navigation_button:
     enable: true
@@ -22,7 +24,7 @@ navigation:
   navigation_button_two:
     enable: true
     label: "Book Demo"
-    link: "#!"
+    link: "/product-demo-request-form/"
 
 banner:
   bg_color: "#FFD93D"
@@ -35,9 +37,9 @@ banner:
   image: images/banner/kubviz/kubviz-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
+    label: "Book a Demo"
     #icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "/product-demo-request-form/"
   video_button:
     enable: false
     label: "Watch demo"
@@ -113,7 +115,7 @@ call_to_action:
   title: "Start using <br/> KubViz <br/> today..."
   title_color: "#fff"
   image: "images/call-to-actions/kubviz/robo-image.svg"
-  button_label: "Talk2Us"
+  button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
   bg_color: "#FFD93D"
   bottom_bg_color: "#080338"

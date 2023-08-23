@@ -22,7 +22,7 @@ navigation:
   navigation_button_two:
     enable: true
     label: "Book Demo"
-    link: "#!"
+    link: "/product-demo-request-form/"
 
 banner:
   bg_color: "#7FDBE9"
@@ -35,9 +35,9 @@ banner:
   image: images/banner/qt/qt-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
+    label: "Book a Demo"
     #icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "/product-demo-request-form/"
   video_button:
     enable: false
     label: "Watch demo"
@@ -131,7 +131,7 @@ call_to_action:
   # subtitle: ""
   # subtitle_color: ""
   image: "images/call-to-actions/qt/robo-image.svg"
-  button_label: "Talk2Us"
+  button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
   bg_color: "#00B8D4"
   bottom_bg_color: "#080338"
