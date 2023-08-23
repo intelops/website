@@ -13,6 +13,8 @@ navigation:
   menu:
   - name: "KubViz Doc"
     url: "https://docs.intelops.ai/latest/kubviz/"
+  - name: "GitHub"
+    url: "https://github.com/intelops/kubviz"
 
   navigation_button:
     enable: true
