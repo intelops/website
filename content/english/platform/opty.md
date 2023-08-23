@@ -22,7 +22,7 @@ navigation:
   navigation_button_two:
     enable: true
     label: "Book Demo"
-    link: "#!"
+    link: "/product-demo-request-form/"
 
 banner:
   bg_color: "#7FDCA4"
@@ -35,9 +35,9 @@ banner:
   image: images/banner/opty/opty-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
+    label: "Book a Demo"
     #icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "/product-demo-request-form/"
   video_button:
     enable: false
     label: "Watch demo"
@@ -107,7 +107,7 @@ call_to_action:
   title: "Start using <br/> Opty <br/> today..."
   title_color: "#fff"
   image: "images/call-to-actions/opty/robo-image.svg"
-  button_label: "Talk2Us"
+  button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
   bg_color: "#7FDCA4"
   bottom_bg_color: "#080338"
