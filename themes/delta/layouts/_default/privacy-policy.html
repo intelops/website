@@ -1,0 +1,18 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <span class="opacity-70">{{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+        <br>
+        <br>
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

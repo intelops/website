@@ -169,25 +169,35 @@ name = "Resources"
 url = "resources/"
 weight = 50
 [[main]]
+name = "Contact"
+parent = "Resources"
+url = "contact/"
+weight = 1
+[[main]]
 name = "About"
 parent = "Resources"
 url = "about/"
 weight = 2
+[[main]]
+name = "Mindmaps"
+parent = "Resources"
+url = "mindmaps/"
+weight = 3
 # [[main]]
 # name = "Team"
 # parent = "Resources"
 # url = "team/"
 # weight = 2
 [[main]]
-name = "Mindmaps"
+name = "Our Policies"
 parent = "Resources"
-url = "mindmaps/"
-weight = 3
+url = "licensing-terms-conditions/"
+weight = 4
 [[main]]
-name = "Contact"
+name = "Privacy Policy"
 parent = "Resources"
-url = "contact/"
-weight = 1
+url = "privacy-policy/"
+weight = 4
 # [[main]]
 # name = "Certified"
 # parent = "Resources"
