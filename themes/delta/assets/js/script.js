@@ -114,8 +114,8 @@ $(document).ready(function () {
   }
 
   // table of content
-  if ($(".larning-center #TableOfContents li").length > 0) {
-    new ScrollMenu(".larning-center #TableOfContents a", {
+  if ($(".learning-center #TableOfContents li").length > 0) {
+    new ScrollMenu(".learning-center #TableOfContents a", {
       duration: 400,
       activeOffset: 40,
       scrollOffset: 10,

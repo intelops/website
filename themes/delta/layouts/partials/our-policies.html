@@ -1,4 +1,5 @@
 {{ "<!-- details page -->" | safeHTML }}
+
 <section class="get-content-block-height">
   <div class="container-fluid">
     <div class="row">
@@ -19,7 +20,7 @@
               <line x1="4" y1="12" x2="20" y2="12"></line>
               <line x1="4" y1="18" x2="20" y2="18"></line>
             </svg>
-           <span class="d-inline-block" style="transform:translateY(2px)">Navigate Learning Center</span>
+           <span class="d-inline-block" style="transform:translateY(2px)">Navigate Policies</span>
           </button>
 
           {{ if gt .WordCount 100 }}
@@ -101,10 +102,6 @@
     </div>
 
     {{ partial "mermaid-script" . }}
-
-    {{ if site.Params.learning_center_popup.enable }}
-    {{ partial "popup-form" (dict "Class" "learning-center-popup" "Src" site.Params.learning_center_popup.clickup_iframe_url) }}
-    {{ end }}
   </div>
 </section>
 {{ "<!-- /details page -->" | safeHTML }}
