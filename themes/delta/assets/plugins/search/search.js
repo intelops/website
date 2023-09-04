@@ -34,7 +34,7 @@ function initLunr() {
 
         let formSection = document
           .querySelectorAll("[data-formsection]")[0]
-          .getAttribute("data-formsection");
+          ?.getAttribute("data-formsection");
 
         // Feed lunr with each file and let lunr actually index them
         pagesIndex.forEach(function (page) {
