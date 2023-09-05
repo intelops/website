@@ -1,57 +1,97 @@
-product_optimizor = []
+# product_optimizor = []
 [[footer_menu_1]]
-name = "Our open source"
-url = "#!"
+name = "Compage"
+url = "/compage"
+weight = 1
+[[footer_menu_1]]
+name = "Capten"
+url = "/capten"
 weight = 2
 [[footer_menu_1]]
-name = "Contributed open source"
-url = "#!"
+name = "QualityTrace"
+url = "/quality-trace"
 weight = 3
-[[footer_menu_3]]
-name = "About"
-url = "/about/"
-weight = 1
-[[footer_menu_3]]
-name = "Contact"
-url = "/contact/"
-weight = 1
-[[footer_menu_3]]
-name = "Privacy Policy"
-url = "#!"
-weight = 2
-[[footer_menu_3]]
-name = "Terms & Conditions"
-url = "#!"
-weight = 3
-[[footer_menu_4]]
-name = "Certified"
-url = "#!"
-weight = 1
-[[footer_menu_4]]
-name = "Partner Program"
-url = "#!"
-weight = 2
-[[footer_menu_4]]
-name = "Team"
-url = "/team/"
-weight = 3
-[[footer_menu_5]]
+[[footer_menu_1]]
+name = "Opty"
+url = "/opty"
+weight = 4
+[[footer_menu_1]]
+name = "KubViz"
+url = "/kubviz"
+weight = 5
+[[footer_menu_1]]
+name = "Tarian"
+url = "/tarian"
+weight = 6
+
+[[footer_menu_2]]
 name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 1
-[[footer_menu_5]]
-name = "Blog"
-url = "/blog/"
+[[footer_menu_2]]
+name = "Blogs"
+url = "/blog"
 weight = 2
-[[footer_menu_5]]
-name = "Home"
-url = "/"
+[[footer_menu_2]]
+name = "Mindmaps"
+url = "/mindmaps"
 weight = 3
+[[footer_menu_2]]
+name = "Learning Center"
+url = "/learning-center"
+weight = 4
+# [[footer_menu_2]]
+# name = "Our OpenSource Projects"
+# url = "/kubviz"
+# weight = 5
+# [[footer_menu_2]]
+# name = "Contributed OpenSource Projects"
+# url = "/tarian"
+# weight = 6
 
-[[main]]
-name = "Home"
-url = "/"
+[[footer_menu_3]]
+name = "Services"
+url = "/services-form/"
 weight = 1
+# [[footer_menu_3]]
+# name = "Certified Partner Program"
+# url = "/certified-partner-program/"
+# weight = 2
+[[footer_menu_3]]
+name = "Contact Us"
+url = "/contact/"
+weight = 3
+# [[footer_menu_3]]
+# name = "Privacy Policy"
+# url = "#!"
+# weight = 4
+# [[footer_menu_3]]
+# name = "Terms & Conditions"
+# url = "#!"
+# weight = 5
+
+# [[footer_menu_4]]
+# name = "About Us"
+# url = "/about/"
+# weight = 1
+[[footer_menu_4]]
+name = "Book a Demo"
+url = "/contact/"
+weight = 2
+# [[footer_menu_4]]
+# name = "Login"
+# url = "https://capten.cloud/"
+# weight = 3
+# [[footer_menu_4]]
+# name = "Sign Up"
+# url = "https://capten.cloud/"
+# weight = 4
+
+# Display Home button in Header menu bar on top
+# [[main]]
+# name = "Home"
+# url = "/"
+# weight = 1
 
 [[main]]
 hasChildren = true
@@ -109,10 +149,10 @@ weight = 6
 pre = "images/icons/tarian.svg"
 post = "<small>Run Time Protection for K8s</small>"
 
-[[main]]
-name = "Learning Center"
-url = "learning-center/"
-weight = 4
+# [[main]]
+# name = "Learning Center"
+# url = "learning-center/"
+# weight = 4
 
 # [[main]]
 # name = "Open Source"
@@ -147,6 +187,7 @@ name = "Docs"
 url = "https://docs.intelops.ai/"
 weight = 30
 
+# services page
 # [[main]]
 # name = "Services"
 # url = "/services-form"
@@ -169,19 +210,19 @@ name = "Resources"
 url = "resources/"
 weight = 50
 [[main]]
-name = "Contact"
+name = "Our Policies"
 parent = "Resources"
-url = "contact/"
-weight = 1
+url = "licensing-terms-conditions/"
+weight = 5
 [[main]]
-name = "About"
+name = "Privacy Policy"
+parent = "Resources"
+url = "privacy-policy/"
+weight = 4
+[[main]]
+name = "About Us"
 parent = "Resources"
 url = "about/"
-weight = 2
-[[main]]
-name = "Mindmaps"
-parent = "Resources"
-url = "mindmaps/"
 weight = 3
 # [[main]]
 # name = "Team"
@@ -189,15 +230,20 @@ weight = 3
 # url = "team/"
 # weight = 2
 [[main]]
-name = "Our Policies"
+name = "Mindmaps"
 parent = "Resources"
-url = "licensing-terms-conditions/"
-weight = 4
+url = "mindmaps/"
+weight = 2
+# [[main]]
+# name = "Contact Us"
+# parent = "Resources"
+# url = "contact/"
+# weight = 3
 [[main]]
-name = "Privacy Policy"
+name = "Learning Center"
 parent = "Resources"
-url = "privacy-policy/"
-weight = 4
+url = "learning-center/"
+weight = 1
 # [[main]]
 # name = "Certified"
 # parent = "Resources"
@@ -208,3 +254,8 @@ weight = 4
 # parent = "Resources"
 # url = "partner-program/"
 # weight = 2
+
+[[main]]
+name = "Contact Us"
+url = "/contact/"
+weight = 60

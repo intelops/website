@@ -80,23 +80,28 @@ clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-7510/JF9T5C
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12190/UD4AJPCTSDU2IS70Q0"
 
-[[social]]
-icon = "fab fa-facebook"
-link = "#!"
-title = "facebook"
-[[social]]
-icon = "fab fa-twitter"
-link = "#!"
-title = "twitter"
-[[social]]
-icon = "fab fa-instagram"
-link = "#!"
-title = "instagram"
+[product_demo_request_form]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12812/WUKEDC5C93Y61XRFTE"
+
+
+# [[social]]
+# icon = "fab fa-facebook"
+# link = "#!"
+# title = "facebook"
+# [[social]]
+# icon = "fab fa-twitter"
+# link = "#!"
+# title = "twitter"
+# [[social]]
+# icon = "fab fa-instagram"
+# link = "#!"
+# title = "instagram"
 [[social]]
 icon = "fab fa-github"
-link = "#!"
+link = "https://github.com/intelops/"
 title = "github"
 [[social]]
 icon = "fab fa-linkedin"
-link = "#!"
+link = "https://www.linkedin.com/company/intelopsai/"
 title = "linkedin"

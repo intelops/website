@@ -13,6 +13,8 @@ navigation:
   menu:
   - name: "Compage Doc"
     url: "https://docs.intelops.ai/latest/compage/"
+  - name: "GitHub"
+    url: "https://github.com/intelops/compage"
   # - name: "Another 2"
   #   url: "/"
   # - name: "Test 3"
@@ -26,7 +28,7 @@ navigation:
   navigation_button_two:
     enable: true
     label: "Book Demo"
-    link: "contact/"
+    link: "/product-demo-request-form/"
 
 banner:
   bg_color: "#005DFF"
@@ -39,9 +41,9 @@ banner:
   image: images/banner/compage/compage-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
+    label: "Book a Demo"
     #icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "/product-demo-request-form/"
   video_button:
     enable: false
     label: "Watch demo"
@@ -107,8 +109,8 @@ call_to_action:
   title: "Start using <br/> Compage <br/> today. <br/> Or need help with cloud-native applications development?"
   title_color: "#fff"
   image: "images/call-to-actions/compage/robo-image.svg"
-  button_label: "Talk2Us"
-  button_link: "contact/"
+  button_label: "Book a Demo"
+  button_link: "/product-demo-request-form/"
   bg_color: "#005DFF"
   bottom_bg_color: "#080338"
 

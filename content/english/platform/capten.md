@@ -22,7 +22,7 @@ navigation:
   navigation_button_two:
     enable: true
     label: "Book Demo"
-    link: "#!"
+    link: "/product-demo-request-form/"
 
 banner:
   bg_color: "#FF9E2C"
@@ -35,9 +35,9 @@ banner:
   image: images/banner/capten/capten-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
+    label: "Book a Demo"
     #icon: "fas fa-arrow-right"
-    link: "contact/"
+    link: "/product-demo-request-form/"
   video_button:
     enable: false
     label: "Watch demo"
@@ -132,8 +132,8 @@ call_to_action:
   # subtitle: ""
   # subtitle_color: ""
   image: "images/call-to-actions/capten/robo-image.svg"
-  button_label: "Get Started"
-  button_link: "contact/"
+  button_label: "Book a Demo"
+  button_link: "/product-demo-request-form/"
   bg_color: "#FF9E2C"
   bottom_bg_color: "#080338"
 
