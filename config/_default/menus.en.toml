@@ -210,6 +210,16 @@ name = "Resources"
 url = "resources/"
 weight = 50
 [[main]]
+name = "Our Policies"
+parent = "Resources"
+url = "licensing-terms-conditions/"
+weight = 5
+[[main]]
+name = "Privacy Policy"
+parent = "Resources"
+url = "privacy-policy/"
+weight = 4
+[[main]]
 name = "About Us"
 parent = "Resources"
 url = "about/"
