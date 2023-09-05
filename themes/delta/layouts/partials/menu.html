@@ -1,9 +1,9 @@
 {{- $currentNode := . }}
 {{- $language := .Language }}
-{{- $learningCenter := where site.Pages "Params.type" "!=" nil }}
+{{- $data := where site.Pages "Params.type" "!=" nil }}
 
 <!-- .ByWeight -->
-{{- range $learningCenter.ByWeight }}
+{{- range $data.ByWeight }}
 
 {{ $currentSection := "" }}
 {{ $sliceSectionURL := split (string .RelPermalink) "/" }}
