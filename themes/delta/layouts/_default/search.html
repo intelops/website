@@ -10,6 +10,11 @@
             <script>
               var str = (window.location.search).substr(3);
               var result = str.replaceAll("+", " ");
+              if (result.includes("licensing-terms-conditions&s=")){
+                var result = result.replaceAll("licensing-terms-conditions&s=", "");
+              } else if (result.includes("learning-center&s=")){
+                var result = result.replaceAll("learning-center&s=", "");
+              }
               document.write(decodeURIComponent(result));
             </script>
           </span>
