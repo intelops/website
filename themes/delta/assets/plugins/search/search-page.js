@@ -28,21 +28,27 @@ var fuseOptions = {
   ],
 };
 
+var content = param("c");
 var searchQuery = param("s");
-if (searchQuery) {
+if (searchQuery && content) {
   $("#search-by").val(searchQuery);
-  executeSearch(searchQuery);
+  $("#search-content").val(content);
+  executeSearch({searchQuery: searchQuery, content: content});
 }
 
-function executeSearch(searchQuery) {
+function executeSearch({searchQuery, content}) {
   $.getJSON(indexURL, function (data) {
     var pages = data;
     var fuse = new Fuse(pages, fuseOptions);
     var result = fuse.search(searchQuery);
-
+    
     if (result.length > 0) {
       result.forEach(function (el) {
-        if ("Learning center" == el.item.section) {
+        if ((content == "licensing-terms-conditions") && ("Licensing terms conditions" == el.item.section)){
+          populateResults(el);
+        }
+
+        if ((content == "learning-center") && ("Learning center" == el.item.section)){
           populateResults(el);
         }
       });

@@ -65,10 +65,14 @@ weight = 3
 # name = "Privacy Policy"
 # url = "#!"
 # weight = 4
-# [[footer_menu_3]]
-# name = "Terms & Conditions"
-# url = "#!"
-# weight = 5
+[[footer_menu_3]]
+name = "Terms & Conditions"
+url = "/licensing-terms-conditions/2-terms-and-conditions"
+weight = 5
+[[footer_menu_3]]
+name = "Licensing"
+url = "/licensing-terms-conditions/1-licensing"
+weight = 6
 
 # [[footer_menu_4]]
 # name = "About Us"
@@ -209,6 +213,21 @@ hasChildren = true
 name = "Resources"
 url = "resources/"
 weight = 50
+[[main]]
+name = "Licensing"
+parent = "Resources"
+url = "licensing-terms-conditions/1-licensing"
+weight = 6
+[[main]]
+name = "Terms & Conditions"
+parent = "Resources"
+url = "licensing-terms-conditions/2-terms-and-conditions"
+weight = 5
+[[main]]
+name = "Privacy Policy"
+parent = "Resources"
+url = "privacy-policy/"
+weight = 4
 [[main]]
 name = "About Us"
 parent = "Resources"

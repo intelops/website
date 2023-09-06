@@ -1,0 +1,41 @@
+{{ define "main" }}
+
+{{ partial "page-header.html" . }}
+
+{{ if eq .RelPermalink "/licensing-terms-conditions/"}}
+<section class="section pb-0">
+  <div class="container container-delta">
+    <div class="row mb-5">
+      <div class="col-lg-7 mx-auto mb-0 mb-md-5">
+        {{ partial "policies-search.html" . }}
+      </div>
+    </div>
+    <div class="row">
+      {{ range (where .Pages "Section" "licensing-terms-conditions" ) }}
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card lc-card rounded-sm h-100">
+          <div class="card-body">
+            <div class="mb-1">
+              <h3 class="card-title h4 mb-1"><a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              {{with .Params.description}}<p class="mb-0">{{. | markdownify}}</p>{{end}}
+            </div>
+            <ul class="list-styled mb-0">
+              {{ range .Data.Pages }}
+              <li><a href="{{.Permalink}}">{{.Title}}</a></li>
+              {{end}}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else }}
+{{ partial "our-policies.html" . }}
+{{ end }}
+
+{{ partial "call-to-action-2.html" . }}
+
+{{ end }}

@@ -32,9 +32,14 @@ function initLunr() {
         this.pipeline.remove(lunr.stemmer);
         this.searchPipeline.remove(lunr.stemmer);
 
+        let formSection = document
+          .querySelectorAll("[data-formsection]")[0]
+          ?.getAttribute("data-formsection");
+
         // Feed lunr with each file and let lunr actually index them
         pagesIndex.forEach(function (page) {
-          if ("Learning center" == page.section) {
+          let currentSection = page.section.replace(/\s+/g, "-").toLowerCase();
+          if (currentSection === formSection) {
             this.add(page);
           }
         }, this);
