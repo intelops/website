@@ -48,12 +48,12 @@ content = "This site uses cookies. By continuing to use this website, you agree 
 enable = false
 expire_days = 2
 [navigation_button]
-enable = true
+enable = false #enable or disable login button on Header menu bar.
 icon = "far fa-user"
 label = "Log In"
 link = "#!"
 [navigation_button_two]
-enable = true
+enable = false #enable or disable sign up button on Header menu bar.
 label = "Sign Up Now"
 link = "#!"
 [preloader]
