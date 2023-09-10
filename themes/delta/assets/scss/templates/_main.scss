@@ -1947,10 +1947,12 @@ footer {
   }
   .cta-card {
     width: 100%;
+    display: flex;
     padding: 30px;
     max-width: 500px;
     min-height: 100%;
     border-radius: 14px;
+    flex-direction: column;
     border: 1px solid $border-color;
     &-header {
       gap: 20px;

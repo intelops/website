@@ -25,31 +25,31 @@ $(window).on("load", function () {
   }, 500);
 });
 
-  // Code Copy
-  // ----------------------------------------
-  let blocks = document.querySelectorAll(".code-highlight");
+// Code Copy
+// ----------------------------------------
+let blocks = document.querySelectorAll(".code-highlight");
 
-  async function copyCode(block, button) {
-    let code = block.querySelector("code");
-    let text = code.innerText;
-    await navigator.clipboard.writeText(text);
-    button.innerText = "copied";
-    setTimeout(() => {
-      button.innerText = "copy";
-    }, 700);
+async function copyCode(block, button) {
+  let code = block.querySelector("code");
+  let text = code.innerText;
+  await navigator.clipboard.writeText(text);
+  button.innerText = "copied";
+  setTimeout(() => {
+    button.innerText = "copy";
+  }, 700);
+}
+
+blocks.forEach((block) => {
+  if (navigator.clipboard) {
+    let button = document.createElement("span");
+    button.innerText = "copy";
+    button.className = "copy";
+    block.appendChild(button);
+    button?.addEventListener("click", async () => {
+      await copyCode(block, button);
+    });
   }
-
-  blocks.forEach((block) => {
-    if (navigator.clipboard) {
-      let button = document.createElement("span");
-      button.innerText = "copy";
-      button.className = "copy";
-      block.appendChild(button);
-      button?.addEventListener("click", async () => {
-        await copyCode(block, button);
-      });
-    }
-  });
+});
 
 // on ready state
 $(document).ready(function () {

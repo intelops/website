@@ -8,9 +8,9 @@ type : "learning-center"
 
 {{< cta-with-image-row >}}
 
-  {{< cta-with-image title=`Linux Networking With eBPF` image=`images/illustration/2.png` link=`"/` link-label=`See More`>}}
+  {{< cta-with-image title=`Linux Networking With eBPF` image=`images/illustration/2.png` link=`/` link-label=`See More`>}}
 
-  {{< cta-with-image title=`Socket Programming Essentials in C` bg-color=`#f0763214` image=`images/illustration/1.png` link=`/see-more` link-label=`See More`>}}
+  {{< cta-with-image title=`Socket Programming Essentials in C` bg-color=`#f0763214` image=`images/illustration/1.png` link=`/` link-label=`See More`>}}
 
 {{</ cta-with-image-row >}}
 
@@ -18,13 +18,13 @@ type : "learning-center"
 
 {{< cta-card-row >}}
 
-  {{< cta-card title=`Linux Networking With eBPF` icon=`far fa-lightbulb` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`"/learning-center/2-learn-ebpf/linux-networking-with-ebpf/` link-label=`See More`>}}
+  {{< cta-card title=`Linux Networking With eBPF` icon=`far fa-lightbulb` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/` link-label=`See More`>}}
 
-  {{< cta-card title=`Socket Programming Essentials in C` icon=`far fa-lightbulb` icon-color="white" icon-bg-color="#fb923b" description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/learning-center/2-learn-ebpf/linux-networking-with-ebpf/exploring-kernel-data-structures/`>}}
+  {{< cta-card title=`Socket Programming Essentials in C` icon=`far fa-lightbulb` icon-color=`white` icon-bg-color=`#fb923b` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/`>}}
 
-  {{< cta-card title=`Linux Networking With eBPF` icon=`far fa-lightbulb` icon-color="white" icon-bg-color="#fb923b" description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`"/learning-center/2-learn-ebpf/linux-networking-with-ebpf/` link-label=`See More`>}}
+  {{< cta-card title=`Linux Networking With eBPF` icon=`far fa-lightbulb` icon-color=`white` icon-bg-color=`#fb923b` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/` link-label=`See More`>}}
 
-  {{< cta-card title=`Socket Programming Essentials in C` icon=`far fa-lightbulb` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/learning-center/2-learn-ebpf/linux-networking-with-ebpf/exploring-kernel-data-structures/` link-label=`View Details`>}}
+  {{< cta-card title=`Socket Programming Essentials in C` icon=`far fa-lightbulb` description=`Curabitur arcu erat, accu msan id imperdiet et, porttitor at sem. Lorem ipsum dolor sit amet consectetur adipiscing elit. Vestibulum ac diam.` link=`/` link-label=`View Details`>}}
 
 {{</ cta-card-row >}}
 
