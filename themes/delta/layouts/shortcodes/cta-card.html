@@ -1,0 +1,29 @@
+{{ $title := .Get "title" }}
+{{ $description := .Get "description" }}
+{{ $icon := .Get "icon" }}
+{{ $icon_bg_color := default "#f9c31761" (.Get "icon-bg-color") }}
+{{ $icon_color := default "#000" (.Get "icon-color") }}
+{{ $link := .Get "link" }}
+{{ $link_label := default "View Details" (.Get "link-label") }}
+
+<div class="cta-card">
+  <div class="cta-card-header">
+    <div class="icon" style="background-color: {{$icon_bg_color}};color: {{$icon_color}};">
+      <i class="{{$icon}}"></i>
+    </div>
+    <h3 class="h5">{{ $title }}</h3>
+  </div>
+
+  {{ with $description }}
+    <div class="cta-card-body">
+      <p>{{.}}</p>
+    </div>
+  {{ end }}
+  
+  {{ with $link }}
+    <a href="{{ . | safeURL}}" class="cta-card-btn">
+      {{ $link_label }}
+      <svg width="21" height="14" viewBox="0 0 21 14" fill="currentcolor" xmlns="http://www.w3.org/2000/svg"><path d="M20.6187 7.61872C20.9604 7.27701 20.9604 6.72299 20.6187 6.38128L15.0503.812816C14.7085.471107 14.1545.471107 13.8128.812816 13.4711 1.15452 13.4711 1.70854 13.8128 2.05025L18.7626 7l-4.9498 4.9497C13.4711 12.2915 13.4711 12.8455 13.8128 13.1872 14.1545 13.5289 14.7085 13.5289 15.0503 13.1872l5.5684-5.56848zM0 7.875H20V6.125H0v1.75z" fill="currentcolor"></path></svg>
+    </a>
+  {{ end }}
+</div>

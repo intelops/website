@@ -1,16 +1,17 @@
 {{ $title := .Get "title" }}
-{{ $label := .Get "label" }}
 {{ $image := .Get "image" }}
 {{ $link := .Get "link" }}
+{{ $link_label := default "View Details" (.Get "link-label") }}
+{{ $bg_color := default "#ffd02f0d" (.Get "bg-color") }}
 
 
-<div class="cta-with-image {{if $image}}has-image{{end}}">
+<div class="cta-with-image {{if $image}}has-image{{end}}" style="background-color: {{$bg_color}};">
   <div>
     <h3 class="heading">
       {{ $title | markdownify }}
     </h3>
     <a href="{{ $link }}" class="btn btn-sm">
-      {{ $label | markdownify }}
+      {{ $link_label | markdownify }}
     </a>
   </div>
   {{with $image }}

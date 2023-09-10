@@ -796,12 +796,10 @@ form label {
   padding-bottom: 0 !important;
 }
 
-.highlight {
-  pre {
-    padding: 15px 20px;
-    * {
-      margin-bottom: 0 !important;
-    }
+.highlight:not(.code-highlight) pre {
+  padding: 15px 20px;
+  * {
+    margin-bottom: 0 !important;
   }
 }
 
