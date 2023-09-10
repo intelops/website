@@ -343,6 +343,13 @@ a:hover {
   color: $color-tertiary !important;
 }
 
+.bg-light {
+  background: $light !important;
+}
+.bg-light-soft {
+  background: lighten(saturate($light, 22.22), 26.27) !important;
+}
+
 .bg-quaternary {
   background: $color-quaternary !important;
 }

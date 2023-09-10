@@ -152,8 +152,8 @@ main:empty {
       height: 50px;
       bottom: 50%;
       z-index: -1;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
     }
     .image,
     lottie-player {
@@ -188,7 +188,7 @@ main:empty {
 }
 
 .bg-soft {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 
 // features-section
@@ -198,7 +198,7 @@ main:empty {
   &.features-creative {
     position: relative;
     z-index: 1;
-    background-color: #F7F7F7;
+    background-color: #f7f7f7;
 
     // features rows
     .features-row {
@@ -250,7 +250,7 @@ main:empty {
         }
       }
     }
-    
+
     &.features-block-2 {
       .block {
         padding: 40px 25px;
@@ -1796,7 +1796,7 @@ footer {
 }
 .assets {
   position: relative;
-  transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
   width: 35%;
   perspective: 1800px;
   transform: translateX(20%);
@@ -1805,38 +1805,41 @@ footer {
     display: block;
     will-change: transform;
     transform-origin: center top;
-    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transform: rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(-4e-5deg) rotateY(15deg) rotateX(9.99994deg);
   }
   &-right {
     transform: translateX(160%);
     .asset-bg-image {
-      transform: rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+      transform: rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg);
     }
     [data-image] {
-      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+      transform: translateX(-50%) scale(1) rotate(-4e-5deg) rotateY(-15deg)
+        rotateX(9.99994deg);
     }
   }
   [data-image] {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) scale(.6) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
+    transform: translateX(-50%) scale(0.6) rotate(-4e-5deg) rotateY(-15deg)
+      rotateX(9.99994deg);
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: .23s;
+    transition: 0.23s;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
     img {
       width: 100%;
     }
     &.show {
-      transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition-delay: .1s;
+      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition-delay: 0.1s;
       top: 0%;
       opacity: 1;
       visibility: visible;
-      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
+      transform: translateX(-50%) scale(1) rotate(-4e-5deg) rotateY(15deg)
+        rotateX(9.99994deg);
     }
   }
 }
@@ -1858,12 +1861,12 @@ footer {
   @extend .clickable;
   [class^="node-line"],
   .node-bkg {
-    transition: .3s;
+    transition: 0.3s;
   }
   &:hover {
     .node-bkg {
       // fill: $color-primary !important;
-      filter: brightness(.9);
+      filter: brightness(0.9);
     }
     [class^="node-line"] {
       stroke: $color-primary !important;
@@ -1876,10 +1879,10 @@ footer {
 .roadmap-list-item {
   padding-top: 14px;
   padding-bottom: 14px;
-  transition: .3s;
+  transition: 0.3s;
   border-color: #eeeeee !important;
   &:hover {
-    opacity: .9;
+    opacity: 0.9;
     transform: scale(0.995);
     background-color: #eee;
   }
@@ -1890,4 +1893,50 @@ footer {
   position: absolute;
   right: -200%;
   top: -200%;
+}
+
+// CTA With Image
+.cta-with-image-row {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 14px;
+
+  * {
+    margin-bottom: 0px !important;
+  }
+
+  .cta-with-image {
+    position: relative;
+    padding: 25px;
+    max-width: 480px;
+    width: 100%;
+    border-radius: 14px;
+    background-color: #f0f0f0;
+    height: 100%;
+
+    &.has-image {
+      padding-right: 100px;
+      @include mobile {
+        padding-right: 25px;
+      }
+    }
+
+    > div {
+      .heading {
+        font-weight: 500 !important;
+        margin-bottom: 24px !important;
+      }
+    }
+
+    .image {
+      position: absolute;
+      right: 0px;
+      bottom: 0px;
+      max-height: 100%;
+      @include mobile {
+        display: none;
+      }
+    }
+  }
 }

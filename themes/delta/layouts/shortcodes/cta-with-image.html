@@ -1,0 +1,19 @@
+{{ $title := .Get "title" }}
+{{ $label := .Get "label" }}
+{{ $image := .Get "image" }}
+{{ $link := .Get "link" }}
+
+
+<div class="cta-with-image {{if $image}}has-image{{end}}">
+  <div>
+    <h3 class="heading">
+      {{ $title | markdownify }}
+    </h3>
+    <a href="{{ $link }}" class="btn btn-sm">
+      {{ $label | markdownify }}
+    </a>
+  </div>
+  {{with $image }}
+    {{ partial "image" (dict "Src" . "Class" "image" "Alt" "illustration") }}
+  {{ end }}
+</div>
