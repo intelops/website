@@ -1,0 +1,7 @@
+<div class="code-highlight {{ if not (.Get `file-name`) }}no-file-name{{ end }} {{ if not (.Get `file-extension`) }}no-file-extension-name{{ end }}">
+  {{ if .Get "file-name" }}
+    <div class="file-name">{{ .Get "file-name" }}</div>
+  {{ end }}
+  {{ .Inner | markdownify }}
+  {{ if .Get "file-extension" }}<span class="file-extension">{{ .Get "file-extension" }}</span>{{ end }}
+</div>
