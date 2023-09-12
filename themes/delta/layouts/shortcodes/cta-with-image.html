@@ -1,0 +1,20 @@
+{{ $title := .Get "title" }}
+{{ $image := .Get "image" }}
+{{ $link := .Get "link" }}
+{{ $link_label := default "View Details" (.Get "link-label") }}
+{{ $bg_color := default "#ffd02f0d" (.Get "bg-color") }}
+
+
+<div class="cta-with-image {{if $image}}has-image{{end}}" style="background-color: {{$bg_color}};">
+  <div>
+    <h3 class="heading">
+      {{ $title | markdownify }}
+    </h3>
+    <a href="{{ $link }}" class="btn btn-sm">
+      {{ $link_label | markdownify }}
+    </a>
+  </div>
+  {{with $image }}
+    {{ partial "image" (dict "Src" . "Class" "image" "Alt" "illustration") }}
+  {{ end }}
+</div>
