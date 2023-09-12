@@ -1,7 +1,7 @@
 ---
 title: "Docbox Layouts"
 date: 2018-12-25T11:02:05+06:00
-draft: false
+draft: true
 description: "this is meta description"
 type : "learning-center"
 ---
