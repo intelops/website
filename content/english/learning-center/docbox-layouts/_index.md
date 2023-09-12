@@ -2,7 +2,7 @@
 title: "Docbox Layouts"
 date: 2018-12-25T11:02:05+06:00
 draft: true
-description: "this is meta description"
+description: "This is just a sample draft of how to use fancy content writing."
 type : "learning-center"
 ---
 
