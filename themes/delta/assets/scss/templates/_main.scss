@@ -152,8 +152,8 @@ main:empty {
       height: 50px;
       bottom: 50%;
       z-index: -1;
-      border-bottom-left-radius: 25px;
-      border-bottom-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
     .image,
     lottie-player {
@@ -188,7 +188,7 @@ main:empty {
 }
 
 .bg-soft {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 // features-section
@@ -198,7 +198,7 @@ main:empty {
   &.features-creative {
     position: relative;
     z-index: 1;
-    background-color: #f7f7f7;
+    background-color: #F7F7F7;
 
     // features rows
     .features-row {
@@ -250,7 +250,7 @@ main:empty {
         }
       }
     }
-
+    
     &.features-block-2 {
       .block {
         padding: 40px 25px;
@@ -1796,7 +1796,7 @@ footer {
 }
 .assets {
   position: relative;
-  transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
   width: 35%;
   perspective: 1800px;
   transform: translateX(20%);
@@ -1805,41 +1805,38 @@ footer {
     display: block;
     will-change: transform;
     transform-origin: center top;
-    transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-    transform: rotate(-4e-5deg) rotateY(15deg) rotateX(9.99994deg);
+    transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
   }
   &-right {
     transform: translateX(160%);
     .asset-bg-image {
-      transform: rotate(-4e-5deg) rotateY(-15deg) rotateX(9.99994deg);
+      transform: rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
     }
     [data-image] {
-      transform: translateX(-50%) scale(1) rotate(-4e-5deg) rotateY(-15deg)
-        rotateX(9.99994deg);
+      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
     }
   }
   [data-image] {
     position: absolute;
     top: 100%;
     left: 50%;
-    transform: translateX(-50%) scale(0.6) rotate(-4e-5deg) rotateY(-15deg)
-      rotateX(9.99994deg);
+    transform: translateX(-50%) scale(.6) rotate(-4e-05deg) rotateY(-15deg) rotateX(9.99994deg);
     width: 100%;
     opacity: 0;
     visibility: hidden;
-    transition: 0.23s;
+    transition: .23s;
     filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.2));
     img {
       width: 100%;
     }
     &.show {
-      transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-      transition-delay: 0.1s;
+      transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      transition-delay: .1s;
       top: 0%;
       opacity: 1;
       visibility: visible;
-      transform: translateX(-50%) scale(1) rotate(-4e-5deg) rotateY(15deg)
-        rotateX(9.99994deg);
+      transform: translateX(-50%) scale(1) rotate(-4e-05deg) rotateY(15deg) rotateX(9.99994deg);
     }
   }
 }
@@ -1861,12 +1858,12 @@ footer {
   @extend .clickable;
   [class^="node-line"],
   .node-bkg {
-    transition: 0.3s;
+    transition: .3s;
   }
   &:hover {
     .node-bkg {
       // fill: $color-primary !important;
-      filter: brightness(0.9);
+      filter: brightness(.9);
     }
     [class^="node-line"] {
       stroke: $color-primary !important;
@@ -1879,10 +1876,10 @@ footer {
 .roadmap-list-item {
   padding-top: 14px;
   padding-bottom: 14px;
-  transition: 0.3s;
+  transition: .3s;
   border-color: #eeeeee !important;
   &:hover {
-    opacity: 0.9;
+    opacity: .9;
     transform: scale(0.995);
     background-color: #eee;
   }
@@ -1893,164 +1890,4 @@ footer {
   position: absolute;
   right: -200%;
   top: -200%;
-}
-
-// CTA With Image
-.cta-with-image-row {
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 14px;
-
-  * {
-    margin-bottom: 0px !important;
-  }
-  .cta-with-image {
-    position: relative;
-    padding: 25px;
-    max-width: 500px;
-    width: 100%;
-    border-radius: 14px;
-    height: 100%;
-    &.has-image {
-      padding-right: 100px;
-      @include mobile {
-        padding-right: 25px;
-      }
-    }
-    .image {
-      position: absolute;
-      right: 0px;
-      bottom: 0px;
-      max-height: 100%;
-      @include mobile {
-        display: none;
-      }
-    }
-    > div {
-      .heading {
-        font-weight: 500 !important;
-        margin-bottom: 24px !important;
-      }
-    }
-  }
-}
-
-// CTA Card
-.cta-card-row {
-  gap: 20px;
-  display: flex;
-  flex-wrap: wrap;
-
-  * {
-    margin-bottom: 0px !important;
-  }
-  .cta-card {
-    width: 100%;
-    display: flex;
-    padding: 30px;
-    max-width: 500px;
-    min-height: 100%;
-    border-radius: 14px;
-    flex-direction: column;
-    border: 1px solid $border-color;
-    &-header {
-      gap: 20px;
-      display: flex;
-      align-items: center;
-      padding-bottom: 20px;
-      margin-bottom: 10px !important;
-      border-bottom: 1px solid $border-color;
-      .icon {
-        min-width: 50px;
-        height: 50px;
-        line-height: 50px;
-        text-align: center;
-        border-radius: 12px;
-      }
-      h3 {
-        font-weight: 400 !important;
-        margin-bottom: 0px !important;
-      }
-    }
-    &-body {
-      padding-top: 10px;
-      padding-bottom: 20px;
-    }
-    &-btn {
-      svg {
-        width: 16px;
-        margin-left: 5px;
-        transition: 0.4s all ease;
-      }
-      &:hover svg {
-        margin-left: 10px;
-      }
-    }
-  }
-}
-
-// Code Highlight
-.code-highlight {
-  overflow: hidden;
-  margin-top: 24px;
-  overflow: hidden;
-  position: relative;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  background-color: #272822;
-
-  &.no-file-name {
-    .file-extension {
-      top: 0px;
-    }
-    .copy {
-      top: 16px;
-    }
-    .pre {
-      padding-top: 65px !important;
-    }
-  }
-  .file-name {
-    color: $white;
-    font-size: 16px;
-    font-weight: 400;
-    padding-left: 20px;
-    padding-block: 16px;
-    background-color: lighten($color: #272822, $amount: 8);
-  }
-  .file-extension {
-    top: 59px;
-    left: 20px;
-    font-size: 12px;
-    padding-top: 8px;
-    font-weight: 500;
-    position: absolute;
-    padding-inline: 8px;
-    padding-bottom: 4px;
-    color: rgb(210, 202, 202);
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    background-color: lighten($color: #272822, $amount: 8);
-  }
-  .copy {
-    top: 76px;
-    right: 16px;
-    cursor: pointer;
-    font-size: 14px;
-    color: #c1bdbd;
-    padding-left: 16px;
-    border-radius: 6px;
-    padding-block: 6px;
-    position: absolute;
-    padding-right: 16px;
-    background: #3c3e35;
-  }
-  .highlight {
-    margin-top: 60px;
-    margin-bottom: 0px !important;
-  }
-  pre {
-    font-size: 16px;
-  }
 }
