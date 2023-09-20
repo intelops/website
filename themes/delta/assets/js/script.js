@@ -60,9 +60,9 @@ $(document).ready(function () {
 
     let contentBlock = document.querySelector('.get-content-block-height');
     let contentBlockHeight = contentBlock.scrollHeight;
-    
+
     $(window).scroll(function () {
-      if ($(window).scrollTop() >= (contentBlockHeight/2.5)) {
+      if ($(window).scrollTop() >= (contentBlockHeight * 0.85)) {
         if (sessionStorage.getItem('blogScrolledPopupHide') != 'true') {
           $('.blog-popup').addClass('show');
         }
@@ -71,11 +71,11 @@ $(document).ready(function () {
         }
       }
     });
-    
+
     $('[data-hide="scrolledPopup"').click(function () {
       scrolledPopup.remove();
     });
-    
+
     $('.blog-popup [data-hide="scrolledPopup"]').click(function () {
       sessionStorage.setItem('blogScrolledPopupHide', 'true');
     });
@@ -275,8 +275,8 @@ $(document).ready(function () {
         title = $(this).attr("title");
       navTabs.append(
         '<li class="nav-item"><a class="nav-link" href="#">' +
-          title +
-          "</a></li>"
+        title +
+        "</a></li>"
       );
     });
 
