@@ -2,7 +2,7 @@
 date: 2023-09-22
 title: Exploring BunJS 1.0 - A Modern JavaScript Runtime
 description: A short introduction to BunJS, a modern JavaScript runtime.
-image: images/blog/Exploring-BunJS-1.0:A-Modern-JavaScript-Runtime/bunjs-logo.png
+image: images/blog/Exploring-BunJS-1-A-Modern-JavaScript-Runtime/bunjs-logo.png
 cover_image: false
 cover_image_src: 
 cover_image_height: ""
@@ -30,7 +30,7 @@ draft: false
 
 ---
 
-{{< image src="images/blog/Exploring-BunJS-1.0:A-Modern-JavaScript-Runtime/bunjs-logo.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+{{< image src="images/blog/Exploring-BunJS-1-A-Modern-JavaScript-Runtime/bunjs-logo.png" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 If you're a JavaScript developer, you're probably familiar with Node.js, the popular runtime environment that allows you to run JavaScript code on the server-side. But have you heard of BunJS? It's the latest addition to the JavaScript runtime family, and it's making waves in the developer community. In this blog post, we'll delve into what BunJS is all about and why it's gaining traction.
 
