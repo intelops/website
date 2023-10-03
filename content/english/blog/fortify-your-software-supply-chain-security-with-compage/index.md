@@ -1,6 +1,6 @@
 ---
-date: 2023-08-23
-title:  Fortify Your Software Supply Chain Security With Compage
+date: 2023-10-03
+title:  Code Signing With Compage- Safeguarding Your Software Supply Chain from Threats
 description: Automating Security Process
 image: images/blog/fortify-your-software-supply-chain-security-with-compage/automatesoftwaresupplychainsec.jpg
 cover_image: false
@@ -15,8 +15,10 @@ categories:
 - Software Supply Chain Security
 
 tags:
-- sbom
-- automate security
+- code signing
+- docker image signing
+- oidc approach
+- keyless
 
 
 # image color code in undraw.co #FB7E44
@@ -26,67 +28,77 @@ draft: false
 ---
 {{< image src="/images/blog/fortify-your-software-supply-chain-security-with-compage/automatesoftwaresupplychainsec_v1.jpg" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-In its [OSSRA 2023 report](https://www.synopsys.com/software-integrity/resources/analyst-reports/open-source-security-risk-analysis.html?intcmp=sig-blog-ossra23), Synopsis highlighted that **96%** of the scanned codebases contained open source. Open source is so pervasive in commercial codebases that code owners may not even be aware of the open-source components present in their own software. With heavy reliance on open source (rightly so!), unless you know what's in your software supply chain, it's difficult to ensure its security.
-
-A **software supply chain** is comprised of the codes, people, systems, and processes involved in creating, distributing, and maintaining software. In short, anything that touches it at any point. Exposed to weak links across the SDLC, a vulnerability at any stage or in any of the dependencies can make you susceptible to a potential compromise. With a surge in software supply chain attacks, organizations must strive to understand their software supply chain end-to-end, gain visibility into dependencies, and establish transparent distribution processes.
-
-**Software supply chain security**, therefore, refers to the set of practices and measures that an organization must implement to safeguard their software supply chain from potential threats and vulnerabilities. These measures can include conducting code reviews, managing dependencies, verifying software authenticity, and continuous monitoring.
-
-## Challenges in Software Supply Chain Security
-
-1. **Lack of Visibility**: Inadequate understanding of the background and security posture of their software components raises risks for organizations, resulting in potential security flaws during development/deployment, compliance issues, slow threat responses, and high remediation costs.
-
-2. **Insider Threats**: Malicious or unintentional actions by internal staff can lead to weaker security, data breaches, damaged trust, operational interruptions, and higher remediation costs. Such risks include vulnerabilities, unauthorized access, tainted code, and the disclosure of private information.
-
-3. **Lack of Collaboration**: The lack of industry collaboration hinders information exchange, new risk detection, and efficient security solution implementation. Inconsistent security standards result in varying security measures, leading to longer response times to new threats and providing attackers with more time to exploit weaknesses.
-
-4. **Third Party Platforms**: Using third-party platforms requires establishing trust through thorough verification. Failing to do so can result in heightened vulnerability to security breaches or compromises. Dependency on external vendors also introduces the risk of disruptions or support discontinuation, which can significantly impact the security and stability of the software supply chain.
-
-5. **Lack of Standardized Practices**: The absence of standardized practices leads to inconsistent security measures, creating weak links in the software supply chain. Organizations face compliance and legal difficulties while struggling to adhere to security-related rules and licensing duties. Effective risk analysis becomes challenging, making it difficult to assess the overall security posture of the software supply chain.
-
-## Addressing Software Supply Chain Security Issues With Compage
-
-To help mitigate the challenges associated with software supply chain security, one notable solution is [Compage](https://intelops.ai/compage/), a platform that allows organizations to enforce software supply chain security. Compage offers a set of additional features to automate essential security processes, such as code signing, vulnerability analysis, and integrity verification, ensuring the trustworthiness of software throughout its lifecycle and beyond.
-
-Compage enhances software supply chain security in a number of ways, including:
-
-- Build & Source code preparation
-- Generate Configurations
-- Generate Vulnerability reports
-- Generate SBOM
-
-### Build & Source code preparation
-Compage specializes in automating the important build and source code preparation process for software supply chain security. By streamlining and improving the build stage, Compage empowers organizations to establish a solid foundation for the security and integrity of their software supply chain. The platform:
-  - Eliminates manual errors and ensures consistent, reliable builds.
-  - Enforces code hygiene and quality assurance practices, including static code analysis (SCA) and code reviews to identify vulnerabilities and coding errors.
-  - Facilitates vulnerability scanning of the source code and its dependencies for proactive risk management.
-  - Promotes secure coding standards and provides a centralized repository for managing build artifacts.
-
-### Generate Configurations 
-
-Generating configuration is an important, if not the most important, aspect of software supply chain security, and Compage provides powerful features for simplifying and automating this process. Configurations include security settings, access controls, network configurations, and other parameters aligned with industry best practices and compliance requirements.
-
- With Compage, organizations can easily define and enforce predefined security configurations and policies, thereby minimizing the risk of misconfigurations and vulnerabilities. The automation provided by Compage ensures consistency across deployments and eliminates manual errors that might occur during the configuration setup.
-
- Verifying, validating, and controlling the integrity of source and container images becomes seamless with Compage's assistance. This ensures the utmost security and integrity of the software during deployment.
-
-### Generate Vulnerability Reports
-
-Compage provides accurate vulnerability reports that enable businesses to proactively address potential security holes in their software supply chain. The framework analyzes software components and their dependencies to perform vulnerability assessments. It checks for known gaps, flaws, and misconfigurations, and provides organizations with comprehensive reports that outline potential security threats.
-
-Compage’s vulnerability reports not only highlight the identified vulnerabilities, but also provide guidance on remediation. This helps organizations understand the necessary steps to secure their software and make informed decisions to mitigate risks.
-
-By automating the process of generating vulnerability reports, Compage saves organizations valuable time and resources. It enables continuous monitoring of the software supply chain, ensuring that any newly discovered vulnerabilities can be promptly addressed and remediated.
-
-### Generate SBOMs
-
-Software Bill of Materials (SBOM) provides a detailed inventory of software components used in a project which can be used to gain insights into potential security risks associated with the software's dependencies. These include vulnerabilities, outdated versions, and licenses that may pose security or compliance concerns. By helping organizations generate SBOMs, Compage enhances visibility and transparency in their software supply chain.
-
-  Compage automates the process of generating SBOMs by analyzing the software's composition, including its dependencies, versions, licenses, and other relevant information. The generated SBOM serves as a comprehensive record that helps organizations track and manage software components effectively.
-
-  Automating the generation of SBOMs simplifies the process of tracking software components, reducing manual efforts, and ensuring accuracy. This provides a foundation for conducting risk assessments, prioritizing remediation efforts, and making informed decisions regarding software component selection and integration.
-
-Want to see Compage in action? Check it out on [GitHub](https://github.com/intelops/compage). You can also get started by checking out [Compage documentation](https://docs.intelops.ai/latest/compage/) for more details. If you like what we are doing, please leave us a star. And, if there are any burning questions we have not yet answered, we are just a message away!
 
 
+A software supply chain comprises the code, people, system, and processes of creating, distributing, and maintaining software. In short, anything that touches it at any point. Software supply chain attacks are not new but have recently become more dangerous. Exposed to weak links across the software development life cycle, a vulnerability at any stage or in any dependencies can make your software susceptible to a potential compromise.
 
+  
+
+According to a report by [Gartner](https://www.gartner.com/en/newsroom/press-releases/2022-03-07-gartner-identifies-top-security-and-risk-management-trends-for-2022), by 2025, 45% of organizations worldwide will have experienced attacks on their software supply chains. Overcoming this issue requires companies to develop a robust plan to keep their software safe throughout its creation and distribution.
+
+Therefore, Software supply chain security refers to the set of practices and measures that an organization must implement to safeguard their software from potential threats and supply chain vulnerabilities. These measures include conducting code reviews, managing dependencies, verifying software authenticity, and monitoring continuously to ensure software integrity.
+
+  
+
+Companies must adopt a couple of secure methods: **Code & Artifacts Signing**.
+
+## What is Code Signing? 
+
+  
+
+Code signing is a security practice that utilizes a unique digital signature to sign software code. The signature is a marker of authenticity, verifying that the code has not been tampered with or altered. The transparency provided by code signing enables tracking and helps pinpoint the root cause of security issues or breaches in the software supply chain.
+
+  
+
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7113013653993390080" height="350" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+  
+
+Companies not opting for code signing can face a range of issues:
+
+  
+
+*   Unsigned software is more susceptible to tampering by malicious actors who can inject malware or compromise the software’s integrity. This exposes companies to heightened cybersecurity risks, resulting in data breaches, financial losses, and reputational damage.
+*   Additionally, companies may encounter difficulties distributing software through trusted platforms and marketplaces that often mandate code signing as a prerequisite, limiting their market reach and impacting their sales. Moreover, non-compliance can lead to legal liabilities and regulatory fines in regions where code signing is legally required.
+*   Developers encounter a series of challenges when code signing is omitted. It exposes their software to elevated security risks, erodes user trust due to concerns about code integrity, and adds complexity to the debugging process, potentially affecting the overall software quality.   
+
+When code signing and artifacts signing practices are implemented, tools like gitSign, GPG/PGP, CoSign, in-toto would make your life easy to sign every git commit and also artifacts like container images. Since signing git commits is very simple, we will skip explaining it here. If you want to learn step-by-step about gitsign and cosign, you can refer [here](https://docs.sigstore.dev/signing/gitsign/).
+
+  
+
+## OpenID Connect Explained  
+
+The OIDC (OpenID Connect) approach is a secure authentication and authorization protocol used to verify the identity of users in web applications and APIs. It combines the capabilities of OAuth 2.0 with identity verification, enhancing security by confirming the authenticity of users before granting access to resources.  
+
+## Compage – The OIDC Approach to Container Image Signing
+
+[Compage](https://intelops.ai/compage/) leverages the capabilities of Sigstore and its integration with the Cosign tool. Sigstore, an open-source tool, enhances software supply chain security by providing transparency and verification for software artifacts. It accomplishes this through the Cosign tool, which is used for signing Docker images.
+
+  
+
+[Signing Docker images with Sigstore](https://github.com/sigstore/cosign) involves a keyless approach, where the Social Login mechanism (login via GitHub, Google, Microsoft, etc.) serves as the authentication provider, guaranteeing user authentication and identity verification with Human interaction.
+
+  
+
+When someone attempts to access these signed Docker images, a dual-check approach comes into play. This dual-check approach ensures that only authenticated users can sign or access images, making it difficult for unauthorized parties to tamper with the images.  
+
+  
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7113413683707342849" height="350" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+
+#### Why a keyless approach?  
+
+*   Keyless approaches simplify key management, reducing the risk of key compromise.  
+*   They support automated CI/CD pipelines and are compatible with container security best practices.  
+*   Content trust ensures container image integrity based on content rather than private keys, providing a scalable and secure alternative to traditional key-based signing.
+
+  
+
+### Mitigating Software Supply Chain Risks
+
+  
+
+Integrating Compage with signing container images capability is a proactive step in mitigating risks associated with compromised images and their artifacts. Now, as supply chain attacks are a growing concern, our framework acts as a safeguard, helping prevent unauthorized changes to software components and artifacts, thus maintaining the reliability of the software supply chain for the code generated via Compage.
+
+  
+
+Want to see Compage in action? Check it out on [GitHub](https://github.com/intelops/compage). You can also get started by checking out [Compage documentation](https://docs.intelops.ai/latest/compage/) for more details. If you like what we are doing, please leave us a star. And, if there are any burning questions we have not yet answered, feel free to contact us via LinkedIn. We would love to talk to you!
