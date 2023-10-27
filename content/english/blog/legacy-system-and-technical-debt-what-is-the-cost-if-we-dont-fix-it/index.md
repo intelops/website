@@ -48,7 +48,7 @@ A survey by McKinsey revealed that CIOs allocate about 10-20 percent of their te
 
 The downsides of accumulation of technical debt are manifested through higher operational and technology expenses, slower time-to-market, and reduced adaptability. Effective technical debt management is essential for long-term viability, as mishandled technical debt can impede competitiveness. This significantly impacts a business's bottom line and its ability to adapt and innovate.
 
-  <img src="assets/images/blog/legacy-system-and-technical-debt-what-is-the-cost-if-we-dont-fix-it/legacy_system_and_technical_debt_factors.png" />
+  <img src="images/blog/legacy-system-and-technical-debt-what-is-the-cost-if-we-dont-fix-it/legacy_system_and_technical_debt_factors.png" />
 
 1. Maintaining legacy systems is resource-intensive and could become challenging as skilled professionals for these systems may become scarce. This could lead to integration challenges with new tools, and some legacy systems may require special licensing, adding complexity and costs for businesses.
 
