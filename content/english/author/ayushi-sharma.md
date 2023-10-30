@@ -1,6 +1,6 @@
 ---
 title: "Ayushi Sharma"
-image: "images/avatar/ayushi-sharma.png"
+image: "images/avatar/ayushi-sharma.jpg"
 social:
   - icon : "fab fa-linkedin-in"
     name: "linkedin"
