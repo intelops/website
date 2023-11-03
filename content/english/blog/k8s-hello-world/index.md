@@ -4,7 +4,7 @@ title: "Kubernetes: Hello World"
 description: Deploy your first application on Kubernetes
 image: images/blog/k8s-hello-world/logo.png
 cover_image: true
-cover_image_src: images/blog/k8s-hello-world/cover.jpg
+cover_image_src: ""
 cover_image_height: ""
 cover_image_width: ""
 
@@ -20,6 +20,7 @@ tags:
 feedback: false
 draft: false
 ---
+{{< image src="images/blog/k8s-hello-world/cover.png" alt="k8s-logo" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 Imagine embarking on a journey across uncharted seas—the world of software deployment. Navigating these waters is akin to steering a ship, facing challenges that range from smooth sailing to avoiding treacherous downtime, all while adapting to ever-changing conditions.
 
