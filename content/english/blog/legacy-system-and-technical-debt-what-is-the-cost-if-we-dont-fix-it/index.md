@@ -43,12 +43,12 @@ A survey by McKinsey revealed that CIOs allocate about 10-20 percent of their te
 1. Legacy systems, with their outdated code and architecture, consume a considerable share of resources for issue resolution, updates and upkeep. Some organizations see their annual maintenance costs increase by up to 15 percent, causing significant financial strain.
 2. Beyond the apparent financial implications, hidden costs of legacy systems permeate various facets of business. These include challenges related to data security, customer experience, performance issues, and more.
 
-<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7118111804857200640" height="1003" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
+<iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7118111804857200640" height="400" width="504" frameborder="0" allowfullscreen="" title="Embedded post"></iframe>
 
 
 The downsides of accumulation of technical debt are manifested through higher operational and technology expenses, slower time-to-market, and reduced adaptability. Effective technical debt management is essential for long-term viability, as mishandled technical debt can impede competitiveness. This significantly impacts a business's bottom line and its ability to adapt and innovate.
 
-  <img src="images/blog/legacy-system-and-technical-debt-what-is-the-cost-if-we-dont-fix-it/legacy_system_and_technical_debt_factors.png" />
+  <img src="./images/legacy_system_and_technical_debt_factors.png" />
 
 1. Maintaining legacy systems is resource-intensive and could become challenging as skilled professionals for these systems may become scarce. This could lead to integration challenges with new tools, and some legacy systems may require special licensing, adding complexity and costs for businesses.
 
