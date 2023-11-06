@@ -1,0 +1,8 @@
+{{ $label := .Get "label" }}
+{{ $link := .Get "link" }}
+{{ $icon := .Get "icon" }}
+{{ $target := default "_blank" (.Get "target") }}
+
+<a href="{{ $link }}" class="link-item" target="{{ $target }}">
+  <img src="{{ $icon }}"> {{ $label }}
+</a>

@@ -2054,3 +2054,35 @@ footer {
     font-size: 16px;
   }
 }
+
+
+// Links
+#link {
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid rgba($color-primary, 0.2);
+  
+  .link-title {
+    color: $dark;
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .link-item {
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+    padding: 10px 24px;
+    display: inline-block;
+    color: $white !important;
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+
+    &:hover {
+      text-decoration: none;
+      color: $dark !important;
+      border-color: $color-primary;
+      background-color: transparent;
+    }
+  }
+}

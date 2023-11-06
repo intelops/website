@@ -258,6 +258,13 @@ a:hover {
     left: 0;
     background: $black;
     opacity: 0.5;
+    pointer-events: none;
+  }
+}
+.overlay-30 {
+  &::before {
+    z-index: -1;
+    opacity: 0.3;
   }
 }
 

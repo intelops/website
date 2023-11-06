@@ -1,0 +1,7 @@
+{{ $title := default "we" (.Get "title") }}
+{{ $align := .Get "align" }}
+
+<div id="link">
+  <div class="link-title">{{ $title }}</div>
+  {{ .Inner }}
+</div>
