@@ -2059,6 +2059,7 @@ footer {
 // Links
 #link {
   padding: 20px;
+  margin-block: 40px;
   border-radius: 8px;
   border: 1px solid rgba($color-primary, 0.2);
   
@@ -2069,20 +2070,43 @@ footer {
     margin-bottom: 15px;
   }
   .link-item {
+    align-items: center;
+    display: flex;
+    width: 100%;
+    text-align: center;
     font-size: 16px;
-    padding: 10px;
     border-radius: 4px;
-    padding: 10px 24px;
-    display: inline-block;
+    padding: 14px 24px;
     color: $white !important;
     border: 2px solid $color-primary;
     background-color: $color-primary;
 
+    @include mobile {
+      padding: 14px;
+      font-size: 14px;
+    }
+
     &:hover {
       text-decoration: none;
-      color: $dark !important;
+      color: $color-primary !important;
       border-color: $color-primary;
       background-color: transparent;
+    }
+    .text {
+      margin-inline: auto;
+      padding-inline: 40px;
+
+      @include mobile {
+        padding-inline: 20px;
+      }
+    }
+    img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+    }
+    >* {
+      margin-bottom: 0px;
     }
   }
 }

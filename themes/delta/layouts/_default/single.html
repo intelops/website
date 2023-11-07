@@ -29,14 +29,16 @@ style="background-image: url({{$img.RelPermalink}});
 <section class="section-sm get-content-block-height {{if .Params.hide_related_post}}pb-0{{end}}">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
-      <div class="col-lg-4 blog-sidebar">
+      <div class="col-lg-4 blog-sidebar {{if .Params.hide_tableofcontent}}d-none{{end}}">
         <div class="block pe-0 pe-lg-2">
           {{ $series := .Params.series }}
           {{ with $series }}
           <p class="h4 fw-light text-dark ps-3">{{.}}</p>
           {{ end }}
-
+          
+          {{ if not .Params.hide_tableofcontent }}
           {{ .TableOfContents }}
+          {{ end }}
 
           {{ $seriesPosts := (where (where site.RegularPages "Section" "blog") "Params.series" $series) }}
           {{ $permalink := .RelPermalink }}
@@ -145,7 +147,7 @@ style="background-image: url({{$img.RelPermalink}});
 
 {{ partial "mermaid-script" . }}
 
-{{ if site.Params.blog_popup.enable }}
+{{ if or site.Params.blog_popup.enable (not .Params.hide_popup_form) }}
 {{ partial "popup-form" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}
 {{ end }}
       

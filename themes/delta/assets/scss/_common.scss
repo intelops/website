@@ -815,3 +815,36 @@ form label {
     opacity: 0.7;
   }
 }
+
+#videoModal {
+  .btn-close {
+    position: absolute;
+    right: 0px;
+    top: -50px;
+    opacity: 1;
+    background-color: rgba(white, 0.8) !important;
+    background-size: 14px !important;
+    padding: 10px;
+    transition: all 0.4s;
+
+    &:hover,
+    &:focus,
+    &:focus-visible,
+    &:active {
+      box-shadow: none;
+    }
+  }
+  .modal-body {
+    padding: 0px;
+  }
+  .modal-dialog {
+    padding: 10px;
+    margin: 3rem auto !important;
+  }
+}
+
+.w-md-full {
+  @include tablet {
+    width: 100%;
+  }
+}
