@@ -1,23 +1,31 @@
 # production
 /exampleSite/public
 /exampleSite/resources/_gen
-resources/_gen/
-/public
-.vscode
+resources
+
 #misc
-/exampleSite/.hugo_build.lock
-/node_modules
-
-# jetbrains files
-.idea/
-
 .DS_Store
 ._.DS_Store
 **/.DS_Store
 **/._.DS_Store
 yarn-error.log
-yarn.lock
 node_modules
-
-
 .forestry
+Thumbs.db
+**/*.lock
+.dist
+.tmp
+.sass-cache
+npm-debug.log
+builds
+package-lock.json
+public
+jsconfig.json
+test.file
+config-client.toml
+config-current.toml
+.vscode
+
+
+# jetbrains files
+.idea/

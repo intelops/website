@@ -55,6 +55,26 @@ blocks.forEach((block) => {
 $(document).ready(function () {
   "use strict";
 
+  // Video Modal
+  // Get a reference to the video URL button and the video iframe
+  const videoButton = document.querySelector('[data-bs-target="#videoModal"]');
+  const videoIframe = document.getElementById('videoIframe');
+
+  // Add a click event listener to the video button
+  videoButton?.addEventListener('click', function () {
+    // Get the video URL from the "video-url" attribute
+    const videoURL = videoButton.getAttribute('video-url');
+    // Set the video URL in the iframe
+    videoIframe.src = videoURL;
+  });
+
+  // Add an event listener for when the modal is closed
+  const videoModal = document.getElementById('videoModal');
+  videoModal?.addEventListener('hidden.bs.modal', function () {
+    // Remove the src attribute to stop the video
+    videoIframe.removeAttribute('src');
+  });
+
   const scrolledPopup = document.querySelector('.scrolledPopup');
   if (scrolledPopup) {
 
