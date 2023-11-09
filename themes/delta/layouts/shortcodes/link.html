@@ -1,0 +1,27 @@
+{{ $label := .Get "label" }}
+{{ $url := .Get "url" }}
+{{ $icon := .Get "icon" }}
+{{ $image := .Get "image" }}
+{{ $target := default "_blank" (.Get "target") }}
+{{ $type := default "link" (.Get "type") }}
+{{ $videoEmbedId := default "C0DPdy98e4c" (.Get "videoEmbedId") }}
+
+{{ if eq $type "video" }}
+  <button type="button" class="link-item" video-url="https://www.youtube.com/embed/{{$videoEmbedId}}?rel=0&autoplay=1" title="{{$label}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen data-bs-toggle="modal" data-bs-target="#videoModal">
+    {{ if $image }}
+    {{ partial "image.html" (dict "Src" $image "Class" "img-fluid" "Alt" $label "Size" "30x") }}
+    {{ else }}
+    <span class="material-symbols-outlined mb-0">{{$icon}}</span>
+    {{ end }}
+    <span class="text">{{ $label }}</span>
+  </button>
+{{ else }}
+  <a href="{{ $url | safeURL}}" class="link-item" target="{{ $target }}">
+    {{ if $image }}
+    {{ partial "image.html" (dict "Src" $image "Class" "img-fluid" "Alt" $label "Size" "30x") }}
+    {{ else }}
+    <span class="material-symbols-outlined mb-0">{{$icon}}</span>
+    {{ end }}
+    <span class="text">{{ $label }}</span>
+  </a>
+{{ end }}

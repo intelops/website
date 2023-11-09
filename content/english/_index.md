@@ -38,7 +38,7 @@ banner:
   lottie: 
     enable: true
     json: "lottie/homepage_concept.json"
-    background: "#4B4B4C"
+    background: "#223038" #4B4B4C
     speed: "1"
     loop: "true"
     autoplay: "true"

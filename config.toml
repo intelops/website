@@ -42,7 +42,7 @@ link = "plugins/search/search-page.js"
 link = "plugins/lottie-player/lottie-player.js"
 [params.variables]
 banner_desc = "#acacac"
-banner_primary = "#121826"
+banner_primary = "#091922" # prviously original = 121826
 banner_secondary = "#FF5100"
 banner_subtitle = "#FF5100"
 banner_title = "#fff"
@@ -53,7 +53,7 @@ color_primary = "#F16F33"
 color_quaternary = "#6E9240"
 color_secondary = "#FFD02F"
 color_tertiary = "#ED6F78"
-dark = "#050038"
+dark = "#091922" # previous original = 050038
 font_primary = "Catamaran:wght@700;900"
 font_primary_type = "sans-serif"
 font_scale = "1.2"

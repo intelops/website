@@ -3,21 +3,46 @@
 {{ partial "header.html" . }}
 
 <!-- checking blog -->
-{{ if or (eq .Section "post") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+{{ if or (eq .Section "post") (eq .Params.page_layout "default") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
+
+{{ if .Params.bannerarea  }}
+{{ with .Params.bannerimage }}
+{{ $img:= resources.Get . }}
+<section class="page-header wave-block overlay overlay-30"
+style="background-image: url({{$img.RelPermalink}});
+       background-repeat: no-repeat;
+       background-position: center center;
+       background-attachment: fixed;
+       background-size: cover;">
+{{ end }}
+  <div class="container container-delta">
+    <div class="row">
+      <div class="block col-12 text-center">
+        <h1 class="title banner-title" {{with .Params.bannertext_color}}style="color:{{.}}"{{end}}>{{ .Params.bannertext }}</h1>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
 
 <!-- strat of blog-details -->
-<section class="section-sm get-content-block-height">
+<section class="section-sm get-content-block-height {{if .Params.hide_related_post}}pb-0{{end}}">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
-      <div class="col-lg-4 blog-sidebar">
+      <div class="col-lg-4 blog-sidebar {{if .Params.hide_tableofcontent}}d-none{{end}}">
         <div class="block pe-0 pe-lg-2">
           {{ $series := .Params.series }}
-          <p class="h4 fw-light text-dark ps-3">{{$series}}</p>
-
+          {{ with $series }}
+          <p class="h4 fw-light text-dark ps-3">{{.}}</p>
+          {{ end }}
+          
+          {{ if not .Params.hide_tableofcontent }}
           {{ .TableOfContents }}
+          {{ end }}
 
           {{ $seriesPosts := (where (where site.RegularPages "Section" "blog") "Params.series" $series) }}
           {{ $permalink := .RelPermalink }}
+          {{ if not .Params.hide_series_post }}
           <div class="mt-4 ps-3 d-none d-lg-block">
             <p style="letter-spacing:1px;opacity: 0.6;">{{if eq 0 (len $seriesPosts)}}NO {{end}}MORE IN THIS SERIES</p>
             <div class="content">
@@ -36,6 +61,7 @@
               </ul>
             </div>
           </div>
+          {{ end }}
         </div>
       </div>
       <div class="col-lg-8">
@@ -48,24 +74,34 @@
         </div>
         {{ end }}
 
-        <div class="mb-1">
+        <div class="pb-1">
           <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
+          {{ if not .Params.hide_post_meta }}
           <span class="text-muted small d-inline-block" style="opacity:.75">Last Update : {{ .Lastmod.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> Published : {{ .PublishDate.Format "02 January, 2006" }} <span class="mx-1 text-dark-50">|</span> {{.ReadingTime}} {{i18n `min_read`}}</span>
+          {{ end }}
         </div>
 
         {{ $categories := .Params.categories }}
-        <div class="mb-5 post-meta">
-          <span class="text-muted small d-inline-block" style="opacity:.75">
-            <strong class="text-dark">Categories :</strong> {{ range $i, $e := .Params.categories }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/categories/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
-            {{ with .Params.tags }}
-            <span class="mx-1 text-dark-50">|</span>
-            <strong class="text-dark">Tags :</strong>  {{ range $i, $e := . }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/tags/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
-            {{ end }}
-          </span>
-        </div>
+        {{ $showCategory := index .Params.categories 0 }}
+        {{ $showTags := index .Params.categories 0 }}
+        {{ if or $showCategory $showTags }}
+          <div class="post-meta">
+            <span class="text-muted small d-inline-block" style="opacity:.75">
+              
+              {{ if $showCategory }}
+              <strong class="text-dark">Categories :</strong> {{ range $i, $e := .Params.categories }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/categories/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
+              {{ end }}
+              
+              {{ with .Params.tags }}
+              <span class="mx-1 text-dark-50">|</span>
+              <strong class="text-dark">Tags :</strong>  {{ range $i, $e := . }}{{if ne $i 0}},{{end}}<a class="{{if ne $i 0}}ms-1{{end}}" href="{{ `/tags/` }}{{. | urlize | lower}}">{{.}}</a>{{ end }}
+              {{ end }}
+            </span>
+          </div>
+        {{ end }}
 
         {{ if .Page.Store.Get "hasMermaid" }}<p class="content-loader text-center">loading..</p>{{end}}
-        <div class="content {{ if .Page.Store.Get `hasMermaid` }}content-hidden{{end}}">
+        <div class="content mt-5 {{ if .Page.Store.Get `hasMermaid` }}content-hidden{{end}}">
           {{.Content}}
         </div>
 
@@ -111,28 +147,30 @@
 
 {{ partial "mermaid-script" . }}
 
-{{ if site.Params.blog_popup.enable }}
+{{ if or site.Params.blog_popup.enable (not .Params.hide_popup_form) }}
 {{ partial "popup-form" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}
 {{ end }}
       
 {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}
 {{ if $related }}
-<section class="pt-5">
-  <div class="container">
-    <div class="row justify-content-center" data-aos="fade-in">
-      <div class="col-12">
-        <div class="section-title text-center">
-          <h2 class="title">{{i18n `related_posts`}}</h2>
+  {{ if not .Params.hide_related_post }}
+    <section class="pt-5">
+      <div class="container">
+        <div class="row justify-content-center" data-aos="fade-in">
+          <div class="col-12">
+            <div class="section-title text-center">
+              <h2 class="title">{{i18n `related_posts`}}</h2>
+            </div>
+          </div>
+          {{ range shuffle (first 3 $related) }}
+          <div class="col-lg-4 col-md-6 blog-card has-border">
+            {{ .Render "article" }}
+          </div>
+          {{ end }}
         </div>
       </div>
-      {{ range shuffle (first 3 $related) }}
-      <div class="col-lg-4 col-md-6 blog-card has-border">
-        {{ .Render "article" }}
-      </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
+    </section>
+  {{ end }}
 {{ end }}
 <!-- end of blog-section -->
 

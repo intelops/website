@@ -1,5 +1,5 @@
 ---
-title: "Docbox Layouts"
+title: "Docbox Layouts links page"
 date: 2018-12-25T11:02:05+06:00
 draft: true
 description: "This is just a sample draft of how to use fancy content writing."

@@ -1,0 +1,8 @@
+{{ $title := default "please give title value" (.Get "title") }}
+
+<div id="link">
+  {{ with $title }}
+    <div class="link-title">{{ . }}</div>
+  {{ end }}
+  {{ .Inner }}
+</div>
