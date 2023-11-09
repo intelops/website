@@ -1,7 +1,7 @@
 ---
 date: 2023-05-19
-title: Containers, Containers, Containers
-description: What containers are, their benefits, and their use cases.
+title: An Appstek Corp's Product Entity (A market-first SaaS 2.0 solution)
+description: Links Page similar to Linktree page.
 load_google_icons: true # (https://fonts.google.com/icons?icon.set=Material+Symbols) Load google icons only in this page (It will boost website performance)
 
 page_layout: "default" # Mandatory (If you want to use blog single page layout)
@@ -26,13 +26,13 @@ draft: false
 # You can use all icon of this link (https://fonts.google.com/icons?icon.set=Material+Symbols) as link shortcode icon value  
 ---
 
-{{< link-row title="This is simple title" >}}
-  {{< link icon="videocam" label="Who is intelops" type="video" videoEmbedId="OpNIXe0Wc30" >}}
-  {{< link image="/images/block-image-02.png" label="Our Products" url="https://www.docker.com/" target="_self">}}
-  {{< link icon="settings_voice" label="This is simple link" url="https://www.docker.com/" >}}
-  {{< link icon="video_label" label="This is simple link" url="https://www.docker.com/" >}}
+{{< link-row title="Check us out!" >}}
+  {{< link image="/images/block-image-02.png" label="IntelOps Brochure" url="https://publuu.com/flip-book/289184/674718" >}}
+  {{< link image="/images/block-image-02.png" label="IntelOps Platform Overview" url="https://publuu.com/flip-book/289184/674198" >}}
+  {{< link icon="video_label" label="IntelOps Website" url="https://intelops.ai/" target="_self" >}}
 {{</ link-row >}}
 
-{{< link-row title="Our Products" >}}
-  {{< link icon="feed" label="This is simple link" url="https://www.docker.com/" >}}
+{{< link-row title="Videos" >}}
+  {{< link icon="videocam" label="Capten Stack Overview" type="video" videoEmbedId="OpNIXe0Wc30" >}}
+  {{< link icon="videocam" label="Compage Teaser" type="video" videoEmbedId="6CwEGQlY3Pk" >}}
 {{</ link-row >}}
