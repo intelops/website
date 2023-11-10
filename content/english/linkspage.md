@@ -1,11 +1,11 @@
 ---
 date: 2023-05-19
 title: An Appstek Corp's Product Entity (A market-first SaaS 2.0 solution)
-description: Links Page similar to Linktree page.
+description: Overview Links Page.
 load_google_icons: true # (https://fonts.google.com/icons?icon.set=Material+Symbols) Load google icons only in this page (It will boost website performance)
 
 page_layout: "default" # Mandatory (If you want to use blog single page layout)
-page_description: "ernatur non, sit nemo culpa ut veritatis, odit accusamus quasi inventore porro labore voluptatum tempora molestias? Dolorum aperiam ipsam"
+page_description: ""
 hide_series_post: true # Hide series post
 hide_related_post: true # hide related post located at the end of the page
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
@@ -21,7 +21,7 @@ bannertext: "This is banner area text"
 bannertext_color: "#fff"
 bannerimage:
 
-draft: true
+draft: false
 
 # You can use all icon of this link (https://fonts.google.com/icons?icon.set=Material+Symbols) as link shortcode icon value  
 ---
@@ -34,5 +34,5 @@ draft: true
 
 {{< link-row title="Videos" >}}
 {{< link icon="videocam" label="Capten Stack Overview" type="video" videoEmbedId="OpNIXe0Wc30" >}}
-{{< link icon="videocam" label="Compage Teaser" type="video" videoEmbedId="OpNIXe0Wc30" >}}
+{{< link icon="videocam" label="Compage Teaser" type="video" videoEmbedId="6CwEGQlY3Pk" >}}
 {{</ link-row >}}
