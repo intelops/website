@@ -27,12 +27,13 @@ draft: false
 ---
 
 {{< link-row title="Check us out!" >}}
-{{< link image="/images/block-image-02.png" label="IntelOps Brochure" url=`https://publuu.com/flip-book/289184/674718` >}}
-{{< link image="/images/block-image-02.png" label="IntelOps Platform Overview" url=`https://publuu.com/flip-book/289184/674198` >}}
-{{< link icon="video_label" label="IntelOps Website" url=`https://intelops.ai/` target="_self" >}}
+{{< link image="/images/linkspage/document.svg" label="IntelOps Brochure" url=`https://publuu.com/flip-book/289184/674718` >}}
+{{< link image="/images/linkspage/document.svg" label="IntelOps Platform Overview" url=`https://publuu.com/flip-book/289184/674198` >}}
+{{< link image="/images/linkspage/web.svg" label="IntelOps Website" url=`https://intelops.ai/` target="_self" >}}
 {{</ link-row >}}
 
 {{< link-row title="Videos" >}}
-{{< link icon="videocam" label="Capten Stack Overview" type="video" videoEmbedId="OpNIXe0Wc30" >}}
-{{< link icon="videocam" label="Compage Teaser" type="video" videoEmbedId="6CwEGQlY3Pk" >}}
+{{< link image="/images/linkspage/videocam.svg" label="Capten Stack Overview" type="video" videoEmbedId="OpNIXe0Wc30" >}}
+<!-- {{< link icon="videocam" label="Compage Teaser" type="video" videoEmbedId="6CwEGQlY3Pk" >}} -->
+{{< link image="/images/linkspage/videocam.svg" label="Compage Teaser" type="video" videoEmbedId="6CwEGQlY3Pk" >}} 
 {{</ link-row >}}
