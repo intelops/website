@@ -24,7 +24,6 @@ jsconfig.json
 test.file
 config-client.toml
 config-current.toml
-.vscode
 
 
 # jetbrains files
