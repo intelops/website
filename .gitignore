@@ -1,7 +1,6 @@
 # production
-/exampleSite/public
-/exampleSite/resources/_gen
-resources
+**/public
+**/resources
 
 #misc
 .DS_Store
@@ -10,6 +9,7 @@ resources
 **/._.DS_Store
 yarn-error.log
 node_modules
+**/.hugo_build.lock
 .forestry
 Thumbs.db
 **/*.lock
@@ -19,7 +19,6 @@ Thumbs.db
 npm-debug.log
 builds
 package-lock.json
-public
 jsconfig.json
 test.file
 config-client.toml
