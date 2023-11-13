@@ -12,7 +12,7 @@ node_modules
 **/.hugo_build.lock
 .forestry
 Thumbs.db
-**/*.lock
+**/**.lock
 .dist
 .tmp
 .sass-cache
