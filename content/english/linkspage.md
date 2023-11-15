@@ -1,6 +1,12 @@
 ---
 date: 2023-05-19
-title: An Appstek Corp's Product Entity (A market-first SaaS 2.0 solution)
+title: |
+    Appstek Corp's Product Entity:
+
+    Capten Stack by IntelOps Product Team 
+    
+    (A market-first SaaS 2.0 solution)
+
 description: Overview Links Page.
 
 page_layout: "default" # Mandatory (If you want to use blog single page layout)
