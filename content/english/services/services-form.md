@@ -108,7 +108,7 @@ call_to_action:
   button_type: "modal"
   button_link: "#service-form"
   bg_color: "#005DFF"
-  bottom_bg_color: "#080338"
+  bottom_bg_color: "#091922"
 
 footer:
   footer_light: false

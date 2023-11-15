@@ -134,7 +134,7 @@ call_to_action:
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
   bg_color: "#00B8D4"
-  bottom_bg_color: "#080338"
+  bottom_bg_color: "#091922"
 
 # footer:
 #   footer_light: false

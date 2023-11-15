@@ -104,7 +104,7 @@ call_to_action:
   button_label: "Get Started"
   button_link: "contact/"
   bg_color: "#005DFF"
-  bottom_bg_color: "#080338"
+  bottom_bg_color: "#091922"
 
 footer:
   footer_light: false
