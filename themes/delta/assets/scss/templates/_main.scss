@@ -2055,14 +2055,13 @@ footer {
   }
 }
 
-
 // Links
 #link {
   padding: 20px;
   margin-block: 40px;
   border-radius: 10px;
   border: 1px solid rgba($color-primary, 0.2);
-  
+
   .link-title {
     color: $dark;
     font-size: 22px;
@@ -2087,7 +2086,6 @@ footer {
     }
 
     &:hover {
-      color: $color-primary !important;
       text-decoration: none;
       background-color: transparent !important;
     }
@@ -2099,13 +2097,24 @@ footer {
         padding-inline: 20px;
       }
     }
-    img {
-      width: 30px;
-      height: 30px;
-      object-fit: contain;
-    }
-    >* {
+    > * {
       margin-bottom: 0px;
+    }
+  }
+  a.link-item:hover {
+    svg feFlood {
+      flood-color: var(--hover-color) !important;
+    }
+    .text {
+      color: var(--hover-color) !important;
+    }
+  }
+  button.link-item:hover {
+    svg feFlood {
+      flood-color: var(--hover-color-button) !important;
+    }
+    .text {
+      color: var(--hover-color-button) !important;
     }
   }
 }
