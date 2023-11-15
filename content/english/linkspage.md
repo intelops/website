@@ -6,11 +6,11 @@ description: Overview Links Page.
 page_layout: "default" # Mandatory (If you want to use blog single page layout)
 page_description: "" # Description that will show after page title
 page_background_color: "#F7F7F7" # Optional (Page background color. e.g `#fafafa`)
-page_text_color: "blue" # Optional (Page Text color. e.g `#fafafa`)
+page_text_color: "#1C2674" # Optional (Page Text color. e.g `#fafafa`)
 
-button_color: "orange" # Optional: button background & border color
-button_icon_color: "blue" # Optional: Defines the color of the button icon and it will also serve as the hover state color.
-button_text_color: "blue" # Optional: Defines the color of the button text and it will also serve as the hover state color.
+button_color: "#CE372F" # Optional: button background & border color
+button_icon_color: "white" # Optional: Defines the color of the button icon and it will also serve as the hover state color.
+button_text_color: "white" # Optional: Defines the color of the button text and it will also serve as the hover state color.
 
 links_card_border_color: "#F16F33"
 
