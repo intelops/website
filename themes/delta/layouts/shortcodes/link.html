@@ -8,35 +8,87 @@
 {{ $buttonColor := default "" $.Page.Params.button_color }}
 {{ $buttonTextColor := default "" $.Page.Params.button_text_color }}
 {{ $buttonIconColor := default "black" $.Page.Params.button_icon_color }}
+{{ $id1 := add "tf" (substr (md5 $label) 0 16) }}
+{{ $id2 := add "tf" (substr (md5 $label) 0 11) }}
 
 {{ if eq $type "video" }}
-  <button type="button" class="link-item" style="{{with $buttonColor}}background-color: {{.}};border-color: {{.}};{{end}}{{with $buttonTextColor}}color: {{.}} !important{{end}}" data-src="https://www.youtube.com/embed/{{$videoEmbedId}}?rel=0&autoplay=1" title="{{$label}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;" allowfullscreen data-bs-toggle="modal" data-bs-target="#videoModal">
+  <button
+    type="button"
+    class="link-item"
+    style="{{ with $buttonColor }}
+      background-color: {{ . }};border-color: {{ . }};
+    {{ end }}{{ with $buttonTextColor }}
+      color: {{ . }} !important;--hover-color-button: {{ $buttonColor }};
+    {{ end }}"
+    data-src="https://www.youtube.com/embed/{{ $videoEmbedId }}?rel=0&autoplay=1"
+    title="{{ $label }}"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+    allowfullscreen
+    data-bs-toggle="modal"
+    data-bs-target="#videoModal">
     {{ if $icon }}
       <svg width="30px" height="30px">
         <defs>
-          <filter id="colorMask">
+          <filter id="{{ $id1 }}">
             <feflood flood-color="{{ $buttonIconColor }}" result="flood" />
-            <fecolormatrix result="inv" in="SourceGraphic" type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" />
-            <fecomposite in="inv" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+            <fecolormatrix
+              result="inv"
+              in="SourceGraphic"
+              type="matrix"
+              values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" />
+            <fecomposite
+              in="inv"
+              in2="flood"
+              operator="arithmetic"
+              k1="1"
+              k2="0"
+              k3="0"
+              k4="0" />
           </filter>
         </defs>
-        <image filter="url(#colorMask)" style="height: 100%;" xlink:href="{{$icon}}" />
+        <image
+          filter="url(#{{ $id1 }})"
+          style="height: 100%;"
+          xlink:href="{{ $icon }}" />
       </svg>
     {{ end }}
     <span class="text">{{ $label }}</span>
   </button>
 {{ else }}
-  <a href="{{ $url | safeURL}}" class="link-item" style="{{with $buttonColor}}background-color: {{.}};border-color: {{.}};{{end}}{{with $buttonTextColor}}color: {{.}} !important;{{end}}" target="{{ $target }}">
+  <a
+    href="{{ $url | safeURL }}"
+    class="link-item"
+    style="{{ with $buttonColor }}
+      background-color: {{ . }};border-color: {{ . }};
+    {{ end }}{{ with $buttonTextColor }}
+      color: {{ . }} !important;--hover-color: {{ $buttonColor }};
+    {{ end }}"
+    target="{{ $target }}">
     {{ if $icon }}
-     <svg width="30px" height="30px">
+      <svg width="30px" height="30px">
         <defs>
-          <filter id="colorMaskTwo">
+          <filter id="{{ $id2 }}">
             <feflood flood-color="{{ $buttonIconColor }}" result="flood" />
-            <fecolormatrix result="inv" in="SourceGraphic" type="matrix" values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" />
-            <fecomposite in="inv" in2="flood" operator="arithmetic" k1="1" k2="0" k3="0" k4="0" />
+            <fecolormatrix
+              result="inv"
+              in="SourceGraphic"
+              type="matrix"
+              values="-1 0 0 0 1 0 -1 0 0 1 0 0 -1 0 1 0 0 0 1 0" />
+            <fecomposite
+              in="inv"
+              in2="flood"
+              operator="arithmetic"
+              k1="1"
+              k2="0"
+              k3="0"
+              k4="0" />
           </filter>
         </defs>
-        <image filter="url(#colorMaskTwo)" style="height: 100%;" xlink:href="{{$icon}}" />
+        <image
+          filter="url(#{{ $id2 }})"
+          style="height: 100%;"
+          xlink:href="{{ $icon }}" />
       </svg>
     {{ end }}
     <span class="text">{{ $label }}</span>
