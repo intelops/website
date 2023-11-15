@@ -2,22 +2,6 @@
 
 {{ partial "header.html" . }}
 
-
-{{ if .Params.load_google_icons }}
-<!-- Google Icons -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-<style>
-.material-symbols-outlined {
-  vertical-align: middle;
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 24
-}
-</style>
-{{ end }}
-
 <!-- checking blog -->
 {{ if or (eq .Section "post") (eq .Params.page_layout "default") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
 
@@ -42,7 +26,7 @@ style="background-image: url({{$img.RelPermalink}});
 {{ end }}
 
 <!-- strat of blog-details -->
-<section class="section-sm get-content-block-height {{if .Params.hide_related_post}}pb-0{{end}}">
+<section class="section-sm get-content-block-height {{if .Params.page_text_color}}inherit-text-color{{end}} {{if .Params.hide_related_post}}pb-0{{end}}" style="{{with .Params.page_background_color}}background-color:{{.}}{{end}};{{with .Params.page_text_color}}color:{{.}}!important{{end}};">
   <div class="container container-delta">
     <div class="row gy-3 justify-content-center">
       <div class="col-lg-4 blog-sidebar {{if .Params.hide_tableofcontent}}d-none{{end}}">

@@ -10,7 +10,7 @@
 {{ end }}
 
 {{if site.Params.call_to_action.enable}}
-<section class="section pb-0 call-to-action call-to-action-2">
+<section class="section pb-0 call-to-action call-to-action-2" style="{{with .Params.page_background_color}}background-color:{{.}}{{end}}">
   {{ if not $bg_image }}
   <div class="bottom-bg" style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}"></div>
   {{ end }}

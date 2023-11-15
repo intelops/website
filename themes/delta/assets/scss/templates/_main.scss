@@ -2060,7 +2060,7 @@ footer {
 #link {
   padding: 20px;
   margin-block: 40px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid rgba($color-primary, 0.2);
   
   .link-title {
@@ -2075,10 +2075,10 @@ footer {
     width: 100%;
     text-align: center;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 10px;
     padding: 14px 24px;
-    color: $white !important;
     border: 2px solid $color-primary;
+    color: $white !important;
     background-color: $color-primary;
 
     @include mobile {
@@ -2087,10 +2087,9 @@ footer {
     }
 
     &:hover {
-      text-decoration: none;
       color: $color-primary !important;
-      border-color: $color-primary;
-      background-color: transparent;
+      text-decoration: none;
+      background-color: transparent !important;
     }
     .text {
       margin-inline: auto;

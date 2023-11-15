@@ -7,6 +7,11 @@
     "dev": "hugo server",
     "test": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
     "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
-    "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy"
+    "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "prettier": "^3.1.0",
+    "prettier-plugin-go-template": "^0.0.15"
   }
 }

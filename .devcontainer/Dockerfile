@@ -1,24 +1,33 @@
-FROM golang:1.13-alpine
+# Update the arg in docker-compose.yml or devcontainer.json to switch arg versions
+ARG NODE_VERSION=18
 
-# VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
-ARG VARIANT=hugo_extended
-# VERSION can be either 'latest' or a specific version number
-ARG VERSION=latest
+# main image
+FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
-RUN apk add --update --no-cache ca-certificates openssl git curl && \
-    case ${VERSION} in \
-    latest) \
-    export VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4)}') ;;\
+# Update the arg in docker-compose.yml or devcontainer.json to switch arg versions
+ARG GO_VERSION=latest
+ARG HUGO_VERSION=latest
+
+# Download necessary tools
+RUN apt-get update && apt-get install -y \
+    ca-certificates openssl git curl && \
+    rm -rf /var/lib/apt/lists/* && \
+    # set architecture
+    case $(uname -m) in \
+    aarch64) \
+    export ARCH=arm64 ;; \
+    *) \
+    export ARCH=amd64 ;; \
     esac && \
-    echo ${VERSION} && \
-    wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-64bit.tar.gz && \
-    tar xf ${VERSION}.tar.gz && \
-    mv hugo* /usr/bin/hugo && \
-    go get github.com/yaegashi/muslstack && \
-    muslstack -s 0x800000 /usr/bin/hugo
+    # install Hugo
+    wget -O hugo_extended_${HUGO_VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-${ARCH}.tar.gz && \
+    tar xf hugo_extended_${HUGO_VERSION}.tar.gz && \
+    mv hugo /usr/bin/hugo && \
+    rm hugo_extended_${HUGO_VERSION}.tar.gz && \
+    # install Go
+    wget -O go${GO_VERSION}.linux-${ARCH}.tar.gz https://dl.google.com/go/go${GO_VERSION}.linux-${ARCH}.tar.gz && \
+    tar -C /usr/local -xzf go${GO_VERSION}.linux-${ARCH}.tar.gz && \
+    rm go${GO_VERSION}.linux-${ARCH}.tar.gz
 
-FROM mcr.microsoft.com/vscode/devcontainers/base:alpine
-COPY --from=0 /usr/bin/hugo /usr/bin
-EXPOSE 1313
-WORKDIR /src
-CMD ["/usr/bin/hugo server"]
+# Export Go path
+ENV PATH=$PATH:/usr/local/go/bin
