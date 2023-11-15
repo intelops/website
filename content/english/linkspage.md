@@ -5,12 +5,12 @@ description: Overview Links Page.
 
 page_layout: "default" # Mandatory (If you want to use blog single page layout)
 page_description: "" # Description that will show after page title
-page_background_color: "#1c1919" # Optional (Page background color. e.g `#fafafa`)
-page_text_color: "white" # Optional (Page Text color. e.g `#fafafa`)
+page_background_color: "#F7F7F7" # Optional (Page background color. e.g `#fafafa`)
+page_text_color: "blue" # Optional (Page Text color. e.g `#fafafa`)
 
-button_color: "green" # Optional: button background & border color
-button_icon_color: "white" # Optional: Defines the color of the button icon and it will also serve as the hover state color.
-button_text_color: "white" # Optional: Defines the color of the button text and it will also serve as the hover state color.
+button_color: "orange" # Optional: button background & border color
+button_icon_color: "blue" # Optional: Defines the color of the button icon and it will also serve as the hover state color.
+button_text_color: "blue" # Optional: Defines the color of the button text and it will also serve as the hover state color.
 
 links_card_border_color: "#F16F33"
 
@@ -21,7 +21,7 @@ hide_tableofcontent: true # hide table of contents
 hide_popup_form: true # hide table of contents
 
 cover_image: true
-cover_image_src: "/images/logos/logo-light.svg"
+cover_image_src: "/images/logos/AppsTek-Corp_New_Logo.svg"
 cover_image_width: "200px"
 cover_image_height: ""
 
@@ -36,9 +36,9 @@ draft: false
 ---
 
 {{< link-row title=`Check us out!`>}}
-{{< link icon=`/images/linkspage/document.svg` label=`IntelOps Brochure` url=`https://publuu.com/flip-book/289184/674718` >}}
-{{< link icon=`/images/linkspage/document.svg` label=`IntelOps Platform Overview` url=`https://publuu.com/flip-book/289184/674198` >}}
-{{< link icon=`/images/linkspage/web.svg` label=`IntelOps Website` url=`https://intelops.ai/` target=`_self` >}}
+{{< link icon=`/images/linkspage/document.svg` label=`Brochure` url=`https://publuu.com/flip-book/289184/674718` >}}
+{{< link icon=`/images/linkspage/document.svg` label=`Platform Overview` url=`https://publuu.com/flip-book/289184/674198` >}}
+{{< link icon=`/images/linkspage/web.svg` label=`Website` url=`https://intelops.ai/` target=`_self` >}}
 {{</ link-row >}}
 
 {{< link-row title=`Videos`>}}
