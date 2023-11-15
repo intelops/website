@@ -40,6 +40,7 @@ link = "plugins/search/mark.js"
 link = "plugins/search/search-page.js"
 [[params.plugins.js]]
 link = "plugins/lottie-player/lottie-player.js"
+
 [params.variables]
 banner_desc = "#acacac"
 banner_primary = "#091922" # prviously original = 121826

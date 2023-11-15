@@ -848,3 +848,6 @@ form label {
     width: 100%;
   }
 }
+.inherit-text-color * {
+  color: inherit !important;
+}

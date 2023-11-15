@@ -1,0 +1,105 @@
+{
+  "name": "Hugo",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "NODE_VERSION": "20",
+      "GO_VERSION": "1.21.4",
+      "HUGO_VERSION": "0.120.4"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "editor.fontSize": 16,
+        "explorer.confirmDelete": false,
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "workbench.startupEditor": "none",
+        "editor.fontFamily": "Fira Code",
+        "editor.codeLensFontFamily": "'Fira Code', monospace",
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.cursorBlinking": "expand",
+        "editor.wordWrap": "on",
+        "editor.padding.bottom": 100,
+        "scss.lint.unknownAtRules": "ignore",
+        "screencastMode.verticalOffset": 50,
+        "editor.tabSize": 2,
+        "[markdown]": {
+          "editor.unicodeHighlight.ambiguousCharacters": false,
+          "editor.unicodeHighlight.invisibleCharacters": false,
+          "editor.wordWrap": "on",
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "files.associations": {
+          "*.md": "markdown"
+        },
+        "workbench.colorCustomizations": {
+          "tab.activeBackground": "#4e474726",
+          "tab.activeBorder": "#ff000000",
+          "tab.activeBorderTop": "#aaff16bb"
+        },
+        "explorer.confirmDragAndDrop": false,
+        "[svg]": {
+          "editor.defaultFormatter": "jock.svg"
+        },
+        "editor.parameterHints.enabled": true,
+        "html.format.wrapLineLength": 140,
+        "notebook.output.wordWrap": true,
+        "[html]": {
+          "editor.foldingStrategy": "indentation",
+          "editor.autoIndent": "advanced",
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[scss]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "svg.preview.mode": "img",
+        "[javascript]": {
+          "editor.defaultFormatter": "vscode.typescript-language-features"
+        },
+        "files.autoSave": "afterDelay",
+        "redhat.telemetry.enabled": true,
+        "[yaml]": {
+          "editor.defaultFormatter": "redhat.vscode-yaml"
+        },
+        "yaml.schemas": {
+          "file:///Users/themefisher/.vscode/extensions/atlassian.atlascode-3.0.7/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+        },
+        "editor.inlineSuggest.enabled": true,
+        "editor.quickSuggestions": {
+          "strings": true
+        },
+        "css.validate": false,
+        "scss.validate": false,
+        "[jsonc]": {
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
+        },
+        "workbench.colorTheme": "One Dark Pro Mix",
+        "prettier.useEditorConfig": false,
+        "editor.minimap.enabled": false,
+        "diffEditor.ignoreTrimWhitespace": false,
+        "window.zoomLevel": 1,
+        "git.detectSubmodulesLimit": 1000,
+        "git.ignoreSubmodules": true
+      },
+      "extensions": [
+        "budparr.language-hugo-vscode",
+        "tamasfe.even-better-toml",
+        "dbaeumer.vscode-eslint",
+        "DavidAnson.vscode-markdownlint",
+        "esbenp.prettier-vscode",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "jock.svg",
+        "zhuangtongfa.Material-theme",
+        "PKief.material-icon-theme"
+      ]
+    }
+  },
+  "remoteUser": "node",
+  "postCreateCommand": "npm install && npm run dev",
+  "forwardPorts": [1313]
+}
