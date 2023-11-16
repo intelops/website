@@ -37,6 +37,10 @@ link = "plugins/search/fuse.min.js"
 [[params.plugins.js]]
 link = "plugins/search/mark.js"
 [[params.plugins.js]]
+link = "plugins/anime/anime.min.js"
+[[params.plugins.js]]
+link = "plugins/anime/scrollreveal.min.js"
+[[params.plugins.js]]
 link = "plugins/search/search-page.js"
 [[params.plugins.js]]
 link = "plugins/lottie-player/lottie-player.js"
