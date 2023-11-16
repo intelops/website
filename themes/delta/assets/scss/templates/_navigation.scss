@@ -66,11 +66,11 @@
 
       @include desktop-xl {
         padding: 15px 9px !important;
-        font-size: 90%;
       }
 
       @include desktop-lg {
         padding: 8px 15px !important;
+        font-size: 90%;
       }
     }
     select {
