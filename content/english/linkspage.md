@@ -1,5 +1,6 @@
 ---
 date: 2023-05-19
+linkspage: true
 title: |
     Appstek Corp's Product Entity:
 
@@ -49,8 +50,5 @@ draft: false
 
 {{< link-row title=`Videos`>}}
 {{< link icon=`/images/linkspage/videocam.svg` label=`Capten Stack Overview` type=`video` video-embed-id=`OpNIXe0Wc30` >}}
-
-<!-- {{< link icon=`videocam` label=`Compage Teaser` type=`video` video-embed-id=`6CwEGQlY3Pk` >}} -->
-
 {{< link icon=`/images/linkspage/videocam.svg` label=`Compage Teaser` type=`video` video-embed-id=`6CwEGQlY3Pk` >}}
 {{</ link-row >}}

@@ -69,13 +69,13 @@ style="background-image: url({{$img.RelPermalink}});
         {{ $image_height := replace .Params.cover_image_height "px" "" }}
         {{ $image_width := replace .Params.cover_image_width "px" "" }}
         {{ $size := add (add $image_width "x") $image_height }}
-        <div class="mb-4">
+        <div class="mb-4 {{with .Params.linkspage}}links-page-image{{end}}">
           {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
         </div>
         {{ end }}
 
         <div class="pb-1">
-          <h1 class="h2 mb-3">{{.Title | markdownify}}</h1>
+          <h1 class="h2 mb-3 {{with .Params.linkspage}}links-page-title{{end}}">{{.Title | markdownify}}</h1>
           {{ with .Params.page_description }}
             <p>{{. | markdownify}}</p>
           {{ end }}

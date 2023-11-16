@@ -1,3 +1,29 @@
+// Links Page Animation
+anime.timeline().add({
+  targets: ['.links-page-image img'],
+  opacity: [0, 1],
+  translateY: [50, 0],
+  easing: 'easeOutExpo',
+  duration: 1400,
+  delay: (el, i) => 100 * (i + 1)
+}).add({
+  targets: ['.links-page-title p'],
+  opacity: [0, 1],
+  translateY: [50, 0],
+  rotate: ["3deg", "0deg"],
+  skewX: ["-13deg", "0deg"],
+  easing: 'easeOutExpo',
+  duration: 1400,
+  delay: (el, i) => 100 * (i + 1)
+}, "-=1200")
+
+ScrollReveal().reveal('.link', {
+  duration: 300
+});
+ScrollReveal().reveal('.link-item', {
+  duration: 600
+});
+
 // Passive event listeners
 jQuery.event.special.touchstart = {
   setup: function (_, ns, handle) {
@@ -54,7 +80,7 @@ blocks.forEach((block) => {
 // on ready state
 $(document).ready(function () {
   "use strict";
-  
+
   const scrolledPopup = document.querySelector('.scrolledPopup');
   if (scrolledPopup) {
 

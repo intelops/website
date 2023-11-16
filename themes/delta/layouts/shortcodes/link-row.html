@@ -1,7 +1,7 @@
 {{ $title := default "please give title value" (.Get "title") }}
 {{ $links_card_border_color := $.Page.Params.links_card_border_color }}
 
-<div id="link" style="{{with $links_card_border_color}}border-color: {{.}};{{end}}">
+<div class="link" style="{{with $links_card_border_color}}border-color: {{.}};{{end}}">
   {{ with $title }}
     <div class="link-title">{{ . }}</div>
   {{ end }}
