@@ -3,8 +3,8 @@
   command = "yarn build"
   
 [build.environment]
-  HUGO_VERSION = "0.120.4"
-  GO_VERSION = "1.21.4"
+  HUGO_VERSION = "0.121.0"
+  GO_VERSION = "1.21.5"
 
 [[headers]]
   for = "/*" # This defines which paths this specific [[headers]] block will cover.
