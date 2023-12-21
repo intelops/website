@@ -8,28 +8,35 @@ description: "The purpose of this document is to provide a guide for installing 
 ---
 
 The following commands can be used on any `Debian-based Linux operating system`. Below is the guide on `ubuntu 22.04`.
+
 ### Ubuntu 22.04
-Use this command to update local package collection database. 
+
+Use this command to update local package collection database.
+
 ```bash
 sudo apt update
 ```
 
 Go
+
 ```bash
 sudo apt install golang
 ```
 
 Clang and LLVM
+
 ```bash
 sudo apt install clang llvm
 ```
 
 libbpf
+
 ```bash
 sudo apt install libelf-dev
 ```
 
 bpftool and perf
+
 ```bash
 sudo apt install linux-tools-$(uname -r)
 ```

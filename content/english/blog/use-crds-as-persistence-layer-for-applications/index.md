@@ -31,7 +31,6 @@ draft: false
 
 {{< image src="images/blog/use-crds-as-persistence-layer-for-applications/undraw_advanced_customization.svg" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-
 We have been working on an open source project which runs on K8s cluster. We had a need to persist some data, we had two
 options. Either use a full-fledged database or store the data in some files in plain text format.
 
@@ -45,7 +44,8 @@ If you are new to K8s custom-resources, please read on below link.
 The main difference between CR(custom resource) and CRD(custom resource definition) is that the CRD is a schema whereas
 CR represents a resource matching that CRD.
 
-### Setup KinD based K8s cluster 
+### Setup KinD based K8s cluster
+
 For this blog, let's use KinD to create a local K8s cluster. Please follow steps given on below links.
 
 - Install KinD from https://kind.sigs.k8s.io/docs/user/quick-start/#installing-from-release-binaries
@@ -53,6 +53,7 @@ For this blog, let's use KinD to create a local K8s cluster. Please follow steps
 - Check if you can access the cluster created in previous step, and you are able to list down the pods.
 
 ### Code walkthrough
+
 All the code is present [here](https://github.com/intelops/k8s-custom-resource-demo). The project consists of ExpressJS
 with typescript as a choice of language. The structure of the repository looks like below,
 
@@ -117,6 +118,7 @@ kubectl get employee -A
 ```
 
 ### Node client to K8s - @kubernetes/client-node
+
 To perform CRUD operations on the custom resources programmatically, we have
 used [`@kubernetes/client-node`](https://www.npmjs.com/package/@kubernetes/client-node) npm package. We have to
 initialise K8s client in the package and it's done by adding below snippet in the
@@ -138,19 +140,20 @@ Once the client is created using KubeConfig, we can use the methods available to
 including custom resources).
 
 ### Methods to perform CRUD operations on K8s custom resource
-#### To create a custom resource,
+
+#### To create a custom resource
 
 ```typescript
 await client.createNamespacedCustomObject(group, version, namespace, plural, JSON.parse(payload));
 ```
 
-#### To retrieve a custom resource,
+#### To retrieve a custom resource
 
 ```typescript
 await client.getNamespacedCustomObject(group, version, namespace, plural, name);
 ```
 
-#### To update the given custom resource,
+#### To update the given custom resource
 
 Here the patch operation needs special treatment, the options needs a special header here like below
 
@@ -174,13 +177,13 @@ The path contains the key which is getting replaced/patched.
 await client.patchNamespacedCustomObject(group, version, namespace, plural, name, JSON.parse(patch), undefined, undefined, undefined, options);
 ```
 
-#### To list down all the custom resources,
+#### To list down all the custom resources
 
 ```typescript
 await client.listNamespacedCustomObject(group, version, namespace, plural, "true", false, "", "", labelSelector);
 ```
 
-#### To delete the given custom resource,
+#### To delete the given custom resource
 
 ```typescript
 await client.deleteNamespacedCustomObject(group, version, namespace, plural, name)
@@ -205,6 +208,8 @@ kubectl get employee -A
 ```
 
 Similarly, you can call other rest apis too which will retrieve the data from K8s.
+
 ### Conclusion
+
 We saw that how we can use K8s custom resources to persist the application data when deploying a full-fledged database
 is not an option. Let us know your thoughts on this.

@@ -32,12 +32,14 @@ to creating and testing your first custom PXL script.
 ________________
 
 # What Is A PXL Script?
+
 PXL scripts are used to get/manipulate the telemetry data gathered by Pixie. You can also use PXL scripts to collect data from new sources.
 They are written in a custom language developed by Pixie called `PXL`. PXL is similar to Python, in its syntax, and its use of dataframes
 (used by many pythonistas in the pandas library for data manipulation). These scripts can be executed by the Live UI, CLI, or even API. In
 our case, to keep this tutorial short and easy, let's focus on executing PXL scripts on the Live UI.
 
 # Writing Your First PXL Script
+
 All PXL scripts are text files which end in the file extension `.pxl`. So, let's get started by creating a file: `my_first_script.pxl`.
 Within this file, paste the code below. I've added comments so you can follow along and understand what each line of the code does.
 
@@ -66,6 +68,7 @@ that is missing from the original table. Lastly, the script will group the data 
 **Note:** The `px.display()` function is required for the script to be able to run.
 
 # Testing Your First PXL Script
+
 In order to test your PXL script, you can open up the Pixie LIVE UI, navigate to the top left corner, and click on the `script` button. Then,
 scroll up to the top where you will see the `Scratch Pad` option. This will allow you to paste your script into the editor that has opened up
 on the right-hand side.
@@ -73,6 +76,7 @@ After pasting your script, you can hit the `Run` button in the top right corner 
 displayed in your Live UI.
 
 # Common Functions To Manipulate/Add To Your Data
+
 Pixie includes in-built execution-time functions that you can use to modify and/or manipulate your data. These can be viewed at the link [here](https://docs.pixielabs.ai/reference/pxl/udf/#title). Below, I have compiled a list of some of the most useful ones that I have encountered/used:
 
 * px.upid_to_\*(): Anything that starts with a `upid_to_` is a great function, as it allows you to dervive context from the cluster you are working with. For example, `px.upid_to_namespace()` will get you the namespace that the current data is working under. This function is extremely useful, as every table you will be deriving data from (sans the `network_stats` table) contains a `upid`.

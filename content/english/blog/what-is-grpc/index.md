@@ -157,5 +157,6 @@ You can read more about gRPC [here](https://grpc.io/docs/what-is-grpc/introducti
 sample code in the langauge of your choosing [here](https://grpc.io/docs/languages/).
 
 > # Want to learn more?
+>
 > Check out our <a href="https://intelops.ai/learning-center/learn-grpc/" target="_blank">learning center</a> section on
 > gRPC, with more details and code.
