@@ -1,6 +1,6 @@
 [build]
+  command = "yarn build -b $URL"
   publish = "public"
-  command = "yarn build"
   
 [build.environment]
   HUGO_VERSION = "0.121.0"

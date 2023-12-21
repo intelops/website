@@ -23,7 +23,7 @@ jsconfig.json
 test.file
 config-client.toml
 config-current.toml
-
+.netlify
 
 # jetbrains files
 .idea/

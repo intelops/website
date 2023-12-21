@@ -39,17 +39,23 @@ Compage’s solution architecture utilizes diagram-based requirements to generat
 Below is a quick example of how you can generate code in Compage using diagram-based requirements:
 
 1. Log into Compage with GitHub.
-<img src="./images/compage-login.png" />
+
+{{< image src="images/compage-login.png" webp="false" >}}
 2. Create a new project.
-<img src="./images/compage-project.png" />
+
+{{< image src="images/compage-project.png" webp="false" >}}
 3. Create a node and add the node properties details.
-<img src="./images/compage-node-properties.png" />
+
+{{< image src="images/compage-node-properties.png" webp="false" >}}
 4. The node is generated in the language of your choice. (We selected Go to show this example)
-<img src="./images/compage-node-with-code.png" />
+
+{{< image src="images/compage-node-with-code.png" webp="false" >}}
 5. Once the code is generated, the node is updated with the component name given at the time of its creation.
-<img src="./images/compage-update-node.png" />
+
+{{< image src="images/compage-update-node.png" webp="false" >}}
 6. Save any changes to make and then click on **Generate Code**. Developers running multiple projects on Compage can easily switch between them using the **Switch Project** option.
-<img src="./images/compage-generate-code.png" />
+
+{{< image src="images/compage-generate-code.png" webp="false" >}}
 
 The solution architecture offers CRUD operations for efficient data management and seamlessly integrates with OpenTelemetry for comprehensive monitoring and tracing of system behavior.
 
@@ -92,7 +98,5 @@ First-of-its-kind, Compage revolutionizes software and application development, 
 ## Software Supply Chain Security
 
 Compage employs several measures to enhance software supply chain security for secure code delivery. These include code signing for code integrity and immutable ledger logs in SDLC for traceability and accountability. Compage utilizes SBOM to provide clarity on components and dependencies and generates comprehensive vulnerability reports, aiding proactive identification and mitigation. The solution streamlines auto verification, validation, and control of code and container image integrity for seamless deployments in the K8s environment. The features together promote a robust development process and strict compliance.
-
-
 
 You made it! If you like what we are doing, check out [Compage on GitHub](https://github.com/intelops/compage). A star is always appreciated. We have more updates coming so, follow us on [LinkedIn](https://www.linkedin.com/company/intelopsai).
