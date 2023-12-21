@@ -139,4 +139,4 @@ In this blog, we created our first `DOCKERFILE`, container image, and container.
 order to update our code, and recreate our image and container. Hopefully this tutorial has served its purpose of
 getting you accustomed to working with `DOCKERFILES`, images, and containers.
 
-> ## Full source code located [here](https://github.com/hannan-khan-intelops/docker_container_example).
+> ## Full source code located [here](https://github.com/hannan-khan-intelops/docker_container_example)

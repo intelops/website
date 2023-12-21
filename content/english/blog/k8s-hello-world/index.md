@@ -35,9 +35,8 @@ Through this blog, we'll uncover Kubernetes' key role in orchestrating deploymen
 Before embarking on the process of deploying your first application on Kubernetes, make sure you have the following tools and accounts ready:
 
 1. **Docker**: Install Docker to create container images for your application. Refer to the official [Docker documentation](https://docs.docker.com/get-docker/) for installation instructions.
-    
+
 2. **Image Registry Account**: Sign up for an account on [GitHub](https://github.com), [DockerHub](https://hub.docker.com), or any other container image registry. You'll use this account to store and manage your container images.
-    
 
 With these tools and accounts in place, you're equipped to begin your journey into Kubernetes deployment. Let's begin!
 
@@ -58,37 +57,37 @@ cd hello-kubernetes
 package main
 
 import (
-	"fmt"
-	"log"
-	"net/http"
-	"os"
+ "fmt"
+ "log"
+ "net/http"
+ "os"
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	log.Printf("Received request from %s", r.RemoteAddr)
-	fmt.Fprintf(w, "Hello, Kubernetes!")
+ log.Printf("Received request from %s", r.RemoteAddr)
+ fmt.Fprintf(w, "Hello, Kubernetes!")
 }
 
 func main() {
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
-	}
+ port := os.Getenv("PORT")
+ if port == "" {
+  port = "8080"
+ }
 
-	http.HandleFunc("/", handler)
+ http.HandleFunc("/", handler)
 
-	go func() {
-		log.Printf("Server listening on port %s...", port)
-		err := http.ListenAndServe(":"+port, nil)
-		if err != nil {
-			log.Fatal("Failed to start the server")
-		}
-	}()
+ go func() {
+  log.Printf("Server listening on port %s...", port)
+  err := http.ListenAndServe(":"+port, nil)
+  if err != nil {
+   log.Fatal("Failed to start the server")
+  }
+ }()
 
-	log.Printf("Click on http://localhost:%s", port)
+ log.Printf("Click on http://localhost:%s", port)
 
-	done := make(chan bool)
-	<-done
+ done := make(chan bool)
+ <-done
 }
 ```
 
@@ -124,6 +123,7 @@ EXPOSE 8080
 # Command to run the executable
 CMD ["/app/main"]
 ```
+
 Let's deconstruct each segment of the Dockerfile to grasp its purpose:
 
 ```Dockerfile
@@ -181,51 +181,48 @@ The final line defines the default command executed when the container commences
 #### Building the Container Image
 
 1. Open the terminal and navigate to the repository directory.
-    
+
 2. Build the container image using the following command:
-    
+
     ```bash
     docker build -t ghcr.io/pratikjagrut/hello-kubernetes .
     ```
-    
+
     This command builds the container image using the `Dockerfile` from current directory. The `-t` flag specifies the image name.
-    
 
 #### Running the Container
 
 1. Once the image is built, run a Docker container from the image:
-    
+
     ```bash
     ➜ docker run -p 8080:8080 ghcr.io/pratikjagrut/hello-kubernetes
     2023/08/08 13:25:24 Click on the link http://localhost:8080
     2023/08/08 13:25:24 Server listening on port 8080...
     ```
-    
+
     This command maps port 8080 of your host machine to port 8080 in the container.
-    
+
 2. Open a web browser and navigate to [`http://localhost:8080`](http://localhost:8080). You should see the `Hello, Kubernetes!` message.
-    
 
 #### Pushing the Docker Container Registry
 
 For our blog, we've opted for the GitHub container registry. However, feel free to select a registry that aligns with your preferences.
 
 1. Log in to Docker using the GitHub Container Registry:
-    
+
     ```bash
     docker login ghcr.io
     ```
-    
+
     When you run the command, it will ask for your username and password. Enter these credentials to log into your container registry.
-    
+
 2. Push the tagged image to the GitHub Container Registry:
-    
+
     ```bash
     docker push ghcr.io/pratikjagrut/hello-kubernetes
     ```
-    
+
 3. Verify that the image is in your GitHub Container Registry by visiting the `Packages` section of your GitHub repository.
-    
 
 With our application now prepared and containerized, the subsequent phase involves provisioning a Kubernetes cluster and orchestrating the deployment of this containerized application onto it.
 
@@ -238,26 +235,25 @@ In this section, we'll walk you through setting up a Kubernetes cluster to begin
 Before we dive into setting up the Kubernetes cluster, you'll need to install both KIND and kubectl on your machine.
 
 * **KIND (Kubernetes in Docker)**: KIND allows you to run Kubernetes clusters as Docker containers, making it perfect for local development. Follow the [official KIND installation guide](https://kind.sigs.k8s.io/docs/user/quick-start/) to install it on your system.
-    
+
 * **kubectl**: This command-line tool is essential for interacting with your Kubernetes cluster. Follow the [Kubernetes documentation](https://kubernetes.io/docs/tasks/tools/) to install kubectl on your machine.
-    
 
 **Creating Your KIND Cluster**
 
 Once KIND and Kubectl are set up, let's create your local Kubernetes cluster:
 
 1. Open your terminal.
-    
+
 2. Run the following command to create a basic KIND cluster:
-    
+
     ```bash
     kind create cluster
     ```
-    
+
 3. Check if the cluster is properly up and running using `kubectl get ns`
-    
+
     It should get all the namespaces present in the cluster.
-    
+
     ```bash
     ➜ kubectl get ns
     NAME                 STATUS   AGE
@@ -267,18 +263,16 @@ Once KIND and Kubectl are set up, let's create your local Kubernetes cluster:
     kube-system          Active   3m14s
     local-path-storage   Active   3m9s
     ```
-    
 
-##### Alternative Setup Options:
+##### Alternative Setup Options
 
 * **Minikube**: If you prefer another local option, [Minikube](https://minikube.sigs.k8s.io/docs/start/) provides a hassle-free way to run a single-node Kubernetes cluster on your local machine.
-    
+
 * **Docker Desktop**: For macOS and Windows users, [Docker Desktop](https://www.docker.com/products/docker-desktop) offers a simple way to set up a Kubernetes cluster.
-    
+
 * **Rancher Desktop**: [Rancher Desktop](https://rancherdesktop.io/) is another choice for a local development cluster that integrates with Kubernetes, Docker, and other tools.
-    
+
 * **Cloud Clusters**: If you'd instead work in a cloud environment, consider platforms like [Google Kubernetes Engine (GKE)](https://cloud.google.com/kubernetes-engine) or [Amazon EKS](https://aws.amazon.com/eks/) for managed Kubernetes clusters.
-    
 
 With your Kubernetes cluster up and running, you're ready to sail ahead with deploying your first application.
 
@@ -297,7 +291,6 @@ To put it simply, a Deployment takes care of keeping our application consistent 
 Here's how we can create a Deployment for our application:
 
 **Create a YAML file named `hello-k8s-deployment.yaml`:**
-    
 
 ```yaml
 apiVersion: apps/v1
@@ -324,7 +317,7 @@ spec:
 This YAML defines a Deployment named `hello-k8s-deployment` that runs two replicas of our application.
 
 **Apply the Deployment to your Kubernetes cluster:**
-    
+
 ```bash
 kubectl apply -f hello-k8s-deployment.yaml
 ```
@@ -361,7 +354,6 @@ kubectl create secret docker-registry my-registry-secret \
 ```
 
 **Attach the secret to your Deployment:**
-    
 
 ```yaml
 spec:
@@ -391,14 +383,12 @@ hello-k8s-deployment-669788ccd6-k5gfg   1/1     Running   0          37s
 With the Deployment in place, we can access our application externally. Since we're using KIND, we can use port-forwarding to access the application:
 
 **Find the name of one of the deployed Pods:**
-    
 
 ```bash
 kubectl get pods -l app=hello-k8s
 ```
 
 **Forward local port 8080 to the Pod:**
-    
 
 ```bash
 kubectl port-forward <pod-name> 8080:8080
