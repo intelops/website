@@ -1,6 +1,6 @@
 ---
 date: 2023-12-26
-title: Beyond Digitization-Redefining Mortgage Lending With App Modernization
+title: Beyond Digitization - Redefining Mortgage Lending With App Modernization
 description: Explore our mortgage app modernization roadmap to overcome challenges with legacy systems, adopting cloud-native solutions for an efficient loan process.
 image: images/blog/beyond-digitization-redefining-mortgage-lending-with-app-modernization/app-modernization-for-mortgage-lenders-v3.jpg
 
@@ -24,6 +24,8 @@ tags:
 - app modernization
 - mortgage
 - compage
+- banking
+- finance
 
 # image color code in undraw.co #FB7E44 
 feedback: false
