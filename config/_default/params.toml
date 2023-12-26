@@ -1,27 +1,37 @@
-address = "9567 Turner Trace Apt. BC C3G8A4"
-author = "Intelops"
-career_form_action = "#!"
-contact_form_action = "#!"
-custom_script = ""
-description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
-email = "info@email.com"
+#################### default parameters ################################
+# favicon
 favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
-
+# logo
 logo = "images/logos/new-logo-dark.svg" #This is the main logo displayed on the header bar
 logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
 logo_dark = "images/logos/new-logo-dark.svg"
 footer_logo_dark = false
+# if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = false
-
+# logo text will only show when logo is missing.
 logo_text = "Intelops"
+# use `px` or `x` with logo_width, example: "100px".
+# Note: logo_width is not work with .svg file
 logo_width = "130px"
+# Main Sections
 mainSections = ["blog"]
-mobile = "+211234565523"
-fullSiteSearch = true
 
 # google tag manager, see https://developers.google.com/tag-manager/
-google_tag_manager = "GTM-PVRN5BQ"
+google_tag_manager = "GTM-PVRN5BQ" # example: G-XXXXXXXXXX
+google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
+
+mobile = "+211234565523"
+email = "info@email.com"
+description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
+
+fullSiteSearch = true
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+
+# Contact Form Action
+career_form_action = "#!"
+contact_form_action = "#!"
 
 # seo meta data for OpenGraph / Twitter Card
 [metadata]
@@ -30,32 +40,45 @@ description = "Democratizing Cloud Native. Making Imagination a Reality."
 author = "Intelops"
 image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
 
+
+# Footer Configuration
 [footer]
 footer_light = false
 # bg_color = "#1e384c"
 # bg_image = "images/bg-banner-page.jpg"
 bg_image_overlay_color = "rgba(0,0,0,.65)"
+
+
+# Call To Action
 [call_to_action]
-button_label = "Contact Us"
-button_link = "contact/"
 enable = true
+title = "Looking for Cloud-Native Implementation?"
 image = "images/footer/homepage/contact-image.svg"
 subtitle = "Finding the right talent is pain. More so, keeping up with concepts, culture, technology and tools. We all have been there. Our AI-based automated solutions helps eliminate these issues, making your teams lives easy."
-title = "Looking for Cloud-Native Implementation?"
+button_label = "Contact Us"
+button_link = "contact/"
+
+
+# Call To Action
 [cookies]
 button = "I Accept"
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
 enable = false
 expire_days = 2
+
+
 [navigation_button]
 enable = false #enable or disable login button on Header menu bar.
 icon = "far fa-user"
 label = "Log In"
 link = "#!"
+
 [navigation_button_two]
 enable = false #enable or disable sign up button on Header menu bar.
 label = "Sign Up Now"
 link = "#!"
+
+
 [preloader]
 enable = false
 preloader = "images/loader.png"

@@ -62,6 +62,7 @@ The now inserted malicious code can execute crypto mining, or create a backdoor 
 Fewer than 10 attacks occur each year, and they are extremely targeted.
 
 > ## **Did You Know?** - `Log4Shell` Attack
+>
 > `Log4Shell` is a vulnerability within a popular Java library used for logging errors in applications.  
 > This vulnerability allows attackers to take control of a device (through the internet) if the device is using a
 > certain

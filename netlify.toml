@@ -1,10 +1,19 @@
 [build]
   publish = "public"
-  command = "yarn build"
-  
-[build.environment]
-  HUGO_VERSION = "0.121.0"
-  GO_VERSION = "1.21.5"
+  command = "yarn build -b $URL"
+
+  [build.environment]
+    HUGO_VERSION = "0.121.1"
+    GO_VERSION = "1.21.5"
+
+[context.production.environment]
+  HUGO_ENV = "production"
+
+[context.deploy-preview]
+  command = "yarn build -b $DEPLOY_PRIME_URL"
+
+[context.branch-deploy]
+  command = "yarn build -b $DEPLOY_PRIME_URL"
 
 [[headers]]
   for = "/*" # This defines which paths this specific [[headers]] block will cover.

@@ -40,6 +40,7 @@ draft: false
 Evans CLI is a command-line tool designed to facilitate interaction with Go gRPC services. It offers a range of features that simplify the testing and debugging of gRPC services. Here are some of the advantages of using Evans CLI:
 
 ### Advantages of Evans CLI
+
 Evans CLI stands out from other tools for interacting with gRPC services due to the following advantages:
 
 - **Ease of use:** Evans CLI provides a simple command-line interface, making it incredibly user-friendly. It allows you to effortlessly send requests and receive responses from gRPC services.
@@ -49,21 +50,24 @@ Evans CLI stands out from other tools for interacting with gRPC services due to 
 - **Open source:** Evans CLI is an open-source tool, which means it is free to use and modify. This makes it a flexible and cost-effective choice for developers.
 
 ### Installation of Evans CLI
+
 To install Evans CLI, follow these steps:
 
 - **Prerequisites:**
-    - Ensure that the following dependencies are installed:
+  - Ensure that the following dependencies are installed:
         1. [protobuf-compiler](https://grpc.io/docs/protoc-installation/)
         2. [libprotobuf-dev](https://howtoinstall.co/en/libprotobuf-dev)
 
 - Install Evans CLI by referring to the official documentation: [https://github.com/ktr0731/evans#installation](https://github.com/ktr0731/evans#installation). The documentation provides detailed instructions on how to download and install Evans CLI.
 
 ### Sample gRPC Server Project
+
 For the purpose of demonstrating the usage of Evans CLI, let's consider a sample gRPC server that implements CRUD (Create, Read, Update, Delete) operations based on an office protocol file.
 
 You can find the source code for this [sample project here](https://github.com/intelops/evans-cli-grpc-in-go).
 
 ### How Evans CLI Solves Client-Side Issues for the gRPC Server
+
 Evans CLI addresses client-side issues for the gRPC server through its REPL (Read-Eval-Print Loop) mode and CLI (Command Line Interface) mode. In this example, we will focus on the REPL mode, as it offers a more user-friendly way to interact with the server.
 
 To start the Evans CLI client in REPL mode, execute the following command in the root directory of your project:
@@ -91,6 +95,7 @@ package <Package_Name>
 ```
 
 For example:
+
 ```bash
 package gen
 ```
@@ -112,6 +117,7 @@ service <Service_Name>
 ```
 
 For example:
+
 ```bash
 service OfficeService
 ```
@@ -133,6 +139,7 @@ desc <Message_Name>
 ```
 
 For example:
+
 ```bash
 desc Office
 ```
@@ -156,6 +163,7 @@ call <rpc-method-name>
 ```
 
 For example:
+
 ```bash
 call CreateOffice
 ```
@@ -164,6 +172,7 @@ call CreateOffice
 ![Check RPC](./images/rpc-check.gif)
 
 ### Conclusion
+
 Evans CLI is a powerful tool that simplifies the testing and debugging of Go gRPC services. With its easy-to-use interface, rich set of features, and open-source nature, Evans CLI provides developers with an efficient way to interact with gRPC servers.
 
 By installing Evans CLI and utilizing its REPL mode, developers can seamlessly explore, inspect, and test the different APIs exposed by their gRPC servers. This interactive approach enhances the development workflow, improves efficiency, and boosts confidence in the reliability of gRPC-based systems.
