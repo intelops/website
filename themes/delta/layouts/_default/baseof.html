@@ -43,7 +43,10 @@ AUTHOR WEBSITE: https://gethugothemes.com
 	{{ partial "script.html" . }}
 	{{ partial "footer.html" . }}
 	{{ end }}
-  {{ partial "tawk.html"}}
+	
+	{{ if not .Params.hide_tawk }}
+  	{{ partial "tawk.html"}}
+	{{ end }}
 </body>
 
 </html>
