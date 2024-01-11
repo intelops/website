@@ -8,151 +8,154 @@
       <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
         {{ partial "logo.html" }}
       </a>
-
-      <div class="navbar-actions d-inline-flex align-items-center">
-        <!-- Language List -->
-        {{ if .IsTranslated }}
-        <select class="border-0 d-inline d-xl-none" onchange="location = this.value;">
-          {{ $siteLanguages := site.Languages}}
-          {{ $pageLang := .Page.Lang}}
-          {{ range .Page.AllTranslations }}
-          {{ $translation := .}}
-          {{ range $siteLanguages }}
-          {{ if eq $translation.Lang .Lang }}
-          {{ $selected := false }}
-          {{ if eq $pageLang .Lang}}
-          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
-          </option>
-          {{ else }}
-          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
-          {{ end }}
-          {{ end }}
-          {{ end }}
-          {{ end }}
-        </select>
-        {{ end }}
-
-        <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navigation">
-          <i class="d-inline fas fa-bars"></i>
-          <i class="d-none far fa-times-circle"></i>
-        </button>
-
-        {{ if site.Params.fullSiteSearch }}
-        <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
-          <i class="fas fa-search"></i>
-        </button>
-        {{ end }}
-      </div>
-
-      <div class="collapse navbar-collapse text-center" id="navigation">
-        <ul class="navbar-nav mx-auto align-items-center">
-
-          {{ $currentPage := . }}
-          {{ range site.Menus.main }}
-          {{ $menuURL := .URL | absLangURL }}
-          {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-          {{ $active := eq $menuURL $pageURL }}
-          {{ if .HasChildren }}
-          <li class="nav-item dropdown
-            {{ range .Children }}
-            {{ $childURL := .URL | absLangURL }}
-            {{ $active := eq $childURL $pageURL }}
-            {{ if $active }}active{{ end }}
-            {{ end }}">
-            <a class="nav-link nav-menu-text dropdown-toggle" id="nav-menu" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              {{ .Name }}
-            </a>
-            <ul class="dropdown-menu {{if .Params.isMenuLarge}}dropdown-lg {{end}}">
-              {{ range .Children }}
-              {{ $childURL := .URL | absLangURL }}
-              {{ $active := eq $childURL $pageURL }}
-              <li>
-                <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-                href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">
-                <span class="d-flex align-items-start">
-                  {{ if .Pre }}
-                  {{ $icon := .Pre }}
-                  {{ if fileExists (add `assets/` $icon) }}
-                  {{ $preIcon:= resources.Get $icon }}
-                  <img src="{{$preIcon.RelPermalink}}" alt="icon" height="22px" width="22px">
-                  {{ end }}
-                  {{ end }}
-                  <span class="ms-1">
-                    <span>{{ .Name }}</span>
-                    {{ if .Post }}{{.Post}}{{ end }}
-                  </span>
-                </span>
-                </a>
-              </li>
-              {{ end }}
-            </ul>
-          </li>
-          {{ else }}
-          <li class="nav-item {{if $active}}active{{end}}">
-            <a class="nav-link nav-menu-text" id="nav-menu" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-              href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
-          </li>
-          {{ end }}
-          {{ end }}
-          <li class="nav-item d-none d-xl-block">
-            <!-- Language List -->
-            {{ if .IsTranslated }}
-            <select class="border-0" id="select-language" onchange="location = this.value;">
-              {{ $siteLanguages := site.Languages}}
-              {{ $pageLang := .Page.Lang}}
-              {{ range .Page.AllTranslations }}
-              {{ $translation := .}}
-              {{ range $siteLanguages }}
-              {{ if eq $translation.Lang .Lang }}
-              {{ $selected := false }}
-              {{ if eq $pageLang .Lang}}
-              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
-              </option>
-              {{ else }}
-              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
-              {{ end }}
-              {{ end }}
-              {{ end }}
-              {{ end }}
-            </select>
+      
+      {{ if not .Params.hide_header_except_logo }}
+        <div class="navbar-actions d-inline-flex align-items-center">
+          <!-- Language List -->
+          {{ if .IsTranslated }}
+          <select class="border-0 d-inline d-xl-none" onchange="location = this.value;">
+            {{ $siteLanguages := site.Languages}}
+            {{ $pageLang := .Page.Lang}}
+            {{ range .Page.AllTranslations }}
+            {{ $translation := .}}
+            {{ range $siteLanguages }}
+            {{ if eq $translation.Lang .Lang }}
+            {{ $selected := false }}
+            {{ if eq $pageLang .Lang}}
+            <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
+            </option>
+            {{ else }}
+            <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
             {{ end }}
-          </li>
-        </ul>
-
-        <div class="navbar-right header-button" id="main-button">
-          {{ with site.Params.navigation_button }}
-          {{ if .enable }}
-          <!-- login btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-link px-0 me-1">
-            {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
-          </a>
-          {{ end }}
+            {{ end }}
+            {{ end }}
+            {{ end }}
+          </select>
           {{ end }}
 
-          {{ with site.Params.navigation_button_two }}
-          {{ if .enable }}
-          <!-- signup btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-primary">
-            {{ .label }} {{with .icon}}<i class="icon {{.}}"></i>{{end}}
-          </a>
-          {{ end }}
-          {{ end }}
+          <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navigation">
+            <i class="d-inline fas fa-bars"></i>
+            <i class="d-none far fa-times-circle"></i>
+          </button>
 
           {{ if site.Params.fullSiteSearch }}
-          <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
+          <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
             <i class="fas fa-search"></i>
           </button>
           {{ end }}
         </div>
-      </div>
+
+        <div class="collapse navbar-collapse text-center" id="navigation">
+          <ul class="navbar-nav mx-auto align-items-center">
+
+            {{ $currentPage := . }}
+            {{ range site.Menus.main }}
+            {{ $menuURL := .URL | absLangURL }}
+            {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+            {{ $active := eq $menuURL $pageURL }}
+            {{ if .HasChildren }}
+            <li class="nav-item dropdown
+              {{ range .Children }}
+              {{ $childURL := .URL | absLangURL }}
+              {{ $active := eq $childURL $pageURL }}
+              {{ if $active }}active{{ end }}
+              {{ end }}">
+              <a class="nav-link nav-menu-text dropdown-toggle" id="nav-menu" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true"
+                aria-expanded="false">
+                {{ .Name }}
+              </a>
+              <ul class="dropdown-menu {{if .Params.isMenuLarge}}dropdown-lg {{end}}">
+                {{ range .Children }}
+                {{ $childURL := .URL | absLangURL }}
+                {{ $active := eq $childURL $pageURL }}
+                <li>
+                  <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                  href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">
+                  <span class="d-flex align-items-start">
+                    {{ if .Pre }}
+                    {{ $icon := .Pre }}
+                    {{ if fileExists (add `assets/` $icon) }}
+                    {{ $preIcon:= resources.Get $icon }}
+                    <img src="{{$preIcon.RelPermalink}}" alt="icon" height="22px" width="22px">
+                    {{ end }}
+                    {{ end }}
+                    <span class="ms-1">
+                      <span>{{ .Name }}</span>
+                      {{ if .Post }}{{.Post}}{{ end }}
+                    </span>
+                  </span>
+                  </a>
+                </li>
+                {{ end }}
+              </ul>
+            </li>
+            {{ else }}
+            <li class="nav-item {{if $active}}active{{end}}">
+              <a class="nav-link nav-menu-text" id="nav-menu" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.URL}}{{else if eq .URL (`/` | relURL) }}{{.URL}}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
+            </li>
+            {{ end }}
+            {{ end }}
+            <li class="nav-item d-none d-xl-block">
+              <!-- Language List -->
+              {{ if .IsTranslated }}
+              <select class="border-0" id="select-language" onchange="location = this.value;">
+                {{ $siteLanguages := site.Languages}}
+                {{ $pageLang := .Page.Lang}}
+                {{ range .Page.AllTranslations }}
+                {{ $translation := .}}
+                {{ range $siteLanguages }}
+                {{ if eq $translation.Lang .Lang }}
+                {{ $selected := false }}
+                {{ if eq $pageLang .Lang}}
+                <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
+                </option>
+                {{ else }}
+                <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
+                {{ end }}
+                {{ end }}
+                {{ end }}
+                {{ end }}
+              </select>
+              {{ end }}
+            </li>
+          </ul>
+
+          <div class="navbar-right header-button" id="main-button">
+            {{ with site.Params.navigation_button }}
+            {{ if .enable }}
+            <!-- login btn -->
+            <a href="{{ .link | relLangURL }}" class="btn btn-link px-0 me-1">
+              {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
+            </a>
+            {{ end }}
+            {{ end }}
+
+            {{ with site.Params.navigation_button_two }}
+            {{ if .enable }}
+            <!-- signup btn -->
+            <a href="{{ .link | relLangURL }}" class="btn btn-primary">
+              {{ .label }} {{with .icon}}<i class="icon {{.}}"></i>{{end}}
+            </a>
+            {{ end }}
+            {{ end }}
+
+            {{ if site.Params.fullSiteSearch }}
+            <button class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block" style="width:44px" data-bs-toggle="modal" data-bs-target="#searchModal">
+              <i class="fas fa-search"></i>
+            </button>
+            {{ end }}
+          </div>
+        </div>
+      {{ end }}
     </nav>
   </div>
 </header>
 <!-- /navigation -->
 
 {{ if site.Params.fullSiteSearch }}
+{{ if not .Params.hide_search_related_code}}
 <div class="modal search-modal" id="searchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog search-modal-dialog">
     <div class="modal-content border-0"><div class="modal-header border-0" style="padding:1rem"><div class="input-group border-0">
@@ -242,4 +245,5 @@
   loadJsonData();
 
 </script>
+{{ end }}
 {{ end }}
