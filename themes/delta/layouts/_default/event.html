@@ -1,0 +1,39 @@
+<article class="card event-card rounded-md overflow-hidden h-100">
+  <a href="{{ .RelPermalink }}" title="{{ .Title }}">
+    {{ with .Params.image }}
+      {{ partial "image.html" (dict "Src" . "Size" "x550" "Webp" false "Class" "w-100 object-cover card-img-top h-auto" ) }}
+    {{ else }}
+      <img
+        class="img-fluid"
+        src="https://via.placeholder.com/570x321.png/eee/eee"
+        alt="image-fallback" />
+    {{ end }}
+  </a>
+  <div class="card-body border-0 position-relative">
+    {{ with .Params.event_date_location }}
+      <span
+        class="badge text-sm text-white text-uppercase"
+        style="font-size: 12px;">
+        {{ . | markdownify }}
+      </span>
+    {{ end }}
+    <h3 class="h4">
+      <a
+        class="blog-title"
+        href="{{ .RelPermalink }}"
+        title="{{ .Title }}"
+        {{ with .Params.card_title_color }}
+          style="color:{{ . }} !important"
+        {{ end }}>
+        {{ .Title }}
+      </a>
+    </h3>
+    <p
+      class="mb-0"
+      {{ with .Params.card_description_color }}
+        style="color:{{ . }} !important"
+      {{ end }}>
+      {{ .Plain | truncate 110 }}
+    </p>
+  </div>
+</article>
