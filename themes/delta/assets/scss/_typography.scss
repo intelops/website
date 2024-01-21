@@ -69,11 +69,12 @@ $level-size: $font-size;
   .h#{$level} {
     font-size: $level-size !important;
     line-height: calc(10px + 2ex + 2px) !important;
+    
     @include desktop {
       font-size: calc(#{$level-size} * 0.85) !important;
     }
     @include tablet {
-      font-size: calc(#{$level-size} * 0.75) !important;
+      font-size: calc(#{$level-size} * 0.80) !important;
     }
   }
 }

@@ -214,6 +214,11 @@ name = "Resources"
 url = "resources/"
 weight = 50
 [[main]]
+name = "Events & Webinars"
+parent = "Resources"
+url = "events/"
+weight = 7
+[[main]]
 name = "Licensing"
 parent = "Resources"
 url = "licensing-terms-conditions/1-licensing"
