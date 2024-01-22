@@ -1,0 +1,68 @@
+{{ define "main" }}
+  {{ partial "header.html" . }}
+  {{ $permalinkArr :=  (split .RelPermalink "/") }}
+  {{ $evntCategory := string (index $permalinkArr 2) }}
+  {{ $currentSection := $evntCategory }}
+  {{ $isRootSection := and (eq (string (index $permalinkArr 1)) "events") (eq (ne $evntCategory "") false) }}
+
+  {{ if $evntCategory }}
+    {{ $paginator := .Paginate .RegularPages }}
+
+
+    <section class="section-sm event-section">
+      <div class="container container-delta">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="mb-5">{{ .Title | markdownify }}</h2>
+          </div>
+        </div>
+        <div class="row gy-3">
+          <!-- Blog post -->
+          {{ range $i, $e := $paginator.Pages }}
+            {{ if not .Params.expired }}
+              <div class="col-xl-4 col-md-6 blog-card has-border">
+                {{ .Render "event" }}
+              </div>
+            {{ end }}
+          {{ end }}
+
+
+          <!-- custom pagination -->
+          {{ partial "partials/custom-pagination.html" . }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ $len := sub (len .Sections) 1 }}
+  {{ range $i, $e := .Sections }}
+
+    {{ if $isRootSection }}
+      <section
+        class="section-sm event-section {{ if ne $i $len }}pb-0{{ end }}">
+        <div class="container container-delta">
+          <div class="row">
+            <div class="col-12">
+              <h2 class="mb-5">{{ .Title | markdownify }}</h2>
+            </div>
+          </div>
+          <div class="row gy-3">
+            <!-- Blog post -->
+            {{ $paginator:= .Paginate .RegularPages }}
+            {{ range $i, $e := $paginator.Pages }}
+              {{ if not .Params.expired }}
+                <div class="col-xl-4 col-md-6 blog-card has-border">
+                  {{ .Render "event" }}
+                </div>
+              {{ end }}
+            {{ end }}
+
+
+            <!-- custom pagination -->
+            {{ partial "partials/custom-pagination.html" . }}
+          </div>
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+{{ end }}
