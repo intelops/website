@@ -7,43 +7,138 @@ AUTHOR WEBSITE: https://gethugothemes.com
 
 -->
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.LanguageCode | default `en-US` }}">
+  <head>
+    {{ partial "head.html" . }}
 
-<head>
-	{{ partial "head.html" . }}
 
-	<!-- cache partial only in production -->
-	{{ if hugo.IsProduction }}
-	{{ partialCached "style.html" . }}
-	{{ else }}
-	{{ partial "style.html" . }}
-	{{ end }}
-</head>
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "style.html" . }}
+    {{ else }}
+      {{ partial "style.html" . }}
+    {{ end }}
+  </head>
 
-<body>
-	<!-- google tag manager noscript -->
-	{{ partial "gtm-noscript.html" . }}
+  <body>
+    <!-- google tag manager noscript -->
+    {{ partial "gtm-noscript.html" . }}
 
-	<!-- cache partial only in production -->
-	{{ if hugo.IsProduction }}
-	{{ partialCached "preloader.html" . }}
-	{{ else }}
-	{{ partial "preloader.html" . }}
-	{{ end }}
 
-	<main>{{ block "main" . }}{{ end }}</main>
-	<main class="pt-0">{{ block "main-sm" . }}{{ end }}</main>
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "preloader.html" . }}
+    {{ else }}
+      {{ partial "preloader.html" . }}
+    {{ end }}
 
-	<!-- cache partial only in production -->
-	{{ if hugo.IsProduction }}
-	{{ partialCached "script.html" . }}
-	{{ partialCached "footer.html" . }}
-	{{ else }}
-	{{ partial "script.html" . }}
-	{{ partial "footer.html" . }}
-	{{ end }}
-  {{ partial "tawk.html"}}
-</body>
 
+    <main>{{ block "main" . }}{{ end }}</main>
+    <main class="pt-0">{{ block "main-sm" . }}{{ end }}</main>
+
+    <!-- cache partial only in production -->
+    {{ if hugo.IsProduction }}
+      {{ partialCached "script.html" . }}
+      {{ if eq .Page.Section "events" }}
+
+        <!-- start of videoModal -->
+        <div
+          class="modal fade rounded overflow-hidden"
+          id="videoModal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true">
+          <div
+            class="modal-dialog modal-lg modal-dialog-centered"
+            role="document">
+            <div class="modal-content border-0 bg-transparent">
+              <div class="text-center p-3">
+                <button
+                  type="button"
+                  class="border-0 modal-close-btn"
+                  data-bs-dismiss="modal"
+                  aria-label="Close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body bg-dark p-0 rounded">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                  <iframe
+                    src=""
+                    id="showVideo"
+                    allowscriptaccess="always"
+                    allow="autoplay"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of videoModal -->
+      {{ else }}
+        {{ partialCached "footer.html" . }}
+      {{ end }}
+    {{ else }}
+      {{ partial "script.html" . }}
+      {{ if eq .Page.Section "events" }}
+        <!-- start of videoModal -->
+        <div
+          class="modal fade rounded overflow-hidden"
+          id="videoModal"
+          tabindex="-1"
+          role="dialog"
+          aria-hidden="true">
+          <div
+            class="modal-dialog modal-lg modal-dialog-centered"
+            role="document">
+            <div class="modal-content border-0 bg-transparent">
+              <div class="text-center p-3">
+                <button
+                  type="button"
+                  class="border-0 modal-close-btn"
+                  data-bs-dismiss="modal"
+                  aria-label="Close">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="30"
+                    height="30"
+                    fill="currentColor"
+                    viewBox="0 0 16 16">
+                    <path
+                      d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-body bg-dark p-0 rounded">
+                <div class="ratio ratio-16x9 rounded overflow-hidden">
+                  <iframe
+                    src=""
+                    id="showVideo"
+                    allowscriptaccess="always"
+                    allow="autoplay"
+                    allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end of videoModal -->
+      {{ else }}
+        {{ partial "footer.html" . }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not .Params.hide_tawk }}
+      {{ partial "tawk.html" }}
+    {{ end }}
+  </body>
 </html>
