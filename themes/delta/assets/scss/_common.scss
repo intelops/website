@@ -24,6 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .has-fade-animation {
     -webkit-animation: fadeinout 1s forwards infinite;
     animation: fadeinout 1s forwards infinite;
@@ -34,6 +35,7 @@ body {
         transform: scale(0.95);
       }
     }
+
     @keyframes fadeinout {
       50% {
         opacity: 0.4;
@@ -74,6 +76,7 @@ a:hover {
 // swiper js
 .swiper-pagination {
   bottom: -15px !important;
+
   span {
     display: inline-block;
     margin: 0 7px;
@@ -82,6 +85,7 @@ a:hover {
     position: relative;
     font-size: 0;
     background-color: transparent;
+
     &::after {
       position: absolute;
       content: "";
@@ -92,27 +96,31 @@ a:hover {
       background-color: lighten($black, 5);
       transition: 0.3s;
     }
+
     &.swiper-pagination-bullet-active::after {
       background-color: $black;
     }
   }
 }
-.swiper-container-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet {
+
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 8px;
 }
+
 .swiper-container-vertical {
   padding-right: 40px;
+
   .swiper-pagination {
     bottom: -15px !important;
     align-items: center;
     justify-content: center;
     display: flex;
     flex-direction: column;
+
     span {
       margin: 0 7px;
       padding: 14px 8px;
+
       &::after {
         height: 100%;
         width: 2px;
@@ -127,28 +135,34 @@ a:hover {
 .section {
   padding-top: 110px;
   padding-bottom: 110px;
+
   @include desktop {
     padding-top: 90px;
     padding-bottom: 90px;
   }
+
   &-sm {
     padding-top: 90px;
     padding-bottom: 90px;
   }
+
   @include tablet {
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
   &-title {
     margin-bottom: 45px;
   }
 }
+
 .subtitle {
   @extend .font-secondary;
   @extend .fw-700;
   @extend .text-capitalize;
   color: $banner-subtitle;
 }
+
 .title {
   @extend .text-capitalize;
 }
@@ -158,25 +172,32 @@ a:hover {
     max-width: 1300px;
     padding: 0 55px;
   }
+
   @media (min-width: 575px) {
     padding: 0 40px;
   }
+
   @include mobile {
     padding: 0 17px;
   }
+
   @include mobile-xs {
     padding: 0 10px;
   }
 }
+
 .container-delta-lg {
   max-width: 1600px;
   padding: 0 55px;
+
   @media (min-width: 575px) {
     padding: 0 40px;
   }
+
   @include mobile {
     padding: 0 17px;
   }
+
   @include mobile-xs {
     padding: 0 10px;
   }
@@ -187,6 +208,7 @@ a:hover {
 .pagination {
   li {
     margin: 4px;
+
     a {
       font-weight: 500;
       border-radius: 12px !important;
@@ -196,20 +218,25 @@ a:hover {
       line-height: 38px;
       text-align: center;
       color: $text-dark;
+
       &:hover,
       &:focus {
         box-shadow: none;
         color: $white;
       }
     }
+
     &:nth-child(even) {
+
       a:hover,
       a:focus {
         background-color: $color-primary;
         border-color: $color-primary;
       }
     }
+
     &:nth-child(odd) {
+
       a:hover,
       a:focus {
         background-color: $color-tertiary;
@@ -218,6 +245,7 @@ a:hover {
     }
   }
 }
+
 .social-links {
   a {
     font-size: 16px;
@@ -237,6 +265,7 @@ a:hover {
   background-position: center center;
   background-repeat: no-repeat;
 }
+
 .border-default {
   border-color: $border-color !important;
 }
@@ -252,6 +281,7 @@ a:hover {
 /* overlay */
 .overlay {
   position: relative;
+
   &::before {
     position: absolute;
     content: "";
@@ -264,6 +294,7 @@ a:hover {
     pointer-events: none;
   }
 }
+
 .overlay-30 {
   &::before {
     z-index: -1;
@@ -277,24 +308,31 @@ a:hover {
 
 .rounded-sm {
   border-radius: 12px;
+
   @include mobile {
     border-radius: 6px;
   }
 }
+
 .rounded-md {
   border-radius: 20px;
+
   @include tablet {
     border-radius: 12px;
   }
+
   @include mobile {
     border-radius: 6px;
   }
 }
+
 .rounded-lg {
   border-radius: 25px;
+
   @include tablet {
     border-radius: 15px;
   }
+
   @include mobile {
     border-radius: 6px;
   }
@@ -303,6 +341,7 @@ a:hover {
 .font-primary {
   font-family: $font-primary;
 }
+
 .font-secondary {
   font-family: $font-secondary;
 }
@@ -310,15 +349,19 @@ a:hover {
 .fw-400 {
   font-weight: 400;
 }
+
 .fw-500 {
   font-weight: 500;
 }
+
 .fw-600 {
   font-weight: 600;
 }
+
 .fw-700 {
   font-weight: 700;
 }
+
 .fw-900 {
   font-weight: 900;
 }
@@ -326,9 +369,11 @@ a:hover {
 .bg-primary {
   background: $color-primary !important;
 }
+
 .bg-primary-soft {
   background: $banner-primary !important;
 }
+
 .text-primary {
   color: $color-primary !important;
 }
@@ -336,9 +381,11 @@ a:hover {
 .bg-secondary {
   background: $color-secondary !important;
 }
+
 .bg-secondary-soft {
   background: lighten($banner-secondary, 31.18) !important;
 }
+
 .text-secondary {
   color: $color-secondary !important;
 }
@@ -346,9 +393,11 @@ a:hover {
 .bg-tertiary {
   background: $color-tertiary !important;
 }
+
 .bg-tertiary-soft {
   background: lighten(saturate($color-tertiary, 22.22), 26.27) !important;
 }
+
 .text-tertiary {
   color: $color-tertiary !important;
 }
@@ -356,6 +405,7 @@ a:hover {
 .bg-light {
   background: $light !important;
 }
+
 .bg-light-soft {
   background: lighten(saturate($light, 22.22), 26.27) !important;
 }
@@ -363,12 +413,12 @@ a:hover {
 .bg-quaternary {
   background: $color-quaternary !important;
 }
+
 .bg-quaternary-soft {
-  background: lighten(
-    saturate(adjust-hue($color-quaternary, -1), 19.78),
-    45.49
-  ) !important;
+  background: lighten(saturate(adjust-hue($color-quaternary, -1), 19.78),
+      45.49) !important;
 }
+
 .text-quaternary {
   color: $color-quaternary !important;
 }
@@ -389,6 +439,7 @@ a:hover {
   border: 1px solid rgba($black, 0.1);
   height: 56px;
   transition: 0.3s ease;
+
   &:focus {
     border-color: rgba($color-primary, 0.5);
   }
@@ -418,19 +469,19 @@ form label {
     border-radius: 0;
   }
 
-  .custom-control-input:checked ~ .custom-control-label::before,
-  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+  .custom-control-input:checked~.custom-control-label::before,
+  .custom-control-input:not(:disabled):active~.custom-control-label::before {
     background-color: $color-primary;
     border-color: $color-primary;
     box-shadow: none;
   }
 
-  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
     box-shadow: none;
     border-color: $color-primary;
   }
 
-  .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  .custom-control-input:disabled:checked~.custom-control-label::before {
     background-color: rgba($color-primary, 0.5);
     border-color: rgba($color-primary, 0.2);
   }
@@ -442,7 +493,9 @@ form label {
     &:not(:last-child) {
       margin-bottom: 8px;
     }
+
     padding-left: 24px;
+
     i {
       position: absolute;
       left: 0;
@@ -450,9 +503,12 @@ form label {
       font-size: 85%;
       color: $color-quaternary;
     }
+
     color: $dark;
+
     a {
       color: $dark;
+
       &:hover {
         color: $color-primary;
       }
@@ -463,71 +519,88 @@ form label {
 // content style
 .content {
   color: #777;
+
   p {
     color: inherit;
   }
+
   a {
     color: $color-primary !important;
+
     &:hover {
       text-decoration: underline;
     }
   }
+
   img {
     max-width: 100%;
     height: auto;
     display: inline-block;
     margin-bottom: 20px;
+
     &.img-center {
       display: block;
       margin-left: auto;
       margin-right: auto;
     }
+
     &.img-left {
       display: block;
       margin-left: 0;
       margin-right: auto;
     }
+
     &.img-right {
       display: block;
       margin-left: auto;
       margin-right: 0;
     }
+
     &.img-float-left {
       float: left;
       margin-right: 20px;
     }
+
     &.img-float-right {
       float: right;
       margin-left: 20px;
     }
   }
+
   figure {
     display: inline-block;
     margin-bottom: 20px;
+
     img {
       margin-bottom: 10px;
     }
+
     &.img-center {
       display: block;
       text-align: center;
     }
+
     &.img-left {
       display: block;
       text-align: left;
     }
+
     &.img-right {
       display: block;
       text-align: right;
     }
+
     &.img-float-left {
       float: left;
       margin-right: 20px;
     }
+
     &.img-float-right {
       float: right;
       margin-left: 20px;
     }
   }
+
   figcaption {
     text-align: center;
   }
@@ -539,13 +612,16 @@ form label {
       color: $color-primary;
     }
   }
+
   &.has-bg-dark {
     color: #999;
+
     a,
     li,
     p {
       color: #999;
     }
+
     a:hover {
       color: $white;
     }
@@ -579,24 +655,28 @@ form label {
         left: 3px;
         top: 10px;
       }
+
       &:nth-child(1)::before,
       &:nth-child(5)::before,
       &:nth-child(9)::before,
       &:nth-child(13)::before {
         background: $color-primary;
       }
+
       &:nth-child(2)::before,
       &:nth-child(6)::before,
       &:nth-child(10)::before,
       &:nth-child(14)::before {
         background: $color-secondary;
       }
+
       &:nth-child(3)::before,
       &:nth-child(7)::before,
       &:nth-child(11)::before,
       &:nth-child(15)::before {
         background: $color-tertiary;
       }
+
       &:nth-child(4)::before,
       &:nth-child(8)::before,
       &:nth-child(12)::before,
@@ -719,10 +799,12 @@ form label {
     font-size: 20px !important;
     color: #777;
     padding: 20px 40px;
+
     @include tablet {
       font-size: 18px !important;
       padding: 20px;
     }
+
     border-left: 2px solid $color-primary;
     margin: 40px 0;
     font-weight: bold;
@@ -732,10 +814,12 @@ form label {
     p {
       color: #777;
       margin-bottom: 0 !important;
+
       &:last-child {
         margin-top: 5px;
       }
     }
+
     cite {
       font-style: normal;
       font-size: 80%;
@@ -759,11 +843,13 @@ form label {
   *:not(li) {
     margin-bottom: 28px;
   }
+
   .zenuml {
     *:not(li) {
       margin-bottom: initial;
     }
   }
+
   h2,
   h3,
   h4,
@@ -771,10 +857,12 @@ form label {
   h6 {
     margin-bottom: 12px !important;
   }
+
   *:last-child {
     margin-bottom: 0;
   }
 }
+
 // custom
 .space-around {
   display: flex;
@@ -808,6 +896,7 @@ form label {
 
 .highlight:not(.code-highlight) pre {
   padding: 15px 20px;
+
   * {
     margin-bottom: 0 !important;
   }
@@ -837,9 +926,11 @@ form label {
       box-shadow: none;
     }
   }
+
   .modal-body {
     padding: 0px;
   }
+
   .modal-dialog {
     padding: 10px;
     margin: 3rem auto !important;
@@ -851,6 +942,28 @@ form label {
     width: 100%;
   }
 }
+
 .inherit-text-color * {
   color: inherit !important;
+}
+
+// Pagination
+.pagination {
+  .page-item {
+    .page-link {
+      background: $white;
+      border-color:$border-color;
+      color: $text-dark;
+
+      &:hover {
+        background: $color-primary;
+        color: $white;
+      }
+    }
+
+    &.active .page-link {
+      background: $color-primary;
+      color: $white;
+    }
+  }
 }

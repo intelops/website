@@ -1,28 +1,17 @@
 ---
-date: 2023-05-19
-title: Containers, Containers, Containers
-description: What containers are, their benefits, and their use cases.
+date: "2021-07-14"
+title: "Example 15"
+image: "/images/events-webinars/event-1.webp" # use 800x550 or 16:11 ratio image
+event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
+draft: false
+weight: 15
 
-page_layout: "default" # Mandatory (If you want to use blog single page layout)
-hide_series_post: true # Hide series post
-hide_related_post: true # hide related post located at the end of the page
-hide_post_meta: false # hide post meta like last update & publish data, estimated reading time etc.
+hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
 
-cover_image: false
-cover_image_src: ""
-cover_image_height: ""
-cover_image_width: ""
-
-bannerarea: true
+bannerarea: false
 bannertext: "This is banner area text"
 bannertext_color: "#fff"
 bannerimage: images/banner/mindmaps-page/undraw_mindmap_banner2.png
-
-author:
-series:
-categories:
-
-draft: true
 ---
 
 {{< image src="images/blog/containers-containers-containers/container_ship.svg" alt="alter-text" height="" width="420px"
@@ -200,8 +189,7 @@ containers to run on. Therefore, you can run your containers in the cloud.
 Cloud provider-offered containers are super cheap, include extra tools for orchestration, and have good support right
 out of the box.
 
-# Conclusion
+This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site.
 
-In this blog, we learned about what containers are, their benefits, how they are built, and their use cases. Using the
-basic concepts you have learned here, you can try to <a href="https://docs.docker.com/get-started/" target="_blank">
-containerize your first app</a> using Docker's tutorial, as the next step in your journey with containers.
+
+This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site.
