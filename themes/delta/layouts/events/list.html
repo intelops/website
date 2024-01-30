@@ -1,5 +1,6 @@
 {{ define "main" }}
   {{ partial "header.html" . }}
+
   {{ $permalinkArr :=  (split .RelPermalink "/") }}
   {{ $evntCategory := string (index $permalinkArr 2) }}
   {{ $currentSection := $evntCategory }}
@@ -7,8 +8,6 @@
 
   {{ if $evntCategory }}
     {{ $paginator := .Paginate .RegularPages }}
-
-
     <section class="section-sm event-section">
       <div class="container container-delta">
         <div class="row">

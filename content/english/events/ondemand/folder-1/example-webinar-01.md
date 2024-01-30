@@ -6,6 +6,7 @@ event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
 draft: false
 weight: 1
 
+hide_clickup_form: true
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
 show_tableofcontent: true # hide post meta like last update & publish data, estimated reading time etc.
 
