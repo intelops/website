@@ -108,6 +108,14 @@ clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12190/UD4AJ
 enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-12812/WUKEDC5C93Y61XRFTE"
 
+[upcoming_events_popup_form]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-14212/A5I57OFKE4MMRLAXUO"
+
+[ondemand_events_popup_form]
+enable = true
+clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-14192/3Z4SGR3MGQ478WZBOH"
+
 
 # [[social]]
 # icon = "fab fa-facebook"

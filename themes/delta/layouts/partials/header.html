@@ -1,3 +1,6 @@
+{{ $perma := (split .RelPermalink "/") }}
+{{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
+
 <!-- navigation -->
 {{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") (eq .Section "services") }}
 <header
@@ -14,7 +17,7 @@
         {{ partial "logo.html" }}
       </a>
 
-      {{ if not (eq .Page.Section "events") }}
+      {{ if not $is_upcoming_single }}
         <div class="navbar-actions d-inline-flex align-items-center">
           <!-- Language List -->
           {{ if .IsTranslated }}
@@ -231,15 +234,6 @@
             {{ end }}
           </div>
         </div>
-      {{ end }}
-      {{ if eq .Section "events" }}
-        {{ with site.GetPage "events" }}
-          {{ with .Params.header_navigation_btn }}
-            <a href="{{ .link }}" class="text-dark d-inline-block ms-auto">
-              {{ .label | markdownify }}
-            </a>
-          {{ end }}
-        {{ end }}
       {{ end }}
     </nav>
   </div>
