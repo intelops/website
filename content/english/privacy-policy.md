@@ -45,7 +45,7 @@ Cookies placed on your computer can be deleted by you at any time by clearing yo
 - If we have received consent for processing your personal data, you have the right to withdraw your consent at any time and exercise your right to be forgotten.
 - You have the right to lodge a complaint with the supervisory authority or your specific country or geographic territory
 
-Any rights you wish to exercise can be achieved by sending an e-mail to hello@intelops.com , from your registered email ID.
+Any rights you wish to exercise can be achieved by sending an e-mail to hello@intelops.ai , from your registered email ID.
 
 ##### Our ‘Cookies’ policy
 
