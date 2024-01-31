@@ -3,7 +3,7 @@ date: "2024-01-22"
 title: "Adopting Agnostic Frameworks for Compliance-Driven Innovation"
 image: "/images/events-webinars/event-1.webp" # use 800x550 or 16:11 ratio image
 event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
-draft: false
+draft: true
 weight: 1
 
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
