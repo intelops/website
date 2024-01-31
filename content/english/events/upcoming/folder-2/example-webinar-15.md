@@ -1,9 +1,9 @@
 ---
 date: "2021-07-14"
-title: "Example 15"
+title: "Example 15 - this is just example page template"
 image: "/images/events-webinars/event-1.webp" # use 800x550 or 16:11 ratio image
 event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
-draft: false
+draft: true
 weight: 15
 
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
