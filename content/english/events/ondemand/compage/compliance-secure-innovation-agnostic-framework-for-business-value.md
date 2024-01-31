@@ -5,6 +5,7 @@ image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 o
 event_date_location: "Jan 24, 2024 10AM CST"
 draft: false
 weight: 02
+hide_clickup_form: true
 description: 
 
 # add appropriate aliases value to support old url redirection to new url
