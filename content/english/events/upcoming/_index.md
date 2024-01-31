@@ -1,5 +1,5 @@
 ---
-title: "Upcoming Webinars"
+title: "Upcoming Events"
 layout: events
 weight: 1
 
