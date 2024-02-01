@@ -5,8 +5,8 @@
   "author": "gethugothemes",
   "scripts": {
     "dev": "hugo server",
-    "test": "hugo server --disableFastRender --navigateToChanged --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --watch --forceSyncStatic -e production --minify",
-    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --buildDrafts --buildExpired --buildFuture --forceSyncStatic",
+    "test": "hugo server --disableFastRender --templateMetrics --templateMetricsHints --watch --forceSyncStatic -e production --minify",
+    "build": "hugo --gc --minify --templateMetrics --templateMetricsHints --forceSyncStatic",
     "update": "hugo mod clean && hugo mod get -u ./... && hugo mod tidy",
     "format": "prettier -w ."
   },
