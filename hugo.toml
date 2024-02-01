@@ -55,7 +55,7 @@ unsafe = true
 style = 'monokai' # see https://xyproto.github.io/splash/docs/all.html
 
 [markup.tableOfContents]
-startLevel = 0
+startLevel = 1
 endLevel = 6
 ordered = false
 
@@ -77,3 +77,83 @@ rel = "manifest"
 category = "categories"
 tag = "tags"
 series = "series"
+
+########################### Plugins Files ##########################
+[[params.plugins.css]]
+link = "plugins/font-awesome/fontawesome.min.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/brands.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/solid.css"
+[[params.plugins.css]]
+link = "plugins/font-awesome/regular.css"
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.min.css"
+[[params.plugins.css]]
+link = "plugins/tab/tab.css"
+[[params.plugins.css]]
+link = "plugins/search/auto-complete.css"
+[[params.plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[params.plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+[[params.plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"
+[[params.plugins.js]]
+link = "plugins/tab/tab.js"
+[[params.plugins.js]]
+link = "plugins/scrollmenu/scrollmenu.min.js"
+[[params.plugins.js]]
+link = "plugins/infinite-scroll/infinite-scroll.pkgd.js"
+[[params.plugins.js]]
+link = "plugins/search/auto-complete.js"
+[[params.plugins.js]]
+link = "plugins/search/search.js"
+[[params.plugins.js]]
+link = "plugins/search/lunr.min.js"
+[[params.plugins.js]]
+link = "plugins/search/fuse.min.js"
+[[params.plugins.js]]
+link = "plugins/search/mark.js"
+[[params.plugins.js]]
+link = "plugins/anime/anime.min.js"
+[[params.plugins.js]]
+link = "plugins/anime/scrollreveal.min.js"
+[[params.plugins.js]]
+link = "plugins/search/search-page.js"
+[[params.plugins.js]]
+link = "https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@2.0.3/dist/lottie-player.js"
+
+########################### Variables ##########################
+[params.variables]
+banner_desc = "#acacac"
+banner_primary = "#091922" # prviously original = 121826
+banner_secondary = "#FF5100"
+banner_subtitle = "#FF5100"
+banner_title = "#fff"
+black = "#000"
+body_color = "#fff"
+border_color = "#ACB9C4"
+color_primary = "#F16F33"
+color_quaternary = "#6E9240"
+color_secondary = "#FFD02F"
+color_tertiary = "#ED6F78"
+dark = "#091922" # previous original = 050038
+font_primary = "Catamaran:wght@700;900"
+font_primary_type = "sans-serif"
+font_scale = "1.2"
+font_secondary = "Rubik:wght@400;500;600"
+font_secondary_type = "sans-serif"
+font_size = "16px"
+header_bar_bg = "#f7f7f7"
+icon_font = "Font Awesome 5 Free"
+light = "#fdfdfd"
+nav_menu_text = "#464b4b"
+navbar_mobile_bg = "#eaeaea00"
+text_color = "#555"
+text_dark = "#222222"
+text_light = "#959595"
+white = "#fff"
+secblack = "#121826"
