@@ -53,8 +53,7 @@ Chandrakanth Paladugu is a skilled architect with a deep passion for problem-sol
 
 </div>
 
-<iframe class="clickup-embed clickup-dynamic-height" src="
-https://forms.clickup.com/9006002197/f/8cctc0n-14192/3Z4SGR3MGQ478WZBOH
-" onwheel="" width="50%" height="50%" style="background: transparent; border: 1px solid #ccc; float: right; margin-left: 40px;"></iframe><script async src="
-https://app-cdn.clickup.com/assets/js/forms-embed/v1.js">
-</script>
+
+<!-- Below is dedicated Form link to this event alone -->
+<iframe class="clickup-embed clickup-dynamic-height" src="https://forms.clickup.com/9006002197/f/8cctc0n-14252/QLTQWR8VT6B0O7NGKM" onwheel="" width="50%" height="50%" style="background: transparent; border: 1px solid #ccc; float: right; margin-left: 40px;"></iframe><script async src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
+
