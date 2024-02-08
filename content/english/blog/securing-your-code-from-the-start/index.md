@@ -1,6 +1,6 @@
 ---
 date: 2024-02-09
-title: Securing Your Code from the Start: The Power of Pre-Commit Hooks in DevSecOps.
+title: Securing Your Code from the Start - The Power of Pre-Commit Hooks in DevSecOps.
 description: The Power of Pre-Commit Hooks in DevSecOps.
 image: Suggest/Add an image #TODO
 
@@ -34,7 +34,7 @@ The Shift-Left movement in DevSecOps heralds a proactive revolution in software 
 
 **Traditional vs. Shift-Left Security in Software Development**: The traditional approach, reactive and isolated, often leads to costly late-stage remediation and higher risks of security breaches. In contrast, the Shift-Left approach advocates for proactive, collaborative security practices from the project's inception, aiming for efficiency, cost-effectiveness, and reduced risk. In essence, while traditional security approaches often act as last-minute gatekeepers, the Shift-Left paradigm ensures security is a continuous, collaborative, and proactive journey from the start.
 
-## How Securing from the Start Works**
+## How Securing from the Start Works
 Securing from the start transforms the approach to software development by integrating robust security practices right from the initial phases, ensuring a foundation of safety and reliability throughout the project's lifecycle. This method involves:
 
    - Emphasis on security during requirement gathering, analysis, and design phases.
@@ -45,7 +45,7 @@ In this post, I will be discussing few specific tools and technologies which can
 
 ## What are Git Hooks
 
-Git hooks are executable scripts that Git trigger actions at certain points in git’s execution. They are a powerful feature for automating and customizing Git's internal behavior and are used to enforce code quality standards, run tests, run static analysis of the source code (SAST) or even automate deployment tasks.
+Git hooks are executable scripts that trigger actions at certain points in git’s execution. They are a powerful feature for automating and customizing Git's internal behavior and are used to enforce code quality standards, run tests, run static analysis of the source code (SAST) or even automate deployment tasks.
 
 Each Git repository has a `.git/hooks` folder containing sample scripts for various hook points. These scripts are customizable and can be written in any language that can be executed on your system. The most common types of hooks include:
 
@@ -96,12 +96,13 @@ fi
 
 The above script will run ESLint on all staged JavaScript files and block the commit if there are any linting errors. It ensures that only code that meets the quality standards is committed, thereby reducing the likelihood of security issues.
 
-Now, to use the above shell script as a pre-commit hook.  we need to make the shell script executable by using the following command
+Now, to use the above shell script as a pre-commit hook, we need to make the script executable by using the following command:
+
 ```shell
 chmod +x ./eslint.sh
 ```
 
-Once done, navigate to the root directory of your Git repository. Then place the executable script `./eslint.sh` in the `.git/hooks` directory.
+Once done, navigate to the root directory of your Git repository. Then place the executable script `./eslint.sh` in the `.git/hooks` directory. That's it!
 
 ### Testing the Hook:
 Now, the pre-commit hook is set up. It will run automatically whenever you attempt to commit changes. To test it, try committing a JavaScript file with some linting errors. The commit should be blocked, and you should see the "ESLint found issues." message if there are any lint errors.
@@ -115,7 +116,7 @@ Pre-push hooks take security checks a step further by executing custom scripts b
 ### Use Cases for Pre-Push Hooks
 
 - **Running Unit Tests**: Ensure that all unit tests pass before allowing a push to proceed. This helps to catch any breaking changes or regressions early in the development cycle.
-- **Performing Integration Tests**: Run integration tests to verify that changes work as expected with external systems and services, preventing potential issues in production environments.
+- **Performing Integration Tests**: Run integration tests to verify that changes work as expected with external systems and services, preventing potential issues in production environments.shell.
 - **Security Audits**: Conduct security audits or vulnerability scans on the codebase to identify any new security threats before they are pushed to a central repository.
 
 ## Automating Tasks with Post-Commit Hooks
@@ -127,4 +128,4 @@ Post-commit hooks offer a unique opportunity to automate tasks immediately after
 - **Continuous Integration Triggering**: Trigger a build or continuous integration process, ensuring that each commit is automatically tested in an isolated environment.
 
 ## Conclusion
-Incorporating Git hooks like pre-commit, pre-push, and post-commit into your development workflow can significantly enhance the security and efficiency of your software development process. By automating checks and tasks, developers can catch issues early, maintain code quality, and ensure compliance with security standards, embodying the Shift-Left ethos of integrating security from the start. As DevSecOps continues to evolve, the adoption of these tools and practices will become increasingly crucial for developing secure, high-quality software in an efficient and collaborative environment.
+Incorporating Git hooks like pre-commit, pre-push, and post-commit into your development workflow can significantly enhance the security and efficiency of your software development process. By automating checks and tasks, developers can catch issues early, maintain code quality, and ensure compliance with security standards, embodying the Shift-Left ethos of integrating security from the start. As DevSecOps continues to evolve, the adoption of these tools and practices will become increasingly crucial for developing secure, high-quality software in an efficient and collaborative environment.shell
