@@ -17,13 +17,18 @@ categories:
   - Shift-left
   - Development
   - SDLC
+tags:
+  - Development
+  - DevSecOps
+  - Shift-Left
+  - shiftleft
 
 # image color code in undraw.co #FB7E44
 feedback: false
 draft: false
 ---
 
-{{< image src="images/blog/securing-your-code-from-the-start/secure_undraw.svg" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
+{{< image src="images/blog/securing-your-code-from-the-start/secure_undraw.svg" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 **Introduction**
 In the ever-evolving world of software development, the traditional reactive security approach has been the go-to for many organizations. This approach, which often treats security as a mere afterthought, prioritizes functionality and relegates security checks to the last minute, typically just before deployment. When vulnerabilities emerge late in this cycle, the resulting fixes can be costly and delay-ridden. It's a retroactive model, standing in clear contrast to the Shift-Left movement in DevSecOps, which champions early security integration for a more proactive and efficient development process.
