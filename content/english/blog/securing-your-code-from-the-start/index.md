@@ -2,7 +2,7 @@
 date: 2024-02-09
 title: Securing Your Code from the Start - The Power of Pre-Commit Hooks in DevSecOps.
 description: The Power of Pre-Commit Hooks in DevSecOps.
-image: Suggest/Add an image #TODO
+image: images/blog/securing-your-code-from-the-start/secure_undraw.svg
 
 cover_image: false
 cover_image_src: ""
@@ -22,6 +22,8 @@ categories:
 feedback: false
 draft: false
 ---
+
+{{< image src="images/blog/securing-your-code-from-the-start/secure_undraw.svg" alt="alter-text" height="" width="100px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 **Introduction**
 In the ever-evolving world of software development, the traditional reactive security approach has been the go-to for many organizations. This approach, which often treats security as a mere afterthought, prioritizes functionality and relegates security checks to the last minute, typically just before deployment. When vulnerabilities emerge late in this cycle, the resulting fixes can be costly and delay-ridden. It's a retroactive model, standing in clear contrast to the Shift-Left movement in DevSecOps, which champions early security integration for a more proactive and efficient development process.
