@@ -87,7 +87,7 @@ Once the code has passed the continuous integration phase, Compage supports depl
 
 ## Git platform(s) Integration
 
-Compage is an open-source project that seamlessly integrates with Git platforms to provide efficient version control and collaboration capabilities for the code generation process. Using Git repositories, developers can track changes, manage branches and collaborate with team members. We encourage developers to [contribute to the project](https://docs.intelops.ai/1.0.1/compage/6-contribution/) to help us further enhance its capabilities and expand its features.
+Compage is an open-source project that seamlessly integrates with Git platforms to provide efficient version control and collaboration capabilities for the code generation process. Using Git repositories, developers can track changes, manage branches and collaborate with team members. We encourage developers to [contribute to the project](https://docs.intelops.ai/compage/0.0.1/6-contribution/) to help us further enhance its capabilities and expand its features.
 
 ## OpenAPI Generator Support
 
