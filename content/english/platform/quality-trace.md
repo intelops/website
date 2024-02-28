@@ -10,9 +10,7 @@ navigation:
   logo_text: "QualityTrace"
   logo_text_color: "secblack"
   
-  menu:
-  - name: "QT (Quality Trace) Doc"
-    url: "https://docs.intelops.ai/latest/quality-trace/"
+
 
   navigation_button:
     enable: true

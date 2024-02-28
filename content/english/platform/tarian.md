@@ -10,9 +10,6 @@ navigation:
   logo_text: "Tarian"
   logo_text_color: "secblack"
   
-  menu:
-  - name: "Tarian Doc"
-    url: "https://docs.intelops.ai/latest/tarian/"
 
   navigation_button:
     enable: true

@@ -10,9 +10,7 @@ navigation:
   logo_text: "Opty"
   logo_text_color: "secblack"
   
-  menu:
-  - name: "Opty (Optimizor) Doc"
-    url: "https://docs.intelops.ai/latest/opty/"
+
 
   navigation_button:
     enable: true

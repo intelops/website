@@ -10,9 +10,7 @@ navigation:
   logo_text: "Capten"
   logo_text_color: "secblack"
   
-  menu:
-  - name: "Capten Doc"
-    url: "https://docs.intelops.ai/latest/capten/"
+
 
   navigation_button:
     enable: true

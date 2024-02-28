@@ -1,6 +1,6 @@
 ---
 date: 2024-02-27
-title: Introducing KubViz-A-Kubernetes Observability & Monitoring Platform
+title: Introducing KubViz-A Kubernetes Observability & Monitoring Platform
 description: KubViz is the ultimate observability platform to manage & monitor the entire DevSecOps. Gain deep insights and secure your software supply chain with ease.
 
 image: images/blog/introducing-kubviz-a-kubernetes-observability-and-monitoring-platform/kubviz-banner.jpg
