@@ -69,20 +69,6 @@
   {{ end }}
 {{ end }}
 
-{{ if not .Params.hide_clickup_form }}
-  {{ if $is_ondemand_single }}
-    {{ partial "events-popup-form" (dict "Src" site.Params.ondemand_events_popup_form.clickup_iframe_url) }}
-    <script
-      async
-      src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
-  {{ else if $is_upcoming_single }}
-    {{ partial "events-popup-form" (dict "Src" site.Params.upcoming_events_popup_form.clickup_iframe_url) }}
-    <script
-      async
-      src="https://app-cdn.clickup.com/assets/js/forms-embed/v1.js"></script>
-  {{ end }}
-{{ end }}
-
 {{ if not $is_upcoming_single }}
   <footer
     class="{{ if $footer_light }}
@@ -298,45 +284,50 @@
       </svg>
     </div>
   </footer>
+{{ end }}
 
-  <!-- start of videoModal -->
-  <div
-    class="modal fade rounded overflow-hidden"
-    id="videoModal"
-    tabindex="-1"
-    role="dialog"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-      <div class="modal-content border-0 bg-transparent">
-        <div class="text-center p-3">
-          <button
-            type="button"
-            class="border-0 modal-close-btn"
-            data-bs-dismiss="modal"
-            aria-label="Close">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30"
-              height="30"
-              fill="currentColor"
-              viewBox="0 0 16 16">
-              <path
-                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
-            </svg>
-          </button>
-        </div>
-        <div class="modal-body bg-dark p-0 rounded">
-          <div class="ratio ratio-16x9 rounded overflow-hidden">
-            <iframe
-              src=""
-              id="showVideo"
-              allowscriptaccess="always"
-              allow="autoplay"
-              allowfullscreen></iframe>
-          </div>
+<!-- start of videoModal -->
+<div
+  class="modal fade rounded overflow-hidden"
+  id="videoModal"
+  tabindex="-1"
+  role="dialog"
+  aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+    <div class="modal-content border-0 bg-transparent">
+      <div class="text-center p-3">
+        <button
+          type="button"
+          class="border-0 modal-close-btn"
+          data-bs-dismiss="modal"
+          aria-label="Close">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            fill="currentColor"
+            viewBox="0 0 16 16">
+            <path
+              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+          </svg>
+        </button>
+      </div>
+      <div class="modal-body bg-dark p-0 rounded">
+        <div class="ratio ratio-16x9 rounded overflow-hidden">
+          <iframe
+            src=""
+            id="showVideo"
+            allowscriptaccess="always"
+            allow="autoplay"
+            allowfullscreen></iframe>
         </div>
       </div>
     </div>
   </div>
-  <!-- end of videoModal -->
+</div>
+<!-- end of videoModal -->
+
+{{/* Netlify Form */}}
+{{ if eq .Params.show_popup_form true }}
+  {{ partial "events-popup-form.html" (dict "Context" .) }}
 {{ end }}

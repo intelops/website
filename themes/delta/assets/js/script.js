@@ -110,25 +110,6 @@ $(document).ready(function () {
     });
   }
 
-  const eventsPopup = document.querySelector('.eventsPopup');
-  if (eventsPopup) {
-    setTimeout(() => {
-      eventsPopup.classList.add("show")
-    }, 2000);
-    
-    // if (sessionStorage.getItem('eventsPopupHide') != 'true') {
-    //   $('.eventsPopup').addClass('show');
-    // }
-
-    $('[data-hide="eventsPopup"').click(function () {
-      eventsPopup.remove();
-    });
-
-    // $('.eventsPopup [data-hide="eventsPopup"]').click(function () {
-    //   sessionStorage.setItem('eventsPopupHide', 'true');
-    // });
-  }
-
   $('[data-bs-toggle="collapse"]').on("click", function () {
     if ($(this).attr("aria-expanded") == "true") {
       $("body").addClass("overflow-hidden");

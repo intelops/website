@@ -1,6 +1,6 @@
 ---
 date: "2024-01-24"
-title: "Compliance-Secure Innovation: Agnostic Framework For Business Value"
+title: "Popup Form Video"
 image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description: 
@@ -8,16 +8,16 @@ weight: 02
 
 draft: false
 
-# # set it to true to enable popup form for registration
-# show_popup_form: true # You can test this form locally, but please note that submissions will not be sent to Netlify.
+# set it to true to enable popup form for registration
+show_popup_form: true # You can test this form locally, but please note that submissions will not be sent to Netlify.
 
-# # Typically, once a user submits a form, it won't be displayed again when they revisit the page, unless they open it in a new tab or window. If you need to show the form again for testing purposes, you can set this option to true. This is particularly useful during local testing when you need to submit the form multiple times for testing purposes.
-# popup_form_testing_mode: false
+# Typically, once a user submits a form, it won't be displayed again when they revisit the page, unless they open it in a new tab or window. If you need to show the form again for testing purposes, you can set this option to true. This is particularly useful during local testing when you need to submit the form multiple times for testing purposes.
+popup_form_testing_mode: false
 
-# # "video" | "content" | "redirect" # default is "content" (if you want to show a video after the form is submitted, set this to "video" and provide video url in the popup_form_video_url field. If you want to redirect to a different url, set this to "redirect" and provide a redirect url in the popup_form_redirect_url field)
-# popup_form_success_action: "content" 
-# popup_form_video_url: "https://www.youtube.com/embed/a3ICNMQW7Ok" # you can use youtube's embed url
-# popup_form_redirect_url: "https://example.com/" # e.g. "/thank-you"
+# "video" | "content" | "redirect" # default is "content" (if you want to show a video after the form is submitted, set this to "video" and provide video url in the popup_form_video_url field. If you want to redirect to a different url, set this to "redirect" and provide a redirect url in the popup_form_redirect_url field)
+popup_form_success_action: "video" 
+popup_form_video_url: "https://www.youtube.com/embed/a3ICNMQW7Ok" # you can use youtube's embed url
+popup_form_redirect_url: "https://example.com/" # e.g. "/thank-you"
 
 # add appropriate aliases value to support old url redirection to new url
 aliases:  
@@ -52,9 +52,5 @@ Download your on-demand recording today!
 **Chandrakanth Paladugu - Founder of IntelOps.ai**
 
 Chandrakanth Paladugu is a skilled architect with a deep passion for problem-solving in various technical domains, including Cloud-Native, DevSecOps, Software Supply Chain Security, and Kubernetes. His expertise lies in leveraging extensive knowledge to democratize technology and empower engineering teams with agnostic open framework models.
-</div>
-
-<div class="col-lg-5">
-{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/a3ICNMQW7Ok" event_form_redirect_url="" event_form_success_action="video">}}
 </div>
 </div>

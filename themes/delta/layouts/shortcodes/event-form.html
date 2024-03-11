@@ -1,14 +1,12 @@
-{{ $Context := .Context | default . }}
-{{ $testingMode := $Context.Params.popup_form_testing_mode }}
-{{ $videoURL := $Context.Params.popup_form_video_url }}
-{{ $redirectURL := $Context.Params.popup_form_redirect_url }}
-{{ $formFillAction := $Context.Params.popup_form_success_action | default "content" }}
+{{ $testingMode := .Get "event_form_testing_mode" }}
+{{ $videoURL := default "https://www.youtube.com/embed/a3ICNMQW7Ok" (.Get "event_form_video_url") }}
+{{ $redirectURL := .Get "event_form_redirect_url" }}
+{{ $formFillAction := default "video" (.Get "event_form_success_action") }}
 
 
-<div class="events-form d-none">
-  <div class="events-form-overlay"></div>
+<div class="events-form-shortcode events-form-shortcode-inline">
   <div class="popup-content">
-    {{ if eq $formFillAction `video` }}
+    {{ if not (eq $formFillAction `redirect`) }}
       <div class="video-content">
         <div class="ratio ratio-16x9 overflow-hidden">
           <iframe
@@ -24,7 +22,7 @@
 
     <form
       method="POST"
-      class="rounded-md shadow-md p-4 p-md-5"
+      class="rounded-md shadow-md p-2 p-md-3 no-auto-margin"
       id="event-form"
       data-netlify="true">
       <div class="form-group mb-3">
@@ -74,31 +72,25 @@
           required
           placeholder="{{ i18n `message` }}"></textarea>
       </div>
-      <button class="btn btn-primary w-100 form-submit-btn" type="submit">
+      <button class="btn btn-primary w-100 form-submit-btn mb-0" type="submit">
         <span>{{ i18n "submit_now" }}</span>
         <i class="fas fa-spinner fa-spin"></i>
       </button>
-      <div class="alert alert-success mt-2 d-none" role="alert">
+      <div class="alert alert-success mt-2 d-none mb-0" role="alert">
         Form submitted successfully.
       </div>
     </form>
 
     <script>
-      const popup = document.querySelector(".events-form");
-      const popupForm = document.querySelector(".events-form form");
+      const popup = document.querySelector(".events-form-shortcode");
+      const popupForm = document.querySelector(".events-form-shortcode form");
 
-      const showPopup = () => {
-        if (popup) {
-          popup.classList.remove("d-none");
-        }
-      }
-
-      const show_popup_form_content = () => {
+      const show_event_form_content = () => {
         popup.classList.add("d-none");
       };
 
-      const show_popup_video_content = () => {
-        popup.setAttribute("id", "has-video-form-submit-action");
+      const show_event_video_content = () => {
+        popup.setAttribute("id","has-video-form-submit-action");
       };
 
       const redirect_user = () => {
@@ -116,15 +108,13 @@
       // check form submission status from sessionStorage
       const formSubmitted = sessionStorage.getItem("formSubmitted");
       if (formSubmitted) {
-        {{ if not $testingMode }}
+        {{ if eq $testingMode `false` }}
           {{ if eq $formFillAction "content" }}
-            show_popup_form_content();
+            show_event_form_content();
           {{ else if eq $formFillAction "video" }}
-            show_popup_video_content();
+            show_event_video_content();
           {{ end }}
         {{ end }}
-      } else {
-        setTimeout(showPopup, 2000);
       }
 
       const handleSubmit = (event) => {
@@ -144,9 +134,9 @@
           sessionStorage.setItem("formSubmitted", true);
 
           {{ if eq $formFillAction "content" }}
-            show_popup_form_content();
+            show_event_form_content();
           {{ else if eq $formFillAction "video" }}
-            show_popup_video_content();
+            show_event_video_content();
           {{ else if eq $formFillAction "redirect" }}
             redirect_user()
           {{ end }}
