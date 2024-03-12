@@ -9,8 +9,12 @@ navigation:
   logo: "images/icons/quality-trace.svg"
   logo_text: "QualityTrace"
   logo_text_color: "secblack"
-  
 
+# Removing the below doc from the page, as the doc page does not exist
+#menu:
+  #- name: "QT (Quality Trace) Doc"
+    #url: "https://docs.intelops.ai/latest/quality-trace/"
+ 
 
   navigation_button:
     enable: true

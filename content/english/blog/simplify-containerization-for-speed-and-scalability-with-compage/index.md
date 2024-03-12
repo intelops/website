@@ -9,7 +9,7 @@ cover_image_height: ""
 cover_image_width: ""
 
 author: shreya
-series: Containers
+
 categories:
 - Containerization
 - Compage

@@ -9,7 +9,11 @@ navigation:
   logo: "images/icons/tarian.svg"
   logo_text: "Tarian"
   logo_text_color: "secblack"
-  
+ 
+# Removing the below doc from the page, as the doc page does not exist
+#menu:
+  #- name: "Tarian Doc"
+    #url: "https://docs.intelops.ai/latest/tarian/"
 
   navigation_button:
     enable: true
