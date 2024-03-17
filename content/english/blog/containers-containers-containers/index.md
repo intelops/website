@@ -110,11 +110,9 @@ Containers do have their own limitations, even when compared to VMs. These are:
 
 # So, What Is `Docker`?
 
-`Docker` is, officially, a container runtime. It is a piece of software that allows you to build/create/run containers
-and
-their images.  
-There are other options besides Docker, <a href="www.github.com/rkt/rkt/" target="_blank">rkt</a> (project
-has ended), and <a href="https://containerd.io/" target="_blank">containerd</a>.
+`Docker` is, officially, a container runtime. It is a piece of software that allows you to build/create/run containers and their images.  
+
+There are other options besides Docker, <a href="https://github.com/rkt/rkt/" target="_blank">rkt</a> (project has ended), and <a href="https://containerd.io/" target="_blank">containerd</a>.
 
 # Use Cases Of Containers
 
