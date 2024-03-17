@@ -1,6 +1,6 @@
 ---
 date: 2024-02-27
-title: Introducing KubViz: An open framework for Cloud-Native Observability 
+title: "Introducing KubViz: An open framework for Cloud-Native Observability"
 description: KubViz is an opensource unified platform to manage & monitor your cloud native ecosystem for purposes like DevSecOps, Observability, and Software Supply Chain Security. 
 
 image: images/blog/introducing-kubviz-a-kubernetes-observability-and-monitoring-platform/kubviz-banner.jpg
