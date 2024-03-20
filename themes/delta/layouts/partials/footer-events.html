@@ -2,6 +2,7 @@
 {{ $bg_color := "" }}
 {{ $bg_image := "" }}
 {{ $overlay := "" }}
+{{ $is_header_hidden := .Params.hide_header }}
 
 {{ $perma := (split .RelPermalink "/") }}
 {{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
@@ -69,7 +70,7 @@
   {{ end }}
 {{ end }}
 
-{{ if not $is_upcoming_single }}
+{{ if not (or $is_upcoming_single $is_header_hidden) }}
   <footer
     class="{{ if $footer_light }}
       bg-light
