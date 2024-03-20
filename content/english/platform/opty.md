@@ -9,11 +9,12 @@ navigation:
   logo: "images/icons/opty.svg"
   logo_text: "Opty"
   logo_text_color: "secblack"
-  
-  menu:
-  - name: "Opty (Optimizor) Doc"
-    url: "https://docs.intelops.ai/latest/opty/"
 
+# Removing the below doc from the page, as the doc page does not exist
+#menu:
+  #- name: "Opty (Optimizor) Doc"
+    #url: "https://docs.intelops.ai/latest/opty/"
+  
   navigation_button:
     enable: true
     icon: "far fa-user"

@@ -158,5 +158,5 @@ sample code in the langauge of your choosing [here](https://grpc.io/docs/languag
 
 > # Want to learn more?
 >
-> Check out our <a href="https://intelops.ai/learning-center/learn-grpc/" target="_blank">learning center</a> section on
+> Check out our <a href="https://intelops.ai/learning-center/6-learn-grpc/" target="_blank">learning center</a> section on
 > gRPC, with more details and code.

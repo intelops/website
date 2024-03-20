@@ -227,4 +227,4 @@ DevContainers provides a way to develop applications in isolated environments co
 
 15\. The procurement solution has been set up with both the codes ready for use.
 
-What would have taken days is now possible in hours. That's the power of Compage! Try it for yourself; check out the [Compage documentation](https://docs.intelops.ai/compage/0.0.1/) for more details. If you like what we are doing, check out [Compage on GitHub](https://github.com/intelops/compage). A star is always appreciated. We have more updates coming so, follow us on [LinkedIn](https://www.linkedin.com/company/intelopsai).
+What would have taken days is now possible in hours. That's the power of Compage! Try it for yourself; check out the [Compage documentation](https://docs.intelops.ai/compage/latest/) for more details. If you like what we are doing, check out [Compage on GitHub](https://github.com/intelops/compage). A star is always appreciated. We have more updates coming so, follow us on [LinkedIn](https://www.linkedin.com/company/intelopsai).
