@@ -1,5 +1,6 @@
 {{ $perma := (split .RelPermalink "/") }}
 {{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
+{{ $is_header_hidden := .Params.hide_header }}
 
 <!-- navigation -->
 {{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") (eq .Section "services") }}
@@ -17,7 +18,7 @@
         {{ partial "logo.html" }}
       </a>
 
-      {{ if not $is_upcoming_single }}
+      {{ if not (or $is_upcoming_single $is_header_hidden) }}
         <div class="navbar-actions d-inline-flex align-items-center">
           <!-- Language List -->
           {{ if .IsTranslated }}

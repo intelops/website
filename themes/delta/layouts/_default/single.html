@@ -193,6 +193,8 @@ style="background-image: url({{$img.RelPermalink}});
 {{ end }}
 <!-- /regular page -->
 
-{{ partial "call-to-action-2.html" . }}
+{{ if not .Params.hide_call_to_action }}
+  {{ partial "call-to-action-2.html" . }}
+{{ end }}
 
 {{ end }}
