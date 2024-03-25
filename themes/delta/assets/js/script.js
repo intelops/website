@@ -221,6 +221,7 @@ $(document).ready(function () {
       $videoSrc = $(this).data("src");
     });
     $("#videoModal").on("shown.bs.modal", function (e) {
+      $(e.target).find("iframe").attr("src", $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
       $("#showVideo").attr(
         "src",
         $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
@@ -470,3 +471,4 @@ if ($(".navigation-alt").length !== 0) {
   //   }
   // });
 }
+

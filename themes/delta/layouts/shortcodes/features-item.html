@@ -1,0 +1,15 @@
+{{ $icon := .Get "icon" }}
+{{ $title := .Get "title" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $description := .Get "description" }}
+
+
+<div class="col-xl-4 col-md-6 features-block features-block-2">
+  <div class="block h-100 d-block d-sm-flex">
+    <i class="icon {{ $icon }}"></i>
+    <div class="mt-3 mt-sm-0">
+      <h3 class="title h4">{{ $title | markdownify }}</h3>
+      <p class="mb-0">{{ $description | truncate 85 }}</p>
+    </div>
+  </div>
+</div>

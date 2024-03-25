@@ -1,0 +1,62 @@
+{{ $title := .Get "title" | markdownify }}
+{{ $subtitle:= .Get "subtitle" | markdownify }}
+{{ $order:= .Get "order" }}
+{{ $slider:= .Get "slider" }}
+{{ $images := split (.Get "images") "," }}
+{{ $image_block_bg_color := .Get "image_block_bg_color" }}
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+
+<section
+  class="section not-content {{ if not (eq $padding_top `true`) }}
+    pt-0
+  {{ end }}{{ if not (eq $padding_bottom `true`) }}pb-0{{ end }}">
+  <div class="container container-delta">
+    <div class="row gx-4 gx-xl-5 align-items-center">
+      <div
+        class="col-lg-6 {{ if eq $order `true` }}order-1 order-lg-1{{ end }}">
+        <div class="section-title">
+          {{ with $subtitle }}
+            <p class="subtitle">{{ . | markdownify }}</p>
+          {{ end }}
+          <h2 class="title">{{ $title | markdownify }}</h2>
+        </div>
+
+        <div class="content">{{ .Inner }}</div>
+      </div>
+      <div class="col-lg-6">
+        <div
+          class="py-3 py-md-6 px-2 px-md-4 rounded-md"
+          {{ with $image_block_bg_color }}style="background-color: {{ . }}"{{ end }}>
+          <div class="px-0 px-md-3 py-6 my-0 my-lg-3">
+            {{ if eq $slider `true` }}
+              <div class="post-carousel swiper-container text-center pb-6">
+                {{ with $images }}
+                  <div class="swiper-wrapper">
+                    {{ range . }}
+                      {{ partial "image.html" (dict "Src" . "Size" "600x" "Webp" false "Class" "swiper-slide img-fluid px-2" ) }}
+                    {{ end }}
+                  </div>
+                  <div class="swiper-pagination"></div>
+                {{ end }}
+              </div>
+            {{ else }}
+
+              <div class="px-2 px-md-4 text-center">
+                {{ with $images }}
+                  <div class="">
+                    {{ range . }}
+                      {{ partial "image.html" (dict "Src" . "Size" "600x" "Webp" false "Class" "swiper-slide img-fluid px-2" ) }}
+                    {{ end }}
+                  </div>
+                {{ end }}
+              </div>
+            {{ end }}
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
