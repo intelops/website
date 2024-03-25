@@ -519,7 +519,7 @@ form label {
 }
 
 // content style
-.content {
+.content >*:not(*.not-content) {
   color: #777;
 
   p {
@@ -974,7 +974,7 @@ form label {
   border-radius: 4px;
   padding: 8px 16px;
   font-size: 14px;
-  
+
   &-success {
     color: green;
     background-color: rgba(green, 0.2);

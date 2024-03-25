@@ -48,4 +48,6 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 
 @import 'templates/main.scss';
 
+@import 'shortcodes.scss';
+
 @import 'custom.scss';

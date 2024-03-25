@@ -1,0 +1,23 @@
+.banner-shortcode {
+  .btn-play {
+    &:hover i {
+      color: $white;
+      border-color: $white;
+    }
+  }
+  .wave-left {
+    transform: rotate(-15deg);
+    bottom: -50px !important;
+  }
+
+  &.banner-centered {
+    .wave-right {
+      right: -100px !important;
+    }
+  }
+}
+
+
+.features-section-shortcode {
+  max-width: 100%;
+}

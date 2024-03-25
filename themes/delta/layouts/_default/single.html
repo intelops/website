@@ -182,7 +182,7 @@ style="background-image: url({{$img.RelPermalink}});
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="{{ if eq .Params.layout_width `full` }}col-12{{else}}col-lg-10 mx-auto{{end}}">
         <div class="content">
           {{.Content}}
         </div>
