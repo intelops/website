@@ -87,30 +87,8 @@ has_padding_bottom=`true` >}}
       description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
 {{< /features >}}
 
-<div class="row gx-lg-5">
-    <div class="col-lg-7">
-With evolving technology landscape, growth is synonymous with new and innovative solutions. Our webinar, specifically designed for technology and business leaders in regulatory industries, addresses this head-on. We are focusing on the intersection of Generative AI, agnostic frameworks and compliance, and secure innovation.
-
-- **Simplifying Modern Technology Integration:** Learn to integrate modern tech seamlessly, overcoming obstacles and using agnostic frameworks to enhance your tech stack efficiently and compliantly.
-
-- **Generative AI:** Power and Security: Discover Generative AI's impact on business and gain insights on its unique challenges.
-
-- **Secure Programming and System Defense Best Practices:** Dive into essential secure programming practices and why we need strong defenses against threats, ensuring system security under regulatory compliance.
-
-We'also unveiled Compage, our universal language framework, that standardizes development, streamlines integration, enables Generative AI adoption, and bolsters security.  
-
-Download your on-demand recording today!
-
-### Speaker Details
-
-<image src="/images/avatar/chandrakanth-paladugu.jpg">
-
-**Chandrakanth Paladugu - Founder of IntelOps.ai**
-
-Chandrakanth Paladugu is a skilled architect with a deep passion for problem-solving in various technical domains, including Cloud-Native, DevSecOps, Software Supply Chain Security, and Kubernetes. His expertise lies in leveraging extensive knowledge to democratize technology and empower engineering teams with agnostic open framework models.
-</div>
-
-<div class="col-lg-5">
-{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/a3ICNMQW7Ok" event_form_redirect_url="" event_form_success_action="video">}}
-</div>
-</div>
+{{< brand-slider
+title=`150M+ Users Trusted Delta Worldwide`
+images=`/images/clients/01.png,/images/clients/02.png,/images/clients/04.png,/images/clients/05.png,/images/clients/05.png`
+has_padding_top=`false`
+has_padding_bottom=`false` >}}
