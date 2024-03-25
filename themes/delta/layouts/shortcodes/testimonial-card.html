@@ -1,0 +1,22 @@
+{{ $name:= .Get "name" }}
+{{ $designation:= .Get "designation" }}
+{{ $rating:= .Get "rating" }}
+
+
+<div class="swiper-slide">
+  <div class="testiminials-block rounded-lg">
+    <h5 class="mb-1">
+      {{ $name | markdownify }}
+    </h5>
+    <p class="mb-1">
+      {{ $designation | markdownify }}
+    </p>
+    <div
+      class="testimonials-rating mb-2"
+      style="--testimonials_rating:{{ $rating }}"
+      title="Rating of this product is {{ $rating }} out of 5.0"></div>
+    <div class="testimonials-review">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</div>

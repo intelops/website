@@ -179,6 +179,7 @@ style="background-image: url({{$img.RelPermalink}});
 
 <!-- regular page -->
 {{ else }}
+{{ if not (eq .Params.layout_width `full`) }}
 <section class="section-sm">
   <div class="container">
     <div class="row">
@@ -190,6 +191,9 @@ style="background-image: url({{$img.RelPermalink}});
     </div>
   </div>
 </section>
+{{ else }}
+{{ .Content }}
+{{ end }}
 {{ end }}
 <!-- /regular page -->
 

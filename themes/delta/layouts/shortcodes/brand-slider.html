@@ -3,6 +3,7 @@
 {{ $padding_top := .Get "has_padding_top" }}
 {{ $padding_bottom := .Get "has_padding_bottom" }}
 
+
 <section
   class="section not-content {{ if not (eq $padding_top `true`) }}
     pt-0
@@ -15,7 +16,7 @@
             {{ $title | markdownify }}
           </h2>
         </div>
-        
+
         {{ with $images }}
           <div class="brand-carousel swiper-container pb-6">
             <div class="swiper-wrapper">
