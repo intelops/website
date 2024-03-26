@@ -6,9 +6,15 @@ banner:
   title_color: ""
   description:
     Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
-    Engineering Enablement with Self-Service based Platform-Engineering Stack. <br><br>
-    Our Products are currently in Stealth mode.<br>
-    Join the waitlist & be the first to know about the launch.
+
+   <!-- Engineering Enablement with Self-Service based Platform Engineering Stack. -->
+   
+   Engineering Enablement for the Digital Future.<br><br>
+
+    We are currently in Stealth mode.<br>
+    Join the waitlist & be the first to know about the launch.<br><br>
+    
+    Enabling Engineering with Agnostic Framework Model-based Proactive Solutions.   
     
           
   description_color: ""
