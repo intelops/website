@@ -14,7 +14,8 @@ banner:
     We are currently in Stealth mode.<br>
     Join the waitlist & be the first to know about the launch.<br><br>
     
-    Enabling Engineering with Agnostic Framework Model-based Proactive Solutions.     
+    Enabling Engineering with Agnostic Framework Model-based Proactive Solutions. 
+    
           
   description_color: ""
   button:
