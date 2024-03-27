@@ -433,6 +433,9 @@ a:hover {
 .border {
   border-color: #dee2e6 !important;
 }
+.border-transparent {
+  border-color: transparent !important;
+}
 
 // form-control
 
@@ -519,7 +522,7 @@ form label {
 }
 
 // content style
-.content >*:not(*.not-content) {
+.content > *:not(*.not-content) {
   color: #777;
 
   p {
@@ -982,5 +985,21 @@ form label {
   &-danger {
     color: red;
     background-color: rgba(red, 0.2);
+  }
+}
+
+.formatted-list {
+  ul,
+  ol {
+    padding-left: 20px;
+    li::marker {
+      color: $color-primary;
+    }
+    li {
+      color: $black;
+    }
+    strong {
+      color: $color-primary;
+    }
   }
 }

@@ -1,12 +1,16 @@
 {{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
 {{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
 {{ $image := .Get "image" }}
 
 {{ $copyright := .Get "copyright" }}
+{{ $copyright_color := .Get "copyright_color" }}
 
 {{ $bg_color := .Get "bg_color" }}
 
 {{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
 {{ $button_label := .Get "button_label" }}
 {{ $button_link := .Get "button_link" }}
 
@@ -19,19 +23,27 @@
     {{- end -}}"></div>
   <div class="container container-delta">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-12">
         <div class="block bg-white rounded-lg shadow">
           <div class="row align-items-center">
             <div class="col-lg-7">
               <div class="content-block">
                 {{ with $title }}
-                  <h3 class="text-capitalize mb-2">
+                  <h3
+                    class="text-capitalize mb-2"
+                    {{ with $title_color }}
+                      style="color: {{ . }}!important"
+                    {{ end }}>
                     {{ . | markdownify }}
                   </h3>
                 {{ end }}
 
                 {{ with $subtitle }}
-                  <p class="mb-4">
+                  <p
+                    class="mb-4"
+                    {{ with $subtitle_color }}
+                      style="color: {{ . }}!important"
+                    {{ end }}>
                     {{ . | markdownify }}
                   </p>
                 {{ end }}
@@ -57,7 +69,13 @@
       </div>
       {{ with $copyright }}
         <div class="col-12">
-          <p class="pt-4 pb-2 text-center">{{ . | markdownify }}</p>
+          <p
+            class="pt-4 pb-1 text-center"
+            {{ with $copyright_color }}
+              style="color: {{ . }}!important"
+            {{ end }}>
+            {{ . | markdownify }}
+          </p>
         </div>
       {{ end }}
     </div>

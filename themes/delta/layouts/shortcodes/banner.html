@@ -1,6 +1,9 @@
 {{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
 {{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
 {{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
 {{ $image := .Get "image" }}
 {{ $button_label := .Get "button_label" }}
 {{ $button_link := .Get "button_link" }}
@@ -9,20 +12,65 @@
 {{ $padding_top := .Get "has_padding_top" }}
 {{ $padding_bottom := .Get "has_padding_bottom" }}
 
+{{ $banner_bg_color := .Get "banner_bg_color" }}
+
+{{ $has_header := .Get "has_header" }}
+{{ $header_logo := .Get "header_logo" }}
+{{ $header_navigation_btn_label := .Get "header_navigation_btn_label" }}
+{{ $header_navigation_btn_icon := .Get "header_navigation_btn_icon" }}
+{{ $header_navigation_btn_link := .Get "header_navigation_btn_link" }}
+
 {{ $hide_left_shape := .Get "hide_left_shape" }}
+{{ $left_shape_color := .Get "left_shape_color" }}
 {{ $hide_right_shape := .Get "hide_right_shape" }}
+{{ $right_shape_color := .Get "right_shape_color" }}
 
 {{ $centered_layout := .Get "centered_layout" }}
 
 
 <div
-  class="section not-content {{ if not (eq $padding_top `true`) }}
+  class="section not-content {{ if not $padding_top }}
     pt-0
-  {{ end }}{{ if not (eq $padding_bottom `true`) }}pb-0{{ end }}">
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
   <section
-    class="banner mx-2 banner-shortcode banner-2 bg-primary-soft rounded-lg wave-block overflow-hidden {{ if eq $centered_layout `true` }}
+    class="banner mx-sm-2 mt-sm-2 pt-lg-2 banner-shortcode banner-2 {{ if not $banner_bg_color }}
+      bg-primary-soft
+    {{ end }} rounded-lg wave-block overflow-hidden {{ if eq $centered_layout `true` }}
       banner-centered
-    {{ end }}">
+    {{ end }}"
+    {{ if $banner_bg_color }}
+      style="background-color: {{ $banner_bg_color }}!important"
+    {{ end }}>
+    {{ if eq $has_header `true` }}
+      <header class="navigation" id="main-header">
+        <div class="container container-delta">
+          <!-- navbar -->
+          <nav
+            class="navbar navbar-expand-xl justify-content-between navbar-light"
+            id="main-navbar">
+            <!-- navbar brand/logo -->
+            <a
+              class="navbar-brand"
+              href="{{ site.BaseURL | relLangURL }}"
+              title="{{ site.Title }}">
+              {{ partial "logo.html" (dict "Src" $header_logo) }}
+            </a>
+
+            {{ if $header_navigation_btn_label }}
+              <!-- login btn -->
+              <a
+                href="{{ $header_navigation_btn_link | relLangURL }}"
+                class="btn btn-primary me-1">
+                {{ with $header_navigation_btn_icon }}
+                  <i class="icon {{ . }} me-1"></i>
+                {{ end }}
+                {{ $header_navigation_btn_label }}
+              </a>
+            {{ end }}
+          </nav>
+        </div>
+      </header>
+    {{ end }}
     <div class="container container-delta block">
       <div
         class="row align-items-center flex-lg-nowrap {{ if eq $centered_layout `true` }}
@@ -37,11 +85,13 @@
             col-lg-6
           {{ end }}">
           <div class="pe-0 pe-lg-5">
-            <p class="subtitle mb-1">{{ $subtitle | markdownify }}</p>
-            <h1 class="title text-xl mb-3 text-white">
+            <p class="subtitle mb-1" {{ with $subtitle_color }}style="color: {{ . }}!important"{{ end }}>{{ $subtitle | markdownify }}</p>
+            <h1
+              class="title text-xl mb-3 text-white"
+              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
               {{ $title | markdownify }}
             </h1>
-            <p class="mb-4">{{ $description | markdownify }}</p>
+            <p class="mb-4" {{ with $description_color }}style="color: {{ . }}!important"{{ end }}>{{ $description | markdownify }}</p>
 
             {{ if $button_label }}
               <a
@@ -77,13 +127,14 @@
     </div>
 
     <div class="has-wave">
-      {{ if not (eq $hide_left_shape `true`) }}
+      {{ if not $hide_left_shape }}
         <svg
           class="wave-left"
           width="277"
           height="361"
           viewBox="0 0 277 361"
           fill="none"
+          style="{{ with $left_shape_color }}color:{{ . }}!important{{ end }}"
           xmlns="http://www.w3.org/2000/svg">
           <path
             opacity="0.6"
@@ -92,10 +143,10 @@
         </svg>
       {{ end }}
 
-      {{ if not (eq $hide_right_shape `true`) }}
+      {{ if not $hide_right_shape }}
         <svg
           class="wave-right"
-          style="opacity:0.6"
+          style="opacity:0.6{{ with $left_shape_color }};color:{{ . }}!important{{ end }}"
           width="316"
           height="405"
           viewBox="0 0 316 405"

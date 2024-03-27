@@ -1,4 +1,5 @@
 {{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
 {{ $background_image := .Get "background_image" }}
 {{ $video_url := .Get "video_url" }}
 
@@ -7,10 +8,10 @@
 
 
 <div
-  class="section video-section-shortcode not-content {{ if not (eq $padding_top `true`) }}
+  class="section video-section-shortcode not-content {{ if not $padding_top }}
     pt-0
   {{ end }}
-  {{ if not (eq $padding_bottom `true`) }}pb-0{{ end }}">
+  {{ if not $padding_bottom }}pb-0{{ end }}">
   <div class="container">
     <div class="video-wrapper overlay">
       {{ partial "image.html" (dict "Src" $background_image "Size" "x1000" "Class" "w-full" "Webp" false ) }}

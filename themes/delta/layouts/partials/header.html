@@ -2,9 +2,10 @@
 {{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
 {{ $is_header_hidden := .Params.hide_header }}
 
-
 <!-- navigation -->
 {{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") (eq .Section "services") }}
+
+{{ if not .Params.hide_main_header }}
 <header
   class="navigation {{ if not .Params.header_background }}
     light-bar
@@ -246,6 +247,7 @@
   </div>
 </header>
 <!-- /navigation -->
+{{ end }}
 
 {{ if site.Params.fullSiteSearch }}
   <div

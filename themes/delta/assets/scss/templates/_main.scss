@@ -625,6 +625,10 @@ main:empty {
     }
   }
 
+  .hide-count.block::before {
+    display: none;
+  }
+
   .block {
     position: relative;
     &::before {
@@ -802,17 +806,18 @@ main:empty {
 }
 
 .testiminials-block {
-  padding: 40px;
+  padding: 30px 15px;
   margin: 15px;
   position: relative;
   z-index: 1;
 
   @include mobile {
     margin: 0;
-    padding: 30px 15px;
   }
 
-  position: relative;
+  &.hide-quote::after {
+    display: none;
+  }
 
   &::after {
     position: absolute;
