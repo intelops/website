@@ -1,20 +1,33 @@
 {{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
 {{ $images := split (.Get "images") "," }}
 {{ $padding_top := .Get "has_padding_top" }}
 {{ $padding_bottom := .Get "has_padding_bottom" }}
 
 
 <section
-  class="section not-content {{ if not (eq $padding_top `true`) }}
+  class="section not-content {{ if not $padding_top }}
     pt-0
-  {{ end }}{{ if not (eq $padding_bottom `true`) }}pb-0{{ end }}">
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
   <div class="container container-delta">
     <div class="row">
       <div class="col-12 text-center">
         <div class="section-title">
-          <h2 class="title">
+          <h2
+            class="title"
+            {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
             {{ $title | markdownify }}
           </h2>
+          {{ with $description }}
+            <p
+              {{ with $description_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ . | markdownify }}
+            </p>
+          {{ end }}
         </div>
 
         {{ with $images }}

@@ -6,12 +6,13 @@ event_date_location: "Jan 24, 2024 10AM CST"
 description:
 weight: 02
 
-hide_header: true
+hide_main_header: true # It will hide the main header of the page
+
+hide_header: true # It will hide specific part of the header like menu except logo
 hide_footer: true
 hide_call_to_action: true
 
 layout_width: full
-header_background: white
 
 draft: false
 
@@ -28,39 +29,73 @@ bannerimage: images/banner/mindmaps-page/intelops-webinar-03.svg
 ---
 
 {{< banner
+has_header=`true`
+header_logo=`/images/logos/new-full-logo-light.svg`
+header_navigation_btn_label=`Sign Up`
+header_navigation_btn_icon=``
+header_navigation_btn_link=`#`
+banner_bg_color=`#0a253e`
 image=`/images/banner-home.png`
 title=`Get Fastest Loan With Smart Way A Seating Home`
+title_color=`white`
 subtitle=`We Are Delta`
+subtitle_color=`yellow`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+description_color=`red`
 button_label=`Get Started Now`
 button_link=`https://github.com/`
 video_button_label=`Watch Demo`
 video_button_link=`https://www.youtube.com/embed/dyZcRRWiuuw`
-has_padding_top=`false`
-has_padding_bottom=`true`
-hide_left_shape=`false`
-hide_right_shape=`true` >}}
+has_padding_top=false
+has_padding_bottom=true
+hide_left_shape=false
+hide_right_shape=true
+left_shape_color=`#99beff`
+right_shape_color=`#99beff` >}}
 
 {{< features
+background_color=`#0a253e`
 title=`Eaving Them Less Time To The Check Out Competitors Built The Into.`
+title_color=`green`
 subtitle=`Features Of Delta`
+subtitle_color=`green`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+description_color=`green`
 button_label=`Get Started Now`
 button_link=`https://example.com/`
-has_padding_top=`true`
-has_padding_bottom=`true` >}}
+has_padding_top=true
+has_padding_bottom=true
+hide_left_shape=false
+hide_right_shape=false
+left_shape_color=`#99beff`
+right_shape_color=`#99beff` >}}
   {{< features-item
+      background_color=`white`
       icon=`fas fa-cubes`
+      icon_color=`white`
+      icon_bg_color=`black`
       title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
+      title_color=`black`
+      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
+      description_color=`black` >}}
   {{< features-item
+      background_color=`white`
       icon=`far fa-lightbulb`
+      icon_color=`white`
+      icon_bg_color=`black`
       title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
+      title_color=`black`
+      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
+      description_color=`black` >}}
   {{< features-item
+      background_color=`white`
       icon=`far fa-flag`
+      icon_color=`white`
+      icon_bg_color=`black`
       title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
+      title_color=`black`
+      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
+      description_color=`black` >}}
   {{< features-item
       icon=`far fa-gem`
       title=`1 Scale Collaboration`
@@ -75,89 +110,34 @@ has_padding_bottom=`true` >}}
       description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
 {{< /features >}}
 
+{{< video
+ video_url=`https://www.youtube.com/embed/dyZcRRWiuuw`
+ background_image=`/images/banner-home.png`
+ has_padding_top=true
+ has_padding_bottom=false >}}
+
 {{< brand-slider
 title=`150M+ Users Trusted Delta Worldwide`
+description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+description_color=`black`
+title_color=`green`
 images=`/images/clients/01.png,/images/clients/02.png,/images/clients/04.png,/images/clients/05.png,/images/clients/05.png`
-has_padding_top=`true`
-has_padding_bottom=`false` >}}
-
-{{< pricing
-title=`Everything You Need For Best In Class Service`
-subtitle=`We Are Delta`
-has_padding_top=`true`
-has_padding_bottom=`true` >}}
-
- {{< pricing-item
- badge=`Most Popular`
- title=`Suite Profession`
- description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
- price=`$79`
- button_one_label=`Buy Now`
- button_one_link=`#`
- button_two_label=`Start Free Trial`
- button_two_link=`#`
- price_type=`per agent/month billed annually` >}}
-
-- Online, email, and phone support **from the**
-- Online, email, and **phone** support from the
-- **Online, email**, and phone support from the
-- Online, **email, and phone** support from the
-- Online, email, and phone support **from the**
-- Online, email, and **phone support** from the
-
- {{< /pricing-item >}}
-
- {{< pricing-item
- badge=``
- title=`Suite Profession`
- description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
- price=`$79`
- button_one_label=`Buy Now`
- button_one_link=`#`
- button_two_label=`Start Free Trial`
- button_two_link=`#`
- price_type=`per agent/month billed annually` >}}
-
-- Online, email, and phone support **from the**
-- Online, email, and **phone** support from the
-- **Online, email**, and phone support from the
-- Online, **email, and phone** support from the
-- Online, email, and phone support **from the**
-- Online, email, and **phone support** from the
-
- {{< /pricing-item >}}
-
- {{< pricing-item
- badge=``
- title=`Suite Profession`
- description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
- price=`$79`
- button_one_label=`Buy Now`
- button_one_link=`#`
- button_two_label=`Start Free Trial`
- button_two_link=`#`
- price_type=`per agent/month billed annually` >}}
-
-- Online, email, and phone support **from the**
-- Online, email, and **phone** support from the
-- **Online, email**, and phone support from the
-- Online, **email, and phone** support from the
-- Online, email, and phone support **from the**
-- Online, email, and **phone support** from the
-
- {{< /pricing-item >}}
-
-{{< /pricing >}}
+has_padding_top=true
+has_padding_bottom=true >}}
 
 {{< faq
  title=`Everything You Need For Best In Class Service`
+ title_color=`green`
  subtitle=`We Are Delta`
- has_padding_top=`false`
- has_padding_bottom=`false`
+ subtitle_color=`green`
+ description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+ description_color=`black`
+ has_padding_top=false
+ has_padding_bottom=false
  button_label=`Get Started Now`
  button_link=`https://github.com/` >}}
 
- {{< faq-item title=`Everything You Need For Best In Class Service 1` expanded=`true`>}}
+ {{< faq-item title=`Everything You Need For Best In Class Service 1` expanded=true >}}
 
 - Online, email, and phone support **from the**
 - Online, email, and phone support **from the**
@@ -204,41 +184,93 @@ has_padding_bottom=`true` >}}
 
 {{< /faq >}}
 
-{{< video
- video_url=`https://www.youtube.com/embed/dyZcRRWiuuw`
- background_image=`/images/banner-home.png`
- has_padding_top=`true`
- has_padding_bottom=`true` >}}
+{{< testimonial
+ title=`About Three Million Users <br> Testimonial Together`
+ subtitle=`People Say’s`
+ image=`images/testimonials-group.png`
+ image_width=`250x`
+ image_bg_color=`#e4f0fd` >}}
 
-{{< process-row title=`The Process Of How Delta Works` subtitle=`Work Process Of Delta`>}}
+ {{< testimonial-item name=`Erica Carlina` designation=``rating=`` hide_quote=true >}}
+ Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{</ testimonial-item >}}
 
- {{< process-row-item title=`Ultimate Guide` image=`images/process/01.jpg` data_count=`1` >}}
+ {{< testimonial-item name=`Justin Rubela` designation=``rating=`` hide_quote=true >}}
+ Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{</ testimonial-item >}}
+
+ {{< testimonial-item name=`William Broke` designation=``rating=`` hide_quote=true >}}
+ Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{</ testimonial-item >}}
+
+{{</ testimonial >}}
+
+{{< process
+ background_color=`black`
+ title=`The Process Of How Delta Works`
+ title_color=`white`
+ subtitle=`compage`
+ subtitle_color=`green`
+ description=`lroemioehhr90wy90 w09e9yw2g893eg2 209yegh891g89weg89g1i9egiuigbu 1 09ewy019ng8e124g8989y`
+ description_color=`white`
+ hide_left_shape=false
+ hide_right_shape=false
+ left_shape_color=`red`
+ right_shape_color=`#99beff` >}}
+
+ {{< process-item
+  title=`Ultimate Guide`
+  title_color=`white`
+  description_color=`white`
+  image=`images/process/01.jpg`
+  image_bg_color=`red`
+  data_count=`` >}}
  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
- {{</ process-row-item >}}
+ {{</ process-item >}}
 
- {{< process-row-item title=`Ultimate Guide` image=`images/process/02.jpg` data_count=`2` >}}
- Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
- {{</ process-row-item >}}
+ {{< process-item
+  title=`Ultimate Guide`
+  title_color=`white`
+  description_color=`white`
+  image=`images/process/01.jpg`
+  image_bg_color=`red`
+  data_count=`` >}}
+  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+ {{</ process-item >}}
 
- {{< process-row-item title=`Ultimate Guide` image=`images/process/03.jpg` data_count=`3` >}}
- Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
- {{</ process-row-item >}}
+ {{< process-item
+  title=`Ultimate Guide`
+  title_color=`white`
+  description_color=`white`
+  image=`images/process/03.jpg`
+  image_bg_color=`red`
+  data_count=`` >}}
+  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+ {{</ process-item >}}
 
- {{< process-row-item title=`Ultimate Guide` image=`images/process/04.jpg` data_count=`4` >}}
- Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
- {{</ process-row-item >}}
+ {{< process-item
+  title=`Ultimate Guide`
+  title_color=`white`
+  description_color=`white`
+  image=`images/process/04.jpg`
+  image_bg_color=`red`
+  data_count=`` >}}
+  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+ {{</ process-item >}}
 
-{{</ process-row >}}
+{{</ process >}}
 
 {{< content-block
  title=`Let Your Lead Reach <br> Out To Sales People`
+ title_color=`black`
  subtitle=`We Are Delta`
- order=`false`
- slider=`false`
+ subtitle_color=`green`
+ order=true
+ slider=false
  images=`/images/block-image-01.png`
- image_block_bg_color=`#fff4ce`
- has_padding_top=`true`
- has_padding_bottom=`false`>}}
+ image_bg_color=`green`
+ has_padding_top=true
+ has_padding_bottom=false >}}
 
  Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
  posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
@@ -253,48 +285,30 @@ has_padding_bottom=`true` >}}
 {{< content-block
  title=`Let Your Lead Reach <br> Out To Sales People`
  subtitle=`We Are Delta`
- order=`true`
- slider=`true`
+ order=false
+ slider=true
  images=`/images/block-image-01.png,/images/block-image-01.png`
- image_block_bg_color=`#e4f0fd`
- has_padding_top=`true`
- has_padding_bottom=`false`>}}
+ image_bg_color=`green`
+ has_padding_top=true
+ has_padding_bottom=false >}}
 
-Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
-vel, ullamcorper sit amet ligula. Vestibulum ante
-<br>
-orci luctus et ultrices pos uere cubilia Curae; Donec verglit neque,
-auctor congue leo eget malesuada. Vivamus susr cipit sit amet dui.
-Nulla quis lorem ut libero malesuada feugiat.
+- **uiwhie**: whiehihwiehie
+- **uiwhie**: whiehihwiehie
+- **uiwhie**: whiehihwiehie
+- **uiwhie**: whiehihwiehie
 
 {{</ content-block >}}
-
-{{< testimonial
- title=`About Three Million Users <br> Testimonial Together`
- subtitle=`People Say’s`
- image=`images/testimonials-group.png` >}}
-
- {{< testimonial-card name=`Erica Carlina` designation=`CEO & Founder, Ammarait` rating=`5.0` >}}
- Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-card >}}
-
- {{< testimonial-card name=`Justin Rubela` designation=`Founder, Justin Inc.` rating=`4.5` >}}
- Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-card >}}
-
- {{< testimonial-card name=`William Broke` designation=`Developer, Ammarait` rating=`4.2` >}}
- Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-card >}}
-
-{{</ testimonial >}}
 
 {{< call-to-action
 image=`/images/banner-home.png`
 title=`Get Fastest Loan With Smart Way A Seating Home`
+title_color=`black`
 subtitle=`We Are Delta`
+subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+description_color=`red`
 button_label=`Get Started Now`
 button_link=`https://github.com/`
-bg_color=``
-copyright=`copyright by intelops` >}}
+bg_color=`green`
+copyright=`copyright by intelops`
+copyright_color=`white` >}}

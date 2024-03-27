@@ -111,10 +111,12 @@ $(document).ready(function () {
   }
 
   $('[data-bs-toggle="collapse"]').on("click", function () {
-    if ($(this).attr("aria-expanded") == "true") {
-      $("body").addClass("overflow-hidden");
-    } else {
-      $("body").removeClass("overflow-hidden");
+    if (!$(this).hasClass('accordion-button')) {
+      if ($(this).attr("aria-expanded") == "true") {
+        $("body").addClass("overflow-hidden");
+      } else {
+        $("body").removeClass("overflow-hidden");
+      }
     }
   });
 

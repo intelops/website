@@ -1,4 +1,12 @@
 .banner-shortcode {
+  @include desktop {
+    margin: 10px;
+  }
+  header {
+    @include desktop {
+      padding: 10px;
+    }
+  }
   .btn-play {
     &:hover i {
       color: $white;
