@@ -28,23 +28,23 @@
           <div class="row align-items-center">
             <div class="col-lg-7">
               <div class="content-block">
-                {{ with $title }}
+                {{ if $title }}
                   <h3
                     class="text-capitalize mb-2"
                     {{ with $title_color }}
                       style="color: {{ . }}!important"
                     {{ end }}>
-                    {{ . | markdownify }}
+                    {{ $title | markdownify }}
                   </h3>
                 {{ end }}
 
-                {{ with $subtitle }}
+                {{ if $subtitle }}
                   <p
                     class="mb-4"
                     {{ with $subtitle_color }}
                       style="color: {{ . }}!important"
                     {{ end }}>
-                    {{ . | markdownify }}
+                    {{ $subtitle | markdownify }}
                   </p>
                 {{ end }}
 
@@ -67,14 +67,14 @@
           </div>
         </div>
       </div>
-      {{ with $copyright }}
+      {{ if $copyright }}
         <div class="col-12">
           <p
             class="pt-4 pb-1 text-center"
             {{ with $copyright_color }}
               style="color: {{ . }}!important"
             {{ end }}>
-            {{ . | markdownify }}
+            {{ $copyright | markdownify }}
           </p>
         </div>
       {{ end }}

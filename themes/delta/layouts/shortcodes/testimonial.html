@@ -6,22 +6,27 @@
 {{ $subtitle := .Get "subtitle" }}
 {{ $subtitle_color := .Get "subtitle_color" }}
 
-
 <section class="section">
   <div class="container container-delta">
     <div class="row">
       <div class="col-12 text-center">
         <div class="section-title">
-          <p
-            class="subtitle"
-            {{ with $subtitle_color }}style="color: {{ . }}!important"{{ end }}>
-            {{ $subtitle | markdownify }}
-          </p>
-          <h2
-            class="title"
-            {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
-            {{ $title | markdownify }}
-          </h2>
+          {{ if $subtitle }}
+            <p
+              class="subtitle"
+              {{ with $subtitle_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $subtitle | markdownify }}
+            </p>
+          {{ end }}
+          {{ if $title }}
+            <h2
+              class="title"
+              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+              {{ $title | markdownify }}
+            </h2>
+          {{ end }}
         </div>
       </div>
     </div>
