@@ -1,6 +1,6 @@
 ---
 date: "2024-01-24"
-title: "Inline Form Video"
+title: "example landing page"
 image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description:
@@ -42,7 +42,7 @@ subtitle=`We Are Delta`
 subtitle_color=`yellow`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
-button_label=`Get Started Now`
+button_label=`Get Started Now` 
 button_link=`https://github.com/`
 video_button_label=`Watch Demo`
 video_button_link=`https://www.youtube.com/embed/dyZcRRWiuuw`
@@ -58,7 +58,7 @@ background_color=`#0a253e`
 title=`Eaving Them Less Time To The Check Out Competitors Built The Into.`
 title_color=`green`
 subtitle=`Features Of Delta`
-subtitle_color=`green`
+subtitle_color=`#99beff`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`green`
 button_label=``
@@ -75,9 +75,9 @@ right_shape_color=`#99beff` >}}
       icon_color=`white`
       icon_bg_color=`green`
       title=`1 Scale Collaboration`
-      title_color=`black`
+      title_color=`#99beff`
       description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
-      description_color=`black` >}}
+      description_color=`#99beff` >}}
   {{< features-item
       background_color=`white`
       icon=`far fa-lightbulb`
