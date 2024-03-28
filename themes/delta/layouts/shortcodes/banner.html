@@ -25,8 +25,6 @@
 {{ $hide_right_shape := .Get "hide_right_shape" }}
 {{ $right_shape_color := .Get "right_shape_color" }}
 
-{{ $centered_layout := .Get "centered_layout" }}
-
 
 <div
   class="section not-content {{ if not $padding_top }}
@@ -35,13 +33,11 @@
   <section
     class="banner mx-sm-2 mt-sm-2 pt-lg-2 banner-shortcode banner-2 {{ if not $banner_bg_color }}
       bg-primary-soft
-    {{ end }} rounded-lg wave-block overflow-hidden {{ if eq $centered_layout `true` }}
-      banner-centered
-    {{ end }}"
+    {{ end }} rounded-lg wave-block overflow-hidden"
     {{ if $banner_bg_color }}
       style="background-color: {{ $banner_bg_color }}!important"
     {{ end }}>
-    {{ if eq $has_header `true` }}
+    {{ if $has_header }}
       <header class="navigation" id="main-header">
         <div class="container container-delta">
           <!-- navbar -->
@@ -73,25 +69,36 @@
     {{ end }}
     <div class="container container-delta block">
       <div
-        class="row align-items-center flex-lg-nowrap {{ if eq $centered_layout `true` }}
-          text-center
-        {{ else }}
-          text-center text-lg-start
-        {{ end }}">
-        <div
-          class="{{ if eq $centered_layout `true` }}
-            col-lg-10 mx-auto
-          {{ else }}
-            col-lg-6
-          {{ end }}">
+        class="row align-items-center flex-lg-nowrap text-center text-lg-start">
+        <div class="col-lg-6">
           <div class="pe-0 pe-lg-5">
-            <p class="subtitle mb-1" {{ with $subtitle_color }}style="color: {{ . }}!important"{{ end }}>{{ $subtitle | markdownify }}</p>
-            <h1
-              class="title text-xl mb-3 text-white"
-              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
-              {{ $title | markdownify }}
-            </h1>
-            <p class="mb-4" {{ with $description_color }}style="color: {{ . }}!important"{{ end }}>{{ $description | markdownify }}</p>
+            {{ if $subtitle }}
+              <p
+                class="subtitle mb-1"
+                {{ with $subtitle_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $subtitle | markdownify }}
+              </p>
+            {{ end }}
+            {{ if $title }}
+              <h1
+                class="title text-xl mb-3 text-white"
+                {{ with $title_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $title | markdownify }}
+              </h1>
+            {{ end }}
+            {{ if $description }}
+              <p
+                class="mb-4"
+                {{ with $description_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $description | markdownify }}
+              </p>
+            {{ end }}
 
             {{ if $button_label }}
               <a
@@ -146,7 +153,9 @@
       {{ if not $hide_right_shape }}
         <svg
           class="wave-right"
-          style="opacity:0.6{{ with $left_shape_color }};color:{{ . }}!important{{ end }}"
+          style="opacity:0.6{{ with $left_shape_color }}
+            ;color:{{ . }}!important
+          {{ end }}"
           width="316"
           height="405"
           viewBox="0 0 316 405"

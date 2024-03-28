@@ -1,5 +1,7 @@
 {{ $title := .Get "title" | markdownify }}
+{{ $title_color := .Get "title_color" | markdownify }}
 {{ $subtitle:= .Get "subtitle" | markdownify }}
+{{ $subtitle_color:= .Get "subtitle_color" | markdownify }}
 {{ $order:= .Get "order" }}
 {{ $slider:= .Get "slider" }}
 {{ $images := split (.Get "images") "," }}
@@ -13,14 +15,27 @@
     pt-0
   {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
   <div class="container container-delta">
-    <div class="row gx-4 gx-xl-5 align-items-center">
-      <div
-        class="col-lg-6 {{ if $order}}order-1 order-lg-1{{ end }}">
+    <div class="row gx-4 gy-4 gx-xl-5 align-items-center">
+      <div class="col-lg-6 {{ if $order }}order-1 order-lg-1{{ end }}">
         <div class="section-title mb-2">
-          {{ with $subtitle }}
-            <p class="subtitle">{{ . | markdownify }}</p>
+          {{ if $subtitle }}
+            <p
+              class="subtitle"
+              {{ with $subtitle_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $subtitle | markdownify }}
+            </p>
           {{ end }}
-          <h2 class="title mb-0">{{ $title | markdownify }}</h2>
+          {{ if $title }}
+            <h2
+              class="title mb-0"
+              {{ with $title }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $title | markdownify }}
+            </h2>
+          {{ end }}
         </div>
 
         <div class="content formatted-list">{{ .Inner | markdownify }}</div>

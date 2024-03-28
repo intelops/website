@@ -29,7 +29,7 @@ bannerimage: images/banner/mindmaps-page/intelops-webinar-03.svg
 ---
 
 {{< banner
-has_header=`true`
+has_header=true
 header_logo=`/images/logos/new-full-logo-light.svg`
 header_navigation_btn_label=`Sign Up`
 header_navigation_btn_icon=``
@@ -61,7 +61,7 @@ subtitle=`Features Of Delta`
 subtitle_color=`green`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`green`
-button_label=`Get Started Now`
+button_label=``
 button_link=`https://example.com/`
 has_padding_top=true
 has_padding_bottom=true
@@ -71,9 +71,9 @@ left_shape_color=`#99beff`
 right_shape_color=`#99beff` >}}
   {{< features-item
       background_color=`white`
-      icon=`fas fa-cubes`
+      icon=`/images/call-to-actions/compage/Compage-icon.svg`
       icon_color=`white`
-      icon_bg_color=`black`
+      icon_bg_color=`green`
       title=`1 Scale Collaboration`
       title_color=`black`
       description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
@@ -186,21 +186,35 @@ has_padding_bottom=true >}}
 
 {{< testimonial
  title=`About Three Million Users <br> Testimonial Together`
+ title_color=`red`
  subtitle=`People Say’s`
- image=`images/testimonials-group.png`
+ subtitle_color=`green`
+ image=`/images/testimonials-group.png`
  image_width=`250x`
  image_bg_color=`#e4f0fd` >}}
 
- {{< testimonial-item name=`Erica Carlina` designation=``rating=`` hide_quote=true >}}
- Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{< testimonial-item
+   name=`Erica Carlina`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
  {{</ testimonial-item >}}
 
- {{< testimonial-item name=`Justin Rubela` designation=``rating=`` hide_quote=true >}}
- Dolorsit amet consectetur, adipisicing elit. Expedita repellendus optio quaerat iste aliquam, rerum quas ab? Adipisci maxime tempore doloremque laborum suscipit debitis autem ducimus dicta delectus, atque abofficiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{< testimonial-item
+   name=`Erica Carlina`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
  {{</ testimonial-item >}}
 
- {{< testimonial-item name=`William Broke` designation=``rating=`` hide_quote=true >}}
- Amet consectetur adipisicing elit. Voluptates, suscipit dolorum! Quis explicabo quibusdam error expedita dolore veritatis magni fugiat rem provident qui, in dolorem quo laboriosam modi tenetur aperiam. obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
+ {{< testimonial-item
+   name=`Erica Carlina`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
  {{</ testimonial-item >}}
 
 {{</ testimonial >}}
@@ -219,43 +233,43 @@ has_padding_bottom=true >}}
  right_shape_color=`#99beff` >}}
 
  {{< process-item
-  title=`Ultimate Guide`
-  title_color=`white`
-  description_color=`white`
-  image=`images/process/01.jpg`
-  image_bg_color=`red`
-  data_count=`` >}}
- Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
- {{</ process-item >}}
-
- {{< process-item
-  title=`Ultimate Guide`
-  title_color=`white`
-  description_color=`white`
-  image=`images/process/01.jpg`
-  image_bg_color=`red`
-  data_count=`` >}}
+   title=`Ultimate Guide`
+   title_color=`white`
+   description_color=`white`
+   image=`/images/process/01.jpg`
+   image_bg_color=`red`
+   data_count=`` >}}
   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
  {{</ process-item >}}
 
  {{< process-item
-  title=`Ultimate Guide`
-  title_color=`white`
-  description_color=`white`
-  image=`images/process/03.jpg`
-  image_bg_color=`red`
-  data_count=`` >}}
-  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+   title=`Ultimate Guide`
+   title_color=`white`
+   description_color=`white`
+   image=`/images/process/01.jpg`
+   image_bg_color=`red`
+   data_count=`` >}}
+   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
  {{</ process-item >}}
 
  {{< process-item
-  title=`Ultimate Guide`
-  title_color=`white`
-  description_color=`white`
-  image=`images/process/04.jpg`
-  image_bg_color=`red`
-  data_count=`` >}}
-  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+   title=`Ultimate Guide`
+   title_color=`white`
+   description_color=`white`
+   image=`/images/process/03.jpg`
+   image_bg_color=`red`
+   data_count=`` >}}
+   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+ {{</ process-item >}}
+
+ {{< process-item
+   title=`Ultimate Guide`
+   title_color=`white`
+   description_color=`white`
+   image=`/images/process/04.jpg`
+   image_bg_color=`red`
+   data_count=`` >}}
+   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
  {{</ process-item >}}
 
 {{</ process >}}

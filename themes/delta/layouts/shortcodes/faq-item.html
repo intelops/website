@@ -6,7 +6,7 @@
 <div class="accordion-item border-0">
   <h4 class="accordion-header mb-0" id="heading-{{ sha1 $title | urlize }}_">
     <button
-      class="accordion-button pe-0 shadow-none h6 font-secondary mb-0 {{ if ne $expanded `true` }}
+      class="accordion-button pe-0 shadow-none h6 font-secondary mb-0 {{ if not $expanded }}
         collapsed
       {{ end }}"
       type="button"

@@ -252,8 +252,8 @@ main:empty {
     .block {
       background-color: $white;
       border-radius: 15px;
-      box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       border: 2px solid transparent;
+      box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       transition: 0.1s;
       padding: 45px 35px;
 
@@ -292,6 +292,7 @@ main:empty {
     &.features-block-2 {
       .block {
         padding: 40px 25px;
+        align-items: start;
 
         @include mobile {
           padding: 30px 25px;
@@ -301,12 +302,15 @@ main:empty {
           font-size: 20px;
           margin-right: 25px;
           display: inline-block;
-          max-height: 50px;
+          min-height: 50px;
+          width: 50px;
           min-width: 50px;
-          line-height: 50px;
           text-align: center;
           border-radius: 10px;
           margin-bottom: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
       }
 

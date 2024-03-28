@@ -1,5 +1,6 @@
 {{ $icon := .Get "icon" }}
 {{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
 {{ $subtitle := .Get "subtitle" }}
 {{ $subtitle_color := .Get "subtitle_color" }}
 {{ $description := .Get "description" }}
@@ -22,11 +23,22 @@
       popular
     {{ end }}"
     {{ if $badge }}data-text="{{ i18n `most_popular` }}"{{ end }}>
-    <h3 class="h4">{{ $title }}</h3>
+    {{ if $title }}
+      <h3
+        class="h4"
+        {{ with $title_color }}
+          style="color: {{ . }}!important"
+        {{ end }}>
+        {{ $title }}
+      </h3>
+    {{ end }}
+    {{ if $price }}
+      <p class="h5 font-secondary fw-bold">{{ $price }}</p>
+    {{ end }}
 
-    <p class="h5 font-secondary fw-bold">{{ $price }}</p>
-
-    <p class="small">{{ $price_type | markdownify }}</p>
+    {{ if $price_type }}
+      <p class="small">{{ $price_type | markdownify }}</p>
+    {{ end }}
     {{ if $button_one_label }}
       <a
         class="btn btn-primary d-block"
@@ -42,6 +54,7 @@
         <i class="fas fa-arrow-right small"></i>
       </a>
     {{ end }}
+
 
     <div class="features mt-1 text-start">
       {{ $content | markdownify }}

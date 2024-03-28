@@ -26,20 +26,24 @@
       <div class="row">
         <div class="col-lg-10 mx-auto text-center">
           <div class="section-title">
-            {{ with $subtitle }}
+            {{ if $subtitle }}
               <p
                 class="subtitle"
                 {{ with $subtitle_color }}
                   style="color: {{ . }}!important"
                 {{ end }}>
-                {{ . | markdownify }}
+                {{ $subtitle | markdownify }}
               </p>
             {{ end }}
-            <h2
-              class="h1 title"
-              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
-              {{ $title | markdownify }}
-            </h2>
+            {{ if $title }}
+              <h2
+                class="h1 title"
+                {{ with $title_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $title | markdownify }}
+              </h2>
+            {{ end }}
           </div>
         </div>
       </div>
@@ -48,19 +52,23 @@
         {{ .Inner }}
       </div>
 
-      <div class="text-center mt-5 pt-2">
-        <a href="{{ $button_link | safeURL }}" class="btn btn-primary">
-          {{ $button_label }}
-          <i class="arrow-right fas fa-arrow-right"></i>
-        </a>
-      </div>
+      {{ if $button_label }}
+        <div class="text-center mt-5 pt-2">
+          <a href="{{ $button_link | safeURL }}" class="btn btn-primary">
+            {{ $button_label }}
+            <i class="arrow-right fas fa-arrow-right"></i>
+          </a>
+        </div>
+      {{ end }}
     </div>
 
     <div class="has-wave">
       {{ if not $hide_left_shape }}
         <svg
           class="wave-left"
-          style="opacity:0.8{{ with $right_shape_color }};color:{{ . }}!important{{ end }}"
+          style="opacity:0.8{{ with $right_shape_color }}
+            ;color:{{ . }}!important
+          {{ end }}"
           width="188"
           height="363"
           viewBox="0 0 188 363"
@@ -75,7 +83,9 @@
       {{ if not $hide_right_shape }}
         <svg
           class="wave-right"
-          style="opacity:0.8{{ with $right_shape_color }};color:{{ . }}!important{{ end }}"
+          style="opacity:0.8{{ with $right_shape_color }}
+            ;color:{{ . }}!important
+          {{ end }}"
           width="338"
           height="359"
           viewBox="0 0 338 359"

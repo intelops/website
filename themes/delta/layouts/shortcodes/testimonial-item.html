@@ -1,5 +1,7 @@
 {{ $name := .Get "name" }}
+{{ $name_color := .Get "name_color" }}
 {{ $designation := .Get "designation" }}
+{{ $designation_color := .Get "designation_color" }}
 {{ $rating := .Get "rating" }}
 {{ $hide_quote := default true (.Get "hide_quote") }}
 
@@ -9,14 +11,16 @@
     class="testiminials-block rounded-lg {{ if $hide_quote }}
       hide-quote
     {{ end }}">
-    {{ with $name }}
-      <h5 class="mb-1">
-        {{ . | markdownify }}
+    {{ if $name }}
+      <h5
+        class="mb-1"
+        {{ with $name_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $name | markdownify }}
       </h5>
     {{ end }}
-    {{ with $designation }}
-      <p class="mb-1">
-        {{ . | markdownify }}
+    {{ if $designation }}
+      <p class="mb-1" {{ with $designation_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $designation | markdownify }}
       </p>
     {{ end }}
     {{ with $rating }}

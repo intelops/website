@@ -9,7 +9,7 @@
 
 <div class="col-lg-3 col-sm-6 process-item">
   <div
-    class="block pt-4 {{ if not $data_count }}hide-count{{ end }}"
+    class="block {{ if not $data_count }}hide-count{{ end }}"
     {{ with $data_count }}data-count="{{ . }}"{{ end }}>
     <div
       class="process-image"
@@ -19,15 +19,19 @@
       {{ partial "image.html" (dict "Src" $image "Size" "350x278" "Webp" false "Class" "w-100" ) }}
     </div>
 
-    <h3
-      class="title h4"
-      {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
-      {{ $title }}
-    </h3>
-    <p
-      class="mb-0"
-      {{ with $description_color }}style="color: {{ . }}!important"{{ end }}>
-      {{ .Inner }}
-    </p>
+    {{ if $title }}
+      <h3
+        class="title h4"
+        {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $title }}
+      </h3>
+    {{ end }}
+    {{ if $description_color }}
+      <p
+        class="mb-0"
+        {{ with $description_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ .Inner }}
+      </p>
+    {{ end }}
   </div>
 </div>
