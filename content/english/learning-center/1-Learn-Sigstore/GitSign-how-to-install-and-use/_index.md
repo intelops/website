@@ -7,7 +7,7 @@ weight: 1
 description: "Step by step guide on how to sign Git commits with a valid OpenID Connect identity"
 ---
 
-Signing your work is the new Industry standard, and so is by law. Gitsign implements a keyless Sigstore to sign Git commits with a valid OpenID Connect identity. This document is a step-by-step guide on setting up Gitsign globally for all commits in your local and how to verify the commits using Git and Gitsign.
+Signing your development work is the new Industry standard, per Software Supply Chain Security measures. Gitsign makes developer's life easy to sign the commits by providing key pair based mode and keyless mode to sign Git commits with a mechanism to verify the signatures. This document is a step-by-step guide on setting up Gitsign globally for all commits in your local and how to verify the commits using Git and Gitsign; the signing procedure we adopted is keyless mode, hence will demonstrate it. 
 
 ### Before Git Sign
 
@@ -35,10 +35,12 @@ To github.com:VishwasSomasekhariah/end_to_end_ML_model.git
    b9de83c..14ee0af  main -> main
 ```
 
-No authentication was requested and no signature was signed for this work. You can check this on Github.
+No authentication was requested and no signature was signed for this work, hence cannot verify who really did the commit. You can check this on Github.
 ![github_unsigned_commit](image1.jpg)
 
 ### Install Gitsign using Homebrew
+
+>You can find steps for other platforms' installation on [SigStore Docs](https://docs.sigstore.dev/signing/gitsign/#installing-gitsign).
 
 If you have homebrew, use `brew tap` to add Sigstore's repository to your system
 
@@ -181,9 +183,8 @@ Validated Certificate claims: true
 
 Congrats!! You have now successfully learnt how to install `gitsign` and how to verify commits using `gitsign` and `git`.
 
-### ______________________________  
 
-For the curious few, let's push the commit to gitub and see how it shows up there.
+For the curious few, let's push the commit to gitub and see how it shows up there:
 
 ```cmd
 git push origin main
@@ -202,6 +203,18 @@ To github.com:VishwasSomasekhariah/end_to_end_ML_model.git
 
 On Github you should see a note next to your commit signaling that the commit was signed but saying 'unverified'. That's because there are additional steps to setup github action workflow (CI pipeline) to be able to verify signed git commits using gitsign in the github or any git platform. Once you get the pipeline setup, the step you include in the pipeline to use gitsign to verify git commits will validate the commits related signatures.
 
-Above steps are to demonstrate how to use [gitsign](https://github.com/sigstore/gitsign) on your workstation.
+Above steps are to demonstrate how to use [gitsign](https://github.com/sigstore/gitsign) on a workstation.
 
 ![github_signed_commit](image5.jpg)
+
+
+### Automate the OAuth step
+
+If you prefer to not select the identity provider (on your browser) everytime you want to sign your commit, you can set your identity provider as git configuration in your local git settings: 
+
+```cmd
+git config --global gitsign.connectorID https://github.com/login/oauth 
+```
+In my case, I am using Github as identity provider to sign my commits. 
+
+Find more detail - [GitSign docs](https://docs.sigstore.dev/signing/gitsign/#file-config). 

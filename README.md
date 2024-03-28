@@ -62,4 +62,6 @@ This is the repo to manage all the website work, which is being developed using 
 > This issue has the samples for reference. Add interactive diagrams using mermaid in Markdown. 
 >
 > Some fancy way of writing content - to see the sample go to URL/learning-center/docbox-layouts/ and run in debug mode to see the sample in local. 
+
+> https://github.com/intelops/website/issues/329 -- This PR explain on how to use netlify forms addition, different Forms styles, examples, and campaign landing pages with shortcodes
 > 

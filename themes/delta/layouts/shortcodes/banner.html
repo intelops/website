@@ -1,0 +1,171 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+{{ $image := .Get "image" }}
+{{ $button_label := .Get "button_label" }}
+{{ $button_link := .Get "button_link" }}
+{{ $video_button_label := .Get "video_button_label" }}
+{{ $video_button_link := .Get "video_button_link" }}
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+{{ $banner_bg_color := .Get "banner_bg_color" }}
+
+{{ $has_header := .Get "has_header" }}
+{{ $header_logo := .Get "header_logo" }}
+{{ $header_navigation_btn_label := .Get "header_navigation_btn_label" }}
+{{ $header_navigation_btn_icon := .Get "header_navigation_btn_icon" }}
+{{ $header_navigation_btn_link := .Get "header_navigation_btn_link" }}
+
+{{ $hide_left_shape := .Get "hide_left_shape" }}
+{{ $left_shape_color := .Get "left_shape_color" }}
+{{ $hide_right_shape := .Get "hide_right_shape" }}
+{{ $right_shape_color := .Get "right_shape_color" }}
+
+
+<div
+  class="section not-content {{ if not $padding_top }}
+    pt-0
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
+  <section
+    class="banner mx-sm-2 mt-sm-2 pt-lg-2 banner-shortcode banner-2 {{ if not $banner_bg_color }}
+      bg-primary-soft
+    {{ end }} rounded-lg wave-block overflow-hidden"
+    {{ if $banner_bg_color }}
+      style="background-color: {{ $banner_bg_color }}!important"
+    {{ end }}>
+    {{ if $has_header }}
+      <header class="navigation" id="main-header">
+        <div class="container container-delta">
+          <!-- navbar -->
+          <nav
+            class="navbar navbar-expand-xl justify-content-between navbar-light"
+            id="main-navbar">
+            <!-- navbar brand/logo -->
+            <a
+              class="navbar-brand"
+              href="{{ site.BaseURL | relLangURL }}"
+              title="{{ site.Title }}">
+              {{ partial "logo.html" (dict "Src" $header_logo) }}
+            </a>
+
+            {{ if $header_navigation_btn_label }}
+              <!-- login btn -->
+              <a
+                href="{{ $header_navigation_btn_link | relLangURL }}"
+                class="btn btn-primary me-1">
+                {{ with $header_navigation_btn_icon }}
+                  <i class="icon {{ . }} me-1"></i>
+                {{ end }}
+                {{ $header_navigation_btn_label }}
+              </a>
+            {{ end }}
+          </nav>
+        </div>
+      </header>
+    {{ end }}
+    <div class="container container-delta block">
+      <div
+        class="row align-items-center flex-lg-nowrap text-center text-lg-start">
+        <div class="col-lg-6">
+          <div class="pe-0 pe-lg-5">
+            {{ if $subtitle }}
+              <p
+                class="subtitle mb-1"
+                {{ with $subtitle_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $subtitle | markdownify }}
+              </p>
+            {{ end }}
+            {{ if $title }}
+              <h1
+                class="title text-xl mb-3 text-white"
+                {{ with $title_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $title | markdownify }}
+              </h1>
+            {{ end }}
+            {{ if $description }}
+              <p
+                class="mb-4"
+                {{ with $description_color }}
+                  style="color: {{ . }}!important"
+                {{ end }}>
+                {{ $description | markdownify }}
+              </p>
+            {{ end }}
+
+            {{ if $button_label }}
+              <a
+                href="{{ $button_link | relLangURL }}"
+                class="btn btn-primary m-1 text-white">
+                {{ $button_label }}
+                <i class="arrow-right fas fa-arrow-right"></i>
+              </a>
+            {{ end }}
+
+            {{ if $video_button_label }}
+              <button
+                class="btn btn-outline-primary btn-play text-white m-1"
+                type="button"
+                data-bs-toggle="modal"
+                data-src="{{ $video_button_link }}"
+                data-bs-target="#videoModal"
+                aria-label="watch video">
+                <i class="fas fa-play"></i>
+                {{ $video_button_label }}
+              </button>
+            {{ end }}
+          </div>
+        </div>
+        {{ if $image }}
+          <div class="col-lg-9 mt-5 mt-lg-0">
+            <div class="banner-image-2">
+              {{ partial "image.html" (dict "Src" $image "Size" "1000x" "Webp" false ) }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+
+    <div class="has-wave">
+      {{ if not $hide_left_shape }}
+        <svg
+          class="wave-left"
+          width="277"
+          height="361"
+          viewBox="0 0 277 361"
+          fill="none"
+          style="{{ with $left_shape_color }}color:{{ . }}!important{{ end }}"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            opacity="0.6"
+            d="M-248.288 160.789C-198.043 122.202 -136.092 94.2876 -71.6267 96.3151C-13.0688 98.0953 39.9262 128.321 74.1879 175.213C91.2563 198.427 103.799 224.683 111.089 252.513C114.469 265.75 118.068 280.426 116.724 294.098C116.156 300.073 114.3 306.228 109.713 310.286C106.475 313.15 100.495 315.75 96.3102 313.211C86.278 306.914 89.467 286.426 92.7648 277.556C97.11 265.743 106.481 255.245 118.294 250.749C145.263 240.527 175.286 257.275 193.464 276.53C232.406 317.842 237.389 389.385 202.503 434.839C198.56 440.055 197.535 446.819 202.583 451.956C206.717 456.172 215.761 456.91 219.745 451.849C259.228 400.505 260.12 324.726 221.433 272.53C201.092 245.202 168.274 222.382 132.756 223.746C96.0645 225.091 66.7574 255.24 65.5481 291.837C64.9637 308.965 71.3163 329.559 88.6268 336.235C104.795 342.385 123.386 333.91 132.704 320.099C143.204 304.473 141.669 284.419 138.765 266.728C136.027 249.658 131.223 232.975 124.789 217.062C99.0133 153.254 47.2331 98.9091 -20.282 79.8951C-104.058 56.2534 -193.811 88.7884 -260.548 139.948C-265.686 143.821 -268.435 150.381 -264.819 156.4C-261.764 161.572 -253.54 164.859 -248.288 160.789Z"
+            fill="currentColor" />
+        </svg>
+      {{ end }}
+
+      {{ if not $hide_right_shape }}
+        <svg
+          class="wave-right"
+          style="opacity:0.6{{ with $left_shape_color }}
+            ;color:{{ . }}!important
+          {{ end }}"
+          width="316"
+          height="405"
+          viewBox="0 0 316 405"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M434.703 355.017C376.183 379.285 309.119 390.214 247.374 371.571C191.273 354.696 147.906 311.784 126.949 257.622C116.47 230.782 111.15 202.174 111.311 173.405C111.472 159.744 111.795 144.636 116.631 131.779C118.727 126.154 122.112 120.689 127.594 117.957C131.463 116.029 137.911 115.064 141.297 118.6C149.357 127.279 140.974 146.244 135.493 153.958C128.238 164.244 116.47 171.959 103.895 173.244C75.1996 176.137 50.5341 152.19 37.9595 128.886C11.037 78.9026 24.7401 8.50797 70.202 -26.3679C75.3608 -30.3859 78.1014 -36.654 74.5547 -42.922C71.6529 -48.065 63.1086 -51.1186 57.9498 -47.2613C6.52307 -7.88531 -13.9509 65.0808 9.90854 125.511C22.4831 157.172 48.2771 187.709 82.9378 195.584C118.727 203.781 154.839 182.245 165.479 147.208C170.476 130.815 169.67 109.278 154.677 98.3496C140.652 88.2243 120.5 91.5994 107.926 102.528C93.739 114.904 90.0311 134.672 88.2578 152.512C86.4844 169.709 86.8069 187.066 88.9027 204.102C97.2857 272.408 133.236 338.302 193.53 374.142C268.332 418.662 363.447 410.465 441.152 378.321C447.117 375.91 451.469 370.285 449.535 363.535C447.923 357.749 440.829 352.445 434.703 355.017Z"
+            fill="currentColor" />
+        </svg>
+      {{ end }}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,50 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+{{ $images := split (.Get "images") "," }}
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+
+<section
+  class="section not-content {{ if not $padding_top }}
+    pt-0
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
+  <div class="container container-delta">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          {{ if $title }}
+            <h2
+              class="title"
+              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+              {{ $title | markdownify }}
+            </h2>
+          {{ end }}
+          {{ if $description }}
+            <p
+              {{ with $description_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $description | markdownify }}
+            </p>
+          {{ end }}
+        </div>
+
+        {{ with $images }}
+          <div class="brand-carousel swiper-container pb-6">
+            <div class="swiper-wrapper">
+              {{ range . }}
+                <div class="block swiper-slide">
+                  {{ partial "image.html" (dict "Src" . "Size" "200x" "Webp" false "Class" "img-fluid mx-auto" ) }}
+                </div>
+              {{ end }}
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

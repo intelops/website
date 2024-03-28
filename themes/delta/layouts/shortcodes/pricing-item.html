@@ -1,0 +1,63 @@
+{{ $icon := .Get "icon" }}
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+{{ $badge := .Get "badge" }}
+{{ $price := .Get "price" }}
+{{ $price_type := .Get "price_type" }}
+
+{{ $button_one_label := .Get "button_one_label" }}
+{{ $button_one_link := .Get "button_one_link" }}
+{{ $button_two_label := .Get "button_two_label" }}
+{{ $button_two_link := .Get "button_two_link" }}
+
+{{ $content := .Inner }}
+
+
+<div class="col-lg-4 col-md-6">
+  <div
+    class="pricing-card text-center rounded-md shadow-md pt-5 px-4 {{ if $badge }}
+      popular
+    {{ end }}"
+    {{ if $badge }}data-text="{{ i18n `most_popular` }}"{{ end }}>
+    {{ if $title }}
+      <h3
+        class="h4"
+        {{ with $title_color }}
+          style="color: {{ . }}!important"
+        {{ end }}>
+        {{ $title }}
+      </h3>
+    {{ end }}
+    {{ if $price }}
+      <p class="h5 font-secondary fw-bold">{{ $price }}</p>
+    {{ end }}
+
+    {{ if $price_type }}
+      <p class="small">{{ $price_type | markdownify }}</p>
+    {{ end }}
+    {{ if $button_one_label }}
+      <a
+        class="btn btn-primary d-block"
+        href="{{ $button_one_link | absLangURL }}/">
+        {{ $button_one_label }}
+      </a>
+    {{ end }}
+    {{ if $button_two_label }}
+      <a
+        class="btn btn-link d-block mt-1"
+        href="{{ $button_two_link | absLangURL }}/">
+        {{ $button_two_label }} &nbsp;
+        <i class="fas fa-arrow-right small"></i>
+      </a>
+    {{ end }}
+
+
+    <div class="features mt-1 text-start">
+      {{ $content | markdownify }}
+    </div>
+  </div>
+</div>

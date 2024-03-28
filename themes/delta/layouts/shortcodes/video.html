@@ -1,0 +1,29 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $background_image := .Get "background_image" }}
+{{ $video_url := .Get "video_url" }}
+
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+
+<div
+  class="section video-section-shortcode not-content {{ if not $padding_top }}
+    pt-0
+  {{ end }}
+  {{ if not $padding_bottom }}pb-0{{ end }}">
+  <div class="container">
+    <div class="video-wrapper overlay">
+      {{ partial "image.html" (dict "Src" $background_image "Size" "x1000" "Class" "w-full" "Webp" false ) }}
+      <button
+        class="btn btn-play p-0"
+        type="button"
+        data-bs-toggle="modal"
+        data-src="{{ $video_url | safeURL }}"
+        data-bs-target="#videoModal"
+        aria-label="watch video">
+        <i class="fas fa-play me-0"></i>
+      </button>
+    </div>
+  </div>
+</div>

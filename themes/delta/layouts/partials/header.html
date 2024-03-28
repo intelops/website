@@ -1,10 +1,18 @@
 {{ $perma := (split .RelPermalink "/") }}
 {{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
+{{ $is_header_hidden := .Params.hide_header }}
 
 <!-- navigation -->
 {{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") (eq .Section "services") }}
+
+{{ if not .Params.hide_main_header }}
 <header
-  class="navigation light-bar {{ if $headerWhite }}navigation-alt{{ end }}"
+  class="navigation {{ if not .Params.header_background }}
+    light-bar
+  {{ end }} {{ if $headerWhite }}navigation-alt{{ end }}"
+  {{ with .Params.header_background }}
+    style="background-color: {{ . }};"
+  {{ end }}
   id="main-header">
   <div class="container container-delta">
     <!-- navbar -->
@@ -17,7 +25,7 @@
         {{ partial "logo.html" }}
       </a>
 
-      {{ if not $is_upcoming_single }}
+      {{ if not (or $is_upcoming_single $is_header_hidden) }}
         <div class="navbar-actions d-inline-flex align-items-center">
           <!-- Language List -->
           {{ if .IsTranslated }}
@@ -239,6 +247,7 @@
   </div>
 </header>
 <!-- /navigation -->
+{{ end }}
 
 {{ if site.Params.fullSiteSearch }}
   <div

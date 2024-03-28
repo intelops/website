@@ -1,0 +1,57 @@
+{{ $image := .Get "image" }}
+{{ $image_bg_color := .Get "image_bg_color" }}
+{{ $image_width := .Get "image_width" }}
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+
+<section class="section">
+  <div class="container container-delta">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          {{ if $subtitle }}
+            <p
+              class="subtitle"
+              {{ with $subtitle_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $subtitle | markdownify }}
+            </p>
+          {{ end }}
+          {{ if $title }}
+            <h2
+              class="title"
+              {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+              {{ $title | markdownify }}
+            </h2>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="row align-items-center">
+      {{ with $image }}
+        <div class="col-lg-5 d-none d-lg-block">
+          <div
+            class="{{ if $image_bg_color }}
+              px-3 py-2 rounded-lg
+            {{ end }}"
+            style="{{ with $image_bg_color }}
+              background-color: {{ . }};
+            {{ end }}padding: 10px;">
+            {{ partial "image.html" (dict "Src" . "Size" $image_width "Webp" false "Class" "img-fluid mx-auto d-block p-3" ) }}
+          </div>
+        </div>
+      {{ end }}
+      <div class="col-lg-7">
+        <div class="testimonials-carousel has-border swiper-container pb-4">
+          <div class="swiper-wrapper">
+            {{ .Inner }}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

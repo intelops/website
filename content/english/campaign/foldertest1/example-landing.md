@@ -1,23 +1,16 @@
 ---
 date: "2024-01-24"
-title: "Compliance-Secure Innovation: Agnostic Framework For Business Value"
+title: "Inline Form Video"
 image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
-description: 
+description:
 weight: 02
 
+hide_header: true
+hide_footer: true
+hide_call_to_action: true
+
 draft: false
-
-# # set it to true to enable popup form for registration
-# show_popup_form: true # You can test this form locally, but please note that submissions will not be sent to Netlify.
-
-# # Typically, once a user submits a form, it won't be displayed again when they revisit the page, unless they open it in a new tab or window. If you need to show the form again for testing purposes, you can set this option to true. This is particularly useful during local testing when you need to submit the form multiple times for testing purposes.
-# popup_form_testing_mode: false
-
-# # "video" | "content" | "redirect" # default is "content" (if you want to show a video after the form is submitted, set this to "video" and provide video url in the popup_form_video_url field. If you want to redirect to a different url, set this to "redirect" and provide a redirect url in the popup_form_redirect_url field)
-# popup_form_success_action: "content" 
-# popup_form_video_url: "https://www.youtube.com/embed/a3ICNMQW7Ok" # you can use youtube's embed url
-# popup_form_redirect_url: "https://example.com/" # e.g. "/thank-you"
 
 # add appropriate aliases value to support old url redirection to new url
 aliases:  

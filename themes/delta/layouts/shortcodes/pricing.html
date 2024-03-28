@@ -1,0 +1,42 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+
+<section
+  class="section not-content {{ if not $padding_top }}
+    pt-0
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
+  <div class="container container-delta">
+    <div class="row gy-3 align-items-center mb-5">
+      <div class="col-xl-6 col-lg-8 text-center mx-auto">
+        <div class="section-title mb-0">
+          {{ if $subtitle }}
+            <p
+              class="subtitle"
+              {{ with $subtitle_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $subtitle | markdownify }}
+            </p>
+          {{ end }}
+          {{ if $title }}
+            <h2
+              class="title"
+              {{ with $title_color }}
+                style="color: {{ . }}!important"
+              {{ end }}>
+              {{ $title | markdownify }}
+            </h2>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="row gy-3">
+      {{ .Inner }}
+    </div>
+  </div>
+</section>

@@ -40,21 +40,21 @@ AUTHOR WEBSITE: https://gethugothemes.com
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "script.html" . }}
-      {{ if eq .Section "events" }}
-        <!-- end of videoModal -->
+      {{ if or (eq .Section "events") (eq .Section "campaign") }}
         {{ partial "footer-events.html" . }}
       {{ else }}
         {{ partialCached "footer.html" . }}
       {{ end }}
     {{ else }}
       {{ partial "script.html" . }}
-      {{ if eq .Section "events" }}
+      {{ if or (eq .Section "events") (eq .Section "campaign") }}
         {{ partial "footer-events.html" . }}
       {{ else }}
         {{ partial "footer.html" . }}
       {{ end }}
     {{ end }}
 
+    {{/* Tawk.to */}}
     {{ if not .Params.hide_tawk }}
       {{ partial "tawk.html" }}
     {{ end }}

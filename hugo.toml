@@ -93,6 +93,7 @@ link = "plugins/swiper/swiper-bundle.min.css"
 link = "plugins/tab/tab.css"
 [[params.plugins.css]]
 link = "plugins/search/auto-complete.css"
+
 [[params.plugins.js]]
 link = "plugins/jquery/jquery.min.js"
 [[params.plugins.js]]

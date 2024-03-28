@@ -6,6 +6,9 @@ event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
 draft: true
 weight: 15
 
+# set it to true to enable shop popup form for registration
+show_popup_form: false
+
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
 
 bannerarea: false

@@ -2,11 +2,14 @@
 date: "2021-07-14"
 title: "Example 01 - This is just example template page"
 image: "/images/events-webinars/event-2.webp" # use 800x550 or 16:11 ratio image
+
+# set it to true to enable shop popup form for registration
+show_popup_form: false
+
 event_date_location: "MAR 7, 2024 10AM PACIFIC | 1PM EASTERN"
 draft: true
 weight: 1
 
-hide_clickup_form: true
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
 show_tableofcontent: true # hide post meta like last update & publish data, estimated reading time etc.
 
@@ -199,4 +202,4 @@ out of the box.
 This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site.
 
 
-This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site.
+This is the start of dummy description text. You can change it whenbasever you want. It is used to test the responsiveness of the site. It is not used in the actual site. This is the start of dummy description text. You can change it whenever you want. It is used to test the responsiveness of the site. It is not used in the actual site.
