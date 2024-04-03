@@ -522,7 +522,7 @@ form label {
 }
 
 // content style
-.content > *:not(*.not-content) {
+.content {
   color: #777;
 
   p {
@@ -1002,28 +1002,4 @@ form label {
       color: $color-primary;
     }
   }
-}
-
-
-// copy to clipboard
-.highlight {
-  position: relative;
-
-  .copy-to-clipboard {
-    background: $color-primary;
-    color: $white;
-    cursor: pointer;
-    padding: 4px 5px;
-    line-height: 1;
-    font-size: 12px;
-    font-weight: 500;
-    border-radius: 4px;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-}
-
-:not(pre)>code+span.copy-to-clipboard {
-  display: none;
 }
