@@ -191,7 +191,7 @@ Generate build & release <br> artifacts as per the industry’s secure standards
  {{</ testimonial-item >}}
 
  {{< testimonial-item
-   name=`Build Secure,Portable Containers`
+   name=`Build Secure, Portable Containers`
    designation=``
    rating=``
    hide_quote=true >}}
@@ -210,7 +210,7 @@ Auto-generate code for backend workloads like REST APIs and gRPC, along with end
  {{</ testimonial-item >}}
 
  {{< testimonial-item
-   name=`Modernize Legacy applications`
+   name=`Modernize Legacy Applications`
    designation=``
    rating=``
    hide_quote=true >}}
