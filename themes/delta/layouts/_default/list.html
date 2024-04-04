@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "header.html" . }}
+{{ partial "essentials/header.html" . }}
 
 {{$banner_bg := resources.Get (`/images/blog/banner-bg.svg`) }}
 <div class="blog-banner text-center" style="background-image:url({{$banner_bg.RelPermalink}})">

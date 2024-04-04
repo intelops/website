@@ -4,11 +4,17 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-md navbar-light" id="main-navbar">
       <!-- navbar brand/logo -->
-      <a class="navbar-brand d-none py-0" href="{{ site.BaseURL | relLangURL }}" title="{{site.Title}}">
+      <a
+        class="navbar-brand d-none py-0"
+        href="{{ site.BaseURL | relLangURL }}"
+        title="{{ site.Title }}">
         {{ partial "logo.html" }}
       </a>
 
-      <span class="navbar-brand" style="line-height:0;" title="{{.Params.navigation.logo_text}}">
+      <span
+        class="navbar-brand"
+        style="line-height:0;"
+        title="{{ .Params.navigation.logo_text }}">
         {{ $logoPath:= .Params.navigation.logo }}
         {{ $logoWebp:= false }}
         {{ $logoDarkPath:= .Params.navigation.logo_dark }}
@@ -182,97 +188,157 @@
           <!-- / checking logo path -->
         {{ end }}
       </span>
-      <span class="{{if not .Params.navigation.logo_text_color}}text-white{{end}}me-auto fw-bold" {{with .Params.navigation.logo_text_color}}style="color:{{.}}"{{end}}>{{$logoText}}</span>
+      <span
+        class="{{ if not .Params.navigation.logo_text_color }}
+          text-white
+        {{ end }}
+        me-auto fw-bold"
+        {{ with .Params.navigation.logo_text_color }}
+          style="color:{{ . }}"
+        {{ end }}
+        >
+        {{ $logoText }}
+      </span>
 
       <div class="navbar-actions d-inline-flex align-items-center">
         <!-- Language List -->
         {{ if .IsTranslated }}
-        <select class="border-0 d-inline d-xl-none" onchange="location = this.value;">
-          {{ $siteLanguages := site.Languages}}
-          {{ $pageLang := .Page.Lang}}
-          {{ range .Page.AllTranslations }}
-          {{ $translation := .}}
-          {{ range $siteLanguages }}
-          {{ if eq $translation.Lang .Lang }}
-          {{ $selected := false }}
-          {{ if eq $pageLang .Lang}}
-          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
-          </option>
-          {{ else }}
-          <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
-          {{ end }}
-          {{ end }}
-          {{ end }}
-          {{ end }}
-        </select>
+          <select
+            class="border-0 d-inline d-xl-none"
+            onchange="location = this.value;">
+            {{ $siteLanguages := site.Languages }}
+            {{ $pageLang := .Page.Lang }}
+            {{ range .Page.AllTranslations }}
+              {{ $translation := . }}
+              {{ range $siteLanguages }}
+                {{ if eq $translation.Lang .Lang }}
+                  {{ $selected := false }}
+                  {{ if eq $pageLang .Lang }}
+                    <option
+                      id="{{ $translation.Language }}"
+                      value="{{ $translation.RelPermalink }}"
+                      selected>
+                      {{ .LanguageName }}
+                    </option>
+                  {{ else }}
+                    <option
+                      id="{{ $translation.Language }}"
+                      value="{{ $translation.RelPermalink }}">
+                      {{ .LanguageName }}
+                    </option>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          </select>
         {{ end }}
 
-        <button aria-label="navbar toggler" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+
+        <button
+          aria-label="navbar toggler"
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
           data-bs-target="#navigation-alt">
           <i class="d-inline fas fa-bars"></i>
           <i class="d-none far fa-times"></i>
         </button>
       </div>
-      {{ $section := .Section | urlize}}
+      {{ $section := .Section | urlize }}
+
 
       <div class="collapse navbar-collapse text-center" id="navigation-alt">
         <ul class="navbar-nav mx-auto align-items-center pt-0">
-
           {{ range .Params.navigation.menu }}
-          <li class="nav-item">
-            {{ if eq .type "modal" }}
-            <button class="nav-link nav-menu-text small p-0 border-0 bg-transparent" type="button" data-bs-toggle="modal" data-bs-target="{{.url}}">
-              {{.name}}
-            </button>
-            {{ else }}
-            <a class="nav-link nav-menu-text small" id="nav-menu" {{if findRE `^http` .url}}target="_blank" rel="noopener" {{end}}
-              href="{{if findRE `^#` .url}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{.url}}{{else if eq .url (`/` | relURL) }}{{.url}}{{else}}{{.url | relLangURL}}{{end}}">{{ .name }}</a>
-            {{ end }}
-          </li>
+            <li class="nav-item">
+              {{ if eq .type "modal" }}
+                <button
+                  class="nav-link nav-menu-text small p-0 border-0 bg-transparent"
+                  type="button"
+                  data-bs-toggle="modal"
+                  data-bs-target="{{ .url }}">
+                  {{ .name }}
+                </button>
+              {{ else }}
+                <a
+                  class="nav-link nav-menu-text small"
+                  id="nav-menu"
+                  {{ if findRE `^http` .url }}
+                    target="_blank" rel="noopener"
+                  {{ end }}
+                  href="{{ if findRE `^#` .url }}
+                    {{ if not $.IsHome }}
+                      {{ site.BaseURL | relLangURL }}
+                    {{ end }}{{ .url }}
+                  {{ else if eq .url (`/` | relURL) }}
+                    {{ .url }}
+                  {{ else }}
+                    {{ .url | relLangURL }}
+                  {{ end }}">
+                  {{ .name }}
+                </a>
+              {{ end }}
+            </li>
           {{ end }}
+
 
           <li class="nav-item d-none d-xl-block">
             <!-- Language List -->
             {{ if .IsTranslated }}
-            <select class="border-0" id="select-language" onchange="location = this.value;">
-              {{ $siteLanguages := site.Languages}}
-              {{ $pageLang := .Page.Lang}}
-              {{ range .Page.AllTranslations }}
-              {{ $translation := .}}
-              {{ range $siteLanguages }}
-              {{ if eq $translation.Lang .Lang }}
-              {{ $selected := false }}
-              {{ if eq $pageLang .Lang}}
-              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}" selected>{{ .LanguageName }}
-              </option>
-              {{ else }}
-              <option id="{{ $translation.Language }}" value="{{ $translation.RelPermalink }}">{{ .LanguageName }}</option>
-              {{ end }}
-              {{ end }}
-              {{ end }}
-              {{ end }}
-            </select>
+              <select
+                class="border-0"
+                id="select-language"
+                onchange="location = this.value;">
+                {{ $siteLanguages := site.Languages }}
+                {{ $pageLang := .Page.Lang }}
+                {{ range .Page.AllTranslations }}
+                  {{ $translation := . }}
+                  {{ range $siteLanguages }}
+                    {{ if eq $translation.Lang .Lang }}
+                      {{ $selected := false }}
+                      {{ if eq $pageLang .Lang }}
+                        <option
+                          id="{{ $translation.Language }}"
+                          value="{{ $translation.RelPermalink }}"
+                          selected>
+                          {{ .LanguageName }}
+                        </option>
+                      {{ else }}
+                        <option
+                          id="{{ $translation.Language }}"
+                          value="{{ $translation.RelPermalink }}">
+                          {{ .LanguageName }}
+                        </option>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              </select>
             {{ end }}
           </li>
         </ul>
 
         <div class="navbar-right header-button" id="main-button">
           {{ with .Params.navigation.navigation_button }}
-          {{ if .enable }}
-          <!-- login btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-sm btn-link px-0 me-2">
-            {{with .icon}}<i class="icon {{.}} me-1"></i>{{end}} {{ .label }}
-          </a>
-          {{ end }}
+            {{ if .enable }}
+              <!-- login btn -->
+              <a
+                href="{{ .link | relLangURL }}"
+                class="btn btn-sm btn-link px-0 me-2">
+                {{ with .icon }}<i class="icon {{ . }} me-1"></i>{{ end }}
+                {{ .label }}
+              </a>
+            {{ end }}
           {{ end }}
 
           {{ with .Params.navigation.navigation_button_two }}
-          {{ if .enable }}
-          <!-- signup btn -->
-          <a href="{{ .link | relLangURL }}" class="btn btn-sm btn-primary">
-            {{ .label }} {{with .icon}}<i class="icon {{.}}"></i>{{end}}
-          </a>
-          {{ end }}
+            {{ if .enable }}
+              <!-- signup btn -->
+              <a href="{{ .link | relLangURL }}" class="btn btn-sm btn-primary">
+                {{ .label }}
+                {{ with .icon }}<i class="icon {{ . }}"></i>{{ end }}
+              </a>
+            {{ end }}
           {{ end }}
         </div>
       </div>

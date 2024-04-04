@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "page-header.html" . }}
+{{ partial "components/page-header.html" . }}
 
 <section class="section pb-0" data-aos="fade-in">
   <div class="container container-delta">
@@ -31,7 +31,7 @@
             </span>
 
             {{ if $signup_block_logo }}
-            <div class="mt-auto mb-2">{{ partial "footer-logo.html" . }}</div>
+            <div class="mt-auto mb-2">{{ partial "components/footer-logo.html" . }}</div>
             {{ end }}
           </div>
         </article>

@@ -42,7 +42,7 @@ subtitle=`We Are Delta`
 subtitle_color=`yellow`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
-button_label=`Get Started Now` 
+button_label=`Get Started Now`
 button_link=`https://github.com/`
 video_button_label=`Watch Demo`
 video_button_link=`https://www.youtube.com/embed/dyZcRRWiuuw`
@@ -110,7 +110,7 @@ right_shape_color=`#99beff` >}}
       description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
 {{< /features >}}
 
-{{< video
+{{< video-section
  video_url=`https://www.youtube.com/embed/dyZcRRWiuuw`
  background_image=`/images/banner-home.png`
  has_padding_top=true

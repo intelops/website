@@ -1,9 +1,9 @@
-#################### default parameters ################################
-# favicon
+################################ default parameters ################################
+# favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
 favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
-# logo
-logo = "images/logos/new-full-logo-light.svg" #This is the main logo displayed on the header bar
+# logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
+logo = "images/logos/new-full-logo-light.svg"  #This is the main logo displayed on the header bar
 logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
 logo_dark = "images/logos/logo-light.svg"
 footer_logo_dark = false
@@ -16,27 +16,37 @@ logo_text = "Intelops"
 logo_width = "130px"
 # Main Sections
 mainSections = ["blog"]
-
+# Contact Form Action
+career_form_action = "#!"
+contact_form_action = "#!"
 # google tag manager, see https://developers.google.com/tag-manager/
 google_tag_manager = "GTM-PVRN5BQ" # example: G-XXXXXXXXXX
-google_adsense = ""     # example: ca-pub-xxxxxxxxxxxxxxxx
+google_adsense = ""                # example: ca-pub-xxxxxxxxxxxxxxxx
+# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
+custom_script = ""
+# full website search
+fullSiteSearch = true
+
 
 mobile = "+211234565523"
 email = "info@email.com"
 description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
 
 
-fullSiteSearch = true
-# custom script on header, example: custom_script= "<script>console.log(\"Hello World\")</script>"
-custom_script = ""
-
-# Contact Form Action
-career_form_action = "#!"
-contact_form_action = "#!"
-
 # seo meta data for OpenGraph / Twitter Card
+# seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
-keywords = ["Intelops", "Cloud-Native", "Ai", "DevOps", "SRE", "Kubernetes", "Talent", "Democratize", "Next-Gen"]
+keywords = [
+  "Intelops",
+  "Cloud-Native",
+  "Ai",
+  "DevOps",
+  "SRE",
+  "Kubernetes",
+  "Talent",
+  "Democratize",
+  "Next-Gen",
+]
 description = "Democratizing Cloud Native. Making Imagination a Reality."
 author = "Intelops"
 image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
@@ -50,7 +60,7 @@ footer_light = false
 bg_image_overlay_color = "rgba(0,0,0,.65)"
 
 
-# Call To Action
+# call to action
 [call_to_action]
 enable = true
 title = "Looking for Cloud-Native Implementation?"
@@ -60,7 +70,20 @@ button_label = "Contact Us"
 button_link = "contact/"
 
 
-# Call To Action
+# navigation buttons
+[navigation_button]
+enable = false       #enable or disable login button on Header menu bar.
+icon = "far fa-user"
+label = "Log In"
+link = "#!"
+
+[navigation_button_two]
+enable = false        #enable or disable sign up button on Header menu bar.
+label = "Sign Up Now"
+link = "#!"
+
+
+# cookies module: https://github.com/gethugothemes/hugo-modules/tree/master/components/cookie-consent
 [cookies]
 button = "I Accept"
 content = "This site uses cookies. By continuing to use this website, you agree to their use."
@@ -68,22 +91,13 @@ enable = false
 expire_days = 2
 
 
-[navigation_button]
-enable = false #enable or disable login button on Header menu bar.
-icon = "far fa-user"
-label = "Log In"
-link = "#!"
-
-[navigation_button_two]
-enable = false #enable or disable sign up button on Header menu bar.
-label = "Sign Up Now"
-link = "#!"
-
-
+# preloader module: https://github.com/gethugothemes/hugo-modules/tree/master/components/preloader
 [preloader]
 enable = false
 preloader = "images/loader.png"
 
+
+################################ clickup forms ################################
 [clickup_form]
 enable = true
 
@@ -117,6 +131,7 @@ enable = true
 clickup_iframe_url = "https://forms.clickup.com/9006002197/f/8cctc0n-14192/3Z4SGR3MGQ478WZBOH"
 
 
+################################ Socials ################################
 # [[social]]
 # icon = "fab fa-facebook"
 # link = "#!"

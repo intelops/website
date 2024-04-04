@@ -1,6 +1,6 @@
 {{ define "main-sm" }}
 
-{{ partial "header.html" . }}
+{{ partial "essentials/header.html" . }}
 
 <!-- checking blog -->
 {{ if or (eq .Section "post") (eq .Params.page_layout "default") (eq .Section "posts") (eq .Section "blog") (eq .Section "blogs") (eq .Section "news") (eq .Section "categories") (eq .Section "tags") }}
@@ -70,7 +70,7 @@ style="background-image: url({{$img.RelPermalink}});
         {{ $image_width := replace .Params.cover_image_width "px" "" }}
         {{ $size := add (add $image_width "x") $image_height }}
         <div class="mb-4 {{with .Params.linkspage}}links-page-image{{end}}">
-          {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+          {{ partial "components/post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
         </div>
         {{ end }}
 
@@ -151,7 +151,7 @@ style="background-image: url({{$img.RelPermalink}});
 {{ partial "mermaid-script" . }}
 
 {{ if or site.Params.blog_popup.enable (not .Params.hide_popup_form) }}
-{{ partial "popup-form" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}
+{{ partial "components/popup-form.html" (dict "Class" "blog-popup" "Src" site.Params.blog_popup.clickup_iframe_url) }}
 {{ end }}
       
 {{ $related := (where site.RegularPages "Section" "in" site.Params.mainSections) | intersect (where site.RegularPages ".Title" "!=" .Title) | union (site.RegularPages.Related . ) }}

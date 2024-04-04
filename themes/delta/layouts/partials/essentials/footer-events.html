@@ -97,9 +97,9 @@
             href="{{ site.BaseURL | relLangURL }}"
             title="{{ site.Title }}">
             {{ if or $footer_light (eq site.Params.footer_logo_dark true) }}
-              {{ partial "footer-logo-dark.html" . }}
+              {{ partial "components/footer-logo-dark.html" . }}
             {{ else }}
-              {{ partial "footer-logo.html" . }}
+              {{ partial "components/footer-logo.html" . }}
             {{ end }}
           </a>
         </div>
@@ -330,5 +330,5 @@
 
 {{/* Netlify Form */}}
 {{ if eq .Params.show_popup_form true }}
-  {{ partial "events-popup-form.html" (dict "Context" .) }}
+  {{ partial "components/popup-form.html" (dict "Context" .) }}
 {{ end }}

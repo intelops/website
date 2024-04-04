@@ -1,6 +1,6 @@
 {{ define "main-sm" }}
 
-{{ partial "header.html" . }}
+{{ partial "essentials/header.html" . }}
 
 <!-- strat of case-studies-details -->
 <section class="section-sm">
@@ -41,7 +41,7 @@
         {{ $image_width := replace .Params.cover_image_width "px" "" }}
         {{ $size := add (add $image_width "x") $image_height }}
         <div class="mb-4">
-          {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+          {{ partial "components/post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
         </div>
         {{ end }}
 

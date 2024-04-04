@@ -1,24 +1,41 @@
 <section>
   <nav class="navbar navbar-expand-lg navbar-light light-bar">
     <div class="container container-delta">
-    <div class="container-fluid">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="/blog/">All</a></li>
-          {{ range .Site.Taxonomies.categories }}
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
-          {{ end }}
-      </ul>
-        {{/*  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="/blog/">All</a>
+            </li>
+            {{ range .Site.Taxonomies.categories }}
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="{{ .Page.RelPermalink }}">
+                  {{ .Page.Title }}
+                </a>
+              </li>
+            {{ end }}
+          </ul>
+          {{/* <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Technology</a>
-          </li>
-        </ul>  */}}
+            </li>
+            </ul>
+          */}}
+        </div>
       </div>
     </div>
-  </div>
   </nav>
 </section>

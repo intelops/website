@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ partial "header.html" . }}
+{{ partial "essentials/header.html" . }}
 {{if .Params.enable}}
 {{with .Params.bannerimage }}
 {{$img:= resources.Get . }}

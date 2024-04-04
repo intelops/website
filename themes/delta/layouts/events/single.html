@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
+  {{ partial "essentials/header.html" . }}
   
   <!-- checking event -->
   {{ if .Params.bannerarea }}
@@ -61,7 +61,7 @@
               class="mb-4 {{ with .Params.linkspage }}
                 links-page-image
               {{ end }}">
-              {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+              {{ partial "components/post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
             </div>
           {{ end }}
 

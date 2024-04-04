@@ -1,13 +1,13 @@
 {{ define "main" }}
 
-{{ partial "page-header.html" . }}
+{{ partial "components/page-header.html" . }}
 
 {{ if eq .RelPermalink "/learning-center/"}}
 <section class="section pb-0">
   <div class="container container-delta">
     <div class="row mb-5">
       <div class="col-lg-7 mx-auto mb-0 mb-md-5">
-        {{ partial "lc-search.html" . }}
+        {{ partial "components/lc-search.html" . }}
       </div>
     </div>
     <div class="row">
