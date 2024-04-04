@@ -1,10 +1,13 @@
 // Color Variables
 {{ with site.Params.variables }}
+$color-primary: {{.color_primary | default "#4262FF"}};
 $color-secondary: {{.color_secondary | default "#FFD02F"}};
 $color-tertiary: {{.color_tertiary | default "#ED6F78"}};
 $color-quaternary: {{.color_quaternary | default "#6E9240"}};
+$text-color: {{.text_color | default "#777"}};
 $text-dark: {{.text_dark | default "#222"}};
 $text-light: {{.text_light | default "#999"}};
+$body-color: {{.body_color | default "#fff"}};
 $border-color: {{.border_color | default "#ECECEC"}};
 $dark: {{.dark | default "#050038"}};
 $black: {{.black | default "#000"}};
@@ -20,21 +23,6 @@ $banner-desc: {{.banner_desc | default "#acacac"}};
 $banner-subtitle: {{.banner_subtitle | default "#f7bf2c"}};
 $navbar-mobile-bg: {{.navbar_mobile_bg | default "#4b4b4b"}};
 $header-bar-bg: {{.header_bar_bg | default "#eaeaea"}};
-
-// Dark Mode Colors
-$color-primary: {{.color_primary | default "#F88136"}};
-
-$dark-200: {{.dark_200 | default "#353741"}};
-$dark-300: {{.dark_300 | default "#2F323C"}};
-$dark-600: {{.dark_600 | default "#1D1F26"}};
-$dark-800: {{.dark_800 | default "#292C34"}};
-$dark-900: {{.dark_900 | default "#0F0F0F"}};
-
-$text-color: {{.text_color | default "#A4B0CA"}};
-$text-color-subtle: {{.text_color_subtle | default "#8490AA"}};
-$border-color: {{.border_color | default "#424653"}};
-
-$body-color: {{.body_color | default "#0F0F0F"}};
 
 // Font Variables
 $font-size: {{.font_size | default "16px"}};
@@ -63,5 +51,3 @@ $font-icon: '{{.font_icon | default "Font Awesome 5 Free"}}';
 @import 'shortcodes.scss';
 
 @import 'custom.scss';
-
-@import 'search';

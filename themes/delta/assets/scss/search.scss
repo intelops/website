@@ -6,19 +6,10 @@
     margin-top: 80px;
   }
 }
-.modal-header {
-  background-color: $dark-200;
-}
 .search-modal {
-  .search-form-control,
-  .input-group span {
-    background-color: $dark-200 !important;
-    color: $text-color !important;
-  }
-
   .input-group-text,
   .search-form-control {
-    border: 2px solid $border-color;
+    border: 2px solid rgba($color-primary, 0.5);
   }
   .search-form-control {
     padding-right: 15px;
@@ -27,8 +18,8 @@
     max-height: calc(100vh - 350px);
     padding: 1rem;
     overflow-y: auto;
-    background-color: $dark-800;
-    box-shadow: inset 0px 2px 18px $dark-600;
+    background-color: #f5f6f7;
+    box-shadow: inset 0px 2px 18px #ddd;
     border-bottom-left-radius: calc(0.3rem - 1px);
     border-bottom-right-radius: calc(0.3rem - 1px);
 
@@ -66,8 +57,8 @@
     display: block;
     padding: 0.65rem 1rem;
     border-radius: 4px;
-    border: 1px solid $border-color;
-    background-color: $dark-200;
+    border: 1px solid #eee;
+    background-color: #fff;
     transition: 0.1s;
     p {
       overflow: hidden;
@@ -78,9 +69,7 @@
         background-color: transparent;
       }
       mark {
-        color: $text-color;
-        background-color: $dark-900;
-        padding: 5px;
+        color: $color-primary;
       }
       &:empty {
         display: none;
@@ -88,12 +77,12 @@
     }
     &:focus,
     &:hover {
-      background-color: $dark-600;
+      background-color: $color-primary;
       * {
-        color: $text-color !important;
+        color: white !important;
       }
       mark {
-        color: $text-color !important;
+        color: $dark !important;
       }
     }
   }

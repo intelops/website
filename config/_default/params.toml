@@ -3,9 +3,9 @@
 favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
 # logo
-logo = "images/logos/new-full-logo-light.svg" #This is the main logo displayed on the header bar
+logo = "images/logos/new-logo-dark.svg" #This is the main logo displayed on the header bar
 logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
-logo_dark = "images/logos/logo-light.svg"
+logo_dark = "images/logos/new-logo-dark.svg"
 footer_logo_dark = false
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = false

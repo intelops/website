@@ -134,7 +134,12 @@ banner_primary = "#091922" # prviously original = 121826
 banner_secondary = "#FF5100"
 banner_subtitle = "#FF5100"
 banner_title = "#fff"
+black = "#000"
+body_color = "#fff"
+border_color = "#ACB9C4"
+color_primary = "#F16F33"
 color_quaternary = "#6E9240"
+color_secondary = "#FFD02F"
 color_tertiary = "#ED6F78"
 dark = "#091922" # previous original = 050038
 font_primary = "Catamaran:wght@700;900"
@@ -148,23 +153,8 @@ icon_font = "Font Awesome 5 Free"
 light = "#fdfdfd"
 nav_menu_text = "#464b4b"
 navbar_mobile_bg = "#eaeaea00"
+text_color = "#555"
 text_dark = "#222222"
 text_light = "#959595"
 white = "#fff"
 secblack = "#121826"
-
-# Dark Mode Colors
-color_primary = "#F88136"
-
-black = "#000"
-
-dark_200 = "#353741"
-dark_300 = "#2F323C"
-dark_600 = "#1D1F26"
-dark_800 = "#292C34"
-dark_900 = "#0F0F0F"
-
-text_color = "#A4B0CA"
-text_color_subtle = "#8490AA"
-border_color = "#424653"
-body_color = "#0F0F0F"

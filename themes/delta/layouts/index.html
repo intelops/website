@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{ partial "header.html" . }}
 
-<section class="banner banner-1 wave-block rounded-lg">
+<section class="banner banner-1 bg-primary-soft wave-block rounded-lg">
 
   {{with .Params.banner}}
   <div class="container container-delta pt-5">
@@ -9,7 +9,7 @@
       <div class="col-12 text-center">
         <div class="block">
           <p class="subtitle" {{with .subtitle_color}}style="color:{{.}} !important"{{end}}>{{.subtitle | markdownify}}</p>
-          <h1 class="title text-primary text-xl mb-3 banner-title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h1>
+          <h1 class="title text-xl mb-3 banner-title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h1>
           <p class="mb-4" {{with .description_color}}style="color:{{.}} !important"{{end}}>{{.description | markdownify}}</p>
 
           {{ with .join_waitlist }}
@@ -130,7 +130,7 @@
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
           <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
           <div class="text-end mt-2">
-            <a href="{{.link | absURL}}" class="btn btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
           </div>
         </div>
         {{end}}
@@ -147,7 +147,7 @@
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
           <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
           <div class="text-end mt-2">
-            <a href="{{.link | absURL}}" class="btn btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
           </div>
         </div>
         {{end}}
@@ -164,7 +164,7 @@
           <h3 class="title h4" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h3>
           <p class="mb-0" {{with .content_color}}style="color:{{.}} !important"{{end}}>{{.content}}</p>
           <div class="text-end mt-2">
-            <a href="{{.link | absURL}}" class="btn btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
+            <a href="{{.link | absURL}}" class="btn btn-secondary btn-sm">{{.link_label | markdownify}}<i class="fas fa-arrow-right ms-1 small"></i></a>
           </div>
         </div>
         {{end}}
@@ -218,7 +218,7 @@
 
 {{with .Params.slider_and_content_block}}
 {{if .enable}}
-<section class="section wrap-block bg-dark-600 rounded-lg wave-block">
+<section class="section wrap-block bg-soft rounded-lg wave-block">
   <div class="container container-delta">
     <div class="row align-items-center">
       <div class="col-lg-6 order-1 {{with .content_position}}{{if eq . `right`}}order-lg-1{{else if eq . `left`}}order-lg-0{{else}}order-lg-0{{end}}{{end}}">
@@ -300,7 +300,7 @@
 
 {{with .Params.blog}}
 {{if .enable}}
-<section class="section wrap-block bg-dark-600 rounded-lg wave-block">
+<section class="section wrap-block bg-soft rounded-lg wave-block">
   <div class="container container-delta">
     <div class="row">
       <div class="col-12 text-center">

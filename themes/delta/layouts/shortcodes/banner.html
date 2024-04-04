@@ -27,11 +27,13 @@
 
 
 <div
-  class="section {{ if not $padding_top }}
+  class="section not-content {{ if not $padding_top }}
     pt-0
   {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
   <section
-    class="banner mx-sm-2 mt-sm-2 pt-lg-2 banner-shortcode banner-2 rounded-lg wave-block overflow-hidden"
+    class="banner mx-sm-2 mt-sm-2 pt-lg-2 banner-shortcode banner-2 {{ if not $banner_bg_color }}
+      bg-primary-soft
+    {{ end }} rounded-lg wave-block overflow-hidden"
     {{ if $banner_bg_color }}
       style="background-color: {{ $banner_bg_color }}!important"
     {{ end }}>
