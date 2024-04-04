@@ -57,8 +57,6 @@
           <button
             class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent {{ if $footer_light }}
               text-dark
-            {{ else }}
-              text-white
             {{ end }}"
             data-bs-toggle="modal"
             data-bs-target="#searchModal">
@@ -103,8 +101,6 @@
             <h4
               class="footer-menu-title {{ if $footer_light }}
                 text-dark
-              {{ else }}
-                text-white
               {{ end }}">
               {{ i18n `footer_menu_1_title` }}
             </h4>
@@ -120,8 +116,6 @@
             <h4
               class="footer-menu-title {{ if $footer_light }}
                 text-dark
-              {{ else }}
-                text-white
               {{ end }}">
               {{ i18n `footer_menu_2_title` }}
             </h4>
@@ -137,8 +131,6 @@
             <h4
               class="footer-menu-title {{ if $footer_light }}
                 text-dark
-              {{ else }}
-                text-white
               {{ end }}">
               {{ i18n `footer_menu_3_title` }}
             </h4>
@@ -154,8 +146,6 @@
             <h4
               class="footer-menu-title {{ if $footer_light }}
                 text-dark
-              {{ else }}
-                text-white
               {{ end }}">
               {{ i18n `footer_menu_4_title` }}
             </h4>
@@ -171,8 +161,6 @@
             <h4
               class="footer-menu-title {{ if $footer_light }}
                 text-dark
-              {{ else }}
-                text-white
               {{ end }}">
               {{ i18n `footer_menu_5_title` }}
             </h4>
@@ -188,7 +176,7 @@
     <div class="footer-bottom">
       <div class="row">
         <div class="col-12">
-          <p class="content has-bg-dark text-center">
+          <p class="content mb-0 text-center">
             {{ site.Params.copyright | markdownify }} -
             <script>
               document.write(new Date().getFullYear());

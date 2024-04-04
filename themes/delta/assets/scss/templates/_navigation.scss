@@ -1,5 +1,6 @@
 // start header style
 .navigation {
+  background-color: $dark-600;
   transition: 0.15s ease-out;
   position: sticky;
   z-index: 333;
@@ -39,20 +40,19 @@
     }
   }
 
-  .navbar-light .navbar-toggler {
-    border-color: transparent;
-    padding: 0;
-    font-size: 29px;
-    width: 26px;
-    color: lighten($color-primary, 13.33);
+  .navbar-toggler {
     border: 0;
+    padding: 0;
+    width: 35px;
+    font-size: 20px;
+    height: 35px;
+    line-height: 35px;
+    color: $text-color;
     transition: 0.3s ease;
+    border: 1px solid $text-color !important;
 
     &:focus {
       box-shadow: none;
-    }
-    &:hover {
-      color: $color-primary;
     }
   }
 
@@ -61,7 +61,7 @@
     .nav-link {
       font-weight: 500;
       line-height: 1.4;
-      color: $nav-menu-text;
+      color: $text-color;
       padding: 15px 13px !important;
 
       @include desktop-xl {
@@ -178,7 +178,7 @@
       padding: 8px 15px;
       font-size: 15px;
       font-weight: 500;
-      color: $text-dark !important;
+      color: $text-color;
       border-radius: 6px;
       line-height: 1.4;
 
@@ -189,12 +189,12 @@
         color: $color-primary !important;
         background-color: transparent;
         @include desktop-lg {
-          background-color: $white;
+          background-color: $dark-200;
         }
       }
     }
     &.dropdown-lg {
-      text-align: left;
+      text-align: left !important;
       max-height: 300px;
       overflow-y: auto;
       small {
@@ -234,7 +234,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        background-color: $white;
+        background-color: $dark-300;
         z-index: -1;
         border-radius: 6px;
         transition: 0.15s;
@@ -290,7 +290,7 @@
       }
     }
   }
-  
+
   @include desktop-lg {
     &:not(.navigation-bottom) {
       .navbar-nav {
@@ -307,7 +307,7 @@
       .dropdown-menu {
         padding: 1px 10px;
         text-align: center;
-        background-color: lighten($color-primary, 39);
+        background-color: $dark-300;
       }
       .navbar-right {
         padding: 10px;
@@ -341,8 +341,16 @@
 
 // search
 .btn-search {
-  width: 44px;
   zoom: 0.9;
+  width: 44px;
+  color: $text-color;
+  background-color: $dark-300;
+
+  &:hover,
+  &:focus {
+    color: $color-primary;
+    box-shadow: none;
+  }
   @include desktop-lg {
     zoom: 0.8;
   }

@@ -7,16 +7,14 @@
 
 {{ if not .Params.hide_main_header }}
 <header
-  class="navigation {{ if not .Params.header_background }}
-    light-bar
-  {{ end }} {{ if $headerWhite }}navigation-alt{{ end }}"
+  class="navigation {{ if $headerWhite }}navigation-alt{{ end }}"
   {{ with .Params.header_background }}
     style="background-color: {{ . }};"
   {{ end }}
   id="main-header">
   <div class="container container-delta">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-xl navbar-light" id="main-navbar">
+    <nav class="navbar navbar-expand-xl" id="main-navbar">
       <!-- navbar brand/logo -->
       <a
         class="navbar-brand"
@@ -67,12 +65,12 @@
             data-bs-toggle="collapse"
             data-bs-target="#navigation">
             <i class="d-inline fas fa-bars"></i>
-            <i class="d-none far fa-times-circle"></i>
+            <i class="d-none fas fa-times"></i>
           </button>
 
           {{ if site.Params.fullSiteSearch }}
             <button
-              class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2"
+              class="btn btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2"
               style="width:44px"
               data-bs-toggle="modal"
               data-bs-target="#searchModal">
@@ -97,7 +95,7 @@
                     {{ if $active }}active{{ end }}
                   {{ end }}">
                   <a
-                    class="nav-link nav-menu-text dropdown-toggle"
+                    class="nav-link dropdown-toggle"
                     id="nav-menu"
                     href="#"
                     role="button"
@@ -153,7 +151,7 @@
               {{ else }}
                 <li class="nav-item {{ if $active }}active{{ end }}">
                   <a
-                    class="nav-link nav-menu-text"
+                    class="nav-link"
                     id="nav-menu"
                     {{ if findRE `^http` .URL }}
                       target="_blank" rel="noopener"
@@ -233,7 +231,7 @@
 
             {{ if site.Params.fullSiteSearch }}
               <button
-                class="btn btn-primary btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block"
+                class="btn btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block"
                 style="width:44px"
                 data-bs-toggle="modal"
                 data-bs-target="#searchModal">
@@ -261,7 +259,7 @@
         <div class="modal-header border-0" style="padding:1rem">
           <div class="input-group border-0">
             <span
-              class="input-group-text bg-transparent text-dark border-end-0"
+              class="input-group-text bg-transparent border-end-0"
               id="Search">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -277,7 +275,7 @@
             <input
               type="text"
               id="searchInput"
-              class="form-control search-form-control shadow-none text-dark border-start-0 ps-0 ms-0"
+              class="form-control search-form-control shadow-none border-start-0 ps-0 ms-0"
               placeholder="Search on this Site"
               aria-label="Search"
               aria-describedby="Search" />
@@ -389,7 +387,7 @@
           )
           .map(
             (innerItem) =>
-              `<a class="block" href="${innerItem.url}"><p class="text-dark mb-0 lh-base">${innerItem.title}</p><span></span><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`,
+              `<a class="block" href="${innerItem.url}"><p class="mb-0 lh-base">${innerItem.title}</p><span></span><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`,
           )
           .join("")}
       </div>`;
