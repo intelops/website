@@ -24,6 +24,7 @@ test.file
 config-client.toml
 config-current.toml
 .netlify
+hugo_stats.json
 
 # jetbrains files
 .idea/

@@ -36,7 +36,7 @@ main:empty {
     pointer-events: none;
 
     svg {
-      color: $white;
+      color: $dark-200;
       position: absolute;
       max-width: 100%;
 
@@ -94,6 +94,7 @@ main:empty {
 
 // homepage banner
 .banner {
+  background-color: $dark-600;
   .block {
     padding-top: 40px;
     padding-bottom: 90px;
@@ -151,7 +152,7 @@ main:empty {
 
     &::after,
     &::before {
-      background-color: $white;
+      background-color: $body-color;
       position: absolute;
       content: "";
       height: calc(50% + 50px);
@@ -174,10 +175,10 @@ main:empty {
     }
 
     &::before {
-      @extend .bg-primary-soft;
       height: 50px;
       bottom: 50%;
       z-index: -1;
+      background-color: $dark-600;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
     }
@@ -226,9 +227,9 @@ main:empty {
   margin: auto;
 
   &.features-creative {
-    position: relative;
     z-index: 1;
-    background-color: #f7f7f7;
+    position: relative;
+    background-color: $dark-600;
 
     // features rows
     .features-row {
@@ -250,7 +251,7 @@ main:empty {
 
   .features-block {
     .block {
-      background-color: $white;
+      background-color: $dark-300;
       border-radius: 15px;
       border: 2px solid transparent;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
@@ -272,6 +273,12 @@ main:empty {
       .icon {
         font-size: 50px;
         margin-bottom: 30px;
+      }
+
+      a.btn {
+        background-color: $dark-800;
+        color: inherit;
+        border-color: $dark-800;
       }
     }
 
@@ -997,6 +1004,9 @@ main:empty {
 }
 
 .blog-card {
+  .card {
+    background-color: $dark-300;
+  }
   .card-body {
     padding: 0 30px;
     padding-top: 45px;
@@ -1015,7 +1025,7 @@ main:empty {
   }
 
   .blog-title {
-    color: $text-dark;
+    color: $text-color;
 
     &:hover {
       text-decoration: underline;
@@ -1031,15 +1041,17 @@ main:empty {
 
   .card-author {
     padding-top: 20px;
-    border-top: 1px solid #dedddd;
+    border-top: 1px solid $border-color;
   }
 
   .user-info {
     font-size: 16px;
-    color: #777;
+    p {
+      color: $text-color-subtle;
+    }
 
     a {
-      color: #777;
+      color: inherit;
 
       &:hover {
         text-decoration: underline;
@@ -1620,10 +1632,14 @@ footer {
 
   .btn-search-footer {
     cursor: text;
-    border: 2px solid rgba($white, 0.4) !important;
+    border: 2px solid $border-color !important;
 
     &:hover {
-      border: 2px solid rgba($white, 1) !important;
+      border: 2px solid lighten($color: $border-color, $amount: 20%) !important;
+    }
+    i,
+    span {
+      color: $text-color;
     }
   }
 
@@ -1640,8 +1656,8 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
-    border-top: 1px solid rgba($white, 0.2);
-    border-bottom: 1px solid rgba($white, 0.2);
+    border-top: 1px solid $border-color;
+    border-bottom: 1px solid $border-color;
 
     &-title {
       font-size: 18px;
@@ -1654,7 +1670,6 @@ footer {
       }
 
       a {
-        color: #c4c4c4;
         font-weight: 400;
 
         @media screen and (min-width: 1400px) {
@@ -1671,7 +1686,7 @@ footer {
   &.bg-light {
     .btn-search-footer {
       cursor: text;
-      border: 2px solid rgba($dark, 0.4) !important;
+      border: 2px solid $border-color !important;
 
       &:hover {
         border: 2px solid rgba($dark, 1) !important;
@@ -1679,23 +1694,13 @@ footer {
     }
 
     .footer-menu {
-      border-top: 1px solid rgba($dark, 0.2);
-      border-bottom: 1px solid rgba($dark, 0.2);
-
-      ul li {
-        a {
-          color: #555;
-
-          &:hover {
-            color: $dark;
-          }
-        }
-      }
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
     }
   }
 
   .footer-bottom {
-    padding: 55px 0;
+    padding: 35px 0;
 
     @include tablet {
       padding: 30px 0;
@@ -1735,7 +1740,7 @@ footer {
     position: relative;
 
     a {
-      color: #777;
+      color: $text-color-subtle;
 
       &:hover {
         color: $color-primary;

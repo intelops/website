@@ -13,7 +13,7 @@ body {
 p,
 .paragraph {
   font-weight: 400;
-  color: $banner-desc;
+  color: $text-color;
 }
 
 strong {
@@ -26,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: $black;
+  color: $text-color;
   font-family: $font-primary;
   font-weight: 900 !important;
 
@@ -36,10 +36,10 @@ h6 {
 }
 
 .banner-title {
-  color: $banner-title;
+  color: $text-color;
 }
 .banner-desc {
-  color: $banner-desc;
+  color: $text-color;
 }
 
 .text-xl {
