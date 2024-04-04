@@ -17,4 +17,5 @@ require (
 	github.com/gethugothemes/hugo-modules/shortcodes/button v0.0.0-20240331035203-6c6ca12add7d // indirect
 	github.com/gethugothemes/hugo-modules/shortcodes/notice v0.0.0-20240331035203-6c6ca12add7d // indirect
 	github.com/gethugothemes/hugo-modules/table-of-contents v0.0.0-20240331035203-6c6ca12add7d // indirect
+	github.com/gethugothemes/hugo-modules/videos v0.0.0-20240331035203-6c6ca12add7d // indirect
 )

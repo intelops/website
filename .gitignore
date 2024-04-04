@@ -25,6 +25,8 @@ config-client.toml
 config-current.toml
 .netlify
 hugo_stats.json
+go.sum
+yarn.lock
 
 # jetbrains files
 .idea/
