@@ -1,6 +1,6 @@
 ---
 date: "2024-01-24"
-title: "example landing page"
+title: "Build Secure Code In Minutes With Auto Code Generator"
 image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description:
@@ -17,15 +17,17 @@ layout_width: full
 draft: false
 
 # add appropriate aliases value to support old url redirection to new url
-aliases:
-  - "/events/upcoming/folder-1/example-webinar-02/" # old relative url
-  - "/events/ondemand/folder-1/example-webinar-02/" # new relative url
+# aliases:
+#  - "/events/upcoming/folder-1/example-webinar-02/" # old relative url
+#  - "/events/ondemand/folder-1/example-webinar-02/" # new relative url
 
 hide_post_meta: true # hide post meta like last update & publish data, estimated reading time etc.
 
 bannerarea: true
 bannertext_color: "#fff"
 bannerimage: images/banner/mindmaps-page/compage-main-dashboard.png
+
+noindex: true
 ---
 
 {{< banner
@@ -108,7 +110,7 @@ has_padding_bottom=true >}}
 
 {{< process
  background_color=`#E4F0FD`
- title=`Build Production Ready Code With A Single Click`
+ title=`Production Ready Code in just a few steps`
  title_color=`black`
  subtitle=`Compage In action`
  subtitle_color=`#F88136`
