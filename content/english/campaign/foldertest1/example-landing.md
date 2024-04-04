@@ -10,7 +10,7 @@ hide_header: true
 hide_footer: true
 hide_call_to_action: true
 
-draft: false
+draft: true
 
 # add appropriate aliases value to support old url redirection to new url
 aliases:  

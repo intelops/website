@@ -25,27 +25,20 @@ hide_post_meta: true # hide post meta like last update & publish data, estimated
 
 bannerarea: true
 bannertext_color: "#fff"
-bannerimage: images/banner/mindmaps-page/intelops-webinar-03.svg
+bannerimage: images/banner/mindmaps-page/compage-main-dashboard.png
 ---
 
 {{< banner
 has_header=true
 header_logo=`/images/logos/new-full-logo-light.svg`
-header_navigation_btn_label=`Sign Up`
-header_navigation_btn_icon=``
-header_navigation_btn_link=`#`
 banner_bg_color=`#0a253e`
-image=`/images/banner-home.png`
-title=`Get Fastest Loan With Smart Way A Seating Home`
+image=`/images/compage-dashboard.png`
+title=`Build Secure Code in Minutes With Auto Code Generator `
 title_color=`white`
-subtitle=`We Are Delta`
-subtitle_color=`yellow`
-description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
-description_color=`red`
-button_label=`Get Started Now` 
-button_link=`https://github.com/`
-video_button_label=`Watch Demo`
-video_button_link=`https://www.youtube.com/embed/dyZcRRWiuuw`
+description=`Boost your development team's productivity 2X with Compage. Focus on innovative solutions, not boilerplate.`
+description_color=`white`
+button_label=`Schedule a demo` 
+button_link=`https://intelops.ai/product-demo-request-form/`
 has_padding_top=false
 has_padding_bottom=true
 hide_left_shape=false
@@ -53,276 +46,295 @@ hide_right_shape=true
 left_shape_color=`#99beff`
 right_shape_color=`#99beff` >}}
 
-{{< features
-background_color=`#0a253e`
-title=`Eaving Them Less Time To The Check Out Competitors Built The Into.`
-title_color=`green`
-subtitle=`Features Of Delta`
-subtitle_color=`#99beff`
-description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
-description_color=`green`
-button_label=``
-button_link=`https://example.com/`
-has_padding_top=true
-has_padding_bottom=true
-hide_left_shape=false
-hide_right_shape=false
-left_shape_color=`#99beff`
-right_shape_color=`#99beff` >}}
-  {{< features-item
-      background_color=`white`
-      icon=`/images/call-to-actions/compage/Compage-icon.svg`
-      icon_color=`white`
-      icon_bg_color=`green`
-      title=`1 Scale Collaboration`
-      title_color=`#99beff`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
-      description_color=`#99beff` >}}
-  {{< features-item
-      background_color=`white`
-      icon=`far fa-lightbulb`
-      icon_color=`white`
-      icon_bg_color=`black`
-      title=`1 Scale Collaboration`
-      title_color=`black`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
-      description_color=`black` >}}
-  {{< features-item
-      background_color=`white`
-      icon=`far fa-flag`
-      icon_color=`white`
-      icon_bg_color=`black`
-      title=`1 Scale Collaboration`
-      title_color=`black`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros`
-      description_color=`black` >}}
-  {{< features-item
-      icon=`far fa-gem`
-      title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
-  {{< features-item
-      icon=`fas fa-hourglass-start`
-      title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
-  {{< features-item
-      icon=`fas fa-magic`
-      title=`1 Scale Collaboration`
-      description=`Lorem ipsum dolor sit amt ita hwrweet, conse ctetur adipsiscing elit. Purus, done rfec nunc eros` >}}
-{{< /features >}}
-
-{{< video
- video_url=`https://www.youtube.com/embed/dyZcRRWiuuw`
- background_image=`/images/banner-home.png`
- has_padding_top=true
- has_padding_bottom=false >}}
-
 {{< brand-slider
-title=`150M+ Users Trusted Delta Worldwide`
-description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+title=`Simplify development with built-in integrations`
+description=`Customize your services with various plugins & integrations`
 description_color=`black`
-title_color=`green`
-images=`/images/clients/01.png,/images/clients/02.png,/images/clients/04.png,/images/clients/05.png,/images/clients/05.png`
-has_padding_top=true
+title_color=`black`
+slider=true
+images=`/images/clients/aqua-trivy.png,/images/clients/codecov.png,/images/clients/deepsource.png,/images/clients/open-telemetry.png,/images/clients/sonarqube.png,/images/clients/Cosign.png,/images/clients/Devspace.png,/images/clients/gluu.png,/images/clients/Spdx.png,/images/clients/Keycloak.png,/images/clients/janssen.png`
+has_padding_top=false
 has_padding_bottom=true >}}
 
 {{< faq
- title=`Everything You Need For Best In Class Service`
- title_color=`green`
- subtitle=`We Are Delta`
- subtitle_color=`green`
- description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
+ title=`Pioneering Innovation at Every Stage`
+ title_color=`black`
+ subtitle=`Who uses Compage`
+ subtitle_color=`#F88136`
+ description=`Meet business needs at every scale. Compage low code platform equips developers, architects, technology leaders with the tools they need to achieve efficiency, security, and scalability for business success. `
  description_color=`black`
  has_padding_top=false
- has_padding_bottom=false
- button_label=`Get Started Now`
- button_link=`https://github.com/` >}}
+ has_padding_bottom=true
+ button_label=`Schedule a demo`
+ button_link=`https://intelops.ai/product-demo-request-form/` >}}
 
- {{< faq-item title=`Everything You Need For Best In Class Service 1` expanded=true >}}
+ {{< faq-item title=`Development Teams` expanded=true >}}
 
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
+- Deliver code that follows security best practices
+- Effortlessly adapt new technologies
+- Unify development with requirement-to-code model
+- Focus on business logic, ditch boilerplate
+- Customize generated code for business needs
 
- {{< /faq-item >}}
-
- {{< faq-item title=`Everything You Need For Best In Class Service 2`>}}
-
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
 
  {{< /faq-item >}}
 
- {{< faq-item title=`Everything You Need For Best In Class Service 3`>}}
+ {{< faq-item title=`Startups`>}}
 
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
 
- {{< /faq-item >}}
+- Deploy features fast
+- Enforce code-level governance
+- Retain full control, zero vendor lock-in
+- Embrace on-demand agility
+- Slash development costs with automation
 
- {{< faq-item title=`Everything You Need For Best In Class Service 4`>}}
-
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
 
  {{< /faq-item >}}
 
- {{< faq-item title=`Everything You Need For Best In Class Service 5`>}}
+ {{< faq-item title=`Enterprises`>}}
 
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
-- Online, email, and phone support **from the**
+- License and privatize your code ownership
+- Modernize your tech stack effortlessly
+- Scale with CI/CD pipeline integration
+- Maintain industry compliance
+- Minimize the skill gap and technical debt
+
 
  {{< /faq-item >}}
+
+
 
 {{< /faq >}}
 
-{{< testimonial
- title=`About Three Million Users <br> Testimonial Together`
- title_color=`red`
- subtitle=`People Say’s`
- subtitle_color=`green`
- image=`/images/testimonials-group.png`
- image_width=`250x`
- image_bg_color=`#e4f0fd` >}}
-
- {{< testimonial-item
-   name=`Erica Carlina`
-   designation=``
-   rating=``
-   hide_quote=true >}}
-   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-item >}}
-
- {{< testimonial-item
-   name=`Erica Carlina`
-   designation=``
-   rating=``
-   hide_quote=true >}}
-   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-item >}}
-
- {{< testimonial-item
-   name=`Erica Carlina`
-   designation=``
-   rating=``
-   hide_quote=true >}}
-   Consectetur adipisicing elit. Cum voluptates odio nostrum impedit deleniti cupiditate deserunt harum doloremque veritatis accusantium, unde sint, laudantium distinctio, velit atque asperiores aspernatur laboriosam officiis obcaecati molestias laudantium corporis doloremque qui, voluptate minus?
- {{</ testimonial-item >}}
-
-{{</ testimonial >}}
-
 {{< process
- background_color=`black`
- title=`The Process Of How Delta Works`
- title_color=`white`
- subtitle=`compage`
- subtitle_color=`green`
- description=`lroemioehhr90wy90 w09e9yw2g893eg2 209yegh891g89weg89g1i9egiuigbu 1 09ewy019ng8e124g8989y`
- description_color=`white`
- hide_left_shape=false
- hide_right_shape=false
+ background_color=`#E4F0FD`
+ title=`Build Production Ready Code With A Single Click`
+ title_color=`black`
+ subtitle=`Compage In action`
+ subtitle_color=`#F88136`
+ description=`Test and validate your code with our tech stack or integrate your own tools.`
+ description_color=`black`
+ hide_left_shape=true
+ hide_right_shape=true
  left_shape_color=`red`
  right_shape_color=`#99beff` >}}
 
  {{< process-item
-   title=`Ultimate Guide`
-   title_color=`white`
-   description_color=`white`
-   image=`/images/process/01.jpg`
-   image_bg_color=`red`
+   title=`Define Requirements`
+   title_color=`black`
+   description_color=`#150E0B`
+   image=`/images/process/define-requirements.png`
+   image_bg_color=`#376994`
    data_count=`` >}}
-  Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+ Provide project <br> 
+ requirements as inputs
+
  {{</ process-item >}}
 
  {{< process-item
-   title=`Ultimate Guide`
-   title_color=`white`
-   description_color=`white`
-   image=`/images/process/01.jpg`
-   image_bg_color=`red`
+   title=`Design Architecture`
+   title_color=`black`
+   description_color=`#150E0B`
+   image=`/images/process/design-architecture.png`
+   image_bg_color=`#376994`
    data_count=`` >}}
-   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+   Configure your architecture in the <br> language, database, and framework of your choice. 
+
+
  {{</ process-item >}}
 
  {{< process-item
-   title=`Ultimate Guide`
-   title_color=`white`
-   description_color=`white`
-   image=`/images/process/03.jpg`
-   image_bg_color=`red`
+   title=`Create artifacts`
+   title_color=`black`
+   description_color=`#150E0B`
+   image=`/images/process/create-artifacts.png`
+   image_bg_color=`#376994`
    data_count=`` >}}
-   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+Generate build & release <br> artifacts as per the industry’s secure standards. 
+
  {{</ process-item >}}
 
  {{< process-item
-   title=`Ultimate Guide`
-   title_color=`white`
-   description_color=`white`
-   image=`/images/process/04.jpg`
-   image_bg_color=`red`
+   title=`Customize Code`
+   title_color=`black`
+   description_color=`#150E0B`
+   image=`/images/process/customize-code.png`
+   image_bg_color=`#376994`
    data_count=`` >}}
-   Lorem ipsum dolor amet cosne adipis scing elit. Purus donec nunc eros ullamcorper fegiat.
+   Customize the code as <br> per your business needs
  {{</ process-item >}}
 
 {{</ process >}}
 
-{{< content-block
- title=`Let Your Lead Reach <br> Out To Sales People`
- title_color=`black`
- subtitle=`We Are Delta`
- subtitle_color=`green`
- order=true
- slider=false
- images=`/images/block-image-01.png`
- image_bg_color=`green`
+{{< video
+ video_url=`https://www.youtube.com/embed/6CwEGQlY3Pk?si=d031XxsHb32vqNNd%22`
+ background_image=`/images/thumbnail-compage.png`
  has_padding_top=true
  has_padding_bottom=false >}}
 
- Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
- posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam
- vel, ullamcorper sit amet ligula. Vestibulum ante
- <br>
- orci luctus et ultrices pos uere cubilia Curae; Donec verglit neque,
- auctor congue leo eget malesuada. Vivamus susr cipit sit amet dui.
- Nulla quis lorem ut libero malesuada feugiat.
+ {{< testimonial
+ title=`What Can Your Dev Team Do With Compage?`
+ title_color=`black`
+ subtitle=`Use cases`
+ subtitle_color=`#F88136`
+ image=`/images/compage-usecase.png`
+ image_width=`500x`
+ image_bg_color=`white` >}}
+
+ {{< testimonial-item
+   name=`Build Microservices`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+  Break down monolithic applications into agile microservices or <br> build entirely new ones with ease. Each microservice receives its <br> dedicated database for independent scaling and resilience. <br> Compage automates infrastructure setup and deployment and <br> uses the generated code to further integrate it with CI/CD pipelines. <br> Our modular approach minimizes downtime from <br> service failures and fuels faster development cycles. <br>
+
+ {{</ testimonial-item >}}
+
+ {{< testimonial-item
+   name=`Build Secure, Portable Containers`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+ Build secure, distroless containers that minimize attack surfaces and enhance application security.  Compage optimizes performance for smooth runtime across platforms, guaranteeing portability. 
+ Streamline deployments, freeing developers to focus on delivering innovative features and functionalities.
+
+ {{</ testimonial-item >}}
+
+ {{< testimonial-item
+   name=`Automate API Development`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+Auto-generate code for backend workloads like REST APIs and gRPC, along with endpoint configurations for API gateways. This streamlines communication between system components and frees you to focus on building the core functionalities of your APIs.
+ 
+ {{</ testimonial-item >}}
+
+ {{< testimonial-item
+   name=`Modernize Legacy Applications`
+   designation=``
+   rating=``
+   hide_quote=true >}}
+ Transition to microservices for agility, leverage API-first development for seamless integrations and deploy secure, multi-stage Docker containers for optimized performance. Build high-performant, cloud native applications effortlessly.
+
+ 
+ {{</ testimonial-item >}}
+
+{{</ testimonial >}}
+
+{{< features
+background_color=`#0A253D`
+title=`Everything You need to build better software`
+title_color=`white`
+subtitle=`Compage Features`
+subtitle_color=`white`
+has_padding_top=true
+has_padding_bottom=true
+hide_left_shape=true
+hide_right_shape=true
+left_shape_color=`#99beff`
+right_shape_color=`#99beff` >}}
+  {{< features-item
+      background_color=`white`
+      icon=`/images/call-to-actions/compage/api.png`
+      icon_color=`white`
+      icon_bg_color=`#376994`
+      title=`API First development`
+      title_color=`black`
+      description=`Develop fully functional gRPC & REST APIs`
+      description_color=`#091922` >}}
+  {{< features-item
+      background_color=`white`
+ icon=`/images/call-to-actions/compage/visual-canvas.png`
+      icon_color=`white`
+      icon_bg_color=`#376994`
+      title=`Visual Canvas and CLI`
+      title_color=`black`
+      description=`Drag and drop nodes on a drawing canvas`
+      description_color=`#091922` >}}
+  {{< features-item
+      background_color=`white`
+       icon=`/images/call-to-actions/compage/git.png`
+      icon_color=`black`
+      icon_bg_color=`#376994`
+      title=`Git sync`
+      title_color=`black`
+      description=`Continuously sync with github repositories`
+      description_color=`#091922` >}}
+  {{< features-item
+      icon=`/images/call-to-actions/compage/containers.png`
+      icon_color=`black`
+      icon_bg_color=`#376994`
+      title=`Simplified Containerization`
+      description=`Build portable and distroless containers`
+      description_color=`#091922`  >}}
+   {{< features-item
+      icon=`/images/call-to-actions/compage/auto.png`
+      icon_color=`black`
+      icon_bg_color=`#376994`
+      title=`Automated Software supply chain security`
+      description=`Enforce security best practices with SBOM`
+      description_color=`#091922`  >}}
+  {{< features-item
+     icon=`/images/call-to-actions/compage/agnostic.png`
+     icon_color=`black`
+      icon_bg_color=`#376994`
+      title=`Agnostic Framework`
+      description=`Generate code with our rich language library`
+      description_color=`#091922`  >}}
+
+{{< /features >}}
+
+
+{{< content-block
+ title=`Reimagine Software Development with GenAI & Compage`
+ title_color=`black`
+ subtitle=`AI-Augmented Development`
+ subtitle_color=`#F88136`
+ order=true
+ slider=true
+ images=`/images/ai-augmented-latest.png,/images/ai-augmented-code.png`
+ image_bg_color=`white`
+ 
+ has_padding_top=true
+ has_padding_bottom=false >}}
+
+ Leverage Compage's agnostic framework to scale with emerging technologies like Generative AI. Pair it with our LLM, trained on high-quality data, to translate code, generate documentation, code call flow diagrams, and unit test cases. Move beyond POCs and start using Generative AI securely for your business use cases.
+
 
 {{</ content-block >}}
 
+
+
+
 {{< content-block
- title=`Let Your Lead Reach <br> Out To Sales People`
- subtitle=`We Are Delta`
- order=false
- slider=true
- images=`/images/block-image-01.png,/images/block-image-01.png`
- image_bg_color=`green`
+ title=`Why Businesses Choose Compage`
+ subtitle=`Benefits`
+ order= false
+ slider= false
+ images=`/images/why-compage.png`
+ image_bg_color=`white`
+ image_width=`1200x`
  has_padding_top=true
  has_padding_bottom=false >}}
 
-- **uiwhie**: whiehihwiehie
-- **uiwhie**: whiehihwiehie
-- **uiwhie**: whiehihwiehie
-- **uiwhie**: whiehihwiehie
+- **Faster Time to Market:** Reduce development time by 50% and ship features fast to meet market demand and gain a competitive edge.
+
+- **Shift-Left Security:** Secure the foundation right from the development 
+stage, reduce vulnerabilities and later-stage fixes, and safeguard your system  from serious security threats.
+
+- **Proactive Troubleshooting:** Understand the internal state of the system and identify problems, optimize performance, and keep the system running smoothly.
 
 {{</ content-block >}}
 
 {{< call-to-action
-image=`/images/banner-home.png`
-title=`Get Fastest Loan With Smart Way A Seating Home`
+image=`/images/cta-image.png`
+title=`Find out how compage provides quickest time-to value market`
 title_color=`black`
-subtitle=`We Are Delta`
 subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
-button_label=`Get Started Now`
-button_link=`https://github.com/`
-bg_color=`green`
-copyright=`copyright by intelops`
+button_label=`Schedule a demo`
+button_link=`https://intelops.ai/product-demo-request-form/`
+bg_color=`#0A253D`
+copyright=`Copyright @ IntelOps, Inc. - 2024`
 copyright_color=`white` >}}
