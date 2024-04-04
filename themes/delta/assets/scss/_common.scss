@@ -57,10 +57,7 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
-a,
-li {
-  color: $text-color;
-}
+
 a,
 button,
 select {
@@ -222,9 +219,7 @@ a:hover {
       padding: 0;
       line-height: 38px;
       text-align: center;
-      color: $text-color;
-      background-color: $dark-300;
-      border-color: $dark-300;
+      color: $text-dark;
 
       &:hover,
       &:focus {
@@ -387,22 +382,6 @@ a:hover {
   background: $color-secondary !important;
 }
 
-.bg-dark-200 {
-  background: $dark-200 !important;
-}
-.bg-dark-300 {
-  background: $dark-300 !important;
-}
-.bg-dark-600 {
-  background: $dark-600 !important;
-}
-.bg-dark-800 {
-  background: $dark-800 !important;
-}
-.bg-dark-900 {
-  background: $dark-900 !important;
-}
-
 .bg-secondary-soft {
   background: lighten($banner-secondary, 31.18) !important;
 }
@@ -543,8 +522,8 @@ form label {
 }
 
 // content style
-.content {
-  color: $text-color;
+.content > *:not(*.not-content) {
+  color: #777;
 
   p {
     color: inherit;
@@ -823,7 +802,7 @@ form label {
 
   blockquote {
     font-size: 20px !important;
-    color: $text-color-subtle;
+    color: #777;
     padding: 20px 40px;
 
     @include tablet {
@@ -838,7 +817,7 @@ form label {
     border-radius: 5px;
 
     p {
-      color: $text-color;
+      color: #777;
       margin-bottom: 0 !important;
 
       &:last-child {

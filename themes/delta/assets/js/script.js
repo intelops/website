@@ -53,18 +53,8 @@ $(window).on("load", function () {
 
 // Code Copy
 // ----------------------------------------
-let blocks = document.querySelectorAll("pre");
-blocks.forEach((block) => {
-  if (navigator.clipboard) {
-    let button = document.createElement("span");
-    button.innerText = "copy";
-    button.className = "copy-to-clipboard";
-    block.appendChild(button);
-    button.addEventListener("click", async () => {
-      await copyCode(block, button);
-    });
-  }
-});
+let blocks = document.querySelectorAll(".code-highlight");
+
 async function copyCode(block, button) {
   let code = block.querySelector("code");
   let text = code.innerText;
@@ -74,6 +64,18 @@ async function copyCode(block, button) {
     button.innerText = "copy";
   }, 700);
 }
+
+blocks.forEach((block) => {
+  if (navigator.clipboard) {
+    let button = document.createElement("span");
+    button.innerText = "copy";
+    button.className = "copy";
+    block.appendChild(button);
+    button?.addEventListener("click", async () => {
+      await copyCode(block, button);
+    });
+  }
+});
 
 // on ready state
 $(document).ready(function () {

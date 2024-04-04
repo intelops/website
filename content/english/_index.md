@@ -152,7 +152,7 @@ blog:
   subtitle: Recent Articles
   subtitle_color: ""
   title: "Inside the Lab: Innovation in the Making"
-  title_color: ""
+  title_color: "black"
   description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
   description_color: ""
   button:

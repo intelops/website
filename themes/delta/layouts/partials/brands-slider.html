@@ -1,30 +1,26 @@
-{{ with .Params.brands }}
-  <section class="section">
-    <div class="container container-delta">
-      <div class="row">
-        <div class="col-12 text-center">
-          <div class="section-title mb-0">
-            <h2
-              class="title mb-0"
-              {{ with .title_color }}style="color:{{ . }} !important"{{ end }}>
-              {{ .title | markdownify }}
-            </h2>
-          </div>
-
-          {{ with .images }}
-            <div class="brand-carousel swiper-container pb-6">
-              <div class="swiper-wrapper">
-                {{ range . }}
-                  <div class="block swiper-slide">
-                    {{ partial "image.html" (dict "Src" . "Size" "200x" "Webp" false "Class" "img-fluid mx-auto" ) }}
-                  </div>
-                {{ end }}
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          {{ end }}
+{{with .Params.brands}}
+<section class="section">
+  <div class="container container-delta">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="section-title">
+          <h2 class="title" {{with .title_color}}style="color:{{.}} !important"{{end}}>{{.title | markdownify}}</h2>
         </div>
+        
+        {{ with .images }}
+        <div class="brand-carousel swiper-container pb-6">
+          <div class="swiper-wrapper">
+            {{ range . }}
+            <div class="block swiper-slide">
+              {{ partial "image.html" (dict "Src" . "Size" "200x" "Webp" false "Class" "img-fluid mx-auto" ) }}
+            </div>
+            {{ end }}
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        {{ end }}
       </div>
     </div>
-  </section>
-{{ end }}
+  </div>
+</section>
+{{end}}
