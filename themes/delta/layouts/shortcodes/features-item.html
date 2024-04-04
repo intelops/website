@@ -1,0 +1,60 @@
+{{ $background_color := .Get "background_color" }}
+
+{{ $icon := .Get "icon" }}
+{{ $is_icon_has_image := findRE "/images/" $icon }}
+{{ $icon_color := .Get "icon_color" }}
+{{ $icon_bg_color := .Get "icon_bg_color" }}
+
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+
+
+<div class="col-xl-4 col-md-6 features-block features-block-2">
+  <div
+    class="block h-100 d-block d-sm-flex border-transparent"
+    {{ with $background_color }}
+      style="background-color: {{ . }}!important"
+    {{ end }}>
+    {{ if $icon }}
+      {{ if $is_icon_has_image }}
+        <div
+          class="icon"
+          {{ with $icon_bg_color }}
+            style="background-color: {{ . }} !important"
+          {{ end }}>
+          {{ partial "image.html" (dict "Src" $icon "Alt" $title "Size" "30x") }}
+        </div>
+      {{ else }}
+        <i
+          class="icon {{ $icon }}"
+          style="{{ with $icon_color }}
+            color: {{ . }}!important
+          {{ end }}{{ with $icon_bg_color }}
+            ;background-color: {{ . }}!important
+          {{ end }}"></i>
+      {{ end }}
+    {{ end }}
+    <div class="mt-3 mt-sm-0">
+      {{ if $title }}
+        <h3
+          class="title h6 fw-medium"
+          {{ with $title_color }}
+            style="color: {{ . }}!important"
+          {{ end }}>
+          {{ $title | markdownify }}
+        </h3>
+      {{ end }}
+      {{ if $description }}
+        <p
+          class="mb-0"
+          {{ with $description_color }}
+            style="color: {{ . }}!important"
+          {{ end }}>
+          {{ $description | truncate 85 }}
+        </p>
+      {{ end }}
+    </div>
+  </div>
+</div>

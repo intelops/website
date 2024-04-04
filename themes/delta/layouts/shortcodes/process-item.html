@@ -1,0 +1,37 @@
+{{ $image:= .Get "image" }}
+{{ $image_bg_color:= .Get "image_bg_color" }}
+
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $description_color := .Get "description_color" }}
+{{ $data_count := .Get "data_count" }}
+
+
+<div class="col-lg-3 col-sm-6 process-item">
+  <div
+    class="block {{ if not $data_count }}hide-count{{ end }}"
+    {{ with $data_count }}data-count="{{ . }}"{{ end }}>
+    <div
+      class="process-image"
+      {{ with $image_bg_color }}
+        style="background-color: {{ . }}!important"
+      {{ end }}>
+      {{ partial "image.html" (dict "Src" $image "Size" "350x278" "Webp" false "Class" "w-100" ) }}
+    </div>
+
+    {{ if $title }}
+      <h3
+        class="title h4"
+        {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $title }}
+      </h3>
+    {{ end }}
+    {{ if $description_color }}
+      <p
+        class="mb-0"
+        {{ with $description_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ .Inner }}
+      </p>
+    {{ end }}
+  </div>
+</div>

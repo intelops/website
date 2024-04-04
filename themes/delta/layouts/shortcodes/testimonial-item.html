@@ -1,0 +1,36 @@
+{{ $name := .Get "name" }}
+{{ $name_color := .Get "name_color" }}
+{{ $designation := .Get "designation" }}
+{{ $designation_color := .Get "designation_color" }}
+{{ $rating := .Get "rating" }}
+{{ $hide_quote := default true (.Get "hide_quote") }}
+
+
+<div class="swiper-slide">
+  <div
+    class="testiminials-block rounded-lg {{ if $hide_quote }}
+      hide-quote
+    {{ end }}">
+    {{ if $name }}
+      <h5
+        class="mb-1"
+        {{ with $name_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $name | markdownify }}
+      </h5>
+    {{ end }}
+    {{ if $designation }}
+      <p class="mb-1" {{ with $designation_color }}style="color: {{ . }}!important"{{ end }}>
+        {{ $designation | markdownify }}
+      </p>
+    {{ end }}
+    {{ with $rating }}
+      <div
+        class="testimonials-rating mb-2"
+        style="--testimonials_rating:{{ $rating }}"
+        title="Rating of this product is {{ $rating }} out of 5.0"></div>
+    {{ end }}
+    <div class="testimonials-review">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</div>

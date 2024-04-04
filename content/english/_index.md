@@ -16,7 +16,7 @@ banner:
     
     Enabling Engineering with Agnostic Framework Model-based Proactive Solutions.   
     
-          
+          
   description_color: ""
   button:
     enable: false

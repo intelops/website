@@ -179,10 +179,11 @@ style="background-image: url({{$img.RelPermalink}});
 
 <!-- regular page -->
 {{ else }}
+{{ if not (eq .Params.layout_width `full`) }}
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-10 mx-auto">
+      <div class="{{ if eq .Params.layout_width `full` }}col-12{{else}}col-lg-10 mx-auto{{end}}">
         <div class="content">
           {{.Content}}
         </div>
@@ -190,9 +191,14 @@ style="background-image: url({{$img.RelPermalink}});
     </div>
   </div>
 </section>
+{{ else }}
+{{ .Content }}
+{{ end }}
 {{ end }}
 <!-- /regular page -->
 
-{{ partial "call-to-action-2.html" . }}
+{{ if not .Params.hide_call_to_action }}
+  {{ partial "call-to-action-2.html" . }}
+{{ end }}
 
 {{ end }}

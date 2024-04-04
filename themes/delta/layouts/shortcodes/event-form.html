@@ -1,0 +1,179 @@
+{{ $testingMode := .Get "event_form_testing_mode" }}
+{{ $videoURL := default "https://www.youtube.com/embed/a3ICNMQW7Ok" (.Get "event_form_video_url") }}
+{{ $redirectURL := .Get "event_form_redirect_url" }}
+{{ $formFillAction := default "video" (.Get "event_form_success_action") }}
+
+
+<div class="events-form-shortcode events-form-shortcode-inline">
+  <div class="popup-content">
+    {{ if not (eq $formFillAction `redirect`) }}
+      <div class="video-content">
+        <div class="ratio ratio-16x9 overflow-hidden">
+          <iframe
+            src="{{ $videoURL }}"
+            id="showVideo"
+            allowscriptaccess="always"
+            allow="autoplay"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    {{ end }}
+
+
+    <form
+      method="POST"
+      class="rounded-md shadow-md p-2 p-md-3 no-auto-margin"
+      id="event-form"
+      data-netlify="true">
+      <div class="form-group mb-3">
+        <label class="fw-600 text-dark mb-1" for="fname">
+          {{ i18n "full_name" }}
+        </label>
+        <input
+          class="form-control text-dark shadow-none"
+          type="text"
+          placeholder="Jack Barker"
+          name="Name"
+          id="fname"
+          required />
+      </div>
+      <div class="form-group mb-3">
+        <label class="fw-600 text-dark mb-1" for="email">
+          {{ i18n "email" }}
+        </label>
+        <input
+          class="form-control text-dark shadow-none"
+          type="email"
+          placeholder="example@domain.io"
+          name="Email"
+          id="email"
+          required />
+      </div>
+      <div class="form-group mb-3">
+        <label class="fw-600 text-dark mb-1" for="website">
+          {{ i18n "website" }}
+        </label>
+        <input
+          class="form-control text-dark shadow-none"
+          type="url"
+          name="Website"
+          placeholder="{{ i18n `website` }}" />
+      </div>
+      <div class="form-group mb-3">
+        <label class="fw-600 text-dark mb-1" for="message">
+          {{ i18n "message" }}
+        </label>
+        <textarea
+          class="form-control text-dark shadow-none"
+          name="comment"
+          rows="5"
+          name="Message"
+          id="message"
+          required
+          placeholder="{{ i18n `message` }}"></textarea>
+      </div>
+      <button class="btn btn-primary w-100 form-submit-btn mb-0" type="submit">
+        <span>{{ i18n "submit_now" }}</span>
+        <i class="fas fa-spinner fa-spin"></i>
+      </button>
+      <div class="alert alert-success mt-2 d-none mb-0" role="alert">
+        Form submitted successfully.
+      </div>
+    </form>
+
+    <script>
+      const popup = document.querySelector(".events-form-shortcode");
+      const popupForm = document.querySelector(".events-form-shortcode form");
+
+      const show_event_form_content = () => {
+        popup.classList.add("d-none");
+      };
+
+      const show_event_video_content = () => {
+        popup.setAttribute("id","has-video-form-submit-action");
+      };
+
+      const redirect_user = () => {
+        const alert = popupForm?.querySelector(".alert");
+
+        alert.classList.remove("d-none");
+        alert.classList.add("alert-success");
+        alert.textContent = "Form submitted successfully. Redirecting...";
+
+        setTimeout(() => {
+          window.location.href = "{{$redirectURL}}";
+        }, 2000);
+      };
+
+      // check form submission status from sessionStorage
+      const formSubmitted = sessionStorage.getItem("formSubmitted");
+      if (formSubmitted) {
+        {{ if eq $testingMode `false` }}
+          {{ if eq $formFillAction "content" }}
+            show_event_form_content();
+          {{ else if eq $formFillAction "video" }}
+            show_event_video_content();
+          {{ end }}
+        {{ end }}
+      }
+
+      const handleSubmit = (event) => {
+        event.preventDefault();
+
+        const form = event.target;
+        const formSubmitBtn = form?.querySelector(".form-submit-btn");
+        const alert = form?.querySelector(".alert");
+
+        formSubmitBtn.classList.add("loading");
+
+        const success = () => {
+          alert.classList.remove("d-none");
+          alert.classList.add("alert-success");
+          alert.textContent = "Form submitted successfully.";
+
+          sessionStorage.setItem("formSubmitted", true);
+
+          {{ if eq $formFillAction "content" }}
+            show_event_form_content();
+          {{ else if eq $formFillAction "video" }}
+            show_event_video_content();
+          {{ else if eq $formFillAction "redirect" }}
+            redirect_user()
+          {{ end }}
+        };
+
+        const error = () => {
+          alert.classList.remove("d-none");
+          alert.classList.add("alert-danger");
+          alert.textContent = "Form submission failed.";
+
+          sessionStorage.removeItem("formSubmitted");
+        };
+
+        const myForm = event.target;
+        const formData = new FormData(myForm);
+
+        fetch("/", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+          body: new URLSearchParams(formData).toString(),
+        })
+          .then((response) => {
+            formSubmitBtn.classList.remove("loading");
+            if (response.status === 200 && response.ok === true) {
+              success();
+            } else {
+              error();
+            }
+          })
+          .catch((error) => console.error(error));
+      };
+
+      document
+        .querySelector("#event-form")
+        .addEventListener("submit", handleSubmit);
+    </script>
+  </div>
+</div>

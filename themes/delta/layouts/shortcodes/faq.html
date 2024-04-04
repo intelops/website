@@ -1,0 +1,56 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+{{ $button_label := .Get "button_label" }}
+{{ $button_link := .Get "button_link" }}
+{{ $padding_top := .Get "has_padding_top" }}
+{{ $padding_bottom := .Get "has_padding_bottom" }}
+
+
+<section
+  class="section not-content {{ if not $padding_top }}
+    pt-0
+  {{ end }}{{ if not $padding_bottom }}pb-0{{ end }}">
+  <div class="container container-delta">
+    <div class="row justify-content-between">
+      <div class="col-xl-5 col-lg-6 text-center text-lg-start mb-5 mb-lg-0">
+        {{ if $subtitle }}
+          <p
+            class="subtitle"
+            {{ with $subtitle_color }}style="color: {{ . }}!important"{{ end }}>
+            {{ $subtitle | markdownify }}
+          </p>
+        {{ end }}
+        {{ if $title }}
+          <h1
+            class="title text-xl mb-3"
+            {{ with $title_color }}style="color: {{ . }}!important"{{ end }}>
+            {{ $title | markdownify }}
+          </h1>
+        {{ end }}
+        {{ if $description }}
+          <p
+            {{ with $description_color }}
+              style="color: {{ . }}!important"
+            {{ end }}>
+            {{ $description | markdownify }}
+          </p>
+        {{ end }}
+
+        {{ if $button_label }}
+          <a href="{{ $button_link | relLangURL }}" class="btn btn-primary m-1 mt-4">
+            {{ $button_label }}
+          </a>
+        {{ end }}
+      </div>
+      <div class="col-xl-6 col-lg-6">
+        <div class="accordion" id="faq">
+          {{ .Inner }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

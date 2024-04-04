@@ -1,0 +1,83 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $subtitle := .Get "subtitle" }}
+{{ $subtitle_color := .Get "subtitle_color" }}
+{{ $image := .Get "image" }}
+
+{{ $copyright := .Get "copyright" }}
+{{ $copyright_color := .Get "copyright_color" }}
+
+{{ $bg_color := .Get "bg_color" }}
+
+{{ $description := .Get "description" }}
+{{ $description_color := .Get "description_color" }}
+{{ $button_label := .Get "button_label" }}
+{{ $button_link := .Get "button_link" }}
+
+
+<section class="section pb-0 call-to-action call-to-action-2">
+  <div
+    class="bottom-bg"
+    style="{{- if $bg_color -}}
+      background-color:{{ $bg_color }}!important;
+    {{- end -}}"></div>
+  <div class="container container-delta">
+    <div class="row">
+      <div class="col-12">
+        <div class="block bg-white rounded-lg shadow">
+          <div class="row align-items-center">
+            <div class="col-lg-7">
+              <div class="content-block">
+                {{ if $title }}
+                  <h3
+                    class="text-capitalize mb-2"
+                    {{ with $title_color }}
+                      style="color: {{ . }}!important"
+                    {{ end }}>
+                    {{ $title | markdownify }}
+                  </h3>
+                {{ end }}
+
+                {{ if $subtitle }}
+                  <p
+                    class="mb-4"
+                    {{ with $subtitle_color }}
+                      style="color: {{ . }}!important"
+                    {{ end }}>
+                    {{ $subtitle | markdownify }}
+                  </p>
+                {{ end }}
+
+                {{ if $button_label }}
+                  <a
+                    href="{{ $button_link | relLangURL }}"
+                    class="btn btn-primary">
+                    {{ $button_label }}
+                    <i class="arrow-right fas fa-arrow-right"></i>
+                  </a>
+                {{ end }}
+
+              </div>
+            </div>
+            {{ with $image }}
+              <div class="col-lg-4">
+                {{ partial "image.html" (dict "Src" . "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
+              </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ if $copyright }}
+        <div class="col-12">
+          <p
+            class="pt-4 pb-1 text-center"
+            {{ with $copyright_color }}
+              style="color: {{ . }}!important"
+            {{ end }}>
+            {{ $copyright | markdownify }}
+          </p>
+        </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

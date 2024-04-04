@@ -1,0 +1,35 @@
+{{ $title := .Get "title" }}
+{{ $title_color := .Get "title_color" }}
+{{ $expanded := .Get "expanded" }}
+
+
+<div class="accordion-item border-0">
+  <h4 class="accordion-header mb-0" id="heading-{{ sha1 $title | urlize }}_">
+    <button
+      class="accordion-button pe-0 shadow-none h6 font-secondary mb-0 {{ if not $expanded }}
+        collapsed
+      {{ end }}"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#id-{{ sha1 $title | urlize }}_"
+      aria-expanded="{{ if $expanded }}
+        true
+      {{ else }}
+        false
+      {{ end }}"
+      aria-controls="id-{{ sha1 $title | urlize }}_">
+      {{ $title | markdownify }}
+    </button>
+  </h4>
+  <div
+    id="id-{{ sha1 $title | urlize }}_"
+    class="accordion-collapse collapse {{ if $expanded }}
+      show
+    {{ end }}"
+    aria-labelledby="heading-{{ sha1 $title | urlize }}_"
+    data-bs-parent="#faq">
+    <div class="accordion-body pt-0 content formatted-list">
+      {{ .Inner | markdownify }}
+    </div>
+  </div>
+</div>

@@ -20,13 +20,37 @@
 
 <!-- plugins + stylesheet -->
 {{ $styles := slice }}
+{{ $stylesLazy := slice }}
 {{ range site.Params.plugins.css }}
-{{ if findRE "^http" .link }}
-<link crossorigin="anonymous" media="all" rel="stylesheet" href="{{ .link | relURL }}" {{.attributes | safeHTMLAttr}} >
+  {{ if findRE "^http" .link }}
+    <link
+      crossorigin="anonymous"
+      media="all"
+      rel="stylesheet"
+      href="{{ .link | relURL }}"
+      {{ .attributes | safeHTMLAttr }} />
+  {{ else }}
+    {{ if not .lazy }}
+      {{ $styles = $styles | append (resources.Get .link) }}
+    {{ else }}
+      {{ $stylesLazy = $stylesLazy | append (resources.Get .link) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* main style */}}
+{{ $styles = $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS) }}
+{{ $styles = $styles | resources.Concat "css/style.css" }}
+{{ $styles = $styles | resources.PostCSS }}
+
+{{ if hugo.IsProduction }}
+  {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . | minify | fingerprint | resources.PostProcess }}
 {{ else }}
-{{ $styles = $styles | append (resources.Get .link) }}
+  {{ $styles = $styles | resources.ExecuteAsTemplate "css/style.css" . }}
 {{ end }}
-{{ end }}
-{{ $styles := $styles | append (resources.Get "scss/style.scss" | resources.ExecuteAsTemplate "style.scss" . | toCSS) }}
-{{ $styles := $styles | resources.Concat "/css/style.css" | fingerprint "sha512"}}
-<style type="text/css">{{$styles.Content | safeCSS}}</style>
+
+{{/* styles */}}
+<link
+  href="{{ $styles.RelPermalink }}"
+  integrity="{{ $styles.Data.Integrity }}"
+  rel="stylesheet" />

@@ -103,7 +103,9 @@ a:hover {
   }
 }
 
-.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-container-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0 8px;
 }
 
@@ -227,7 +229,6 @@ a:hover {
     }
 
     &:nth-child(even) {
-
       a:hover,
       a:focus {
         background-color: $color-primary;
@@ -236,7 +237,6 @@ a:hover {
     }
 
     &:nth-child(odd) {
-
       a:hover,
       a:focus {
         background-color: $color-tertiary;
@@ -415,8 +415,10 @@ a:hover {
 }
 
 .bg-quaternary-soft {
-  background: lighten(saturate(adjust-hue($color-quaternary, -1), 19.78),
-      45.49) !important;
+  background: lighten(
+    saturate(adjust-hue($color-quaternary, -1), 19.78),
+    45.49
+  ) !important;
 }
 
 .text-quaternary {
@@ -430,6 +432,9 @@ a:hover {
 
 .border {
   border-color: #dee2e6 !important;
+}
+.border-transparent {
+  border-color: transparent !important;
 }
 
 // form-control
@@ -469,19 +474,19 @@ form label {
     border-radius: 0;
   }
 
-  .custom-control-input:checked~.custom-control-label::before,
-  .custom-control-input:not(:disabled):active~.custom-control-label::before {
+  .custom-control-input:checked ~ .custom-control-label::before,
+  .custom-control-input:not(:disabled):active ~ .custom-control-label::before {
     background-color: $color-primary;
     border-color: $color-primary;
     box-shadow: none;
   }
 
-  .custom-control-input:focus:not(:checked)~.custom-control-label::before {
+  .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
     box-shadow: none;
     border-color: $color-primary;
   }
 
-  .custom-control-input:disabled:checked~.custom-control-label::before {
+  .custom-control-input:disabled:checked ~ .custom-control-label::before {
     background-color: rgba($color-primary, 0.5);
     border-color: rgba($color-primary, 0.2);
   }
@@ -517,7 +522,7 @@ form label {
 }
 
 // content style
-.content {
+.content > *:not(*.not-content) {
   color: #777;
 
   p {
@@ -952,7 +957,7 @@ form label {
   .page-item {
     .page-link {
       background: $white;
-      border-color:$border-color;
+      border-color: $border-color;
       color: $text-dark;
 
       &:hover {
@@ -964,6 +969,37 @@ form label {
     &.active .page-link {
       background: $color-primary;
       color: $white;
+    }
+  }
+}
+
+.alert {
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 14px;
+
+  &-success {
+    color: green;
+    background-color: rgba(green, 0.2);
+  }
+  &-danger {
+    color: red;
+    background-color: rgba(red, 0.2);
+  }
+}
+
+.formatted-list {
+  ul,
+  ol {
+    padding-left: 20px;
+    li::marker {
+      color: $color-primary;
+    }
+    li {
+      color: $black;
+    }
+    strong {
+      color: $color-primary;
     }
   }
 }
