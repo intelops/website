@@ -36,7 +36,7 @@ main:empty {
     pointer-events: none;
 
     svg {
-      color: $dark-200;
+      color: color-mix(in srgb, $text-color 40%, $dark-300 30%);
       position: absolute;
       max-width: 100%;
 
@@ -1710,6 +1710,7 @@ footer {
 
 .lc-card {
   box-shadow: 0 0.9rem 50px 0.625rem rgba(62, 62, 62, 0.05);
+  background-color: $dark-300;
   transition: 0.2s ease;
   border: 0;
   padding: 15px;
@@ -1782,7 +1783,7 @@ footer {
     font-size: 0.8rem;
     display: block;
     padding: 5px 0;
-    color: rgba($text-dark, 0.8);
+    color: $text-color;
     font-weight: 500;
     transition: 0.2s ease;
     padding-left: 10px;
@@ -2377,7 +2378,7 @@ footer {
   position: relative;
   border-radius: 12px;
   margin-bottom: 24px;
-  background-color: #272822;
+  background-color: $dark-300;
 
   &.no-file-name {
     .file-extension {
@@ -2399,7 +2400,7 @@ footer {
     font-weight: 400;
     padding-left: 20px;
     padding-block: 16px;
-    background-color: lighten($color: #272822, $amount: 8);
+    background-color: $dark-600;
   }
 
   .file-extension {
@@ -2414,7 +2415,7 @@ footer {
     color: rgb(210, 202, 202);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-color: lighten($color: #272822, $amount: 8);
+    background-color: $dark-600;
   }
 
   .copy {
@@ -2438,6 +2439,11 @@ footer {
 
   pre {
     font-size: 16px;
+  }
+}
+.highlight {
+  pre {
+    background-color: $dark-300 !important;
   }
 }
 

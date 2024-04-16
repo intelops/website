@@ -527,13 +527,13 @@ form label {
       left: 0;
       top: 8px;
       font-size: 85%;
-      color: $color-quaternary;
+      color: $color-primary;
     }
 
-    color: $dark;
+    color: $text-color;
 
     a {
-      color: $dark;
+      color: $text-color;
 
       &:hover {
         color: $color-primary;
@@ -834,7 +834,7 @@ form label {
     border-left: 2px solid $color-primary;
     margin: 40px 0;
     font-weight: bold;
-    background: darken($white, 2);
+    background: $dark-300;
     border-radius: 5px;
 
     p {

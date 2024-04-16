@@ -16,7 +16,7 @@
         <div class="card lc-card rounded-sm h-100">
           <div class="card-body">
             <div class="mb-1">
-              <h3 class="card-title h4 mb-1"><a class="text-dark" href="{{ .Permalink }}">{{ .Title }}</a></h3>
+              <h3 class="card-title h4 mb-1"><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
               {{with .Params.description}}<p class="mb-0">{{. | markdownify}}</p>{{end}}
             </div>
             <ul class="list-styled mb-0">
