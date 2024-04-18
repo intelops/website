@@ -72,7 +72,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/opty/opty-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       * **Kubernetes Cluster Management**: Simplifies the management of Kubernetes clusters by providing tools and services that enable developers to gain comprehensive insights and effectively oversee their clusters. 

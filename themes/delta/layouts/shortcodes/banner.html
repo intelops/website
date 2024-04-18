@@ -13,6 +13,7 @@
 {{ $padding_bottom := .Get "has_padding_bottom" }}
 
 {{ $banner_bg_color := .Get "banner_bg_color" }}
+{{ $header_bg_color := .Get "header_bg_color" }}
 
 {{ $has_header := .Get "has_header" }}
 {{ $header_logo := .Get "header_logo" }}
@@ -36,7 +37,12 @@
       style="background-color: {{ $banner_bg_color }}!important"
     {{ end }}>
     {{ if $has_header }}
-      <header class="navigation" id="main-header">
+      <header
+        class="navigation"
+        {{ with $header_bg_color }}
+          style="background-color: {{ . }};"
+        {{ end }}
+        id="main-header">
         <div class="container container-delta">
           <!-- navbar -->
           <nav
@@ -81,7 +87,7 @@
             {{ end }}
             {{ if $title }}
               <h1
-                class="title text-xl mb-3 text-white"
+                class="title text-xl mb-3"
                 {{ with $title_color }}
                   style="color: {{ . }}!important"
                 {{ end }}>

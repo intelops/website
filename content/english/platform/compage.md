@@ -74,7 +74,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       Compage offers a powerful solution for those who want to take control of their software development process and stay ahead of the curve. Our unique diagram-to-code approach creates code for multiple programming languages, giving developers more flexibility and freedom than ever before. With our backend automation and coding flexibility, you can break free from the limitations of low-code and no-code platforms and boost your productivity. 

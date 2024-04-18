@@ -241,7 +241,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#navigation-alt">
           <i class="d-inline fas fa-bars"></i>
-          <i class="d-none far fa-times"></i>
+          <i class="d-none fas fa-times"></i>
         </button>
       </div>
       {{ $section := .Section | urlize }}
@@ -253,7 +253,7 @@
             <li class="nav-item">
               {{ if eq .type "modal" }}
                 <button
-                  class="nav-link nav-menu-text small p-0 border-0 bg-transparent"
+                  class="nav-link small p-0 border-0 bg-transparent"
                   type="button"
                   data-bs-toggle="modal"
                   data-bs-target="{{ .url }}">
@@ -261,7 +261,7 @@
                 </button>
               {{ else }}
                 <a
-                  class="nav-link nav-menu-text small"
+                  class="nav-link small"
                   id="nav-menu"
                   {{ if findRE `^http` .url }}
                     target="_blank" rel="noopener"

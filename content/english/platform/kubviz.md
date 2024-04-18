@@ -72,7 +72,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/kubviz/kubviz-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       KubViz empowers businesses to streamline workflows, boost performance, and ensure DevSecOps practices. With real-time tracking of changes, events, and vulnerabilities across K8s clusters, Git repos, Container Registries and more, it enables effective troubleshooting for a secure software supply chain.

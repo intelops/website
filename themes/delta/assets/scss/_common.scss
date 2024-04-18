@@ -383,6 +383,10 @@ a:hover {
   color: $color-primary !important;
 }
 
+.text-text {
+  color: $text-color !important;
+}
+
 .bg-secondary {
   background: $color-secondary !important;
 }
@@ -908,10 +912,6 @@ form label {
   background-color: $header-bar-bg;
 }
 
-.nav-menu-text {
-  color: $black !important;
-}
-
 .header-sec {
   z-index: -1 !important;
 }
@@ -979,7 +979,7 @@ form label {
     .page-link {
       background: $white;
       border-color: $border-color;
-      color: $text-dark;
+      color: $text-color;
 
       &:hover {
         background: $color-primary;
@@ -1016,11 +1016,24 @@ form label {
     li::marker {
       color: $color-primary;
     }
-    li {
-      color: $black;
-    }
     strong {
       color: $color-primary;
     }
   }
+}
+
+.autocomplete-suggestions {
+  background-color: $dark-600 !important;
+  .autocomplete-suggestion {
+    color: $text-color;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.bg-position-unset {
+  background-position: unset !important;
+}
+.bg-attachment-fixed {
+  background-attachment: fixed !important;
 }

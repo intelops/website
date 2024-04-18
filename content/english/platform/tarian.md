@@ -74,7 +74,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/tarian/tarian-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       Fundamentals are the core of the innovation. That's what Tarian cooks on!

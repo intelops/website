@@ -70,7 +70,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/capten/capten-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       Capten stack is an orchestration platform for engineering enablement and seamless collaboration while eliminating complexities of self-service implementation for agile DevSecOps, Developers Portal and Platform Engineering. All-in-One! 

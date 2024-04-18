@@ -73,7 +73,7 @@ image_and_content_block:
     title_color: ""
     image: "images/content/qt/qt-row2.svg"
     content_position: "right" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#2F323C"
     content_color: ""
     content: |
       openTelemetry's Trace-Based testing for modern applications enhances test coverage and enables QA, Dev and Ops teams to gain insights for a holistic understanding of application behavior, resulting in faster iterations and delivery with context.
