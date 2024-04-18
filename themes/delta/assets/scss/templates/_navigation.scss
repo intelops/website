@@ -394,7 +394,7 @@
     border-radius: 100px;
     font-size: 14px;
     cursor: pointer;
-    background-color: #f0f0f0;
+    background-color: $light;
     &:hover {
       background-color: #e2e2e2;
     }
@@ -447,7 +447,7 @@
       font-size: 15px;
       font-weight: 500;
       a {
-        color: rgba($black, 0.7);
+        color: rgba($text-color, 0.7);
       }
 
       ul {
@@ -455,9 +455,6 @@
         list-style: none;
         li a {
           padding: 3px 0;
-          &:hover {
-            color: $dark;
-          }
         }
       }
 
@@ -471,9 +468,9 @@
         }
 
         > div {
-          background-color: #f0f0f0;
+          background-color: $light;
           a {
-            color: $black;
+            color: $text-color;
           }
           * {
             font-weight: 500;
@@ -493,7 +490,7 @@
         &:active {
           background-color: #f6f6f6;
           a {
-            color: $black;
+            color: $text-color;
           }
         }
 

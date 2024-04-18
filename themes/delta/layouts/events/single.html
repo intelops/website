@@ -101,7 +101,7 @@
                 class="text-muted small d-inline-block"
                 style="opacity:.75">
                 {{ if $showCategory }}
-                  <strong class="text-dark">Categories :</strong>
+                  <strong class="text-light">Categories :</strong>
                   {{ range $i, $e := .Params.categories }}
                     {{ if ne $i 0 }},{{ end }}
                     <a
@@ -114,7 +114,7 @@
 
                 {{ with .Params.tags }}
                   <span class="mx-1 text-dark-50">|</span>
-                  <strong class="text-dark">Tags :</strong>
+                  <strong class="text-light">Tags :</strong>
                   {{ range $i, $e := . }}
                     {{ if ne $i 0 }},{{ end }}
                     <a
@@ -147,7 +147,7 @@
                 </div>
                 <div>
                   <h3 class="h5 title mb-1">
-                    <a href="{{ .RelPermalink }}" class="text-dark">
+                    <a href="{{ .RelPermalink }}">
                       {{ .Title }}
                     </a>
                   </h3>

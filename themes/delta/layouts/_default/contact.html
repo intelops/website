@@ -36,15 +36,15 @@
         <div class="col-xl-6 col-lg-7 order-1 order-lg-0">
           {{/*  <form
             method="POST"
-            class="rounded-md shadow-md p-4 p-md-5"
+            class="rounded-md shadow-md p-4 p-md-5 bg-dark-300"
             id="contact-form"
             data-netlify="true">
             <div class="form-group mb-3">
-              <label class="fw-600 text-dark mb-1" for="fname">
+              <label class="fw-600 mb-1" for="fname">
                 {{ i18n "full_name" }}
               </label>
               <input
-                class="form-control text-dark shadow-none"
+                class="form-control shadow-none"
                 type="text"
                 placeholder="Jack Barker"
                 name="Name"
@@ -53,11 +53,11 @@
                 required />
             </div>
             <div class="form-group mb-3">
-              <label class="fw-600 text-dark mb-1" for="email">
+              <label class="fw-600 mb-1" for="email">
                 {{ i18n "email" }}
               </label>
               <input
-                class="form-control text-dark shadow-none"
+                class="form-control shadow-none"
                 type="email"
                 placeholder="example@domain.io"
                 name="Email"
@@ -66,29 +66,28 @@
                 required />
             </div>
             <div class="form-group mb-3">
-              <label class="fw-600 text-dark mb-1" for="website">
+              <label class="fw-600 mb-1" for="website">
                 {{ i18n "website" }}
               </label>
               <input
-                class="form-control text-dark shadow-none"
+                class="form-control shadow-none"
                 type="url"
                 name="Website"
                 value=""
                 placeholder="{{ i18n `website` }}" />
             </div>
             <div class="form-group mb-3">
-              <label class="fw-600 text-dark mb-1" for="message">
+              <label class="fw-600 mb-1" for="message">
                 {{ i18n "message" }}
               </label>
               <textarea
-                class="form-control text-dark shadow-none"
+                class="form-control shadow-none"
                 name="comment"
                 rows="5"
                 name="Message"
                 id="message"
                 required
-                placeholder="{{ i18n `message` }}"></textarea
-              >
+                placeholder="{{ i18n `message` }}"></textarea>
             </div>
             <button class="btn btn-primary w-100" type="submit">
               {{ i18n "submit_now" }}

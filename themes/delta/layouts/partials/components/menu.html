@@ -44,7 +44,7 @@
 <form class="mb-2" action="{{ `/search` | relLangURL }}/" name="search-form" data-formsection="{{.Section}}">
   <div class="input-group rounded border align-items-center">
     <input id="search-content" name="c" type="hidden" value="{{ .Section | urlize }}">
-    <input id="search-by" name="s" type="search" class="form-control ps-2 pe-1 text-dark shadow-none border-0 rounded-pill bg-transparent" placeholder="{{if eq .Section `licensing-terms-conditions`}}Search Topics{{else}}Search Learning Center..{{end}}" style="height:48px">
+    <input id="search-by" name="s" type="search" class="form-control ps-2 pe-1 shadow-none border-0 text-light bg-transparent" placeholder="{{if eq .Section `licensing-terms-conditions`}}Search Topics{{else}}Search Learning Center..{{end}}" style="height:48px">
   </div>
 </form>
 

@@ -2,8 +2,7 @@
 
 {{ partial "essentials/header.html" . }}
 
-{{$banner_bg := resources.Get (`/images/blog/banner-bg.svg`) }}
-<div class="blog-banner text-center" style="background-image:url({{$banner_bg.RelPermalink}})">
+<div class="blog-banner text-center" {{ with .Params.bannerimage}} style="background-image:url({{.}})"{{ end }}>
   <div class="container">
     <div class="row">
       <div class="col-lg-9 mx-auto">

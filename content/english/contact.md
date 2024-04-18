@@ -7,6 +7,11 @@ bannertext: Talk2Us
 bannertext_color: ""
 bannerimage: images/banner/contactpage/contactpage-banner-image.svg
 enable: true
+
+# Page Header Wave Color Customization
+page_header_wave_left_color: "#525864"
+page_header_wave_right_color: "#525864"
+
 # contact
 contact:
   subtitle: "We Are the Pioneer"
