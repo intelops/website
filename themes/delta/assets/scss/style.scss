@@ -32,6 +32,7 @@ $dark-900: {{.dark_900 | default "#0F0F0F"}};
 $text-color: {{.text_color | default "#A4B0CA"}};
 $text-color-subtle: {{.text_color_subtle | default "#8490AA"}};
 $border-color: {{.border_color | default "#424653"}};
+$border-light-color: {{.border_light_color | default "#A4B0CA"}};
 
 $body-color: {{.body_color | default "#0F0F0F"}};
 

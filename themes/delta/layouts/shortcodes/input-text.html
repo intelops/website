@@ -1,0 +1,35 @@
+{{ $id := .Get "id" }}
+{{ $label := .Get "label" }}
+{{ $name := .Get "name" }}
+{{ $placeholder := .Get "placeholder" }}
+{{ $value := .Get "value" }}
+{{ $required := .Get "required" }}
+{{ $autofocus := .Get "autofocus" }}
+{{ $disabled := .Get "disabled" }}
+{{ $readonly := .Get "readonly" }}
+{{ $class := .Get "class" }}
+{{ $width :=  default "1/1" (.Get "width") }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div class="col-12" {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  {{ if $label }}
+    <label for="{{ $id }}" class="fw-600 mb-1">
+      {{ $label | markdownify }}
+    </label>
+  {{ end }}
+  <input
+    type="text"
+    {{ with $name }}name="{{ . }}"{{ end }}
+    {{ with $id }}id="{{ . }}"{{ end }}
+    {{ with $placeholder }}placeholder="{{ . }}"{{ end }}
+    {{ with $value }}value="{{ . }}"{{ end }}
+    {{ if $required }}required{{ end }}
+    {{ if $autofocus }}autofocus{{ end }}
+    {{ if $disabled }}disabled{{ end }}
+    {{ if $readonly }}readonly{{ end }}
+    {{ with $condition }}condition="{{ . }}"{{ end }}
+    class="form-control {{ with $class }}{{ . }}{{ end }}" />
+</div>

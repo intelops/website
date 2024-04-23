@@ -468,10 +468,13 @@ a:hover {
   padding: 20px;
   border: 1px solid rgba($black, 0.1);
   height: 56px;
+  color: $text-color !important;
   transition: 0.3s ease;
+  background-color: $dark-200 !important;
 
-  &:focus {
-    border-color: rgba($color-primary, 0.5);
+  &:focus,
+  &:-internal-autofill-selected {
+    border-color: rgba($dark-200, 0.5);
   }
 }
 
@@ -487,8 +490,8 @@ textarea.form-control {
 }
 
 form label {
-  font-weight: 500;
   font-size: 80%;
+  font-weight: 500;
   margin-bottom: 4px;
 }
 
@@ -515,6 +518,61 @@ form label {
     background-color: rgba($color-primary, 0.5);
     border-color: rgba($color-primary, 0.2);
   }
+}
+
+select {
+  background-color: $dark-200 !important;
+  border-color: $border-light-color !important;
+  color: $text-color !important;
+}
+
+.form-check-input,
+.form-radio-input {
+  cursor: pointer;
+  margin-top: 0.35em;
+}
+
+.form-check-input {
+  background-color: $dark-200;
+  border: 1px solid $border-light-color;
+  &:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+  &:focus {
+    border-color: $border-light-color;
+  }
+}
+.form-check-label {
+  cursor: pointer;
+}
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+  border-color: rgba($border-light-color, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba($border-light-color, 0.1);
+}
+
+// range slider
+input[type="range"]::-webkit-slider-thumb {
+  background: $color-primary;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: $color-primary;
+}
+
+input[type="range"]::-ms-thumb {
+  background: $color-primary;
+}
+-webkit-slider-thumb:active {
+  background-color: $color-primary;
+}
+-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb,
+input[type="range"]:focus::-moz-range-thumb,
+input[type="range"]:focus::-ms-thumb {
+  box-shadow: $color-primary;
 }
 
 // check-list
@@ -547,7 +605,7 @@ form label {
 }
 
 // content style
-.content {
+.content > *:not(.not-prose) {
   color: $text-color;
 
   p {
@@ -873,6 +931,9 @@ form label {
   *:not(li) {
     margin-bottom: 28px;
   }
+  // *:not(li):not(*[class*="col-"]):not(*[class*="form-group"]):not(input):not(textarea):not(select) {
+  //   margin-bottom: 28px;
+  // }
 
   .zenuml {
     *:not(li) {
@@ -999,13 +1060,38 @@ form label {
   padding: 8px 16px;
   font-size: 14px;
 
+  a {
+    text-decoration: underline;
+  }
+
+  &-icon {
+    border-radius: 1000px;
+    display: inline-block;
+    background-color: rgba($border-light-color, 0.2);
+    border: 1px solid rgba($border-light-color, 0.1);
+
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-inline-end: 5px;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &-success {
     color: green;
-    background-color: rgba(green, 0.2);
+    background-color: rgba(green, 0.1);
+  }
+
+  &-info {
+    color: $text-color;
+    background-color: rgba($text-color, 0.1);
   }
   &-danger {
     color: red;
-    background-color: rgba(red, 0.2);
+    background-color: rgba(red, 0.1);
   }
 }
 
@@ -1036,4 +1122,9 @@ form label {
 }
 .bg-attachment-fixed {
   background-attachment: fixed !important;
+}
+
+// Dynamic Conditional Form
+*[conditional-element="true"] {
+  display: none;
 }

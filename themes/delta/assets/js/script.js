@@ -472,3 +472,87 @@ if ($(".navigation-alt").length !== 0) {
   // });
 }
 
+function conditionalForm() {
+  document.querySelectorAll("[conditional-form]").forEach((form) => {
+    // Select all elements with the condition attribute
+    const conditionalElements = document.querySelectorAll('[condition]');
+
+    // Add event listeners to each conditional element
+    // Add event listeners to each conditional element
+    conditionalElements.forEach(element => {
+      element.addEventListener('change', function () {
+        // Get the condition specified in the attribute
+        const condition = this.getAttribute('condition');
+        const [conditionType, conditionValue] = condition.split(':');
+
+        // Check the condition type
+        if (conditionType === 'checked') {
+          // Hide all target elements with the same name as the current radio button
+          const groupName = this.getAttribute('name');
+          const targetElements = document.querySelectorAll(`[name="${groupName}"]`);
+          targetElements.forEach(targetElement => {
+            const targetCondition = targetElement.getAttribute('condition');
+            if (targetCondition) {
+              const [targetConditionType, targetConditionValue] = targetCondition.split(':');
+              if (targetConditionType === 'checked' && targetElement !== this && targetElement.checked) {
+                const previousTargetElement = document.getElementById(targetConditionValue);
+                hideElement(previousTargetElement);
+              }
+              // Rest of the code
+            } else {
+              // Handle the case when targetCondition is null
+            }
+          });
+
+          // Show the target element if the radio button is checked
+          if (this.checked) {
+            const targetElement = document.getElementById(conditionValue);
+            if (targetElement) {
+              showElement(targetElement);
+            }
+          }
+        } else if (conditionType === 'match') {
+          const [matchType, matchValue] = conditionValue.split('/');
+          const inputValue = this.value;
+
+          // Hide all target elements with the same ID
+          const targetElements = document.querySelectorAll(`#${matchValue}`);
+          targetElements.forEach(targetElement => {
+            hideElement(targetElement);
+          });
+
+          // Show the target element if the input value matches the condition value
+          if (matchType === 'match' && inputValue === matchValue) {
+            const targetElement = document.getElementById(conditionValue);
+            if (targetElement) {
+              showElement(targetElement);
+            }
+          }
+        }
+      });
+    });
+
+    // Function to hide an element
+    function hideElement(element) {
+      if (element) {
+        if (element.classList.contains('input-check-group')) {
+          element.style.display = 'none'; // If it's an input-check-group, hide itself
+        } else {
+          element.parentElement.style.display = 'none'; // Otherwise, hide its parent
+        }
+      }
+    }
+
+    // Function to show an element
+    function showElement(element) {
+      if (element) {
+        if (element.classList.contains('input-check-group')) {
+          element.style.display = 'block'; // If it's an input-check-group, show itself
+        } else {
+          element.parentElement.style.display = 'block'; // Otherwise, show its parent
+        }
+      }
+    }
+  });
+}
+conditionalForm();
