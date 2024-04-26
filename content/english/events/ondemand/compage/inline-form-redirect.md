@@ -6,7 +6,7 @@ event_date_location: "Jan 24, 2024 10AM CST"
 description: 
 weight: 02
 
-draft: false
+draft: true
 
 # # set it to true to enable popup form for registration
 # show_popup_form: true # You can test this form locally, but please note that submissions will not be sent to Netlify.
