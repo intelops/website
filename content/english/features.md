@@ -18,8 +18,8 @@ features:
   # features_blocks
   features_blocks:
   - title: "Capten"
-    features_color: "#FF9E2C"
-    title_color: ""
+    features_color: "#F88136"
+    title_color: "#F88136"
     icon: "images/icons/capten.svg"
     content: "Engineering Enablement with DevSecOps, Platform Engineering, Self-Service, Software Supply Chain Security and Universal Integration. One Captain to manage your evolution."
     content_color: ""
@@ -27,8 +27,8 @@ features:
     link_label: "Details"
 
   - title: "Compage"
-    features_color: "#005DFF"
-    title_color: ""
+    features_color: "#337EFF"
+    title_color: "#337EFF"
     icon: "images/icons/compage.svg"
     content: "Diagram to Code. Generate code in your favorite programming language for backend applications."
     content_color: ""
@@ -37,7 +37,7 @@ features:
     
   - title: "Quality-Trace"
     features_color: "#00B8D4"
-    title_color: ""
+    title_color: "#00B8D4"
     icon: "images/icons/quality-trace.svg"
     content: "openTelemetry based functional testing for new generation applications for your full stack."
     content_color: ""
@@ -46,7 +46,7 @@ features:
     
   - title: "Opty"
     features_color: "#05C168"
-    title_color: ""
+    title_color: "#05C168"
     icon: "images/icons/opty.svg"
     content: "Proactive solution to reduce carbon emission, and optimize Performance and Cost of workloads in Kubernetes."
     content_color: ""
@@ -54,8 +54,8 @@ features:
     link_label: "Details"
     
   - title: "KubViz"
-    features_color: "#FFD93D"
-    title_color: ""
+    features_color: "#FDB52A"
+    title_color: "#FDB52A"
     icon: "images/icons/kubviz.svg"
     content: "Unified Observability for git, containers, kubernetes and software supply chain security with ease."
     content_color: ""
@@ -63,8 +63,8 @@ features:
     link_label: "Details"
     
   - title: "Tarian"
-    features_color: "#7D42FB"
-    title_color: ""
+    features_color: "#9869FC"
+    title_color: "#9869FC"
     icon: "images/icons/tarian.svg"
     content: "Unified Run-time security for threat elimination using eBPF, for cloud native ecosystem."
     content_color: ""

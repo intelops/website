@@ -176,7 +176,7 @@
     <div class="footer-bottom">
       <div class="row">
         <div class="col-12">
-          <p class="content mb-0 text-center">
+          <p class="copyright mb-0 text-center">
             {{ site.Params.copyright | markdownify }} -
             <script>
               document.write(new Date().getFullYear());
@@ -189,12 +189,8 @@
 
   <div class="has-wave">
     <svg
-      class="wave-left {{ if $footer_light }}
-        text-dark
-      {{ else }}
-        text-white
-      {{ end }}"
-      style="opacity:0.15"
+      class="wave-left"
+      style="opacity:0.6"
       width="313"
       height="230"
       viewBox="0 0 313 230"
@@ -205,12 +201,8 @@
         fill="currentColor" />
     </svg>
     <svg
-      class="wave-right {{ if $footer_light }}
-        text-dark
-      {{ else }}
-        text-white
-      {{ end }}"
-      style="opacity:0.15"
+      class="wave-right"
+      style="opacity:0.6"
       width="291"
       height="170"
       viewBox="0 0 291 170"

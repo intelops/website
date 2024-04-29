@@ -36,7 +36,7 @@ main:empty {
     pointer-events: none;
 
     svg {
-      color: color-mix(in srgb, $text-color 40%, $dark-300 30%);
+      color: $dark-300;
       position: absolute;
       max-width: 100%;
 
@@ -256,7 +256,7 @@ main:empty {
     .block {
       background-color: $dark-300;
       border-radius: 15px;
-      border: 2px solid transparent;
+      border: 1px solid transparent;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       transition: 0.1s;
       padding: 45px 35px;
@@ -279,9 +279,9 @@ main:empty {
       }
 
       a.btn {
-        background-color: $dark-800;
+        background-color: $dark-600;
         color: inherit;
-        border-color: $dark-800;
+        border-color: $dark-600;
       }
     }
 
@@ -1074,33 +1074,45 @@ main:empty {
     }
   }
 
-  &:nth-child(odd) {
-    .badge {
-      background-color: $color-primary;
-    }
-
-    .blog-title:hover {
-      color: $color-primary;
-    }
-
-    .user-info a:hover {
-      color: $color-primary;
-    }
+  .badge {
+    background-color: $color-primary;
   }
 
-  &:nth-child(even) {
-    .badge {
-      background-color: $color-tertiary;
-    }
-
-    .blog-title:hover {
-      color: $color-tertiary;
-    }
-
-    .user-info a:hover {
-      color: $color-tertiary;
-    }
+  .blog-title:hover {
+    color: $color-primary;
   }
+
+  .user-info a:hover {
+    color: $color-primary;
+  }
+  
+  // &:nth-child(odd) {
+  //   .badge {
+  //     background-color: $color-primary;
+  //   }
+
+  //   .blog-title:hover {
+  //     color: $color-primary;
+  //   }
+
+  //   .user-info a:hover {
+  //     color: $color-primary;
+  //   }
+  // }
+
+  // &:nth-child(even) {
+  //   .badge {
+  //     background-color: $color-tertiary;
+  //   }
+
+  //   .blog-title:hover {
+  //     color: $color-tertiary;
+  //   }
+
+  //   .user-info a:hover {
+  //     color: $color-tertiary;
+  //   }
+  // }
 }
 
 .disqus-block,
@@ -1665,8 +1677,8 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
-    border-top: 1px solid $border-color;
-    border-bottom: 1px solid $border-color;
+    border-top: 1px solid $border-color-dark;
+    border-bottom: 1px solid $border-color-dark;
 
     &-title {
       font-size: 18px;
@@ -2543,4 +2555,9 @@ footer {
       display: inline-block;
     }
   }
+}
+
+// Copyright
+.copyright {
+  color: $text-color-dark;
 }

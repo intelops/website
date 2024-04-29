@@ -36,12 +36,8 @@
 }
 
 .btn-primary {
-  background: linear-gradient(
-    135deg,
-    lighten($color-primary, 10) 0%,
-    darken($color-primary, 5) 100%
-  ) !important;
-  color: $white;
+  background: $color-primary;
+  color: $dark-900;
   border: 0;
 
   &:hover,
@@ -49,12 +45,9 @@
   &.active,
   &:focus,
   &.focus {
+    color: $dark-900;
     box-shadow: 0 10px 30px -6px rgba($color-primary, 0.5) !important;
-    background: linear-gradient(
-      135deg,
-      lighten($color-primary, 10) 0%,
-      darken($color-primary, 5) 100%
-    );
+    background: $color-primary;
   }
 }
 
