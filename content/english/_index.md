@@ -5,18 +5,16 @@ banner:
   title: Be Future-Ready With our SaaS 2.0
   title_color: ""
   description:
-    Stay future-ready with our market-first SaaS 2.0 solution that simplifies cloud-native technology, <br> enhances software supply chain security, and empowers businesses to scale for growth.<br><br>
+    Proactive AI-driven Agnostic Solution to Enable Engineers.<br><br>
+
+    Stay future-ready with our market-first SaaS 2.0 solution that simplifies software development, <br> cloud-native technology, enhances software supply chain security, and <br> empowers businesses to scale for growth.<br>
 
    <!-- Engineering Enablement with Self-Service based Platform Engineering Stack. -->
    
-   Engineering Enablement for the Digital Future.<br><br>
+   Engineering Enablement for the Digital Future.
 
-    We are currently in Stealth mode.<br>
-    Join the waitlist & be the first to know about the launch.<br><br>
-    
-    Enabling Engineering with Agnostic Framework Model-based Proactive Solutions.   
-    
-          
+
+
   description_color: ""
   button:
     enable: false
@@ -30,7 +28,7 @@ banner:
 
   join_waitlist:
     enable: true
-    button_label: "Join Waitlist"
+    button_label: "Contact for Demo" # previous button name was Join Waitlist 
     clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
   # If lottie is enable image will not show as static image. Automatically lottie animation will load.
