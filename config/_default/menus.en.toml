@@ -32,10 +32,10 @@ weight = 1
 name = "Blogs"
 url = "/blog"
 weight = 2
-[[footer_menu_2]]
-name = "Mindmaps"
-url = "/mindmaps"
-weight = 3
+# [[footer_menu_2]]
+# name = "Mindmaps"
+# url = "/mindmaps"
+# weight = 3
 [[footer_menu_2]]
 name = "Learning Center"
 url = "/learning-center"
@@ -50,9 +50,9 @@ weight = 4
 # weight = 6
 
 [[footer_menu_3]]
-name = "Services"
-url = "/services-form/"
-weight = 1
+# name = "Services"
+# url = "/services-form/"
+# weight = 1
 # [[footer_menu_3]]
 # name = "Certified Partner Program"
 # url = "/certified-partner-program/"
@@ -243,11 +243,11 @@ weight = 4
 # parent = "Resources"
 # url = "team/"
 # weight = 2
-[[main]]
-name = "Mindmaps"
-parent = "Resources"
-url = "mindmaps/"
-weight = 2
+# [[main]]
+# name = "Mindmaps"
+# parent = "Resources"
+# url = "mindmaps/"
+# weight = 2
 # [[main]]
 # name = "Contact Us"
 # parent = "Resources"
