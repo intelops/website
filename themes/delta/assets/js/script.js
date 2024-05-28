@@ -1,27 +1,33 @@
 // Links Page Animation
-anime.timeline().add({
-  targets: ['.links-page-image img'],
-  opacity: [0, 1],
-  translateY: [50, 0],
-  easing: 'easeOutExpo',
-  duration: 1400,
-  delay: (el, i) => 100 * (i + 1)
-}).add({
-  targets: ['.links-page-title p'],
-  opacity: [0, 1],
-  translateY: [50, 0],
-  rotate: ["3deg", "0deg"],
-  skewX: ["-13deg", "0deg"],
-  easing: 'easeOutExpo',
-  duration: 1400,
-  delay: (el, i) => 100 * (i + 1)
-}, "-=1200")
+anime
+  .timeline()
+  .add({
+    targets: [".links-page-image img"],
+    opacity: [0, 1],
+    translateY: [50, 0],
+    easing: "easeOutExpo",
+    duration: 1400,
+    delay: (el, i) => 100 * (i + 1),
+  })
+  .add(
+    {
+      targets: [".links-page-title p"],
+      opacity: [0, 1],
+      translateY: [50, 0],
+      rotate: ["3deg", "0deg"],
+      skewX: ["-13deg", "0deg"],
+      easing: "easeOutExpo",
+      duration: 1400,
+      delay: (el, i) => 100 * (i + 1),
+    },
+    "-=1200",
+  );
 
-ScrollReveal().reveal('.link', {
-  duration: 300
+ScrollReveal().reveal(".link", {
+  duration: 300,
 });
-ScrollReveal().reveal('.link-item', {
-  duration: 600
+ScrollReveal().reveal(".link-item", {
+  duration: 600,
 });
 
 // Passive event listeners
@@ -79,19 +85,18 @@ async function copyCode(block, button) {
 $(document).ready(function () {
   "use strict";
 
-  const scrolledPopup = document.querySelector('.scrolledPopup');
+  const scrolledPopup = document.querySelector(".scrolledPopup");
   if (scrolledPopup) {
-
-    let contentBlock = document.querySelector('.get-content-block-height');
+    let contentBlock = document.querySelector(".get-content-block-height");
     let contentBlockHeight = contentBlock.scrollHeight;
 
     $(window).scroll(function () {
-      if ($(window).scrollTop() >= (contentBlockHeight * 0.85)) {
-        if (sessionStorage.getItem('blogScrolledPopupHide') != 'true') {
-          $('.blog-popup').addClass('show');
+      if ($(window).scrollTop() >= contentBlockHeight * 0.85) {
+        if (sessionStorage.getItem("blogScrolledPopupHide") != "true") {
+          $(".blog-popup").addClass("show");
         }
-        if (sessionStorage.getItem('learningScrolledPopupHide') != 'true') {
-          $('.learning-center-popup').addClass('show');
+        if (sessionStorage.getItem("learningScrolledPopupHide") != "true") {
+          $(".learning-center-popup").addClass("show");
         }
       }
     });
@@ -101,15 +106,15 @@ $(document).ready(function () {
     });
 
     $('.blog-popup [data-hide="scrolledPopup"]').click(function () {
-      sessionStorage.setItem('blogScrolledPopupHide', 'true');
+      sessionStorage.setItem("blogScrolledPopupHide", "true");
     });
     $('.learning-center-popup [data-hide="scrolledPopup"]').click(function () {
-      sessionStorage.setItem('learningScrolledPopupHide', 'true');
+      sessionStorage.setItem("learningScrolledPopupHide", "true");
     });
   }
 
   $('[data-bs-toggle="collapse"]').on("click", function () {
-    if (!$(this).hasClass('accordion-button')) {
+    if (!$(this).hasClass("accordion-button")) {
       if ($(this).attr("aria-expanded") == "true") {
         $("body").addClass("overflow-hidden");
       } else {
@@ -120,7 +125,7 @@ $(document).ready(function () {
 
   // sidenav js
   const matches = document.querySelectorAll(
-    `li[data-nav-id$="${window.location.pathname}"]`
+    `li[data-nav-id$="${window.location.pathname}"]`,
   );
   if (matches.length > 0) {
     const menu = matches[0];
@@ -221,10 +226,12 @@ $(document).ready(function () {
       $videoSrc = $(this).data("src");
     });
     $("#videoModal").on("shown.bs.modal", function (e) {
-      $(e.target).find("iframe").attr("src", $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
+      $(e.target)
+        .find("iframe")
+        .attr("src", $videoSrc + "?autoplay=1&modestbranding=1&showinfo=0");
       $("#showVideo").attr(
         "src",
-        $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0"
+        $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0",
       );
     });
     $("#videoModal").on("hidden.bs.modal", function (e) {
@@ -256,7 +263,7 @@ $(document).ready(function () {
               complete: function () {
                 $this.text(Math.ceil(this.countNum).toLocaleString("en"));
               },
-            }
+            },
           );
         });
         a = 1;
@@ -302,8 +309,8 @@ $(document).ready(function () {
         title = $(this).attr("title");
       navTabs.append(
         '<li class="nav-item"><a class="nav-link" href="#">' +
-        title +
-        "</a></li>"
+          title +
+          "</a></li>",
       );
     });
 
@@ -405,15 +412,6 @@ $(window).on("load", function () {
   }
 });
 
-// $(".navigation-alt").hover(
-//   function () {
-//     $("#secondary-header").addClass("header-sec");
-//   },
-//   function () {
-//     $("#secondary-header").removeClass("header-sec");
-//   }
-// );
-
 if ($(".navigation-alt").length !== 0) {
   let navigationAlt = $(".navigation-alt");
   let navigationBottom = $(".navigation-bottom");
@@ -472,87 +470,297 @@ if ($(".navigation-alt").length !== 0) {
   // });
 }
 
+function setRequired(form) {
+  /**
+   * Remove required attribute for hidden elements for accessibility purpose & chromium based browser bug
+   */
+  document.querySelectorAll("[conditional-element]").forEach((element) => {
+    // Check if element is hidden
+    if (
+      element.style.getPropertyValue("display") === "none" ||
+      element.style.getPropertyValue("display") === ""
+    ) {
+      element.querySelectorAll("[data-name]").forEach((element) => {
+        // Don't submit form element value if its hidden
+        element.removeAttribute("name");
+
+        // Remove required attribute from hidden elements
+        element.removeAttribute("required");
+      });
+    }
+    // Check if element is visible
+    else if (element.style.getPropertyValue("display") === "block") {
+      element.querySelectorAll("[data-name]").forEach((element) => {
+        // Add name attribute to visible elements
+        const name = element.getAttribute("data-name");
+        if (name) {
+          element.setAttribute("name", name);
+        }
+
+        // Add required attribute to visible elements
+        if (element.getAttribute("data-required") === "true") {
+          element.setAttribute("required", "");
+        }
+      });
+    }
+  });
+}
+
 function conditionalForm() {
   document.querySelectorAll("[conditional-form]").forEach((form) => {
-    // Select all elements with the condition attribute
-    const conditionalElements = document.querySelectorAll('[condition]');
+    let previous = null;
 
-    // Add event listeners to each conditional element
-    // Add event listeners to each conditional element
-    conditionalElements.forEach(element => {
-      element.addEventListener('change', function () {
-        // Get the condition specified in the attribute
-        const condition = this.getAttribute('condition');
-        const [conditionType, conditionValue] = condition.split(':');
+    form.onsubmit = function (e) {
+      e.preventDefault(); // Prevent the form from submitting the traditional way
 
-        // Check the condition type
-        if (conditionType === 'checked') {
-          // Hide all target elements with the same name as the current radio button
-          const groupName = this.getAttribute('name');
-          const targetElements = document.querySelectorAll(`[name="${groupName}"]`);
-          targetElements.forEach(targetElement => {
-            const targetCondition = targetElement.getAttribute('condition');
-            if (targetCondition) {
-              const [targetConditionType, targetConditionValue] = targetCondition.split(':');
-              if (targetConditionType === 'checked' && targetElement !== this && targetElement.checked) {
-                const previousTargetElement = document.getElementById(targetConditionValue);
-                hideElement(previousTargetElement);
-              }
-              // Rest of the code
-            } else {
-              // Handle the case when targetCondition is null
-            }
-          });
+      console.log("Form submitted");
 
-          // Show the target element if the radio button is checked
-          if (this.checked) {
-            const targetElement = document.getElementById(conditionValue);
-            if (targetElement) {
-              showElement(targetElement);
-            }
-          }
-        } else if (conditionType === 'match') {
-          const [matchType, matchValue] = conditionValue.split('/');
-          const inputValue = this.value;
+      const formData = new FormData(this);
+      const entries = formData.entries();
 
-          // Hide all target elements with the same ID
-          const targetElements = document.querySelectorAll(`#${matchValue}`);
-          targetElements.forEach(targetElement => {
-            hideElement(targetElement);
-          });
+      for (const [name, value] of entries) {
+        console.log(`${name}: ${value}`);
+      }
+    };
 
-          // Show the target element if the input value matches the condition value
-          if (matchType === 'match' && inputValue === matchValue) {
-            const targetElement = document.getElementById(conditionValue);
-            if (targetElement) {
-              showElement(targetElement);
-            }
-          }
+    // Initially Check condition of all select element of form
+    form.querySelectorAll("select").forEach((element) => {
+      conditionChecker(element);
+    });
+
+    // Set previous element value for radio in order to unchecked all others radio with same name attribute except current checked one
+    form.querySelectorAll("[data-name]").forEach((element) => {
+      element.addEventListener("blur", function (e) {
+        if (e.target.type === "radio" && e.target.checked) {
+          previous = e.target;
         }
       });
     });
 
+    form.addEventListener("change", function (e) {
+      const condition = e.target.getAttribute("condition");
+      const type = e.target.getAttribute("type");
+      const tagName = e.target.tagName;
+
+      if (
+        (tagName === "INPUT" || tagName === "TEXTAREA") &&
+        type !== "checkbox" &&
+        type !== "radio" &&
+        type !== "file" &&
+        type !== "submit" &&
+        type !== "reset" &&
+        type !== "button" &&
+        type !== "image" &&
+        type !== "hidden" &&
+        type !== "password" &&
+        type !== "search"
+      ) {
+        if (condition) {
+          conditionChecker(e.target);
+        }
+      }
+
+      if (type === "radio") {
+        const name = e.target.getAttribute("name");
+        const checked = e.target.getAttribute("checked");
+
+        isNestedElem(previous, e.target);
+        conditionChecker(e.target);
+      }
+
+      if (tagName === "SELECT") {
+        conditionChecker(e.target);
+      }
+
+      setRequired();
+    });
+
+    /**
+     * Function to hide element with same name attribute value
+     * @param {*} form - form element
+     * @param {*} name - name attribute value
+     */
+    function hideTargetElements(form, name) {
+      const elements = form.querySelectorAll('[data-name="' + name + '"]');
+
+      elements.forEach((element) => {
+        const condition = element.getAttribute("condition");
+        if (condition) {
+          const [conditionType, conditionValue] = condition.split(":");
+          const targetElement = form.querySelector(`#${conditionValue}`);
+
+          if (targetElement) targetElement.style.display = "none";
+        }
+      });
+    }
+
+    // function nested(element, prev) {
+    //   const condition = element.getAttribute("condition");
+
+    //   if (condition) {
+    //     const [conditionType, conditionValue] = element
+    //       .getAttribute("condition")
+    //       .split(":");
+    //     const targetElement = form.querySelector(`#${conditionValue}`);
+
+    //     if (targetElement) {
+    //       const nestedElements = targetElement?.querySelectorAll("[data-name]");
+
+    //       // if have nested elementes
+    //       nestedElements.forEach((element) => {
+    //         // Check if the target element child has nested elements
+    //         if (element.getAttribute("condition")) {
+    //           nested(element);
+    //           if (prev) {
+    //             conditionChecker(element, true);
+    //           } else {
+    //             conditionChecker(element);
+    //           }
+    //         }
+    //       });
+
+    //       if (!(nestedElements && nestedElements.length >= 0)) {
+    //         nested(targetElement);
+    //       }
+    //     }
+    //   }
+    // }
+
+    /**
+     * Function to check condition and show or hide target element based on condition value
+     * @param {*} element
+     */
+    function conditionChecker(element) {
+      const condition = element.getAttribute("condition");
+      const currentFormElementNameAttr = element.getAttribute("name");
+
+      if (condition) {
+        const [conditionType, conditionValue] = condition.split(":");
+        const targetElement =
+          conditionType === "checked" &&
+          form.querySelector(`#${conditionValue}`);
+
+        // Initially hide all radio input target elements
+        currentFormElementNameAttr &&
+          hideTargetElements(form, currentFormElementNameAttr);
+
+        // For radio input based on checked value
+        if (conditionType === "checked" && element.checked) {
+          showElement(targetElement);
+        }
+
+        // Check Matching Condition like action based on input or select value
+        else if (conditionType.startsWith("match/")) {
+          // If have multiple match condition. example - "match/14:adult-only;match/16:adult-only"
+          const conditions = condition.split(";");
+          const value = removeSpaces(element.value);
+          if (conditions && conditions.length > 1) {
+            const matchingCondition = conditions.filter((condition) =>
+              condition.includes(value),
+            )[0];
+            const targetElementId = matchingCondition?.split(":")[1];
+
+            // Initially hide all target elements
+            conditions.forEach((condition) => {
+              const targetElementId = condition?.split(":")[1];
+              if (targetElementId) {
+                const targetElement = form.querySelector(`#${targetElementId}`);
+                hideElement(targetElement);
+              }
+            });
+
+            if (targetElementId) {
+              const [conditionType, matchingWord] = matchingCondition
+                ?.split(":")[0]
+                .split("/");
+              const targetElement = form.querySelector(`#${targetElementId}`);
+
+              if (
+                targetElement &&
+                !targetElement.disabled &&
+                matchingWord &&
+                element.value.includes(matchingWord)
+              ) {
+                showElement(targetElement);
+              }
+            }
+          }
+
+          // If only one match condition. example - "match/located:location"
+          else {
+            const matchingWord = conditionType?.split("/")[1];
+            if (
+              targetElement &&
+              !targetElement.disabled &&
+              matchingWord &&
+              value.includes(matchingWord)
+            ) {
+              showElement(targetElement);
+            } else {
+              hideElement(targetElement);
+            }
+          }
+        } else {
+          hideElement(targetElement);
+        }
+      } else {
+        currentFormElementNameAttr &&
+          hideTargetElements(form, currentFormElementNameAttr);
+      }
+    }
+
+    function isNestedElem(prev, current) {
+      if (prev && current) {
+        if (prev.getAttribute("condition")) {
+          const [conditionType, conditionValue] = prev
+            .getAttribute("condition")
+            .split(":");
+          const prevTargetElement = form.querySelector(`#${conditionValue}`);
+          const currentElemId = current.getAttribute("id");
+
+          if (prevTargetElement) {
+            const currElemExistInPrev = prevTargetElement.querySelector(
+              `#${currentElemId}`,
+            );
+
+            if (!currElemExistInPrev) {
+              prev.checked = false;
+              prevTargetElement.style.display = "none";
+            } else {
+              prevTargetElement.style.display = "block";
+            }
+          }
+        } else {
+          const parentElem = prev.closest("[conditional-element]");
+          if (parentElem) {
+            prev.checked = false;
+            parentElem.style.display = "none";
+          }
+        }
+      }
+    }
+
     // Function to hide an element
     function hideElement(element) {
       if (element) {
-        if (element.classList.contains('input-check-group')) {
-          element.style.display = 'none'; // If it's an input-check-group, hide itself
-        } else {
-          element.parentElement.style.display = 'none'; // Otherwise, hide its parent
-        }
+        element.style.display = "none";
       }
     }
 
     // Function to show an element
     function showElement(element) {
       if (element) {
-        if (element.classList.contains('input-check-group')) {
-          element.style.display = 'block'; // If it's an input-check-group, show itself
-        } else {
-          element.parentElement.style.display = 'block'; // Otherwise, show its parent
-        }
+        element.style.display = "block";
       }
+    }
+
+    //
+    function removeSpaces(string) {
+      return string.trim().replace(/\s\s+/g, " ");
     }
   });
 }
 conditionalForm();
+
+// Initially check for required attributes
+setRequired();

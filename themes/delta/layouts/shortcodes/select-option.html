@@ -1,0 +1,17 @@
+{{ $label := .Get "label" }}
+{{ $value := .Get "value" }}
+{{ $disabled := .Get "disabled" }}
+{{ $selected := .Get "selected" }}
+
+{{/* prettier-ignore-start */}}
+<option
+  value="{{ if $value }}{{ $value }}{{ end }}"
+  {{ with $selected }}selected="{{ . }}"{{ end }}
+  {{ with $disabled }}disabled="{{ . }}"{{ end }}>
+  {{ with $label }}
+    {{ . | title }}
+  {{ else }}
+    {{ $value  | title }}
+  {{ end }}
+</option>
+{{/* prettier-ignore-end */}}

@@ -379,12 +379,20 @@ a:hover {
   background: $banner-primary !important;
 }
 
+.w-full {
+  width: 100% !important;
+}
+
 .text-primary {
   color: $color-primary !important;
 }
 
 .text-text {
   color: $text-color !important;
+}
+
+.text-subtle {
+  color: $text-color-subtle !important;
 }
 
 .bg-secondary {
@@ -493,6 +501,13 @@ form label {
   font-size: 80%;
   font-weight: 500;
   margin-bottom: 4px;
+
+  @include desktop-xl {
+    font-size: 90%;
+  }
+}
+form[conditional-form] .input-check-group > *:not(:first-child) {
+  margin-top: 12px !important;
 }
 
 .custom-checkbox {
@@ -521,7 +536,11 @@ form label {
 }
 
 select {
-  background-color: $dark-200 !important;
+  padding: 15px 20px !important;
+  background: $dark-200 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 16px 12px !important;
   border-color: $border-color-light !important;
   color: $text-color !important;
 }
@@ -1081,8 +1100,8 @@ input[type="range"]:focus::-ms-thumb {
   }
 
   &-success {
-    color: green;
-    background-color: rgba(green, 0.1);
+    color: $text-color;
+    background-color: rgba(green, 0.2);
   }
 
   &-info {
@@ -1128,3 +1147,4 @@ input[type="range"]:focus::-ms-thumb {
 *[conditional-element="true"] {
   display: none;
 }
+

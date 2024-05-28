@@ -5,7 +5,7 @@
 
 {{ $conditionalElement := .Get "conditional-element" }}
 
-<div class="col-12 mb-0" {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+<div class="col-12 mb-0 input-note" {{ with $id }}id="{{ . }}"{{ end }} {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
   <div class="alert {{ with $type }}alert-{{ . }}{{ end }}" role="alert">
    <div class="alert-icon">i</div> {{ $value | markdownify }}
   </div>

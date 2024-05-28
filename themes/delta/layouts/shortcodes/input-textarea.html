@@ -14,20 +14,25 @@
 {{ $conditionalElement := .Get "conditional-element" }}
 
 
-<div class="col-12" {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+<div
+  class="col-12"
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
   {{ if $label }}
-    <label for="{{ $id }}" class="fw-600 mb-1">
+    <label for="input-{{ $id }}" class="fw-600 mb-1">
       {{ $label | markdownify }}
     </label>
   {{ end }}
   <textarea
     cols="30"
     rows="10"
+    {{ with $name }}data-name="{{ . }}"{{ end }}
     {{ with $name }}name="{{ . }}"{{ end }}
-    {{ with $id }}id="{{ . }}"{{ end }}
+    {{ with $id }}id="input-{{ . }}"{{ end }}
     {{ with $placeholder }}placeholder="{{ . }}"{{ end }}
     {{ with $value }}value="{{ . }}"{{ end }}
     {{ if $required }}required{{ end }}
+    {{ if $required }}data-required="true"{{ end }}
     {{ if $autofocus }}autofocus{{ end }}
     {{ if $disabled }}disabled{{ end }}
     {{ if $readonly }}readonly{{ end }}

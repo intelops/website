@@ -21,11 +21,7 @@
 
 
 <footer
-  class="{{ if $footer_light }}
-    bg-light
-  {{ else }}
-    bg-dark
-  {{ end }} px-1 wave-block"
+  class="bg-dark-600 px-1 wave-block"
   style="{{- if $bg_color -}}
     background-color:{{ $bg_color }}!important;
   {{- end -}}{{- if $bg_image -}}
@@ -106,7 +102,7 @@
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -121,7 +117,7 @@
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -136,7 +132,7 @@
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -151,7 +147,7 @@
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -166,7 +162,7 @@
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>

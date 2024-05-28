@@ -9,12 +9,12 @@
 
 
 <div
-  class="d-flex p-3 {{ if eq $style `rounded-boxed` }}
+  class="p-3 {{ if eq $style `rounded-boxed` }}
     rounded-sm
   {{ end }}"
   {{ with $background }}style="background-color: {{ . }}"{{ end }}>
   <form
-    {{ if $netlify }}netlify{{ end }}
+    {{ with $netlify }}netlify method="post"{{ end }}
     {{ with $action }}action="{{ . }}"{{ end }}
     {{ with $conditionalForm }}conditional-form="true"{{ end }}
     class="row g-2 mb-0 {{ with $class }}{{ . }}{{ end }}">
