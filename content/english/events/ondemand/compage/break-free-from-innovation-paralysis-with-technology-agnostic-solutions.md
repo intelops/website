@@ -1,12 +1,12 @@
 ---
-date: "2024-01-24"
-title: "Inline Form Video"
-image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
-event_date_location: "Jan 24, 2024 10AM CST"
-description: 
+date: "2024-05-29"
+title: "Break Free from Innovation Paralysis with Technology Agnostic Solutions"
+image: "/images/events-webinars/webinar-thumbnail-may.jpg" # use 800x550 or 16:11 ratio image
+event_date_location: "May 29, 2024 11:30PM CST"
+description: Unlock engineering agility with our webinar on technology-agnostic solutions. Overcome legacy systems, talent gaps, and complex architectures for faster, secure delivery.
 weight: 02
 
-draft: true 
+draft: false
 
 # # set it to true to enable popup form for registration
 # show_popup_form: true # You can test this form locally, but please note that submissions will not be sent to Netlify.
@@ -28,22 +28,21 @@ hide_post_meta: true # hide post meta like last update & publish data, estimated
 
 bannerarea: true
 bannertext_color: "#fff"
-bannerimage: images/banner/mindmaps-page/intelops-webinar-03.svg
+bannerimage: images/banner/mindmaps-page/webinar-background.png
 ---
 
 <div class="row gx-lg-5">
     <div class="col-lg-7">
-With evolving technology landscape, growth is synonymous with new and innovative solutions. Our webinar, specifically designed for technology and business leaders in regulatory industries, addresses this head-on. We are focusing on the intersection of Generative AI, agnostic frameworks and compliance, and secure innovation.
+Feeling the pressure of ever-increasing customer expectations but stuck with a tech stack that limits your engineering team's agility? Join our on-demand webinar and discover how a technology-agnostic approach empowers organizations to navigate challenges like legacy system issues, talent gaps, and complex architecture and deliver faster, more secure solutions.  </br></br>
 
-- **Simplifying Modern Technology Integration:** Learn to integrate modern tech seamlessly, overcoming obstacles and using agnostic frameworks to enhance your tech stack efficiently and compliantly.
+-  Learn how to overcome the limitations of proprietary tech stacks. 
 
-- **Generative AI:** Power and Security: Discover Generative AI's impact on business and gain insights on its unique challenges.
+- Access a guided roadmap to implement this approach and achieve unprecedented agility. 
 
-- **Secure Programming and System Defense Best Practices:** Dive into essential secure programming practices and why we need strong defenses against threats, ensuring system security under regulatory compliance.
+- Discover how Capten Stack, our AI-powered software development platform suite, exemplifies technology agnosticism and streamlines the entire software development lifecycle. 
 
-We'also unveiled Compage, our universal language framework, that standardizes development, streamlines integration, enables Generative AI adoption, and bolsters security.  
+Fill out the form and get access to your on-demand recording now! 
 
-Download your on-demand recording today!
 
 ### Speaker Details
 
@@ -55,6 +54,6 @@ Chandrakanth Paladugu is a skilled architect with a deep passion for problem-sol
 </div>
 
 <div class="col-lg-5">
-{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/a3ICNMQW7Ok" event_form_redirect_url="" event_form_success_action="video">}}
+{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/6BlMVfAltYo?si=XTXYegEzOU8Hu2F0" event_form_redirect_url="" event_form_success_action="video">}}
 </div>
 </div>
