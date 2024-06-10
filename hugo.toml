@@ -174,46 +174,37 @@ link = "https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@2.0.3/dist/lotti
 
 ########################### Variables ##########################
 [params.variables]
-banner_desc = "#acacac"
 banner_primary = "#091922" # prviously original = 121826
 banner_secondary = "#FF5100"
-banner_subtitle = "#FF5100"
-banner_title = "#fff"
+
 color_quaternary = "#6E9240"
 color_tertiary = "#ED6F78"
 dark = "#091922" # previous original = 050038
+black = "#000"
+
 font_primary = "Catamaran:wght@700;900"
 font_primary_type = "sans-serif"
 font_scale = "1.2"
 font_secondary = "Rubik:wght@400;500;600"
 font_secondary_type = "sans-serif"
 font_size = "16px"
-header_bar_bg = "#f7f7f7"
 icon_font = "Font Awesome 5 Free"
+
 light = "#fdfdfd"
-nav_menu_text = "#464b4b"
-navbar_mobile_bg = "#eaeaea00"
 text_dark = "#222222"
 text_light = "#959595"
 white = "#fff"
 secblack = "#121826"
 
 # Dark Mode Colors
-color_primary = "#F88136"
+color_primary = "#F99A5E"
 
-black = "#000"
+dark_50 = "#262423"
+dark_300 = "#2E2C2B"
+dark_900 = "#433F3D"
 
-dark_200 = "#353741"
-dark_300 = "#2F323C"
-dark_600 = "#1D1F26"
-dark_800 = "#292C34"
-dark_900 = "#0F0F0F"
-
-text_color = "#F4F8FF"
-text_color_dark = "#606271"
-text_color_subtle = "#B0B8C7"
-text_color_blue_subtle = "#A4B0CA"
-border_color = "#424653"
-border_color_dark = "#2F323C"
+text_color = "#FEF2EB"
+text_color_dark = "#9C9692"
+border_color = "#433F3D"
 border_color_light = "#A4B0CA"
-body_color = "#0A0B0D"
+body_color = "#202020"

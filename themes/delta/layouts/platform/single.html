@@ -14,19 +14,17 @@
           <div class="col-lg-6">
             <div class="pe-0 pe-lg-5">
               <p
-                class="subtitle {{ if not .subtitle_color }}text-white{{ end }}"
+                class="subtitle"
                 {{ with .subtitle_color }}style="color:{{ . }}"{{ end }}>
                 {{ .subtitle | markdownify }}
               </p>
               <h1
-                class="title text-xl mb-3 {{ if not .title_color }}
-                  text-white
-                {{ end }}"
+                class="title text-xl mb-3"
                 {{ with .title_color }}style="color:{{ . }}"{{ end }}>
                 {{ .title | markdownify }}
               </h1>
               <p
-                class="mb-4 {{ if not .description_color }}text-light{{ end }}"
+                class="mb-4"
                 {{ with .description_color }}style="color:{{ . }}"{{ end }}>
                 {{ .description | markdownify }}
               </p>
@@ -35,7 +33,7 @@
                 {{ if .enable }}
                   <a
                     href="{{ .link | relLangURL }}"
-                    class="btn btn-dark m-1 border-dark">
+                    class="btn btn-primary m-1">
                     {{ .label }}
                     <i class="arrow-right {{ .icon }}"></i>
                   </a>
@@ -45,13 +43,13 @@
               {{ with .video_button }}
                 {{ if .enable }}
                   <button
-                    class="btn btn-outline-white btn-play m-1 shadow-none"
+                    class="btn btn-outline btn-play m-1 shadow-none"
                     type="button"
                     data-bs-toggle="modal"
                     data-src="{{ .video_url | safeURL }}"
                     data-bs-target="#videoModal"
                     aria-label="watch video">
-                    <i class="fas fa-play border-white bg-white"></i>
+                    <i class="fas fa-play"></i>
                     {{ .label }}
                   </button>
                 {{ end }}
@@ -99,7 +97,7 @@
   {{ with .Params.image_and_content_block }}
     {{ if .enable }}
       <div class="position-relative">
-        {{ range .blocks }}
+        {{ range $i, $ele:= .blocks }}
           {{ if .enable }}
             {{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image "Largegap" true ) }}
           {{ end }}

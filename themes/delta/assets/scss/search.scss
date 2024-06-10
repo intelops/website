@@ -7,12 +7,12 @@
   }
 }
 .modal-header {
-  background-color: $dark-200;
+  background-color: $dark-50;
 }
 .search-modal {
   .search-form-control,
   .input-group span {
-    background-color: $dark-200 !important;
+    background-color: $dark-50 !important;
     color: $text-color !important;
   }
 
@@ -27,8 +27,8 @@
     max-height: calc(100vh - 350px);
     padding: 1rem;
     overflow-y: auto;
-    background-color: $dark-800;
-    box-shadow: inset 0px 2px 18px $dark-600;
+    background-color: $dark-300;
+    box-shadow: inset 0px 2px 18px $dark-50;
     border-bottom-left-radius: calc(0.3rem - 1px);
     border-bottom-right-radius: calc(0.3rem - 1px);
 
@@ -67,7 +67,7 @@
     padding: 0.65rem 1rem;
     border-radius: 4px;
     border: 1px solid $border-color;
-    background-color: $dark-200;
+    background-color: $dark-50;
     transition: 0.1s;
     p {
       overflow: hidden;
@@ -79,7 +79,7 @@
       }
       mark {
         color: $text-color;
-        background-color: $dark-900;
+        background-color: $dark-300;
         padding: 5px;
       }
       &:empty {
@@ -88,7 +88,7 @@
     }
     &:focus,
     &:hover {
-      background-color: $dark-600;
+      background-color: $dark-300;
       * {
         color: $text-color !important;
       }

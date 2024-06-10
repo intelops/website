@@ -27,9 +27,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#FFD93D"
+  bg_color: ""
   subtitle: "Power of Open-Source"
-  subtitle_color: ""
+  subtitle_color: "#F4D161"
   title: "Simplify Kubernetes Observability. An End-to-end Solution for Ops & SRE."
   title_color: ""
   description: "Observe and troubleshoot with confidence with KubViz, a unified observability platform for Kubernetes, Git, and container platforms. Streamline your DevSecOps flow for resilient and secure software delivery, backed by comprehensive insights. Adapt secure software supply chain measures easily."
@@ -51,7 +51,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Blind Spots Trap"
-    subtitle_color: ""
+    subtitle_color: "#F4D161"
     title: "Is Your K8s a Black Box?"
     title_color: ""
     image: "images/content/kubviz/kubviz-row1.svg"
@@ -67,12 +67,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Stay Up-To-Date"
-    subtitle_color: ""
+    subtitle_color: "#F4D161"
     title: "Unparalleled Visibility, Streamlined Collaboration, and Proactive Security."
     title_color: ""
     image: "images/content/kubviz/kubviz-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#2F323C"
+    bg_color: "#262423"
     content_color: ""
     content: |
       KubViz empowers businesses to streamline workflows, boost performance, and ensure DevSecOps practices. With real-time tracking of changes, events, and vulnerabilities across K8s clusters, Git repos, Container Registries and more, it enables effective troubleshooting for a secure software supply chain.
@@ -90,7 +90,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Features"
-    subtitle_color: ""
+    subtitle_color: "#F4D161"
     title: "Empower DevOps Workflow with KubViz"
     title_color: ""
     image: "images/content/kubviz/kubviz-row3.svg"
@@ -117,8 +117,8 @@ call_to_action:
   image: "images/call-to-actions/kubviz/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#FFD93D"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 footer:
   footer_light: false

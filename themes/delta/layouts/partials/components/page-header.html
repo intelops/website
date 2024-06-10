@@ -4,7 +4,7 @@
 
   {{ $bannerImage := .Params.bannerimage }}
   <section
-    class="page-header wave-block {{ with $bannerImage }}
+    class="page-header bg-dark-300 wave-block {{ with $bannerImage }}
       bg-attachment-fixed
     {{ end }}"
     {{ partial `bg-image.html` (dict `Src` $bannerImage ) | safeHTMLAttr }}>

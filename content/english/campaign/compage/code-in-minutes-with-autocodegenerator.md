@@ -12,7 +12,7 @@ hide_header: true # It will hide specific part of the header like menu except lo
 hide_footer: true
 hide_call_to_action: true
 
-header_background: "#000"
+header_background: "#FEF2EB"
 
 layout_width: full
 
@@ -35,7 +35,7 @@ noindex: true
 {{< banner
 has_header=true
 header_logo=`/images/logos/new-full-logo-light.svg`
-banner_bg_color=`#0a253e`
+banner_bg_color=`#262423`
 header_bg_color=`transparent`
 image=`/images/compage-dashboard.png`
 title=`Build Secure Code in Minutes With Auto Code Generator`
@@ -106,7 +106,7 @@ has_padding_bottom=true >}}
 {{< /faq >}}
 
 {{< process
- background_color=`#2F323C`
+ background_color=`#262423`
  title=`Production Ready Code in just a few steps`
  title_color=``
  subtitle=`Compage In action`
@@ -220,7 +220,7 @@ Auto-generate code for backend workloads like REST APIs and gRPC, along with end
 {{</ testimonial >}}
 
 {{< features
-background_color=`#2F323C`
+background_color=`#262423`
 title=`Everything You need to build better software`
 title_color=``
 subtitle=`Compage Features`
@@ -331,6 +331,6 @@ description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonum
 description_color=`red`
 button_label=`Schedule a demo`
 button_link=`https://intelops.ai/product-demo-request-form/`
-bg_color=`#0A253D`
+bg_color=`#262423`
 copyright=`Copyright @ IntelOps, Inc. - 2024`
 copyright_color=`` >}}

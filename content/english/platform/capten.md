@@ -25,9 +25,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#FF9E2C"
+  bg_color: ""
   subtitle: "Be the Captain"
-  subtitle_color: ""
+  subtitle_color: "#F9D291"
   title: "Build Secure Cloud-Native Ecosystem!"
   title_color: ""
   description: "Say goodbye to the trade-off between speed and security with Capten. The all-in-one DevSecOps platform facilitates close collaboration to build and manage cloud-native ecosystems for application and infrastructure modernization, automation, and security."
@@ -49,7 +49,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Chaos at Work?"
-    subtitle_color: ""
+    subtitle_color: "#F9D291"
     title: "The Disconnect Between Dev, Sec, Ops & SRE"
     title_color: ""
     image: "images/content/capten/capten-row1.svg"
@@ -65,12 +65,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Empower"
-    subtitle_color: ""
+    subtitle_color: "#F9D291"
     title: "Set Sail for Engineering Enablement With Capten"
     title_color: ""
     image: "images/content/capten/capten-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#2F323C"
+    bg_color: "#262423"
     content_color: ""
     content: |
       Capten stack is an orchestration platform for engineering enablement and seamless collaboration while eliminating complexities of self-service implementation for agile DevSecOps, Developers Portal and Platform Engineering. All-in-One! 
@@ -88,7 +88,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Features"
-    subtitle_color: ""
+    subtitle_color: "#F9D291"
     title: "Self-Serve Orchestration Platform for Continuous Modernization"
     title_color: ""
     image: "images/content/capten/capten-row3.svg"
@@ -110,12 +110,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Integrations"
-    subtitle_color: ""
+    subtitle_color: "#F9D291"
     title: "What Can be Integrated? No Limit!"
     title_color: ""
     image: "images/content/capten/capten-row4.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: ""
+    bg_color: "#262423"
     content_color: ""
     content: |
       * Your favorite tools and platforms in one place. 
@@ -130,12 +130,12 @@ call_to_action:
   title: "Start using <br/> Capten <br/> platform today..."
   title_color: "#fff"
   # subtitle: ""
-  # subtitle_color: ""
+  # subtitle_color: "#F9D291"
   image: "images/call-to-actions/capten/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#FF9E2C"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 # footer:
 #   footer_light: false

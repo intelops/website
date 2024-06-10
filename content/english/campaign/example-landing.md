@@ -34,7 +34,7 @@ header_logo=`/images/logos/new-full-logo-light.svg`
 header_navigation_btn_label=`Sign Up`
 header_navigation_btn_icon=``
 header_navigation_btn_link=`#`
-banner_bg_color=`#0a253e`
+banner_bg_color=`#262423`
 image=`/images/banner-home.png`
 title=`Get Fastest Loan With Smart Way A Seating Home`
 title_color=`white`
@@ -54,7 +54,7 @@ left_shape_color=`#99beff`
 right_shape_color=`#99beff` >}}
 
 {{< features
-background_color=`#0a253e`
+background_color=`#262423`
 title=`Eaving Them Less Time To The Check Out Competitors Built The Into.`
 title_color=`green`
 subtitle=`Features Of Delta`

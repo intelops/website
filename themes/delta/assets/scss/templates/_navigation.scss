@@ -1,6 +1,6 @@
 // start header style
 .navigation {
-  background-color: $dark-600;
+  background-color: rgba($body-color, .95);
   transition: 0.15s ease-out;
   position: sticky;
   z-index: 333;
@@ -145,7 +145,7 @@
     }
   }
   &.navigation-bottom .navbar {
-    border-top: 1px solid lighten($banner-primary, 12);
+    border-top: 1px solid $border-color;
   }
 
   &.dark-bar {
@@ -189,7 +189,7 @@
         color: $color-primary !important;
         background-color: transparent;
         @include desktop-lg {
-          background-color: $dark-200;
+          background-color: $dark-300;
         }
       }
     }
@@ -234,7 +234,7 @@
         width: 100%;
         top: 0;
         left: 0;
-        background-color: $dark-300;
+        background-color: $dark-900;
         z-index: -1;
         border-radius: 6px;
         transition: 0.15s;
@@ -301,13 +301,12 @@
         overflow-y: auto;
       }
       .navbar-collapse {
-        background-color: $navbar-mobile-bg;
         border-radius: 10px;
       }
       .dropdown-menu {
         padding: 1px 10px;
         text-align: center;
-        background-color: $dark-300;
+        background-color: $dark-900;
       }
       .navbar-right {
         padding: 10px;
@@ -344,7 +343,7 @@
   zoom: 0.9;
   width: 44px;
   color: $text-color;
-  background-color: $dark-300;
+  background-color: $dark-900;
 
   &:hover,
   &:focus {
@@ -468,7 +467,7 @@
         }
 
         > div {
-          background-color: $light;
+          background-color: $dark-300;
           a {
             color: $text-color;
           }
@@ -488,7 +487,7 @@
         &:hover,
         &:focus,
         &:active {
-          background-color: #f6f6f6;
+          background-color: $dark-300;
           a {
             color: $text-color;
           }

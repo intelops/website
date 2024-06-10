@@ -107,8 +107,8 @@ call_to_action:
   button_label: "Get Started"
   button_type: "modal"
   button_link: "#service-form"
-  bg_color: "#005DFF"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 footer:
   footer_light: false

@@ -21,7 +21,7 @@
 
 
 <footer
-  class="bg-dark-600 px-1 wave-block"
+  class="bg-dark-50 px-1 wave-block"
   style="{{- if $bg_color -}}
     background-color:{{ $bg_color }}!important;
   {{- end -}}{{- if $bg_image -}}
@@ -51,9 +51,7 @@
       <div class="col-lg-4 text-center">
         {{ if site.Params.fullSiteSearch }}
           <button
-            class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent {{ if $footer_light }}
-              text-dark
-            {{ end }}"
+            class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent"
             data-bs-toggle="modal"
             data-bs-target="#searchModal">
             <i class="fas fa-search me-1"></i>
@@ -95,14 +93,12 @@
         {{ with site.Menus.footer_menu_1 }}
           <div class="col block">
             <h4
-              class="footer-menu-title {{ if $footer_light }}
-                text-dark
-              {{ end }}">
+              class="footer-menu-title">
               {{ i18n `footer_menu_1_title` }}
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -110,14 +106,12 @@
         {{ with site.Menus.footer_menu_2 }}
           <div class="col block">
             <h4
-              class="footer-menu-title {{ if $footer_light }}
-                text-dark
-              {{ end }}">
+              class="footer-menu-title">
               {{ i18n `footer_menu_2_title` }}
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -125,14 +119,12 @@
         {{ with site.Menus.footer_menu_3 }}
           <div class="col block">
             <h4
-              class="footer-menu-title {{ if $footer_light }}
-                text-dark
-              {{ end }}">
+              class="footer-menu-title">
               {{ i18n `footer_menu_3_title` }}
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -140,14 +132,12 @@
         {{ with site.Menus.footer_menu_4 }}
           <div class="col block">
             <h4
-              class="footer-menu-title {{ if $footer_light }}
-                text-dark
-              {{ end }}">
+              class="footer-menu-title">
               {{ i18n `footer_menu_4_title` }}
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>
@@ -155,14 +145,12 @@
         {{ with site.Menus.footer_menu_5 }}
           <div class="col block">
             <h4
-              class="footer-menu-title {{ if $footer_light }}
-                text-dark
-              {{ end }}">
+              class="footer-menu-title">
               {{ i18n `footer_menu_5_title` }}
             </h4>
             <ul class="list-unstyled mb-0">
               {{ range . }}
-                <li><a href="{{ .URL }}" class="text-subtle">{{ .Name }}</a></li>
+                <li><a href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
             </ul>
           </div>

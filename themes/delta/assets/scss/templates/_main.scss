@@ -36,7 +36,7 @@ main:empty {
     pointer-events: none;
 
     svg {
-      color: $dark-300;
+      color: $dark-900;
       position: absolute;
       max-width: 100%;
 
@@ -94,7 +94,7 @@ main:empty {
 
 // homepage banner
 .banner {
-  background-color: $dark-600;
+  background-color: $dark-50;
   .block {
     padding-top: 40px;
     padding-bottom: 90px;
@@ -178,7 +178,7 @@ main:empty {
       height: 50px;
       bottom: 50%;
       z-index: -1;
-      background-color: $dark-600;
+      background-color: $dark-50;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
     }
@@ -210,9 +210,9 @@ main:empty {
   max-width: 96%;
   margin: auto;
   padding: 150px 0;
-  .has-wave svg {
-    color: $light !important;
-  }
+  // .has-wave svg {
+  //   color: $light !important;
+  // }
 }
 
 .wrap-block {
@@ -232,7 +232,7 @@ main:empty {
   &.features-creative {
     z-index: 1;
     position: relative;
-    background-color: $dark-600;
+    background-color: $dark-50;
 
     // features rows
     .features-row {
@@ -254,9 +254,9 @@ main:empty {
 
   .features-block {
     .block {
-      background-color: $dark-300;
+      background-color: $dark-50;
       border-radius: 15px;
-      border: 1px solid transparent;
+      border: 1px solid $border-color;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       transition: 0.1s;
       padding: 45px 35px;
@@ -279,9 +279,9 @@ main:empty {
       }
 
       a.btn {
-        background-color: $dark-600;
+        background-color: $dark-300;
         color: inherit;
-        border-color: $dark-600;
+        border-color: $dark-300;
       }
     }
 
@@ -796,7 +796,7 @@ main:empty {
   }
 
   &::after {
-    border-color: $dark-200 !important;
+    border-color: $border-color !important;
   }
 }
 
@@ -1050,7 +1050,7 @@ main:empty {
   .user-info {
     font-size: 16px;
     p {
-      color: $text-color-subtle;
+      color: $text-color;
     }
 
     a {
@@ -1064,12 +1064,12 @@ main:empty {
 
   &.has-border {
     .card-body {
-      border-left: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
     }
 
     .card-footer {
-      border: 1px solid #e8e8e8;
+      border: 1px solid $border-color;
       border-top: 0;
     }
   }
@@ -1085,7 +1085,7 @@ main:empty {
   .user-info a:hover {
     color: $color-primary;
   }
-  
+
   // &:nth-child(odd) {
   //   .badge {
   //     background-color: $color-primary;
@@ -1117,6 +1117,7 @@ main:empty {
 
 .disqus-block,
 .post-author {
+  background-color: $dark-50;
   padding: 30px;
 
   @include mobile {
@@ -1215,7 +1216,7 @@ main:empty {
     width: calc(100% + 50%);
     left: -25%;
     bottom: 0;
-    background-color: $dark-600;
+    background-color: $dark-50;
     z-index: -1;
   }
 
@@ -1593,7 +1594,7 @@ a.share-icon {
 // accordion style
 .accordion-item {
   &:not(:last-child) {
-    border-bottom: 1px solid $dark-200 !important;
+    border-bottom: 1px solid $border-color !important;
   }
   background-color: transparent !important;
 
@@ -1677,8 +1678,6 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
-    border-top: 1px solid $border-color-dark;
-    border-bottom: 1px solid $border-color-dark;
 
     &-title {
       font-size: 18px;
@@ -1731,7 +1730,7 @@ footer {
 
 .lc-card {
   box-shadow: 0 0.9rem 50px 0.625rem rgba(62, 62, 62, 0.05);
-  background-color: $dark-300;
+  background-color: $dark-900;
   transition: 0.2s ease;
   border: 0;
   padding: 15px;
@@ -1762,7 +1761,8 @@ footer {
     position: relative;
 
     a {
-      color: $text-color-subtle;
+      color: $text-color;
+      opacity: 0.7;
 
       &:hover {
         color: $color-primary;
@@ -1888,7 +1888,7 @@ footer {
     padding-bottom: 20px;
     position: static;
     height: auto;
-    background-color: rgba($color-primary, 0.03);
+    background-color: $dark-300;
     @extend .rounded-sm;
     padding-right: 10px;
 
@@ -2266,12 +2266,12 @@ footer {
   padding-top: 14px;
   padding-bottom: 14px;
   transition: 0.3s;
-  border-color: #eeeeee !important;
+  border-color: $border-color !important;
 
   &:hover {
     opacity: 0.9;
     transform: scale(0.995);
-    background-color: #eee;
+    background-color: $dark-300;
   }
 }
 
@@ -2399,7 +2399,7 @@ footer {
   position: relative;
   border-radius: 12px;
   margin-bottom: 24px;
-  background-color: $dark-300;
+  background-color: $dark-900;
 
   &.no-file-name {
     .file-extension {
@@ -2421,7 +2421,7 @@ footer {
     font-weight: 400;
     padding-left: 20px;
     padding-block: 16px;
-    background-color: $dark-600;
+    background-color: $dark-50;
   }
 
   .file-extension {
@@ -2436,7 +2436,7 @@ footer {
     color: rgb(210, 202, 202);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-color: $dark-600;
+    background-color: $dark-50;
   }
 
   .copy {
@@ -2464,7 +2464,7 @@ footer {
 }
 .highlight {
   pre {
-    background-color: $dark-300 !important;
+    background-color: $dark-900 !important;
   }
 }
 
@@ -2559,5 +2559,29 @@ footer {
 
 // Copyright
 .copyright {
-  color: $text-color-dark;
+  color: rgba($text-color, 0.5);
+}
+
+// copy to clipboard
+
+pre {
+  position: relative;
+
+  .copy-to-clipboard {
+    background: rgba($color-primary, 0.5);
+    color: $white;
+    cursor: pointer;
+    padding: 4px 5px;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+:not(pre) > code + span.copy-to-clipboard {
+  display: none;
 }

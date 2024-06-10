@@ -96,12 +96,12 @@ a:hover {
       width: 100%;
       left: 0;
       bottom: 55%;
-      background-color: lighten($black, 5);
+      background-color: lighten($light, 5);
       transition: 0.3s;
     }
 
     &.swiper-pagination-bullet-active::after {
-      background-color: $black;
+      background-color: $light;
     }
   }
 }
@@ -165,7 +165,7 @@ a:hover {
   @extend .font-secondary;
   @extend .fw-700;
   @extend .text-capitalize;
-  color: $banner-subtitle;
+  color: $color-primary;
 }
 
 .title {
@@ -222,7 +222,7 @@ a:hover {
       padding: 0;
       line-height: 38px;
       text-align: center;
-      color: $text-color-blue-subtle;
+      color: $text-color-dark;
       background-color: $dark-300;
       border-color: $dark-300;
 
@@ -255,8 +255,8 @@ a:hover {
   a {
     font-size: 16px;
     display: block;
-    background-color: $white;
-    border: 1px solid #dee2e6;
+    background-color: $dark-300;
+    border: 1px solid $border-color;
     transition:
       color 0.15s ease-in-out,
       background-color 0.15s ease-in-out,
@@ -391,25 +391,18 @@ a:hover {
   color: $text-color !important;
 }
 
-.text-subtle {
-  color: $text-color-subtle !important;
-}
-
 .bg-secondary {
   background: $color-secondary !important;
 }
 
-.bg-dark-200 {
-  background: $dark-200 !important;
+.bg-body {
+  background: $body-color !important;
+}
+.bg-dark-50 {
+  background: $dark-50 !important;
 }
 .bg-dark-300 {
   background: $dark-300 !important;
-}
-.bg-dark-600 {
-  background: $dark-600 !important;
-}
-.bg-dark-800 {
-  background: $dark-800 !important;
 }
 .bg-dark-900 {
   background: $dark-900 !important;
@@ -464,7 +457,7 @@ a:hover {
 }
 
 .border {
-  border-color: #dee2e6 !important;
+  border-color: $border-color !important;
 }
 .border-transparent {
   border-color: transparent !important;
@@ -474,15 +467,15 @@ a:hover {
 
 .form-control {
   padding: 20px;
-  border: 1px solid rgba($black, 0.1);
+  border: 1px solid $border-color;
   height: 56px;
   color: $text-color !important;
   transition: 0.3s ease;
-  background-color: $dark-200 !important;
+  background-color: $dark-300 !important;
 
   &:focus,
   &:-internal-autofill-selected {
-    border-color: rgba($dark-200, 0.5);
+    border-color: rgba($dark-300, 0.5);
   }
 }
 
@@ -537,7 +530,7 @@ form[conditional-form] .input-check-group > *:not(:first-child) {
 
 select {
   padding: 15px 20px !important;
-  background: $dark-200 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background: $dark-300 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
   background-position: right 0.75rem center !important;
   background-size: 16px 12px !important;
@@ -552,7 +545,7 @@ select {
 }
 
 .form-check-input {
-  background-color: $dark-200;
+  background-color: $dark-300;
   border: 1px solid $border-color-light;
   &:checked {
     background-color: $color-primary;
@@ -904,7 +897,7 @@ input[type="range"]:focus::-ms-thumb {
 
   blockquote {
     font-size: 20px !important;
-    color: $text-color-subtle;
+    color: $text-color-dark;
     padding: 20px 40px;
 
     @include tablet {
@@ -915,7 +908,7 @@ input[type="range"]:focus::-ms-thumb {
     border-left: 2px solid $color-primary;
     margin: 40px 0;
     font-weight: bold;
-    background: $dark-300;
+    background: $dark-900;
     border-radius: 5px;
 
     p {
@@ -986,10 +979,6 @@ input[type="range"]:focus::-ms-thumb {
 
 .dark-bar {
   background-color: $banner-primary;
-}
-
-.light-bar {
-  background-color: $header-bar-bg;
 }
 
 .header-sec {
@@ -1128,7 +1117,7 @@ input[type="range"]:focus::-ms-thumb {
 }
 
 .autocomplete-suggestions {
-  background-color: $dark-600 !important;
+  background-color: $dark-50 !important;
   .autocomplete-suggestion {
     color: $text-color;
     &:hover {
@@ -1148,3 +1137,11 @@ input[type="range"]:focus::-ms-thumb {
   display: none;
 }
 
+.mermaid svg, text, {
+  fill: $text-color !important;
+}
+.mermaid .marker,
+.mermaid .flowchart-link {
+  fill: $light !important;
+  stroke: $light !important;
+}

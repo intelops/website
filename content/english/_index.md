@@ -44,7 +44,7 @@ banner:
   lottie: 
     enable: true
     json: "lottie/homepage_concept.json"
-    background: "#2F323C" #4B4B4C
+    background: "#2E2C2B" #2E2C2B
     speed: "1"
     loop: "true"
     autoplay: "true"
@@ -53,7 +53,7 @@ banner:
 brands:
   enable: true
   title: Next-Gen Cloud-Native Tech <br> for Fast Growing Brands & Enterprises. <br> Be the Captain.
-  title_color: "#A4B0CA"
+  title_color: ""
   images:
   # - images/clients/01.png
   # - images/clients/02.png
@@ -152,9 +152,9 @@ blog:
   subtitle: Recent Articles
   subtitle_color: ""
   title: "Inside the Lab: Innovation in the Making"
-  title_color: "#A4B0CA"
+  title_color: ""
   description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
-  description_color: "#A4B0CA"
+  description_color: ""
   button:
     enable: true
     link: blog/

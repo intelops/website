@@ -9,7 +9,7 @@
       <div class="col-lg-4 blog-sidebar">
         <div class="block pe-0 pe-lg-2">
           {{ $series := .Params.series }}
-          <p class="h4 fw-light text-dark ps-3">{{$series}}</p>
+          <p class="h4 fw-light ps-3">{{$series}}</p>
           {{ .TableOfContents }}
 
           {{ $seriesPosts := (where (where site.RegularPages "Section" "case-studies") "Params.series" $series) }}

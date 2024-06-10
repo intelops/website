@@ -72,11 +72,7 @@
 
 {{ if not (or $is_upcoming_single $is_header_hidden) }}
   <footer
-    class="{{ if $footer_light }}
-      bg-light
-    {{ else }}
-      bg-dark
-    {{ end }} px-1 wave-block"
+    class="px-1 wave-block"
     style="{{- if $bg_color -}}
       background-color:{{ $bg_color }}!important;
     {{- end -}}{{- if $bg_image -}}
@@ -96,21 +92,13 @@
             class="footer-brand"
             href="{{ site.BaseURL | relLangURL }}"
             title="{{ site.Title }}">
-            {{ if or $footer_light (eq site.Params.footer_logo_dark true) }}
-              {{ partial "components/footer-logo-dark.html" . }}
-            {{ else }}
-              {{ partial "components/footer-logo.html" . }}
-            {{ end }}
+            {{ partial "components/footer-logo.html" . }}
           </a>
         </div>
         <div class="col-lg-4 text-center">
           {{ if site.Params.fullSiteSearch }}
             <button
-              class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent {{ if $footer_light }}
-                text-dark
-              {{ else }}
-                text-white
-              {{ end }}"
+              class="btn-search-footer rounded-sm border-0 outline-none py-1 ps-3 pe-4 text-start bg-transparent"
               data-bs-toggle="modal"
               data-bs-target="#searchModal">
               <i class="fas fa-search me-1"></i>
@@ -152,11 +140,7 @@
           {{ with site.Menus.footer_menu_1 }}
             <div class="col block">
               <h4
-                class="footer-menu-title {{ if $footer_light }}
-                  text-dark
-                {{ else }}
-                  text-white
-                {{ end }}">
+                class="footer-menu-title">
                 {{ i18n `footer_menu_1_title` }}
               </h4>
               <ul class="list-unstyled mb-0">
@@ -169,11 +153,7 @@
           {{ with site.Menus.footer_menu_2 }}
             <div class="col block">
               <h4
-                class="footer-menu-title {{ if $footer_light }}
-                  text-dark
-                {{ else }}
-                  text-white
-                {{ end }}">
+                class="footer-menu-title">
                 {{ i18n `footer_menu_2_title` }}
               </h4>
               <ul class="list-unstyled mb-0">
@@ -186,11 +166,7 @@
           {{ with site.Menus.footer_menu_3 }}
             <div class="col block">
               <h4
-                class="footer-menu-title {{ if $footer_light }}
-                  text-dark
-                {{ else }}
-                  text-white
-                {{ end }}">
+                class="footer-menu-title">
                 {{ i18n `footer_menu_3_title` }}
               </h4>
               <ul class="list-unstyled mb-0">
@@ -203,11 +179,7 @@
           {{ with site.Menus.footer_menu_4 }}
             <div class="col block">
               <h4
-                class="footer-menu-title {{ if $footer_light }}
-                  text-dark
-                {{ else }}
-                  text-white
-                {{ end }}">
+                class="footer-menu-title">
                 {{ i18n `footer_menu_4_title` }}
               </h4>
               <ul class="list-unstyled mb-0">
@@ -220,11 +192,7 @@
           {{ with site.Menus.footer_menu_5 }}
             <div class="col block">
               <h4
-                class="footer-menu-title {{ if $footer_light }}
-                  text-dark
-                {{ else }}
-                  text-white
-                {{ end }}">
+                class="footer-menu-title">
                 {{ i18n `footer_menu_5_title` }}
               </h4>
               <ul class="list-unstyled mb-0">
@@ -239,7 +207,7 @@
       <div class="footer-bottom">
         <div class="row">
           <div class="col-12">
-            <p class="content has-bg-dark text-center">
+            <p class="copyright content has-bg-dark text-center">
               {{ site.Params.copyright | markdownify }} -
               <script>
                 document.write(new Date().getFullYear());
@@ -264,11 +232,7 @@
           fill="currentColor" />
       </svg>
       <svg
-        class="wave-right {{ if $footer_light }}
-          text-dark
-        {{ else }}
-          text-white
-        {{ end }}"
+        class="wave-right"
         style="opacity:0.15"
         width="291"
         height="170"

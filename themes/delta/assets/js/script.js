@@ -443,7 +443,6 @@ if ($(".navigation-alt").length !== 0) {
   //   if ($(window).scrollTop() > 70) {
   //     //Add light section on down
   //     $(".navigation-alt").removeClass("dark-bar");
-  //     $(".navigation-alt").addClass("light-bar");
   //     for (var i = 0; i < list.length; ++i) {
   //       list[i].classList.remove("nav-menu-text");
   //     }
@@ -455,7 +454,6 @@ if ($(".navigation-alt").length !== 0) {
   //     $("#main-navbar").addClass("no-bottom");
   //   } else {
   //     //Add dark section on up
-  //     $(".navigation-alt").removeClass("light-bar");
   //     $(".navigation-alt").addClass("dark-bar");
   //     for (var i = 0; i < list.length; ++i) {
   //       list[i].classList.add("nav-menu-text");

@@ -26,9 +26,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#7FDCA4"
+  bg_color: ""
   subtitle: "Optimizor (Opty)"
-  subtitle_color: ""
+  subtitle_color: "#B0D775"
   title: "Pro-Active Intelligent Solution for Dynamic Optimization"
   title_color: ""
   description: "Achieve performance and cost-effectiveness with Opty, the dynamic solution that learns your workloads complexities in Kubernetes. By analyzing diverse metrics, Opty determines the optimal resource allocation for your applications, helping developers to build a cloud-native ecosystem right from the development stage."
@@ -50,7 +50,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Complex"
-    subtitle_color: ""
+    subtitle_color: "#B0D775"
     title: "Navigating Complex Workloads "
     title_color: ""
     image: "images/content/opty/opty-row1.svg"
@@ -67,12 +67,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "The Intelligence"
-    subtitle_color: ""
+    subtitle_color: "#B0D775"
     title: "Pro-Active Cloud-Native Optimization"
     title_color: ""
     image: "images/content/opty/opty-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#2F323C"
+    bg_color: "#262423"
     content_color: ""
     content: |
       * **Kubernetes Cluster Management**: Simplifies the management of Kubernetes clusters by providing tools and services that enable developers to gain comprehensive insights and effectively oversee their clusters. 
@@ -84,7 +84,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: ""
-    subtitle_color: ""
+    subtitle_color: "#B0D775"
     title: "Features"
     title_color: ""
     image: "images/content/opty/opty-row3.svg"
@@ -110,8 +110,8 @@ call_to_action:
   image: "images/call-to-actions/opty/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#7FDCA4"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 footer:
   footer_light: false
