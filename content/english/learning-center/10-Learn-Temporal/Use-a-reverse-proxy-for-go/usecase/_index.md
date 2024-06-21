@@ -137,6 +137,8 @@ CMD ["./main"]
 5. **EXPOSE:** Exposes port 8080, which is where the Go Gin server listens for requests.
 6. **CMD:** Specifies the command to run the Go application.
 
+[source file](https://github.com/azar-writes-code/traefik-poc)
+
 ### Conclusion
 
 This setup uses Traefik as a reverse proxy to handle incoming traffic, manage SSL certificates, and route requests to your Go Gin server, which serves your blog content. The `docker-compose.yaml` file orchestrates the services, and the `Dockerfile` defines how to build and run the Go Gin server. This combination provides a scalable, secure, and efficient environment for your blog.
