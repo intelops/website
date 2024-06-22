@@ -32,7 +32,7 @@ navigation:
     link: "#!"
 
 banner:
-  bg_color: "#fa9e26"
+  bg_color: ""
   subtitle: "We Are Delta"
   subtitle_color: ""
   title: "get fastest loan with smart way A seating home"
@@ -74,7 +74,7 @@ image_and_content_block:
     title: "Lots of people love us, <br> and we're also."
     image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#262423"
     content_color: ""
     content: |
       Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula estibulum.

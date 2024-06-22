@@ -1006,6 +1006,10 @@ main:empty {
   }
 }
 
+.card {
+  background-color: $dark-300;
+}
+
 .blog-card {
   .card {
     background-color: $dark-300;
@@ -1627,6 +1631,9 @@ a.share-icon {
 .accordion-button:not(.collapsed) {
   color: $dark;
   background-color: transparent;
+}
+.accordion-button:focus {
+  box-shadow: none !important;
 }
 
 .accordion-body {
