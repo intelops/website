@@ -1,7 +1,7 @@
 ---
 date: "2024-01-24"
 title: "Compliance-Secure Innovation: Agnostic Framework For Business Value"
-image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
+image: "/images/events-webinars/webinar-thumbnail-jan.jpg" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description: 
 weight: 02
@@ -55,6 +55,6 @@ Chandrakanth Paladugu is a skilled architect with a deep passion for problem-sol
 </div>
 
 <div class="col-lg-5">
-{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/a3ICNMQW7Ok" event_form_redirect_url="" event_form_success_action="video">}}
+{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/6OohDH533ZI?si=z7aQmJ7VNeidP1yy" event_form_redirect_url="" event_form_success_action="video">}}
 </div>
-</div>
+</div> 
