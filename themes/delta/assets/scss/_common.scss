@@ -530,7 +530,8 @@ form[conditional-form] .input-check-group > *:not(:first-child) {
 
 select {
   padding: 15px 20px !important;
-  background: $dark-300 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background: $dark-300
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
   background-repeat: no-repeat !important;
   background-position: right 0.75rem center !important;
   background-size: 16px 12px !important;
@@ -538,10 +539,15 @@ select {
   color: $text-color !important;
 }
 
+.form-check {
+  padding-left: 1.8em !important;
+}
+
 .form-check-input,
 .form-radio-input {
   cursor: pointer;
   margin-top: 0.35em;
+  margin-left: -1.7em !important;
 }
 
 .form-check-input {
@@ -1137,7 +1143,8 @@ input[type="range"]:focus::-ms-thumb {
   display: none;
 }
 
-.mermaid svg, text, {
+.mermaid svg,
+text {
   fill: $text-color !important;
 }
 .mermaid .marker,

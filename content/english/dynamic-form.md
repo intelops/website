@@ -137,3 +137,113 @@ title: "Dynmic Form"
     {{< /form >}}
   </div>
 </div>
+
+---
+
+#### Selecting Web Design Themes
+
+<div class="row g-0 not-prose">
+  <div class="col-xl-6">
+    {{< form background="#1D1F26" style="rounded-boxed" conditional-form=true >}}
+      {{< input-group title="Which type of theme would you like?" >}}
+        {{< input-check type="checkbox" label="Modern" required=true id="modern" name="theme-style" condition="checked:modern-style" value="Modern" >}}
+        {{< input-check type="checkbox" label="Classic" required=true id="classic" name="theme-style" condition="checked:classic-style" value="Classic" >}}
+        {{< input-check type="checkbox" label="Creative" required=true id="creative" name="theme-style" condition="checked:creative-style" value="Creative" >}}
+      {{< /input-group >}}
+
+      {{< input-image-preview src="images/modern-web.png" parent-size="600x400" title="Modern Website UI" id="modern-style" conditional-element=true >}}
+      {{< input-image-preview src="images/classic-web.png" parent-size="600x400" title="Classic Website UI" id="classic-style" conditional-element=true >}}
+      {{< input-image-preview src="images/creative-web.png" parent-size="600x400" title="Creative Website UI" id="creative-style" conditional-element=true >}}
+
+      {{< button-submit value="Submit" >}}
+    {{< /form >}}
+  </div>
+</div>
+
+---
+
+#### Calculating Project Cost
+
+<div class="row g-0 not-prose">
+  <div class="col-xl-6">
+    {{< form background="#1D1F26" style="rounded-boxed" conditional-form=true >}}
+      {{< input-group >}}
+        {{< comment "available calc condition is calc/add, calc/sub, calc/mul, calc/div" >}}
+        {{< input-check
+          type="checkbox"
+          label="Website Development ($15)"
+          id="website-development"
+          name="website-development"
+          condition="calc/add:project-cost"
+          value="15" >}}
+        {{< input-check
+          type="checkbox"
+          label="SEO Optimization ($10)"
+          id="seo-optimization"
+          name="seo-optimization"
+          condition="calc/add:project-cost"
+          value="10" >}}
+        {{< input-check
+          type="checkbox"
+          label="E-commerce Integration ($5)"
+          id="e-commerce"
+          name="e-commerce"
+          condition="calc/add:project-cost"
+          value="5" >}}
+      {{< /input-group >}}
+
+      {{< input-calc-result title="Total Cost" append="$" prepend="" id="project-cost" conditional-element=true >}}
+
+      {{< button-submit value="Submit" >}}
+    {{< /form >}}
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+---
+
+#### Estimating Project Duration
+
+Formula <br/>
+(Number of Pages \* 1 day) + (Number of Features \* 2 days) / Number of Developers
+
+<div class="row g-0 not-prose">
+  <div class="col-xl-6">
+    {{< form background="#1D1F26" style="rounded-boxed" conditional-form=true >}}
+
+      {{< input-text
+        type="number"
+        label="Number of Pages"
+        id="number-of-pages"
+        name="number-of-pages"
+        condition="calc/add:project-duration" >}}
+      {{< input-text
+        type="number"
+        label="Number of Features"
+        id="number-of-features"
+        name="number-of-features"
+        condition="calc/add:project-duration" >}}
+      {{< input-text
+        type="number"
+        label="Number of Developers"
+        id="number-of-developers"
+        name="number-of-developers"
+        value="1"
+        min="1"
+        condition="calc/add:project-duration" >}}
+
+      {{< input-calc-result title="Total Duration" append="Day" prepend="" id="project-duration" formula="({number-of-pages}*1)+({number-of-features}*2)/{number-of-developers}" conditional-element=true  >}}
+
+      {{< button-submit value="Submit" >}}
+    {{< /form >}}
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+---

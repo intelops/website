@@ -1,0 +1,31 @@
+{{ $id := .Get "id" }}
+{{ $title := .Get "title" }}
+
+{{ $src := .Get "src" }}
+{{ $imageSize := .Get "image-size" }}
+{{ $parentSize := .Get "parent-size" }}
+
+{{ $parentSizeValue:= index (split $parentSize ` `) 0 }}
+{{ $parentHeight:= index (split $parentSizeValue `x`) 1 }}
+{{ $parentWidth:= index (split $parentSizeValue `x`) 0 }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="mb-0 col-12"
+  {{ with $parentSize }}
+    style="width: {{ $parentWidth }}px; height:
+    {{ $parentHeight }}px;overflow:hidden"
+  {{ end }}
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  <div class="p-2 border">
+    <label class="mb-0">
+      {{ $title | markdownify }}
+    </label>
+    <hr />
+    {{ partial "image" (dict "Src" $src "Size" $imageSize ) }}
+  </div>
+</div>

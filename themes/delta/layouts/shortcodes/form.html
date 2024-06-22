@@ -9,7 +9,7 @@
 
 
 <div
-  class="p-3 {{ if eq $style `rounded-boxed` }}
+  class="py-3 {{ if eq $style `rounded-boxed` }}
     rounded-sm
   {{ end }}"
   {{ with $background }}style="background-color: {{ . }}"{{ end }}>
@@ -20,15 +20,4 @@
     class="row g-2 mb-0 {{ with $class }}{{ . }}{{ end }}">
     {{ .Inner }}
   </form>
-</div>
-
-<div class="content">
-  <div class="example-1">
-    <div class="example-2"></div>
-  </div>
-  <div class="example-3">
-    <div class="example-4">
-      <div class="not-prose"></div>
-    </div>
-  </div>
 </div>

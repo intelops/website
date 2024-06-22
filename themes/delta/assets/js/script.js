@@ -309,8 +309,8 @@ $(document).ready(function () {
         title = $(this).attr("title");
       navTabs.append(
         '<li class="nav-item"><a class="nav-link" href="#">' +
-          title +
-          "</a></li>",
+        title +
+        "</a></li>",
       );
     });
 
@@ -468,6 +468,11 @@ if ($(".navigation-alt").length !== 0) {
   // });
 }
 
+
+// --------------------------------------------------------------------------------
+// Dynamic & Conditional Form Fields
+// --------------------------------------------------------------------------------
+
 function setRequired(form) {
   /**
    * Remove required attribute for hidden elements for accessibility purpose & chromium based browser bug
@@ -553,16 +558,17 @@ function conditionalForm() {
         type !== "password" &&
         type !== "search"
       ) {
-        if (condition) {
+        if (condition && !condition.startsWith("calc/")) {
           conditionChecker(e.target);
         }
       }
 
       if (type === "radio") {
-        const name = e.target.getAttribute("name");
-        const checked = e.target.getAttribute("checked");
-
         isNestedElem(previous, e.target);
+        conditionChecker(e.target);
+      }
+
+      if (type === "checkbox") {
         conditionChecker(e.target);
       }
 
@@ -573,10 +579,18 @@ function conditionalForm() {
       setRequired();
     });
 
+    form.addEventListener("input", function (e) {
+      const condition = e.target.getAttribute("condition");
+
+      if (e.target.type === "number") {
+        conditionChecker(e.target);
+      }
+    });
+
     /**
-     * Function to hide element with same name attribute value
-     * @param {*} form - form element
-     * @param {*} name - name attribute value
+     * Hides the HTML elements which are the target elements of the radio input whose name attribute is the same.
+     * @param {HTMLFormElement} form - form element
+     * @param {string} name - name attribute value
      */
     function hideTargetElements(form, name) {
       const elements = form.querySelectorAll('[data-name="' + name + '"]');
@@ -592,41 +606,11 @@ function conditionalForm() {
       });
     }
 
-    // function nested(element, prev) {
-    //   const condition = element.getAttribute("condition");
-
-    //   if (condition) {
-    //     const [conditionType, conditionValue] = element
-    //       .getAttribute("condition")
-    //       .split(":");
-    //     const targetElement = form.querySelector(`#${conditionValue}`);
-
-    //     if (targetElement) {
-    //       const nestedElements = targetElement?.querySelectorAll("[data-name]");
-
-    //       // if have nested elementes
-    //       nestedElements.forEach((element) => {
-    //         // Check if the target element child has nested elements
-    //         if (element.getAttribute("condition")) {
-    //           nested(element);
-    //           if (prev) {
-    //             conditionChecker(element, true);
-    //           } else {
-    //             conditionChecker(element);
-    //           }
-    //         }
-    //       });
-
-    //       if (!(nestedElements && nestedElements.length >= 0)) {
-    //         nested(targetElement);
-    //       }
-    //     }
-    //   }
-    // }
-
     /**
-     * Function to check condition and show or hide target element based on condition value
-     * @param {*} element
+     * Checks the condition of an element and performs actions based on the condition.
+     *
+     * @param {Element} element - The element to check the condition for.
+     * @return {void} This function does not return a value.
      */
     function conditionChecker(element) {
       const condition = element.getAttribute("condition");
@@ -639,7 +623,7 @@ function conditionalForm() {
           form.querySelector(`#${conditionValue}`);
 
         // Initially hide all radio input target elements
-        currentFormElementNameAttr &&
+        element.getAttribute("type") === "radio" && currentFormElementNameAttr &&
           hideTargetElements(form, currentFormElementNameAttr);
 
         // For radio input based on checked value
@@ -698,6 +682,88 @@ function conditionalForm() {
               hideElement(targetElement);
             }
           }
+        }
+
+        // If condition is about calculation example - calc/add:project-cost or calc/sub:project-cost
+        else if (conditionType.startsWith("calc/")) {
+          const value = Number(element.value);
+
+          // Check value is number or not
+          if ((typeof value) === "number") {
+            const [conditionValue, targetElementId] = condition.split(":");
+            const targetElement = form.querySelector(`#${targetElementId}`);
+            const targetElementResultBox = form.querySelector(`#${targetElementId} .result`);
+            const calcType = conditionValue.split("/")[1];
+
+            // If targetElementResultBox have any exisiting value then convert it to number and calc with it
+            const targetElementValue = Number(targetElementResultBox.innerText);
+
+            /**
+             * Calculate value based on calculation type (add, sub, mul, div) with targetElementResult innerText value.
+             * 
+             * @param {number} value To be calculated with targetElementResult numeric text.
+             * @param {string} calcType "add", "sub", "mul", or "div".
+             * @param {boolean} revert If true, subtract/divide based on checkbox state, otherwise add/multiply.
+             */
+            function calculation(value, calcType, revert) {
+              let result;
+
+              switch (calcType) {
+                case "add":
+                  result = revert ? targetElementValue - value : targetElementValue + value;
+                  break;
+                case "sub":
+                  result = revert ? targetElementValue + value : targetElementValue - value;
+                  break;
+                case "mul":
+                  result = revert ? targetElementValue / value : targetElementValue * value;
+                  break;
+                case "div":
+                  result = revert ? targetElementValue * value : targetElementValue / value;
+                  break;
+                default:
+                  console.error("Invalid calculation type:", calcType);
+              }
+
+              targetElementResultBox.innerText = result;
+            }
+
+            // Based on checkbox state show/hide targetElement and calculate
+            if (element.checked) {
+              showElement(targetElement);
+              calculation(value, calcType, false);
+            } else if (!element.checked) {
+              showElement(targetElement);
+              calculation(value, calcType, true);
+            }
+
+            // Based on input type text value show/hide targetElement and calculate
+            if (element.type === "number") {
+              showElement(targetElement);
+              let formula = targetElement.getAttribute("formula");
+
+              // ({number-of-pages}*1)+({number-of-features}*2)/{number-of-developers}
+              // Get all string inside {} from formula and get the element with that id and also element value and replace {element-id} with value of element
+              formula && formula.replace(/(\{.*?\})/g, (match) => {
+                const elementId = match.slice(1, -1);
+                const element = document.querySelector(`#${elementId}`);
+                const inputElement = element.querySelector("input");
+
+                if (inputElement.value && inputElement.value !== "") {
+                  formula = formula.replace(match, inputElement.value);
+                }
+              });
+
+              formula = evaluateExpression(formula.replace(/(\{.*?\})/g, 0));
+
+              if (formula) targetElementResultBox.innerText = formula;
+            }
+
+            // If calculated result value is 0 or empty then hide the element where result is displayed
+            (targetElementResultBox.innerText === "0" || targetElementResultBox.innerText === "") && hideElement(targetElement);
+          } else {
+            console.log("Enter number value only for calculation");
+          }
         } else {
           hideElement(targetElement);
         }
@@ -707,6 +773,22 @@ function conditionalForm() {
       }
     }
 
+    /**
+     * Checks if a current HTML element is nested within another element based on conditions.
+     * 
+     * @param {HTMLElement} prev The element considered as the "parent" element.
+     * @param {HTMLElement} current The element to check for nesting.
+     * 
+     * This function checks if the `current` element is nested within the `prev` element
+     * based on the following logic:
+     * 
+     * 1. If the `prev` element has a custom attribute named `"condition"`, it assumes a conditional visibility relationship.
+     *    - The function parses the attribute value (formatted as "conditionType:conditionValue") to determine the condition type and target element.
+     *    - It then checks if the `current` element exists as a descendant of the target element using `querySelector`.
+     *    - If `current` isn't nested as expected, the function unchecks the checkbox associated with `prev` and hides the target element.
+     * 2. If there's no `"condition"` attribute, it looks for a parent element with the attribute `"conditional-element"`.
+     *    - If found, it assumes `prev` should be hidden based on some other logic and unchecks the checkbox and hides the parent element.
+     */
     function isNestedElem(prev, current) {
       if (prev && current) {
         if (prev.getAttribute("condition")) {
@@ -738,23 +820,78 @@ function conditionalForm() {
       }
     }
 
-    // Function to hide an element
+    /**
+     * Hides the specified HTML element by setting its display style to "none".
+     *
+     * @param {HTMLElement} element - The element to hide.
+     */
     function hideElement(element) {
       if (element) {
         element.style.display = "none";
       }
     }
 
-    // Function to show an element
+    /**
+     * Shows the specified HTML element by setting its display style to "block".
+     *
+     * @param {HTMLElement} element - The element to show.
+     */
     function showElement(element) {
+      // If the element exists, set its display style to "block" to show it.
       if (element) {
         element.style.display = "block";
       }
     }
 
-    //
+    /**
+     * Removes leading and trailing spaces from a string.
+     *
+     * @param {string} string - The string to trim.
+     * @returns {string} - The trimmed string.
+     */
     function removeSpaces(string) {
       return string.trim().replace(/\s\s+/g, " ");
+    }
+
+
+    function evaluateExpression(expr) {
+      const ops = { '+': 1, '-': 1, '*': 2, '/': 2 };
+      const values = [];
+      const operators = [];
+      const tokens = expr.match(/\d+|\+|\-|\*|\/|\(|\)/g);
+
+      for (const token of tokens) {
+        if (/\d/.test(token)) {
+          values.push(Number(token));
+        } else if (token === '(') {
+          operators.push(token);
+        } else if (token === ')') {
+          while (operators.length && operators[operators.length - 1] !== '(') {
+            values.push(applyOp(operators.pop(), values.pop(), values.pop()));
+          }
+          operators.pop(); // remove '('
+        } else if (ops[token]) {
+          while (operators.length && ops[operators[operators.length - 1]] >= ops[token]) {
+            values.push(applyOp(operators.pop(), values.pop(), values.pop()));
+          }
+          operators.push(token);
+        }
+      }
+
+      while (operators.length) {
+        values.push(applyOp(operators.pop(), values.pop(), values.pop()));
+      }
+
+      return values[0];
+    }
+
+    function applyOp(op, b, a) {
+      switch (op) {
+        case '+': return a + b;
+        case '-': return a - b;
+        case '*': return a * b;
+        case '/': return a / b;
+      }
     }
   });
 }

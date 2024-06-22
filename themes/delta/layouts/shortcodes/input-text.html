@@ -7,6 +7,7 @@
 {{ $required := .Get "required" }}
 {{ $autofocus := .Get "autofocus" }}
 {{ $disabled := .Get "disabled" }}
+{{ $min := .Get "min" }}
 {{ $readonly := .Get "readonly" }}
 {{ $class := .Get "class" }}
 
@@ -23,6 +24,7 @@
   <input
     {{ with $type }}type="{{ . }}"{{ end }}
     {{ with $name }}data-name="{{ . }}"{{ end }}
+    {{ with $min }}min="{{ . }}"{{ end }}
     {{ with $name }}name="{{ . }}"{{ end }}
     {{ with $id }}id="input-{{ . }}"{{ end }}
     {{ with $placeholder }}placeholder="{{ . }}"{{ end }}
