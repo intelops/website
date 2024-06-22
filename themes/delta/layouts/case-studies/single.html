@@ -62,7 +62,7 @@
         {{ end }}
 
 
-        {{ if and .Site.DisqusShortname .Params.feedback }}
+        {{ if and site.Config.Services.Disqus.Shortname .Params.feedback }}
         <div class="mt-5">
           <!-- comments -->
           <div class="disqus-block border rounded-lg">
