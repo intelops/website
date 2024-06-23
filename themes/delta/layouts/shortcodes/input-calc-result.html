@@ -3,7 +3,7 @@
 {{ $prepend := .Get "prepend" }}
 {{ $append := .Get "append" }}
 
-{{ $formula := .Get "formula" }}
+{{ $formula := string (.Get "formula") }}
 
 {{ $size := .Get "parent-size" }}
 

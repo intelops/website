@@ -1,8 +1,6 @@
 {{ $id := .Get "id" }}
 {{ $title := .Get "title" }}
 
-{{ $src := .Get "src" }}
-{{ $imageSize := .Get "image-size" }}
 {{ $parentSize := .Get "parent-size" }}
 
 {{ $parentSizeValue:= index (split $parentSize ` `) 0 }}
@@ -26,6 +24,6 @@
       {{ $title | markdownify }}
     </label>
     <hr />
-    {{ partial "image" (dict "Src" $src "Size" $imageSize ) }}
+    {{ .Inner }}
   </div>
 </div>

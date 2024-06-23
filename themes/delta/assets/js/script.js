@@ -759,8 +759,8 @@ function conditionalForm() {
               if (formula) targetElementResultBox.innerText = formula;
             }
 
-            // If calculated result value is 0 or empty then hide the element where result is displayed
-            (targetElementResultBox.innerText === "0" || targetElementResultBox.innerText === "") && hideElement(targetElement);
+            // If calculated result value is 0 or empty or Infinity then hide the element where result is displayed
+            (targetElementResultBox.innerText === "0" || targetElementResultBox.innerText === "Infinity" || targetElementResultBox.innerText === "") && hideElement(targetElement);
           } else {
             console.log("Enter number value only for calculation");
           }
