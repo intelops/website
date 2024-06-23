@@ -145,17 +145,9 @@ title: "Dynmic Form"
         {{< input-check type=`checkbox` label=`Creative` required=true id=`creative` name=`theme-style` condition=`checked:creative-style` value=`Creative` >}}
       {{< /input-group >}}
 
-      {{< input-image-preview parent-size=`600x400` title=`Modern Website UI` id=`modern-style` conditional-element=true >}}
-        {{< image src="images/modern-web.png" width="1920" >}}
-      {{< /input-image-preview >}}
-      
-      {{< input-image-preview parent-size=`600x400` title=`Classic Website UI` id=`classic-style` conditional-element=true >}}
-        {{< image src="images/classic-web.png" width="1920" >}}
-      {{< /input-image-preview >}}
-      
-      {{< input-image-preview parent-size=`600x400` title=`Creative Website UI` id=`creative-style` conditional-element=true >}}
-        {{< image src="images/creative-web.png" width="1920" >}}
-      {{< /input-image-preview >}}
+      {{< input-image-preview src="images/modern-web.png" width="1920" parent-size=`600x400` title=`Modern Website UI` id=`modern-style` conditional-element=true >}}
+      {{< input-image-preview src="images/classic-web.png" width="1920" parent-size=`600x400` title=`Classic Website UI` id=`classic-style` conditional-element=true >}}
+      {{< input-image-preview src="images/creative-web.png" width="1920" parent-size=`600x400` title=`Creative Website UI` id=`creative-style` conditional-element=true >}}
 
       {{< button-submit value=`Submit` >}}
     {{< /form >}}
