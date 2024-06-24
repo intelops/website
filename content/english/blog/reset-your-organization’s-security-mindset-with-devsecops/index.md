@@ -32,7 +32,7 @@ draft: false
 
 {{< image src="images/blog/reset-your-organization’s-security-mindset-with-devsecops/devsecops-banner.jpg" alt="alter-text" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-</br> </br>
+</br> </br> 
 
 Hackers pose a persistent threat to businesses, devising new ways to steal data and disrupt operations. They exploit human vulnerabilities through phishing emails that mimic trusted sources, tricking employees and causing costly data breaches. 
 
