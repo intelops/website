@@ -1,0 +1,42 @@
+{{ $id := .Get "id" }}
+{{ $label := .Get "label" }}
+{{ $name := .Get "name" }}
+{{ $placeholder := .Get "placeholder" }}
+{{ $value := .Get "value" }}
+{{ $required := .Get "required" }}
+{{ $autofocus := .Get "autofocus" }}
+{{ $disabled := .Get "disabled" }}
+{{ $readonly := .Get "readonly" }}
+{{ $class := .Get "class" }}
+{{ $width :=  default "1/1" (.Get "width") }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="col-12"
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  {{ if $label }}
+    <label for="input-{{ $id }}" class="fw-600 mb-1">
+      {{ $label | markdownify }}
+    </label>
+  {{ end }}
+  <textarea
+    cols="30"
+    rows="10"
+    {{ with $name }}data-name="{{ . }}"{{ end }}
+    {{ with $name }}name="{{ . }}"{{ end }}
+    {{ with $id }}id="input-{{ . }}"{{ end }}
+    {{ with $placeholder }}placeholder="{{ . }}"{{ end }}
+    {{ with $value }}value="{{ . }}"{{ end }}
+    {{ if $required }}required{{ end }}
+    {{ if $required }}data-required="true"{{ end }}
+    {{ if $autofocus }}autofocus{{ end }}
+    {{ if $disabled }}disabled{{ end }}
+    {{ if $readonly }}readonly{{ end }}
+    {{ with $placeholder }}placeholder="{{ . }}"{{ end }}
+    {{ with $condition }}condition="{{ . }}"{{ end }}
+    class="form-control {{ with $class }}{{ . }}{{ end }}"></textarea>
+</div>

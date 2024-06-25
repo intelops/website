@@ -1,0 +1,403 @@
+{{ $perma := (split .RelPermalink "/") }}
+{{ $is_upcoming_single := and (eq (index $perma 2) "upcoming") (eq .Kind "page") }}
+{{ $is_header_hidden := .Params.hide_header }}
+
+
+<!-- navigation -->
+{{ $headerWhite := or (eq .Section "platform") (eq .Section "open-source") (eq .Section "services") }}
+
+{{ if not .Params.hide_main_header }}
+  <header
+    class="navigation {{ if $headerWhite }}navigation-alt{{ end }}"
+    {{ with .Params.header_background }}
+      style="background-color: {{ . }};"
+    {{ end }}
+    id="main-header">
+    <div class="container container-delta">
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-xl" id="main-navbar">
+        <!-- navbar brand/logo -->
+        <a
+          class="navbar-brand"
+          href="{{ site.BaseURL | relLangURL }}"
+          title="{{ site.Title }}">
+          {{ partial "logo.html" }}
+        </a>
+
+        {{ if not (or $is_upcoming_single $is_header_hidden) }}
+          <div class="navbar-actions d-inline-flex align-items-center">
+            <!-- Language List -->
+            {{ if .IsTranslated }}
+              <select
+                class="border-0 d-inline d-xl-none"
+                onchange="location = this.value;">
+                {{ $siteLanguages := site.Languages }}
+                {{ $pageLang := .Page.Lang }}
+                {{ range .Page.AllTranslations }}
+                  {{ $translation := . }}
+                  {{ range $siteLanguages }}
+                    {{ if eq $translation.Lang .Lang }}
+                      {{ $selected := false }}
+                      {{ if eq $pageLang .Lang }}
+                        <option
+                          id="{{ $translation.Language }}"
+                          value="{{ $translation.RelPermalink }}"
+                          selected>
+                          {{ .LanguageName }}
+                        </option>
+                      {{ else }}
+                        <option
+                          id="{{ $translation.Language }}"
+                          value="{{ $translation.RelPermalink }}">
+                          {{ .LanguageName }}
+                        </option>
+                      {{ end }}
+                    {{ end }}
+                  {{ end }}
+                {{ end }}
+              </select>
+            {{ end }}
+
+
+            <button
+              aria-label="navbar toggler"
+              class="navbar-toggler border-0"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navigation">
+              <i class="d-inline fas fa-bars"></i>
+              <i class="d-none fas fa-times"></i>
+            </button>
+
+            {{ if site.Params.fullSiteSearch }}
+              <button
+                class="btn btn-search rounded-circle border-0 outline-none px-0 d-inline-block d-xl-none ms-2"
+                style="width:44px"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal">
+                <i class="fas fa-search"></i>
+              </button>
+            {{ end }}
+          </div>
+
+          <div class="collapse navbar-collapse text-center" id="navigation">
+            <ul class="navbar-nav mx-auto align-items-center">
+              {{ $currentPage := . }}
+              {{ range site.Menus.main }}
+                {{ $menuURL := .URL | absLangURL }}
+                {{ $pageURL:= $currentPage.Permalink | absLangURL }}
+                {{ $active := eq $menuURL $pageURL }}
+                {{ if .HasChildren }}
+                  <li
+                    class="nav-item dropdown
+              {{ range .Children }}
+                      {{ $childURL := .URL | absLangURL }}
+                      {{ $active := eq $childURL $pageURL }}
+                      {{ if $active }}active{{ end }}
+                    {{ end }}">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      id="nav-menu"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-haspopup="true"
+                      aria-expanded="false">
+                      {{ .Name }}
+                    </a>
+                    <ul
+                      class="dropdown-menu {{ if .Params.isMenuLarge }}
+                        dropdown-lg
+                      {{ end }}">
+                      {{ range .Children }}
+                        {{ $childURL := .URL | absLangURL }}
+                        {{ $active := eq $childURL $pageURL }}
+                        <li>
+                          <a
+                            class="dropdown-item {{ if $active }}
+                              active
+                            {{ end }}"
+                            {{ if findRE `^http` .URL }}
+                              target="_blank" rel="noopener"
+                            {{ end }}
+                            href="{{ if findRE `^#` .URL }}
+                              {{ if not $.IsHome }}
+                                {{ site.BaseURL | relLangURL }}
+                              {{ end }}{{ .URL }}
+                            {{ else if eq .URL (`/` | relURL) }}
+                              {{ .URL }}
+                            {{ else }}
+                              {{ .URL | relLangURL }}
+                            {{ end }}">
+                            <span class="d-flex align-items-start">
+                              {{ if .Pre }}
+                                {{ $icon := .Pre }}
+                                {{ if fileExists (add `assets/` $icon) }}
+                                  {{ $preIcon:= resources.Get $icon }}
+                                  <img
+                                    src="{{ $preIcon.RelPermalink }}"
+                                    alt="icon"
+                                    height="22px"
+                                    width="22px" />
+                                {{ end }}
+                              {{ end }}
+                              <span class="ms-1">
+                                <span>{{ .Name }}</span>
+                                {{ if .Post }}{{ .Post }}{{ end }}
+                              </span>
+                            </span>
+                          </a>
+                        </li>
+                      {{ end }}
+                    </ul>
+                  </li>
+                {{ else }}
+                  <li class="nav-item {{ if $active }}active{{ end }}">
+                    <a
+                      class="nav-link"
+                      id="nav-menu"
+                      {{ if findRE `^http` .URL }}
+                        target="_blank" rel="noopener"
+                      {{ end }}
+                      href="{{ if findRE `^#` .URL }}
+                        {{ if not $.IsHome }}
+                          {{ site.BaseURL | relLangURL }}
+                        {{ end }}{{ .URL }}
+                      {{ else if eq .URL (`/` | relURL) }}
+                        {{ .URL }}
+                      {{ else }}
+                        {{ .URL | relLangURL }}
+                      {{ end }}">
+                      {{ .Name }}
+                    </a>
+                  </li>
+                {{ end }}
+              {{ end }}
+              <li class="nav-item d-none d-xl-block">
+                <!-- Language List -->
+                {{ if .IsTranslated }}
+                  <select
+                    class="border-0"
+                    id="select-language"
+                    onchange="location = this.value;">
+                    {{ $siteLanguages := site.Languages }}
+                    {{ $pageLang := .Page.Lang }}
+                    {{ range .Page.AllTranslations }}
+                      {{ $translation := . }}
+                      {{ range $siteLanguages }}
+                        {{ if eq $translation.Lang .Lang }}
+                          {{ $selected := false }}
+                          {{ if eq $pageLang .Lang }}
+                            <option
+                              id="{{ $translation.Language }}"
+                              value="{{ $translation.RelPermalink }}"
+                              selected>
+                              {{ .LanguageName }}
+                            </option>
+                          {{ else }}
+                            <option
+                              id="{{ $translation.Language }}"
+                              value="{{ $translation.RelPermalink }}">
+                              {{ .LanguageName }}
+                            </option>
+                          {{ end }}
+                        {{ end }}
+                      {{ end }}
+                    {{ end }}
+                  </select>
+                {{ end }}
+              </li>
+            </ul>
+
+            <div class="navbar-right header-button" id="main-button">
+              {{ with site.Params.navigation_button }}
+                {{ if .enable }}
+                  <!-- login btn -->
+                  <a
+                    href="{{ .link | relLangURL }}"
+                    class="btn btn-link px-0 me-1">
+                    {{ with .icon }}<i class="icon {{ . }} me-1"></i>{{ end }}
+                    {{ .label }}
+                  </a>
+                {{ end }}
+              {{ end }}
+
+              {{ with site.Params.navigation_button_two }}
+                {{ if .enable }}
+                  <!-- signup btn -->
+                  <a href="{{ .link | relLangURL }}" class="btn btn-primary">
+                    {{ .label }}
+                    {{ with .icon }}<i class="icon {{ . }}"></i>{{ end }}
+                  </a>
+                {{ end }}
+              {{ end }}
+
+              {{ if site.Params.fullSiteSearch }}
+                <button
+                  class="btn btn-search rounded-circle border-0 outline-none px-0 d-none d-xl-inline-block"
+                  style="width:44px"
+                  data-bs-toggle="modal"
+                  data-bs-target="#searchModal">
+                  <i class="fas fa-search"></i>
+                </button>
+              {{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </nav>
+    </div>
+  </header>
+  <!-- /navigation -->
+{{ end }}
+
+{{ if site.Params.fullSiteSearch }}
+  <div
+    class="modal search-modal"
+    id="searchModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog search-modal-dialog">
+      <div class="modal-content border-0">
+        <div class="modal-header border-0" style="padding:1rem">
+          <div class="input-group border-0">
+            <span
+              class="input-group-text bg-transparent border-end-0"
+              id="Search">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                class="bi bi-search"
+                viewBox="0 0 16 16">
+                <path
+                  d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+              </svg>
+            </span>
+            <input
+              type="text"
+              id="searchInput"
+              class="form-control search-form-control shadow-none border-start-0 ps-0 ms-0"
+              placeholder="Search on this Site"
+              aria-label="Search"
+              aria-describedby="Search" />
+          </div>
+        </div>
+        <div class="modal-body">
+          <div id="search-result-body"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const searchModal = document.getElementById("searchModal");
+    const searchInput = document.getElementById("searchInput");
+    const searchResult = document.getElementById("search-result-body");
+    searchModal.addEventListener("shown.bs.modal", () => {
+      searchInput.focus();
+    });
+    let jsonData = [];
+
+    const loadJsonData = async () => {
+      try {
+        const res = await fetch("/index.json");
+        jsonData = await res.json();
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    searchInput.addEventListener("keyup", (e) => {
+      const searchString = e.target.value.toLowerCase();
+
+      let filteredJSON = jsonData
+        .reduce((prev, item) => [...new Set([...prev, item.section])], [])
+        .map((item) => {
+          let filteredItems = jsonData.filter((i) => i.section === item);
+          return {
+            section: item,
+            data: filteredItems,
+          };
+        });
+
+      let searchItem = filteredJSON.filter((item) => {
+        if (searchString === "") {
+          return "";
+        } else if (
+          item.data.find((el) => el.title.toLowerCase().includes(searchString))
+        ) {
+          return item;
+        } else if (
+          item.data.find((el) =>
+            el.description.toLowerCase().includes(searchString),
+          )
+        ) {
+          return item;
+        } else if (
+          item.data.find((el) =>
+            el.searchKeyword.toLowerCase().includes(searchString),
+          )
+        ) {
+          return item;
+        } else if (
+          item.data.find((el) =>
+            el.content.toLowerCase().includes(searchString),
+          )
+        ) {
+          return item;
+        }
+      });
+
+      displayResult(searchItem, searchString);
+    });
+
+    const displayResult = (searchItems, searchString) => {
+      const htmlString = searchItems
+        .map((item) => {
+          const contentValue = item.data
+            .filter((d) => d.content.toLowerCase().includes(searchString))
+            .map((innerItem) => {
+              const position = innerItem.content
+                .toLowerCase()
+                .indexOf(searchString.toLowerCase());
+              let matches = innerItem.content.substring(
+                position,
+                searchString.length + position,
+              );
+              let matchesAfter = innerItem.content.substring(
+                searchString.length + position,
+                searchString.length + position + 100,
+              );
+              const highlighted = innerItem.content.replace(
+                innerItem.content,
+                "<mark>" + matches + "</mark>" + matchesAfter,
+              );
+              return highlighted;
+            });
+
+          return `
+      <div class="search-result-item">
+        <p class="section">${item.section}</p>
+        ${item.data
+          .filter(
+            (d) =>
+              d.title.toLowerCase().includes(searchString) ||
+              d.description.toLowerCase().includes(searchString) ||
+              d.searchKeyword.toLowerCase().includes(searchString) ||
+              d.content.toLowerCase().includes(searchString),
+          )
+          .map(
+            (innerItem) =>
+              `<a class="block" href="${innerItem.url}"><p class="mb-0 lh-base">${innerItem.title}</p><span></span><p class="small text-muted mt-1 mb-0 lh-base">${contentValue}</p></a>`,
+          )
+          .join("")}
+      </div>`;
+        })
+        .join("");
+      searchResult.innerHTML = htmlString;
+    };
+    loadJsonData();
+  </script>
+{{ end }}

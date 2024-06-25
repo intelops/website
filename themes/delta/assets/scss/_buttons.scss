@@ -36,14 +36,26 @@
 }
 
 .btn-primary {
-  background: linear-gradient(
-    135deg,
-    lighten($color-primary, 10) 0%,
-    darken($color-primary, 5) 100%
-  ) !important;
-  color: $white;
+  background: $color-primary;
+  color: $body-color;
   border: 0;
 
+  &:hover,
+  &:active,
+  &.active,
+  &:focus,
+  &.focus {
+    color: $dark-900;
+    box-shadow: 0 10px 30px -6px rgba(darken($color-primary, 10), 0.5) !important;
+    background: $color-primary;
+  }
+}
+
+.btn-outline-primary {
+  color: $color-primary;
+  border-color: $color-primary;
+
+  &.active,
   &:hover,
   &:active,
   &.active,
@@ -55,12 +67,13 @@
       lighten($color-primary, 10) 0%,
       darken($color-primary, 5) 100%
     );
+    border-color: transparent !important;
+    color: $white;
   }
 }
-
-.btn-outline-primary {
-  color: $color-primary;
-  border-color: $color-primary;
+.btn-outline {
+  color: $text-color;
+  border-color: $border-color;
 
   &.active,
   &:hover,
@@ -120,8 +133,9 @@
 
 .btn-play {
   padding: 6px 25px 6px 7px;
+
   i {
-    border: 1px solid #c2c2c2;
+    border: 1px solid $border-color;
     border-radius: 50px;
     height: 40px;
     width: 40px;
@@ -129,12 +143,14 @@
     margin-right: 8px;
     font-size: 13px;
     padding-left: 2px;
-    background-color: $white;
-    color: $color-primary;
+    background-color: $dark-900;
+    color: $white;
     text-align: center;
     transition: 0.2s;
   }
   &:hover i {
+    color: $white;
+    border-color: $white;
     background-color: transparent;
   }
 }

@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
+  {{ partial "essentials/header.html" . }}
   
   <!-- checking event -->
   {{ if .Params.bannerarea }}
@@ -40,7 +40,7 @@
             <div class="block pe-0 pe-lg-2">
               {{ $series := .Params.series }}
               {{ with $series }}
-                <p class="h4 fw-light text-dark ps-3">{{ . }}</p>
+                <p class="h4 fw-light text-light ps-3">{{ . }}</p>
               {{ end }}
 
               {{ .TableOfContents }}
@@ -61,7 +61,7 @@
               class="mb-4 {{ with .Params.linkspage }}
                 links-page-image
               {{ end }}">
-              {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+              {{ partial "components/post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
             </div>
           {{ end }}
 
@@ -101,7 +101,7 @@
                 class="text-muted small d-inline-block"
                 style="opacity:.75">
                 {{ if $showCategory }}
-                  <strong class="text-dark">Categories :</strong>
+                  <strong class="text-light">Categories :</strong>
                   {{ range $i, $e := .Params.categories }}
                     {{ if ne $i 0 }},{{ end }}
                     <a
@@ -114,7 +114,7 @@
 
                 {{ with .Params.tags }}
                   <span class="mx-1 text-dark-50">|</span>
-                  <strong class="text-dark">Tags :</strong>
+                  <strong class="text-light">Tags :</strong>
                   {{ range $i, $e := . }}
                     {{ if ne $i 0 }},{{ end }}
                     <a
@@ -147,7 +147,7 @@
                 </div>
                 <div>
                   <h3 class="h5 title mb-1">
-                    <a href="{{ .RelPermalink }}" class="text-dark">
+                    <a href="{{ .RelPermalink }}">
                       {{ .Title }}
                     </a>
                   </h3>

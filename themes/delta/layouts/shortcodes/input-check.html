@@ -1,0 +1,45 @@
+{{ $id := .Get "id" }}
+{{ $type := default "radio" (.Get "type") }}
+{{ $label := .Get "label" }}
+{{ $name := .Get "name" }}
+{{ $value := .Get "value" }}
+{{ $checked := .Get "checked" }}
+{{ $required := .Get "required" }}
+{{ $autofocus := .Get "autofocus" }}
+{{ $disabled := .Get "disabled" }}
+{{ $readonly := .Get "readonly" }}
+{{ $class := .Get "class" }}
+{{ $label_class := default "mb-0" (.Get "label_class") }}
+{{ $width :=  default "1/1" (.Get "width") }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="form-check mb-0"
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  <label
+    for="{{ $id }}"
+    class="form-check-label {{ with $label_class }}{{ . }}{{ end }}">
+    {{ $label | markdownify }}
+  </label>
+  <input
+    type="{{ $type }}"
+    {{ with $name }}data-name="{{ . }}"{{ end }}
+    {{ with $name }}name="{{ . }}"{{ end }}
+    {{ with $id }}id="{{ . }}"{{ end }}
+    {{ with $checked }}checked="{{ . }}"{{ end }}
+    {{ if $required }}required{{ end }}
+    {{ if $required }}
+      data-required="true"
+    {{ else }}
+      data-required="false"
+    {{ end }}
+    {{ if $value }}value="{{ $value }}"{{ end }}
+    {{ if $autofocus }}autofocus{{ end }}
+    {{ if $disabled }}disabled{{ end }}
+    {{ if $readonly }}readonly{{ end }}
+    {{ with $condition }}condition="{{ . }}"{{ end }}
+    class="form-check-input {{ with $class }}{{ . }}{{ end }}" />
+</div>

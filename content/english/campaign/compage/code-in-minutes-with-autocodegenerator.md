@@ -12,6 +12,8 @@ hide_header: true # It will hide specific part of the header like menu except lo
 hide_footer: true
 hide_call_to_action: true
 
+header_background: "#FEF2EB"
+
 layout_width: full
 
 draft: false
@@ -33,13 +35,14 @@ noindex: true
 {{< banner
 has_header=true
 header_logo=`/images/logos/new-full-logo-light.svg`
-banner_bg_color=`#0a253e`
+banner_bg_color=`#262423`
+header_bg_color=`transparent`
 image=`/images/compage-dashboard.png`
-title=`Build Secure Code in Minutes With Auto Code Generator `
-title_color=`white`
+title=`Build Secure Code in Minutes With Auto Code Generator`
+title_color=``
 description=`Boost your development team's productivity 2X with Compage. Focus on innovative solutions, not boilerplate.`
-description_color=`white`
-button_label=`Schedule a demo` 
+description_color=``
+button_label=`Schedule a demo`
 button_link=`https://intelops.ai/product-demo-request-form/`
 has_padding_top=false
 has_padding_bottom=true
@@ -51,8 +54,8 @@ right_shape_color=`#99beff` >}}
 {{< brand-slider
 title=`Simplify development with built-in integrations`
 description=`Customize your services with various plugins & integrations`
-description_color=`black`
-title_color=`black`
+description_color=``
+title_color=``
 slider=true
 images=`/images/clients/aqua-trivy.png,/images/clients/codecov.png,/images/clients/deepsource.png,/images/clients/open-telemetry.png,/images/clients/sonarqube.png,/images/clients/Cosign.png,/images/clients/Devspace.png,/images/clients/gluu.png,/images/clients/Spdx.png,/images/clients/Keycloak.png,/images/clients/janssen.png`
 has_padding_top=false
@@ -60,11 +63,11 @@ has_padding_bottom=true >}}
 
 {{< faq
  title=`Pioneering Innovation at Every Stage`
- title_color=`black`
+ title_color=``
  subtitle=`Who uses Compage`
  subtitle_color=`#F88136`
  description=`Meet business needs at every scale. Compage low code platform equips developers, architects, technology leaders with the tools they need to achieve efficiency, security, and scalability for business success. `
- description_color=`black`
+ description_color=``
  has_padding_top=false
  has_padding_bottom=true
  button_label=`Schedule a demo`
@@ -78,18 +81,15 @@ has_padding_bottom=true >}}
 - Focus on business logic, ditch boilerplate
 - Customize generated code for business needs
 
-
  {{< /faq-item >}}
 
  {{< faq-item title=`Startups`>}}
-
 
 - Deploy features fast
 - Enforce code-level governance
 - Retain full control, zero vendor lock-in
 - Embrace on-demand agility
 - Slash development costs with automation
-
 
  {{< /faq-item >}}
 
@@ -101,21 +101,18 @@ has_padding_bottom=true >}}
 - Maintain industry compliance
 - Minimize the skill gap and technical debt
 
-
  {{< /faq-item >}}
-
-
 
 {{< /faq >}}
 
 {{< process
- background_color=`#E4F0FD`
+ background_color=`#262423`
  title=`Production Ready Code in just a few steps`
- title_color=`black`
+ title_color=``
  subtitle=`Compage In action`
- subtitle_color=`#F88136`
+ subtitle_color=``
  description=`Test and validate your code with our tech stack or integrate your own tools.`
- description_color=`black`
+ description_color=``
  hide_left_shape=true
  hide_right_shape=true
  left_shape_color=`red`
@@ -123,43 +120,43 @@ has_padding_bottom=true >}}
 
  {{< process-item
    title=`Define Requirements`
-   title_color=`black`
-   description_color=`#150E0B`
+   title_color=``
+   description_color=`#A4B0CA`
    image=`/images/process/define-requirements.png`
    image_bg_color=`#376994`
    data_count=`` >}}
- Provide project <br> 
- requirements as inputs
+
+  Provide project <br>
+  requirements as inputs
 
  {{</ process-item >}}
 
  {{< process-item
    title=`Design Architecture`
-   title_color=`black`
-   description_color=`#150E0B`
+   title_color=``
+   description_color=`#A4B0CA`
    image=`/images/process/design-architecture.png`
    image_bg_color=`#376994`
    data_count=`` >}}
-   Configure your architecture in the <br> language, database, and framework of your choice. 
-
+   Configure your architecture in the <br> language, database, and framework of your choice.
 
  {{</ process-item >}}
 
  {{< process-item
    title=`Create artifacts`
-   title_color=`black`
-   description_color=`#150E0B`
+   title_color=``
+   description_color=`#A4B0CA`
    image=`/images/process/create-artifacts.png`
    image_bg_color=`#376994`
    data_count=`` >}}
-Generate build & release <br> artifacts as per the industry’s secure standards. 
+Generate build & release <br> artifacts as per the industry’s secure standards.
 
  {{</ process-item >}}
 
  {{< process-item
    title=`Customize Code`
-   title_color=`black`
-   description_color=`#150E0B`
+   title_color=``
+   description_color=`#A4B0CA`
    image=`/images/process/customize-code.png`
    image_bg_color=`#376994`
    data_count=`` >}}
@@ -168,7 +165,7 @@ Generate build & release <br> artifacts as per the industry’s secure standards
 
 {{</ process >}}
 
-{{< video
+{{< video-section
  video_url=`https://www.youtube.com/embed/6CwEGQlY3Pk?si=d031XxsHb32vqNNd%22`
  background_image=`/images/thumbnail-compage.png`
  has_padding_top=true
@@ -176,12 +173,12 @@ Generate build & release <br> artifacts as per the industry’s secure standards
 
  {{< testimonial
  title=`What Can Your Dev Team Do With Compage?`
- title_color=`black`
+ title_color=``
  subtitle=`Use cases`
  subtitle_color=`#F88136`
  image=`/images/compage-usecase.png`
  image_width=`500x`
- image_bg_color=`white` >}}
+ image_bg_color=`` >}}
 
  {{< testimonial-item
    name=`Build Microservices`
@@ -197,7 +194,7 @@ Generate build & release <br> artifacts as per the industry’s secure standards
    designation=``
    rating=``
    hide_quote=true >}}
- Build secure, distroless containers that minimize attack surfaces and enhance application security.  Compage optimizes performance for smooth runtime across platforms, guaranteeing portability. 
+ Build secure, distroless containers that minimize attack surfaces and enhance application security.  Compage optimizes performance for smooth runtime across platforms, guaranteeing portability.
  Streamline deployments, freeing developers to focus on delivering innovative features and functionalities.
 
  {{</ testimonial-item >}}
@@ -208,7 +205,7 @@ Generate build & release <br> artifacts as per the industry’s secure standards
    rating=``
    hide_quote=true >}}
 Auto-generate code for backend workloads like REST APIs and gRPC, along with endpoint configurations for API gateways. This streamlines communication between system components and frees you to focus on building the core functionalities of your APIs.
- 
+
  {{</ testimonial-item >}}
 
  {{< testimonial-item
@@ -218,17 +215,16 @@ Auto-generate code for backend workloads like REST APIs and gRPC, along with end
    hide_quote=true >}}
  Transition to microservices for agility, leverage API-first development for seamless integrations and deploy secure, multi-stage Docker containers for optimized performance. Build high-performant, cloud native applications effortlessly.
 
- 
  {{</ testimonial-item >}}
 
 {{</ testimonial >}}
 
 {{< features
-background_color=`#0A253D`
+background_color=`#262423`
 title=`Everything You need to build better software`
-title_color=`white`
+title_color=``
 subtitle=`Compage Features`
-subtitle_color=`white`
+subtitle_color=``
 has_padding_top=true
 has_padding_bottom=true
 hide_left_shape=true
@@ -236,77 +232,75 @@ hide_right_shape=true
 left_shape_color=`#99beff`
 right_shape_color=`#99beff` >}}
   {{< features-item
-      background_color=`white`
+      background_color=`#1D1F26`
       icon=`/images/call-to-actions/compage/api.png`
-      icon_color=`white`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`API First development`
-      title_color=`black`
+      title_color=``
       description=`Develop fully functional gRPC & REST APIs`
-      description_color=`#091922` >}}
+      description_color=`#A4B0CA` >}}
   {{< features-item
-      background_color=`white`
- icon=`/images/call-to-actions/compage/visual-canvas.png`
-      icon_color=`white`
+      background_color=`#1D1F26`
+      icon=`/images/call-to-actions/compage/visual-canvas.png`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`Visual Canvas and CLI`
-      title_color=`black`
+      title_color=``
       description=`Drag and drop nodes on a drawing canvas`
-      description_color=`#091922` >}}
+      description_color=`#A4B0CA` >}}
   {{< features-item
-      background_color=`white`
+      background_color=`#1D1F26`
        icon=`/images/call-to-actions/compage/git.png`
-      icon_color=`black`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`Git sync`
-      title_color=`black`
+      title_color=``
       description=`Continuously sync with github repositories`
-      description_color=`#091922` >}}
+      description_color=`#A4B0CA` >}}
   {{< features-item
+      background_color=`#1D1F26`
       icon=`/images/call-to-actions/compage/containers.png`
-      icon_color=`black`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`Simplified Containerization`
       description=`Build portable and distroless containers`
-      description_color=`#091922`  >}}
+      description_color=`#A4B0CA`  >}}
    {{< features-item
+      background_color=`#1D1F26`
       icon=`/images/call-to-actions/compage/auto.png`
-      icon_color=`black`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`Automated Software supply chain security`
       description=`Enforce security best practices with SBOM`
-      description_color=`#091922`  >}}
+      description_color=`#A4B0CA`  >}}
   {{< features-item
-     icon=`/images/call-to-actions/compage/agnostic.png`
-     icon_color=`black`
+      background_color=`#1D1F26`
+      icon=`/images/call-to-actions/compage/agnostic.png`
+      icon_color=``
       icon_bg_color=`#376994`
       title=`Agnostic Framework`
       description=`Generate code with our rich language library`
-      description_color=`#091922`  >}}
+      description_color=`#A4B0CA`  >}}
 
 {{< /features >}}
 
-
 {{< content-block
  title=`Reimagine Software Development with GenAI & Compage`
- title_color=`black`
+ title_color=``
  subtitle=`AI-Augmented Development`
  subtitle_color=`#F88136`
  order=true
  slider=true
  images=`/images/ai-augmented-latest.png,/images/ai-augmented-code.png`
- image_bg_color=`white`
- 
+ image_bg_color=``
+
  has_padding_top=true
  has_padding_bottom=false >}}
 
  Leverage Compage's agnostic framework to scale with emerging technologies like Generative AI. Pair it with our LLM, trained on high-quality data, to translate code, generate documentation, code call flow diagrams, and unit test cases. Move beyond POCs and start using Generative AI securely for your business use cases.
 
-
 {{</ content-block >}}
-
-
-
 
 {{< content-block
  title=`Why Businesses Choose Compage`
@@ -314,14 +308,14 @@ right_shape_color=`#99beff` >}}
  order= false
  slider= false
  images=`/images/why-compage.png`
- image_bg_color=`white`
+ image_bg_color=``
  image_width=`1200x`
  has_padding_top=true
  has_padding_bottom=false >}}
 
 - **Faster Time to Market:** Reduce development time by 50% and ship features fast to meet market demand and gain a competitive edge.
 
-- **Shift-Left Security:** Secure the foundation right from the development 
+- **Shift-Left Security:** Secure the foundation right from the development
 stage, reduce vulnerabilities and later-stage fixes, and safeguard your system  from serious security threats.
 
 - **Proactive Troubleshooting:** Understand the internal state of the system and identify problems, optimize performance, and keep the system running smoothly.
@@ -331,12 +325,12 @@ stage, reduce vulnerabilities and later-stage fixes, and safeguard your system  
 {{< call-to-action
 image=`/images/cta-image.png`
 title=`Find out how compage provides quickest time-to value market`
-title_color=`black`
+title_color=``
 subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
 button_label=`Schedule a demo`
 button_link=`https://intelops.ai/product-demo-request-form/`
-bg_color=`#0A253D`
+bg_color=`#262423`
 copyright=`Copyright @ IntelOps, Inc. - 2024`
-copyright_color=`white` >}}
+copyright_color=`` >}}

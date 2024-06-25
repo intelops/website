@@ -8,27 +8,24 @@ AUTHOR WEBSITE: https://gethugothemes.com
 -->
 
 <!doctype html>
-<html lang="{{ site.LanguageCode | default `en-US` }}">
+<html
+  itemscope
+  lang="{{ site.LanguageCode | default `en-US` }}"
+  itemtype="http://schema.org/WebPage">
   <head>
-    {{ partial "head.html" . }}
+    <!-- head (don't cache it) -->
+    {{ partial "essentials/head.html" . }}
 
 
-    <!-- cache partial only in production -->
-    {{ if hugo.IsProduction }}
-      {{ partialCached "style.html" . }}
-    {{ else }}
-      {{ partial "style.html" . }}
-    {{ end }}
+    <!-- style (always cache it) -->
+    {{ partialCached "essentials/style.html" . }}
   </head>
 
   <body>
-    <!-- google tag manager noscript -->
-    {{ partial "gtm-noscript.html" . }}
-
-
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
       {{ partialCached "preloader.html" . }}
+      {{ partialCached "gtm-noscript.html" . }}
     {{ else }}
       {{ partial "preloader.html" . }}
     {{ end }}
@@ -39,24 +36,24 @@ AUTHOR WEBSITE: https://gethugothemes.com
 
     <!-- cache partial only in production -->
     {{ if hugo.IsProduction }}
-      {{ partialCached "script.html" . }}
+      {{ partialCached "essentials/script.html" . }}
       {{ if or (eq .Section "events") (eq .Section "campaign") }}
-        {{ partial "footer-events.html" . }}
+        {{ partial "essentials/footer-events.html" . }}
       {{ else }}
-        {{ partialCached "footer.html" . }}
+        {{ partialCached "essentials/footer.html" . }}
       {{ end }}
     {{ else }}
-      {{ partial "script.html" . }}
+      {{ partial "essentials/script.html" . }}
       {{ if or (eq .Section "events") (eq .Section "campaign") }}
-        {{ partial "footer-events.html" . }}
+        {{ partial "essentials/footer-events.html" . }}
       {{ else }}
-        {{ partial "footer.html" . }}
+        {{ partial "essentials/footer.html" . }}
       {{ end }}
     {{ end }}
 
-    {{/* Tawk.to */}}
+    <!-- Tawk.to -->
     {{ if not .Params.hide_tawk }}
-      {{ partial "tawk.html" }}
+      {{ partial "components/tawk.html" }}
     {{ end }}
   </body>
 </html>

@@ -11,10 +11,6 @@ timeZone = "America/New_York"
 paginate = 6 # see https://gohugo.io/extras/pagination/
 # post excerpt
 summaryLength = 10 # see https://gohugo.io/content-management/excerpts/
-# google analytics
-googleAnalytics = "G-MEASUREMENT_ID" # see https://gohugo.io/templates/internal/#configure-google-analytics
-# disqus short name
-disqusShortname = "themefisher-template" # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
 # disable language
 disableLanguages = [
   "fr",
@@ -22,16 +18,60 @@ disableLanguages = [
 hasCJKLanguage = false #  If hasCJKLanguage true, auto-detect Chinese/Japanese/Korean Languages in the content. see: https://gohugo.io/getting-started/configuration/#hascjklanguage
 enableGitInfo = true # show last update time of post
 
+
+########################### Services #############################
+[services]
+[services.googleAnalytics]
+ID = 'G-MEASUREMENT_ID' # see https://gohugo.io/templates/internal/#configure-google-analytics
+
+[services.disqus]
+shortname = 'themefisher-template' # we use disqus to show comments in blog posts . To install disqus please follow this tutorial https://portfolio.peter-baumgartner.net/2017/09/10/how-to-install-disqus-on-hugo/
+
+
+############################# Modules ############################
+[module]
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/watching/hugo_stats.json"
+
+
+############################# Build ##############################
+[build]
+noJSConfigInAssets = false
+useResourceCacheWhen = 'fallback'
+[build.buildStats]
+enable = true
+[[build.cachebusters]]
+source = 'assets/watching/hugo_stats\.json'
+target = 'style\.css'
+[[build.cachebusters]]
+source = 'assets/.*\.(js|ts|jsx|tsx)'
+target = 'js'
+[[build.cachebusters]]
+source = 'assets/.*\.(css|scss|sass)'
+target = 'css'
+[[build.cachebusters]]
+source = 'data/.*\.(.*)$'
+target = 'css'
+[[build.cachebusters]]
+source = 'assets/.*\.(.*)$'
+target = '$1'
+
+
 ############################# Outputs ############################
 [outputs]
-home = ["HTML", "RSS", "WebAppManifest", "JSON"]
+home = ["HTML", "RSS", "WebAppManifest", "SearchIndex"]
 
 
 ############################# Imaging ############################
 [imaging]
 # See https://github.com/disintegration/imaging
 # Default JPEG or WebP quality setting. Default is 75.
-quality = 100
+quality = 80
 resampleFilter = "Lanczos"
 
 
@@ -72,6 +112,13 @@ suffixes = ["webmanifest"]
 mediaType = "application/manifest+json"
 rel = "manifest"
 
+[outputFormats.SearchIndex]
+mediaType = "application/json"
+baseName = "searchindex"
+isPlainText = true
+notAlternative = true
+
+
 ########################### Taxonomies ##########################
 [taxonomies]
 category = "categories"
@@ -101,8 +148,6 @@ link = "plugins/bootstrap/bootstrap.min.js"
 [[params.plugins.js]]
 link = "plugins/swiper/swiper-bundle.min.js"
 [[params.plugins.js]]
-link = "plugins/webfont-loader/webfont-loader-2.min.js"
-[[params.plugins.js]]
 link = "plugins/tab/tab.js"
 [[params.plugins.js]]
 link = "plugins/scrollmenu/scrollmenu.min.js"
@@ -129,32 +174,37 @@ link = "https://cdn.jsdelivr.net/npm/@lottiefiles/lottie-player@2.0.3/dist/lotti
 
 ########################### Variables ##########################
 [params.variables]
-banner_desc = "#acacac"
 banner_primary = "#091922" # prviously original = 121826
 banner_secondary = "#FF5100"
-banner_subtitle = "#FF5100"
-banner_title = "#fff"
-black = "#000"
-body_color = "#fff"
-border_color = "#ACB9C4"
-color_primary = "#F16F33"
+
 color_quaternary = "#6E9240"
-color_secondary = "#FFD02F"
 color_tertiary = "#ED6F78"
 dark = "#091922" # previous original = 050038
+black = "#000"
+
 font_primary = "Catamaran:wght@700;900"
 font_primary_type = "sans-serif"
 font_scale = "1.2"
 font_secondary = "Rubik:wght@400;500;600"
 font_secondary_type = "sans-serif"
 font_size = "16px"
-header_bar_bg = "#f7f7f7"
 icon_font = "Font Awesome 5 Free"
+
 light = "#fdfdfd"
-nav_menu_text = "#464b4b"
-navbar_mobile_bg = "#eaeaea00"
-text_color = "#555"
 text_dark = "#222222"
 text_light = "#959595"
 white = "#fff"
 secblack = "#121826"
+
+# Dark Mode Colors
+color_primary = "#F99A5E"
+
+dark_50 = "#262423"
+dark_300 = "#2E2C2B"
+dark_900 = "#433F3D"
+
+text_color = "#FEF2EB"
+text_color_dark = "#9C9692"
+border_color = "#433F3D"
+border_color_light = "#A4B0CA"
+body_color = "#202020"

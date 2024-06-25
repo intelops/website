@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{ partial "header.html" . }}
+  {{ partial "essentials/header.html" . }}
 
   {{ $permalinkArr :=  (split .RelPermalink "/") }}
   {{ $evntCategory := string (index $permalinkArr 2) }}
@@ -27,7 +27,7 @@
 
 
           <!-- custom pagination -->
-          {{ partial "partials/custom-pagination.html" . }}
+          {{ partial "partials/components/custom-pagination.html" . }}
         </div>
       </div>
     </section>
@@ -58,7 +58,7 @@
 
 
             <!-- custom pagination -->
-            {{ partial "partials/custom-pagination.html" . }}
+            {{ partial "partials/components/custom-pagination.html" . }}
           </div>
         </div>
       </section>

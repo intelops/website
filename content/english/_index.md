@@ -42,7 +42,7 @@ banner:
   lottie: 
     enable: true
     json: "lottie/homepage_concept.json"
-    background: "#223038" #4B4B4C
+    background: "#2E2C2B" #2E2C2B
     speed: "1"
     loop: "true"
     autoplay: "true"
@@ -150,7 +150,7 @@ blog:
   subtitle: Recent Articles
   subtitle_color: ""
   title: "Inside the Lab: Innovation in the Making"
-  title_color: "black"
+  title_color: ""
   description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
   description_color: ""
   button:

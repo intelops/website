@@ -1,0 +1,12 @@
+{{ $id := .Get "id" }}
+{{/* type values - success, info, danger */}}
+{{ $type := default "info" (.Get "type") }}
+{{ $value := .Get "value" }}
+
+{{ $conditionalElement := .Get "conditional-element" }}
+
+<div class="col-12 mb-0 input-note" {{ with $id }}id="{{ . }}"{{ end }} {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  <div class="alert {{ with $type }}alert-{{ . }}{{ end }}" role="alert">
+   <div class="alert-icon">i</div> {{ $value | markdownify }}
+  </div>
+</div>

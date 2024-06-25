@@ -1,0 +1,28 @@
+{{ $title := .Get "title" }}
+{{ $name := .Get "name" }}
+{{ $required := .Get "required" }}
+{{ $id := .Get "id" }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="col-12"
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  {{ if $title }}
+    <label class="fw-600 mb-1">
+      {{ $title | markdownify }}
+    </label>
+  {{ end }}
+  <select
+    class="form-select"
+    {{ with $condition }}condition="{{ . }}"{{ end }}
+    {{ with $required }}required{{ end }}
+    {{ with $required }}data-required="true"{{ end }}
+    {{ with $name }}name="{{ . }}"{{ end }}
+    {{ with $id }}id="{{ . }}"{{ end }}>
+    {{ .Inner }}
+  </select>
+</div>
