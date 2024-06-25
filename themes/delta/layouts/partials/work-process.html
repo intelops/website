@@ -1,34 +1,42 @@
-{{with .Params.work_process}}
-<section class="section pb-0">
-  <div class="container container-delta">
-    <div class="row justify-content-center text-center">
-      <div class="col-lg-8">
-        <div class="section-title">
-          {{with .subtitle}}<p class="subtitle">{{. | markdownify}}</p>{{end}}
-          <h2 class="title">{{.title | markdownify}}</h2>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="row gy-4">
-          {{ $.Scratch.Set "counter" 0 }}
-          {{range .process_item}}
-          {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
-          <div class="col-lg-3 col-sm-6 work-process-item">
-            {{$n := $.Scratch.Get "counter"}}
-            <div class="block pt-4" data-count="{{if (le $n 9)}}0{{$n}}{{ else }}{{$n}}{{ end }}">
-              {{with .image}}
-              <div class="work-process-image">
-                {{ partial "image.html" (dict "Src" . "Size" "350x" "Webp" false "Class" "w-100" ) }}
-              </div>
-              {{end}}
-              <h3 class="title h4">{{.title | markdownify}}</h3>
-              <p class="mb-0">{{.content | markdownify}}</p>
-            </div>
+{{ with .Params.work_process }}
+  <section class="section pb-0">
+    <div class="container container-delta">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <div class="section-title">
+            {{ with .subtitle }}
+              <p class="subtitle">{{ . | markdownify }}</p>
+            {{ end }}
+            <h2 class="title">{{ .title | markdownify }}</h2>
           </div>
-          {{end}}
+        </div>
+        <div class="col-12">
+          <div class="row gy-4">
+            {{ $.Scratch.Set "counter" 0 }}
+            {{ range .process_item }}
+              {{ $.Scratch.Set "counter" (add ($.Scratch.Get "counter") 1) }}
+              <div class="col-lg-3 col-sm-6 work-process-item">
+                {{ $n := $.Scratch.Get "counter" }}
+                <div
+                  class="block pt-4"
+                  data-count="{{ if (le $n 9) }}
+                    0{{ $n }}
+                  {{ else }}
+                    {{ $n }}
+                  {{ end }}">
+                  {{ with .image }}
+                    <div class="work-process-image">
+                      {{ partial "image.html" (dict "Src" . "Size" "350x" "Webp" false "Class" "w-100" ) }}
+                    </div>
+                  {{ end }}
+                  <h3 class="title h4">{{ .title | markdownify }}</h3>
+                  <p class="mb-0">{{ .content | markdownify }}</p>
+                </div>
+              </div>
+            {{ end }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-{{end}}
+  </section>
+{{ end }}

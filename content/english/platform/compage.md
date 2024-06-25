@@ -31,9 +31,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#005DFF"
+  bg_color: ""
   subtitle: "Empower Developers"
-  subtitle_color: ""
+  subtitle_color: "#34B3E4"
   title: "Making Developers' Lives Easy. Deliver Secure Code with Ease!"
   title_color: ""
   description: "Compage automates backend development to accelerate product delivery and facilitate cloud-native adoption while also enabling the enforcement of policies that fortify the security of your software supply chain. All of that with simple Diagram -> to -> Code concept. <br> And, being Open Source."
@@ -55,7 +55,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Always a battle?"
-    subtitle_color: ""
+    subtitle_color: "#34B3E4"
     title: "Speed vs Security"
     title_color: ""
     image: "images/content/compage/what-is-compage.svg"
@@ -69,12 +69,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "How Compage makes it Easy?"
-    subtitle_color: ""
+    subtitle_color: "#34B3E4"
     title: "Draw, Visualize, Generate, Customize, Validate & Deliver - Safeguard your Software Supply Chain"
     title_color: ""
     image: "images/content/compage/how-it-works.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#262423"
     content_color: ""
     content: |
       Compage offers a powerful solution for those who want to take control of their software development process and stay ahead of the curve. Our unique diagram-to-code approach creates code for multiple programming languages, giving developers more flexibility and freedom than ever before. With our backend automation and coding flexibility, you can break free from the limitations of low-code and no-code platforms and boost your productivity. 
@@ -87,7 +87,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Integrations & Features"
-    subtitle_color: ""
+    subtitle_color: "#34B3E4"
     title: "No Limits on what you can achieve!"
     title_color: ""
     image: "images/content/compage/integrations-features.svg"
@@ -111,8 +111,8 @@ call_to_action:
   image: "images/call-to-actions/compage/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#005DFF"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 footer:
   footer_light: false

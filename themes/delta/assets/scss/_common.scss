@@ -57,7 +57,10 @@ a:hover,
 a:focus {
   text-decoration: none;
 }
-
+a,
+li {
+  color: $text-color;
+}
 a,
 button,
 select {
@@ -93,12 +96,12 @@ a:hover {
       width: 100%;
       left: 0;
       bottom: 55%;
-      background-color: lighten($black, 5);
+      background-color: lighten($light, 5);
       transition: 0.3s;
     }
 
     &.swiper-pagination-bullet-active::after {
-      background-color: $black;
+      background-color: $light;
     }
   }
 }
@@ -162,7 +165,7 @@ a:hover {
   @extend .font-secondary;
   @extend .fw-700;
   @extend .text-capitalize;
-  color: $banner-subtitle;
+  color: $color-primary;
 }
 
 .title {
@@ -219,7 +222,9 @@ a:hover {
       padding: 0;
       line-height: 38px;
       text-align: center;
-      color: $text-dark;
+      color: $text-color-dark;
+      background-color: $dark-300;
+      border-color: $dark-300;
 
       &:hover,
       &:focus {
@@ -250,8 +255,8 @@ a:hover {
   a {
     font-size: 16px;
     display: block;
-    background-color: $white;
-    border: 1px solid #dee2e6;
+    background-color: $dark-300;
+    border: 1px solid $border-color;
     transition:
       color 0.15s ease-in-out,
       background-color 0.15s ease-in-out,
@@ -374,12 +379,33 @@ a:hover {
   background: $banner-primary !important;
 }
 
+.w-full {
+  width: 100% !important;
+}
+
 .text-primary {
   color: $color-primary !important;
 }
 
+.text-text {
+  color: $text-color !important;
+}
+
 .bg-secondary {
   background: $color-secondary !important;
+}
+
+.bg-body {
+  background: $body-color !important;
+}
+.bg-dark-50 {
+  background: $dark-50 !important;
+}
+.bg-dark-300 {
+  background: $dark-300 !important;
+}
+.bg-dark-900 {
+  background: $dark-900 !important;
 }
 
 .bg-secondary-soft {
@@ -431,7 +457,7 @@ a:hover {
 }
 
 .border {
-  border-color: #dee2e6 !important;
+  border-color: $border-color !important;
 }
 .border-transparent {
   border-color: transparent !important;
@@ -441,12 +467,15 @@ a:hover {
 
 .form-control {
   padding: 20px;
-  border: 1px solid rgba($black, 0.1);
+  border: 1px solid $border-color;
   height: 56px;
+  color: $text-color !important;
   transition: 0.3s ease;
+  background-color: $dark-300 !important;
 
-  &:focus {
-    border-color: rgba($color-primary, 0.5);
+  &:focus,
+  &:-internal-autofill-selected {
+    border-color: rgba($dark-300, 0.5);
   }
 }
 
@@ -462,9 +491,16 @@ textarea.form-control {
 }
 
 form label {
-  font-weight: 500;
   font-size: 80%;
+  font-weight: 500;
   margin-bottom: 4px;
+
+  @include desktop-xl {
+    font-size: 90%;
+  }
+}
+form[conditional-form] .input-check-group > *:not(:first-child) {
+  margin-top: 12px !important;
 }
 
 .custom-checkbox {
@@ -492,6 +528,71 @@ form label {
   }
 }
 
+select {
+  padding: 15px 20px !important;
+  background: $dark-300
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23A4B0CA' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 0.75rem center !important;
+  background-size: 16px 12px !important;
+  border-color: $border-color-light !important;
+  color: $text-color !important;
+}
+
+.form-check {
+  padding-left: 1.8em !important;
+}
+
+.form-check-input,
+.form-radio-input {
+  cursor: pointer;
+  margin-top: 0.35em;
+  margin-left: -1.7em !important;
+}
+
+.form-check-input {
+  background-color: $dark-300;
+  border: 1px solid $border-color-light;
+  &:checked {
+    background-color: $color-primary;
+    border-color: $color-primary;
+  }
+  &:focus {
+    border-color: $border-color-light;
+  }
+}
+.form-check-label {
+  cursor: pointer;
+}
+.form-control:focus,
+.form-check-input:focus,
+.form-select:focus {
+  border-color: rgba($border-color-light, 0.5);
+  box-shadow: 0 0 0 0.25rem rgba($border-color-light, 0.1);
+}
+
+// range slider
+input[type="range"]::-webkit-slider-thumb {
+  background: $color-primary;
+}
+
+input[type="range"]::-moz-range-thumb {
+  background: $color-primary;
+}
+
+input[type="range"]::-ms-thumb {
+  background: $color-primary;
+}
+-webkit-slider-thumb:active {
+  background-color: $color-primary;
+}
+-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb,
+input[type="range"]:focus::-moz-range-thumb,
+input[type="range"]:focus::-ms-thumb {
+  box-shadow: $color-primary;
+}
+
 // check-list
 .check-list {
   li {
@@ -506,13 +607,13 @@ form label {
       left: 0;
       top: 8px;
       font-size: 85%;
-      color: $color-quaternary;
+      color: $color-primary;
     }
 
-    color: $dark;
+    color: $text-color;
 
     a {
-      color: $dark;
+      color: $text-color;
 
       &:hover {
         color: $color-primary;
@@ -522,8 +623,8 @@ form label {
 }
 
 // content style
-.content > *:not(*.not-content) {
-  color: #777;
+.content > *:not(.not-prose) {
+  color: $text-color;
 
   p {
     color: inherit;
@@ -802,7 +903,7 @@ form label {
 
   blockquote {
     font-size: 20px !important;
-    color: #777;
+    color: $text-color-dark;
     padding: 20px 40px;
 
     @include tablet {
@@ -813,11 +914,11 @@ form label {
     border-left: 2px solid $color-primary;
     margin: 40px 0;
     font-weight: bold;
-    background: darken($white, 2);
+    background: $dark-900;
     border-radius: 5px;
 
     p {
-      color: #777;
+      color: $text-color;
       margin-bottom: 0 !important;
 
       &:last-child {
@@ -848,6 +949,9 @@ form label {
   *:not(li) {
     margin-bottom: 28px;
   }
+  // *:not(li):not(*[class*="col-"]):not(*[class*="form-group"]):not(input):not(textarea):not(select) {
+  //   margin-bottom: 28px;
+  // }
 
   .zenuml {
     *:not(li) {
@@ -881,14 +985,6 @@ form label {
 
 .dark-bar {
   background-color: $banner-primary;
-}
-
-.light-bar {
-  background-color: $header-bar-bg;
-}
-
-.nav-menu-text {
-  color: $black !important;
 }
 
 .header-sec {
@@ -958,7 +1054,7 @@ form label {
     .page-link {
       background: $white;
       border-color: $border-color;
-      color: $text-dark;
+      color: $text-color;
 
       &:hover {
         background: $color-primary;
@@ -978,13 +1074,38 @@ form label {
   padding: 8px 16px;
   font-size: 14px;
 
+  a {
+    text-decoration: underline;
+  }
+
+  &-icon {
+    border-radius: 1000px;
+    display: inline-block;
+    background-color: rgba($border-color-light, 0.2);
+    border: 1px solid rgba($border-color-light, 0.1);
+
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    margin-inline-end: 5px;
+    vertical-align: middle;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   &-success {
-    color: green;
+    color: $text-color;
     background-color: rgba(green, 0.2);
+  }
+
+  &-info {
+    color: $text-color;
+    background-color: rgba($text-color, 0.1);
   }
   &-danger {
     color: red;
-    background-color: rgba(red, 0.2);
+    background-color: rgba(red, 0.1);
   }
 }
 
@@ -995,11 +1116,40 @@ form label {
     li::marker {
       color: $color-primary;
     }
-    li {
-      color: $black;
-    }
     strong {
       color: $color-primary;
     }
   }
 }
+
+.autocomplete-suggestions {
+  background-color: $dark-50 !important;
+  .autocomplete-suggestion {
+    color: $text-color;
+    &:hover {
+      color: $white;
+    }
+  }
+}
+.bg-position-unset {
+  background-position: unset !important;
+}
+.bg-attachment-fixed {
+  background-attachment: fixed !important;
+}
+
+// Dynamic Conditional Form
+*[conditional-element="true"] {
+  display: none;
+}
+
+.mermaid svg,
+text {
+  fill: $text-color !important;
+}
+.mermaid .marker,
+.mermaid .flowchart-link {
+  fill: $light !important;
+  stroke: $light !important;
+}
+

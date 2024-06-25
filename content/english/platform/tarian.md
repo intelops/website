@@ -26,9 +26,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#7D42FB"
+  bg_color: ""
   subtitle: "Power of eBPF & Kernel"
-  subtitle_color: ""
+  subtitle_color: "#B79EC7"
   title: "Runtime protection for Kubernetes and workloads for cloud-native ecosystem."
   title_color: ""
   description: "Evolving threats call for Innovative solutions. Using the power of eBPF, XDP and LSM to provide runtime protection for cloud-native workloads on Kubernetes environment with anomaly detection and auto threat elimination."
@@ -50,7 +50,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Threats!!!"
-    subtitle_color: ""
+    subtitle_color: "#B79EC7"
     title: "Getting into the chaos of threat landscape?"
     title_color: ""
     image: "images/content/tarian/tarian-row1.svg"
@@ -69,12 +69,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Evolve"
-    subtitle_color: ""
+    subtitle_color: "#B79EC7"
     title: "Innovation with Old-School!"
     title_color: ""
     image: "images/content/tarian/tarian-row2.svg"
     content_position: "left" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#262423"
     content_color: ""
     content: |
       Fundamentals are the core of the innovation. That's what Tarian cooks on!
@@ -88,7 +88,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Features"
-    subtitle_color: ""
+    subtitle_color: "#B79EC7"
     title: "Continuous Evolution!"
     title_color: ""
     image: "images/content/tarian/tarian-row3.svg"
@@ -111,12 +111,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Integrations"
-    subtitle_color: ""
+    subtitle_color: "#B79EC7"
     title: "Extended plug-ins and Integrations"
     title_color: ""
     image: "images/content/tarian/tarian-row4.png"
     content_position: "left" # Value will be - "left/right"
-    bg_color: ""
+    bg_color: "#262423"
     content_color: ""
     content: |
       Data-Driven contexts with cloud-native favorites! Security Enablement! 
@@ -138,12 +138,12 @@ call_to_action:
   title: "Start using <br/> Tarian Run-Time Security <br/> today..."
   title_color: "#fff"
   # subtitle: ""
-  # subtitle_color: ""
+  # subtitle_color: "#B79EC7"
   image: "images/call-to-actions/tarian/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#7D42FB"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 # footer:
 #   footer_light: false

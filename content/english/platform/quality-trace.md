@@ -27,9 +27,9 @@ navigation:
     link: "/product-demo-request-form/"
 
 banner:
-  bg_color: "#7FDBE9"
+  bg_color: ""
   subtitle: "de facto"
-  subtitle_color: ""
+  subtitle_color: "#80CED0"
   title: "Boost Reliability with Trace-based Testing"
   title_color: ""
   description: "Quality-Trace is an open-source, universal functional testing framework that leverages OpenTelemetry for tracing, providing increased visibility across the entire system. It generates comprehensive insights to enhance test reliability, ensuring application stability, and detecting issues early in the development cycle, continuously."
@@ -51,7 +51,7 @@ image_and_content_block:
   blocks:
   - enable: true
     subtitle: "Lagging Behind?"
-    subtitle_color: ""
+    subtitle_color: "#80CED0"
     title: "It's Time to Rethink Testing."
     title_color: ""
     image: "images/content/qt/qt-row1.svg"
@@ -68,12 +68,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Build, Iterate & Release"
-    subtitle_color: ""
+    subtitle_color: "#80CED0"
     title: "Trace-Based Testing in Minutes & Always!"
     title_color: ""
     image: "images/content/qt/qt-row2.svg"
     content_position: "right" # Value will be - "left/right"
-    bg_color: "#e9f1ff"
+    bg_color: "#262423"
     content_color: ""
     content: |
       openTelemetry's Trace-Based testing for modern applications enhances test coverage and enables QA, Dev and Ops teams to gain insights for a holistic understanding of application behavior, resulting in faster iterations and delivery with context.
@@ -86,7 +86,7 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Features"
-    subtitle_color: ""
+    subtitle_color: "#80CED0"
     title: "Redefine Testing: Effortless Quality Engineering"
     title_color: ""
     image: "images/content/qt/qt-row3.svg"
@@ -106,12 +106,12 @@ image_and_content_block:
 
   - enable: true
     subtitle: "Support"
-    subtitle_color: ""
+    subtitle_color: "#80CED0"
     title: "Fall in love with your favorite tools."
     title_color: ""
     image: "images/content/qt/qt-row4.svg"
     content_position: "right" # Value will be - "left/right"
-    bg_color: ""
+    bg_color: "#262423"
     content_color: ""
     content: |
       Continuous Testing using Tracing and cloud-native technology.
@@ -131,12 +131,12 @@ call_to_action:
   title: "Start using <br/> QualityTrace <br/> today..."
   title_color: "#fff"
   # subtitle: ""
-  # subtitle_color: ""
+  # subtitle_color: "#80CED0"
   image: "images/call-to-actions/qt/robo-image.svg"
   button_label: "Book a Demo"
   button_link: "/product-demo-request-form/"
-  bg_color: "#00B8D4"
-  bottom_bg_color: "#091922"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 
 # footer:
 #   footer_light: false

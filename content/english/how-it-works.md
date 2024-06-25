@@ -1,7 +1,6 @@
 ---
 title: "How It Works"
 description: "Libero consequuntur doloremque amet, cum fugiat ipsam blanditiis corrupti praesentium quis."
-draft: false
 layout: "how-it-works"
 
 # banner

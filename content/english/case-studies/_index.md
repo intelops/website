@@ -2,7 +2,7 @@
 title: Case Studies
 description: Democratizing Managed Services for modern tech. DevOps, DevSecOps, MLOps, AIOps, Datascience, etc.
 bannertext: Case Studies
-bannertext_color: "#000"
+bannertext_color: "#FEF2EB"
 bannerimage: images/blog-banner1.jpg
 enable: true
 
@@ -15,4 +15,5 @@ signup_block:
     level: "Sign Up Now"
     link: "/sign-up"
 ignoreSearch: true
+draft: true
 ---

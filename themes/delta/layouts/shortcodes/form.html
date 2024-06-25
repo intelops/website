@@ -1,0 +1,23 @@
+{{ $netlify := .Get "netlify" }}
+{{ $method := .Get "method" }}
+{{ $conditionalForm := .Get "conditional-form" }}
+{{ $class := .Get "class" }}
+{{ $action := .Get "action" }}
+{{ $gutter := default "2" (.Get "gutter") }}
+{{ $background := default "#1D1F26" (.Get "background") }}
+{{ $style := default "rounded-boxed" (.Get "style") }}
+
+
+<div
+  class="py-3 {{ if eq $style `rounded-boxed` }}
+    rounded-sm
+  {{ end }}"
+  {{ with $background }}style="background-color: {{ . }}"{{ end }}>
+  <form
+    {{ with $netlify }}netlify method="post"{{ end }}
+    {{ with $action }}action="{{ . }}"{{ end }}
+    {{ with $conditionalForm }}conditional-form="true"{{ end }}
+    class="row g-2 mb-0 {{ with $class }}{{ . }}{{ end }}">
+    {{ .Inner }}
+  </form>
+</div>

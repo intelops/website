@@ -1,0 +1,20 @@
+{{ $value := .Get "value" }}
+{{ $width := .Get "width" }}
+{{ $disabled := .Get "disabled" }}
+{{ $class := .Get "class" }}
+
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="col-12 pt-2"
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  <button
+    type="submit"
+    class="btn btn-primary {{ if eq $width `full` }}
+      w-full
+    {{ end }} {{ with $class }}{{ . }}{{ end }}"
+    {{ with $disabled }}disabled{{ end }}>
+    {{ $value | markdownify }}
+  </button>
+</div>

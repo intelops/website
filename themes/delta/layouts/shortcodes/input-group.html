@@ -1,0 +1,18 @@
+{{ $title := .Get "title" }}
+{{ $class := .Get "class" }}
+{{ $id := .Get "id" }}
+
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="col-12 input-check-group"
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  {{ if $title }}
+    <label class="fw-600 mb-1">
+      {{ $title | markdownify }}
+    </label>
+  {{ end }}
+  {{ .Inner }}
+</div>

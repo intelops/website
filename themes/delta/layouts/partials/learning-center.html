@@ -6,7 +6,7 @@
         <button class="sidenav-toggler border-0">
           <i class="fas fa-chevron-left"></i>
         </button>
-        {{ partial "menu.html" . }}
+        {{ partial "components/menu.html" . }}
       </div>
       <div class="col-lg-8 col-md-8 lc-content-block">
         
@@ -103,7 +103,7 @@
     {{ partial "mermaid-script" . }}
 
     {{ if site.Params.learning_center_popup.enable }}
-    {{ partial "popup-form" (dict "Class" "learning-center-popup" "Src" site.Params.learning_center_popup.clickup_iframe_url) }}
+    {{ partial "components/popup-form.html" (dict "Class" "learning-center-popup" "Src" site.Params.learning_center_popup.clickup_iframe_url) }}
     {{ end }}
   </div>
 </section>

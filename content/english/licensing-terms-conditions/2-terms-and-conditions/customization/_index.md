@@ -43,7 +43,7 @@ $text-color-dark: #222;
 $text-color-light: #999;
 $body-color: #fff;
 $border-color: #E2E2E2;
-$black: #000;
+$black: #FEF2EB;
 $white: #fff;
 $light: #FBFBFB;
 

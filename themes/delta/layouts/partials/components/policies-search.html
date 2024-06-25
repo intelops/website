@@ -1,0 +1,14 @@
+<form class="search-wrapper" name="search-form" method="POST" data-formsection="{{.Section}}">
+  <!-- <h2 class="h3 text-center mb-3 fw-normal">Search Topics</h2> -->
+  <div class="border rounded align-items-center">
+    <input id="search-by" name="s" type="search" class="form-control ps-3 ps-md-4 pe-1 shadow-none border-0 rounded bg-transparent" placeholder="Search Topics">
+    <button type="submit" class="bg-primary text-white border-0 rounded d-none d-md-block px-2" style="height:45px;">Search</button>
+    <button type="submit" class="bg-primary text-white border-0 rounded d-block d-md-none" style="height:45px;width:45px;"><i class="fas fa-search"></i></button>
+  </div>
+</form>
+<script>
+  const form = document.forms["search-form"];
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+  });
+</script>

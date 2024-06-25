@@ -1,0 +1,37 @@
+{{ $id := .Get "id" }}
+{{ $title := .Get "title" }}
+{{ $prepend := .Get "prepend" }}
+{{ $append := .Get "append" }}
+
+{{ $formula := string (.Get "formula") }}
+
+{{ $size := .Get "parent-size" }}
+
+{{ $sizeValue:= index (split $size ` `) 0 }}
+{{ $height:= index (split $sizeValue `x`) 1 }}
+{{ $width:= index (split $sizeValue `x`) 0 }}
+
+{{ $condition := .Get "condition" }}
+{{ $conditionalElement := .Get "conditional-element" }}
+
+
+<div
+  class="col-12 mb-0"
+  {{ with $size }}
+    style="width: {{ $width }}px; height: {{ $height }}px;overflow:hidden"
+  {{ end }}
+  {{ with $formula }}formula="{{ . }}"{{ end }}
+  {{ with $id }}id="{{ . }}"{{ end }}
+  {{ with $conditionalElement }}conditional-element="{{ . }}"{{ end }}>
+  <div class="p-2 border">
+    <label class="mb-0">
+      {{ $title | markdownify }}
+    </label>
+    <hr />
+    <div>
+      {{ with $prepend }}{{ . }}{{ end }}
+      <span class="result"></span>
+      {{ with $append }}{{ . }}{{ end }}
+    </div>
+  </div>
+</div>

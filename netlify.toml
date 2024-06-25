@@ -3,8 +3,8 @@
   command = "yarn build -b $URL"
 
   [build.environment]
-    HUGO_VERSION = "0.121.0"
-    GO_VERSION = "1.21.5"
+    HUGO_VERSION = "0.127.0"
+    GO_VERSION = "1.22.3"
 
 [context.production.environment]
   HUGO_ENV = "production"

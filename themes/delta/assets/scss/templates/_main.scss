@@ -36,7 +36,7 @@ main:empty {
     pointer-events: none;
 
     svg {
-      color: $white;
+      color: $dark-900;
       position: absolute;
       max-width: 100%;
 
@@ -94,6 +94,7 @@ main:empty {
 
 // homepage banner
 .banner {
+  background-color: $dark-50;
   .block {
     padding-top: 40px;
     padding-bottom: 90px;
@@ -151,7 +152,7 @@ main:empty {
 
     &::after,
     &::before {
-      background-color: $white;
+      background-color: $body-color;
       position: absolute;
       content: "";
       height: calc(50% + 50px);
@@ -174,10 +175,10 @@ main:empty {
     }
 
     &::before {
-      @extend .bg-primary-soft;
       height: 50px;
       bottom: 50%;
       z-index: -1;
+      background-color: $dark-50;
       border-bottom-left-radius: 25px;
       border-bottom-right-radius: 25px;
     }
@@ -209,6 +210,9 @@ main:empty {
   max-width: 96%;
   margin: auto;
   padding: 150px 0;
+  // .has-wave svg {
+  //   color: $light !important;
+  // }
 }
 
 .wrap-block {
@@ -226,9 +230,9 @@ main:empty {
   margin: auto;
 
   &.features-creative {
-    position: relative;
     z-index: 1;
-    background-color: #f7f7f7;
+    position: relative;
+    background-color: $dark-50;
 
     // features rows
     .features-row {
@@ -250,9 +254,9 @@ main:empty {
 
   .features-block {
     .block {
-      background-color: $white;
+      background-color: $dark-50;
       border-radius: 15px;
-      border: 2px solid transparent;
+      border: 1px solid $border-color;
       box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
       transition: 0.1s;
       padding: 45px 35px;
@@ -272,6 +276,12 @@ main:empty {
       .icon {
         font-size: 50px;
         margin-bottom: 30px;
+      }
+
+      a.btn {
+        background-color: $dark-300;
+        color: inherit;
+        border-color: $dark-300;
       }
     }
 
@@ -778,15 +788,15 @@ main:empty {
     left: 0;
     height: calc(100% - 30px);
     width: 100%;
-    border: 2px solid rgba($black, 0.1) !important;
+    border: 1px solid rgba($black, 0.1) !important;
     transition: 0.3s;
     z-index: 33;
     pointer-events: none;
     @extend .rounded-lg;
   }
 
-  &:hover::after {
-    border-color: $color-primary !important;
+  &::after {
+    border-color: $border-color !important;
   }
 }
 
@@ -996,7 +1006,14 @@ main:empty {
   }
 }
 
+.card {
+  background-color: $dark-300;
+}
+
 .blog-card {
+  .card {
+    background-color: $dark-300;
+  }
   .card-body {
     padding: 0 30px;
     padding-top: 45px;
@@ -1015,7 +1032,7 @@ main:empty {
   }
 
   .blog-title {
-    color: $text-dark;
+    color: $text-color;
 
     &:hover {
       text-decoration: underline;
@@ -1031,15 +1048,17 @@ main:empty {
 
   .card-author {
     padding-top: 20px;
-    border-top: 1px solid #dedddd;
+    border-top: 1px solid $border-color;
   }
 
   .user-info {
     font-size: 16px;
-    color: #777;
+    p {
+      color: $text-color;
+    }
 
     a {
-      color: #777;
+      color: inherit;
 
       &:hover {
         text-decoration: underline;
@@ -1049,47 +1068,60 @@ main:empty {
 
   &.has-border {
     .card-body {
-      border-left: 1px solid #e8e8e8;
-      border-right: 1px solid #e8e8e8;
+      border-left: 1px solid $border-color;
+      border-right: 1px solid $border-color;
     }
 
     .card-footer {
-      border: 1px solid #e8e8e8;
+      border: 1px solid $border-color;
       border-top: 0;
     }
   }
 
-  &:nth-child(odd) {
-    .badge {
-      background-color: $color-primary;
-    }
-
-    .blog-title:hover {
-      color: $color-primary;
-    }
-
-    .user-info a:hover {
-      color: $color-primary;
-    }
+  .badge {
+    background-color: $color-primary;
   }
 
-  &:nth-child(even) {
-    .badge {
-      background-color: $color-tertiary;
-    }
-
-    .blog-title:hover {
-      color: $color-tertiary;
-    }
-
-    .user-info a:hover {
-      color: $color-tertiary;
-    }
+  .blog-title:hover {
+    color: $color-primary;
   }
+
+  .user-info a:hover {
+    color: $color-primary;
+  }
+
+  // &:nth-child(odd) {
+  //   .badge {
+  //     background-color: $color-primary;
+  //   }
+
+  //   .blog-title:hover {
+  //     color: $color-primary;
+  //   }
+
+  //   .user-info a:hover {
+  //     color: $color-primary;
+  //   }
+  // }
+
+  // &:nth-child(even) {
+  //   .badge {
+  //     background-color: $color-tertiary;
+  //   }
+
+  //   .blog-title:hover {
+  //     color: $color-tertiary;
+  //   }
+
+  //   .user-info a:hover {
+  //     color: $color-tertiary;
+  //   }
+  // }
 }
 
 .disqus-block,
 .post-author {
+  background-color: $dark-50;
   padding: 30px;
 
   @include mobile {
@@ -1115,7 +1147,7 @@ main:empty {
 
 .post-meta {
   a {
-    color: $text-dark;
+    color: $text-color;
 
     &:hover {
       color: $color-primary;
@@ -1188,7 +1220,7 @@ main:empty {
     width: calc(100% + 50%);
     left: -25%;
     bottom: 0;
-    background-color: $dark;
+    background-color: $dark-50;
     z-index: -1;
   }
 
@@ -1566,15 +1598,18 @@ a.share-icon {
 // accordion style
 .accordion-item {
   &:not(:last-child) {
-    border-bottom: 1px solid #dcdcdc !important;
+    border-bottom: 1px solid $border-color !important;
   }
+  background-color: transparent !important;
 
   .accordion-button {
     padding-top: 20px;
     padding-bottom: 20px;
+    color: $text-color !important;
+    background-color: transparent !important;
 
     &::after {
-      background-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 16 16%22 fill=%22%23000%22%3E%3Cpath fill-rule=%22evenodd%22 d=%22M1.646 4.646a.5.5.0 01.708.0L8 10.293l5.646-5.647a.5.5.0 01.708.708l-6 6a.5.5.0 01-.708.0l-6-6a.5.5.0 010-.708z%22/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23A4B0CA'%3E%3Cpath fill-rule='evenodd' d='M1.646 4.646a.5.5.0 01.708.0L8 10.293l5.646-5.647a.5.5.0 01.708.708l-6 6a.5.5.0 01-.708.0l-6-6a.5.5.0 010-.708z'/%3E%3C/svg%3E");
       position: absolute;
       left: 0;
       transform: rotate(-90deg);
@@ -1585,9 +1620,11 @@ a.share-icon {
     }
   }
 
-  .accordion-button,
-  .accordion-body {
+  .accordion-button {
     padding-left: 32px !important;
+  }
+  .accordion-body {
+    padding-left: 0px !important;
   }
 }
 
@@ -1595,9 +1632,13 @@ a.share-icon {
   color: $dark;
   background-color: transparent;
 }
+.accordion-button:focus {
+  box-shadow: none !important;
+}
 
 .accordion-body {
   &.content {
+    color: $text-color;
     *:not(li) {
       margin-bottom: 10px;
     }
@@ -1620,10 +1661,14 @@ footer {
 
   .btn-search-footer {
     cursor: text;
-    border: 2px solid rgba($white, 0.4) !important;
+    border: 2px solid $border-color !important;
 
     &:hover {
-      border: 2px solid rgba($white, 1) !important;
+      border: 2px solid lighten($color: $border-color, $amount: 20%) !important;
+    }
+    i,
+    span {
+      color: $text-color;
     }
   }
 
@@ -1640,8 +1685,6 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
-    border-top: 1px solid rgba($white, 0.2);
-    border-bottom: 1px solid rgba($white, 0.2);
 
     &-title {
       font-size: 18px;
@@ -1654,7 +1697,6 @@ footer {
       }
 
       a {
-        color: #c4c4c4;
         font-weight: 400;
 
         @media screen and (min-width: 1400px) {
@@ -1671,7 +1713,7 @@ footer {
   &.bg-light {
     .btn-search-footer {
       cursor: text;
-      border: 2px solid rgba($dark, 0.4) !important;
+      border: 2px solid $border-color !important;
 
       &:hover {
         border: 2px solid rgba($dark, 1) !important;
@@ -1679,23 +1721,13 @@ footer {
     }
 
     .footer-menu {
-      border-top: 1px solid rgba($dark, 0.2);
-      border-bottom: 1px solid rgba($dark, 0.2);
-
-      ul li {
-        a {
-          color: #555;
-
-          &:hover {
-            color: $dark;
-          }
-        }
-      }
+      border-top: 1px solid $border-color;
+      border-bottom: 1px solid $border-color;
     }
   }
 
   .footer-bottom {
-    padding: 55px 0;
+    padding: 35px 0;
 
     @include tablet {
       padding: 30px 0;
@@ -1705,6 +1737,7 @@ footer {
 
 .lc-card {
   box-shadow: 0 0.9rem 50px 0.625rem rgba(62, 62, 62, 0.05);
+  background-color: $dark-900;
   transition: 0.2s ease;
   border: 0;
   padding: 15px;
@@ -1735,7 +1768,8 @@ footer {
     position: relative;
 
     a {
-      color: #777;
+      color: $text-color;
+      opacity: 0.7;
 
       &:hover {
         color: $color-primary;
@@ -1777,7 +1811,7 @@ footer {
     font-size: 0.8rem;
     display: block;
     padding: 5px 0;
-    color: rgba($text-dark, 0.8);
+    color: $text-color;
     font-weight: 500;
     transition: 0.2s ease;
     padding-left: 10px;
@@ -1861,7 +1895,7 @@ footer {
     padding-bottom: 20px;
     position: static;
     height: auto;
-    background-color: rgba($color-primary, 0.03);
+    background-color: $dark-300;
     @extend .rounded-sm;
     padding-right: 10px;
 
@@ -2239,12 +2273,12 @@ footer {
   padding-top: 14px;
   padding-bottom: 14px;
   transition: 0.3s;
-  border-color: #eeeeee !important;
+  border-color: $border-color !important;
 
   &:hover {
     opacity: 0.9;
     transform: scale(0.995);
-    background-color: #eee;
+    background-color: $dark-300;
   }
 }
 
@@ -2372,7 +2406,7 @@ footer {
   position: relative;
   border-radius: 12px;
   margin-bottom: 24px;
-  background-color: #272822;
+  background-color: $dark-900;
 
   &.no-file-name {
     .file-extension {
@@ -2394,7 +2428,7 @@ footer {
     font-weight: 400;
     padding-left: 20px;
     padding-block: 16px;
-    background-color: lighten($color: #272822, $amount: 8);
+    background-color: $dark-50;
   }
 
   .file-extension {
@@ -2409,7 +2443,7 @@ footer {
     color: rgb(210, 202, 202);
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
-    background-color: lighten($color: #272822, $amount: 8);
+    background-color: $dark-50;
   }
 
   .copy {
@@ -2433,6 +2467,11 @@ footer {
 
   pre {
     font-size: 16px;
+  }
+}
+.highlight {
+  pre {
+    background-color: $dark-900 !important;
   }
 }
 
@@ -2523,4 +2562,32 @@ footer {
       display: inline-block;
     }
   }
+}
+
+// Copyright
+.copyright {
+  color: rgba($text-color, 0.5);
+}
+
+// copy to clipboard
+pre {
+  position: relative;
+
+  .copy-to-clipboard {
+    background: rgba($color-primary, 0.5);
+    color: $white;
+    cursor: pointer;
+    padding: 4px 5px;
+    line-height: 1;
+    font-size: 12px;
+    font-weight: 500;
+    border-radius: 4px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+}
+
+:not(pre) > code + span.copy-to-clipboard {
+  display: none;
 }

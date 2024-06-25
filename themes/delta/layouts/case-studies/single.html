@@ -1,6 +1,6 @@
 {{ define "main-sm" }}
 
-{{ partial "header.html" . }}
+{{ partial "essentials/header.html" . }}
 
 <!-- strat of case-studies-details -->
 <section class="section-sm">
@@ -9,7 +9,7 @@
       <div class="col-lg-4 blog-sidebar">
         <div class="block pe-0 pe-lg-2">
           {{ $series := .Params.series }}
-          <p class="h4 fw-light text-dark ps-3">{{$series}}</p>
+          <p class="h4 fw-light ps-3">{{$series}}</p>
           {{ .TableOfContents }}
 
           {{ $seriesPosts := (where (where site.RegularPages "Section" "case-studies") "Params.series" $series) }}
@@ -41,7 +41,7 @@
         {{ $image_width := replace .Params.cover_image_width "px" "" }}
         {{ $size := add (add $image_width "x") $image_height }}
         <div class="mb-4">
-          {{ partial "post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
+          {{ partial "components/post-image.html" (dict "Src" .Params.cover_image_src "Context" .Page "Size" $size ) }}
         </div>
         {{ end }}
 
@@ -62,7 +62,7 @@
         {{ end }}
 
 
-        {{ if and .Site.DisqusShortname .Params.feedback }}
+        {{ if and site.Config.Services.Disqus.Shortname .Params.feedback }}
         <div class="mt-5">
           <!-- comments -->
           <div class="disqus-block border rounded-lg">

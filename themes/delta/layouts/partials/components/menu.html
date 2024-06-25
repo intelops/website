@@ -1,0 +1,86 @@
+{{- $currentNode := . }}
+{{- $language := .Language }}
+{{- $data := where site.Pages "Params.type" "!=" nil }}
+
+<!-- .ByWeight -->
+{{- range $data.ByWeight }}
+
+{{ $currentSection := "" }}
+{{ $sliceSectionURL := split (string .RelPermalink) "/" }}
+{{ range $i, $e:= $sliceSectionURL }}
+<!-- check language -->
+{{ if eq (string $language) "en" }}
+  {{ if eq $i 2 }} {{ $currentSection = . }} {{ end }}
+{{ else }}
+  {{ if eq $i 3 }} {{ $currentSection = . }} {{ end }}
+{{ end }}
+<!-- end check language -->
+{{ end }}
+
+{{ $currentPageSection := "" }}
+{{ $sliceCurrentPage := split (string $currentNode.RelPermalink) "/" }}
+{{ range $i, $e:= $sliceCurrentPage }}
+<!-- check language -->
+{{ if eq (string $language) "en" }}
+  {{ if eq $i 2 }} {{ $currentPageSection = . }} {{ end }}
+{{ else }}
+  {{ if eq $i 3 }} {{ $currentPageSection = . }} {{ end }}
+{{ end }}
+<!-- end check language -->
+{{ end }}
+
+{{- if eq $currentSection $currentPageSection }}
+<ul class="menu py-4 pe-2 pe-md-4 ps-0 pl-xl-4 mb-0" style="display:none;">
+
+<button type="button" class="mb-2 bg-transparent border-0 p-0 mr-2 d-inline-block d-md-none" data-toggle="sidebar">
+  <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+    <line x1="18" y1="6" x2="6" y2="18"></line>
+    <line x1="6" y1="6" x2="18" y2="18"></line>
+  </svg>
+  <span class="d-inline-block" style="transform:translateY(2px)">Close</span>
+</button>
+
+<form class="mb-2" action="{{ `/search` | relLangURL }}/" name="search-form" data-formsection="{{.Section}}">
+  <div class="input-group rounded border align-items-center">
+    <input id="search-content" name="c" type="hidden" value="{{ .Section | urlize }}">
+    <input id="search-by" name="s" type="search" class="form-control ps-2 pe-1 shadow-none border-0 text-light bg-transparent" placeholder="{{if eq .Section `licensing-terms-conditions`}}Search Topics{{else}}Search Learning Center..{{end}}" style="height:48px">
+  </div>
+</form>
+
+{{- template "section-tree-nav" dict "sect" . "currentnode" $currentNode }}
+</ul>
+{{- end }}
+{{- end}}
+
+<!-- templates -->
+{{- define "section-tree-nav" }}
+ {{- with .sect}}
+  {{- if .IsSection }}
+    {{- $numberOfPages := (add (len .Pages) (len .Sections)) }}
+    <li data-nav-id="{{.Permalink}}" class="sidenav-item {{- if ne $numberOfPages 0 }} haschildren{{end}}">
+
+      <div>
+        <a href="{{ .RelPermalink}}">{{.Title}}</a>
+        {{- if ne $numberOfPages 0 }}
+        <div class="category-icon px-2"><i class="fa fa-angle-right fa-lg"></i></div>
+        {{- end}}
+      </div>
+
+      {{- if ne $numberOfPages 0 }}
+      <ul>
+        {{- $pages := .Pages }}
+        {{- if .Sections}}
+        {{- $pages = (.Pages | union .Sections) }}
+        {{- end}}
+
+        {{- range $pages.ByWeight }}
+        {{- template "section-tree-nav" dict "sect" . }}
+        {{- end}}
+      </ul>
+      {{- end}}
+
+    </li>
+  {{- end}}
+ {{- end}}
+{{- end}}
