@@ -1,3 +1,11 @@
+---
+title: "Use Case"
+date: 2024-06-28
+draft: false
+description: "This is a use case example to the reverse proxy using traefik and fastAPI with temporal python SDK."
+type: "learning-center"
+weight: 1
+---
 ## Building a Scalable Greeting Service with Temporal, FastAPI, Docker, and Traefik
 
 In this post, we'll walk through building a scalable greeting service using Temporal, a powerful orchestration framework, and FastAPI, a modern web framework for building APIs with Python. We'll also containerize our application using Docker and set up a reverse proxy with Traefik for secure routing and load balancing. We'll cover the code structure, key components, containerization, and how they work together to provide a robust and efficient service.
@@ -205,13 +213,81 @@ networks:
     external: true
 ```
 
-### Running the Application
+### Running the Application with Traefik
 
 1. **Start the Temporal Server**: Ensure that your Temporal server is running on `localhost:7233`.
 2. **Build and Run the Containers**: Use Docker Compose to build and start the containers.
     ```sh
     docker-compose -f docker-compose.yaml up -d
     ```
+
+### Running the Application in local
+# Temporal Worker with FastAPI
+create virtual environment
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
+
+Install requirements
+```bash
+pip install -r requirements.txt
+```
+**NOTE: TEMPORAL SHOULD BE INSTALLED IN THE VIRTUAL ENVIRONMENT**
+
+Run the temporal server in development mode
+```bash
+temporal server start-dev
+```
+[temporal UI](./TemporalUI.png)
+
+Set Python Path and Run the Application
+
+When running your scripts, make sure to set the `PYTHONPATH` so that Python can locate the `internal` module:
+
+```bash
+export PYTHONPATH=$(pwd)
+```
+
+Run the Temporal worker:
+
+```bash
+python internal/worker/run.py
+```
+
+Run the FastAPI application:
+
+```bash
+python main.py
+```
+[python UI](./FastAPI_Swagger.png)
+
+### Test the API
+
+Test the API using `curl` or any HTTP client like Postman:
+
+```bash
+curl -X POST "http://127.0.0.1:8000/name" -H "Content-Type: application/json" -d '{"name": "Suresh"}'
+```
+
+You should receive a response like:
+
+```json
+{
+  "result": "Hello Suresh!"
+}
+```
+[swagger test](./TestAPI.png)
+
+
+Check the workflows in the Temporal UI \
+http://localhost:8233/namespaces/default/workflows
+
+[workflow](./WorkflowTest.png)
+[overview](./Overflow.png)
+
+
+Source Code: [https://github.com/azar-writes-code/fastapi-traefik-temporal-poc](https://github.com/azar-writes-code/fastapi-traefik-temporal-poc)
 
 ### Conclusion
 
