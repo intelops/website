@@ -40,7 +40,7 @@ banner:
 
   # If lottie is disabled then static image will show in that place automatically. 
   lottie: 
-    enable: true
+    enable: false
     json: "lottie/homepage_concept.json"
     background: "#2E2C2B" #2E2C2B
     speed: "1"
