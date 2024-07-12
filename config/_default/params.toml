@@ -1,6 +1,6 @@
 ################################ default parameters ################################
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
-favicon = "images/favicon/capten-favicon-grouped-1.png"
+favicon = "images/favicon/Capten - Logo_line.png"
 image = "images/logo.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
 logo = "images/logos/Capten_logo_full.svg"  #This is the main logo displayed on the header bar. Full Logo on Homepage. 
@@ -10,7 +10,7 @@ footer_logo_dark = false
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = false
 # logo text will only show when logo is missing.
-logo_text = "Capten"
+logo_text = "Capten.AI"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
 logo_width = "130px"
@@ -33,7 +33,7 @@ email = "info@email.com"
 description = "Next-Gen Ai based solution to democratize cloud native, software supply chain security, quality engineering, Kubernetes and security using Kernel technology like eBPF and Machine Learning. Empower Engineers to easily adopt concepts like cloud-native, webassembly, chaos engineering, detection engineering, security chaos engineering, gitops, self service, platform engineering, etc. Imagination is your limit!"
 
 
-# seo meta data for OpenGraph / Twitter Card
+# seo meta data for OpenGraph / Twitter Card / OGraph / Metadata 
 # seo module: https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/basic-seo
 [metadata]
 keywords = [
@@ -48,9 +48,9 @@ keywords = [
   "Democratize",
   "Next-Gen",
 ]
-description = "Democratizing Cloud Native. Making Imagination a Reality."
-author = "Capten"
-image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
+description = "Democratizing Technology. Making Imagination a Reality."
+author = "Capten.AI"
+image = "images/logos/metadata-images/Capten_logo_full.jpg" # this image will be used as fallback if a page has no image of its own. This is the metadata image. OGraph image. OpenGraph image. social media image.
 
 
 # Footer Configuration
