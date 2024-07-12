@@ -27,9 +27,9 @@ draft: false
 class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 Over the past couple of weeks, we have been covering the powerful cluster monitoring tool, Pixie. We have covered how to
-get custom data by [writing your own PXL script](https://intelops.ai/blog/writing-your-first-pixie-pxl-script/). We have
+get custom data by [writing your own PXL script](https://capten.ai/blog/writing-your-first-pixie-pxl-script/). We have
 also covered how
-to [enhance your custom script](https://intelops.ai/blog/enhancing-your-pixie-pxl-script-by-manipulating-data/)
+to [enhance your custom script](https://capten.ai/blog/enhancing-your-pixie-pxl-script-by-manipulating-data/)
 by using data manipulation functions provided by Pixie. Let's wrap up our coverage of Pixie's custom data collection by
 diving into an example of an advanced PXL script.
 ________________

@@ -45,7 +45,7 @@ How well your systems perform directly impacts revenue, speed, and overall retur
 
 ## KubViz – An Observability Platform with Contextual Building Blocks
 
-As more teams use platforms like Kubernetes, Git, and Containers, ensuring everyone works together, performs well, and remains secure is crucial. That’s why we built **KubViz, your go-to [observability platform](https://intelops.ai/kubviz/).** 
+As more teams use platforms like Kubernetes, Git, and Containers, ensuring everyone works together, performs well, and remains secure is crucial. That’s why we built **KubViz, your go-to [observability platform](https://capten.ai/kubviz/).** 
 
 KubViz provides a centralized way to manage and monitor the entire DevSecOps process and secure your software supply chain. The platform provides organizations the ability to acquire in-depth insights and manage their software delivery pipeline by fusing essential components of the development, security, and operations processes.
 
@@ -81,4 +81,4 @@ Industries benefit from KubViz's approach to security and compliance. With vulne
 
 KubViz's innovative technology and automation streamline processes, reducing manual efforts and enhancing software development speed, operational efficiency, and uptime. Its future, marked by automation, integration with new technologies, extensive ecosystem support, continuous enhancement, and a vibrant community, will establish our solution as a leader in software practices, promoting innovation, efficiency, and improvements across the software supply chain.
 
-KubViz is available on GitHub, so give it a try and share your feedback. Stay informed about new feature releases and industry insights by following us on [LinkedIn](https://www.linkedin.com/company/intelopsai). For a demo of our platform, please email us at hello@intelops.ai.
+KubViz is available on GitHub, so give it a try and share your feedback. Stay informed about new feature releases and industry insights by following us on [LinkedIn](https://www.linkedin.com/company/intelopsai). For a demo of our platform, please email us at hello@capten.ai.

@@ -12,7 +12,7 @@ navigation:
   
   menu:
   - name: "Compage Doc"
-    url: "https://docs.intelops.ai/compage/latest/"
+    url: "https://docs.capten.ai/compage/latest/"
   - name: "GitHub"
     url: "https://github.com/intelops/compage"
   # - name: "Another 2"

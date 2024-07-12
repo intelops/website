@@ -52,7 +52,7 @@ The [twelve-factor methodology](https://12factor.net/) offers principles for bui
 
 ## How Compage Helps?
 
-Compage, our [low-code universal language framework](https://intelops.ai/compage/), is built for modern applications that adopt the 12-factor methodology. It automates the backend development process, saving businesses time and money. Compage follows established security best practices, so you don't have to make a choice between faster releases and secure code.
+Compage, our [low-code universal language framework](https://capten.ai/compage/), is built for modern applications that adopt the 12-factor methodology. It automates the backend development process, saving businesses time and money. Compage follows established security best practices, so you don't have to make a choice between faster releases and secure code.
 
 * **Endpoint Creation:** Compage automatically generates REST and gRPC endpoints, eliminating manual coding, and reducing the risk of errors. It follows established endpoint patterns for cohesive, comprehensible, and maintainable code.
 * **Enhanced Development Environment:** Compage integrates with industry-standard tools, enhancing your development process. This includes tools for code analysis, testing, and deployment.
@@ -62,7 +62,7 @@ Compage, our [low-code universal language framework](https://intelops.ai/compage
 * **Testing Guidance:** Compage help you to identify untested code areas. This ensures that your applications are fully tested and that any bugs are identified early on.
 * **Agility & Adaptability:** Compage's code remains adaptable and deployable, empowering you to respond to changing business needs with confidence.
 
-P.S. We've prepared a [complete guide to Compage](https://intelops.ai/blog/introducing-compagedev-centric-platform-for-auto-code-generation--fortified-security/), check it out!
+P.S. We've prepared a [complete guide to Compage](https://capten.ai/blog/introducing-compagedev-centric-platform-for-auto-code-generation--fortified-security/), check it out!
 
 ## Compage in Action – Building a Procurement Solution
 
@@ -227,4 +227,4 @@ DevContainers provides a way to develop applications in isolated environments co
 
 15\. The procurement solution has been set up with both the codes ready for use.
 
-What would have taken days is now possible in hours. That's the power of Compage! Try it for yourself; check out the [Compage documentation](https://docs.intelops.ai/compage/latest/) for more details. If you like what we are doing, check out [Compage on GitHub](https://github.com/intelops/compage). A star is always appreciated. We have more updates coming so, follow us on [LinkedIn](https://www.linkedin.com/company/intelopsai).
+What would have taken days is now possible in hours. That's the power of Compage! Try it for yourself; check out the [Compage documentation](https://docs.capten.ai/compage/latest/) for more details. If you like what we are doing, check out [Compage on GitHub](https://github.com/intelops/compage). A star is always appreciated. We have more updates coming so, follow us on [LinkedIn](https://www.linkedin.com/company/intelopsai).

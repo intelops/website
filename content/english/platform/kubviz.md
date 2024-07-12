@@ -12,7 +12,7 @@ navigation:
   
   menu:
   - name: "KubViz Doc"
-    url: "https://docs.intelops.ai/kubviz/latest/"
+    url: "https://docs.capten.ai/kubviz/latest/"
   - name: "GitHub"
     url: "https://github.com/intelops/kubviz"
 

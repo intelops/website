@@ -10,7 +10,7 @@ bannerimage: images/banner/contactpage/contactpage-banner-image.svg
 enable: true
 ---
 
-This privacy policy is compiled by IntelOps, Inc., hereinafter referred to as IntelOps to better serve those who are concerned with how we treat their Personally Identifiable Information (PII). PII, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to understand how we collect, use, protect or otherwise handle your PII that is collected through our website, newsletters, blogs, forms, surveys, or other similar content.
+This privacy policy is compiled by Outfit Labs, Inc., hereinafter referred to as Capten to better serve those who are concerned with how we treat their Personally Identifiable Information (PII). PII, is information that can be used on its own or with other information to identify, contact, or locate a single person, or to identify an individual in context. Please read our privacy policy carefully to understand how we collect, use, protect or otherwise handle your PII that is collected through our website, newsletters, blogs, forms, surveys, or other similar content.
 
 ###### Personal Information that we may collect, process, and use
 
@@ -21,7 +21,7 @@ When registering on our site, as appropriate, you may be asked to enter your nam
 We collect information from you when you browse our website, register on our site, subscribe to a newsletter, participate in a webinar, respond to a survey, fill out a form and enter information on our site.
 
 ###### Why do we collect information?
-The information is collected for legitimate interests of IntelOps. This information may be used for direct marketing, which is considered as a legitimate interest.
+The information is collected for legitimate interests of Capten. This information may be used for direct marketing, which is considered as a legitimate interest.
 
 ###### How do we use your information?
 We may use the information we collect from you when you register, sign up for our newsletter, respond to a survey or marketing communication, browse the website, or use certain other site features in the following ways:
@@ -33,19 +33,19 @@ We may use the information we collect from you when you register, sign up for ou
 - To follow up with you after initial correspondence (live chat, email, or phone inquiries)
 
 ###### How do we protect your information?
-We only provide content and information. We never solicit any kind of credit card information, and we use regular malware scanning. Your personal information is stored behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems and are required to keep the information confidential. In addition, any and all information you provide is encrypted via Secure Socket Layer (SSL) technology. IntelOps adopts industry standard security measures to safeguard your Personal Information.
+We only provide content and information. We never solicit any kind of credit card information, and we use regular malware scanning. Your personal information is stored behind secured networks and is only accessible by a limited number of persons who have special access rights to such systems and are required to keep the information confidential. In addition, any and all information you provide is encrypted via Secure Socket Layer (SSL) technology. Capten adopts industry standard security measures to safeguard your Personal Information.
 
 ###### How long do we store your information?
 Cookies placed on your computer can be deleted by you at any time by clearing your browser cache. Any personal information we receive (for example by signing up for our newsletter) will be stored as long as we deem your personal data relevant to our marketing services. At any time, you can unsubscribe or exercise your rights (see below).
 
 ###### What rights do you have regarding your personal data?
 
-- You have right to request rectification and/or erasure of personal data, captured by IntelOps.
+- You have right to request rectification and/or erasure of personal data, captured by Capten.
 - You also have right to request for restriction of processing of your personal data.
 - If we have received consent for processing your personal data, you have the right to withdraw your consent at any time and exercise your right to be forgotten.
 - You have the right to lodge a complaint with the supervisory authority or your specific country or geographic territory
 
-Any rights you wish to exercise can be achieved by sending an e-mail to hello@intelops.ai , from your registered email ID.
+Any rights you wish to exercise can be achieved by sending an e-mail to hello@capten.ai , from your registered email ID.
 
 ##### Our ‘Cookies’ policy
 
@@ -77,7 +77,7 @@ We, along with third-party vendors such as Google use third-party cookies (such 
 In compliance with Privacy Protection statutes, such as CalOPPA (California Online Privacy Protection Act), and the provisions of the EU-U.S. Privacy Shield Framework, we agree to the following:
 
 - Users can visit our site anonymously.
-- The privacy policy can be accessed on our website through https://intelops.ai/privacy-policy
+- The privacy policy can be accessed on our website through https://capten.ai/privacy-policy
 - Our Privacy Policy link includes the word ‘Privacy’ and can easily be found on the page specified above.
 - Any changes to the Privacy Policy will be displayed on the above cited page.
 - You can change your personal information, by emailing us.
@@ -91,7 +91,7 @@ In compliance with Privacy Protection statutes, such as CalOPPA (California Onli
 Yes, we allow third-party behavioral tracking.
 
 ###### GDPR Compliance
-With effect from 25 May 2018, as per the provisions of GDPR, IntelOps shall make every reasonable effort to safeguard the data subjects right of access, right to rectification, restriction of processing, erasure (Right to be forgotten), data portability, object to the processing, or its right not to be subject to an automated individual decision making (Data Subject Request).
+With effect from 25 May 2018, as per the provisions of GDPR, Capten shall make every reasonable effort to safeguard the data subjects right of access, right to rectification, restriction of processing, erasure (Right to be forgotten), data portability, object to the processing, or its right not to be subject to an automated individual decision making (Data Subject Request).
 
 ###### Fair Information Practices
 In compliance with GDPR, should a data breach occur, we will notify the effected data subjects via email within 72 working hours, from the time that we become aware of the breach.
@@ -100,10 +100,10 @@ In compliance with GDPR, should a data breach occur, we will notify the effected
 
 If there are any questions regarding this privacy policy, you may contact us using the information below:
 
-    IntelOps, Inc.
+    Outfit Labs, Inc.
     5055 Keller Springs Rd #200, 
     Addison, TX USA 75001
-    https://intelops.ai/privacy-policy
+    https://capten.ai/privacy-policy
 
 ###### Contacting Us
 If at any time you wish to unsubscribe from receiving future emails, or opt out from our newsletter or blog mailing list, please check [here](https://forms.clickup.com/9006002197/f/8cctc0n-13052/97DLQYOSUIPT3ALV7F). 

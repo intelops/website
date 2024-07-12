@@ -151,7 +151,7 @@ Choosing the right observability solution for your complex systems requires solu
 
 - Provide comprehensive coverage across your entire system. 
 
-[KubViz](https://intelops.ai/kubviz/), an observability and monitoring platform built for Kubernetes and DevSecOps workflows, addresses these needs. It delivers real-time tracking of changes and events across various infrastructure components, including Kubernetes clusters, git repositories, container registries, software bill of materials (SBOM), and vulnerability footprints. 
+[KubViz](https://capten.ai/kubviz/), an observability and monitoring platform built for Kubernetes and DevSecOps workflows, addresses these needs. It delivers real-time tracking of changes and events across various infrastructure components, including Kubernetes clusters, git repositories, container registries, software bill of materials (SBOM), and vulnerability footprints. 
 
  
 
@@ -165,7 +165,7 @@ Here's a few reasons why both growing businesses and enterprises prefer our plat
 
 - **Streamlined Collaboration and Developer Productivity:** KubViz fosters streamlined collaboration among teams through advanced Git tracking, container monitoring, and visualization tools while also providing actionable insights to enhance developer productivity and streamline DevSecOps practices. 
 
-Here’s a quick overview of all that [KubViz](https://intelops.ai/blog/introducing-kubviz-a-kubernetes-observability-and-monitoring-platform/) can do. Get in touch with us at hello@intelops.ai and we will schedule a demo!  
+Here’s a quick overview of all that [KubViz](https://capten.ai/blog/introducing-kubviz-a-kubernetes-observability-and-monitoring-platform/) can do. Get in touch with us at hello@capten.ai and we will schedule a demo!  
 
 
 

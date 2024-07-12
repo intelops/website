@@ -92,7 +92,7 @@ CICD practices involve regularly integrating code changes and automatically depl
 
   
 
-Tailored to the unique requirements of mortgage lenders, our low-code, auto-code generation platform, [Compage](https://intelops.ai/compage/), facilitates application modernization through the adoption of cloud-native technologies. 
+Tailored to the unique requirements of mortgage lenders, our low-code, auto-code generation platform, [Compage](https://capten.ai/compage/), facilitates application modernization through the adoption of cloud-native technologies. 
 
 1. **Shift Left and Shift Smart Approach**: Automate the development process to ensure rapid and secure code delivery. Innovate continuously, transition to cloud-based solutions, and enhance the customer experience while maintaining security standards.
 2. **Security and Compliance**: Integrate security and compliance in the early stages of development for the prompt detection of vulnerabilities. Utilize Compage’s intelligent automation and integration capabilities to streamline the development process, ensuring the timely delivery of high-quality, reliable code.

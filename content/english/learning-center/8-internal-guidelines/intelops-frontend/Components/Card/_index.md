@@ -22,13 +22,13 @@ import Card, {StatsCard,} from '@intelops/intelops_ui/packages/react/components/
 <Card
   className="w-full"
   title="IntelOps"
-  titleHref="https://intelops.ai/"
+  titleHref="https://capten.ai/"
   caption="Trusted By Fast Growing Brands And Enterprises. Be The Captain."
   body="Website is under active development.
   Our products are currently in Stealth mode development.
   Building the Next-Gen Tech For Cloud-Native.
   Ai-based framework to democratize Cloud Native Technology."
-  imageURL="https://intelops.ai/images/banner/homepage/homepage-banner.svg"
+  imageURL="https://capten.ai/images/banner/homepage/homepage-banner.svg"
   buttonName="Select"
 />
 ```

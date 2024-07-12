@@ -51,7 +51,7 @@ Integrating modern technology into manufacturing workflows presents a critical c
 
 - **Disconnected Teams**: Separate workflows and systems across departments and plants create information barriers. This impedes timely communication and coordinated decision-making, especially during urgent situations. Managers lack a holistic view and struggle to respond swiftly to production hiccups that could snowball across the system.
 
-- **IT/OT Divide**: Compounding the siloed operations issue is the widening IT/OT divide. Aging legacy infrastructure and applications across disparate on/off-premises technology stacks create significant ["technical debt."](https://intelops.ai/blog/legacy-system-and-technical-debt-what-is-the-cost-if-we-dont-fix-it/) This complexity burdens new projects, hindering agility, productivity, and ROI. Proprietary technology standards and high switching costs associated with legacy systems restrict flexibility and vendor choice, further exacerbating vendor lock-in risks. 
+- **IT/OT Divide**: Compounding the siloed operations issue is the widening IT/OT divide. Aging legacy infrastructure and applications across disparate on/off-premises technology stacks create significant ["technical debt."](https://capten.ai/blog/legacy-system-and-technical-debt-what-is-the-cost-if-we-dont-fix-it/) This complexity burdens new projects, hindering agility, productivity, and ROI. Proprietary technology standards and high switching costs associated with legacy systems restrict flexibility and vendor choice, further exacerbating vendor lock-in risks. 
 
 ## Modernization Influence on Industry 4.0 Adoption
 
@@ -95,8 +95,8 @@ While outdated systems might seem convenient to work with, they ultimately fail 
 
 Modern applications built with microservices and Kubernetes empower manufacturers with both increased innovation and streamlined operations. However, harnessing this potential requires rapid modernization using cloud-native solutions. 
 
-Compage bridges this gap. This agile [app modernization platform](https://intelops.ai/compage/) automates code generation via its language-agnostic framework, integrates with diverse technologies seamlessly, and simplifies validation and adoption. Swiftly adapt to market shifts, build unified systems, and gain real-time insights for streamlined operations. Deliver superior experiences within your plant and beyond. Modernize cost-effectively, build resilience, and thrive in the digital age – Compage is your go-to solution to conquer your modernization challenges. 
+Compage bridges this gap. This agile [app modernization platform](https://capten.ai/compage/) automates code generation via its language-agnostic framework, integrates with diverse technologies seamlessly, and simplifies validation and adoption. Swiftly adapt to market shifts, build unified systems, and gain real-time insights for streamlined operations. Deliver superior experiences within your plant and beyond. Modernize cost-effectively, build resilience, and thrive in the digital age – Compage is your go-to solution to conquer your modernization challenges. 
 
-Want to see Compage in action and how it benefits manufacturers? Drop us an email at hello@intelops.ai to schedule a demo. Check out all that we have been up to on [LinkedIn](https://www.linkedin.com/company/intelopsai/)!
+Want to see Compage in action and how it benefits manufacturers? Drop us an email at hello@capten.ai to schedule a demo. Check out all that we have been up to on [LinkedIn](https://www.linkedin.com/company/intelopsai/)!
 
 

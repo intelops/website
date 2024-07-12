@@ -64,7 +64,7 @@ Markdown is an open-source markup language designed to convert plain text to HTM
 - Creating Hyperlinks is easy. Enclose a text inside square brackets and follow it with an URL inside parentheses as shown below.</br></br>
 Click \[Here\](Your URL goes here) to learn about YAML
 
-> Click [**Here**](https://intelops.ai/blog/Hacking-YAML-to-your-benefit/) to learn about YAML
+> Click [**Here**](https://capten.ai/blog/Hacking-YAML-to-your-benefit/) to learn about YAML
 
 - Greater than sign ">" is used to Blockquote the text or code. ">" can only be used at the beginning of a new line.
 "\> Let's BLOCKQUOTE this line" is rendered as below,
@@ -94,7 +94,7 @@ What you learned so far was just the basics to get started. Using Markdown, you 
 4. Not just used to build websites. You can use it to create all types of content like notes, to-do lists, documentation, resumes, presentations, etc.
 5. Markdown is platform-independent, so you don't have to worry about migrating the content across operating systems, Content Management Systems, etc.
 6. If you already know how to code in HTML, Markdown can be your magic wand since it has full HTML support. So, you can use HTML inline anywhere.
-7. If you know YAML(If you don't know what YAML is [click here](https://intelops.ai/blog/Hacking-YAML-to-your-benefit/)) then you can use YAML for the Front Matter, page-specific metadata and functionality, at the top of your Markdown file.
+7. If you know YAML(If you don't know what YAML is [click here](https://capten.ai/blog/Hacking-YAML-to-your-benefit/)) then you can use YAML for the Front Matter, page-specific metadata and functionality, at the top of your Markdown file.
 
 ## Things to look out for
 

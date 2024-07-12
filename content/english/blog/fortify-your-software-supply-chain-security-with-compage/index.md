@@ -56,7 +56,7 @@ The OIDC (OpenID Connect) approach is a secure authentication and authorization 
 
 ## Compage – The OIDC Approach to Container Image Signing
 
-[Compage](https://intelops.ai/compage/) leverages the capabilities of Sigstore and its integration with the Cosign tool. Sigstore, an open-source tool, enhances software supply chain security by providing transparency and verification for software artifacts. It accomplishes this through the Cosign tool, which is used for signing Docker images.
+[Compage](https://capten.ai/compage/) leverages the capabilities of Sigstore and its integration with the Cosign tool. Sigstore, an open-source tool, enhances software supply chain security by providing transparency and verification for software artifacts. It accomplishes this through the Cosign tool, which is used for signing Docker images.
 
 [Signing Docker images with Sigstore](https://github.com/sigstore/cosign) involves a keyless approach, where the Social Login mechanism (login via GitHub, Google, Microsoft, etc.) serves as the authentication provider, guaranteeing user authentication and identity verification with Human interaction.
 
@@ -74,4 +74,4 @@ When someone attempts to access these signed Docker images, a dual-check approac
 
 Integrating Compage with signing container images capability is a proactive step in mitigating risks associated with compromised images and their artifacts. Now, as supply chain attacks are a growing concern, our framework acts as a safeguard, helping prevent unauthorized changes to software components and artifacts, thus maintaining the reliability of the software supply chain for the code generated via Compage.
 
-Want to see Compage in action? Check it out on [GitHub](https://github.com/intelops/compage). You can also get started by checking out [Compage documentation](https://docs.intelops.ai/compage/latest/) for more details. If you like what we are doing, please leave us a star. And, if there are any burning questions we have not yet answered, feel free to contact us via LinkedIn. We would love to talk to you!
+Want to see Compage in action? Check it out on [GitHub](https://github.com/intelops/compage). You can also get started by checking out [Compage documentation](https://docs.capten.ai/compage/latest/) for more details. If you like what we are doing, please leave us a star. And, if there are any burning questions we have not yet answered, feel free to contact us via LinkedIn. We would love to talk to you!

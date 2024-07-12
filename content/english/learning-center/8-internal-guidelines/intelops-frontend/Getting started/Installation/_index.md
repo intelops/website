@@ -15,7 +15,7 @@ Install IntelOps UI for your design needs.
 
 > **Note:** Since this is a private repo, just installing using npm won't download the packages, we need to follow a few more steps - adding GitHub PATs to your VScode.
 
-[How to add GitHub Personal Access Tokens to your VsCode](https://intelops.ai/learning-center/8-internal-guidelines/package-mangement-in-git-platform/)
+[How to add GitHub Personal Access Tokens to your VsCode](https://capten.ai/learning-center/8-internal-guidelines/package-mangement-in-git-platform/)
 
 To install the published UI packages into your code:
 1. Create a `.npmrc` file inside the root directory of the [Intelops UI private repo](https://github.com/intelops/ui-templates-common-repo)

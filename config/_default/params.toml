@@ -10,7 +10,7 @@ footer_logo_dark = false
 # if logo_webp set false, will not generate WEBP version of logo | default is true
 logo_webp = false
 # logo text will only show when logo is missing.
-logo_text = "Intelops"
+logo_text = "Capten"
 # use `px` or `x` with logo_width, example: "100px".
 # Note: logo_width is not work with .svg file
 logo_width = "130px"
@@ -38,6 +38,7 @@ description = "Next-Gen Ai based solution to democratize cloud native, software 
 [metadata]
 keywords = [
   "Intelops",
+  "Capten",
   "Cloud-Native",
   "Ai",
   "DevOps",
@@ -48,7 +49,7 @@ keywords = [
   "Next-Gen",
 ]
 description = "Democratizing Cloud Native. Making Imagination a Reality."
-author = "Intelops"
+author = "Capten"
 image = "images/og-image.jpg" # this image will be used as fallback if a page has no image of its own
 
 
