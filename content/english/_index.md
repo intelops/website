@@ -82,7 +82,7 @@ how_it_works:
 
 image_and_content_block:
   enable: false
-  subtitle: We Are IntelOps
+  subtitle: We Are Capten
   subtitle_color: ""
   #title: Lots of people love us, <br> and we're also.
   title: This section is coming soon
@@ -98,7 +98,7 @@ image_and_content_block:
   
 slider_and_content_block:
   enable: false
-  subtitle: We Are Intelops
+  subtitle: We Are Capten
   subtitle_color: ""
   title: This section is coming soon
   title_color: ""

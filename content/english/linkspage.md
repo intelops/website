@@ -4,7 +4,7 @@ linkspage: true
 title: |
     Appstek Corp's Product Entity:
 
-    Capten Stack by IntelOps Product Team 
+    Capten Stack by Capten.AI Product Team 
     
     (A market-first SaaS 2.0 solution)
 
@@ -45,7 +45,7 @@ draft: false
 {{< link-row title=`Check us out!`>}}
 {{< link icon=`/images/linkspage/document.svg` label=`Brochure` url=`https://publuu.com/flip-book/289184/674718` >}}
 {{< link icon=`/images/linkspage/document.svg` label=`Platform Overview` url=`https://publuu.com/flip-book/289184/674198` >}}
-{{< link icon=`/images/linkspage/web.svg` label=`Website` url=`https://intelops.ai/` target=`_self` >}}
+{{< link icon=`/images/linkspage/web.svg` label=`Website` url=`https://capten.ai/` target=`_self` >}}
 {{</ link-row >}}
 
 {{< link-row title=`Videos`>}}

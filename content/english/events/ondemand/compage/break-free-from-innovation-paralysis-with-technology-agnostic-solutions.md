@@ -48,7 +48,7 @@ Fill out the form and get access to your on-demand recording now!
 
 <image src="/images/avatar/chandrakanth-paladugu.jpg">
 
-**Chandrakanth Paladugu - Founder of IntelOps.ai**
+**Chandrakanth Paladugu - Founder of capten.ai**
 
 Chandrakanth Paladugu is a skilled architect with a deep passion for problem-solving in various technical domains, including Cloud-Native, DevSecOps, Software Supply Chain Security, and Kubernetes. His expertise lies in leveraging extensive knowledge to democratize technology and empower engineering teams with agnostic open framework models.
 </div>

@@ -11,7 +11,7 @@ To secure your Next.js application with Ory authentication - basically adding a 
 
 
 #### Creating a Next.js application 
-If you don't already have a Next.js application, you can create one with the help of [Next.js 101 - Introduction and Tutorial blog](https://intelops.ai/learning-center/8-internal-guidelines/learn-nextjs/creating-frontend-application-in-nextjs/).
+If you don't already have a Next.js application, you can create one with the help of [Next.js 101 - Introduction and Tutorial blog](https://capten.ai/learning-center/8-internal-guidelines/learn-nextjs/creating-frontend-application-in-nextjs/).
 
 #### Step 1: Installing Ory
 Once you have your application ready. Install Ory's SDK - to make API calls to Ory and Ory's integration tools for JavaScript frameworks. Ory provides all the integration tools that you'll need to combine Ory with Next.js 

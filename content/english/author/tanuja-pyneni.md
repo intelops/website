@@ -10,4 +10,4 @@ ignoreSearch: true
 ---
 
 Tanuja Pyneni holds a Masters in Computer Science from University of North Texas.
-She currently works at IntelOps as a Full-stack Developer(Frontend Developer).
+She currently works at Capten as a Full-stack Developer(Frontend Developer).

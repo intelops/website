@@ -24,7 +24,7 @@ draft: false
 
 {{< image src="images/blog/your-first-docker-container/collecting-in-container.svg" alt="alter-text" height="" width="400px"class="img-fluid" caption="" webp="false" position="float-left" >}}
 
-In [last week's blog](https://intelops.ai/blog/containers-containers-containers/), we had learned what containers were,
+In [last week's blog](https://capten.ai/blog/containers-containers-containers/), we had learned what containers were,
 the benefits they offered, how they are built, and their use cases. This week, let's apply what we have learned on a
 small sample project, to _containerize it_, and run it.
 

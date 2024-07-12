@@ -69,7 +69,7 @@ The benefits of being a language-agnostic approach are numerous. It broadens you
 
 ## Language Agnostic Auto Code Generation with Compage  
 
-Compage is a [language-agnostic auto code generator](https://intelops.ai/compage/) that allows developers to easily create code in any programming language, promoting flexibility in development without being restricted by any specific language limitations. 
+Compage is a [language-agnostic auto code generator](https://capten.ai/compage/) that allows developers to easily create code in any programming language, promoting flexibility in development without being restricted by any specific language limitations. 
 
 {{< image src="images/blog/developers-its-time-to-rethink-your-programming-stack-go-language-agnostic/before-vs-after-compage.gif" alt="alter-text" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
@@ -92,4 +92,4 @@ Generated code from Compage is inherently secure, addressing language-specific v
 
 The generated code is clean, precise, and accurate, reducing errors and maintaining high code quality throughout development. Automated code generation with Compage minimizes manual coding efforts, streamlining development. 
 
-Interested to know more? We recently hosted a webinar focusing on the importance of technology agnosticism for developers & engineers. During the session, we introduced Capten Stack, our AI-driven SaaS 2.0 framework suite, and discussed how Compage simplifies code generation across multiple languages. Access our [on-demand webinar](https://intelops.ai/events/ondemand/compage/break-free-from-innovation-paralysis-with-technology-agnostic-solutions/) recording for more insights. 
+Interested to know more? We recently hosted a webinar focusing on the importance of technology agnosticism for developers & engineers. During the session, we introduced Capten Stack, our AI-driven SaaS 2.0 framework suite, and discussed how Compage simplifies code generation across multiple languages. Access our [on-demand webinar](https://capten.ai/events/ondemand/compage/break-free-from-innovation-paralysis-with-technology-agnostic-solutions/) recording for more insights. 

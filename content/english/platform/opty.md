@@ -13,7 +13,7 @@ navigation:
 # Removing the below doc from the page, as the doc page does not exist
 #menu:
   #- name: "Opty (Optimizor) Doc"
-    #url: "https://docs.intelops.ai/latest/opty/"
+    #url: "https://docs.capten.ai/latest/opty/"
   
   navigation_button:
     enable: true

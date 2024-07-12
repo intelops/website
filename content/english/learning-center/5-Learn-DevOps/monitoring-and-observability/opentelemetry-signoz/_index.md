@@ -46,7 +46,7 @@ Now that Signoz has been successfully installed on your local machine you can ac
 Before you install OpenTelemetry just run your Next.js application
 
 ### Running your sample Next.js application
-If you already have a next js application, uyou can run it using <mark>npm run dev</mark> if you need help with creating a Nextjs application you can refer to [Next.js 101](https://intelops.ai/learning-center/8-internal-guidelines/learn-nextjs/creating-frontend-application-in-nextjs/). You should be seeing your Next.js app running on `http://localhost:3000`
+If you already have a next js application, uyou can run it using <mark>npm run dev</mark> if you need help with creating a Nextjs application you can refer to [Next.js 101](https://capten.ai/learning-center/8-internal-guidelines/learn-nextjs/creating-frontend-application-in-nextjs/). You should be seeing your Next.js app running on `http://localhost:3000`
 
 ## OpenTelemetry Installation:
 <strong>Step 1: Install packages

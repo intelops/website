@@ -69,10 +69,10 @@ apiVersion: apiextensions.k8s.io/v1
 kind: CustomResourceDefinition
 metadata:
   # name must match the spec fields below, and be in the form: <plural>.<group>
-  name: employees.intelops.ai
+  name: employees.capten.ai
 spec:
   # group name to use for REST API: /apis/<group>/<version>
-  group: intelops.ai
+  group: capten.ai
   names:
     # plural name to be used in the URL: /apis/<group>/<version>/<plural>
     plural: employees

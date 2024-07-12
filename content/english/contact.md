@@ -28,7 +28,7 @@ contact_info:
   title_color : ""
   icon_color : ""
   address_list:
-  - IntelOps, Inc
+  - Outfit Labs, Inc.
   - "5055 Keller Springs Rd #200, Addison, TX USA 75001"
   - "My Home Twitza,TSIIC Hyderabad Knowledge City, Raidurg, Panmaktha, Rangareddy, Telangana, India 500081"
   address_list_color: ""
@@ -36,7 +36,7 @@ contact_info:
 # Services
 services:
   enable : true
-  title : "Why IntelOps?"
+  title : "Why Capten?"
   title_color : ""
   icon_color : ""
   service_list:

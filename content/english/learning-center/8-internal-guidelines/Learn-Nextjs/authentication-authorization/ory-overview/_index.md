@@ -43,9 +43,9 @@ ORY is basically an [open-source](https://www.ory.sh/open-source/) project which
 ![ory-types](ory.png)
 
 
-For installation you can follow: [Learn Ory integration in Next.js blog](https://intelops.ai/learning-center/8-internal-guidelines/learn-nextjs/authentication-authorization/learn-ory-integration/) in our learning center.
+For installation you can follow: [Learn Ory integration in Next.js blog](https://capten.ai/learning-center/8-internal-guidelines/learn-nextjs/authentication-authorization/learn-ory-integration/) in our learning center.
 
  
 ## Conclusion
 
-In this blog we discussed about why authentication is a critical security measure, and basic idea about what ORY is. By adding ORY you an implement many authentication mechanisms like passwords, WebAuthn and the other methods we discussed above and avoids insecure mechanisms like security questions. You can also look at SSO(Single Sign-On)authentication- which permits a user to use one set of login credentials across multiple applications. For more on SSO you can follow the blog on why you [Never have to store your AWS secrets again](https://intelops.ai/blog/saml-2-aws/).
+In this blog we discussed about why authentication is a critical security measure, and basic idea about what ORY is. By adding ORY you an implement many authentication mechanisms like passwords, WebAuthn and the other methods we discussed above and avoids insecure mechanisms like security questions. You can also look at SSO(Single Sign-On)authentication- which permits a user to use one set of login credentials across multiple applications. For more on SSO you can follow the blog on why you [Never have to store your AWS secrets again](https://capten.ai/blog/saml-2-aws/).

@@ -12,7 +12,7 @@ navigation:
   
 #menu:
   #- name: "Capten Doc"
-   # url: "https://docs.intelops.ai/changelog/capten/1.0.0/"
+   # url: "https://docs.capten.ai/changelog/capten/1.0.0/"
 
   navigation_button:
     enable: true

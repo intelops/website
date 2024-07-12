@@ -43,7 +43,7 @@ title_color=``
 description=`Boost your development team's productivity 2X with Compage. Focus on innovative solutions, not boilerplate.`
 description_color=``
 button_label=`Schedule a demo`
-button_link=`https://intelops.ai/product-demo-request-form/`
+button_link=`https://capten.ai/product-demo-request-form/`
 has_padding_top=false
 has_padding_bottom=true
 hide_left_shape=false
@@ -71,7 +71,7 @@ has_padding_bottom=true >}}
  has_padding_top=false
  has_padding_bottom=true
  button_label=`Schedule a demo`
- button_link=`https://intelops.ai/product-demo-request-form/` >}}
+ button_link=`https://capten.ai/product-demo-request-form/` >}}
 
  {{< faq-item title=`Development Teams` expanded=true >}}
 
@@ -330,7 +330,7 @@ subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
 button_label=`Schedule a demo`
-button_link=`https://intelops.ai/product-demo-request-form/`
+button_link=`https://capten.ai/product-demo-request-form/`
 bg_color=`#262423`
 copyright=`Copyright @ Outfit Labs, Inc.`
 copyright_color=`` >}}

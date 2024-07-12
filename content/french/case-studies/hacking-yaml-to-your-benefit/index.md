@@ -18,7 +18,7 @@ draft: false
 
 
 YAML(yam-ul) is a Data Serialization language used to capture your data in a key-value pair format, making it easy to read and understand. In this article, I will cover the basic concepts of YAML. It's Benefits and drawbacks over other markup languages like JSON and XML. YAML in DevOps and best practices to use while writing a YAML file.
->If you want to learn more about What is DevOps? Check [<span style="text-decoration: underline;">this</span>](https://intelops.ai/blog/what-is-devops/) out.
+>If you want to learn more about What is DevOps? Check [<span style="text-decoration: underline;">this</span>](https://capten.ai/blog/what-is-devops/) out.
 
 ## Basics to quickly start writing YAML files
 * A simple YAML file needs to have two items to be complete, a key and a value separated by a colon and a space.
