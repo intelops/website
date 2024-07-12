@@ -3,8 +3,8 @@
 favicon = "images/favicon/new-intelops-fav-icon.png"
 image = "images/logo.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
-logo = "images/logos/new-full-logo-light.svg"  #This is the main logo displayed on the header bar
-logo_light = "images/logos/new-logo-light.svg" #This is displayed in the footer
+logo = "images/logos/Capten_logo_full.svg"  #This is the main logo displayed on the header bar. Full Logo on Homepage. 
+logo_light = "images/logos/Capten - Logo.svg" #This is displayed in the footer. Logo icon on Homepage. 
 logo_dark = "images/logos/logo-light.svg"
 footer_logo_dark = false
 # if logo_webp set false, will not generate WEBP version of logo | default is true
