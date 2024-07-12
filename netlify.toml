@@ -30,3 +30,39 @@
   to = "https://capten.ai/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "https://intelops.ai/*"
+  to = "https://capten.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://intelops.ai/"
+  to = "https://capten.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.intelops.ai/"
+  to = "https://capten.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.intelops.ai/*"
+  to = "https://capten.ai/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "www.intelops.ai"
+  to = "https://capten.ai/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "intelops.ai"
+  to = "https://capten.ai/"
+  status = 301
+  force = true
