@@ -332,5 +332,5 @@ description_color=`red`
 button_label=`Schedule a demo`
 button_link=`https://intelops.ai/product-demo-request-form/`
 bg_color=`#262423`
-copyright=`Copyright @ IntelOps, Inc. - 2024`
+copyright=`Copyright @ Outfit Labs, Inc.`
 copyright_color=`` >}}
