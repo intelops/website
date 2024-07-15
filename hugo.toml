@@ -199,7 +199,7 @@ secblack = "#121826"
 # Dark Mode Colors
 color_primary = "#F99A5E"
 
-dark_50 = "#262423"
+dark_50 = "#2E2C2B" 
 dark_300 = "#2E2C2B"
 dark_900 = "#433F3D"
 
