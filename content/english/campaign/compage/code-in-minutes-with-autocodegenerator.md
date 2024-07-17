@@ -42,8 +42,8 @@ title=`Build Secure Code in Minutes With Auto Code Generator`
 title_color=``
 description=`Boost your development team's productivity 2X with Compage. Focus on innovative solutions, not boilerplate.`
 description_color=``
-button_label=`Schedule a demo`
-button_link=`https://intelops.ai/product-demo-request-form/`
+button_label=`Try it on Github`
+button_link=`https://github.com/intelops/compage`
 has_padding_top=false
 has_padding_bottom=true
 hide_left_shape=false
@@ -70,8 +70,8 @@ has_padding_bottom=true >}}
  description_color=``
  has_padding_top=false
  has_padding_bottom=true
- button_label=`Schedule a demo`
- button_link=`https://intelops.ai/product-demo-request-form/` >}}
+ button_label=`Try it on Github`
+ button_link=`https://github.com/intelops/compage` >}}
 
  {{< faq-item title=`Development Teams` expanded=true >}}
 
@@ -329,8 +329,8 @@ title_color=``
 subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
-button_label=`Schedule a demo`
-button_link=`https://intelops.ai/product-demo-request-form/`
+button_label=`Try it on Github`
+button_link=`https://github.com/intelops/compage`
 bg_color=`#262423`
 copyright=`Copyright @ IntelOps, Inc. - 2024`
 copyright_color=`` >}}
