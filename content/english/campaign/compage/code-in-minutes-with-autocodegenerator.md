@@ -1,7 +1,7 @@
 ---
 date: "2024-01-24"
 title: "Build Secure Code In Minutes With Auto Code Generator"
-image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
+image: "/images/events-webinars/page-preview.png" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description:
 weight: 02
@@ -42,8 +42,10 @@ title=`Build Secure Code in Minutes With Auto Code Generator`
 title_color=``
 description=`Boost your development team's productivity 2X with Compage. Focus on innovative solutions, not boilerplate.`
 description_color=``
+
 button_label=`Schedule a demo`
 button_link=`https://capten.ai/product-demo-request-form/`
+
 has_padding_top=false
 has_padding_bottom=true
 hide_left_shape=false
@@ -70,8 +72,10 @@ has_padding_bottom=true >}}
  description_color=``
  has_padding_top=false
  has_padding_bottom=true
+
  button_label=`Schedule a demo`
  button_link=`https://capten.ai/product-demo-request-form/` >}}
+
 
  {{< faq-item title=`Development Teams` expanded=true >}}
 
@@ -329,8 +333,10 @@ title_color=``
 subtitle_color=`red`
 description=`Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna`
 description_color=`red`
+
 button_label=`Schedule a demo`
 button_link=`https://capten.ai/product-demo-request-form/`
+
 bg_color=`#262423`
 copyright=`Copyright @ Outfit Labs, Inc.`
 copyright_color=`` >}}
