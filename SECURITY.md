@@ -9,4 +9,4 @@
 
 ## Reporting a Vulnerability
 
-Please report security issues using our [Security Form](https://intelops.ai/opensource-security-reporting-form/)
+Please report security issues using our [Security Form](https://capten.ai/opensource-security-reporting-form/)

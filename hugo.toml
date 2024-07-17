@@ -1,8 +1,8 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://intelops.ai/"
+baseURL = "https://capten.ai/"
 # Title of your website (required).
-title = "Intelops"
+title = "Capten"
 # Your theme name
 theme = "delta"
 # Default time zone for time stamps; use any valid tz database name: https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List
@@ -199,7 +199,7 @@ secblack = "#121826"
 # Dark Mode Colors
 color_primary = "#F99A5E"
 
-dark_50 = "#262423"
+dark_50 = "#2E2C2B" 
 dark_300 = "#2E2C2B"
 dark_900 = "#433F3D"
 

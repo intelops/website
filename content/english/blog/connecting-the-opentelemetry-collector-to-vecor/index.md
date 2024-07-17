@@ -36,12 +36,12 @@ ________________
 
 We will be using `helm` to deploy our services to our cluster. This will allow for easy installs/uninstalls. It will also
 allow for being able to configure our services via one single YAML file each.
-> Need to refresh your knowledge on YAML? Take a look at our blog [Hacking YAML to your Benefit](http://intelops.ai/blog/hacking-yaml-to-your-benefit/)
+> Need to refresh your knowledge on YAML? Take a look at our blog [Hacking YAML to your Benefit](https://capten.ai/blog/hacking-yaml-to-your-benefit/)
 
 # [open-telemetry collector](https://raw.github.com/open-telemetry/opentelemetry.io/main/iconography/Otel_Collector.svg "The Collector's receivers and exporters")
 
 The OpenTelemetry Collector (OTel Collector) allows multiple sources including OTLP formatted data, Jaeger, and Prometheus. The data we will be passing into
-our OTel Collector will be Pixie data. If you would like a tutorial on how to deploy Pixie on your cluster, take a look at [this blog](http://intelops.ai/blog/failed-pixie-deployment-on-civo-kubernetes/).  
+our OTel Collector will be Pixie data. If you would like a tutorial on how to deploy Pixie on your cluster, take a look at [this blog](https://capten.ai/blog/failed-pixie-deployment-on-civo-kubernetes/).  
 There is a [helm-chart](https://github.com/open-telemetry/opentelemetry-helm-charts) that is offered by OpenTelemetry, which we will be using.
 Deploying the OTel Collector is as easy as running the following commands:
 

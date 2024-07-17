@@ -17,7 +17,7 @@ contact_info:
   address_list:
   #- "thedelta@gmail.com"
   #- "(207) 555-0119"
-  - IntelOps, Inc
+  - Outfit Labs, Inc.
   - "5055 Keller Springs Rd #200, Addison, TX USA 75001"
 
 # Services

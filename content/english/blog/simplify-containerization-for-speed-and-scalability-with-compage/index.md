@@ -38,7 +38,7 @@ However, as organizations increasingly rely on containerization of applications 
 * Complying with industry regulations
 * Ensuring portability
 
-Compage, an opensource [low-code application development platform](https://intelops.ai/compage/), streamlines container building with automated multistage builds and support for distroless containers to enhance security, efficiency, and portability. Automating the container building process allows developers to create consistent and optimized containers effortlessly.
+Compage, an opensource [low-code application development platform](https://capten.ai/compage/), streamlines container building with automated multistage builds and support for distroless containers to enhance security, efficiency, and portability. Automating the container building process allows developers to create consistent and optimized containers effortlessly.
 
 ## **Containerization Made Easy**
 
@@ -69,4 +69,4 @@ Distroless containers are particularly suitable for running microservices and ap
 
 Compage assists developers in optimizing the performance and portability of their containerized applications. It guarantees the portability of containers, meaning they can be deployed across different platforms and environments without modification. This streamlines the deployment process and allows developers to focus on delivering features and functionalities.
 
-Check out Compage on [GitHub](https://github.com/intelops/compage) and see how it can streamline your containerization and secure your code. If you like what you see, please leave us a star. You can also get started by checking out [Compage documentation](https://docs.intelops.ai/compage/latest/) for more details. And, if there are any burning questions we have not yet answered, feel free to contact us via [LinkedIn](https://in.linkedin.com/company/intelopsai). We would love to talk to you!
+Check out Compage on [GitHub](https://github.com/intelops/compage) and see how it can streamline your containerization and secure your code. If you like what you see, please leave us a star. You can also get started by checking out [Compage documentation](https://docs.capten.ai/compage/latest/) for more details. And, if there are any burning questions we have not yet answered, feel free to contact us via [LinkedIn](https://in.linkedin.com/company/intelopsai). We would love to talk to you!

@@ -227,8 +227,8 @@ Instrumentation - [Link][def9]
 Tracetest Definition - [Link][def10]
 Tracetest Github Examples - [Link][def11]
 
-[def]: https://intelops.ai/
-[def2]: https://intelops.ai/learning-center/
+[def]: https://capten.ai/
+[def2]: https://capten.ai/learning-center/
 [def3]: ./tekton-installation-show.png
 [def4]: tekton-taskrun-completed.png
 [def5]: tekton-task-completed.png

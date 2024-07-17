@@ -26,7 +26,7 @@ weight = 6
 
 [[footer_menu_2]]
 name = "Docs"
-url = "https://docs.intelops.ai/"
+url = "https://docs.capten.ai/"
 weight = 1
 [[footer_menu_2]]
 name = "Blogs"
@@ -188,7 +188,7 @@ weight = 20
 
 [[main]]
 name = "Docs"
-url = "https://docs.intelops.ai/"
+url = "https://docs.capten.ai/"
 weight = 30
 
 # services page

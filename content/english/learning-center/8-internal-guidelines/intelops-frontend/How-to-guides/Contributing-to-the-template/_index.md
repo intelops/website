@@ -17,7 +17,7 @@ Since this template is for internal usage, we can always try and add things that
 
 **Step 4:** Do npm install to get he latest package into the node_modules. You need to check the file structure and try to make your components in the same structure. This will help maintain the consistency of the code.
 
-**Step 5:** Create your component - you can also follow the sample [Creating your own components](https://intelops.ai/learning-center/learn-intelops-ui/how-to-guides/creating-your-own-components/).
+**Step 5:** Create your component - you can also follow the sample [Creating your own components](https://capten.ai/learning-center/learn-intelops-ui/how-to-guides/creating-your-own-components/).
 
 > **Note:** Always try to create re-usable react components that is try not to hard code anything.
 

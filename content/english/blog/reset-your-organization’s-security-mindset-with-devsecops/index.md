@@ -122,20 +122,20 @@ This model enables organizations to understand the desired level of security, an
 Capten Stack offers a comprehensive suite of toolsis designed to streamline and secure the software development lifecycle for organizations. This self-service platform suite helps DevSecOps teams to integrate security practices throughout the development process. 
  
 
-- [Compage](https://intelops.ai/compage): Compage (auto-code generator) simplifies the backend development process, accelerating product delivery and easing the transition to cloud-native environments. Compage enforces security policies within the software supply chain, all through an intuitive visual interface. This helps developers to focus on core functionalities while maintaining strong security. 
+- [Compage](https://capten.ai/compage): Compage (auto-code generator) simplifies the backend development process, accelerating product delivery and easing the transition to cloud-native environments. Compage enforces security policies within the software supply chain, all through an intuitive visual interface. This helps developers to focus on core functionalities while maintaining strong security. 
 
-- [Quality Trace](https://intelops.ai/quality-trace): This open-source functional testing framework utilizes open telemetry for trace-based testing. Quality Trace offers in-depth insights throughout the development cycle, promoting early detection of issues and continuous improvement. This translates to a more stable and reliable application for end-users. 
+- [Quality Trace](https://capten.ai/quality-trace): This open-source functional testing framework utilizes open telemetry for trace-based testing. Quality Trace offers in-depth insights throughout the development cycle, promoting early detection of issues and continuous improvement. This translates to a more stable and reliable application for end-users. 
 
-- [Opty](https://intelops.ai/opty): Opty is a dynamic optimization solution that helps Kubernetes workloads achieve peak performance and cost-efficiency. Through comprehensive analysis, Opty optimizes resource allocation for applications, simplifying the path for developers to create efficient cloud-native ecosystems. 
+- [Opty](https://capten.ai/opty): Opty is a dynamic optimization solution that helps Kubernetes workloads achieve peak performance and cost-efficiency. Through comprehensive analysis, Opty optimizes resource allocation for applications, simplifying the path for developers to create efficient cloud-native ecosystems. 
 
-- [Kubviz](https://intelops.ai/kubviz): This all-in-one platform provides observability for Kubernetes, Git, and container environments. Kubviz empowers operations and SRE teams to efficiently troubleshoot issues, leading to a smoother DevSecOps workflow and enhanced security posture. 
+- [Kubviz](https://capten.ai/kubviz): This all-in-one platform provides observability for Kubernetes, Git, and container environments. Kubviz empowers operations and SRE teams to efficiently troubleshoot issues, leading to a smoother DevSecOps workflow and enhanced security posture. 
 
-- [Capten](https://intelops.ai/capten): This platform fosters seamless collaboration across DevSecOps teams, enabling application and infrastructure modernization, automation, and robust security measures. Capten eliminates the traditional trade-off between speed and security, allowing for secure and efficient cloud-native development. 
+- [Capten](https://capten.ai/capten): This platform fosters seamless collaboration across DevSecOps teams, enabling application and infrastructure modernization, automation, and robust security measures. Capten eliminates the traditional trade-off between speed and security, allowing for secure and efficient cloud-native development. 
 
-- [Tarian](https://intelops.ai/tarian): Leveraging advanced technologies, Tarian delivers real-time protection for cloud-native workloads within Kubernetes environments. This includes advanced anomaly detection and automated threat elimination, ensuring a constantly secure ecosystem for your applications. 
+- [Tarian](https://capten.ai/tarian): Leveraging advanced technologies, Tarian delivers real-time protection for cloud-native workloads within Kubernetes environments. This includes advanced anomaly detection and automated threat elimination, ensuring a constantly secure ecosystem for your applications. 
 
 
-Try Capten Stack today and empower your development, security and operations teams with streamlined, secure, and collaborative tools for cloud-native excellence. Optimize your workflows, enhance security, and accelerate delivery in modern IT environments. Take your operations to the next level. Get in touch today – hello@intelops.ai. 
+Try Capten Stack today and empower your development, security and operations teams with streamlined, secure, and collaborative tools for cloud-native excellence. Optimize your workflows, enhance security, and accelerate delivery in modern IT environments. Take your operations to the next level. Get in touch today – hello@capten.ai. 
  
  
  

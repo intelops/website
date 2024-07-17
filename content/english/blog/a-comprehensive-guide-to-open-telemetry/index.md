@@ -95,7 +95,7 @@ OpenTelemetry simplifies the process of collecting and exporting telemetry data 
 
 ## OpenTelemetry X Compage: Simplified Instrumentation for Improved Monitoring
 
-[Compage](https://intelops.ai/compage/) helps developers generate code with built-in instrumentation for OpenTelemetry. This means code created automatically tracks metrics (observability data) and sends them to OTel collector agents.
+[Compage](https://capten.ai/compage/) helps developers generate code with built-in instrumentation for OpenTelemetry. This means code created automatically tracks metrics (observability data) and sends them to OTel collector agents.
 Benefits of Compage with OTel:
 
 - **Reduced Development Time:** Eliminates the need to manually write code for instrumenting applications with OTel, saving significant time and effort.

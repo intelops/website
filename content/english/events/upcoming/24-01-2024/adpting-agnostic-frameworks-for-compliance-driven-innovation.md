@@ -33,6 +33,6 @@ We'll also unveil Compage, our universal language framework, that standardizes d
 
 <img src="/events/upcoming/24-01-2024/chandrakanth-paladugu.jpg" alt="Image Description">
 
-Chandrakanth Paladugu, Founder & CTO, IntelOps.ai
+Chandrakanth Paladugu, Founder & CTO, Capten.AI
 
 Chandrakanth Paladugu is a skilled architect with a deep passion for problem-solving in various technical domains, including Cloud-Native, DevSecOps, Software Supply Chain Security, and Kubernetes. His expertise lies in leveraging extensive knowledge to democratize technology and empower engineering teams with agnostic open framework models. Dedicated to enabling robust and scalable solutions, he aims to foster innovation and efficiency in engineering practices.

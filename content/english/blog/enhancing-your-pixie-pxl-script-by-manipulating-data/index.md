@@ -26,7 +26,7 @@ draft: false
 {{< image src="images/blog/enhancing-your-pixie-pxl-script-by-manipulating-data/undraw_join.svg" alt="alter-text" height="" width="200px" class="img-fluid" caption="" webp="false" position="float-left" >}}
 
 Pixie can be utilized for gathering monitoring metrics from your clusters. It offers you the benefit of having pre-written scripts, as well as custom scripts that extrapolate data. The custom scripts are written
-in Pixie's very own language, PXL, which is similar to Python. Last week, we had been working on [creating our first custom PXL script to gather data](https://intelops.ai/blog/writing-your-first-pixie-pxl-script/).
+in Pixie's very own language, PXL, which is similar to Python. Last week, we had been working on [creating our first custom PXL script to gather data](https://capten.ai/blog/writing-your-first-pixie-pxl-script/).
 In this tutorial, lets focus on customizing the data we have gathered and tuning it to our own preferences.
 ________________
 
@@ -132,7 +132,7 @@ df = df[df['bytes_sent'] > 65399738]
 Pixie docs list a whole bunch of [useful functions that can be applied to PXL dataframes](https://docs.pixielabs.ai/reference/pxl/operators/). Some of my favorites are:
 
 * `Dataframe.head()`: For when you need only a certain number of rows to be received from Pixie. This is extremely helpful in debugging while you are writing PXL scripts.
-* `Dataframe.groupby()`: As we have used in our previous [PXL blog](https://intelops.ai/blog/writing-your-first-pixie-pxl-script/).
+* `Dataframe.groupby()`: As we have used in our previous [PXL blog](https://capten.ai/blog/writing-your-first-pixie-pxl-script/).
 * `Dataframe.stream()`: For when you have so much data that you need it on a streaming basis.
 
 # Conclusion

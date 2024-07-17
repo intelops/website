@@ -13,7 +13,7 @@ navigation:
 # Removing the below doc from the page, as the doc page does not exist
 #menu:
   #- name: "Tarian Doc"
-    #url: "https://docs.intelops.ai/latest/tarian/"
+    #url: "https://docs.capten.ai/latest/tarian/"
 
   navigation_button:
     enable: true
@@ -53,7 +53,7 @@ image_and_content_block:
     subtitle_color: "#B79EC7"
     title: "Getting into the chaos of threat landscape?"
     title_color: ""
-    image: "images/content/tarian/tarian-row1.svg"
+    image: "images/content/tarian/tarian-img1.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -72,7 +72,7 @@ image_and_content_block:
     subtitle_color: "#B79EC7"
     title: "Innovation with Old-School!"
     title_color: ""
-    image: "images/content/tarian/tarian-row2.svg"
+    image: "images/content/tarian/tarian-img2.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#262423"
     content_color: ""
@@ -91,7 +91,7 @@ image_and_content_block:
     subtitle_color: "#B79EC7"
     title: "Continuous Evolution!"
     title_color: ""
-    image: "images/content/tarian/tarian-row3.svg"
+    image: "images/content/tarian/tarian-img3.svg"
     content_position: "right" # Value will be - "left/right"
     bg_color: ""
     content_color: ""
@@ -114,7 +114,7 @@ image_and_content_block:
     subtitle_color: "#B79EC7"
     title: "Extended plug-ins and Integrations"
     title_color: ""
-    image: "images/content/tarian/tarian-row4.png"
+    image: "images/content/tarian/tarian-img4.svg"
     content_position: "left" # Value will be - "left/right"
     bg_color: "#262423"
     content_color: ""

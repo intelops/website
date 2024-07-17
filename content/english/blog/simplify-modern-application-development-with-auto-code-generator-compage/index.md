@@ -30,7 +30,7 @@ draft: false
 
 Efficiency and speed are vital for success in software development. Traditional manual coding is slow, error-prone, and lacks consistency. Addressing this challenge demands the adoption of an innovative approach that facilitates development teams from the start, by streamlining the backend development process.
 
-And that's exactly what Compage does. The open-source project [automates backend code generation](https://intelops.ai/compage/) based on diagram-based (diagram-to-code) requirements, increasing productivity, reducing development time, and improving consistency throughout the development lifecycle. Not just that, Compage also follows securing coding measures by automating the software supply chain security process (more below).
+And that's exactly what Compage does. The open-source project [automates backend code generation](https://capten.ai/compage/) based on diagram-based (diagram-to-code) requirements, increasing productivity, reducing development time, and improving consistency throughout the development lifecycle. Not just that, Compage also follows securing coding measures by automating the software supply chain security process (more below).
 
 ## Diagram-based Requirements
 
@@ -87,7 +87,7 @@ Once the code has passed the continuous integration phase, Compage supports depl
 
 ## Git platform(s) Integration
 
-Compage is an open-source project that seamlessly integrates with Git platforms to provide efficient version control and collaboration capabilities for the code generation process. Using Git repositories, developers can track changes, manage branches and collaborate with team members. We encourage developers to [contribute to the project](https://docs.intelops.ai/compage/0.0.1/6-contribution/) to help us further enhance its capabilities and expand its features.
+Compage is an open-source project that seamlessly integrates with Git platforms to provide efficient version control and collaboration capabilities for the code generation process. Using Git repositories, developers can track changes, manage branches and collaborate with team members. We encourage developers to [contribute to the project](https://docs.capten.ai/compage/0.0.1/6-contribution/) to help us further enhance its capabilities and expand its features.
 
 ## OpenAPI Generator Support
 

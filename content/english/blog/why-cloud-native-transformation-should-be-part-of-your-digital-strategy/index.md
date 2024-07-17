@@ -90,11 +90,11 @@ Effective cloud-native transformation involves four key stages: the technology d
 
 ## Go Cloud-Native with Compage   
 
-Our, [auto-code generator](https://intelops.ai/blog/introducing-compagedev-centric-platform-for-auto-code-generation--fortified-security/), Compage,  significantly advances digital transformation by automating backend development tasks, expediting product delivery, and facilitating the adoption of cloud-native architectures. See how Compage can [simplify modern application development](https://intelops.ai/blog/simplify-modern-application-development-with-auto-code-generator-compage/):  
+Our, [auto-code generator](https://capten.ai/blog/introducing-compagedev-centric-platform-for-auto-code-generation--fortified-security/), Compage,  significantly advances digital transformation by automating backend development tasks, expediting product delivery, and facilitating the adoption of cloud-native architectures. See how Compage can [simplify modern application development](https://capten.ai/blog/simplify-modern-application-development-with-auto-code-generator-compage/):  
 
 **Microservice development:** With Compage, developers can easily create microservices by just giving the required  input, and in turn helping businesses to cut microservice development costs by 90% (per microservice)  
 
-**Portable Containers:** Compage assists developers in optimizing the performance and portability of their [containerized applications](https://intelops.ai/blog/simplify-containerization-for-speed-and-scalability-with-compage/). It guarantees the portability of containers, meaning they can be deployed across different platforms and environments without modification 
+**Portable Containers:** Compage assists developers in optimizing the performance and portability of their [containerized applications](https://capten.ai/blog/simplify-containerization-for-speed-and-scalability-with-compage/). It guarantees the portability of containers, meaning they can be deployed across different platforms and environments without modification 
 
 **Shift-security left:** Moreover, Compage enables organizations to enforce robust security policies, ensuring the integrity of their software supply chain. This not only meets stringent security standards but also supports secure digital transformation initiatives, essential for modernizing IT infrastructure.  
 

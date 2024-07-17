@@ -51,7 +51,7 @@ Teams are now required to examine the entire SDLC and streamline every aspect of
 
 ## Optimize Development Workflow With Compage
 
-[Compage](https://intelops.ai/compage/), an opensource project, is a low-code universal language framework that accelerates the application development process through the adoption of emerging technologies such as Rest API, gRPC, GraphQL, microservices, WebAssembly, FaaS, IoT, and edge services.
+[Compage](https://capten.ai/compage/), an opensource project, is a low-code universal language framework that accelerates the application development process through the adoption of emerging technologies such as Rest API, gRPC, GraphQL, microservices, WebAssembly, FaaS, IoT, and edge services.
 
 But, Compage goes beyond development. It automates the use of best practices, ensuring that the application is developed securely and that it adheres to software supply chain security standards. It also incorporates SBOM (Software Bill of Materials), enabling development teams to maintain transparency and ensure code governance.
 
@@ -114,6 +114,6 @@ Our list of integrations and features to develop is continuously growing with th
 
 ## How Do I Get Started?
 
-Developers can integrate Compage with Git platform by linking their accounts to create repositories and commit generated code directly. Compage follows the monorepo method (for now) and establishes a one-on-one relationship with the Git repository, which encompasses all the generated source code for each node created on the drawing panel. Developers can use the sketching canvas to configure services, save projects, and instantly upload the resulting code to their connected Git repository. This integration between Compage and Git platform enhances collaboration and simplifies version control, thereby providing valuable support to developers in their backend development efforts. Check out the [Compage documentation](https://docs.intelops.ai/compage/latest/) for more details.
+Developers can integrate Compage with Git platform by linking their accounts to create repositories and commit generated code directly. Compage follows the monorepo method (for now) and establishes a one-on-one relationship with the Git repository, which encompasses all the generated source code for each node created on the drawing panel. Developers can use the sketching canvas to configure services, save projects, and instantly upload the resulting code to their connected Git repository. This integration between Compage and Git platform enhances collaboration and simplifies version control, thereby providing valuable support to developers in their backend development efforts. Check out the [Compage documentation](https://docs.capten.ai/compage/latest/) for more details.
 
 If you like what we are doing, check out  [Compage On Github](https://github.com/intelops/compage).  A star is always appreciated. We have more updates coming so, follow us on  [LinkedIn](https://www.linkedin.com/company/intelopsai/).
