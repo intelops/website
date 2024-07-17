@@ -1,7 +1,7 @@
 ---
 date: "2024-01-24"
 title: "Build Secure Code In Minutes With Auto Code Generator"
-image: "/images/events-webinars/intelops-webinar-card-image.jpg" # use 800x550 or 16:11 ratio image
+image: "/images/events-webinars/page-preview.png" # use 800x550 or 16:11 ratio image
 event_date_location: "Jan 24, 2024 10AM CST"
 description:
 weight: 02
