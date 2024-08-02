@@ -33,6 +33,10 @@ We’ve all been there—you're working, and suddenly, your apps or tools stop w
 </br> 
 On Friday, July 19, 2024, a faulty Microsoft system update affected about 8.5 million devices, causing a major outage worldwide. This impacted nearly 1% of all Microsoft systems and led to massive disruptions for airlines, police departments, banks, hospitals, emergency services, and many other businesses.  
 
+{{< image src="images/blog/when-updates-go-wrong-what-the-crowdstrike-incident-teaches-us/you-have-to-stay-calm-meme.jpg" alt="alter-text"  class="img-fluid" caption="" webp="false" position="float-left" >}}
+
+</br> </br>
+
 **Why Did It Happen?**  
 </br>
 Software updates are supposed to make things better, right? But sometimes, they introduce new issues if they’re not tested thoroughly. In this case, CrowdStrike’s update, aimed at boosting their service, ended up having a bug that caused chaos. This glitch even rippled out to affect Microsoft services relying on CrowdStrike for security.  
@@ -77,6 +81,8 @@ Think about the cost if a major factory or process went down for days—do you k
 
 CrowdStrike has made it clear that their recent outage wasn’t due to a security breach or cyberattack. But that doesn’t mean it didn’t leave businesses in a tough spot. The outage shook up the cybersecurity world and raised serious questions about the reliability of even the best security solutions.  
 Here’s how this tech chaos could have potentially turned into a hacker’s playground:
+
+{{< image src="images/blog/when-updates-go-wrong-what-the-crowdstrike-incident-teaches-us/security-update-cause-system-crash-meme.jpg" alt="alter-text"  class="img-fluid" caption="" webp="false" position="float-left" >}}
   
 - **Deceptive Websites:** Following the CrowdStrike outage, cybercriminals created fake websites with names similar to CrowdStrike (e.g., "crowdstrikebluescreen.com"). These websites aim to trick users into downloading malware or revealing personal information.
 
