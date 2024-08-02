@@ -1,7 +1,7 @@
 ---
 date: 2024-08-02
 title: "When Updates Go Wrong: What the CrowdStrike Incident Teaches Us"
-description: Benefit from cloud-native transformation with improved scalability, flexibility, cost savings, and integration. Simplify adoption with Compage, an auto-code generator. 
+description:  The recent CrowdStrike outage highlights the risks of vendor overreliance. How can organizations build a resilient IT infrastructure? 
 
 image: images/blog/when-updates-go-wrong-what-the-crowdstrike-incident-teaches-us/banner.png
 cover_image: false
