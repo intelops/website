@@ -67,7 +67,7 @@ platforms:
   enable: true
   #title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
-  image: "images/footer/compage/compage.svg"
+  #image: "images/footer/compage/compage.svg"
   button:
     enable: false
     label: "Platform"
