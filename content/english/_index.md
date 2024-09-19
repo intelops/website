@@ -12,9 +12,6 @@ banner:
    <!-- Engineering Enablement with Self-Service based Platform Engineering Stack. -->
    
    Engineering Enablement for the Digital Future.
-
-
-
   description_color: ""
   button:
     enable: false
@@ -28,9 +25,10 @@ banner:
 
   join_waitlist:
     enable: true
-    button_label: "Contact for Demo" # previous button name was Join Waitlist 
+    button_label: "Contact For Demo " # previous button name was Join Waitlist 
     clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
+    
   # If lottie is enable image will not show as static image. Automatically lottie animation will load.
   image:
     enable: true
@@ -62,6 +60,8 @@ brands:
 features:
   enable: true
   section: features
+
+  
 
 platforms:
   enable: true

@@ -54,6 +54,6 @@ Chandrakanth Paladugu is a skilled architect with a deep passion for problem-sol
 </div>
 
 <div class="col-lg-5">
-{{< event-form event_form_testing_mode="false" event_form_video_url="" event_form_redirect_url="" event_form_success_action="video">}}
+{{< event-form event_form_testing_mode="false" event_form_video_url="https://www.youtube.com/embed/6BlMVfAltYo?si=XTXYegEzOU8Hu2F0" event_form_redirect_url="" event_form_success_action="video">}}
 </div>
 </div>
