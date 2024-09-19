@@ -97,6 +97,15 @@ expire_days = 2
 enable = false
 preloader = "images/loader.png"
 
+# site verifications
+# https://github.com/gethugothemes/hugo-modules/tree/master/seo-tools/site-verifications
+[site_verification]
+google = ""   # Your verification code
+bing = ""     # Your verification code
+baidu = ""    # Your verification code
+facebook = "" # Your verification code
+mastodon = "" # Your verification code
+
 
 ################################ clickup forms ################################
 [clickup_form]
