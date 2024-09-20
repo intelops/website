@@ -1,7 +1,7 @@
 [build]
   publish = "public"
-  command = "yarn build -b $URL"
-  timeout = 120
+  command = "yarn build -b $URL && hugo --verbose --debug --timeout=120s --log"
+  timeout = 180
 
   [build.environment]
     HUGO_VERSION = "0.127.0"
