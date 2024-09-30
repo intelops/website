@@ -181,10 +181,16 @@ post = "<small>Run Time Protection for K8s</small>"
 # pre = "images/icons/opensource.png"
 # post = "<small>Convert leads and close sales deals faster.</small>"
 
+
+[[main]]
+name = "About"
+url = "about/"
+weight = 20
+
 [[main]]
 name = "Blogs"
 url = "blog/"
-weight = 20
+weight = 21
 
 [[main]]
 name = "Docs"

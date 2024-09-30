@@ -2,67 +2,88 @@
 {{ $bg_image := "" }}
 
 {{ if or .Params.footer.bg_color site.Params.footer.bg_color }}
-{{ $bg_color = .Params.footer.bg_color | default site.Params.footer.bg_color }}
+  {{ $bg_color = .Params.footer.bg_color | default site.Params.footer.bg_color }}
 {{ end }}
 
 {{ if or .Params.footer.bg_image site.Params.footer.bg_image }}
-{{ $bg_image = resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
+  {{ $bg_image = resources.Get (.Params.footer.bg_image | default site.Params.footer.bg_image) }}
 {{ end }}
 
-{{if site.Params.call_to_action.enable}}
-{{if not .Params.hide_cta}}
-<section class="section pb-0 call-to-action call-to-action-2" style="{{with .Params.page_background_color}}background-color:{{.}}{{end}}">
-  {{ if not $bg_image }}
-  <div class="bottom-bg" style="{{- if $bg_color -}}background-color:{{$bg_color}}!important;{{- end -}}"></div>
-  {{ end }}
-  <div class="container container-delta" {{- if $bg_image -}}style="margin-bottom:100px"{{- end -}}>
-    <div class="row">
-      <div class="col-12">
-        <div class="block bg-dark-300 rounded-lg shadow">
-          <div class="row align-items-center">
-            <div class="col-lg-7">
-              <div class="content-block">
-                
-                {{ with .Params.call_to_action.title }}
-                <h3 class="text-capitalize mb-2">
-                  {{. | markdownify}}
-                </h3>
+{{ if site.Params.call_to_action.enable }}
+  {{ if not .Params.hide_cta }}
+    <section
+      class="call-to-action call-to-action-2"
+      style="{{ with .Params.page_background_color }}
+        background-color:{{ . }}
+      {{ end }}">
+      {{ if not $bg_image }}
+        <div
+          class="bottom-bg"
+          style="{{- if $bg_color -}}
+            background-color:{{ $bg_color }}!important;
+          {{- end -}}"></div>
+      {{ end }}
+      <div
+        class="container container-delta"
+        {{- if $bg_image -}}style="margin-bottom:100px"{{- end -}}>
+        <div class="row">
+          <div class="col-12">
+            <div class="block bg-dark-300 rounded-lg">
+              <div class="row align-items-center">
+                <div class="col-lg-7">
+                  <div class="content-block">
+                    {{ with .Params.call_to_action.title }}
+                      <h3 class="text-capitalize mb-2">
+                        {{ . | markdownify }}
+                      </h3>
+                    {{ else }}
+                      <h3 class="text-capitalize mb-2">
+                        {{ site.Params.call_to_action.title | markdownify }}
+                      </h3>
+                    {{ end }}
+
+                    {{ with .Params.call_to_action.subtitle }}
+                      <p class="mb-4">{{ . | markdownify }}</p>
+                    {{ else }}
+                      <p class="mb-4">
+                        {{ site.Params.call_to_action.subtitle | markdownify }}
+                      </p>
+                    {{ end }}
+
+                    {{ if .Params.call_to_action.button_label }}
+                      <a
+                        href="{{ .Params.call_to_action.button_link | relLangURL }}"
+                        class="btn btn-primary">
+                        {{ .Params.call_to_action.button_label }}
+                        <i class="arrow-right fas fa-arrow-right"></i>
+                      </a>
+                    {{ else }}
+                      <a
+                        href="{{ site.Params.call_to_action.button_link | relLangURL }}"
+                        class="btn btn-primary">
+                        {{ site.Params.call_to_action.button_label }}
+                        <i class="arrow-right fas fa-arrow-right"></i>
+                      </a>
+                    {{ end }}
+
+                  </div>
+                </div>
+                {{ with .Params.call_to_action.image }}
+                  <div class="col-lg-4">
+                    {{ partial "image.html" (dict "Src" . "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
+                  </div>
                 {{ else }}
-                <h3 class="text-capitalize mb-2">
-                  {{site.Params.call_to_action.title | markdownify}}
-                </h3>
+                  <div class="col-lg-5">
+                    <div class="pe-lg-5 pb-5 pb-lg-0">
+                      {{ partial "image.html" (dict "Src" site.Params.call_to_action.image "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
+                    </div>
+                  </div>
                 {{ end }}
-                
-                {{ with .Params.call_to_action.subtitle }}
-                <p class="mb-4">{{. | markdownify}}</p>
-                {{ else }}
-                <p class="mb-4">{{site.Params.call_to_action.subtitle | markdownify}}</p>
-                {{ end }}
-                
-                {{ if .Params.call_to_action.button_label }}
-                <a href="{{.Params.call_to_action.button_link | relLangURL}}" class="btn btn-primary">{{.Params.call_to_action.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
-                {{ else }}
-                <a href="{{site.Params.call_to_action.button_link | relLangURL}}" class="btn btn-primary">{{site.Params.call_to_action.button_label}} <i class="arrow-right fas fa-arrow-right"></i></a>
-                {{ end }}
-                
               </div>
             </div>
-            {{with .Params.call_to_action.image}}
-            <div class="col-lg-4">
-              {{ partial "image.html" (dict "Src" . "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
-            </div>
-            {{else}}
-            <div class="col-lg-5">
-              <div class="pe-lg-5 pb-5 pb-lg-0">
-                {{ partial "image.html" (dict "Src" site.Params.call_to_action.image "Size" "425x" "Webp" false "Class" "rounded-lg img-fluid" ) }}
-              </div>
-            </div>
-            {{end}}
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-{{end}}
-{{end}}
+    </section>
+  {{ end }}
+{{ end }}

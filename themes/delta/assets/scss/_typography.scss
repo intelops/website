@@ -1,9 +1,6 @@
 /*  typography */
 body {
   line-height: 1.7;
-  @media (min-width: 1440px) {
-    font-size: 18px;
-  }
   font-size: $font-size;
   font-family: $font-secondary;
   -webkit-font-smoothing: antialiased;

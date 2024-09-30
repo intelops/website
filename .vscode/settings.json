@@ -2,7 +2,6 @@
   "jira-plugin.workingProject": "",
   "files.exclude": {
     "**/bootstrap/": true,
-    "**/**.svg": true,
     "**/.git": true,
     "**/.svn": true,
     "**/.hg": true,

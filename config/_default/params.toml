@@ -1,6 +1,6 @@
 ################################ default parameters ################################
 # favicon module: https://github.com/gethugothemes/hugo-modules/tree/master/images#favicon-implementation
-favicon = "images/favicon/Capten - Logo_line.png"
+favicon = "images/favicon/capten-logo_line.png"
 image = "images/logo.png"
 # logo module: https://github.com/gethugothemes/hugo-modules/tree/master/images#logo-implementation
 logo = "images/logos/Capten_logo_full.svg"  #This is the main logo displayed on the header bar. Full Logo on Homepage. 
