@@ -1,190 +1,116 @@
 ---
 title: "About"
-description: "Get fastest loan with smart way a seating home"
-draft: false
-layout: "about"
+description: ""
 
-# banner
+draft: false
+layout: content-with-images
+
 banner:
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "Give your team the design mindset & design tools"
+  bg_color: ""
+  subtitle: "AI-Powered Software Engineering Platform to Always Stay with You"
+  subtitle_color: "#F9D291"
+  title: "Built for Modern Development Teams"
   title_color: ""
-  description: "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, diam nonumy eirmod tempor invidunt ut labore dolore magna"
+  description: "Say goodbye to the trade-off between speed and security with Capten. The all-in-one DevSecOps platform facilitates close collaboration to build and manage cloud-native ecosystems for application and infrastructure modernization, automation, and security."
   description_color: ""
+  image: images/banner/capten/capten-banner-image.svg
   button:
     enable: true
-    label: "Get started now"
-    icon: "fas fa-arrow-right"
-    link: "contact/"
-  
-  image: "images/banner-about.png"
+    label: "Book a Demo"
+    #icon: "fas fa-arrow-right"
+    link: "/product-demo-request-form/"
+  video_button:
+    enable: false
+    label: "Watch demo"
+    video_url: "https://www.youtube.com/embed/dyZcRRWiuuw"
 
-# brands
-brands:
-  enable: true
-
-# featured_testimonial
-featured_testimonial:
-  enable: true
-  author_image: "images/avatar/invision.jpg"
-  review: "“ Companies with high design maturity see cost saving (x4), Revenue gains (x5), and brand and market position improvements to their design. ”"
-  review_color: ""
-  author_info: '"Design Frontier" from InVision'
-  author_info_color: ""
-
-# about_info
-about_info:
-  enable: true
-  image: "images/team-group.jpg"
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "eaving them less time to The <br> check out competitors into."
-  title_color: "white"
-
-# features_box
-features_box:
-  enable: true
-  features_box_item:
-    - icon: "fas fa-file-signature"
-      title: "Ultimate Guide"
-      title_color: ""
-      content: "Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Praesent sapien madssa, convallis a pellentesque nec, egestas in faucibus orci luctus et ultrices"
-      content_color: ""
-
-    - icon: "fas fa-signature"
-      title: "How-to Webinars"
-      title_color: ""
-      content: "Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Praesent sapien madssa, convallis a pellentesque nec, egestas in faucibus orci luctus et ultrices"
-      content_color: ""
-      
-    - icon: "fas fa-bullhorn"
-      title: "workshops & FAQ"
-      title_color: ""
-      content: "Curabitur aliquet quam id dui posuere blandit. Donec sollicitudin molestie malesuada. Praesent sapien madssa, convallis a pellentesque nec, egestas in faucibus orci luctus et ultrices"
-      content_color: ""
+centered_content_sections:
+  - enable: true
+    sub_image: /images/favicon/capten-outline-logo-Icon.png
+    sub_image_width: 150x
+    subtitle:
+    subtitle_color: ""
+    title:
+    title_color: ""
+    content_color: white # Value will be - "1/2/3/4/5" big to small
+    content_size: 5 # Value will be - "1/2/3/4/5" big to small
+    content_line_height: 5 # Value will be - "1/2/3/4/5" big to small
+    content: |
+      **“Capten" is derived from the Welsh word for “Captain," symbolizing leadership, integrity, and the commitment to doing things the right way. The name reflects our philosophy of making complex engineering processes, like Dev, Sec, Ops, and Platform Engineering, easier and safer for our users, even as the industry evolves and grows more challenging. Also, the name resembles our goal of being the pioneer in the Service as a Software (SaaS 2.0) category, which we started nine years ago."**
 
 # image_and_content_block
 image_and_content_block:
   enable: true
-  bg_color: "#fcbe9f"
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "Lots of people love us, <br> and we're also."
-  title_color: ""
-  image: "images/block-image-03.png"
-  content_position: "left" # Value will be - "left/right"
-  content: |
-    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Vestibulum 
-  
-    * luctus et ultrices uere cubia Curae Donec verglit
+  blocks:
+    - enable: true
+      subtitle: "Empower"
+      subtitle_color: "#F9D291"
+      title: "Set Sail for Engineering Enablement With Capten"
+      title_color: ""
+      image: "images/content/capten/Capten-img2.svg"
+      content_position: "left" # Value will be - "left/right"
+      bg_color: "#262423"
+      button:
+        enable: true
+        label: "Book Demo"
+        link: "#!"
+      content_color: ""
+      content: |
+        Capten stack is an orchestration platform for engineering enablement and seamless collaboration while eliminating complexities of self-service implementation for agile DevSecOps, Developers Portal and Platform Engineering. All-in-One! 
 
-    * Neque auctor congue leo eget malesuada Vivamus
+        * **Ecosystem**: Build and Manage your cloud-native ecosystem easily with GitOps, Chaos Engineering, Platform Engineering, Self-Service, Internal Developers Platform and Software Supply Chain Security. 
 
-    * Sit amet dui Nulla quis lorem ut libero malesuada feugiat
+        * **Boost Collaboration**: Collaborate effortlessly with distributed tracing, CICD integration, Testing and software supply chain security automation.
 
-    * Donec verglit neque, auctor congue leo  malesuada.
-  
-  content_color: ""
+        * **Drive Innovation**: Empower engineering teams with a universal orchestration framework, fostering collaboration and fueling digital transformation.
 
-# customer_info
-customer_info:
+        * **Standardize Security**: Run tools from a single platform, reduce duplicate results and false positives, and enable faster issue remediation and consistent application security automation processes.
+
+        * **Accelerate Release Velocity**: Deliver new builds quickly and effortlessly, streamline development pipelines, and increase automation for faster software progression.
+
+mission_vision:
   enable: true
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "We care about customers"
-  title_color: ""
-  block:
-  - icon: "fas fa-hands-helping"
-    icon_color: ""
-    title: "Your design partner now <br> and in the future"
-    title_color: ""
-    content: "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar."
-    content_color: ""
+  list:
+    - image: /images/favicon/capten-logo_line.png
+      title: Mission
+      content: As a trusted leader in the tech industry, we are committed to providing businesses with proactive, innovative solutions that fuel their growth. Our focus on quality, security, and cutting-edge technology empowers businesses to achieve their goals.
+    - image: /images/favicon/capten-logo_line.png
+      title: Mission
+      content: As a trusted leader in the tech industry, we are committed to providing businesses with proactive, innovative solutions that fuel their growth. Our focus on quality, security, and cutting-edge technology empowers businesses to achieve their goals.
 
-  - icon: "fas fa-headset"
-    icon_color: ""
-    title: "Around the clock <br> support from day one"
-    title_color: ""
-    content: "Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar."
-    content_color: ""
-
-# our_peoples
-our_peoples:
+team:
+  title: Our Team
+  background_color: "#262423"
   enable: true
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "Some of our investors advisors"
-  title_color: "white"
-  lists:
-  - image: "images/avatar/01.jpg"
-    name: "Dianne Russell"
-    name_color: "white"
-    designation: "Binford Ltd."
-    designation_color: ""
+  list:
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
+    - image: /images/avatar/chandrakanth-paladugu.jpg
+      name: Venkata Gutta
+      designation: Chairman & Manager Director
 
-  - image: "images/avatar/02.jpg"
-    name: "Guy Hawkins"
-    name_color: "white"
-    designation: "Big Kahuna Burger Ltd."
-    designation_color: ""
-
-  - image: "images/avatar/03.jpg"
-    name: "Jerome Bell"
-    name_color: "white"
-    designation: "Abstergo Ltd."
-    designation_color: ""
-
-  - image: "images/avatar/04.jpg"
-    name: "Marvin McKinney"
-    name_color: "white"
-    designation: "Barone LLC."
-    designation_color: ""
-
-  - image: "images/avatar/05.jpg"
-    name: "Eleanor Pena"
-    name_color: "white"
-    designation: "Acme Co."
-    designation_color: ""
-
-  - image: "images/avatar/06.jpg"
-    name: "Jacob Jones"
-    name_color: "white"
-    designation: "Abstergo Ltd."
-    designation_color: ""
-
-  - image: "images/avatar/07.jpg"
-    name: "Guy Hawkins"
-    name_color: "white"
-    designation: "Binford Ltd."
-    designation_color: ""
-
-  - image: "images/avatar/08.jpg"
-    name: "Devon Lane"
-    name_color: "white"
-    designation: "Biffco Enterprises Ltd."
-    designation_color: ""
-
-
-# career
-career:
-  enable: true
-  subtitle: "We Are Delta"
-  subtitle_color: ""
-  title: "Delta’s Latest opportunities"
-  title_color: ""
-  content: "Curabitur arcu erat, accumsan id imperdiet et, lacinia in, elementum id enim. Curasfrbitur non nulla sit amet nisl tempus consr fwsrf wvallis "
-  content_color: ""
-  section: "career" # career data comming form "career.md" page
-
-
-# call_to_action
 call_to_action:
   enable: true
-  title: ""
-  subtitle: ""
-  image: ""
-  button_label: ""
-  button_link: ""
-
+  title: "Start using <br/> Capten <br/> platform today..."
+  title_color: "#fff"
+  # subtitle: ""
+  # subtitle_color: "#F9D291"
+  image: "images/call-to-actions/capten/robo-image.svg"
+  button_label: "Book a Demo"
+  button_link: "/product-demo-request-form/"
+  bg_color: "#2E2C2B"
+  bottom_bg_color: "#262423"
 ---
