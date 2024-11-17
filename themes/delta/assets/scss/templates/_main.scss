@@ -15,6 +15,13 @@ main {
   //   padding: 10px;
   // }
   padding-bottom: 0 !important;
+  section:not(:last-child):not(section:last-child ~ section) {
+    margin-bottom: 150px;
+
+    @include mobile {
+      margin-bottom: 80px;
+    }
+  }
 }
 
 main:empty {
@@ -113,7 +120,7 @@ main:empty {
 
 .banner-1 {
   max-width: 95%;
-  margin: 30px auto 0 auto;
+  margin: 0 auto;
 
   .has-wave {
     @media (min-width: 1600px) {
@@ -213,6 +220,11 @@ main:empty {
   // .has-wave svg {
   //   color: $light !important;
   // }
+
+  @include mobile {
+    padding: 80px 0;
+    margin-top: 150px;
+  }
 }
 
 .wrap-block {
@@ -225,6 +237,20 @@ main:empty {
 }
 
 // features-section
+.has-features-creative {
+  @include desktop {
+    background-color: $dark-300;
+    padding-bottom: 90px;
+
+    @include tablet {
+      padding-bottom: 60px;
+    }
+
+    & > .section {
+      padding-bottom: 70px !important;
+    }
+  }
+}
 .features-section {
   max-width: 95%;
   margin: auto;
@@ -236,7 +262,7 @@ main:empty {
 
     // features rows
     .features-row {
-      margin-top: -325px;
+      margin-top: -555px;
 
       @include desktop {
         margin-top: 0;
@@ -254,16 +280,12 @@ main:empty {
 
   .features-block {
     .block {
-      background-color: $dark-50;
+      background-color: $dark-300;
       border-radius: 15px;
       border: 1px solid $border-color;
-      box-shadow: 0px 15px 50px 10px rgba($black, 0.05);
+      box-shadow: 0px 0px 10px 5px rgba($black, 0.025);
       transition: 0.1s;
-      padding: 45px 35px;
-
-      @include mobile {
-        padding: 30px 25px;
-      }
+      padding: 25px 20px;
 
       &:hover {
         box-shadow: 0px 10px 30px 10px rgba($black, 0.05);
@@ -274,14 +296,42 @@ main:empty {
       }
 
       .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 54px;
+        height: 54px;
+        padding: 4px;
         font-size: 50px;
-        margin-bottom: 30px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        background-color: $dark-900;
+
+        img {
+          width: 80%;
+          height: 80%;
+          object-fit: contain;
+        }
       }
 
       a.btn {
         background-color: $dark-300;
         color: inherit;
         border-color: $dark-300;
+      }
+
+      &-2 {
+        border: 1px solid transparent;
+        padding: 55px 40px;
+
+        p {
+          line-height: 1.8;
+        }
+
+        .icon {
+          width: 80px;
+          height: 80px;
+        }
       }
     }
 
@@ -291,7 +341,7 @@ main:empty {
 
     .block {
       &:hover {
-        border-color: inherit;
+        border-color: $color-primary;
 
         .title {
           color: inherit;
@@ -372,6 +422,38 @@ main:empty {
         }
       }
     }
+  }
+}
+
+.features-block-3 {
+  text-align: center;
+  margin-inline: 40px;
+
+  @include mobile {
+    margin-inline: 0px;
+  }
+
+  .block {
+    background-color: $dark-900;
+    border-radius: 15px 15px 0px 0px;
+    width: 100%;
+    padding: 40px;
+    padding-bottom: 0px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      padding: 20px;
+      background-color: $dark-300;
+      border-radius: 15px 15px 0px 0px;
+    }
+  }
+
+  h3 {
+    margin-top: 20px;
+  }
+  p {
+    margin-bottom: 0px;
   }
 }
 
@@ -1010,6 +1092,94 @@ main:empty {
   background-color: $dark-300;
 }
 
+.colored-card-wrapper {
+  .colored-card {
+    margin-top: 0px;
+    border-radius: 5px;
+    background-color: black;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    min-height: 100%;
+    padding: 35px 25px;
+
+    &::after {
+      content: "";
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+      position: absolute;
+      background-color: rgba($white, 0.1);
+      border-radius: 20px;
+      z-index: -1;
+    }
+
+    p {
+      color: $black;
+      margin-bottom: 0px;
+      font-weight: light;
+    }
+  }
+  // For every
+  > div:nth-child(4n + 1) {
+    .colored-card {
+      background-color: #e4f0fd;
+      h3 {
+        color: #4262ff;
+      }
+    }
+    .colored-card-2 {
+      .image::after {
+        background-color: #4262ff;
+      }
+    }
+  }
+
+  > div:nth-child(4n + 2) {
+    .colored-card {
+      background-color: #fff4ce;
+      h3 {
+        color: #ffd02f;
+      }
+    }
+    .colored-card-2 {
+      .image::after {
+        background-color: #ffd02f;
+      }
+    }
+  }
+
+  > div:nth-child(4n + 3) {
+    .colored-card {
+      background-color: #ffe3e5;
+      h3 {
+        color: #ed6f78;
+      }
+    }
+    .colored-card-2 {
+      .image::after {
+        background-color: #ed6f78;
+      }
+    }
+  }
+
+  > div:nth-child(4n + 4) {
+    .colored-card {
+      background-color: #e0f1c9;
+      h3 {
+        color: #6e9240;
+      }
+    }
+    .colored-card-2 {
+      .image::after {
+        background-color: #6e9240;
+      }
+    }
+  }
+}
+
 .blog-card {
   .card {
     background-color: $dark-300;
@@ -1117,6 +1287,33 @@ main:empty {
   //     color: $color-tertiary;
   //   }
   // }
+}
+.team-card {
+  text-align: center;
+  .image {
+    width: 100px;
+    height: 100px;
+    margin-inline: auto;
+    margin-bottom: 20px;
+    position: relative;
+
+    img {
+      position: relative;
+      border-radius: 100%;
+      z-index: 1;
+    }
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 6%;
+      left: 6%;
+      z-index: 0;
+      border-radius: 100%;
+    }
+  }
 }
 
 .disqus-block,
@@ -1254,6 +1451,14 @@ main:empty {
           top: -70%;
         }
       }
+    }
+
+    .block {
+      border-bottom-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+    }
+    .bottom-bg {
+      display: none;
     }
   }
 
@@ -1616,7 +1821,7 @@ a.share-icon {
     }
 
     &:not(.collapsed)::after {
-      transform: rotate(-180deg);
+      transform: rotate(-0deg);
     }
   }
 
@@ -1624,7 +1829,7 @@ a.share-icon {
     padding-left: 32px !important;
   }
   .accordion-body {
-    padding-left: 0px !important;
+    padding-left: 32px !important;
   }
 }
 
@@ -1647,9 +1852,29 @@ a.share-icon {
 
 // footer
 footer {
-  position: relative;
   z-index: 1;
-  padding: 100px 0 0;
+  position: relative;
+
+  padding-top: 0px;
+  > .container {
+    padding: 105px;
+    padding-bottom: 0px;
+
+    @include tablet {
+      padding: 0px;
+      padding-bottom: 0px;
+    }
+
+    @include mobile {
+      padding: 40px;
+      padding-bottom: 0px;
+    }
+
+    @include mobile-xs {
+      padding: 20px;
+      padding-bottom: 0px;
+    }
+  }
 
   @include desktop {
     padding: 90px 0 0;
@@ -1685,6 +1910,11 @@ footer {
   .footer-menu {
     margin-top: 60px;
     padding: 60px 0;
+
+    @include tablet {
+      margin-top: 30px;
+      padding: 30px 0px;
+    }
 
     &-title {
       font-size: 18px;
@@ -2590,4 +2820,149 @@ pre {
 
 :not(pre) > code + span.copy-to-clipboard {
   display: none;
+}
+
+
+
+
+
+
+
+.faq-section {
+  min-height: 100vh;
+  margin-top: 150px;
+}
+
+.faq-wrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: row; /* Default for larger screens */
+}
+
+/* Tablet screens and smaller */
+@media (max-width: 1024px) {
+  .faq-left-content,
+  .faq-right-content {
+    width: 100%; /* Stack items vertically */
+    padding: 1rem;
+  }
+  .faq-wrapper {
+    flex-direction: column;
+    padding: 1rem; /* Optional padding for spacing */
+  }
+  
+  .faq-container {
+    max-width: 100%; /* Full-width container on mobile */
+  }
+}
+
+
+.faq-left-content {
+  width: 40%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.faq-right-content {
+  width: 60%;
+  padding: 4rem;
+}
+
+.faq-container {
+  max-width: 600px;
+  position: relative;
+}
+
+.faq-item:not(:last-child) {
+  border-bottom: 1px solid $border-color;
+}
+.faq-item:not(:first-of-type) {
+  border-top: 0;
+}
+.faq-item {
+  background: $body-color;
+  overflow: hidden;
+  opacity: 0.5;
+  transform: translateY(20px);
+  transition: all 0.5s ease;
+  height: auto;
+}
+
+.faq-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background: $body-color;
+  font-weight: 500;
+  color: #fff !important;
+  display: flex;
+  gap: 10px;
+  svg{
+transform: rotate(0deg);
+transition: transform 0.5s ease;
+  }
+}
+.faq-item.active .faq-question svg {
+  transform: rotate(90deg); /* Rotates back to original when active */
+}
+
+.faq-answer {
+  padding: 0;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.5s ease;
+  background: $body-color;
+}
+
+.faq-item.active {
+  margin-top: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.trigger-section {
+  height: 300vh;
+  position: relative;
+}
+
+
+.faq-wrapper {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: row; /* Default for larger screens */
+}
+
+/* Tablet screens and smaller */
+@media (max-width: 1024px) {
+  .faq-left-content,
+  .faq-right-content {
+    width: 100%; /* Stack items vertically */
+  }
+  .faq-wrapper {
+    flex-direction: column;
+    padding: 1rem; /* Optional padding for spacing */
+  }
+  .faq-right-content {
+    padding: 2rem 1rem; /* Reduce padding on smaller screens */
+  }
+  .faq-container {
+    max-width: 100%; /* Full-width container on mobile */
+  }
+}
+
+.pin-spacer{
+  margin-top: 0 !important;
 }

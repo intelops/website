@@ -2,12 +2,11 @@
   {{ partial "essentials/header.html" . }}
 
   {{ partial "essentials/header-alt.html" . }}
-
   {{ $bg_color := .Params.banner.bg_color }}
 
   {{ with .Params.banner }}
     <section
-      class="banner platform-banner wave-block overflow-hidden my-4 rounded-lg"
+      class="banner platform-banner wave-block overflow-hidden mt-4 rounded-lg"
       {{ with $bg_color }}style="background-color: {{ . }};"{{ end }}>
       <div class="container">
         <div class="row align-items-center text-center text-lg-start">
@@ -67,8 +66,8 @@
       <div class="has-wave">
         <svg
           class="wave-left"
-          width="277"
-          height="361"
+          width="247"
+          height="321"
           viewBox="0 0 277 361"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -81,8 +80,8 @@
         <svg
           class="wave-right"
           style="opacity:0.6"
-          width="316"
-          height="405"
+          width="236"
+          height="325"
           viewBox="0 0 316 405"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
@@ -94,15 +93,74 @@
     </section>
   {{ end }}
 
+  {{ range .Params.centered_content_sections }}
+    <section>
+      <div class="container container-delta">
+        <div class="row">
+          <div class="col-lg-10 mx-auto text-center">
+            {{ $subtitle_color := .subtitle_color }}
+            {{ with .subtitle }}
+              <p
+                class="subtitle no-inherit"
+                {{ with $subtitle_color }}style="color:{{ . }}"{{ end }}>
+                {{ . | markdownify }}
+              </p>
+            {{ end }}
+            <h2
+              class="title text-xl mb-0"
+              {{ with .title_color }}style="color:{{ . }}"{{ end }}>
+              {{ .title | markdownify }}
+            </h2>
+            {{ $description_color := .description_color }}
+            {{ with .description }}
+              <div
+                class="content pt-3"
+                {{ with $description_color }}style="color:{{ . }}"{{ end }}>
+                {{ . | markdownify }}
+              </div>
+            {{ end }}
+          </div>
+          {{ with .colored_list }}
+            <div class="col-12 pt-5">
+              <div class="row gy-lg-5 colored-card-wrapper pt-5">
+                {{ range . }}
+                  <div class="col-md-6 col-lg-3 p-5">
+                    <div
+                      class="colored-card"
+                      {{ with .background_color }}
+                        style="background-color:{{ . }}"
+                      {{ end }}>
+                      {{ $heading_color := .heading_color }}
+                      {{ with .title }}
+                        <h3
+                          class="h2"
+                          {{ with $heading_color }}
+                            style="color:{{ . }}"
+                          {{ end }}>
+                          {{ . | markdownify }}
+                        </h3>
+                      {{ end }}
+                      {{ with .description }}
+                        <p>{{ . | markdownify }}</p>
+                      {{ end }}
+                    </div>
+                  </div>
+                {{ end }}
+              </div>
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
   {{ with .Params.image_and_content_block }}
     {{ if .enable }}
-      <div class="position-relative">
-        {{ range $i, $ele:= .blocks }}
-          {{ if .enable }}
-            {{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image "Largegap" true ) }}
-          {{ end }}
+      {{ range $i, $ele:= .blocks }}
+        {{ if .enable }}
+          {{ partial "image-and-content-block.html" (dict "BgColor" .bg_color "HasWave" false "SectionClass" "" "ContainerClass" "container-delta-lg" "RowClass" "gx-4 gx-xl-5" "Button" $ele.button "Faq" $ele.faq "Largegap" $ele.large_gap "ContentPosition" .content_position "Subtitle" .subtitle "SubtitleColor" .subtitle_color "Title" .title "TitleColor" .title_color "Content" .content "ContentColor" .content_color "Image" .image "Largegap" true ) }}
         {{ end }}
-      </div>
+      {{ end }}
     {{ end }}
   {{ end }}
 

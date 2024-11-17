@@ -309,8 +309,8 @@ $(document).ready(function () {
         title = $(this).attr("title");
       navTabs.append(
         '<li class="nav-item"><a class="nav-link" href="#">' +
-        title +
-        "</a></li>",
+          title +
+          "</a></li>",
       );
     });
 
@@ -468,7 +468,6 @@ if ($(".navigation-alt").length !== 0) {
   // });
 }
 
-
 // --------------------------------------------------------------------------------
 // Dynamic & Conditional Form Fields
 // --------------------------------------------------------------------------------
@@ -623,7 +622,8 @@ function conditionalForm() {
           form.querySelector(`#${conditionValue}`);
 
         // Initially hide all radio input target elements
-        element.getAttribute("type") === "radio" && currentFormElementNameAttr &&
+        element.getAttribute("type") === "radio" &&
+          currentFormElementNameAttr &&
           hideTargetElements(form, currentFormElementNameAttr);
 
         // For radio input based on checked value
@@ -689,10 +689,12 @@ function conditionalForm() {
           const value = Number(element.value);
 
           // Check value is number or not
-          if ((typeof value) === "number") {
+          if (typeof value === "number") {
             const [conditionValue, targetElementId] = condition.split(":");
             const targetElement = form.querySelector(`#${targetElementId}`);
-            const targetElementResultBox = form.querySelector(`#${targetElementId} .result`);
+            const targetElementResultBox = form.querySelector(
+              `#${targetElementId} .result`,
+            );
             const calcType = conditionValue.split("/")[1];
 
             // If targetElementResultBox have any exisiting value then convert it to number and calc with it
@@ -700,7 +702,7 @@ function conditionalForm() {
 
             /**
              * Calculate value based on calculation type (add, sub, mul, div) with targetElementResult innerText value.
-             * 
+             *
              * @param {number} value To be calculated with targetElementResult numeric text.
              * @param {string} calcType "add", "sub", "mul", or "div".
              * @param {boolean} revert If true, subtract/divide based on checkbox state, otherwise add/multiply.
@@ -710,16 +712,24 @@ function conditionalForm() {
 
               switch (calcType) {
                 case "add":
-                  result = revert ? targetElementValue - value : targetElementValue + value;
+                  result = revert
+                    ? targetElementValue - value
+                    : targetElementValue + value;
                   break;
                 case "sub":
-                  result = revert ? targetElementValue + value : targetElementValue - value;
+                  result = revert
+                    ? targetElementValue + value
+                    : targetElementValue - value;
                   break;
                 case "mul":
-                  result = revert ? targetElementValue / value : targetElementValue * value;
+                  result = revert
+                    ? targetElementValue / value
+                    : targetElementValue * value;
                   break;
                 case "div":
-                  result = revert ? targetElementValue * value : targetElementValue / value;
+                  result = revert
+                    ? targetElementValue * value
+                    : targetElementValue / value;
                   break;
                 default:
                   console.error("Invalid calculation type:", calcType);
@@ -744,15 +754,16 @@ function conditionalForm() {
 
               // ({number-of-pages}*1)+({number-of-features}*2)/{number-of-developers}
               // Get all string inside {} from formula and get the element with that id and also element value and replace {element-id} with value of element
-              formula && formula.replace(/(\{.*?\})/g, (match) => {
-                const elementId = match.slice(1, -1);
-                const element = document.querySelector(`#${elementId}`);
-                const inputElement = element.querySelector("input");
+              formula &&
+                formula.replace(/(\{.*?\})/g, (match) => {
+                  const elementId = match.slice(1, -1);
+                  const element = document.querySelector(`#${elementId}`);
+                  const inputElement = element.querySelector("input");
 
-                if (inputElement.value && inputElement.value !== "") {
-                  formula = formula.replace(match, inputElement.value);
-                }
-              });
+                  if (inputElement.value && inputElement.value !== "") {
+                    formula = formula.replace(match, inputElement.value);
+                  }
+                });
 
               formula = evaluateExpression(formula.replace(/(\{.*?\})/g, 0));
 
@@ -760,7 +771,10 @@ function conditionalForm() {
             }
 
             // If calculated result value is 0 or empty or Infinity then hide the element where result is displayed
-            (targetElementResultBox.innerText === "0" || targetElementResultBox.innerText === "Infinity" || targetElementResultBox.innerText === "") && hideElement(targetElement);
+            (targetElementResultBox.innerText === "0" ||
+              targetElementResultBox.innerText === "Infinity" ||
+              targetElementResultBox.innerText === "") &&
+              hideElement(targetElement);
           } else {
             console.log("Enter number value only for calculation");
           }
@@ -775,13 +789,13 @@ function conditionalForm() {
 
     /**
      * Checks if a current HTML element is nested within another element based on conditions.
-     * 
+     *
      * @param {HTMLElement} prev The element considered as the "parent" element.
      * @param {HTMLElement} current The element to check for nesting.
-     * 
+     *
      * This function checks if the `current` element is nested within the `prev` element
      * based on the following logic:
-     * 
+     *
      * 1. If the `prev` element has a custom attribute named `"condition"`, it assumes a conditional visibility relationship.
      *    - The function parses the attribute value (formatted as "conditionType:conditionValue") to determine the condition type and target element.
      *    - It then checks if the `current` element exists as a descendant of the target element using `querySelector`.
@@ -853,9 +867,8 @@ function conditionalForm() {
       return string.trim().replace(/\s\s+/g, " ");
     }
 
-
     function evaluateExpression(expr) {
-      const ops = { '+': 1, '-': 1, '*': 2, '/': 2 };
+      const ops = { "+": 1, "-": 1, "*": 2, "/": 2 };
       const values = [];
       const operators = [];
       const tokens = expr.match(/\d+|\+|\-|\*|\/|\(|\)/g);
@@ -863,15 +876,18 @@ function conditionalForm() {
       for (const token of tokens) {
         if (/\d/.test(token)) {
           values.push(Number(token));
-        } else if (token === '(') {
+        } else if (token === "(") {
           operators.push(token);
-        } else if (token === ')') {
-          while (operators.length && operators[operators.length - 1] !== '(') {
+        } else if (token === ")") {
+          while (operators.length && operators[operators.length - 1] !== "(") {
             values.push(applyOp(operators.pop(), values.pop(), values.pop()));
           }
           operators.pop(); // remove '('
         } else if (ops[token]) {
-          while (operators.length && ops[operators[operators.length - 1]] >= ops[token]) {
+          while (
+            operators.length &&
+            ops[operators[operators.length - 1]] >= ops[token]
+          ) {
             values.push(applyOp(operators.pop(), values.pop(), values.pop()));
           }
           operators.push(token);
@@ -887,10 +903,14 @@ function conditionalForm() {
 
     function applyOp(op, b, a) {
       switch (op) {
-        case '+': return a + b;
-        case '-': return a - b;
-        case '*': return a * b;
-        case '/': return a / b;
+        case "+":
+          return a + b;
+        case "-":
+          return a - b;
+        case "*":
+          return a * b;
+        case "/":
+          return a / b;
       }
     }
   });
@@ -899,3 +919,52 @@ conditionalForm();
 
 // Initially check for required attributes
 setRequired();
+
+
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Pin the FAQ section
+gsap.to(".faq-section", {
+  scrollTrigger: {
+    trigger: ".trigger-section",
+    start: "top top",
+    end: "bottom bottom",
+    pin: ".faq-section",
+    pinSpacing: true,
+    scrub: true,
+  },
+});
+
+// Create a timeline for FAQ items
+const faqItems = gsap.utils.toArray(".faq-item");
+let currentActive = null;
+
+faqItems.forEach((item, index) => {
+  const totalItems = faqItems.length;
+  const sectionHeight = 1 / totalItems;
+  const start = index * sectionHeight;
+  const end = (index + 1) * sectionHeight;
+
+  ScrollTrigger.create({
+    trigger: ".trigger-section",
+    start: `${start * 100 - 10}% top`,
+    end: `${end * 100 -10}% top`,
+    onToggle: (self) => {
+      if (self.isActive) {
+        if (currentActive && currentActive !== item) {
+          currentActive.classList.remove("active");
+        }
+        item.classList.add("active");
+        currentActive = item;
+      } else if (currentActive === item) {
+        item.classList.remove("active");
+        currentActive = null;
+      }
+    },
+    scrub: true,
+  });
+});

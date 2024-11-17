@@ -65,7 +65,6 @@ team_members:
     name_color: ""
     designation: Barone LLC.
     designation_color: ""
-date: ''
 
 ---
 This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want. This is the start of dummy description text. You can change it whenever you want.

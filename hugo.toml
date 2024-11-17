@@ -1,6 +1,7 @@
 ######################## default configuration ####################
 # The base URL of your site (required). This will be prepended to all relative URLs.
-baseURL = "https://capten.ai/"
+# baseURL = "https://capten.ai/"
+baseURL = "/"
 # Title of your website (required).
 title = "Capten"
 # Your theme name

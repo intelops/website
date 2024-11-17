@@ -1,0 +1,75 @@
+
+{{ with site.GetPage .Params.capten_feature.section }}
+{{ with .Params }}
+
+<div class="trigger-section">
+  <section class="faq-section">
+    <div class="faq-wrapper container">
+      <div class="">
+        <div class="pe-0 pe-lg-5">
+          <p
+            class="subtitle"
+            {{ with .subtitle_color }}style="color:{{ . }}"{{ end }}>
+            {{ .subtitle | markdownify }}
+          </p>
+          <h2
+            class="title text-xl mb-3"
+            {{ with .title_color }}style="color:{{ . }}"{{ end }}>
+            {{ .title | markdownify }}
+          </h2>
+          <div
+            class="mb-5"
+            {{ with .description_color }}style="color:{{ . }}"{{ end }}>
+            {{ .description | markdownify }}
+          </div>
+
+          {{ with .button }}
+            {{ if .enable }}
+              <a
+                href="{{ .link | relLangURL }}"
+                class="btn btn-primary m-1">
+                {{ .label }}
+                {{ with .icon }}
+                  <i class="arrow-right {{ . }}"></i>
+                {{ end }}
+              </a>
+            {{ end }}
+          {{ end }}
+
+          {{ with .video_button }}
+            {{ if .enable }}
+              <button
+                class="btn btn-outline btn-play m-1 shadow-none"
+                type="button"
+                data-bs-toggle="modal"
+                data-src="{{ .video_url | safeURL }}"
+                data-bs-target="#videoModal"
+                aria-label="watch video">
+                <i class="fas fa-play"></i>
+                {{ .label }}
+              </button>
+            {{ end }}
+          {{ end }}
+        </div>
+      </div>
+
+      <div class="faq-right-content">
+        <div class="faq-container">
+          {{ range .faq_list }}
+          <div class="faq-item" data-index="0">
+            <div class="faq-question">
+              <svg width="25" height="25" version="0.5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" xml:space="preserve"><path style="fill:none;stroke:#fff;stroke-width:2;stroke-miterlimit:10" d="m12.25 5 11 11-11 11"/></svg>
+              {{ .title | markdownify }}
+              </div>
+            <div class="faq-answer content">
+              {{ .content | markdownify }}
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{{ end }}
+{{ end }}

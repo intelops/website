@@ -1,6 +1,6 @@
 ---
 banner:
-  subtitle: 
+  subtitle:
   subtitle_color: ""
   title: Be Future-Ready With our SaaS 2.0
   title_color: ""
@@ -9,9 +9,9 @@ banner:
 
     Stay future-ready with our market-first SaaS 2.0 solution that simplifies software development, <br> cloud-native technology, enhances software supply chain security, and <br> empowers businesses to scale for growth.<br>
 
-   <!-- Engineering Enablement with Self-Service based Platform Engineering Stack. -->
-   
-   Engineering Enablement for the Digital Future.
+    <!-- Engineering Enablement with Self-Service based Platform Engineering Stack. -->
+
+    Engineering Enablement for the Digital Future.
   description_color: ""
   button:
     enable: false
@@ -21,14 +21,13 @@ banner:
   video_button:
     enable: false
     label: Watch demo
-    video_url: 
+    video_url:
 
   join_waitlist:
     enable: true
-    button_label: "Contact For Demo " # previous button name was Join Waitlist 
+    button_label: "Contact For Demo " # previous button name was Join Waitlist
     clickup_iframe_url: "https://forms.clickup.com/9006002197/f/8cctc0n-11720/8GEW4HG1M3D5G252CY"
 
-    
   # If lottie is enable image will not show as static image. Automatically lottie animation will load.
   image:
     enable: true
@@ -36,15 +35,14 @@ banner:
     background: "#4B4B4C" # original used color code - 4B4B4C or use 121826 or 454545 or 4f4b49
     padding: "60px 0"
 
-  # If lottie is disabled then static image will show in that place automatically. 
-  lottie: 
+  # If lottie is disabled then static image will show in that place automatically.
+  lottie:
     enable: false
     json: "lottie/homepage_concept.json"
     background: "#2E2C2B" #2E2C2B
     speed: "1"
     loop: "true"
     autoplay: "true"
-
 
 brands:
   enable: true
@@ -57,14 +55,24 @@ brands:
   # - images/clients/04.png
   # - images/clients/05.png
 
+why_capten:
+  enable: true
+  section: why-capten
+
+capten_feature:
+  enable: true
+  section: capten-feature
+
+capten_advantages:
+  enable: true
+  section: capten_advantages
+
 features:
   enable: true
   section: features
 
-  
-
 platforms:
-  enable: true
+  enable: false
   #title: "How capten stack works? <br/> Check our Platform pages."
   title_color: ""
   #image: "images/footer/compage/compage.svg"
@@ -75,7 +83,6 @@ platforms:
     #link: "/capten"
     link: ""
 
-    
 how_it_works:
   enable: false
   section: how-it-works
@@ -90,12 +97,12 @@ image_and_content_block:
   image: images/content/compage/what-is-compage.svg
   content_position: left
   #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-   # amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
-   # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
-   # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
+  # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  # amet ligula. Vestibulum\n\n* luctus et ultrices uere cubia Curae Donec verglit\n*
+  # Neque auctor congue leo eget malesuada Vivamus\n* Sit amet dui Nulla quis lorem
+  # ut libero malesuada feugiat\n* Donec verglit neque, auctor congue leo  malesuada. "
   content_color: ""
-  
+
 slider_and_content_block:
   enable: false
   subtitle: We Are Capten
@@ -103,16 +110,15 @@ slider_and_content_block:
   title: This section is coming soon
   title_color: ""
   slider:
-  - images/content/compage/what-is-compage.svg
-  - images/content/compage/what-is-compage.svg
+    - images/content/compage/what-is-compage.svg
+    - images/content/compage/what-is-compage.svg
   content_position: right
   #content: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere
-   # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
-   # amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
-   # Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
-   # amet dui. Nulla quis lorem ut libero malesuada feugiat. "
+  # cubilia Curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit
+  # amet ligula. Vestibulum ante\n\norci luctus et ultrices pos uere cubilia Curae;
+  # Donec verglit neque, auctor congue leo eget malesuada. Vivamus susr cipit sit
+  # amet dui. Nulla quis lorem ut libero malesuada feugiat. "
   content_color: ""
-
 
 testimonials:
   enable: false
@@ -122,43 +128,41 @@ testimonials:
   title_color: ""
   image: images/content/compage/what-is-compage.svg
   reviews:
-  - name: Name1
-    name_color: ""
-    designation: CEO & Founder, XYZ
-    designation_color: ""
-    rating: "5.0"
-    content: Text area
-    content_color: ""
-  - name: Name2
-    name_color: ""
-    designation: Founder, XYZ Inc.
-    designation_color: ""
-    rating: "4.5"
-    content: TEXT AREA
-    content_color: ""
-  - name: Name3
-    name_color: ""
-    designation: Developer, XYZ
-    designation_color: ""
-    #rating: "4.2"
-    content: Text Area
-    content_color: ""
-
+    - name: Name1
+      name_color: ""
+      designation: CEO & Founder, XYZ
+      designation_color: ""
+      rating: "5.0"
+      content: Text area
+      content_color: ""
+    - name: Name2
+      name_color: ""
+      designation: Founder, XYZ Inc.
+      designation_color: ""
+      rating: "4.5"
+      content: TEXT AREA
+      content_color: ""
+    - name: Name3
+      name_color: ""
+      designation: Developer, XYZ
+      designation_color: ""
+      #rating: "4.2"
+      content: Text Area
+      content_color: ""
 
 blog:
   enable: true
-  subtitle: Recent Articles
+  subtitle: Our Blogs
   subtitle_color: ""
-  title: "Inside the Lab: Innovation in the Making"
+  title: "Engineering Enablement Insights & Innovations"
   title_color: ""
-  description: We enjoy solving problems and making ideas happen. <br> Check out what we're working on!
+  description: Stay ahead in the world of software engineering with our expert insights, industry trends, and innovative solutions. <br /> Discover how Capten.ai platform and our cloud-native services can transform your business.
   description_color: ""
   button:
     enable: true
     link: blog/
     label: Read All Blogs
-    icon: fas fa-arrow-right
-
+    icon:
 
 call_to_action:
   enable: true

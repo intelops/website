@@ -59,9 +59,10 @@
   .nav-item {
     font-size: $font-size;
     .nav-link {
+      font-size: 18px;
       font-weight: 500;
       line-height: 1.4;
-      color: $text-color;
+      color: $white;
       padding: 15px 13px !important;
 
       @include desktop-xl {
@@ -340,10 +341,14 @@
 
 // search
 .btn-search {
-  zoom: 0.9;
-  width: 44px;
-  color: $text-color;
+  min-width: 50px;
+  height: 50px;
+  color: $white;
   background-color: $dark-900;
+
+  i {
+    font-size: 18px;
+  }
 
   &:hover,
   &:focus {
